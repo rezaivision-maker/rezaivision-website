@@ -24,6 +24,8 @@ import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import AGB from "./pages/AGB";
 import Success from "./pages/Success";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import GlossaryIndex from "./pages/Glossary";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 
@@ -47,6 +49,8 @@ export default function App() {
           <Route path="ueber-uns" element={<About />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="glossar" element={<GlossaryIndex />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
           <Route path="kontakt" element={<Contact />} />
           <Route path="impressum" element={<Imprint />} />
           <Route path="datenschutz" element={<Privacy />} />

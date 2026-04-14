@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Leistungen", path: "/leistungen" },
   { name: "Referenzen", path: "/#showreel" },
   { name: "Preise", path: "/preise" },
+  { name: "Magazin", path: "/blog" },
   { name: "Über uns", path: "/ueber-uns" },
   { name: "Kontakt", path: "/kontakt" },
 ];
@@ -202,6 +203,7 @@ export function Layout() {
                 <li><Link to="/#showreel" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
                 <li><Link to="/preise" className="hover:text-brand-accent transition-colors">Preise</Link></li>
                 <li><Link to="/ueber-uns" className="hover:text-brand-accent transition-colors">Über uns</Link></li>
+                <li><Link to="/blog" className="hover:text-brand-accent transition-colors">Magazin</Link></li>
                 <li><Link to="/faq" className="hover:text-brand-accent transition-colors">FAQ</Link></li>
                 <li><Link to="/glossar" className="hover:text-brand-accent transition-colors">Glossar</Link></li>
               </ul>
