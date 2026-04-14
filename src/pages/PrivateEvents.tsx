@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Play, Calendar, Music, Heart, ArrowRight, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Play, Calendar, Music, Heart, ArrowRight, Send, AlertCircle } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import { Helmet } from "react-helmet-async";
 import { useState, type FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PrivateEvents() {
-  const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -31,7 +31,7 @@ export default function PrivateEvents() {
       const data = await response.json();
 
       if (data.success) {
-        setSubmitted(true);
+        navigate("/danke", { state: { type: 'private' } });
       } else {
         setError("Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
       }
@@ -49,6 +49,7 @@ export default function PrivateEvents() {
         <meta name="description" content="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland." />
         <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo" />
       </Helmet>
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-10" />
@@ -284,137 +285,117 @@ export default function PrivateEvents() {
               className="bg-brand-bg border border-white/5 rounded-3xl p-8 md:p-10"
             >
               <AnimatePresence mode="wait">
-                {!submitted ? (
-                  <motion.div
-                    key="form"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    <h3 className="text-2xl font-display font-bold mb-6">Event anfragen</h3>
-                    <form className="space-y-5" onSubmit={handleSubmit}>
-                      {error && (
-                        <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl flex items-start gap-3 text-sm">
-                          <AlertCircle className="shrink-0 mt-0.5" size={18} />
-                          <p>{error}</p>
-                        </div>
-                      )}
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
-                        <input
-                          required
-                          type="text"
-                          id="name"
-                          name="name"
-                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
-                          placeholder="Ihr vollständiger Name"
-                        />
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  <h3 className="text-2xl font-display font-bold mb-6">Event anfragen</h3>
+                  <form className="space-y-5" onSubmit={handleSubmit}>
+                    <input type="hidden" name="recap" value="true" />
+                    {error && (
+                      <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl flex items-start gap-3 text-sm">
+                        <AlertCircle className="shrink-0 mt-0.5" size={18} />
+                        <p>{error}</p>
                       </div>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div className="space-y-2">
-                          <label htmlFor="email" className="text-sm font-medium text-gray-300">E-Mail</label>
-                          <input
-                            required
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
-                            placeholder="ihre.adresse@email.de"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="phone" className="text-sm font-medium text-gray-300">Telefonnummer (optional)</label>
-                          <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
-                            placeholder="Ihre Telefonnummer"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="date" className="text-sm font-medium text-gray-300">Datum (optional)</label>
-                        <input
-                          type="date"
-                          id="date"
-                          name="date"
-                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <label htmlFor="type" className="text-sm font-medium text-gray-300">Art des Events</label>
-                        <select
-                          required
-                          id="type"
-                          name="type"
-                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors appearance-none"
-                        >
-                          <option value="">Bitte wählen...</option>
-                          <option value="hochzeit">Hochzeit</option>
-                          <option value="musikvideo">Musikvideo</option>
-                          <option value="event">Eventbegleitung (Konzert, Party, etc.)</option>
-                          <option value="sonstiges">Sonstiges</option>
-                        </select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <label htmlFor="message" className="text-sm font-medium text-gray-300">Ihre Nachricht</label>
-                        <textarea
-                          required
-                          id="message"
-                          name="message"
-                          rows={4}
-                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                          placeholder="Erzählen Sie uns von Ihren Plänen, der Location oder ersten Ideen..."
-                        ></textarea>
-                      </div>
-
-                      {/* Honeypot Spam Protection */}
-                      <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-
-                      {/* Privacy Checkbox */}
-                      <div className="flex items-start gap-3 mt-6">
-                        <input
-                          required
-                          type="checkbox"
-                          id="privacy_event"
-                          name="privacy"
-                          className="mt-1 w-4 h-4 rounded border-white/20 bg-brand-darker text-purple-500 focus:ring-purple-500 focus:ring-offset-brand-bg cursor-pointer"
-                        />
-                        <label htmlFor="privacy_event" className="text-sm text-gray-400 leading-relaxed cursor-pointer">
-                          Ich bin damit einverstanden, dass meine Daten zur Bearbeitung der Anfrage verarbeitet werden. Details dazu in der <Link to="/datenschutz" className="text-purple-400 hover:underline">Datenschutzerklärung</Link>.
-                        </label>
-                      </div>
-
-                      <Button type="submit" size="lg" className="w-full gap-2 mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 border-none text-white" disabled={isSubmitting}>
-                        {isSubmitting ? "Wird gesendet..." : "Anfrage senden"} <Send size={18} />
-                      </Button>
-                    </form>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="success"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
-                  >
-                    <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                      <CheckCircle2 className="text-purple-400" size={40} />
+                    )}
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
+                      <input
+                        required
+                        type="text"
+                        id="name"
+                        name="name"
+                        className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
+                        placeholder="Ihr vollständiger Name"
+                      />
                     </div>
-                    <h3 className="text-3xl font-display font-bold mb-4">Vielen Dank!</h3>
-                    <p className="text-gray-400 mb-8">
-                      Ihre Anfrage ist bei uns eingegangen. Wir werden uns schnellstmöglich bei Ihnen melden.
-                    </p>
-                    <Button onClick={() => setSubmitted(false)} variant="outline" className="border-white/10 hover:bg-white/5">
-                      Weitere Nachricht senden
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="text-sm font-medium text-gray-300">E-Mail</label>
+                        <input
+                          required
+                          type="email"
+                          id="email"
+                          name="email"
+                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
+                          placeholder="ihre.adresse@email.de"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="phone" className="text-sm font-medium text-gray-300">Telefonnummer (optional)</label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
+                          placeholder="Ihre Telefonnummer"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="date" className="text-sm font-medium text-gray-300">Datum (optional)</label>
+                      <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="type" className="text-sm font-medium text-gray-300">Art des Events</label>
+                      <select
+                        required
+                        id="type"
+                        name="type"
+                        className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors appearance-none"
+                      >
+                        <option value="">Bitte wählen...</option>
+                        <option value="hochzeit">Hochzeit</option>
+                        <option value="musikvideo">Musikvideo</option>
+                        <option value="event">Eventbegleitung (Konzert, Party, etc.)</option>
+                        <option value="sonstiges">Sonstiges</option>
+                      </select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-medium text-gray-300">Ihre Nachricht</label>
+                      <textarea
+                        required
+                        id="message"
+                        name="message"
+                        rows={4}
+                        className="w-full bg-brand-darker border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                        placeholder="Erzählen Sie uns von Ihren Plänen, der Location oder ersten Ideen..."
+                      ></textarea>
+                    </div>
+
+                    {/* Honeypot Spam Protection */}
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
+                    {/* Privacy Checkbox */}
+                    <div className="flex items-start gap-3 mt-6">
+                      <input
+                        required
+                        type="checkbox"
+                        id="privacy_event"
+                        name="privacy"
+                        className="mt-1 w-4 h-4 rounded border-white/20 bg-brand-darker text-purple-500 focus:ring-purple-500 focus:ring-offset-brand-bg cursor-pointer"
+                      />
+                      <label htmlFor="privacy_event" className="text-sm text-gray-400 leading-relaxed cursor-pointer">
+                        Ich bin damit einverstanden, dass meine Daten zur Bearbeitung der Anfrage verarbeitet werden. Details dazu in der <Link to="/datenschutz" className="text-purple-400 hover:underline">Datenschutzerklärung</Link>.
+                      </label>
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full gap-2 mt-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 border-none text-white" disabled={isSubmitting}>
+                      {isSubmitting ? "Wird gesendet..." : "Anfrage senden"} <Send size={18} />
                     </Button>
-                  </motion.div>
-                )}
+                  </form>
+                </motion.div>
               </AnimatePresence>
             </motion.div>
           </div>

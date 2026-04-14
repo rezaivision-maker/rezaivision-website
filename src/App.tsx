@@ -23,6 +23,7 @@ import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import AGB from "./pages/AGB";
+import Success from "./pages/Success";
 import GlossaryIndex from "./pages/Glossary";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="impressum" element={<Imprint />} />
           <Route path="datenschutz" element={<Privacy />} />
           <Route path="agb" element={<AGB />} />
+          <Route path="danke" element={<Success />} />
           <Route path="admin" element={<AdminDashboard />} />
           {/* Fallback for missing legal pages */}
           <Route path="*" element={<div className="min-h-[50vh] flex items-center justify-center text-2xl font-display">Seite in Bearbeitung</div>} />
