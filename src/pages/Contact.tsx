@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, AlertCircle } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
@@ -75,157 +75,115 @@ export default function Contact() {
             className="bg-brand-darker border border-white/5 rounded-3xl p-8 md:p-12"
           >
             <div className="space-y-8">
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">Projekt anfragen</h2>
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <input type="hidden" name="recap" value="true" />
-                  {error && (
-                    <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl flex items-start gap-3 text-sm">
-                      <AlertCircle className="shrink-0 mt-0.5" size={18} />
-                      <p>{error}</p>
-                    </div>
-                  )}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
-                      <input
-                        required
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                        placeholder="Ihr vollständiger Name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="company" className="text-sm font-medium text-gray-300">Unternehmen</label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                        placeholder="Ihr Unternehmen (optional)"
-                      />
-                    </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">Projekt anfragen</h2>
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <input type="hidden" name="recap" value="true" />
+                {error && (
+                  <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl flex items-start gap-3 text-sm">
+                    <AlertCircle className="shrink-0 mt-0.5" size={18} />
+                    <p>{error}</p>
                   </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-gray-300">E-Mail</label>
-                      <input
-                        required
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                        placeholder="ihre.adresse@email.de"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium text-gray-300">Telefonnummer (optional)</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                        placeholder="Ihre Telefonnummer"
-                      />
-                    </div>
-                  </div>
-
+                )}
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="project" className="text-sm font-medium text-gray-300">Um was geht es?</label>
-                    <select
-                      required
-                      id="project"
-                      name="project"
-                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors appearance-none"
-                    >
-                      <option value="">Bitte wählen...</option>
-                      <option value="imagefilm">Unternehmensfilm / Imagefilm</option>
-                      <option value="recruiting">Recruiting Video</option>
-                      <option value="werbung">Werbevideo / Social Ads</option>
-                      <option value="social">Social Media Content (Retainer)</option>
-                      <option value="other">Sonstiges</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-gray-300">Ihre Nachricht</label>
-                    <textarea
-                      required
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors resize-none"
-                      placeholder="Erzählen Sie uns von Ihrem Projekt, Ihren Zielen oder ersten Ideen..."
-                    ></textarea>
-                  </div>
-
-                  {/* Honeypot Spam Protection */}
-                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-
-                  <div className="flex items-start gap-3 mb-6">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
                     <input
                       required
-                      type="checkbox"
-                      id="privacy"
-                      className="mt-1"
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                      placeholder="Ihr vollständiger Name"
                     />
-                    <label htmlFor="privacy" className="text-sm text-gray-400 leading-snug">
-                      Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden. Weitere Informationen finden Sie in der <Link to="/datenschutz" className="text-brand-accent hover:underline">Datenschutzerklärung</Link>.
-                    </label>
                   </div>
+                  <div className="space-y-2">
+                    <label htmlFor="company" className="text-sm font-medium text-gray-300">Unternehmen</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                      placeholder="Ihr Unternehmen (optional)"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-gray-300">E-Mail</label>
+                    <input
+                      required
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                      placeholder="ihre.adresse@email.de"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-medium text-gray-300">Telefonnummer (optional)</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                      placeholder="Ihre Telefonnummer"
+                    />
+                  </div>
+                </div>
 
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full h-14 text-lg gap-2"
+                <div className="space-y-2">
+                  <label htmlFor="project" className="text-sm font-medium text-gray-300">Um was geht es?</label>
+                  <select
+                    required
+                    id="project"
+                    name="project"
+                    className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors appearance-none"
                   >
-                    {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
-                    <Send size={18} />
-                  </Button>
-                </form>
+                    <option value="">Bitte wählen...</option>
+                    <option value="imagefilm">Unternehmensfilm / Imagefilm</option>
+                    <option value="recruiting">Recruiting Video</option>
+                    <option value="werbung">Werbevideo / Social Ads</option>
+                    <option value="social">Social Media Content (Retainer)</option>
+                    <option value="other">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-gray-300">Ihre Nachricht</label>
+                  <textarea
+                    required
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full bg-brand-bg border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors resize-none"
+                    placeholder="Erzählen Sie uns von Ihrem Projekt, Ihren Zielen oder ersten Ideen..."
+                  ></textarea>
+                </div>
+
+                {/* Honeypot Spam Protection */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
+                {/* Privacy Checkbox */}
+                <div className="flex items-start gap-3 mt-6">
+                  <input
+                    required
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    className="mt-1 w-4 h-4 rounded border-white/20 bg-brand-bg text-brand-accent focus:ring-brand-accent focus:ring-offset-brand-darker"
+                  />
+                  <label htmlFor="privacy" className="text-sm text-gray-400 leading-relaxed">
+                    Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Weitere Informationen finden Sie in der <Link to="/datenschutz" className="text-brand-accent hover:underline">Datenschutzerklärung</Link>.
+                  </label>
+                </div>
+
+                <Button type="submit" size="lg" className="w-full gap-2 mt-6 h-14 text-lg" disabled={isSubmitting}>
+                  {isSubmitting ? "Wird gesendet..." : "Anfrage senden"} <Send size={18} />
+                </Button>
+              </form>
             </div>
-
-                    {/* Privacy Checkbox */}
-                    <div className="flex items-start gap-3 mt-6">
-                      <input
-                        required
-                        type="checkbox"
-                        id="privacy"
-                        name="privacy"
-                        className="mt-1 w-4 h-4 rounded border-white/20 bg-brand-bg text-brand-accent focus:ring-brand-accent focus:ring-offset-brand-darker"
-                      />
-                      <label htmlFor="privacy" className="text-sm text-gray-400 leading-relaxed">
-                        Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Weitere Informationen finden Sie in der <Link to="/datenschutz" className="text-brand-accent hover:underline">Datenschutzerklärung</Link>.
-                      </label>
-                    </div>
-
-                    <Button type="submit" size="lg" className="w-full gap-2 mt-6" disabled={isSubmitting}>
-                      {isSubmitting ? "Wird gesendet..." : "Anfrage senden"} <Send size={18} />
-                    </Button>
-                  </form>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                >
-                  <div className="w-20 h-20 bg-brand-accent/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <CheckCircle2 className="text-brand-accent" size={40} />
-                  </div>
-                  <h2 className="text-3xl font-display font-bold mb-4">Vielen Dank!</h2>
-                  <p className="text-gray-400 mb-8">
-                    Ihre Anfrage ist bei uns eingegangen. Wir werden uns innerhalb der nächsten 24 Stunden bei Ihnen melden.
-                  </p>
-                  <Button onClick={() => setSubmitted(false)} variant="outline">
-                    Weitere Nachricht senden
-                  </Button>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </motion.div>
 
           {/* Contact Info */}

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { CheckCircle2, ArrowRight, MessageSquare, Briefcase, PlayCircle } from "lucide-react";
-import { Button } from "../components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 export default function Success() {
   return (
@@ -96,21 +96,6 @@ export default function Success() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           className="mt-20"
-        >
-          <Link to="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
-            Zurück zur Startseite <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-20 text-center"
         >
           <Link to="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
             Zurück zur Startseite <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
