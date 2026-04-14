@@ -19,8 +19,8 @@ export default function PrivateEvents() {
     
     // Web3Forms Configuration
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "e24b689a-c3cd-4bd2-a0c2-cb3bb1a74e65");
-    formData.append("subject", "Neue Anfrage: REZAEMOTION (Hochzeit/Event/Musikvideo)");
-    formData.append("from_name", "REZAEMOTION Website");
+    formData.append("subject", "Neue Anfrage: Rezai Emotion (Hochzeit/Event/Musikvideo)");
+    formData.append("from_name", "Rezai Emotion Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

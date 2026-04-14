@@ -43,7 +43,7 @@ export default function Success() {
             transition={{ delay: 0.3 }}
             className="text-xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto"
           >
-            Vielen Dank für Ihr Vertrauen. Wir schauen uns Ihre Anfrage persönlich an. Denke bitte daran: Gute Ergebnisse brauchen Fokus — daher melden wir uns in Kürze bei Ihnen, um gemeinsam über Ihre Vision zu sprechen.
+            Vielen Dank für Ihr Vertrauen. Wir schauen uns Ihre Anfrage persönlich an. Bitte beachten Sie: Gute Ergebnisse brauchen Fokus — daher melden wir uns in Kürze bei Ihnen, um gemeinsam über Ihre Vision zu sprechen.
           </motion.p>
         </div>
 
@@ -64,8 +64,8 @@ export default function Success() {
                 <MessageSquare size={20} className="text-brand-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-1 font-display">Kurzes Erstgespräch</h3>
-                <p className="text-sm text-gray-400">Wir sprechen über Ihre Ziele, den Stil und den Rahmen des Projekts.</p>
+                <h3 className="text-lg font-bold mb-1 font-display">Unverbindliches Erstgespräch</h3>
+                <p className="text-sm text-gray-400">In einem kurzen ersten Austausch klären wir Ihre grundlegenden Ziele und Wünsche ab.</p>
               </div>
             </div>
 
@@ -74,8 +74,8 @@ export default function Success() {
                 <Briefcase size={20} className="text-brand-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-1 font-display">Strukturiertes Konzept</h3>
-                <p className="text-sm text-gray-400">Wir entwickeln den Plan für die Umsetzung — strategisch und kreativ.</p>
+                <h3 className="text-lg font-bold mb-1 font-display">Analyse & Konzept</h3>
+                <p className="text-sm text-gray-400">Bei beiderseitigem Interesse folgt eine tiefe Analyse in einem Zweitgespräch, woraufhin wir Ihr individuelles Konzept entwickeln.</p>
               </div>
             </div>
 
@@ -84,8 +84,8 @@ export default function Success() {
                 <PlayCircle size={20} className="text-brand-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-1 font-display">Die Produktion</h3>
-                <p className="text-sm text-gray-400">Wir erwecken Ihre Vision filmisch zum Leben — unkompliziert und auf den Punkt.</p>
+                <h3 className="text-lg font-bold mb-1 font-display">Produktion & Umsetzung</h3>
+                <p className="text-sm text-gray-400">Wir machen uns an die Arbeit und erwecken Ihre Vision filmisch zum Leben — professionell und auf den Punkt.</p>
               </div>
             </div>
           </div>
