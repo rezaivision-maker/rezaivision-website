@@ -101,9 +101,11 @@ export default function Pricing() {
                   Am beliebtesten
                 </div>
               )}
-              <h3 className="text-2xl font-display font-bold mb-2">{pkg.title}</h3>
-              <p className="text-gray-400 text-sm mb-6 h-10">{pkg.desc}</p>
-              <div className="text-4xl font-display font-bold mb-8 text-white">
+              <h3 className="text-2xl font-display font-bold mb-4 min-h-[4rem] flex items-center leading-tight">{pkg.title}</h3>
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                {pkg.desc}
+              </p>
+              <div className="text-4xl font-display font-bold mb-8 text-white shrink-0">
                 {pkg.price}
               </div>
               
