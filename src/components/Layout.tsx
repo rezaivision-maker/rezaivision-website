@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Leistungen", path: "/leistungen" },
   { name: "Referenzen", path: "/#showreel" },
   { name: "Preise", path: "/preise" },
-  { name: "Magazin", path: "/blog" },
   { name: "Über uns", path: "/ueber-uns" },
   { name: "Kontakt", path: "/kontakt" },
 ];
