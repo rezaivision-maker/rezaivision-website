@@ -15,18 +15,18 @@ export const socialClips = [
     category: "Ads"
   },
   {
-    url: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop",
-    title: "Lifestyle Content",
-    category: "Social Media"
+    url: "https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=800&auto=format&fit=crop",
+    title: "Corporate Workflow",
+    category: "Business"
   },
   {
-    url: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
-    title: "Product Showcase",
-    category: "Short Form"
+    url: "https://images.unsplash.com/photo-1492691523567-6170c8175d71?q=80&w=800&auto=format&fit=crop",
+    title: "Cinematic Showcase",
+    category: "Portfolio"
   },
   {
-    url: "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?q=80&w=800&auto=format&fit=crop",
-    title: "Event Highlights",
+    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
+    title: "Live Event Energy",
     category: "Recap"
   }
 ];

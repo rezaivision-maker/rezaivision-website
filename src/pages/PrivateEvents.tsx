@@ -212,7 +212,7 @@ export default function PrivateEvents() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Ihre Momente.</span>
               </h2>
               <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Wir sorgen dafür, dass das Bild gut aussieht. Unsere Kameras sind sehr stark und hochwertig. Wir liefern starke Qualität für unsere Kunden.
+                Wir setzen auf modernste Kino-Technik und ein feines Gespür für Licht und Bildkomposition. Jedes Projekt wird mit höchster Sorgfalt behandelt, um sicherzustellen, dass Ihre kostbaren Momente in bester Qualität für die Ewigkeit bewahrt werden.
               </p>
               <div className="p-6 bg-white/5 border border-white/10 rounded-xl">
                 <p className="text-sm text-gray-300 italic">

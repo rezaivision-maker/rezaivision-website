@@ -395,8 +395,8 @@ export default function RecruitingVideo() {
               "Wir hatten große Bedenken, ob unsere Mitarbeiter vor der Kamera frei sprechen können. Das Team von Rezai Vision hat ihnen aber sofort die Nervosität genommen. Das Ergebnis ist so authentisch geworden, dass wir bereits in der ersten Woche nach Veröffentlichung drei sehr gute Bewerbungen erhalten haben."
             </p>
             <div>
-              <strong className="text-white block text-lg">Personalleiterin</strong>
-              <span className="text-gray-400">Pflegeeinrichtung</span>
+              <strong className="text-white block text-lg">Adonay Welde</strong>
+              <span className="text-gray-400">Inhaber, Social Care</span>
             </div>
           </div>
         </div>

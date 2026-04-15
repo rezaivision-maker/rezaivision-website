@@ -31,13 +31,13 @@ export default function About() {
                 Wir sind eine Videoproduktion aus Kaiserslautern mit Fokus auf klare Kommunikation, starke Bilder und durchdachte Umsetzung.
               </p>
               <p>
-                Ich arbeite als persönlicher Ansprechpartner mit einem eingespielten Netzwerk aus Kreativen und Spezialisten zusammen. So entsteht für jedes Projekt genau die Struktur, die es braucht — flexibel, effizient und ohne unnötigen Aufwand.
+                Ich arbeite als persönlicher Ansprechpartner mit einem eingespielten Netzwerk aus Kreativen und Spezialisten zusammen. So entsteht für jedes Projekt genau die Struktur, die es braucht – flexibel, effizient und ohne unnötigen Aufwand.
               </p>
               <p>
                 Wir produzieren Videos für Unternehmen, Marken und Dienstleister in der gesamten Region. Vom Unternehmensfilm über Werbevideos bis hin zu Social-Media-Content entstehen Inhalte, die verständlich kommunizieren, Vertrauen aufbauen und Wirkung erzeugen.
               </p>
               <p>
-                Was unsere Zusammenarbeit auszeichnet, sind strukturierte Abläufe, transparente Kommunikation und ein Blick für Details, die oft den Unterschied machen. Technik ist dabei nur ein Werkzeug — entscheidend ist, wie Bild, Ton und Story zusammenwirken, um genau das Gefühl zu erzeugen, das beim Zuschauer ankommen soll.
+                Was unsere Zusammenarbeit auszeichnet, sind strukturierte Abläufe, transparente Kommunikation und ein Blick für Details, die oft den Unterschied machen. Technik ist dabei nur ein Werkzeug – entscheidend ist, wie Bild, Ton und Story zusammenwirken, um genau das Gefühl zu erzeugen, das beim Zuschauer ankommen soll.
               </p>
               <p className="text-xl text-gray-200 font-medium mt-8">
                 Jede Produktion entsteht mit einem klaren Ziel: Ihr Unternehmen so zu zeigen, dass Menschen es verstehen, sich angesprochen fühlen und Vertrauen entwickeln.
@@ -86,7 +86,7 @@ export default function About() {
                 <li>Wo wird das Video eingesetzt?</li>
               </ul>
               <p>
-                Auf dieser Basis entwickeln wir Konzept, Bildsprache und Umsetzung — strukturiert, nachvollziehbar und effizient.
+                Auf dieser Basis entwickeln wir Konzept, Bildsprache und Umsetzung – strukturiert, nachvollziehbar und effizient.
               </p>
               <p>
                 Während der gesamten Produktion haben Sie einen direkten Ansprechpartner und klare Abstimmungen. Das sorgt für Sicherheit und einen reibungslosen Ablauf.
@@ -125,7 +125,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Unsere Mission</h2>
             <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed mb-8">
-              Videos zu produzieren, die einen Zweck erfüllen — Unternehmen sichtbar machen, Vertrauen stärken und Botschaften verständlich vermitteln.
+              Videos zu produzieren, die einen Zweck erfüllen – Unternehmen sichtbar machen, Vertrauen stärken und Botschaften verständlich vermitteln.
             </p>
             <p className="text-2xl font-display font-bold text-brand-accent">
               Klar. Strukturiert. Wirkungsvoll.
