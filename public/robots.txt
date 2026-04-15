@@ -1,27 +1,4 @@
-# Erlaubnis für reguläre Suchmaschinen
 User-agent: *
-Allow: /
-
-# Explizite Einladung für KI-Crawler (Generative Engine Optimization)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
 Allow: /
 
 Sitemap: https://rezaivision.de/sitemap.xml

@@ -44,6 +44,22 @@ export default function FAQ() {
         <title>FAQ | Häufig gestellte Fragen | RezaEmotion</title>
         <meta name="description" content="Antworten auf die häufigsten Fragen rund um unsere Videoproduktion, Ablauf und Preise. Klarheit von Anfang an." />
         <link rel="canonical" href="https://rezaivision.de/faq" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": ${JSON.stringify(faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              })))}
+            }
+          `}
+        </script>
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">

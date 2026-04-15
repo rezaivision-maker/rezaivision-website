@@ -47,6 +47,14 @@ export default function Home() {
                   "longitude": 7.7314
                 },
                 "areaServed": ["Deutschland", "Rheinland-Pfalz", "Saarland", "Hessen", "Kaiserslautern", "Mannheim", "Frankfurt am Main", "Mainz", "Saarbrücken", "Wiesbaden"],
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ],
                 "description": "Premium Agentur für Videoproduktion aus Kaiserslautern. Spezialisiert auf Unternehmensfilme, Video Ads, Social Media Reels und Recruiting Videos für den regionalen Mittelstand.",
                 "founder": {
                   "@type": "Person",
@@ -62,7 +70,9 @@ export default function Home() {
                 },
                 "sameAs": [
                   "https://www.instagram.com/rezaivision",
-                  "https://www.linkedin.com/in/parsha-rezai"
+                  "https://www.linkedin.com/in/parsha-rezai",
+                  "https://www.facebook.com/rezaivision",
+                  "https://www.tiktok.com/@rezaivision"
                 ]
               },
               {
