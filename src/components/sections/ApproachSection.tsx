@@ -34,7 +34,7 @@ export function ApproachSection() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-sm font-medium text-brand-accent mb-8">
@@ -52,13 +52,7 @@ export function ApproachSection() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
-            >
+            <div className="space-y-6">
               {[
                 {
                   title: "Strategie vor Technik",
@@ -73,17 +67,24 @@ export function ApproachSection() {
                   desc: "Ob erste Idee oder fertige Richtung: Wir steigen dort ein, wo Sie uns brauchen, und begleiten den Weg bis zum fertigen Video."
                 }
               ].map((item, i) => (
-                <div key={i} className="bg-brand-darker border border-white/5 p-8 rounded-2xl flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0 mt-1">
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
+                  className="bg-brand-darker border border-white/5 p-8 rounded-2xl flex gap-6 items-start hover:border-brand-accent/30 transition-colors group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0 mt-1 group-hover:scale-110 transition-transform">
                     <CheckCircle2 className="text-brand-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-bold mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-brand-accent transition-colors">{item.title}</h3>
                     <p className="text-gray-400">{item.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           <motion.div

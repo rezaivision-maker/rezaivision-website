@@ -24,27 +24,47 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl text-left"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8"
+            >
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
               Videoproduktion aus Kaiserslautern
-            </div>
-            <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tighter mb-6 leading-tight">
+            </motion.div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-4xl md:text-5xl font-display font-bold tracking-tighter mb-6 leading-tight"
+            >
               Starke Arbeit verdient es, <br className="hidden md:block" />
               <span className="gold-text-gradient">
                 gesehen zu werden.
               </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 font-light">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-lg md:text-xl text-gray-300 mb-10 font-light"
+            >
               Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="flex flex-col sm:flex-row items-center gap-4"
+            >
               <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
                 20-Minuten Projekt-Check
               </Button>
               <Button href="/referenzen" variant="outline" size="lg" className="w-full sm:w-auto">
                 Showreel ansehen
               </Button>
-            </div>
+            </motion.div>
             <div className="mt-6 text-sm md:text-base text-gray-400">
               Schnelle Frage? <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20habe%20eine%20kurze%20Frage%20zur%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie mir gerne direkt auf WhatsApp.</a>
             </div>
@@ -92,7 +112,17 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:flex justify-end relative"
           >
-            <div className="relative w-full max-w-[550px] xl:max-w-[650px] -mt-16 xl:-mt-24">
+            <motion.div 
+              animate={{ 
+                y: [0, -15, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="relative w-full max-w-[550px] xl:max-w-[650px] -mt-16 xl:-mt-24"
+            >
               <img
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
                 alt="Parsha Rezai - Videographer aus Kaiserslautern"
@@ -103,7 +133,7 @@ export function HeroSection() {
                 }}
                 referrerPolicy="no-referrer"
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

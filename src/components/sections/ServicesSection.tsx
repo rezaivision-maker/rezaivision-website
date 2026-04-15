@@ -6,7 +6,13 @@ export function ServicesSection() {
   return (
     <section className="py-24 bg-brand-darker">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+        >
           <div className="max-w-2xl">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">
               Unsere Leistungen
@@ -18,7 +24,7 @@ export function ServicesSection() {
           <Button href="/leistungen" variant="outline" className="shrink-0 gap-2">
             Alle Leistungen <ArrowRight size={16} />
           </Button>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
@@ -43,24 +49,32 @@ export function ServicesSection() {
               img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775649531/Social_Media_Content_Videos_Reels_Rezaivision_Kaiserslautern_wvd12d.webp"
             }
           ].map((service, i) => (
-            <Link key={i} to="/leistungen" className="group relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent opacity-90" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-display font-bold mb-2 group-hover:gold-text-gradient transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 mb-4 max-w-md">{service.desc}</p>
-                <div className="flex items-center gold-text-gradient font-medium text-sm gap-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                  Mehr erfahren <ArrowRight size={16} />
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+            >
+              <Link to="/leistungen" className="group relative block overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/50 to-transparent opacity-90" />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h3 className="text-2xl font-display font-bold mb-2 group-hover:gold-text-gradient transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 max-w-md">{service.desc}</p>
+                  <div className="flex items-center gold-text-gradient font-medium text-sm gap-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    Mehr erfahren <ArrowRight size={16} />
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
