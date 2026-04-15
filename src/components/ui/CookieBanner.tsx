@@ -19,7 +19,21 @@ export function CookieBanner() {
   const acceptAll = () => {
     localStorage.setItem("cookie-consent", "all");
     setIsVisible(false);
-    window.location.reload();
+    
+    // Consent Mode v2 Update Signal
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        ad_storage: "granted",
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+        analytics_storage: "granted"
+      });
+    }
+
+    // Meta Pixel Update Signal (if initialized)
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
+    }
   };
 
   const acceptEssential = () => {
