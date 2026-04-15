@@ -47,6 +47,7 @@ export default function PrivateEvents() {
       <Helmet>
         <title>Rezai|Emotion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP</title>
         <meta name="description" content="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland." />
+        <link rel="canonical" href="https://rezaivision.de/rezaemotion" />
         <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo" />
       </Helmet>
       

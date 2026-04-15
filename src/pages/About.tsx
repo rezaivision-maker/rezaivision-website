@@ -9,6 +9,7 @@ export default function About() {
       <Helmet>
         <title>Über uns | RezaEmotion | Videoproduktion Kaiserslautern</title>
         <meta name="description" content="Lernen Sie das Team hinter RezaEmotion kennen. Ihre Experten für professionelle Videoproduktion aus Kaiserslautern. Klar. Strukturiert. Wirkungsvoll." />
+        <link rel="canonical" href="https://rezaivision.de/ueber-uns" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         

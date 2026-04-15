@@ -77,6 +77,7 @@ export default function SocialRetainer() {
       <Helmet>
         <title>Social Media Betreuung & Video Content Agentur | Kaiserslautern</title>
         <meta name="description" content="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km." />
+        <link rel="canonical" href="https://rezaivision.de/leistungen/social-media" />
         <meta name="keywords" content="Social Media Management Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
       </Helmet>
       {/* 1. HERO SECTION */}

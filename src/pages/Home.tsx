@@ -20,6 +20,7 @@ export default function Home() {
       <Helmet>
         <title>Videoproduktion & Social Media Agentur Kaiserslautern | Umkreis 100km | Rezai Vision</title>
         <meta name="description" content="Ihre Agentur für Videoproduktion in Kaiserslautern, Mannheim & Rheinland-Pfalz. Wir erstellen performante Unternehmensfilme, Recruiting Videos und Social Media Ads im Umkreis von 100km." />
+        <link rel="canonical" href="https://rezaivision.de/" />
         <script type="application/ld+json">
           {`
             [

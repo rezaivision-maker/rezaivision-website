@@ -39,6 +39,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Rezai Vision Magazin</title>
         <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://rezaivision.de/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={post.image} />

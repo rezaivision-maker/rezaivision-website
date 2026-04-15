@@ -17,6 +17,7 @@ export default function Blog() {
       <Helmet>
         <title>Magazin | Rezai Vision & RezaiEmotion - Insights & SEO Tipps</title>
         <meta name="description" content="Erfahren Sie mehr über Videoproduktion, Recruiting-Videos und Hochzeitsfilme in unserem Magazin. Experten-Tipps für Ihren Erfolg." />
+        <link rel="canonical" href="https://rezaivision.de/blog" />
       </Helmet>
 
       {/* Header */}

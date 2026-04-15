@@ -78,6 +78,7 @@ export default function RecruitingVideo() {
       <Helmet>
         <title>Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim</title>
         <meta name="description" content="Gewinnen Sie Top-Talente aus der Region mit authentischen Recruiting Videos. Produktion in Kaiserslautern, Mannheim & Saarbrücken." />
+        <link rel="canonical" href="https://rezaivision.de/leistungen/recruiting" />
         <meta name="keywords" content="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur" />
       </Helmet>
       {/* 1. HERO SECTION */}

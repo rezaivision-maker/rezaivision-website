@@ -77,6 +77,7 @@ export default function SocialAds() {
       <Helmet>
         <title>Social Media Ads & Werbespots Agentur | Saarland & RLP</title>
         <meta name="description" content="Performance-starke Werbevideos und Social Ads für messbare Ergebnisse und Sichtbarkeit im digitalen Raum. Conversion-optimierte Videoproduktion im Umkreis von 100km (Mainz, Mannheim)." />
+        <link rel="canonical" href="https://rezaivision.de/leistungen/werbevideo" />
         <meta name="keywords" content="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz" />
       </Helmet>
       {/* 1. HERO SECTION */}

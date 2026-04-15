@@ -43,6 +43,7 @@ export default function FAQ() {
       <Helmet>
         <title>FAQ | Häufig gestellte Fragen | RezaEmotion</title>
         <meta name="description" content="Antworten auf die häufigsten Fragen rund um unsere Videoproduktion, Ablauf und Preise. Klarheit von Anfang an." />
+        <link rel="canonical" href="https://rezaivision.de/faq" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
