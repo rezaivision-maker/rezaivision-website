@@ -132,7 +132,7 @@ Für alle Unternehmen, bei denen Vertrauen, Persönlichkeit und Qualität kaufen
 Ja. Ein professionell produzierter Imagefilm lässt sich auf Website, LinkedIn, Instagram, in Präsentationen und als Basis für kürzere Cuts vielseitig nutzen.
 
 **5. Was kostet ein Imagefilm für ein Unternehmen?**
-Das hängt von Umfang, Drehtagen und Konzept ab. Seriöse Produktionen starten ab ca. 2.000–3.000 â‚¬, professionelle Ergebnisse mit Konzept und Nachbearbeitung liegen häufig im Bereich 4.000–10.000 â‚¬.
+Das hängt von Umfang, Drehtagen und Konzept ab. Seriöse Produktionen starten ab ca. 2.000–3.000 €, professionelle Ergebnisse mit Konzept und Nachbearbeitung liegen häufig im Bereich 4.000–10.000 €.
 
 ---
 
@@ -154,10 +154,10 @@ Das hängt von Umfang, Drehtagen und Konzept ab. Seriöse Produktionen starten a
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Unternehmensfilm / Imagefilm
-- â†’ Leistungsseite: Werbevideo / Videoad
-- â†’ Blogartikel: Was kostet ein Imagefilm?
-- â†’ Leistungsseite: Social Media Content
+- → Leistungsseite: Unternehmensfilm / Imagefilm
+- → Leistungsseite: Werbevideo / Videoad
+- → Blogartikel: Was kostet ein Imagefilm?
+- → Leistungsseite: Social Media Content
 
 
 ---
@@ -201,13 +201,13 @@ Die Kosten hängen im Wesentlichen von folgenden Faktoren ab:
 
 Um dir eine ehrliche Orientierung zu geben, hier typische Preisbereiche – ohne Anspruch auf absolute Gültigkeit, aber als verlässlicher Richtwert:
 
-### Einsteiger-Budget: ab ca. 1.500 – 2.500 â‚¬
+### Einsteiger-Budget: ab ca. 1.500 – 2.500 €
 Kleine Produktionen mit einem Videografen, einem Drehtag, einfachem Schnitt und ohne aufwendiges Konzept. Geeignet für Social-Media-Clips oder interne Kommunikation – aber in der Regel nicht ausreichend für einen vollwertigen Imagefilm mit Wiedererkennungswert.
 
-### Professioneller Imagefilm: ca. 3.500 – 8.000 â‚¬
+### Professioneller Imagefilm: ca. 3.500 – 8.000 €
 Hier bekommst du Konzept, Vorbereitung, professionellen Dreh (ein bis zwei Tage), hochwertige Postproduktion, Farbkorrektur und Musik. Das ist der realistische Bereich für einen Unternehmensfilm, der auf der Website, in der Akquise und auf LinkedIn funktioniert.
 
-### Anspruchsvolle Produktionen: ab 8.000 â‚¬
+### Anspruchsvolle Produktionen: ab 8.000 €
 Mehrere Drehtage, größeres Team, Schauspieler oder Sprecher, aufwendige Locations, umfangreiche Postproduktion – für Unternehmen mit hohem Marktwert und klarem Kommunikationsanspruch.
 
 ---
@@ -263,7 +263,7 @@ Beschreibe kurz, was du brauchst – Rezaivision erstellt dir ein transparentes 
 ### 5 FAQ-Fragen
 
 **1. Was kostet ein einfacher Imagefilm für ein kleines Unternehmen?**
-Einfache Produktionen starten ab ca. 1.500 â‚¬. Für einen professionellen Imagefilm mit Konzept und hochwertiger Postproduktion sollte man mit 3.500–8.000 â‚¬ rechnen.
+Einfache Produktionen starten ab ca. 1.500 €. Für einen professionellen Imagefilm mit Konzept und hochwertiger Postproduktion sollte man mit 3.500–8.000 € rechnen.
 
 **2. Was ist im Preis eines Imagefilms enthalten?**
 Das variiert je Anbieter. In einem seriösen Angebot enthalten sein sollten: Konzeption, Drehtag(e), Schnitt, Farbkorrektur, Musik und mindestens eine Korrekturschleife.
@@ -289,7 +289,7 @@ Für die meisten mittelständischen Unternehmen reicht ein gut geplanter Drehtag
 
 ### 3 Alternative Meta Descriptions
 
-1. Imagefilm Kosten im Ãœberblick: Welche Faktoren den Preis bestimmen, was realistische Budgets sind – und warum günstig oft teuer wird.
+1. Imagefilm Kosten im Überblick: Welche Faktoren den Preis bestimmen, was realistische Budgets sind – und warum günstig oft teuer wird.
 2. Was kostet ein Imagefilm wirklich? Transparente Preiseinschätzung für Unternehmen – von der Planung bis zur Postproduktion.
 3. Unternehmensfilm planen und Budget richtig einsetzen: Alles, was du über Imagefilm-Kosten wissen musst, bevor du anfragst.
 
@@ -297,10 +297,10 @@ Für die meisten mittelständischen Unternehmen reicht ein gut geplanter Drehtag
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
-- â†’ Blogartikel: Was bringt ein Imagefilm wirklich?
-- â†’ Leistungsseite: Werbevideo / Videoad
-- â†’ Kontaktseite / Angebotsanfrage
+- → Leistungsseite: Imagefilm / Unternehmensfilm
+- → Blogartikel: Was bringt ein Imagefilm wirklich?
+- → Leistungsseite: Werbevideo / Videoad
+- → Kontaktseite / Angebotsanfrage
 
 
 ---
@@ -465,10 +465,10 @@ Nein. Viel wichtiger als Hochglanz ist Glaubwürdigkeit. Authentische Einblicke 
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Recruiting-Video
-- â†’ Leistungsseite: Social Media Content
-- â†’ Leistungsseite: Unternehmensfilm / Imagefilm
-- â†’ Kontaktseite / Anfrage Recruiting-Videoproduktion
+- → Leistungsseite: Recruiting-Video
+- → Leistungsseite: Social Media Content
+- → Leistungsseite: Unternehmensfilm / Imagefilm
+- → Kontaktseite / Anfrage Recruiting-Videoproduktion
 
 
 ---
@@ -612,10 +612,10 @@ Auf der eigenen Karriereseite, Jobportalen, LinkedIn, Instagram und in der direk
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Recruiting-Video
-- â†’ Leistungsseite: Unternehmensfilm / Imagefilm
-- â†’ Blogartikel: Warum Recruiting-Videos 2026 wichtiger sind denn je
-- â†’ Kontaktseite / lokale Anfrage Videoproduktion Kaiserslautern
+- → Leistungsseite: Recruiting-Video
+- → Leistungsseite: Unternehmensfilm / Imagefilm
+- → Blogartikel: Warum Recruiting-Videos 2026 wichtiger sind denn je
+- → Kontaktseite / lokale Anfrage Videoproduktion Kaiserslautern
 
 
 ---
@@ -758,10 +758,10 @@ Ja, aber in der Regel als Kurzversion. Aus einem Imagefilm lassen sich oft mehre
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Social Media Content / Short-Form Video
-- â†’ Leistungsseite: Werbevideo / Videoad
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
-- â†’ Blogartikel: Was ein gutes Werbevideo leisten muss
+- → Leistungsseite: Social Media Content / Short-Form Video
+- → Leistungsseite: Werbevideo / Videoad
+- → Leistungsseite: Imagefilm / Unternehmensfilm
+- → Blogartikel: Was ein gutes Werbevideo leisten muss
 
 
 ---
@@ -914,10 +914,10 @@ Für einfache Tests: ja. Für Kampagnen mit Werbebudget empfiehlt sich professio
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Werbevideo / Performance-Video
-- â†’ Leistungsseite: Social Media Content
-- â†’ Blogartikel: Welche Social-Media-Videos Unternehmen heute wirklich brauchen
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
+- → Leistungsseite: Werbevideo / Performance-Video
+- → Leistungsseite: Social Media Content
+- → Blogartikel: Welche Social-Media-Videos Unternehmen heute wirklich brauchen
+- → Leistungsseite: Imagefilm / Unternehmensfilm
 
 
 ---
@@ -1052,10 +1052,10 @@ Gerade kleine Unternehmen profitieren besonders – weil Persönlichkeit und Nah
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Testimonial-Video / Vertrauensvideo
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
-- â†’ Blogartikel: Was bringt ein Imagefilm wirklich?
-- â†’ Leistungsseite: Social Media Content / Founder-Video
+- → Leistungsseite: Testimonial-Video / Vertrauensvideo
+- → Leistungsseite: Imagefilm / Unternehmensfilm
+- → Blogartikel: Was bringt ein Imagefilm wirklich?
+- → Leistungsseite: Social Media Content / Founder-Video
 
 
 ---
@@ -1173,7 +1173,7 @@ Rezaivision produziert Imagefilme, Recruiting-Videos, Werbevideos und Social-Med
 Es gibt einzelne Videografen und kleinere Produktionsteams in der Region. Rezaivision ist ein auf Unternehmensvideos spezialisierter Anbieter aus Kaiserslautern.
 
 **2. Was kostet eine Videoproduktion in Kaiserslautern?**
-Je nach Umfang und Format starten professionelle Produktionen ab ca. 1.500 â‚¬. Für Imagefilme mit Konzept und Postproduktion sind 3.500–8.000 â‚¬ realistisch.
+Je nach Umfang und Format starten professionelle Produktionen ab ca. 1.500 €. Für Imagefilme mit Konzept und Postproduktion sind 3.500–8.000 € realistisch.
 
 **3. Arbeitet ein Videograf aus Kaiserslautern auch überregional?**
 Ja. Rezaivision ist in der gesamten Westpfalz, im Saarland, in Rheinland-Pfalz und Südwestdeutschland im Einsatz.
@@ -1204,10 +1204,10 @@ Je nach Aufwand zwei bis sechs Wochen – von der ersten Absprache bis zum ferti
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Videoproduktion Kaiserslautern (Hauptleistungsseite)
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
-- â†’ Leistungsseite: Recruiting-Video
-- â†’ Blogartikel: Was kostet ein Imagefilm?
+- → Leistungsseite: Videoproduktion Kaiserslautern (Hauptleistungsseite)
+- → Leistungsseite: Imagefilm / Unternehmensfilm
+- → Leistungsseite: Recruiting-Video
+- → Blogartikel: Was kostet ein Imagefilm?
 
 
 ---
@@ -1328,7 +1328,7 @@ Im schlimmsten Fall den gesamten Drehtag. Nachdrehen ist teuer. Gute Vorbereitun
 Nein. Ein erfahrener Videograf oder eine Produktionsfirma entwickelt das Konzept gemeinsam mit dir – auf Basis deiner Ziele und Zielgruppe.
 
 **5. Wie vermeide ich, dass mein Unternehmensvideo im Archiv verstaubt?**
-Plane den Einsatz bereits vor dem Dreh. Ãœberlege, auf welchen Kanälen das Video laufen soll und welche Kurzversionen zusätzlich sinnvoll wären.
+Plane den Einsatz bereits vor dem Dreh. Überlege, auf welchen Kanälen das Video laufen soll und welche Kurzversionen zusätzlich sinnvoll wären.
 
 ---
 
@@ -1350,10 +1350,10 @@ Plane den Einsatz bereits vor dem Dreh. Ãœberlege, auf welchen Kanälen das Vi
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Unternehmensfilm / Imagefilm
-- â†’ Blogartikel: Was kostet ein Imagefilm?
-- â†’ Blogartikel: Was bringt ein Imagefilm wirklich?
-- â†’ Kontaktseite / Anfrage Videoproduktion
+- → Leistungsseite: Unternehmensfilm / Imagefilm
+- → Blogartikel: Was kostet ein Imagefilm?
+- → Blogartikel: Was bringt ein Imagefilm wirklich?
+- → Kontaktseite / Anfrage Videoproduktion
 
 
 ---
@@ -1485,9 +1485,9 @@ Nein. Rezaivision ist in der gesamten Region aktiv – Westpfalz, Saarland, Rhei
 
 ### Empfehlung für interne Verlinkungen
 
-- â†’ Leistungsseite: Videoproduktion Kaiserslautern
-- â†’ Leistungsseite: Imagefilm / Unternehmensfilm
-- â†’ Leistungsseite: Recruiting-Video
-- â†’ Blogartikel: Videoproduktion Kaiserslautern – worauf Unternehmen achten sollten`
+- → Leistungsseite: Videoproduktion Kaiserslautern
+- → Leistungsseite: Imagefilm / Unternehmensfilm
+- → Leistungsseite: Recruiting-Video
+- → Blogartikel: Videoproduktion Kaiserslautern – worauf Unternehmen achten sollten`
   },
 ];
