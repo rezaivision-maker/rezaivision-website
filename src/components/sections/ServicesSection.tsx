@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export function ServicesSection() {
   return (
