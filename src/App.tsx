@@ -28,10 +28,12 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import GlossaryIndex from "./pages/Glossary";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import { Analytics } from "./components/Analytics";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
