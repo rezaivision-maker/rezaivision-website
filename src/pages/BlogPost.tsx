@@ -106,7 +106,9 @@ export default function BlogPost() {
           transition={{ duration: 0.8 }}
           className="prose prose-invert prose-brand max-w-none"
         >
-          {post.content.split('\n').map((line, i) => {
+          {post.content
+            .split('### Verwendete Keywords')[0]
+            .split('\n').map((line, i) => {
             if (line.startsWith('## ')) {
               return <h2 key={i} className="text-3xl font-display font-bold mt-12 mb-6 text-white">{line.replace('## ', '')}</h2>;
             }
