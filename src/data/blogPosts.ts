@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     category: "corporate",
     date: "15. April 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?q=80&w=2069&auto=format&fit=crop",
+    image: "/images/blog/post-1.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Imagefilm für Unternehmen: Was er wirklich bringt – und warum er mehr ist als ein schönes Video
@@ -174,7 +174,7 @@ Das hängt von Umfang, Drehtagen und Konzept ab. Seriöse Produktionen starten a
     category: "corporate",
     date: "11. April 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/blog/post-2.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Imagefilm Kosten: Was ein Unternehmensfilm wirklich kostet – und wovon der Preis abhängt
@@ -317,7 +317,7 @@ Für die meisten mittelständischen Unternehmen reicht ein gut geplanter Drehtag
     category: "corporate",
     date: "07. April 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/blog/post-3.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Recruiting-Video für Unternehmen: Warum es 2026 wichtiger ist denn je
@@ -485,7 +485,7 @@ Nein. Viel wichtiger als Hochglanz ist Glaubwürdigkeit. Authentische Einblicke 
     category: "corporate",
     date: "03. April 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/blog/post-4.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Recruiting Video Kaiserslautern: Wie Unternehmen in der Region sichtbarere Arbeitgeber werden
@@ -632,7 +632,7 @@ Auf der eigenen Karriereseite, Jobportalen, LinkedIn, Instagram und in der direk
     category: "corporate",
     date: "30. März 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/blog/post-5.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Social Media Videos für Unternehmen: Was wirklich funktioniert – und warum Format allein nicht reicht
@@ -778,7 +778,7 @@ Ja, aber in der Regel als Kurzversion. Aus einem Imagefilm lassen sich oft mehre
     category: "corporate",
     date: "26. März 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/blog/post-6.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Werbevideo für Unternehmen: Was es wirklich leisten muss – und warum Optik allein nicht reicht
@@ -934,7 +934,7 @@ Für einfache Tests: ja. Für Kampagnen mit Werbebudget empfiehlt sich professio
     category: "corporate",
     date: "22. März 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/blog/post-7.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Vertrauen aufbauen mit Videos: Warum es der entscheidende Faktor im Marketing ist
@@ -1072,7 +1072,7 @@ Gerade kleine Unternehmen profitieren besonders – weil Persönlichkeit und Nah
     category: "corporate",
     date: "18. März 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/blog/post-8.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Videoproduktion Kaiserslautern: Worauf Unternehmen bei der Auswahl wirklich achten sollten
@@ -1224,7 +1224,7 @@ Je nach Aufwand zwei bis sechs Wochen – von der ersten Absprache bis zum ferti
     category: "corporate",
     date: "14. März 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/blog/post-9.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# 7 Fehler, die Unternehmen beim Unternehmensvideo vermeiden sollten
@@ -1370,7 +1370,7 @@ Plane den Einsatz bereits vor dem Dreh. Überlege, auf welchen Kanälen das Vide
     category: "corporate",
     date: "10. März 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/blog/post-10.png",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Videos für Unternehmen in Kaiserslautern: Warum der Zeitpunkt jetzt besser ist als später
