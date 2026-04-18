@@ -1,0 +1,1342 @@
+
+> react-example@0.0.0 lint
+> tsc --noEmit
+
+src/data/blogPosts.ts(178,15): error TS1127: Invalid character.
+src/data/blogPosts.ts(178,17): error TS1005: ':' expected.
+src/data/blogPosts.ts(178,23): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,33): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,41): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,46): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,50): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,62): error TS1005: ',' expected.
+src/data/blogPosts.ts(178,80): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,5): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,18): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,22): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,28): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,37): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,44): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,69): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,80): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,87): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,93): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,100): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,105): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,111): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,140): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,145): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,151): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,171): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,178): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,182): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,188): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,192): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,202): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,214): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,231): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,235): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,240): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,248): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,253): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,268): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,282): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,286): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,290): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,298): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,313): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,323): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,334): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,338): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,342): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,354): error TS1005: ',' expected.
+src/data/blogPosts.ts(180,366): error TS1005: ',' expected.
+src/data/blogPosts.ts(182,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(182,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(184,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(184,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(184,4): error TS1005: ',' expected.
+src/data/blogPosts.ts(184,8): error TS1005: ',' expected.
+src/data/blogPosts.ts(184,16): error TS1005: ',' expected.
+src/data/blogPosts.ts(184,28): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,5): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,13): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,32): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,56): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,60): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,79): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,85): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,92): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,96): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,107): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,114): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,121): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,135): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,148): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,154): error TS1005: ',' expected.
+src/data/blogPosts.ts(186,164): error TS1003: Identifier expected.
+src/data/blogPosts.ts(188,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,6): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,15): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,19): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,32): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,35): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,49): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,64): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,73): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,80): error TS1005: ',' expected.
+src/data/blogPosts.ts(188,93): error TS1005: ',' expected.
+src/data/blogPosts.ts(189,7): error TS1005: ',' expected.
+src/data/blogPosts.ts(189,20): error TS1005: ',' expected.
+src/data/blogPosts.ts(189,24): error TS1005: ',' expected.
+src/data/blogPosts.ts(189,29): error TS1005: ',' expected.
+src/data/blogPosts.ts(190,7): error TS1005: ':' expected.
+src/data/blogPosts.ts(190,11): error TS1005: ',' expected.
+src/data/blogPosts.ts(190,25): error TS1005: ',' expected.
+src/data/blogPosts.ts(190,29): error TS1005: ',' expected.
+src/data/blogPosts.ts(191,14): error TS1005: ':' expected.
+src/data/blogPosts.ts(191,18): error TS1005: ',' expected.
+src/data/blogPosts.ts(191,29): error TS1005: ',' expected.
+src/data/blogPosts.ts(191,38): error TS1005: ',' expected.
+src/data/blogPosts.ts(192,9): error TS1005: ':' expected.
+src/data/blogPosts.ts(192,13): error TS1005: ',' expected.
+src/data/blogPosts.ts(192,30): error TS1005: ',' expected.
+src/data/blogPosts.ts(192,33): error TS1005: ',' expected.
+src/data/blogPosts.ts(192,40): error TS1005: ',' expected.
+src/data/blogPosts.ts(192,48): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(194,11): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,20): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,26): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,32): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,42): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,48): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,61): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,70): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,74): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,91): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,96): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,100): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,116): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,130): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,146): error TS1005: ',' expected.
+src/data/blogPosts.ts(194,165): error TS1005: ',' expected.
+src/data/blogPosts.ts(196,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(196,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(198,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(198,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(198,4): error TS1005: ',' expected.
+src/data/blogPosts.ts(198,13): error TS1005: ',' expected.
+src/data/blogPosts.ts(198,19): error TS1005: ',' expected.
+src/data/blogPosts.ts(198,39): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,5): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,20): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,44): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,50): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,56): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,60): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,67): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,73): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,84): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,88): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,107): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,111): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,122): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,131): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,136): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,147): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,151): error TS1005: ',' expected.
+src/data/blogPosts.ts(200,173): error TS1003: Identifier expected.
+src/data/blogPosts.ts(202,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(202,5): error TS1005: ',' expected.
+src/data/blogPosts.ts(202,15): error TS1005: ',' expected.
+src/data/blogPosts.ts(202,22): error TS1005: ',' expected.
+src/data/blogPosts.ts(202,26): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,1): error TS17006: An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses.
+src/data/blogPosts.ts(203,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(203,11): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,24): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,25): error TS1109: Expression expected.
+src/data/blogPosts.ts(203,41): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,46): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,56): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,63): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,68): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,100): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,108): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,121): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,129): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,133): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,140): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,144): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,153): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,173): error TS1005: ',' expected.
+src/data/blogPosts.ts(203,182): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(204,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(204,16): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,17): error TS1109: Expression expected.
+src/data/blogPosts.ts(204,24): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,31): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,38): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,58): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,63): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,66): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,72): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,76): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,92): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,97): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,108): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,130): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,139): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,156): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,159): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,165): error TS1005: ',' expected.
+src/data/blogPosts.ts(204,176): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(205,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(205,32): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,33): error TS1109: Expression expected.
+src/data/blogPosts.ts(205,40): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,46): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,52): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,58): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,64): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,70): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,77): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,83): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,88): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,96): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,105): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,113): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,123): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,129): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,141): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,151): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,155): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,162): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,166): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,177): error TS1005: ',' expected.
+src/data/blogPosts.ts(205,197): error TS1005: ',' expected.
+src/data/blogPosts.ts(207,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(207,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(209,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(209,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(209,4): error TS1005: ',' expected.
+src/data/blogPosts.ts(209,11): error TS1005: ',' expected.
+src/data/blogPosts.ts(209,14): error TS1005: ',' expected.
+src/data/blogPosts.ts(209,31): error TS1005: ',' expected.
+src/data/blogPosts.ts(209,34): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,1): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,5): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,20): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,24): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,40): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,55): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,70): error TS1005: ',' expected.
+src/data/blogPosts.ts(211,76): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,14): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,27): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,46): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,52): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,61): error TS1005: ',' expected.
+src/data/blogPosts.ts(212,66): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(213,13): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,25): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,31): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,52): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,57): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,66): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,71): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,77): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,81): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,87): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,97): error TS1005: ',' expected.
+src/data/blogPosts.ts(213,117): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(214,10): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,22): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,40): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,44): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,49): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,57): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,73): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,78): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,82): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,98): error TS1005: ',' expected.
+src/data/blogPosts.ts(214,107): error TS1005: ',' expected.
+src/data/blogPosts.ts(216,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(216,11): error TS1005: ']' expected.
+src/data/blogPosts.ts(216,20): error TS1005: ',' expected.
+src/data/blogPosts.ts(216,26): error TS1005: ',' expected.
+src/data/blogPosts.ts(216,36): error TS1161: Unterminated regular expression literal.
+src/data/blogPosts.ts(218,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(220,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(220,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(220,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(222,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,11): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,19): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,25): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,30): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,34): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,46): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,62): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,69): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,98): error TS1005: ';' expected.
+src/data/blogPosts.ts(222,102): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,114): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,118): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,122): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,162): error TS1005: ';' expected.
+src/data/blogPosts.ts(222,166): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,170): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,204): error TS1005: ';' expected.
+src/data/blogPosts.ts(222,223): error TS1005: ';' expected.
+src/data/blogPosts.ts(222,229): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(222,246): error TS1005: ';' expected.
+src/data/blogPosts.ts(224,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(224,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(226,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(226,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(226,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(228,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(228,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(228,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(228,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(228,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(228,13): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(228,17): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(228,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(228,38): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(228,48): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(229,15): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,19): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,22): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,34): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,45): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,55): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,59): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,72): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,93): error TS1005: ';' expected.
+src/data/blogPosts.ts(229,110): error TS1005: ';' expected.
+src/data/blogPosts.ts(229,118): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,123): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,126): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,138): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,147): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,151): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,162): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,167): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(229,199): error TS1005: ';' expected.
+src/data/blogPosts.ts(229,222): error TS1003: Identifier expected.
+src/data/blogPosts.ts(231,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(231,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(231,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(231,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(231,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,14): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,21): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,25): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,31): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,39): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(231,60): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(232,33): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,41): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,49): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,68): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,74): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,93): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,127): error TS1005: ',' expected.
+src/data/blogPosts.ts(232,132): error TS1005: ',' expected.
+src/data/blogPosts.ts(232,137): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,144): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,155): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,180): error TS1005: ',' expected.
+src/data/blogPosts.ts(232,190): error TS1005: ';' expected.
+src/data/blogPosts.ts(232,194): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,203): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,212): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(232,230): error TS1003: Identifier expected.
+src/data/blogPosts.ts(234,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(234,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(234,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(234,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(234,12): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(234,16): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(234,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(234,32): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(234,36): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(234,42): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(235,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,36): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,42): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,51): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,56): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,74): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,78): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,103): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,120): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,133): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,143): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,147): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,151): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,185): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,190): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,196): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,200): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,218): error TS1005: ';' expected.
+src/data/blogPosts.ts(235,224): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,231): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(235,241): error TS1003: Identifier expected.
+src/data/blogPosts.ts(237,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(237,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(237,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(237,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(237,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,24): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,40): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,44): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,48): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,60): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(237,64): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,14): error TS1005: ':' expected.
+src/data/blogPosts.ts(238,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,22): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,34): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,40): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,57): error TS1005: ';' expected.
+src/data/blogPosts.ts(238,61): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,72): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,81): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,85): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,92): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,101): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,105): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,118): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,122): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,129): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,139): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,149): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,160): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,167): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,178): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,182): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,191): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(238,211): error TS1127: Invalid character.
+src/data/blogPosts.ts(251,15): error TS1127: Invalid character.
+src/data/blogPosts.ts(251,17): error TS1005: ';' expected.
+src/data/blogPosts.ts(251,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(251,38): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(251,45): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(251,55): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(251,67): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,23): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,40): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,46): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,67): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,85): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,120): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,124): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,129): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,134): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,149): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,153): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,160): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,165): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,173): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,181): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,204): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,207): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,221): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,228): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,232): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,247): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,252): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,277): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,299): error TS1005: ';' expected.
+src/data/blogPosts.ts(253,303): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,312): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,316): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,325): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,334): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,341): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(253,364): error TS1005: ';' expected.
+src/data/blogPosts.ts(255,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(255,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(257,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(257,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(257,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(257,8): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(257,16): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(257,20): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,36): error TS1005: ';' expected.
+src/data/blogPosts.ts(259,51): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,61): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,66): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,69): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,102): error TS1005: ';' expected.
+src/data/blogPosts.ts(259,106): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,144): error TS1005: ';' expected.
+src/data/blogPosts.ts(259,156): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,160): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,167): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,186): error TS1005: ';' expected.
+src/data/blogPosts.ts(259,192): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,203): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,214): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(259,253): error TS1003: Identifier expected.
+src/data/blogPosts.ts(261,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,6): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,20): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,31): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,47): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,69): error TS1005: ';' expected.
+src/data/blogPosts.ts(261,86): error TS1005: ';' expected.
+src/data/blogPosts.ts(261,90): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,94): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,97): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,101): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,111): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,128): error TS1127: Invalid character.
+src/data/blogPosts.ts(261,130): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,136): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,142): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,172): error TS1005: ';' expected.
+src/data/blogPosts.ts(261,178): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,186): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,199): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(261,203): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(263,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(263,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(265,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(265,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(265,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(265,8): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(265,13): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(265,19): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(265,25): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,5): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,21): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,26): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,32): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,44): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,81): error TS1005: ';' expected.
+src/data/blogPosts.ts(267,90): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,94): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(267,117): error TS1003: Identifier expected.
+src/data/blogPosts.ts(269,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(269,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(269,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(269,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(269,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,10): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,16): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,22): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,42): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,85): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,92): error TS1109: Expression expected.
+src/data/blogPosts.ts(270,99): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,103): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,119): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,124): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,137): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,141): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,148): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,183): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,188): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(270,223): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,242): error TS1005: ';' expected.
+src/data/blogPosts.ts(270,261): error TS1003: Identifier expected.
+src/data/blogPosts.ts(272,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(272,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(272,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(272,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(272,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,21): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,26): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,32): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,52): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,59): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,78): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,128): error TS1005: ',' expected.
+src/data/blogPosts.ts(273,134): error TS1005: ',' expected.
+src/data/blogPosts.ts(273,139): error TS1005: ',' expected.
+src/data/blogPosts.ts(273,148): error TS1005: ',' expected.
+src/data/blogPosts.ts(273,154): error TS1005: ',' expected.
+src/data/blogPosts.ts(273,159): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,166): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,189): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,195): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,208): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,236): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,242): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,247): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,254): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,282): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,296): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,300): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,312): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,340): error TS1005: ';' expected.
+src/data/blogPosts.ts(273,348): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,353): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,356): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(273,373): error TS1003: Identifier expected.
+src/data/blogPosts.ts(275,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(275,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(275,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(275,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(275,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(276,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,39): error TS1005: ';' expected.
+src/data/blogPosts.ts(276,49): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,79): error TS1005: ',' expected.
+src/data/blogPosts.ts(276,102): error TS1005: ',' expected.
+src/data/blogPosts.ts(276,119): error TS1005: ',' expected.
+src/data/blogPosts.ts(276,124): error TS1005: ',' expected.
+src/data/blogPosts.ts(276,132): error TS1005: ',' expected.
+src/data/blogPosts.ts(276,160): error TS1005: ';' expected.
+src/data/blogPosts.ts(276,165): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,174): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,178): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,212): error TS1005: ';' expected.
+src/data/blogPosts.ts(276,224): error TS1005: ';' expected.
+src/data/blogPosts.ts(276,233): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(276,258): error TS1005: ';' expected.
+src/data/blogPosts.ts(278,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(278,12): error TS1005: ']' expected.
+src/data/blogPosts.ts(278,28): error TS1005: ';' expected.
+src/data/blogPosts.ts(278,38): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(278,40): error TS1161: Unterminated regular expression literal.
+src/data/blogPosts.ts(280,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(282,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(282,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(282,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,18): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,23): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,54): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,58): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,87): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,104): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,108): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,114): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,142): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,146): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,167): error TS1005: ';' expected.
+src/data/blogPosts.ts(284,171): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,178): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,199): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,203): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,207): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,225): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,231): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,235): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,242): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,254): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,258): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(284,267): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(286,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(286,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(288,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(288,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(288,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(290,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(290,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(290,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(290,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(290,11): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(290,45): error TS1005: ';' expected.
+src/data/blogPosts.ts(290,51): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(290,55): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,12): error TS1005: ':' expected.
+src/data/blogPosts.ts(291,24): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,52): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,82): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,88): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,95): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,101): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,108): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,152): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,179): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,190): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,197): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,210): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,237): error TS1005: ';' expected.
+src/data/blogPosts.ts(291,240): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(291,259): error TS1003: Identifier expected.
+src/data/blogPosts.ts(293,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(293,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(293,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(293,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(293,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(293,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(293,23): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(293,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(293,60): error TS1005: ';' expected.
+src/data/blogPosts.ts(294,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(294,12): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,25): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,31): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,36): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,75): error TS1005: ';' expected.
+src/data/blogPosts.ts(294,83): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,102): error TS1005: ';' expected.
+src/data/blogPosts.ts(294,118): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,154): error TS1005: ';' expected.
+src/data/blogPosts.ts(294,159): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,176): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,181): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(294,212): error TS1003: Identifier expected.
+src/data/blogPosts.ts(296,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(296,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(296,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(296,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(296,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(296,17): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(296,23): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(296,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(296,49): error TS1005: ';' expected.
+src/data/blogPosts.ts(297,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(297,17): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,22): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,26): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,38): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,46): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,84): error TS1005: ';' expected.
+src/data/blogPosts.ts(297,88): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,121): error TS1005: ';' expected.
+src/data/blogPosts.ts(297,125): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,129): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,161): error TS1005: ',' expected.
+src/data/blogPosts.ts(297,164): error TS1005: ',' expected.
+src/data/blogPosts.ts(297,173): error TS1005: ';' expected.
+src/data/blogPosts.ts(297,197): error TS1005: ';' expected.
+src/data/blogPosts.ts(297,201): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,213): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,219): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,225): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,229): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,238): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,243): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(297,256): error TS1127: Invalid character.
+src/data/blogPosts.ts(304,18): error TS1127: Invalid character.
+src/data/blogPosts.ts(304,20): error TS1005: ';' expected.
+src/data/blogPosts.ts(304,47): error TS1005: ';' expected.
+src/data/blogPosts.ts(304,64): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,5): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,28): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,32): error TS1435: Unknown keyword or identifier. Did you mean 'function'?
+src/data/blogPosts.ts(306,41): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,65): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,73): error TS1003: Identifier expected.
+src/data/blogPosts.ts(306,94): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,134): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,139): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,169): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,204): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,220): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,224): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,231): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,237): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,248): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,258): error TS1005: ';' expected.
+src/data/blogPosts.ts(306,273): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,276): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,285): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,293): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,297): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(306,307): error TS1435: Unknown keyword or identifier. Did you mean 'return'?
+src/data/blogPosts.ts(306,314): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(308,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(308,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(310,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(310,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(310,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(310,22): error TS1005: ';' expected.
+src/data/blogPosts.ts(310,24): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(310,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(310,33): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,26): error TS1005: ';' expected.
+src/data/blogPosts.ts(312,35): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,76): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,80): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,89): error TS1435: Unknown keyword or identifier. Did you mean 'catch'?
+src/data/blogPosts.ts(312,115): error TS1005: ';' expected.
+src/data/blogPosts.ts(312,148): error TS1005: ';' expected.
+src/data/blogPosts.ts(312,154): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,163): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,176): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,196): error TS1005: ';' expected.
+src/data/blogPosts.ts(312,208): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(312,235): error TS1005: ';' expected.
+src/data/blogPosts.ts(312,246): error TS1003: Identifier expected.
+src/data/blogPosts.ts(314,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(314,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(314,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(314,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(314,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(315,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,5): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,12): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,34): error TS1005: ';' expected.
+src/data/blogPosts.ts(315,40): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,44): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,66): error TS1005: ',' expected.
+src/data/blogPosts.ts(315,81): error TS1005: ';' expected.
+src/data/blogPosts.ts(315,89): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,94): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,99): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,103): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(315,114): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(316,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(316,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(316,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(316,14): error TS1109: Expression expected.
+src/data/blogPosts.ts(316,25): error TS1005: ';' expected.
+src/data/blogPosts.ts(316,46): error TS1005: ';' expected.
+src/data/blogPosts.ts(316,63): error TS1005: ',' expected.
+src/data/blogPosts.ts(316,74): error TS1005: ';' expected.
+src/data/blogPosts.ts(316,84): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(316,88): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(316,95): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(317,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(317,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(317,11): error TS1005: ';' expected.
+src/data/blogPosts.ts(317,12): error TS1109: Expression expected.
+src/data/blogPosts.ts(317,27): error TS1005: ';' expected.
+src/data/blogPosts.ts(317,44): error TS1005: ';' expected.
+src/data/blogPosts.ts(317,64): error TS1005: ';' expected.
+src/data/blogPosts.ts(317,97): error TS1005: ',' expected.
+src/data/blogPosts.ts(317,113): error TS1005: ',' expected.
+src/data/blogPosts.ts(317,117): error TS1005: ',' expected.
+src/data/blogPosts.ts(317,121): error TS1005: ',' expected.
+src/data/blogPosts.ts(318,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(318,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(318,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(318,10): error TS1109: Expression expected.
+src/data/blogPosts.ts(318,40): error TS1005: ';' expected.
+src/data/blogPosts.ts(318,48): error TS1003: Identifier expected.
+src/data/blogPosts.ts(320,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(320,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(320,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(320,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(320,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(321,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(321,9): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(321,20): error TS1005: ';' expected.
+src/data/blogPosts.ts(321,26): error TS1005: ';' expected.
+src/data/blogPosts.ts(321,45): error TS1005: ',' expected.
+src/data/blogPosts.ts(321,49): error TS1005: ',' expected.
+src/data/blogPosts.ts(321,58): error TS1005: ',' expected.
+src/data/blogPosts.ts(321,63): error TS1005: ',' expected.
+src/data/blogPosts.ts(322,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(322,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(322,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(322,14): error TS1109: Expression expected.
+src/data/blogPosts.ts(322,32): error TS1005: ';' expected.
+src/data/blogPosts.ts(322,36): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(322,43): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(322,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(322,57): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(322,94): error TS1005: ';' expected.
+src/data/blogPosts.ts(322,100): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(323,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(323,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(323,11): error TS1005: ';' expected.
+src/data/blogPosts.ts(323,12): error TS1109: Expression expected.
+src/data/blogPosts.ts(323,47): error TS1005: ';' expected.
+src/data/blogPosts.ts(323,60): error TS1005: ';' expected.
+src/data/blogPosts.ts(324,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(324,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(324,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(324,10): error TS1109: Expression expected.
+src/data/blogPosts.ts(324,21): error TS1005: ';' expected.
+src/data/blogPosts.ts(324,45): error TS1005: ';' expected.
+src/data/blogPosts.ts(324,60): error TS1003: Identifier expected.
+src/data/blogPosts.ts(326,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(326,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(326,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(326,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(326,8): error TS1005: ';' expected.
+src/data/blogPosts.ts(327,22): error TS1005: ';' expected.
+src/data/blogPosts.ts(327,43): error TS1005: ';' expected.
+src/data/blogPosts.ts(327,46): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(327,53): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(327,77): error TS1005: ';' expected.
+src/data/blogPosts.ts(327,85): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(327,105): error TS1005: ';' expected.
+src/data/blogPosts.ts(327,118): error TS1005: ';' expected.
+src/data/blogPosts.ts(328,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(328,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(328,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(328,14): error TS1109: Expression expected.
+src/data/blogPosts.ts(328,26): error TS1005: ';' expected.
+src/data/blogPosts.ts(328,48): error TS1005: ',' expected.
+src/data/blogPosts.ts(328,51): error TS1005: ',' expected.
+src/data/blogPosts.ts(329,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(329,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(329,11): error TS1005: ';' expected.
+src/data/blogPosts.ts(329,12): error TS1109: Expression expected.
+src/data/blogPosts.ts(329,22): error TS1005: ';' expected.
+src/data/blogPosts.ts(329,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(329,79): error TS1005: ';' expected.
+src/data/blogPosts.ts(330,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(330,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(330,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(330,10): error TS1109: Expression expected.
+src/data/blogPosts.ts(332,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(332,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(334,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(334,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(334,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(334,8): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(334,16): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,5): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,12): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,32): error TS1005: ';' expected.
+src/data/blogPosts.ts(336,73): error TS1005: ';' expected.
+src/data/blogPosts.ts(336,77): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,109): error TS1005: ',' expected.
+src/data/blogPosts.ts(336,121): error TS1005: ',' expected.
+src/data/blogPosts.ts(336,132): error TS1005: ';' expected.
+src/data/blogPosts.ts(336,145): error TS1005: ';' expected.
+src/data/blogPosts.ts(336,153): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,176): error TS1005: ';' expected.
+src/data/blogPosts.ts(336,183): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,189): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,202): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(336,216): error TS1003: Identifier expected.
+src/data/blogPosts.ts(338,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,14): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,40): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,52): error TS1109: Expression expected.
+src/data/blogPosts.ts(338,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,58): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,64): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,82): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,94): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,117): error TS1005: ',' expected.
+src/data/blogPosts.ts(338,132): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,141): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,148): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,164): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,183): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,187): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,196): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,200): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,230): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,234): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,257): error TS1005: ';' expected.
+src/data/blogPosts.ts(338,266): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,275): error TS1435: Unknown keyword or identifier. Did you mean 'set'?
+src/data/blogPosts.ts(338,281): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,285): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,303): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,307): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(338,321): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(340,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(340,14): error TS1005: ']' expected.
+src/data/blogPosts.ts(340,27): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(340,47): error TS1005: ';' expected.
+src/data/blogPosts.ts(340,49): error TS1161: Unterminated regular expression literal.
+src/data/blogPosts.ts(342,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(344,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(344,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(344,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,1): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,8): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,14): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,30): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,44): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,48): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,55): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,61): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,91): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,118): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,127): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,133): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,163): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,170): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,175): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(346,196): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,222): error TS1005: ';' expected.
+src/data/blogPosts.ts(346,253): error TS1005: ';' expected.
+src/data/blogPosts.ts(348,1): error TS1003: Identifier expected.
+src/data/blogPosts.ts(348,3): error TS1109: Expression expected.
+src/data/blogPosts.ts(350,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(350,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(350,4): error TS1005: ';' expected.
+src/data/blogPosts.ts(352,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(352,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(352,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(352,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(352,24): error TS1005: ';' expected.
+src/data/blogPosts.ts(352,28): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(353,11): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,15): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,19): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,32): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,36): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,40): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,50): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,86): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,94): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,97): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,102): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,112): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,121): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,130): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,139): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,153): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,159): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,194): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,201): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,205): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,213): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,226): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,235): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,241): error TS1005: ';' expected.
+src/data/blogPosts.ts(353,249): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(353,262): error TS1003: Identifier expected.
+src/data/blogPosts.ts(355,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(355,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(355,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(355,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(355,14): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(355,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(355,22): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(355,29): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(355,33): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(355,39): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,7): error TS1005: ':' expected.
+src/data/blogPosts.ts(356,39): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,51): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,55): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,59): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,82): error TS1005: ',' expected.
+src/data/blogPosts.ts(356,92): error TS1005: ',' expected.
+src/data/blogPosts.ts(356,101): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,105): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,109): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,125): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,137): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,155): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,162): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,168): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,172): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,199): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,224): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,228): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,232): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,280): error TS1005: ';' expected.
+src/data/blogPosts.ts(356,293): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,297): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,301): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,313): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(356,342): error TS1003: Identifier expected.
+src/data/blogPosts.ts(358,1): error TS1127: Invalid character.
+src/data/blogPosts.ts(358,2): error TS1127: Invalid character.
+src/data/blogPosts.ts(358,3): error TS1127: Invalid character.
+src/data/blogPosts.ts(358,5): error TS1005: ';' expected.
+src/data/blogPosts.ts(358,11): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(358,18): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(358,24): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(358,30): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,5): error TS1005: ':' expected.
+src/data/blogPosts.ts(359,11): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,22): error TS1005: ';' expected.
+src/data/blogPosts.ts(359,39): error TS1005: ';' expected.
+src/data/blogPosts.ts(359,44): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,48): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,54): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,58): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,87): error TS1005: ';' expected.
+src/data/blogPosts.ts(359,91): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,98): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,102): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,112): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,119): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,128): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,137): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,142): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,148): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,162): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,191): error TS1005: ',' expected.
+src/data/blogPosts.ts(359,195): error TS1005: ',' expected.
+src/data/blogPosts.ts(359,225): error TS1005: ';' expected.
+src/data/blogPosts.ts(359,229): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,241): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,245): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,251): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,255): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,268): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,280): error TS1434: Unexpected keyword or identifier.
+src/data/blogPosts.ts(359,294): error TS1127: Invalid character.
+src/data/blogPosts.ts(377,3): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(377,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(380,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(381,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(382,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(383,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(384,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(385,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(386,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(387,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(388,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(389,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(533,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(536,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(537,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(538,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(539,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(540,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(541,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(542,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(543,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(544,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(545,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(671,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(674,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(675,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(676,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(677,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(678,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(679,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(680,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(681,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(682,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(683,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(823,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(826,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(827,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(828,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(829,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(830,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(831,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(832,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(833,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(834,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(835,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(969,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(972,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(973,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(974,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(975,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(976,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(977,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(978,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(979,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(980,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(981,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1097,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1100,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1101,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1102,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1103,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1104,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1105,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1106,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1107,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1108,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1109,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1188,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1191,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1192,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1193,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1194,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1195,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1196,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1197,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1198,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1199,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1200,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1251,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1254,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1255,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1256,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1257,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1258,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1259,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1260,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1261,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1262,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1263,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1306,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1309,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1310,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1311,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1312,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1313,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1314,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1315,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1316,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1317,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1318,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1359,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1362,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1363,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1364,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1365,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1366,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1367,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1368,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1369,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1370,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1371,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1409,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1412,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1413,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1414,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1415,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1416,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1417,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1418,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1419,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1420,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1421,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1454,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1457,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1458,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1459,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1460,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1461,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1462,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1463,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1464,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1465,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1466,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1492,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1495,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1496,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1497,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1498,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1499,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1500,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1501,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1502,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1503,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1504,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1527,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1530,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1531,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1532,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1533,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1534,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1535,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1536,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1537,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1538,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1539,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1558,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1561,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1562,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1563,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1564,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1565,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1566,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1567,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1568,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1569,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1570,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1600,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1603,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1604,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1605,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1606,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1607,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1608,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1609,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1610,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1611,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1612,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1675,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1678,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1679,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1680,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1681,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1682,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1683,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1684,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1685,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1686,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1687,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1746,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1749,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1750,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1751,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1752,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1753,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1754,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1755,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1756,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1757,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1758,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1803,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1806,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1807,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1808,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1809,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1810,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1811,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1812,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1813,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1814,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1815,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1856,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1859,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1860,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1861,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1862,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1863,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1864,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1865,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1866,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1867,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1868,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1908,4): error TS1128: Declaration or statement expected.
+src/data/blogPosts.ts(1911,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1912,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1913,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1914,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1915,9): error TS1005: ';' expected.
+src/data/blogPosts.ts(1916,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1917,10): error TS1005: ';' expected.
+src/data/blogPosts.ts(1918,13): error TS1005: ';' expected.
+src/data/blogPosts.ts(1919,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1920,12): error TS1005: ';' expected.
+src/data/blogPosts.ts(1961,1): error TS1128: Declaration or statement expected.

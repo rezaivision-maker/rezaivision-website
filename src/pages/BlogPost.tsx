@@ -104,20 +104,37 @@ export default function BlogPost() {
     }))
   } : null;
 
-  // Helper: Render inline markdown (**bold**, normal text)
+  // Helper: Render inline markdown (**bold**, [links](urls))
   const renderInline = (text: string, keyPrefix: string = '') => {
-    const parts = text.split(/\*\*(.*?)\*\*/g);
-    return parts.map((part, idx) =>
-      idx % 2 === 1
-        ? <strong key={`${keyPrefix}-${idx}`} className="text-white font-semibold">{part}</strong>
-        : <span key={`${keyPrefix}-${idx}`}>{part}</span>
-    );
+    // Wenn es ein direkter Button-Link ist, überspringen (wird in renderContent behandelt)
+    if (text.match(/^\[(.*?)\]\((.*?)\)$/)) return <span key={keyPrefix}>{text}</span>;
+
+    // Sonst: Split nach Links
+    const linkParts = text.split(/\[(.*?)\]\((.*?)\)/g);
+    
+    return linkParts.map((part, idx) => {
+      if (idx % 3 === 1) { // Link Text
+        const url = linkParts[idx + 1];
+        return <a key={`${keyPrefix}-${idx}`} href={url} className="text-brand-accent hover:underline font-medium">{part}</a>;
+      }
+      if (idx % 3 === 2) return null; // URL part überspringen
+
+      // Normaler Text -> Bold Parsing
+      const boldParts = part.split(/\*\*(.*?)\*\*/g);
+      return boldParts.map((bPart, bIdx) =>
+        bIdx % 2 === 1
+          ? <strong key={`${keyPrefix}-${idx}-${bIdx}`} className="text-white font-semibold">{bPart}</strong>
+          : <span key={`${keyPrefix}-${idx}-${bIdx}`}>{bPart}</span>
+      );
+    });
   };
 
   const renderContent = (content: string) => {
     const lines = content.split('\n');
-    const elements: JSX.Element[] = [];
+    const elements: any[] = [];
     let i = 0;
+
+    let inFaqSection = false;
 
     while (i < lines.length) {
       const line = lines[i].trim();
@@ -137,24 +154,67 @@ export default function BlogPost() {
 
       // H2
       if (line.startsWith('## ')) {
+        const title = line.replace('## ', '');
+        inFaqSection = title.toLowerCase().includes('faq') || title.toLowerCase().includes('häufige fragen');
         elements.push(
           <h2 key={`h2-${i}`} className="text-3xl md:text-4xl font-display font-bold mt-16 mb-8 text-white">
-            {renderInline(line.replace('## ', ''), `h2-${i}`)}
+            {renderInline(title, `h2-${i}`)}
           </h2>
         );
         i++;
         continue;
       }
 
-      // H3
+      // H3 & FAQs
       if (line.startsWith('### ')) {
-        elements.push(
-          <h3 key={`h3-${i}`} className="text-2xl font-display font-bold mt-12 mb-6 text-white">
-            {renderInline(line.replace('### ', ''), `h3-${i}`)}
-          </h3>
-        );
-        i++;
-        continue;
+        const title = line.replace('### ', '');
+        
+        if (inFaqSection) {
+          // Es ist ein FAQ Dropdown!
+          i++;
+          const answerLines = [];
+          while (i < lines.length && !lines[i].trim().startsWith('#') && lines[i].trim() !== '---') {
+            if (lines[i].trim() !== '') answerLines.push(lines[i].trim());
+            i++;
+          }
+          elements.push(
+            <details key={`faq-${i}`} className="group bg-white/5 border border-white/10 rounded-2xl mb-4 overflow-hidden">
+               <summary className="cursor-pointer font-bold text-lg md:text-xl p-6 list-none flex justify-between items-center text-white hover:bg-white/5 transition-colors">
+                 {renderInline(title, `faq-title-${i}`)}
+                 <svg className="w-6 h-6 text-brand-accent group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                 </svg>
+               </summary>
+               <div className="px-6 pb-6 text-gray-300 leading-relaxed font-light">
+                 {answerLines.map((al, idx) => (
+                   <p key={idx} className="mb-4 last:mb-0">{renderInline(al, `faq-ans-${idx}`)}</p>
+                 ))}
+               </div>
+            </details>
+          );
+          continue; // i ist schon weitergesetzt
+        } else {
+          // Normales H3
+          elements.push(
+            <h3 key={`h3-${i}`} className="text-2xl font-display font-bold mt-12 mb-6 text-white">
+              {renderInline(title, `h3-${i}`)}
+            </h3>
+          );
+          i++;
+          continue;
+        }
+      }
+
+      // Buttons [Button Text](/url) als alleinstehende Zeile
+      const buttonMatch = line.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (buttonMatch) {
+         elements.push(
+           <div className="my-8" key={`btn-${i}`}>
+             <Button href={buttonMatch[2]} size="lg">{buttonMatch[1]}</Button>
+           </div>
+         );
+         i++;
+         continue;
       }
 
       // Tables
