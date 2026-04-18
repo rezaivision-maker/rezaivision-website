@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     category: "corporate",
     date: "15. April 2026",
     readTime: "4 min",
-    image: "/images/blog/post-1.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513545/blog/Blog_Videoproduktion_Kaiserslautern_Post1.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Imagefilm für Unternehmen: Was er wirklich bringt – und warum er mehr ist als ein schönes Video
@@ -174,7 +174,7 @@ Das hängt von Umfang, Drehtagen und Konzept ab. Seriöse Produktionen starten a
     category: "corporate",
     date: "11. April 2026",
     readTime: "5 min",
-    image: "/images/blog/post-2.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513549/blog/Blog_Corporate_Video_Kaiserslautern_Post2.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Imagefilm Kosten: Was ein Unternehmensfilm wirklich kostet – und wovon der Preis abhängt
@@ -317,7 +317,7 @@ Für die meisten mittelständischen Unternehmen reicht ein gut geplanter Drehtag
     category: "corporate",
     date: "07. April 2026",
     readTime: "4 min",
-    image: "/images/blog/post-3.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513550/blog/Blog_Social_Media_Marketing_Kaiserslautern_Post3.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Recruiting-Video für Unternehmen: Warum es 2026 wichtiger ist denn je
@@ -485,7 +485,7 @@ Nein. Viel wichtiger als Hochglanz ist Glaubwürdigkeit. Authentische Einblicke 
     category: "corporate",
     date: "03. April 2026",
     readTime: "4 min",
-    image: "/images/blog/post-4.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513552/blog/Blog_Recruiting_Strategie_Kaiserslautern_Post4.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Recruiting Video Kaiserslautern: Wie Unternehmen in der Region sichtbarere Arbeitgeber werden
@@ -632,7 +632,7 @@ Auf der eigenen Karriereseite, Jobportalen, LinkedIn, Instagram und in der direk
     category: "corporate",
     date: "30. März 2026",
     readTime: "5 min",
-    image: "/images/blog/post-5.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513553/blog/Blog_Hochzeitsvideo_Pfalz_Post5.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Social Media Videos für Unternehmen: Was wirklich funktioniert – und warum Format allein nicht reicht
@@ -778,7 +778,7 @@ Ja, aber in der Regel als Kurzversion. Aus einem Imagefilm lassen sich oft mehre
     category: "corporate",
     date: "26. März 2026",
     readTime: "5 min",
-    image: "/images/blog/post-6.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513555/blog/Blog_Musikvideo_Produktion_Post6.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Werbevideo für Unternehmen: Was es wirklich leisten muss – und warum Optik allein nicht reicht
@@ -934,7 +934,7 @@ Für einfache Tests: ja. Für Kampagnen mit Werbebudget empfiehlt sich professio
     category: "corporate",
     date: "22. März 2026",
     readTime: "4 min",
-    image: "/images/blog/post-7.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513560/blog/Blog_Employer_Branding_Pfalz_Post7.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Vertrauen aufbauen mit Videos: Warum es der entscheidende Faktor im Marketing ist
@@ -1072,7 +1072,7 @@ Gerade kleine Unternehmen profitieren besonders – weil Persönlichkeit und Nah
     category: "corporate",
     date: "18. März 2026",
     readTime: "4 min",
-    image: "/images/blog/post-8.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513562/blog/Blog_Content_Strategie_KMU_Post8.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Videoproduktion Kaiserslautern: Worauf Unternehmen bei der Auswahl wirklich achten sollten
@@ -1224,7 +1224,7 @@ Je nach Aufwand zwei bis sechs Wochen – von der ersten Absprache bis zum ferti
     category: "corporate",
     date: "14. März 2026",
     readTime: "4 min",
-    image: "/images/blog/post-9.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513563/blog/Blog_Video_Marketing_Trends_Post9.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# 7 Fehler, die Unternehmen beim Unternehmensvideo vermeiden sollten
@@ -1370,7 +1370,7 @@ Plane den Einsatz bereits vor dem Dreh. Überlege, auf welchen Kanälen das Vide
     category: "corporate",
     date: "10. März 2026",
     readTime: "4 min",
-    image: "/images/blog/post-10.png",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513564/blog/Blog_Imagefilm_Rheinland_Pfalz_Post10.jpg",
     ctaLabel: "Beratung anfordern",
     ctaLink: "/kontakt",
     content: `# Videos für Unternehmen in Kaiserslautern: Warum der Zeitpunkt jetzt besser ist als später
@@ -1498,64 +1498,75 @@ Nein. Rezaivision ist in der gesamten Region aktiv – Westpfalz, Saarland, Rhei
     category: "corporate",
     date: "18. April 2026",
     readTime: "6 min",
-    image: "/images/blog/recruiting-pfalz.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513527/blog/Recruiting_Video_Pfalz_Kaiserslautern_Rezaivision.jpg",
     ctaLabel: "Recruiting-Check anfragen",
     ctaLink: "/kontakt?service=recruiting",
     content: `# Warum klassische Stellenanzeigen 2026 scheitern – und wie Recruiting-Videos in der Pfalz Fachkräfte gewinnen
 
 **Klassische Stellenanzeigen informieren nur über Aufgaben und Anforderungen. Ein Recruiting-Video zeigt dagegen Team, Atmosphäre und echte Gründe für einen Wechsel – und genau das senkt die Hürde für Bewerbungen.**
 
-## Einleitung
-Der Arbeitsmarkt im Handwerk und in vielen mittelständischen Betrieben in Rheinland-Pfalz hat sich radikal verändert. Gute Fachkräfte werden nicht mehr einfach durch eine Anzeige überzeugt, nur weil eine Stelle frei ist. 
+---
 
-Menschen wollen heute verstehen, wie ein Betrieb wirklich funktioniert. Sie wollen sehen, mit wem sie arbeiten würden, wie der Ton im Team ist und ob der Arbeitgeber vertrauenswürdig wirkt.
+## Einleitung
+Der Arbeitsmarkt im Handwerk und in vielen mittelständischen Betrieben in **Rheinland-Pfalz** hat sich radikal verändert. Gute Fachkräfte werden nicht mehr einfach durch eine Anzeige überzeugt, nur weil eine Stelle frei ist. 
+
+Menschen wollen heute verstehen, wie ein Betrieb **wirklich funktioniert**. Sie wollen sehen, mit wem sie arbeiten würden, wie der Ton im Team ist und ob der Arbeitgeber vertrauenswürdig wirkt.
 
 ## Warum klassische Anzeigen immer schwächer wirken
-Eine Stellenanzeige ist oft textlastig, formal und austauschbar. Viele Anzeigen sehen sich so ähnlich, dass sie kaum Differenzierung erzeugen. Vor allem passive Kandidaten reagieren kaum auf reine Textkommunikation. Wer eigentlich schon beschäftigt ist, braucht einen echten Grund, sich überhaupt mit einem Wechsel zu beschäftigen.
+Eine Stellenanzeige ist oft textlastig, formal und austauschbar. Viele Anzeigen sehen sich so ähnlich, dass sie kaum Differenzierung erzeugen. 
+
+Vor allem **passive Kandidaten** reagieren kaum auf reine Textkommunikation. Wer eigentlich schon beschäftigt ist, braucht einen echten Grund, sich überhaupt mit einem Wechsel zu beschäftigen.
 
 ## Job Hugging als echtes Problem
 Ein wichtiges Stichwort im Jahr 2026 ist **Job Hugging**. Damit ist gemeint, dass Fachkräfte lieber im alten Job bleiben, obwohl sie unzufrieden sind, weil der Wechsel mit Unsicherheit verbunden ist.
 
 Diese Unsicherheit ist nicht nur rational, sondern auch emotional. Menschen fragen sich:
-- Ist das Team wirklich sympathisch?
-- Ist der Betrieb modern ausgestattet?
-- Werde ich dort ernst genommen?
-- Ist der Wechsel das Risiko wert?
+*   Ist das Team wirklich sympathisch?
+*   Ist der Betrieb modern ausgestattet?
+*   Werde ich dort ernst genommen?
+*   Ist der Wechsel das Risiko wert?
 
-Genau hier hilft Video. Ein gutes Recruiting-Video baut Nähe auf, noch bevor ein persönliches Gespräch stattfindet.
+Genau hier hilft Video. Ein gutes **Recruiting-Video** baut Nähe auf, noch bevor ein persönliches Gespräch stattfindet.
+
+---
 
 ## Warum Video besser funktioniert
 Video kombiniert mehrere Reize gleichzeitig, die Vertrauen schaffen:
-- **Echte Gesichter:** Man sieht die zukünftigen Kollegen.
-- **Authentische Stimmen:** Man hört den ehrlichen Tonfall.
-- **Arbeitsalltag:** Man sieht die Werkstatt oder das Büro in Aktion.
-- **Atmosphäre:** Man spürt den Vibe im Betrieb.
+1.  **Echte Gesichter:** Man sieht die zukünftigen Kollegen.
+2.  **Authentische Stimmen:** Man hört den ehrlichen Tonfall.
+3.  **Arbeitsalltag:** Man sieht die Werkstatt oder das Büro in Aktion.
+4.  **Atmosphäre:** Man spürt den Vibe im Betrieb.
 
-Damit entsteht ein emotionaler und visueller Eindruck, den eine Stellenanzeige nie erreichen kann. Vor allem im Handwerk in Kaiserslautern ist das entscheidend, weil Bewerber echte Einblicke wollen.
+Damit entsteht ein emotionaler und visueller Eindruck, den eine Stellenanzeige nie erreichen kann. Vor allem im **Handwerk in Kaiserslautern** ist das entscheidend, weil Bewerber echte Einblicke wollen.
 
 ## Recruitingvideo Kosten Pfalz: Investment vs. Nutzen
-Viele Entscheider suchen nicht nur nach einem Produkt, sondern nach einem sinnvollen Investment. Die Frage ist: „Was bringt es uns?“
 
 | Faktor | Klassische Stellenanzeige | Recruiting-Video |
-|---|---|---|
-| Aufmerksamkeit | Schnell übersehen | Deutlich höher |
-| Vertrauen | Gering bis mittel | Hoch durch echte Einblicke |
-| Bewerberqualität | Oft gemischt | Häufig gezielter |
-| Arbeitgebermarke | Schwach spürbar | Klar und nahbar |
-| Emotionaler Effekt | Kaum vorhanden | Stark |
-| Wirkung auf passive Kandidaten | Gering | Deutlich besser |
+| :--- | :--- | :--- |
+| **Aufmerksamkeit** | Schnell übersehen | Deutlich höher |
+| **Vertrauen** | Gering bis mittel | Hoch durch echte Einblicke |
+| **Bewerberqualität** | Oft gemischt | Häufig gezielter |
+| **Arbeitgebermarke** | Schwach spürbar | Klar und nahbar |
+| **Emotionaler Effekt** | Kaum vorhanden | Stark |
+| **Wirkung auf Passive** | Gering | Deutlich besser |
+
+---
 
 ## Was ein starkes Recruitingvideo enthalten sollte
-Ein gutes Video zeigt nicht einfach nur das Firmengebäude von oben. Es zeigt die Menschen und die Haltung des Betriebs.
+Ein gutes Video zeigt nicht einfach nur das Firmengebäude von oben. Es zeigt die **Menschen** und die **Haltung** des Betriebs.
 
 Wichtige Elemente für Betriebe in der Westpfalz:
-- Echte Mitarbeitende (keine Schauspieler).
-- Ein sympathischer Ansprechpartner auf Augenhöhe.
-- Vorteile wie Einarbeitung, Teamkultur oder moderne Technik.
-- Regionale Verankerung (Kaiserslautern, Landstuhl, Kusel).
+*   **Echte Mitarbeitende** (keine Schauspieler).
+*   Ein sympathischer Ansprechpartner auf Augenhöhe.
+*   Vorteile wie Einarbeitung, Teamkultur oder moderne Technik.
+*   **Regionale Verankerung** (Kaiserslautern, Landstuhl, Kusel).
 
 ## Praxisbezug aus der Region
-In der Westpfalz funktionieren ehrliche und direkte Formate besonders gut. Gerade regionale Betriebe profitieren davon, wenn sie nicht wie eine anonyme Marke auftreten, sondern als echter Arbeitsplatz mit Charakter. Ein Handwerksbetrieb aus Kaiserslautern kann mit einem gut produzierten Video oft mehr erreichen als mit mehreren Wochen klassischer Anzeigen.
+In der Westpfalz funktionieren ehrliche und direkte Formate besonders gut. Gerade regionale Betriebe profitieren davon, wenn sie nicht wie eine anonyme Marke auftreten, sondern als echter Arbeitsplatz mit Charakter. 
+
+Ein Handwerksbetrieb aus Kaiserslautern kann mit einem gut produzierten Video oft mehr erreichen als mit mehreren Wochen klassischer Anzeigen. Der Grund: **Video reduziert Distanz.**
+
+---
 
 ## FAQ
 ### Wie teuer ist ein Recruitingvideo in der Pfalz?
@@ -1578,52 +1589,60 @@ Oft schon nach wenigen Tagen, wenn es gezielt über Social Media in der Region a
     category: "emotion",
     date: "17. April 2026",
     readTime: "5 min",
-    image: "/images/blog/wedding-content.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513529/blog/Wedding_Content_Creator_Kaiserslautern_Hochzeit.jpg",
     ctaLabel: "Hochzeits-Anfrage",
     ctaLink: "/kontakt?service=wedding",
     content: `# Wedding Content Creator vs. Hochzeitsvideograf – was Brautpaare in Kaiserslautern 2026 wirklich brauchen
 
 **Ein Hochzeitsvideograf liefert meist einen emotionalen Film für die Ewigkeit. Ein Wedding Content Creator erstellt zusätzlich schnelle, vertikale Clips für Social Media, oft schon während oder kurz nach der Hochzeit.**
 
+---
+
 ## Einleitung
-Die Hochzeitswelt hat sich verändert. Viele Paare in der Pfalz wollen heute nicht nur einen klassischen Film, den sie sich am ersten Hochzeitstag ansehen, sondern auch sofort nutzbaren Content für Instagram, TikTok oder die WhatsApp-Gruppe der Familie.
+Die Hochzeitswelt hat sich verändert. Viele Paare in der **Pfalz** wollen heute nicht nur einen klassischen Film, den sie sich am ersten Hochzeitstag ansehen, sondern auch sofort nutzbaren Content für Instagram, TikTok oder die WhatsApp-Gruppe der Familie.
+
+Damit entstehen zwei unterschiedliche, aber sich perfekt ergänzende Rollen in der Hochzeitsbranche.
 
 ## Der Unterschied im Detail
-Es sind zwei unterschiedliche Rollen, die oft kombiniert werden.
+Es sind zwei grundverschiedene Ansätze, die oft im Paket kombiniert werden, um das Beste aus beiden Welten zu erhalten.
 
 | Feature | Hochzeitsvideograf | Wedding Content Creator |
-|---|---|---|
-| Technik | Kino-Kameras, 4K, Audio-Rekorder | iPhone, Gimbals, Mobil-Optimiert |
-| Fokus | Dramaturgie, Emotion, Qualität | Spontaneität, Trends, Schnelligkeit |
-| Format | 16:9 (Klassisch/Kino) | 9:16 (Vertikal/Mobil) |
-| Lieferzeit | 4-12 Wochen (Postproduktion) | 24-48 Stunden (Direkt-Content) |
-| Ergebnis | Ein Film für die Ewigkeit | Reels, Stories & Snippets |
+| :--- | :--- | :--- |
+| **Technik** | Kino-Kameras, 4K, Audio-Rekorder | High-End Smartphones, Gimbals |
+| **Fokus** | Dramaturgie, Emotion, Qualität | Spontaneität, Trends, Speed |
+| **Format** | 16:9 (Klassisch / Kino) | 9:16 (Vertikal / Story-Ready) |
+| **Lieferzeit** | 4-12 Wochen (Postproduktion) | 24-48 Stunden (Direkt-Content) |
+| **Ergebnis** | Ein Film für die Ewigkeit | Reels, Stories & Snippets |
 
 ## Was Paare 2026 in der Pfalz erwarten
-Brautpaare wollen heute Inhalte, die sich anfühlen wie ihr echter Tag. Besonders gefragt sind:
-- Natürliche, ungestellte Emotionen.
-- Schnelle Clips für den nächsten Tag ("Morning After Reveal").
-- Ein moderner Vintage-Look, der langlebig wirkt.
+Brautpaare wollen heute Inhalte, die sich anfühlen wie ihr echter Tag – ungeschönt und nahbar. 
+
+Besonders gefragt sind:
+*   **Morning After Reveal:** Schnelle Clips zum Teilen am nächsten Morgen.
+*   **Ungestellte Emotionen:** ("Candid Moments").
+*   Ein moderner **Vintage-Look**, der trotzdem langlebig wirkt.
 
 ## Hochzeitsvideo Vintage Look Pfalz
-Ein Vintage- oder Retro-inspirierter Look ist 2026 besonders beliebt. Er funktioniert in der Pfalz hervorragend, da Locations wie das Weingut Dr. Bürklin-Wolf oder Schloss Villa Ludwigshöhe diesen Stil durch ihre Architektur perfekt unterstützen.
+Ein Vintage- oder Retro-inspirierter Look ist 2026 besonders beliebt. Er funktioniert in der Pfalz hervorragend, da Locations wie das **Weingut Dr. Bürklin-Wolf** oder **Schloss Villa Ludwigshöhe** diesen Stil durch ihre Architektur perfekt unterstützen. Der analoge Charme bildet den perfekten Kontrast zur digitalen Schnelllebigkeit.
+
+---
 
 ## Related Search Keywords
-- Wedding Content Creator Kaiserslautern
-- Hochzeitsvideo Vintage Look Pfalz
-- Aftermovie Hochzeit Kosten
-- Hochzeitsvideograf Mannheim
-- Social Media Hochzeit Trends 2026
+*   Wedding Content Creator Kaiserslautern
+*   Hochzeitsvideo Vintage Look Pfalz
+*   Aftermovie Hochzeit Kosten
+*   Hochzeitsvideograf Mannheim
+*   Social Media Hochzeit Trends 2026
 
 ## FAQ
 ### Brauchen wir eher einen Videografen oder einen Content Creator?
-Das hängt von euren Prioritäten ab. Wollt ihr einen zeitlosen Film oder schnellen Content für Social Media? Die Kombination ist meist die beste Wahl.
+Das hängt von euren Prioritäten ab. Wollt ihr einen zeitlosen Film oder schnellen Content für Social Media? Die Kombination ist meist die beste Wahl für 2026.
 
 ### Ist ein Vintage-Look noch modern?
-Absolut. Er verleiht dem Hochzeitsvideo eine zeitlose, analoge Ästhetik, die sich von glatten Smartphone-Aufnahmen abhebt.
+Absolut. Er verleiht dem Hochzeitsvideo eine zeitlose, analoge Ästhetik, die sich von glatten Standard-Smartphone-Aufnahmen abhebt.
 
 ### Worin liegt der Vorteil von Social Clips?
-Sie fangen die kleinen, spontanen Momente ("Behind the scenes") ein, die im großen Hochzeitsfilm oft keinen Platz finden.`
+Sie fangen die kleinen, spontanen Momente ("Behind the scenes") ein, die im großen Hochzeitsfilm oft keinen Platz finden, aber für Social Media Gold wert sind.`
   },
   {
     id: "13",
@@ -1633,51 +1652,52 @@ Sie fangen die kleinen, spontanen Momente ("Behind the scenes") ein, die im gro�
     category: "emotion",
     date: "16. April 2026",
     readTime: "4 min",
-    image: "/images/blog/artist-support.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513530/blog/Artist_Support_Musikvideo_RLP_Rezaivision.jpg",
     ctaLabel: "Artist Support anfragen",
     ctaLink: "/kontakt?service=music",
     content: `# Das Artist-Support-Paket: Wie Independent Künstler in RLP Musikvideos auf Profi-Niveau drehen
 
 **Independent Artists brauchen 2026 nicht zwingend ein großes Budget, sondern eine starke visuelle Idee, eine passende Location und einen klaren Produktionsplan.**
 
-## Einleitung
-Viele Newcomer wissen genau, wie ihr Song klingen soll, aber nicht, wie ihr visuelles Branding aussehen muss. Dabei ist die Bildsprache heute oft genauso wichtig wie der Sound, um auf TikTok oder YouTube entdeckt zu werden.
+---
 
-## Pourquoi Artist Support?
+## Einleitung
+Viele Newcomer wissen genau, wie ihr Song klingen soll, aber nicht, wie ihr visuelles Branding aussehen muss. Dabei ist die Bildsprache heute oft genauso wichtig wie der Sound, um auf **TikTok oder YouTube** entdeckt zu werden.
+
+## Warum Artist Support?
 Gerade für unabhängige Künstler ist Effizienz entscheidend. Das Budget ist oft begrenzt, aber der Anspruch an die Optik trotzdem hoch. Unser Artist-Support-Paket bietet dafür eine Komplettlösung:
-- Klare kreative Richtung (Concept Art).
-- Effiziente Drehtage mit Fokus auf Materialausbeute.
-- Einbindung von Social Content (Snippets) direkt während des Drehs.
+*   **Concept Art:** Klare kreative Richtung vor dem Dreh.
+*   **Asset-Maximierung:** Effiziente Drehtage mit Fokus auf Materialausbeute.
+*   **Social-Ready:** Einbindung von Snippets direkt während des Hauptdrehs.
 
 ## Musikvideo Locations Rheinland-Pfalz
-Rheinland-Pfalz bietet spektakuläre Kulissen, die einen internationalen Look erzeugen können:
-- **Industrie-Ruinen:** In Ludwigshafen oder Pirmasens finden sich raue Texturen.
-- **Beton-Architektur:** Urbane Hintergründe in Kaiserslautern geben Tiefe.
-- **Natur-Kontraste:** Das Pfälzer Bergland bietet epische Weiten.
+Rheinland-Pfalz bietet spektakuläre Kulissen, die einen internationalen Look erzeugen können. Wir kennen die Verstecke.
 
-| Look | Musikstil | Location-Typ |
-|---|---|---|
-| Dark Industrial | Rap / Techno | Alte Fabrikhalle |
-| Clean Neon | Pop / R&B | Studio / Parkhaus |
-| Raw Docu | Alternative / Indie | Street / Outdoor |
-| Vintage 8mm | Folk / Lo-Fi | Natur / Wald |
+| Look | Musikstil | Location-Typ (RLP) |
+| :--- | :--- | :--- |
+| **Dark Industrial** | Rap / Techno | Alte Fabrikhalle (Ludwigshafen) |
+| **Clean Neon** | Pop / R&B | Parkhaus / Studio (Kaiserslautern) |
+| **Raw Docu** | Alternative / Indie | Street / Outdoor (Urbane Zentren) |
+| **Vintage 8mm** | Folk / Lo-Fi | Pfälzerwald / Natur |
 
 ## Top 5 Cinematic Looks 2026
-1. **Dark Industrial:** Fokus auf Schatten und harte Kanten.
-2. **Clean Neon:** Minimalismus mit starken Akzentfarben.
-3. **Raw Documentary:** Handkamera-Stil für maximale Nähe.
-4. **Vintage 8mm:** Warme Farben und Filmkorn für Nostalgie.
-5. **High-Contrast Performance:** Fokus auf den Künstler vor fast schwarzem Hintergrund.
+1.  **Dark Industrial:** Fokus auf Schatten und harte Kanten.
+2.  **Clean Neon:** Minimalismus mit starken Akzentfarben.
+3.  **Raw Documentary:** Handkamera-Stil für maximale Nähe zum Artist.
+4.  **Vintage 8mm:** Warme Farben und Filmkorn für Nostalgie.
+5.  **High-Contrast Performance:** Fokus auf den Künstler vor fast schwarzem Hintergrund.
+
+---
 
 ## FAQ
 ### Was kostet ein Musikvideo 2026?
-Das hängt stark vom Konzept ab. Durch unser Artist-Support-Modell machen wir Profi-Optik auch für Musiker ohne Label-Budget zugänglich.
+Das hängt stark vom Konzept ab. Durch unser Artist-Support-Modell machen wir Profi-Optik auch für Musiker ohne Label-Budget in RLP zugänglich.
 
 ### Warum sind Lost Places so beliebt?
-Weil sie sofort eine Geschichte erzählen und einen hohen Wiedererkennungswert im Thumbnail bieten.
+Weil sie sofort eine Geschichte erzählen und einen extrem hohen Wiedererkennungswert im YouTube-Thumbnail bieten.
 
 ### Kann man aus einem Musikvideodreh auch Social Content machen?
-Ja, das ist sogar essenziell. Wir schneiden aus dem Material direkt Teaser für Reels und TikTok.`
+Ja, das ist für uns essenziell. Wir schneiden aus dem Material direkt Teaser für **Reels und TikTok**, um den Song-Release viral zu unterstützen.`
   },
   {
     id: "14",
@@ -1687,36 +1707,35 @@ Ja, das ist sogar essenziell. Wir schneiden aus dem Material direkt Teaser für 
     category: "corporate",
     date: "15. April 2026",
     readTime: "5 min",
-    image: "/images/blog/hybrid-video.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513532/blog/Hybrid_Video_KI_Produktion_Kaiserslautern.jpg",
     ctaLabel: "Effizienz-Check anfragen",
     ctaLink: "/kontakt",
     content: `# Hybrid Video Production: Wie wir KI nutzen, um für KMU in Kaiserslautern Kosten zu senken
 
 **KI macht Videoproduktion nicht automatisch besser, aber deutlich effizienter. Richtig eingesetzt hilft sie, mehr Content aus einem Drehtag zu holen, ohne die menschliche Kreativität zu ersetzen.**
 
+---
+
 ## Einleitung
-Viele kleine und mittelständische Unternehmen (KMU) in Kaiserslautern wollen 2026 sichtbarer werden, ohne jeden Monat fünfstellige Produktionsbudgets zu investieren. Genau hier setzt unser hybrider Ansatz an: Klassisches Handwerk an der Kamera kombiniert mit intelligenten KI-Workflows in der Postproduktion.
+Viele kleine und mittelständische Unternehmen (**KMU**) in Kaiserslautern wollen 2026 sichtbarer werden, ohne jeden Monat fünfstellige Produktionsbudgets zu investieren. Genau hier setzt unser **hybrider Ansatz** an: Klassisches Handwerk an der Kamera kombiniert mit intelligenten KI-Workflows in der Postproduktion.
 
 ## Wo KI in der Videoproduktion wirklich hilft
 KI ist kein Ersatz für ein gutes Auge, aber sie ist der perfekte Assistent für zeitfressende Aufgaben:
-- **Transkription & Untertitel:** Was früher Stunden dauerte, passiert heute in Minuten – und das in perfekter Qualität.
-- **Content-Slicing:** KI hilft uns, aus einem 10-minütigen Interview automatisch die spannendsten 30-Sekunden-Clips für Reels vorzuschlagen.
-- **Audio-Restaurierung:** Stimmen aus lauten Umgebungen (z.B. Fabrikhalle) werden glasklar gefiltert.
+*   **Transkription & Untertitel:** Was früher Stunden dauerte, passiert heute in Minuten – und das in perfekter Qualität.
+*   **Content-Slicing:** KI hilft uns, aus einem 10-minütigen Interview automatisch die spannendsten Clips für Reels vorzuschlagen.
+*   **Audio-Restaurierung:** Stimmen aus lauter Umgebung werden glasklar gefiltert.
 
 ## Der modulare Content-Workflow
-Ein einzelner Drehtag bei dir im Betrieb in Kaiserslautern dient uns als "Rohstoff-Quelle". Durch hybride Workflows machen wir daraus:
-1. Einen hochwertigen Imagefilm für die Website.
-2. Drei bis fünf Recruiting-Clips für Social Media.
-3. Mehrere Kurz-Statments (Expert-Snippets) für LinkedIn.
-4. Material für zukünftige Ads.
+Ein einzelner Drehtag bei dir im Betrieb in Kaiserslautern dient uns als "Rohstoff-Quelle". Durch hybride Workflows machen wir daraus ein ganzes Paket an Assets.
+
+| Asset-Typ | Nutzen | Zielplattform |
+| :--- | :--- | :--- |
+| **Imagefilm** | Vertrauen & Branding | Website / Startseite |
+| **Recruiting-Clips** | Mitarbeitergewinnung | Instagram / Ads |
+| **Expert-Snippets** | Autorität & Wissen | LinkedIn |
+| **B-Roll Archiv** | Flexibler Vorrat | Interne Kommunikation |
 
 ## Social Media Video Flatrate für Unternehmen
-Durch die Effizienzgewinne der KI-Tools können wir KMU heute Flatrate-Modelle anbieten, die früher unmöglich waren. Statt jedes Video einzeln zu kalkulieren, produzieren wir im festen monatlichen Rhythmus frischen Content.
-
-| Aspekt | Traditionell | Hybrid (Rezai Vision) |
-|---|---|---|
-| Kosten pro Clip | Hoch | Deutlich reduziert |
-| Durchlaufzeit | 3-6 Wochen | 1-2 Wochen |
 | Materialausbeute | Gering (ein Film) | Hoch (viele Clips) |
 | Flexibilität | Starr | Sehr hoch |
 
@@ -1741,50 +1760,47 @@ Die Geschwindigkeit und die Planbarkeit der Kosten über das Jahr hinweg.`
     category: "emotion",
     date: "14. April 2026",
     readTime: "4 min",
-    image: "/images/blog/wedding-locations-kl.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513534/blog/Hochzeitslocation_Villa_Denis_Kaiserslautern.jpg",
     ctaLabel: "Termin prüfen",
     ctaLink: "/kontakt?service=wedding",
     content: `# Hochzeitsvideo in der Villa Denis oder Gartenschau Kaiserslautern – warum die Location das Ergebnis prägt
 
 **Die Location beeinflusst Stimmung, Licht und Bildsprache stärker als viele denken. Ein guter Videograf passt Schnitt, Perspektive und Look genau an die Architektur und Umgebung deiner Hochzeit an.**
 
-## Warum die Location für den Film wichtiger ist als für das Foto
-Während ein Fotograf einzelne Momente "herauspickt", fängt ein Videograf die gesamte Atmosphäre ein – inklusive Bewegung und Raumgefühl. Eine Location mit Charakter gibt dem Film sofort eine filmische Tiefe, die man nicht künstlich erzeugen kann.
+---
+
+## Einleitung
+Nicht jede Location erzählt dieselbe Geschichte. Eine Location mit Charakter gibt dem Film sofort eine filmische Tiefe, die man nicht künstlich erzeugen kann. In **Kaiserslautern** haben wir das Glück, sehr kontrastreiche Spots für Hochzeitsvideos zu haben.
 
 ## Top-Locations in Kaiserslautern & Umgebung
 ### 1. Villa Denis (Diemerstein)
 Der Inbegriff für Romantik und Geschichte. Für ein Hochzeitsvideo bietet die Villa Denis:
-- Hohe Decken und große Fenster für weiches, natürliches Licht.
-- Eine parkähnliche Anlage für epische Drohnen-Aufnahmen.
-- Einen klassischen Look, der perfekt zum aktuellen **Vintage-Trend** passt.
+*   Hohe Decken für herrschaftliche Weite.
+*   Ein klassischer Look, der perfekt zum aktuellen **Vintage-Trend** passt.
+*   Regionale Exklusivität im Pfälzerwald.
 
 ### 2. Gartenschau Kaiserslautern
 Modernität trifft auf Natur. Hier entstehen dynamische Filme durch:
-- Vielseitige Hintergründe (Eiszeithaus, Weidenkirche).
-- Große Offenheit, ideal für Bewegungsaufnahmen (Gimbal-Shots).
-- Einen frischen, grünen Look für sommerliche Aftermovies.
+*   Vielseitige Hintergründe (Eiszeithaus, Weidenkirche).
+*   Viel Platz für epische Bewegungsaufnahmen (**Gimbal-Shots**).
 
 ## Warum lokale Erfahrung zählt
-Wir kennen die Sonnenstände und die besten Winkel in den beliebtesten Locations der Pfalz. Wer weiß, wann das Licht in der Villa Denis am schönsten durch die Fenster fällt, kann den Zeitplan der Hochzeit so optimieren, dass die besten Bilder entstehen, ohne den Ablauf zu stören.
+Wir kennen die Sonnenstände und die besten Winkel in den beliebtesten Locations der Pfalz.
 
 | Location-Typ | Bildsprache | Empfohlener Look |
-|---|---|---|
-| Historische Villa | Elegant, Zeitlos | Vintage / Analog |
-| Moderne Eventhalle | Clean, Dynamisch | High-Contrast / Modern |
-| Weingut / Garten | Natürlich, Hell | Warm / Boho |
+| :--- | :--- | :--- |
+| **Historische Villa** | Elegant, Zeitlos | Vintage / Analog |
+| **Moderne Eventhalle** | Clean, Dynamisch | High-Contrast / Modern |
+| **Weingut / Garten** | Natürlich, Hell | Warm / Boho |
 
-## Related Search Keywords
-- Hochzeitsvideo Villa Denis
-- Gartenschau Kaiserslautern Hochzeit Video
-- Heiraten in der Pfalz Videograf
-- Hochzeitslocation Kaiserslautern Tipps
+---
 
 ## FAQ
 ### Macht die Location wirklich so viel aus?
-Ja, sie ist der Rahmen deiner Geschichte. Eine starke Location reduziert den Bedarf an aufwendiger Dekoration im Film, da der Hintergrund selbst schon eine Aussage hat.
+Ja, sie ist der Rahmen deiner Geschichte. Eine starke Location reduziert den Aufwand für Dekoration, da der Raum selbst schon eine Geschichte erzählt.
 
 ### Kann man in jeder Location filmisch gute Ergebnisse erzielen?
-Mit einem guten Konzept ja. Wir nutzen gezieltes Licht und Bildkomposition, um auch aus schlichteren Räumen das Beste herauszuholen.`
+Mit einem guten Lichtkonzept ja. Wir nutzen gezielte Technik, um auch aus schlichten Räumen in der Pfalz das Beste herauszuholen.`
   },
   {
     id: "16",
@@ -1794,37 +1810,42 @@ Mit einem guten Konzept ja. Wir nutzen gezieltes Licht und Bildkomposition, um a
     category: "corporate",
     date: "13. April 2026",
     readTime: "4 min",
-    image: "/images/blog/handwerk-recruiting.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513535/blog/Handwerk_Recruiting_Fachkraefte_Kaiserslautern.jpg",
     ctaLabel: "Handwerker-Paket ansehen",
     ctaLink: "/kontakt?service=recruiting",
     content: `# Fachkräftemangel im Handwerk Kaiserslautern: Warum Video heute stärker wirkt als jede Stellenanzeige
 
 **Wer im Handwerk Fachkräfte gewinnen will, muss heute mehr zeigen als ein paar Benefits wie 'Obstkorb' oder 'pünktliche Zahlung'. Video macht den Betrieb sichtbar und senkt die emotionale Hürde bei einem Jobwechsel.**
 
+---
+
 ## Warum klassische Anzeigen im Handwerk scheitern
 Gute Handwerker in Kaiserslautern und Umgebung sind fast alle in festen Anstellungen. Sie lesen keine Zeitungsanzeigen oder Jobbörsen. Wenn sie wechseln, dann nur für einen Betrieb, der ihnen sympathisch ist und einen echten Mehrwert bietet.
 
+| Kriterium | Stellenanzeige (Text) | Recruiting-Video |
+| :--- | :--- | :--- |
+| **Glaubwürdigkeit** | Behauptung | Beweis durch Bilder |
+| **Team-Vibe** | "Nettes Team" (Floskel) | Echtes Lachen & Interaktion |
+| **Werkstatt-Check** | Bleibt im Dunkeln | Zeigt Maschinen & Ordnung |
+| **Inhaber-Kontakt** | Distanziert | Direktes Wort auf Augenhöhe |
+
 ## Was Video im Handwerk besser macht
 Handwerk ist Vertrauenssache – nicht nur für Kunden, sondern auch für Mitarbeiter.
-- **Transparenz:** Man sieht die Werkstatt, die Fahrzeuge und die Werkzeuge.
-- **Teamgeist:** Man sieht, wie die Kollegen miteinander umgehen (kein gestelltes Lächeln).
-- **Projektstol:** Man zeigt echte Ergebnisse, auf die das Team stolz ist.
+*   **Transparenz:** Man sieht die Werkstatt, die Fahrzeuge und die Werkzeuge vorab.
+*   **Teamgeist:** Man sieht, wie die Kollegen miteinander umgehen (kein gestelltes Lächeln).
+*   **Projektstolz:** Man zeigt echte Ergebnisse, auf die das Team stolz ist.
 
 ## Sichtbarkeit in der Region
-Ein Video kann gezielt in Kaiserslautern und einem Umkreis von 30 km auf Social Media ausgespielt werden. So erreichst du genau die Fachkräfte, die ohnehin in der Nähe wohnen, aber deinen Betrieb bisher nur vom Vorbeifahren kannten.
+Ein Video kann gezielt in **Kaiserslautern** und einem Umkreis von 30 km auf Social Media ausgespielt werden. So erreichst du genau die Fachkräfte, die ohnehin in der Nähe wohnen.
 
-## Related Search Keywords
-- Fachkräftemangel Handwerk Kaiserslautern
-- Mitarbeiter finden Handwerk Pfalz
-- Recruiting-Video Schreinerei / Metallbau
-- Arbeitgebermarke Handwerker bauen
+---
 
 ## FAQ
 ### Reicht eine einfache Stellenanzeige nicht mehr aus?
-Oft nicht mehr, da der Wettbewerb um gute Leute extrem hoch ist. Wer sich nicht abhebt, wird nicht wahrgenommen.
+Oft nicht mehr, da der Wettbewerb um gute Leute extrem hoch ist. Wer sich nicht abhebt, wird schlichtweg nicht wahrgenommen.
 
 ### Muss ich im Video selbst sprechen?
-Das ist oft das Beste, da es Vertrauen schafft. Wir helfen dir dabei, so authentisch wie möglich rüberzukommen.`
+Das ist oft das Beste, da es echtes Vertrauen schafft. Wir helfen dir dabei, so authentisch wie möglich rüberzukommen.`
   },
   {
     id: "17",
@@ -1834,46 +1855,35 @@ Das ist oft das Beste, da es Vertrauen schafft. Wir helfen dir dabei, so authent
     category: "corporate",
     date: "12. April 2026",
     readTime: "5 min",
-    image: "/images/blog/social-flatrate.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513538/blog/Social_Media_Flatrate_Unternehmen_Pfalz.jpg",
     ctaLabel: "Flatrate-Modelle ansehen",
     ctaLink: "/preise",
     content: `# Social Media Video Flatrate für Unternehmen: Lohnt sich das wirklich?
 
-**Eine Video-Flatrate lohnt sich dann, wenn regelmäßig Inhalte gebraucht werden und Planbarkeit im Marketing wichtig ist. Sie macht Content-Produktion einfacher, kalkulierbarer und konsistenter als Einzelprojekte.**
+**Eine Video-Flatrate lohnt sich dann, wenn regelmäßig Inhalte gebraucht werden und Planbarkeit im Marketing wichtig ist. Sie macht Content-Produktion einfacher, kalkulierbarer und konsistenter.**
+
+---
 
 ## Einleitung
-Viele Unternehmen in der Pfalz stehen vor derselben Herausforderung: Sie wissen, dass sie auf Instagram, LinkedIn und TikTok präsent sein müssen, aber die Kapazitäten für ständige Planung, Dreh und Schnitt fehlen intern. Einzelne Videoprojekte sind oft teuer und decken nur einen kurzen Zeitraum ab. Die Lösung im Jahr 2026: Ein Retainer-Modell bzw. eine Video-Flatrate.
+Viele Unternehmen in der Pfalz stehen vor derselben Herausforderung: Man weiß, dass man auf **Instagram, LinkedIn und TikTok** präsent sein muss, aber die Kapazitäten für ständige Planung fehlen.
 
-## Warum das Modell der Flatrate gewinnt
-Statt jedes Mal ein neues Angebot einzuholen und einen neuen Workflow zu starten, wird Videoproduktion zu einem festen Bestandteil deiner Marketing-Routine.
-- **Planbare Kosten:** Du hast ein festes monatliches Budget ohne Überraschungen.
-- **Regelmäßiger Output:** Deine Follower und der Algorithmus werden konstant mit hochwertigem Material bespielt.
-- **Lerneffekte:** Wir kennen deine Marke mit jedem Monat besser und werden immer effizienter im Output.
+| Paket-Typ | Umfang (Beispiel) | Fokus |
+| :--- | :--- | :--- |
+| **Starter** | 4 Videos / Monat | Sichtbarkeit & Präsenz |
+| **Growth** | 8-10 Videos / Monat | Community & Recruiting |
+| **Enterprise** | 15+ Videos / Monat | Omnichannel & Performance |
 
-## Batch-Produktion: Ein Tag Aufwand, Wochen an Content
-Das Geheimnis einer guten Flatrate ist die Batch-Produktion. Wir kommen einen Tag im Monat zu dir nach Kaiserslautern oder Mannheim und drehen das Material für den gesamten nächsten Monat. 
+## Batch-Produktion: Effizienz pur
+Wir kommen einen Tag im Monat zu dir nach **Kaiserslautern** und drehen das Material für den gesamten nächsten Monat. Das spart Zeit und sorgt für einen einheitlichen Look.
 
-| Paket-Typ | Umfang (Beispiel) | Zielgruppe |
-|---|---|---|
-| Starter | 4 Videos / Monat | Kleine KMU / Personal Brand |
-| Growth | 8-10 Videos / Monat | Aktive Marken / Recruiting-Fokus |
-| Enterprise | 15+ Videos / Monat | Omnichannel / Große Kampagnen |
-
-## Related Search Keywords
-- Social Media Video Flatrate für Unternehmen
-- Content-Vorsprung durch Retainer
-- Videoproduktion Abo Pfalz
-- Regelmäßiger Video-Content Kosten
+---
 
 ## FAQ
 ### Was ist der größte Vorteil einer Flatrate?
-Die Kontinuität. Social Media ist ein Marathon. Eine Flatrate sorgt dafür, dass du nicht nach zwei Wochen wieder aufhörst, weil der Alltag dazwischenkommt.
+Die Kontinuität. Social Media ist ein Marathon. Eine Flatrate sorgt dafür, dass dein Account nie "stillsteht".
 
 ### Können wir die Inhalte monatlich anpassen?
-Absolut. Wir planen jeden Monat neu basierend auf deinen aktuellen Zielen (z.B. Event-Promotion oder Recruiting).
-
-### Gibt es eine Mindestlaufzeit?
-Wir empfehlen meist 3-6 Monate, um echte Ergebnisse in der Reichweite und beim Vertrauensaufbau zu sehen.`
+Absolut. Wir planen jeden Monat neu basierend auf deinen aktuellen Unternehmenszielen.`
   },
   {
     id: "18",
@@ -1883,34 +1893,32 @@ Wir empfehlen meist 3-6 Monate, um echte Ergebnisse in der Reichweite und beim V
     category: "corporate",
     date: "11. April 2026",
     readTime: "4 min",
-    image: "/images/blog/authenticity-recruiting.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513540/blog/Authentische_Mitarbeitergewinnung_Kaiserslautern.jpg",
     ctaLabel: "Beratung anfragen",
     ctaLink: "/kontakt?service=recruiting",
-    content: `# Authentische Mitarbeitergewinnung in Kaiserslautern: Warum Vertrauen heute wichtiger ist als perfekte Formulierungen
+    content: `# Authentische Mitarbeitergewinnung: Warum Vertrauen wichtiger ist als perfekte Formulierungen
 
-**Menschen bewerben sich nicht nur auf Stellen, sondern auf ein Gefühl und eine Perspektive. Authentische Videos zeigen dieses Gefühl und machen den Betrieb für Fachkräfte in Kaiserslautern glaubwürdig.**
+**Menschen bewerben sich nicht nur auf Stellen, sondern auf ein Gefühl. Authentische Videos zeigen dieses Gefühl und machen den Betrieb für Fachkräfte glaubwürdig.**
+
+---
 
 ## Warum Authentizität heute gewinnt
-In einer Welt voller Filter und KI-generierter Texte suchen Menschen nach Echtheit. Bewerber spüren sehr schnell, ob ein Video "überverkauft" wirkt oder ob es die reale Arbeitswelt zeigt. Wer heute im Recruiting in der Pfalz erfolgreich sein will, muss die "ungeschönte" Wahrheit zeigen – die aber attraktiv inszeniert.
+In einer Welt voller Filter suchen Menschen nach Echtheit. Bewerber spüren sehr schnell, ob ein Video "überverkauft" wirkt oder reale Einblicke bietet.
+
+| Aspekt | Hochglanz-Marketing | Authentisches Video |
+| :--- | :--- | :--- |
+| **Wirkung** | Distanziert & Teuer | Nahbar & Ehrlich |
+| **Glaubwürdigkeit** | Gering (Behauptung) | Hoch (Beweis durch Team) |
+| **Identifikation** | Schwer | Sofort gegeben |
 
 ## Vertrauen vs. Glatte Fassade
-Eine glatte Hochglanz-Produktion wirkt oft distanziert. Ein Video, in dem der Chef vielleicht mal kurz überlegt oder ein Mitarbeiter in seiner echten Arbeitskleidung spricht, baut sofort eine Brücke. 
-- **Echte Sprache:** Kein Marketing-Sprech.
-- **Echte Probleme:** Was ist die Herausforderung im Job?
-- **Echte Erfolge:** Was macht uns gemeinsam stolz?
+Eine glatte Hochglanz-Produktion wirkt oft distanziert. Wir helfen dir, deine echten Stärken zu filmen – ohne Maske.
 
-## Related Search Keywords
-- Authentische Mitarbeitergewinnung Video
-- Recruiting mit Vertrauen Kaiserslautern
-- Echte Einblicke Betrieb Pfalz
-- Employer Branding ohne Filter
+---
 
 ## FAQ
 ### Muss ein Recruiting-Video perfekt sein?
-Inhaltlich muss es ehrlich sein, technisch muss es professionell sein. Ein schlechter Ton oder verwackelte Bilder wirken unprofessionell, aber eine "zu perfekte" Inszenierung wirkt oft unglaubwürdig.
-
-### Wie finden wir die richtigen 'Stars' in unserem Team?
-Meistens sind es nicht die Lautesten, sondern die, die ihren Job mit Leidenschaft machen. Wir helfen dir dabei, diese Personen vor der Kamera zu führen.`
+Inhaltlich muss es ehrlich sein, technisch muss es professionell sein. Ein schlechter Ton wirkt unprofessionell, aber eine zu "glatte" Inszenierung wirkt oft unglaubwürdig.`
   },
   {
     id: "19",
@@ -1920,36 +1928,28 @@ Meistens sind es nicht die Lautesten, sondern die, die ihren Job mit Leidenschaf
     category: "emotion",
     date: "10. April 2026",
     readTime: "4 min",
-    image: "/images/blog/music-locations-rlp.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513542/blog/Musikvideo_Locations_Rheinland_Pfalz.jpg",
     ctaLabel: "Location-Guide anfragen",
     ctaLink: "/kontakt?service=music",
     content: `# Musikvideo Locations in Rheinland-Pfalz: Wo starke Bilder entstehen
 
-**Eine gute Location macht ein Musikvideo sofort markanter und wertet den Artist visuell auf. Rheinland-Pfalz bietet viele Kulissen mit Charakter, Kontrast und visueller Tiefe – man muss sie nur finden.**
+**Eine gute Location macht ein Musikvideo sofort markanter. Rheinland-Pfalz bietet viele Kulissen mit Charakter – man muss sie nur finden.**
+
+---
 
 ## Was eine Location "cinematic" macht
-Es geht nicht um Schönheit, sondern um Struktur und Licht. Ein moderner Parkplatz in Kaiserslautern kann nachts mit dem richtigen Licht spektakulärer wirken als eine gewöhnliche Waldwiese.
-- **Tiefe:** Räume, die nach hinten weit offen sind.
-- **Textur:** Beton, Glas, rostiger Stahl oder dichter Wald.
-- **Kontrast:** Helle Lichter vor dunklem Hintergrund.
-
-## Unsere Top-Tipps für RLP
-- **Urbane Flächen:** Parkhäuser und Unterführungen im Rhein-Neckar-Gebiet.
-- **Lost Places:** Alte Industrieanlagen in der Westpfalz (Achtung: Immer Drehgenehmigung klären!).
-- **Natur:** Die Burgruinen im Pfälzerwald für atmosphärische Story-Videos.
-
+Es geht nicht um Schönheit, sondern um Struktur.
 | Genre | Location-Empfehlung | Vibe |
-|---|---|---|
-| Rap / Drill | Parkhaus / Industrie | Rough & Urban |
-| Pop / Indie | Sonnenuntergang / Feld | Warm & Hopeful |
-| Metal / Rock | Ruine / Steinbruch | Heavy & Epic |
-| Techno | Warehouse / Studio | Minimal & Flashy |
+| :--- | :--- | :--- |
+| **Rap / Drill** | Parkhaus / Industrie | Rough & Urban |
+| **Pop / Indie** | Sonnenuntergang / Feld | Clean & Hopeful |
+| **Metal / Rock** | Ruine / Steinbruch | Massive & Epic |
 
-## Related Search Keywords
-- Musikvideo Locations Rheinland-Pfalz
-- Fotospots Kaiserslautern Video
-- Lost Places Pfalz Drehgenehmigung
-- Videoproduktion Musik Pfalz`
+---
+
+## FAQ
+### Wie finden wir die richtige Location?
+Wir haben einen umfassenden Location-Guide für **RLP** und helfen dir bei der Auswahl basierend auf deinem Budget und Musikstil.`
   },
   {
     id: "20",
@@ -1959,39 +1959,38 @@ Es geht nicht um Schönheit, sondern um Struktur und Licht. Ein moderner Parkpla
     category: "corporate",
     date: "09. April 2026",
     readTime: "6 min",
-    image: "/images/blog/kmu-efficiency.webp",
+    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513544/blog/KMU_Content_Workflow_Kaiserslautern_Effizienz.jpg",
     ctaLabel: "Workflow-Beratung",
     ctaLink: "/kontakt",
-    content: `# Effiziente Content-Erstellung für KMU: Wie aus einem Drehtag viele Inhalte werden
+    content: `# Effiziente Content-Erstellung für KMU: Aus einem Tag ein Jahr Content
 
-**Ein einzelner Drehtag kann heute die Basis für die Kommunikation eines halben Jahres sein. Wer modular denkt, bekommt deutlich mehr Output aus demselben Budget und spart wertvolle Zeit der Geschäftsführung.**
+**Ein einzelner Drehtag kann heute die Basis für die Kommunikation eines halben Jahres sein. Wer modular denkt, bekommt deutlich mehr Output aus demselben Budget.**
 
-## Warum KMU oft zu kompliziert denken
-Viele Betriebe planen für jedes Social-Media-Video einen extra Termin. Das führt zu Stress, hohen Kosten und Inkonsistenz. Der modulare Workflow von Rezai Vision bündelt die Energie.
+---
+
+## Einleitung
+Viele KMU in der Pfalz planen für jedes Video einen extra Termin. Das führt zu Stress und hohen Kosten. Unser modularer Workflow bündelt die Energie.
 
 ## Das Prinzip der modularen Produktion
-Wir planen den Drehtag bei dir in Kaiserslautern so, dass wir verschiedene Formate gleichzeitig produzieren:
-1. **Das Fundament:** Ein ausführliches Interview über eure Werte und Leistungen.
-2. **Die Snippets:** Kürzere Statements, die wir als Reels für LinkedIn und Instagram schneiden.
-3. **B-Roll:** Hochwertige Hintergrundaufnahmen ohne Ton, die du unter jeden Text legen kannst.
-4. **Behind the Scenes:** Authentische Einblicke in eure Arbeit.
+Wir planen den Drehtag bei dir in **Kaiserslautern** so, dass wir verschiedene Formate gleichzeitig produzieren.
 
-## Beispiel-Rechnung: Ausbeute eines Drehtags
-- 1x Hauptfilm (2 Min.)
-- 5x Experten-Tipps (je 30-60 Sek.)
-- 3x Recruiting-Clips
-- 10x Kurze Video-Loops für Website-Hintergründe
+| Input (1 Drehtag) | Output (Assets) | Laufzeit |
+| :--- | :--- | :--- |
+| **A-Roll (Interviews)** | 1x Imagefilm / 5x Intro | 12 Monate |
+| **B-Roll (Moods)** | Website-Hintergrund | Dauerhaft |
+| **Quick-Tips** | 12x LinkedIn Reels | 3 Monate |
+| **Behind the Scenes** | 20x Stories | 4 Wochen |
 
-Das reicht aus, um über 12 Wochen hinweg jede Woche zwei hochwertige Video-Postings zu veröffentlichen – ohne dass du ein zweites Mal vor der Kamera stehen musst.
+## Warum KMU in der Pfalz profitieren
+Du sparst Zeit. Statt 10x vor der Kamera zu stehen, bündeln wir alles an einem Vormittag. Das Ergebnis ist ein professioneller Auftritt, der niemals "stillsteht".
+
+---
 
 ## FAQ
-### Wie bereiten wir uns auf so einen Drehtag vor?
-Wir liefern dir vorab einen klaren Leitfaden und Skript-Vorschläge. Du musst also nicht "blank" vor die Kamera.
+### Wie bereiten wir uns vor?
+Wir liefern dir vorab einen klaren Leitfaden. Du musst kein Profi-Sprecher sein – wir führen dich durch den Tag.
 
-### Kann man die Videos auch über das Jahr verteilt nutzen?
-Ja, zeitlose Themen (Evergreen Content) sind die Basis. Aktuelle Themen können dann spontan ergänzt werden.
-
-### Lohnt sich das auch für Einzelunternehmer?
+### Lohnt sich das für Einzelunternehmer?
 Besonders für sie, da Zeit die knappste Ressource ist. Ein Vormittag Dreh = Content für Monate.`
   },
 ];
