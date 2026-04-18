@@ -23,7 +23,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513545/blog/Blog_Videoproduktion_Kaiserslautern_Post1.jpg",
     ctaLabel: "Content Konzept anfragen",
-    ctaLink: "/kontakt    content: `# Imagefilm für Unternehmen: Wann die Investition wirklich ROI generiert
+    ctaLink: "/kontakt",
+    content: `# Imagefilm für Unternehmen: Wann die Investition wirklich ROI generiert
 
 In der Debatte um B2B-Marketing fällt früher oder später unweigerlich das Wort "Imagefilm". Während einige Unternehmen ihn als zentrales Element ihres digitalen Vertriebs betrachten, verstaubt er bei anderen als reines Prestige-Objekt ungenutzt in Server-Ordnern.
 
@@ -79,7 +80,7 @@ Ein Werbefilm oder Performance-Video bewirbt eine spezifische Lösung mit einem 
 Bei klassischen B2B-Projekten liegt der Aufwand typischerweise bei 1 bis 2 Drehtagen vor Ort, gefolgt von 4 bis 8 Tagen tiefgreifender Postproduktion (Schnitt, Sound-Mixing und Motion Design) für das finale Produkt.
 
 ### Wo sollte ein Imagefilm primär gehostet werden?
-Die Einbettung auf einer Firmen-Website sollte optimalerweise über professionelle, werbefreie Hosting-Dienste (wie Vimeo oder direkt via CDN) erfolgen. Normale YouTube-Embeds empfehlen oft Konkurrenz-Videos am Ende, was die Conversion-Rate senkt.\`
+Die Einbettung auf einer Firmen-Website sollte optimalerweise über professionelle, werbefreie Hosting-Dienste (wie Vimeo oder direkt via CDN) erfolgen. Normale YouTube-Embeds empfehlen oft Konkurrenz-Videos am Ende, was die Conversion-Rate senkt.`
   },
   {
     id: "2",
@@ -424,7 +425,7 @@ Ein Imagefilm ist eine langfristige Branding-Maßnahme ohne harten Call-to-Actio
 Für Cold-Traffic (Nutzer, die die Marke noch nicht kennen) sind knackige Short-Form-Videos (15-30 Sekunden) mit direkter Problemlösung extrem effektiv. Für Warm-Traffic (Retargeting) konvertieren tiefere Erklärformate oder Founder-Videos (60-120 Sekunden) besser, um letzte Einwände zu entkräften.
 
 ### Brauchen wir für Social Media Ads teures Kino-Equipment?
-Nein, im Gegenteil. Für Performance-Videos auf TikTok oder Instagram Reels schlägt authentischer "UGC-Style" (User Generated Content) oft aufwendige Produktionen, da Nutzer werblich aussehenden Content instinktiv wegscrollen (Ad Blindness). Entscheidend ist eine perfekte Audioqualität.\`
+Nein, im Gegenteil. Für Performance-Videos auf TikTok oder Instagram Reels schlägt authentischer "UGC-Style" (User Generated Content) oft aufwendige Produktionen, da Nutzer werblich aussehenden Content instinktiv wegscrollen (Ad Blindness). Entscheidend ist eine perfekte Audioqualität.`
   },
   {
     id: "7",
@@ -487,7 +488,7 @@ Der höchste Hebel liegt "above the fold" auf Landingpages (der sofort sichtbare
 Nein. Die Wirksamkeit eines Founder-Videos korreliert viel stärker mit der Substanz der Botschaft (Domain-Expertise) als mit filmischen Überblendungen. Ein ehrlich in die Kamera gesprochenes Statement (Talking Head) rankt im Vertrauensindex oftmals vor werblichen Image-Spots.
 
 ### Wie viele Testimonial-Videos sind für eine Sales-Page optimal?
-Qualität schlägt Quantität. Zwei tiefe, stark strukturierte Video-Case-Studies (Problemstellung → Lösungsansatz → Messbares Ergebnis) überzeugen tiefgreifender als acht schnelle, unstrukturierte Kurzaussagen.\`
+Qualität schlägt Quantität. Zwei tiefe, stark strukturierte Video-Case-Studies (Problemstellung → Lösungsansatz → Messbares Ergebnis) überzeugen tiefgreifender als acht schnelle, unstrukturierte Kurzaussagen.`
   },
   {
     id: "8",
@@ -555,7 +556,7 @@ Nein. Die "Betriebsblindheit" führt fast immer zu detaillierten, unstrukturiert
 Häufige Kostenfallen bei unprofessionellen Anbietern sind Musiklizenzen (Buyouts) für kommerzielle Nutzung, Gebühren für Nachbesserungsschleifen (Revisions) sowie Extra-Kosten für verschiedene Ausspielungsformate (z.B. der Cut für Instagram-Reels). Diese Posten müssen im Vorab-Angebot fixiert sein.
 
 ### Macht es Sinn, einen dauerhaften Vertrag (Retainer) mit einer Videoproduktion abzuschließen?
-Für Social-Media-Fokus (Reels, TikTok, LinkedIn) ist ein Retainer-Modell extrem effizient, da es eine stetige Sichtbarkeit (Frequency) garantiert. Ein Image- oder Recruiting-Film hingegen ist in der Regel eine strategische Einzelleistung.\`
+Für Social-Media-Fokus (Reels, TikTok, LinkedIn) ist ein Retainer-Modell extrem effizient, da es eine stetige Sichtbarkeit (Frequency) garantiert. Ein Image- oder Recruiting-Film hingegen ist in der Regel eine strategische Einzelleistung.`
   },
   {
     id: "9",
@@ -588,7 +589,7 @@ Die Versuchung ist groß, in einem einzigen 3-Minuten-Clip die Firmenhistorie se
 
 ## Fehler 3: Improvisation als Konzept-Ersatz
 
-Eine professionelle Videoproduktion agiert nicht reaktiv (Kamera hinstellen und "mal schauen, was passiert"), sondern proaktiv. Das Konzept – inklusive Storyboard, Shotlist und Interview-Leitfaden – entsteht zu 80% fernab des Sets. Wer am Drehtag improvisiert, zahlt für diese Ineffizienz in der Postproduktion oft das Doppelte.
+A professionelle Videoproduktion agiert nicht reaktiv (Kamera hinstellen und "mal schauen, was passiert"), sondern proaktiv. Das Konzept – inklusive Storyboard, Shotlist und Interview-Leitfaden – entsteht zu 80% fernab des Sets. Wer am Drehtag improvisiert, zahlt für diese Ineffizienz in der Postproduktion oft das Doppelte.
 
 ---
 
@@ -633,7 +634,7 @@ Die Kosten variieren stark nach Aufwand (Drehtage, Crew-Größe, Postproduktion)
 Es empfiehlt sich, die Kernfakten intern zu sammeln, aber die Ausformulierung der Agentur zu überlassen. Externe Partner formulieren zielgruppenzentriert (Nutzenorientierung) statt produktzentriert (Verliebtheit in eigene Features).
 
 ### Ist ein Teleprompter am Set sinnvoll?
-Nein, in 90% der Fälle wirken abgelesene Texte (Teleprompter) unnatürlich. Ein erfahrener Video-Producer arbeitet stattdessen mit geführten Interviewtechniken, um echte, dynamische Aussagen aus dem Redner herauszukitzeln.\`
+Nein, in 90% der Fälle wirken abgelesene Texte (Teleprompter) unnatürlich. Ein erfahrener Video-Producer arbeitet stattdessen mit geführten Interviewtechniken, um echte, dynamische Aussagen aus dem Redner herauszukitzeln.`
   },
   {
     id: "10",
@@ -688,7 +689,7 @@ Ja. Regionale Kampagnen (z.B. Recruiting in der Pfalz) profitieren extrem von lo
 Absolut. YouTube In-Stream Ads ermöglichen ein präzises Targeting. Ein B2B-Unternehmen kann sein Video exakt Personen ausspielen, die kürzlich spezifische Messe-Websites besucht haben oder nach bestimmten Industrie-Lösungen gegoogelt haben.
 
 ### Wie starten wir am besten ohne eigenes Video-Know-how?
-Der effizienteste Weg ist ein umfassender "Brand-Film" (Unternehmensfilm) in Kombination mit 3-5 Short-Form-Clips (aus dem gewonnenen Drehmaterial extrahiert). Dies kreiert sofortiges Premium-Auftreten auf der Website und liefert genug Content für erste LinkedIn- oder Meta-Ad-Kampagnen.\``
+Der effizienteste Weg ist ein umfassender "Brand-Film" (Unternehmensfilm) in Kombination mit 3-5 Short-Form-Clips (aus dem gewonnenen Drehmaterial extrahiert). Dies kreiert sofortiges Premium-Auftreten auf der Website und liefert genug Content für erste LinkedIn- oder Meta-Ad-Kampagnen.`
   },
   {
     id: "11",
