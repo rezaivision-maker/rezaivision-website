@@ -46,7 +46,7 @@ export function ServicesSection() {
             },
             {
               title: "Social Media Content",
-              desc: "Regelmäßiger Social-Media-Content (TikToks, Instagram Reels & LinkedIn Videos) für kontinuierliche Reichweite.",
+              desc: "Regelmäßiger Social Media Content Kaiserslautern (TikToks, Instagram Reels & LinkedIn Videos) für kontinuierliche Reichweite.",
               img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775649531/Social_Media_Content_Videos_Reels_Rezaivision_Kaiserslautern_wvd12d.webp"
             }
           ].map((service, i) => (

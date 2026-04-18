@@ -75,10 +75,10 @@ export default function SocialRetainer() {
   return (
     <div className="flex flex-col min-h-screen pt-32">
       <Helmet>
-        <title>Social Media Betreuung & Video Content Agentur | Kaiserslautern</title>
+        <title>Social Media Content Kaiserslautern | Video Retainer</title>
         <meta name="description" content="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/social-media" />
-        <meta name="keywords" content="Social Media Management Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
+        <meta name="keywords" content="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -126,7 +126,7 @@ export default function SocialRetainer() {
               Konstante Sichtbarkeit. <span className="text-brand-accent italic">Ohne den Stress.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir übernehmen Ihre Social Media Videoproduktion im monatlichen Retainer. Ein Drehtag im Monat = Content für Wochen. Planbar, professionell und reichweitenstark.
+              Wir übernehmen Ihren Social Media Content Kaiserslautern im monatlichen Retainer. Ein Drehtag im Monat = Content für Wochen. Planbar, professionell und reichweitenstark.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
