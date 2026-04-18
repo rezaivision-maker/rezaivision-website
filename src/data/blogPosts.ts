@@ -1569,6 +1569,113 @@ Color Grading bedeutet: die Farben im Video anpassen, damit sie eine bestimmte S
 
 ### Lohnt es sich, den Schnitt outzusourcen?
 In den meisten Fällen ja. Guter Schnitt braucht Erfahrung, Software und – vor allem – ein dramaturgisches Gespür. Das lässt sich nicht mal eben lernen.`
+  },
+  {
+    id: "27",
+    slug: "mitarbeiter-vor-der-kamera-locker-machen",
+    title: "Keine Schauspieler – 6 Methoden, wie echte Mitarbeiter vor der Kamera locker werden",
+    excerpt: "Niemand ist von Natur aus kameraerfahren. Aber mit den richtigen Tricks wird aus einem steifen Statement ein echtes, überzeugendes Video.",
+    category: "corporate",
+    date: "19. April 2026",
+    readTime: "5 min",
+    image: "https://images.unsplash.com/photo-1560472355-536de3962603?q=80&w=800&auto=format&fit=crop",
+    ctaLabel: "Recruiting-Video anfragen",
+    ctaLink: "/kontakt?service=recruiting",
+    content: `# Mitarbeiter vor der Kamera: 6 Methoden damit es entspannt und echt wirkt
+
+Stell dir vor, jemand hält dir ein Mikrofon hin, sagt "und... Action!" – und du weißt nicht, wohin mit den Händen, was du sagen sollst und ob du blinzeln darf.
+
+Genau so fühlen sich die meisten Menschen zum ersten Mal vor einer Kamera. Das ist völlig normal. Niemand ist von Geburt an ein Kameraprofi. Und ehrlich gesagt: Das soll auch so sein. Echte, leicht unsichere Menschen wirken glaubwürdiger als zu glatte Performaer.
+
+Trotzdem gibt es einen Unterschied zwischen "natürlich locker" und "völlig verkrampft". Dieser Artikel zeigt, wie ich dafür sorge, dass echte Mitarbeiter echte Videos abliefern – ohne Schauspielerei.
+
+---
+
+## Methode 1: Warmup kommt vor dem Dreh
+
+Bevor die Kamera läuft, passiert das Wichtigste: nichts Konkretes. Wir reden. Über den Morgen, den Kaffee, die letzte Baustelle, das Wetter. Ein paar schlechte Witze, ein bisschen Gelache.
+
+Warum? Weil der Körper Anspannung braucht, um sie loszulassen. Man kann sich nicht "auf Knopfdruck" entspannen – aber man kann langsam reinkommen. Wenn jemand lacht, bevor die Kamera läuft, trägt er dieses Gefühl in die ersten Takes mit.
+
+Bonus: Ich zeige am Anfang gerne, wie bescheuert ich selbst vor der Kamera aussehe. Wenn der Typ hinter der Kamera sich nicht zu ernst nimmt, nimmt man sich selber auch nicht mehr so ernst.
+
+---
+
+## Methode 2: Druck rausnehmen – auch wenn ein Take nicht gut war
+
+Das ist mein Lieblings-Trick. Wenn jemand einen Take abliefert, der objektiv noch Luft nach oben hat, sage ich: "War super." Pause. "Wollen wir noch einen machen? Ich glaube, da steckt noch eine Schippe mehr drin."
+
+Kein "Das war leider nicht so gut" oder "Nochmal bitte, diesmal ohne..." – das erzeugt Druck. Stattdessen: der Take war gut, aber das nächste Mal könnte es sogar noch besser werden.
+
+Das funktioniert. Menschen blühen auf, wenn sie das Gefühl haben, dass sie schon fast dort sind – und nicht, dass sie immer noch weit weg sind.
+
+---
+
+## Methode 3: Interview-Setup mit einem kleinen Geheimnis
+
+Manchmal sage ich: "Kurze Pause, ich schalte die Kamera mal aus – wir quatschen einfach kurz." Und dann reden wir. Locker, ohne Druck, ohne "Pass auf was du sagst."
+
+Was ich dabei nicht sage: Die Kamera läuft weiter.
+
+Das klingt hinterlistig – ist es aber nicht. Ich verwende nie etwas davon ohne Erlaubnis. Der Punkt ist: Ich frage dieselben Fragen, nur anders verpackt. Nicht "Erklären Sie uns Ihre Kernkompetenz" – sondern "Was machst du hier eigentlich den ganzen Tag?". Und die Antworten, die dabei rauskommen, sind fast immer die besten im ganzen Video.
+
+---
+
+## Methode 4: Die richtigen Worte wählen
+
+Ich sage nie "Kein Stress" – weil das Wort "Stress" genau das im Kopf auslöst, was man nicht will. Ich sage nie "Keine Nervosität" – aus demselben Grund.
+
+Stattdessen:
+- "Wir machen das ganz gemütlich."
+- "Einfach quatschen, wie du das deinem Kollegen erklären würdest."
+- "Locker ablesen, so wie beim Vorlesen."
+- "Spontan ist perfekt."
+- "Das ist kein Auftritt, das ist ein Gespräch."
+
+Sprache formt Erwartungen. Wer lockere Worte hört, erwartet etwas Lockeres.
+
+---
+
+## Methode 5: Nimm's wie ein Videospiel
+
+Manchmal hilft ein Bild mehr als jede Erklärung.
+
+Ich sage dann: "Du kennst das aus Videospielen. Manchmal musst du ein Level drei, vier Mal spielen, bis du durch bist. Das ist nicht Versagen – das ist der Prozess. Wir machen einfach so viele Versuche, bis einer dabei ist, der wirklich sitzt. Nimm's sportlich."
+
+Das nimmt den "Einmaligkeitsdruck" weg. Niemand erwartet, dass der erste Take perfekt wird. Wir drehen, bis wir etwas haben, das wirklich gut ist. Alles andere ist Aufwärmzeit.
+
+---
+
+## Methode 6: Der Notfallplan für wirklich hartnäckige Fälle
+
+Wenn alle fünf Methoden ausgeschöpft sind und jemand immer noch steif wie eine Schaufensterpuppe vor der Linse steht...
+
+Schnaps.
+
+(Scherz. Halb.)
+
+---
+
+## Fazit: Echte Menschen machen die besten Videos
+
+Ein zu perfektes, zu geglättetes Statement wirkt oft weniger glaubwürdig als ein ehrlicher Moment mit einem kurzen "Ähm" drin. Was zählt, ist die Haltung, der Blick, die Überzeugung hinter den Worten.
+
+Meine Aufgabe ist es, den Rahmen so zu setzen, dass dieser echte Moment entstehen kann. Kein Drehbuch, kein Druck, kein Riesenapparat. Einfach gute Stimmung, gute Fragen – und die Kamera, die das festhält.
+
+[Recruiting- oder Imagefilm anfragen](/kontakt?service=recruiting)
+
+---
+
+## FAQ
+
+### Was, wenn jemand wirklich Angst vor der Kamera hat?
+Das kommt vor. In solchen Fällen fange ich immer mit einem kurzen "Off-Camera"-Gespräch an, bei dem die Person gar nicht das Gefühl hat, gedreht zu werden. Wenn die Energie dann stimmt, is der Einstieg oft leichter als erwartet.
+
+### Muss man das Video vorab auswendig lernen?
+Niemals. Auswendig Gelerntes klingt genau so – auswendig gelernt. Wir arbeiten mit Leitfragen und natürlichem Gespräch. Was rauskommt, ist immer besser als jedes einstudierte Statement.
+
+### Wie viele Takes sind normal?
+Drei bis fünf Takes für eine gute Aussage sind vollkommen normal. Manchmal sind es mehr – und manchmal trifft der erste Take schon perfekt. Es kommt auf den Tag an. Deswegen: sportlich nehmen.`
   }
 ];
 
