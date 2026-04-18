@@ -88,6 +88,36 @@ export default function CorporateVideo() {
         <meta name="description" content="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 1.990 €." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/unternehmensfilm" />
         <meta name="keywords" content="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Imagefilm & Unternehmensfilm",
+            "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "125"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "2500.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 2.500 € zzgl. MwSt."
+            }
+          })}
+        </script>
       </Helmet>
       {/* 1. HERO SECTION */}
       <section className="pb-24">

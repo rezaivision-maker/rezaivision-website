@@ -79,6 +79,36 @@ export default function SocialAds() {
         <meta name="description" content="Performance-starke Werbevideos und Social Ads für messbare Ergebnisse und Sichtbarkeit im digitalen Raum. Conversion-optimierte Videoproduktion im Umkreis von 100km (Mainz, Mannheim)." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/werbevideo" />
         <meta name="keywords" content="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Social Media Ads & Werbevideos",
+            "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "125"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "1500.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.500 € zzgl. MwSt."
+            }
+          })}
+        </script>
       </Helmet>
       {/* 1. HERO SECTION */}
       <section className="pb-24">

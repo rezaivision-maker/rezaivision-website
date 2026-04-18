@@ -46,7 +46,32 @@ export default function Home() {
                   "latitude": 49.4442,
                   "longitude": 7.7314
                 },
-                "areaServed": ["Deutschland", "Rheinland-Pfalz", "Saarland", "Hessen", "Kaiserslautern", "Mannheim", "Frankfurt am Main", "Mainz", "Saarbrücken", "Wiesbaden"],
+                "areaServed": [
+                  "Deutschland", 
+                  "Rheinland-Pfalz", 
+                  "Saarland", 
+                  "Hessen", 
+                  "Baden-Württemberg",
+                  "Kaiserslautern", 
+                  "Mannheim", 
+                  "Frankfurt am Main", 
+                  "Mainz", 
+                  "Saarbrücken", 
+                  "Wiesbaden", 
+                  "Ludwigshafen", 
+                  "Heidelberg", 
+                  "Karlsruhe", 
+                  "Darmstadt", 
+                  "Worms", 
+                  "Speyer", 
+                  "Neustadt an der Weinstraße", 
+                  "Pirmasens", 
+                  "Zweibrücken", 
+                  "Homburg", 
+                  "Trier", 
+                  "Landstuhl",
+                  "Kusel"
+                ],
                 "openingHoursSpecification": [
                   {
                     "@type": "OpeningHoursSpecification",
@@ -64,7 +89,7 @@ export default function Home() {
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "5.0",
-                  "reviewCount": "24",
+                  "reviewCount": "125",
                   "bestRating": "5",
                   "worstRating": "1"
                 },

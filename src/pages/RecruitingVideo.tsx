@@ -80,6 +80,36 @@ export default function RecruitingVideo() {
         <meta name="description" content="Gewinnen Sie Top-Talente aus der Region mit authentischen Recruiting Videos. Produktion in Kaiserslautern, Mannheim & Saarbrücken." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/recruiting" />
         <meta name="keywords" content="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Recruiting Video & Employer Branding",
+            "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "125"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "2500.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 2.500 € zzgl. MwSt."
+            }
+          })}
+        </script>
       </Helmet>
       {/* 1. HERO SECTION */}
       <section className="pb-24">

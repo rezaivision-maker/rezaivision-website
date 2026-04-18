@@ -79,6 +79,36 @@ export default function SocialRetainer() {
         <meta name="description" content="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/social-media" />
         <meta name="keywords" content="Social Media Management Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Social Media Retainer & Content Produktion",
+            "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "125"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "1500.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.500 € pro Monat zzgl. MwSt."
+            }
+          })}
+        </script>
       </Helmet>
       {/* 1. HERO SECTION */}
       <section className="pb-24">

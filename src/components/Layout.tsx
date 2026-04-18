@@ -4,6 +4,7 @@ import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music } from 
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
 import { CookieBanner } from "./ui/CookieBanner";
+import { Helmet } from "react-helmet-async";
 
 const navLinks = [
   { name: "Leistungen", path: "/leistungen" },
@@ -17,6 +18,17 @@ export function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  // Breadcrumb logic for SEO
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const breadcrumbs = [
+    { name: "Home", path: "/" },
+    ...pathSegments.map((segment, index) => {
+      const path = `/${pathSegments.slice(0, index + 1).join("/")}`;
+      const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace("-", " ");
+      return { name, path };
+    })
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +55,20 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-bg text-brand-text">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumbs.map((crumb, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": crumb.name,
+              "item": `https://rezaivision.de${crumb.path}`
+            }))
+          })}
+        </script>
+      </Helmet>
       {/* Header */}
       <header
         className={cn(
