@@ -34,16 +34,46 @@ export default function BlogPost() {
     );
   }
 
+  // Extract FAQ items from content for schema
+  const extractFAQs = (content: string) => {
+    const faqs: { question: string; answer: string }[] = [];
+    const lines = content.split('\n');
+    for (let j = 0; j < lines.length; j++) {
+      if (lines[j].trim().startsWith('### ') && j > 0) {
+        // Check if we're in the FAQ section
+        const prevLines = lines.slice(Math.max(0, j - 10), j).join('\n');
+        if (prevLines.includes('## FAQ')) {
+          const question = lines[j].trim().replace('### ', '');
+          // Collect answer lines until next heading or empty section
+          let answer = '';
+          let k = j + 1;
+          while (k < lines.length && !lines[k].trim().startsWith('#') && !(lines[k].trim() === '---')) {
+            if (lines[k].trim()) answer += lines[k].trim() + ' ';
+            k++;
+          }
+          if (question && answer.trim()) {
+            faqs.push({ question, answer: answer.trim() });
+          }
+        }
+      }
+    }
+    return faqs;
+  };
+
+  const faqItems = extractFAQs(post.content);
+
   // Schema.org Article JSON-LD
+  const imageUrl = post.image.startsWith('http') ? post.image : `https://rezaivision.de${post.image}`;
+  
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `https://rezaivision.de${post.image}`,
+    "image": imageUrl,
     "author": {
       "@type": "Person",
-      "name": "Rezai Vision Team",
+      "name": "Parsha Rezai",
       "url": "https://rezaivision.de/ueber-uns"
     },
     "publisher": {
@@ -51,7 +81,7 @@ export default function BlogPost() {
       "name": "Rezai Vision",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://rezaivision.de/logo.png"
+        "url": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772567552/Rechteck_ts5rt1.png"
       }
     },
     "datePublished": post.date,
@@ -60,6 +90,19 @@ export default function BlogPost() {
       "@id": `https://rezaivision.de/blog/${post.slug}`
     }
   };
+
+  const faqSchema = faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
 
   // Helper: Render inline markdown (**bold**, normal text)
   const renderInline = (text: string, keyPrefix: string = '') => {
@@ -231,11 +274,16 @@ export default function BlogPost() {
         <link rel="canonical" href={`https://rezaivision.de/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image} />
+        <meta property="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
+        {faqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
       </Helmet>
 
       {/* Reading Progress Bar */}
@@ -295,6 +343,31 @@ export default function BlogPost() {
         <article className="prose prose-invert prose-brand max-w-none">
           {renderContent(post.content)}
         </article>
+
+        {/* Related Articles Sektion für starke interne Verlinkung */}
+        <div className="mt-24 pt-16 border-t border-white/10">
+          <h3 className="text-2xl font-display font-bold mb-8 text-white">Passend zum Thema</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {blogPosts
+              .filter(p => p.id !== post.id && p.category === post.category)
+              .slice(0, 2)
+              .map(related => (
+                <Link key={related.id} to={`/blog/${related.slug}`} className="group block bg-white/[0.02] rounded-3xl overflow-hidden border border-white/5 hover:border-brand-accent/50 transition-all shadow-xl hover:shadow-brand-accent/10">
+                  <div className="aspect-video overflow-hidden relative">
+                    <img src={related.image.startsWith('http') ? related.image : `https://rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-80" />
+                  </div>
+                  <div className="p-8 -mt-10 relative z-10">
+                    <h4 className="text-xl font-bold font-display mb-3 text-white group-hover:text-brand-accent transition-colors leading-snug">{related.title}</h4>
+                    <p className="text-sm text-gray-400 font-light leading-relaxed line-clamp-2">{related.excerpt}</p>
+                    <div className="mt-6 flex items-center text-brand-accent text-xs font-bold uppercase tracking-widest">
+                      Artikel lesen <ArrowRight size={16} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+            ))}
+          </div>
+        </div>
 
         {/* Article CTA */}
         <motion.div

@@ -87,7 +87,7 @@ export function TrustSection() {
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         src={client.url} 
-                        alt={client.name} 
+                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
                       />
@@ -115,7 +115,7 @@ export function TrustSection() {
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         src={client.url} 
-                        alt={client.name} 
+                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
                       />

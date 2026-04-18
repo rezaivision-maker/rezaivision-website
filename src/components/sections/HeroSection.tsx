@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-brand-bg/80 z-10" />
         <img
           src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772568178/Hero_BG_bldaur.webp?v=2"
-          alt="Cinematic Video Production"
+          alt="Hero Background Video Produktion Kaiserslautern — Rezai Vision"
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
         />
@@ -81,7 +81,7 @@ export function HeroSection() {
                   <img
                     key={i}
                     src={user.img}
-                    alt={user.name}
+                    alt={`${user.name} Kundenstimme Videoproduktion Kaiserslautern`}
                     className="w-8 h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"
                     referrerPolicy="no-referrer"
                   />
@@ -125,7 +125,7 @@ export function HeroSection() {
             >
               <img
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
-                alt="Parsha Rezai - Videographer aus Kaiserslautern"
+                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
                 className="w-full h-auto object-contain drop-shadow-2xl"
                 style={{ 
                   maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',

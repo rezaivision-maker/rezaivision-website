@@ -68,6 +68,45 @@ export function Layout() {
             }))
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Rezai Vision",
+            "alternateName": "RezaiVision Videoproduktion Kaiserslautern",
+            "url": "https://rezaivision.de",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://rezaivision.de/blog?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Rezai Vision",
+            "url": "https://rezaivision.de",
+            "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772567552/Rechteck_ts5rt1.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+49-176-31739958",
+              "contactType": "customer service",
+              "areaServed": "DE",
+              "availableLanguage": ["German", "English"]
+            },
+            "sameAs": [
+              "https://www.instagram.com/rezaivision",
+              "https://www.linkedin.com/in/parsha-rezai",
+              "https://www.facebook.com/rezaivision",
+              "https://www.tiktok.com/@rezaivision"
+            ]
+          })}
+        </script>
       </Helmet>
       {/* Header */}
       <header
