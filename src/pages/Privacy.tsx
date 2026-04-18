@@ -5,7 +5,7 @@ export default function Privacy() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg">
       <Helmet>
-        <title>Datenschutzerklärung | Rezai Vision & RezaiEmotion</title>
+        <title>Datenschutzerklärung | Rezai Vision & reza-e-motion</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full">
@@ -77,7 +77,7 @@ export default function Privacy() {
 
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">5. Verträge mit Kunden (Shootings & Bearbeitung)</h2>
-              <p>Wenn Sie mit uns als Videoagentur (Rezai Vision oder RezaiEmotion) zusammenarbeiten, erfassen und speichern wir Ihre Unternehmensdaten bzw. Rechnungsdaten (Name, Adresse, ggf. USt-IdNr.) sowie den Kommunikationsverlauf zwecks Auftragsdurchführung.</p>
+              <p>Wenn Sie mit uns als Videoagentur (Rezai Vision oder reza-e-motion) zusammenarbeiten, erfassen und speichern wir Ihre Unternehmensdaten bzw. Rechnungsdaten (Name, Adresse, ggf. USt-IdNr.) sowie den Kommunikationsverlauf zwecks Auftragsdurchführung.</p>
               <p className="mt-4"><strong>Videomaterial:</strong> Sobald wir bei Ihnen vor Ort drehen, fertigen wir Bild- und Videomaterial an. Bei Veranstaltungen, Recruiting-Drehs oder Hochzeiten greift hier das berechtigte Interesse bzw. der mit Ihnen geschlossene Vertrag (Art. 6 Abs. 1 lit. b und f DSGVO). Bei großen Events (Eventbegleitung) ist es Aufgabe des Veranstalters, Teilnehmer über Filmaufnahmen zu informieren. Soweit es sich um Protagonisten handelt, arbeiten wir oft mit separaten Model-Releases oder vertraglichen Zustimmungen.</p>
               <p className="mt-4">Ihre Rechnungsdaten speichern wir zudem zur Erfüllung fiskalischer Vorgaben aus dem Handels- und Steuerrecht (10 Jahre).</p>
             </section>

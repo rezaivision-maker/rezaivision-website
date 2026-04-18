@@ -72,6 +72,7 @@ export function CasesSection() {
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
+                    loading="lazy"
                   ></iframe>
                   {!isPlayingLull && (
                     <div 
@@ -94,6 +95,7 @@ export function CasesSection() {
                     alt="Imagefilm Schlossgut Lüll Weingut Rheinhessen — Rezai Vision Videoproduktion" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
@@ -102,6 +104,7 @@ export function CasesSection() {
                     alt="Weingut Atmosphäre Schlossgut Lüll — Unternehmensfilm Kaiserslautern" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
@@ -110,6 +113,7 @@ export function CasesSection() {
                     alt="Weinberg Landschaft Schlossgut Lüll — Imagefilm Produktion Pfalz" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -160,6 +164,7 @@ export function CasesSection() {
                       referrerPolicy="strict-origin-when-cross-origin" 
                       className="w-full h-full" 
                       title={`Aesthetic Ink Slide ${currentAestheticInkSlide + 1}`}
+                      loading="lazy"
                     ></iframe>
                   </motion.div>
                 </AnimatePresence>
@@ -168,12 +173,14 @@ export function CasesSection() {
                 <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
                   <button 
                     onClick={prevAestheticInkSlide}
+                    aria-label="Vorheriges Bild"
                     className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand-accent hover:text-brand-bg transition-colors pointer-events-auto"
                   >
                     <ChevronLeft size={24} />
                   </button>
                   <button 
                     onClick={nextAestheticInkSlide}
+                    aria-label="Nächstes Bild"
                     className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:bg-brand-accent hover:text-brand-bg transition-colors pointer-events-auto"
                   >
                     <ChevronRight size={24} />
@@ -239,9 +246,10 @@ export function CasesSection() {
                 <p className="text-gray-500 text-sm leading-relaxed font-light mb-6">Eingesetzt für Sichtbarkeit, Vertrauen und gezielte Leads.</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Reels</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Ads</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Leads</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Contentseries</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Talking Heads</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Broll</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">CTA</span>
                 </div>
               </div>
 
@@ -254,6 +262,7 @@ export function CasesSection() {
                     referrerPolicy="strict-origin-when-cross-origin" 
                     className="absolute top-0 left-0 w-full h-full" 
                     title="KSB RECHTSANWÄLTE"
+                    loading="lazy"
                   ></iframe>
                 </div>
                 <div className="grid grid-rows-2 gap-4">
@@ -332,6 +341,7 @@ export function CasesSection() {
                     className="w-full h-full object-cover"
                     controls
                     playsInline
+                    preload="none"
                   />
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">

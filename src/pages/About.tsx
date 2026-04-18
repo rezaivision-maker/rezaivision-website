@@ -7,8 +7,8 @@ export default function About() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Über uns | RezaEmotion | Videoproduktion Kaiserslautern</title>
-        <meta name="description" content="Lernen Sie das Team hinter RezaEmotion kennen. Ihre Experten für professionelle Videoproduktion aus Kaiserslautern. Klar. Strukturiert. Wirkungsvoll." />
+        <title>Über uns | reza-e-motion | Videoproduktion Kaiserslautern</title>
+        <meta name="description" content="Lernen Sie das Team hinter reza-e-motion kennen. Ihre Experten für professionelle Videoproduktion aus Kaiserslautern. Klar. Strukturiert. Wirkungsvoll." />
         <link rel="canonical" href="https://rezaivision.de/ueber-uns" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">

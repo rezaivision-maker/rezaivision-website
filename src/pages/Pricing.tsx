@@ -65,7 +65,7 @@ export default function Pricing() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Preise & Pakete | Videoproduktion | RezaEmotion</title>
+        <title>Preise & Pakete | Videoproduktion | reza-e-motion</title>
         <meta name="description" content="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media." />
         <link rel="canonical" href="https://rezaivision.de/preise" />
       </Helmet>

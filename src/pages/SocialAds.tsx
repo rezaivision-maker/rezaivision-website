@@ -126,7 +126,7 @@ export default function SocialAds() {
               Mehr Aufmerksamkeit. <span className="text-brand-accent italic">Mehr Umsatz.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir produzieren Performance-starke Werbevideos und Social Ads, die den Scroll-Vorgang stoppen, Klicks generieren und Ihre Zielgruppe zum Handeln bewegen.
+              Wir produzieren Performance-starke Werbevideos und Social Ads, die den Scroll-Vorgang stoppen, Klicks generieren und Ihre Zielgruppe zum Handeln bewegen. Sichern Sie sich jetzt Ihr nächstes Social Media Video Kaiserslautern.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

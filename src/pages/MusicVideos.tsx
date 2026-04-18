@@ -8,9 +8,9 @@ export default function MusicVideos() {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>Musikvideo Produktion & Regisseur | Rheinland-Pfalz & Saarland</title>
+        <title>Musikvideo Kaiserslautern | Regisseur Rheinland-Pfalz & Saarland</title>
         <meta name="description" content="Professionelle Musikvideos in RLP, Kaiserslautern & Mannheim. Von Konzept- bis Performance-Videos. Wir erschaffen deine visuelle Identität." />
-        <link rel="canonical" href="https://rezaivision.de/rezaemotion/musikvideos" />
+        <link rel="canonical" href="https://rezaivision.de/reza-e-motion/musikvideos" />
         <meta name="keywords" content="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video" />
       </Helmet>
 
@@ -30,7 +30,7 @@ export default function MusicVideos() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-sm font-medium text-pink-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-pink-500" />
-              REZAEMOTION | MUSIC VIDEOS
+              REZA-E-MOTION | MUSIKVIDEO KAISERSLAUTERN
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
               Dein Sound. <br />
@@ -42,7 +42,7 @@ export default function MusicVideos() {
               Ein Musikvideo ist mehr als Unterhaltung – es ist dein zentrales Marketinginstrument. Wir verwandeln deine künstlerische Vision in ein visuelles Gesamtkunstwerk, das Fans fesselt und dein Image schärft.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/rezaemotion#anfrage" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none shadow-pink-500/20">
+              <Button href="/reza-e-motion#anfrage" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none shadow-pink-500/20">
                 Projekt anfragen
               </Button>
               <Button href="#showreel" variant="outline" size="lg" className="border-pink-500/30 text-pink-400 hover:bg-pink-500/10">
@@ -94,7 +94,7 @@ export default function MusicVideos() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Profi-Schnitt & Grading</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Lieferung in 7-10 Tagen</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10">Anfragen</Button>
             </div>
 
             {/* Standard */}
@@ -108,7 +108,7 @@ export default function MusicVideos() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Locationscouting</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Erweitertes Color-Grading</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none w-full">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none w-full">Anfragen</Button>
             </div>
 
             {/* Premium */}
@@ -121,7 +121,7 @@ export default function MusicVideos() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Drohnenaufnahmen & Extras</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Social Media Promo Clips</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10">Anfragen</Button>
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function MusicVideos() {
           <p className="text-xl text-gray-300 mb-10">
             Schick uns deinen Track und lass uns über erste Ideen sprechen.
           </p>
-          <Button href="/rezaemotion#anfrage" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white h-14 px-10 text-lg border-none shadow-pink-500/20">
+          <Button href="/reza-e-motion#anfrage" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white h-14 px-10 text-lg border-none shadow-pink-500/20">
             Jetzt anfragen
           </Button>
         </div>

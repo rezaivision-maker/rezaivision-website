@@ -42,10 +42,10 @@ export default function App() {
           <Route path="leistungen/recruiting" element={<RecruitingVideo />} />
           <Route path="leistungen/werbevideo" element={<SocialAds />} />
           <Route path="leistungen/social-media" element={<SocialRetainer />} />
-          <Route path="rezaemotion" element={<PrivateEvents />} />
-          <Route path="rezaemotion/eventbegleitung" element={<EventCoverage />} />
-          <Route path="rezaemotion/musikvideos" element={<MusicVideos />} />
-          <Route path="rezaemotion/hochzeitsfilme" element={<WeddingFilms />} />
+          <Route path="reza-e-motion" element={<PrivateEvents />} />
+          <Route path="reza-e-motion/eventbegleitung" element={<EventCoverage />} />
+          <Route path="reza-e-motion/musikvideos" element={<MusicVideos />} />
+          <Route path="reza-e-motion/hochzeitsfilme" element={<WeddingFilms />} />
           <Route path="referenzen" element={<Work />} />
           <Route path="preise" element={<Pricing />} />
           <Route path="ueber-uns" element={<About />} />

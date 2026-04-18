@@ -10,7 +10,7 @@ export default function WeddingFilms() {
       <Helmet>
         <title>Hochzeitsvideograf Kaiserslautern, Mannheim & Saarland | Cinematic Wedding Films</title>
         <meta name="description" content="Emotionale Hochzeitsfilme im Umkreis von 100km (Rheinland-Pfalz, Saarland). Wir fangen die echten Momente eures Tages ein – unauffällig und authentisch." />
-        <link rel="canonical" href="https://rezaivision.de/rezaemotion/hochzeitsfilme" />
+        <link rel="canonical" href="https://rezaivision.de/reza-e-motion/hochzeitsfilme" />
         <meta name="keywords" content="Hochzeitsvideograf Kaiserslautern, Hochzeitsfilm Mannheim, Hochzeitsvideograf Saarland, Cinematic Wedding Video RLP" />
       </Helmet>
 
@@ -30,7 +30,7 @@ export default function WeddingFilms() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-sm font-medium text-purple-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-purple-500" />
-              REZAEMOTION
+              REZA-E-MOTION
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
               Euer Tag. <br />
@@ -42,7 +42,7 @@ export default function WeddingFilms() {
               Ihr heiratet (meistens) nur einmal. Ein Tag voller Emotionen, der oft viel zu schnell vorbeizieht. Wir fangen die Momente ein, die ihr vor lauter Aufregung vielleicht verpasst – damit ihr sie ein Leben lang wiedererleben könnt.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/rezaemotion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-500/20">
+              <Button href="/reza-e-motion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-500/20">
                 Termin anfragen
               </Button>
               <Button href="#referenzen" variant="outline" size="lg" className="border-purple-500/30 text-purple-400 hover:bg-purple-500/10">
@@ -200,7 +200,7 @@ export default function WeddingFilms() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Fokus auf Highlights & Emotionen</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Leicht mit Gästen teilbar</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" variant="outline" className="w-full">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" variant="outline" className="w-full">Anfragen</Button>
             </div>
 
             {/* Storyline */}
@@ -213,7 +213,7 @@ export default function WeddingFilms() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Integrierte O-Töne (Reden, Gelübde)</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Cinematic Storytelling</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" className="bg-purple-600 hover:bg-purple-700 text-white border-none w-full">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" className="bg-purple-600 hover:bg-purple-700 text-white border-none w-full">Anfragen</Button>
             </div>
 
             {/* Dokumentation */}
@@ -225,7 +225,7 @@ export default function WeddingFilms() {
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Komplette Trauung & Zeremonie</li>
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-purple-400" /> Alle Reden & Programmpunkte</li>
               </ul>
-              <Button href="/rezaemotion#anfrage" variant="outline" className="w-full">Anfragen</Button>
+              <Button href="/reza-e-motion#anfrage" variant="outline" className="w-full">Anfragen</Button>
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function WeddingFilms() {
                 <br /><br />
                 Wir zeigen euch aber sehr gerne in einem gemeinsamen Online-Gespräch exklusive Ausschnitte und komplette Referenzfilme!
               </p>
-              <Button href="/rezaemotion#anfrage" className="bg-purple-600 hover:bg-purple-700 text-white">
+              <Button href="/reza-e-motion#anfrage" className="bg-purple-600 hover:bg-purple-700 text-white">
                 Online-Gespräch vereinbaren
               </Button>
             </div>
@@ -271,7 +271,7 @@ export default function WeddingFilms() {
           <p className="text-xl text-gray-300 mb-10">
             Sichert euch jetzt euren Termin. Die beliebtesten Wochenenden im Sommer sind schnell vergeben.
           </p>
-          <Button href="/rezaemotion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white h-14 px-10 text-lg">
+          <Button href="/reza-e-motion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white h-14 px-10 text-lg">
             Verfügbarkeit prüfen
           </Button>
         </div>

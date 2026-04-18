@@ -135,7 +135,7 @@ export default function CorporateVideo() {
               Ihr Unternehmen im besten Licht: <span className="text-brand-accent italic">Professionelle Unternehmensfilme</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir inszenieren Ihre Marke mit starker Bildqualität und strategischem Storytelling. Zeigen Sie, wofür Sie stehen und gewinnen Sie das Vertrauen Ihrer Wunschkunden.
+              Als Ihr Partner für Corporate Video Pfalz inszenieren wir Ihre Marke mit starker Bildqualität und strategischem Storytelling. Zeigen Sie, wofür Sie stehen und gewinnen Sie das Vertrauen Ihrer Wunschkunden.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

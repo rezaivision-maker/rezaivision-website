@@ -139,16 +139,16 @@ export function Layout() {
             ))}
             <div className="w-px h-6 bg-white/10 mx-2" />
             <Link
-              to="/rezaemotion"
+              to="/reza-e-motion"
               className={cn(
                 "text-sm font-medium px-3 py-1.5 rounded-full transition-all flex items-center gap-2 border whitespace-nowrap",
-                location.pathname === "/rezaemotion" 
+                location.pathname === "/reza-e-motion" 
                   ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
                   : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
               )}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-              RezaiEmotion
+              reza-e-motion
             </Link>
           </nav>
 
@@ -188,16 +188,16 @@ export function Layout() {
             ))}
             <div className="w-full h-px bg-white/10 my-2" />
             <Link
-              to="/rezaemotion"
+              to="/reza-e-motion"
               className={cn(
                 "transition-all flex items-center gap-3 px-4 py-3 rounded-xl border",
-                location.pathname === "/rezaemotion" 
+                location.pathname === "/reza-e-motion" 
                   ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
                   : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
               )}
             >
               <span className="w-2 h-2 rounded-full bg-purple-500" />
-              RezaiEmotion
+              reza-e-motion
             </Link>
           </nav>
           <div className="mt-auto pb-8">
@@ -240,21 +240,21 @@ export function Layout() {
                 <li className="pt-2">
                   <div className="flex flex-col gap-3">
                       <Link
-                        to="/rezaemotion"
+                        to="/reza-e-motion"
                         className={cn(
                           "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all text-sm w-fit",
-                          location.pathname === "/rezaemotion" 
+                          location.pathname === "/reza-e-motion" 
                             ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
                             : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
                         )}
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                        RezaiEmotion
+                        reza-e-motion
                       </Link>
                     <div className="pl-4 border-l border-white/10 flex flex-col gap-2 text-sm">
-                      <Link to="/rezaemotion/eventbegleitung" className="text-gray-400 hover:text-purple-400 transition-colors">Eventbegleitung</Link>
-                      <Link to="/rezaemotion/musikvideos" className="text-gray-400 hover:text-purple-400 transition-colors">Musikvideos</Link>
-                      <Link to="/rezaemotion/hochzeitsfilme" className="text-gray-400 hover:text-purple-400 transition-colors">Hochzeitsfilme</Link>
+                      <Link to="/reza-e-motion/eventbegleitung" className="text-gray-400 hover:text-purple-400 transition-colors">Eventbegleitung</Link>
+                      <Link to="/reza-e-motion/musikvideos" className="text-gray-400 hover:text-purple-400 transition-colors">Musikvideos</Link>
+                      <Link to="/reza-e-motion/hochzeitsfilme" className="text-gray-400 hover:text-purple-400 transition-colors">Hochzeitsfilme</Link>
                     </div>
                   </div>
                 </li>

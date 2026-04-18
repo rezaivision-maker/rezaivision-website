@@ -5,7 +5,7 @@ export default function Imprint() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg">
       <Helmet>
-        <title>Impressum | RezaEmotion</title>
+        <title>Impressum | reza-e-motion</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full">

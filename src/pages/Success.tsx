@@ -8,7 +8,7 @@ export default function Success() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg overflow-hidden relative text-center">
       <Helmet>
-        <title>Vielen Dank! Ihre Nachricht ist eingereicht | Rezai Vision & RezaiEmotion</title>
+        <title>Vielen Dank! Ihre Nachricht ist eingereicht | Rezai Vision & reza-e-motion</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

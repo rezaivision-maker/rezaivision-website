@@ -25,8 +25,8 @@ export default function GlossaryIndex() {
   return (
     <div className="pt-32 pb-24 min-h-screen">
       <Helmet>
-        <title>Filmmaking & Videoproduktion Glossar | RezaEmotion</title>
-        <meta name="description" content="Das große Videoproduktions-Glossar von RezaEmotion. Wir erklären Fachbegriffe wie B-Roll, Color Grading, Cinematic Look und Imagefilm einfach und verständlich." />
+        <title>Filmmaking & Videoproduktion Glossar | reza-e-motion</title>
+        <meta name="description" content="Das große Videoproduktions-Glossar von reza-e-motion. Wir erklären Fachbegriffe wie B-Roll, Color Grading, Cinematic Look und Imagefilm einfach und verständlich." />
         <link rel="canonical" href="https://rezaivision.de/glossar" />
         <script type="application/ld+json">
           {JSON.stringify({

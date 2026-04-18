@@ -47,7 +47,7 @@ export default function PrivateEvents() {
       <Helmet>
         <title>Rezai|Emotion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP</title>
         <meta name="description" content="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland." />
-        <link rel="canonical" href="https://rezaivision.de/rezaemotion" />
+        <link rel="canonical" href="https://rezaivision.de/reza-e-motion" />
         <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo" />
       </Helmet>
       
@@ -116,7 +116,7 @@ export default function PrivateEvents() {
                   <li className="flex items-center gap-2"><ArrowRight size={16} className="text-purple-500" /> Social Media Snippets</li>
                   <li className="flex items-center gap-2"><ArrowRight size={16} className="text-purple-500" /> Mehrkamera-Produktion</li>
                 </ul>
-                <Button href="/rezaemotion/eventbegleitung" variant="outline" className="w-full border-purple-500/30 text-purple-400 hover:bg-purple-500/10 mt-auto">
+                <Button href="/reza-e-motion/eventbegleitung" variant="outline" className="w-full border-purple-500/30 text-purple-400 hover:bg-purple-500/10 mt-auto">
                   Mehr erfahren
                 </Button>
               </div>
@@ -152,7 +152,7 @@ export default function PrivateEvents() {
                   <li className="flex items-center gap-2"><ArrowRight size={16} className="text-pink-500" /> Performance & Story</li>
                   <li className="flex items-center gap-2"><ArrowRight size={16} className="text-pink-500" /> High-End Postproduktion</li>
                 </ul>
-                <Button href="/rezaemotion/musikvideos" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10 mt-auto">
+                <Button href="/reza-e-motion/musikvideos" variant="outline" className="w-full border-pink-500/30 text-pink-400 hover:bg-pink-500/10 mt-auto">
                   Mehr erfahren
                 </Button>
               </div>
@@ -189,7 +189,7 @@ export default function PrivateEvents() {
                   <li className="flex items-center gap-2"><ArrowRight size={16} className="text-rose-500" /> Volle Hochzeitsdokumentation (60-90 Min)</li>
                 </ul>
                 <p className="text-xs text-gray-500 italic mb-6">Weitere Optionen & individuelle Pakete im persönlichen Gespräch verfügbar.</p>
-                <Button href="/rezaemotion/hochzeitsfilme" variant="outline" className="w-full border-rose-500/30 text-rose-400 hover:bg-rose-500/10 mt-auto">
+                <Button href="/reza-e-motion/hochzeitsfilme" variant="outline" className="w-full border-rose-500/30 text-rose-400 hover:bg-rose-500/10 mt-auto">
                   Mehr erfahren
                 </Button>
               </div>

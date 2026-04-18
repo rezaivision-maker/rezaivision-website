@@ -15,7 +15,7 @@ export default function Blog() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Magazin | Rezai Vision & RezaiEmotion - Insights & SEO Tipps</title>
+        <title>Magazin | Rezai Vision & reza-e-motion - Insights & SEO Tipps</title>
         <meta name="description" content="Erfahren Sie mehr über Videoproduktion, Recruiting-Videos und Hochzeitsfilme in unserem Magazin. Experten-Tipps für Ihren Erfolg." />
         <link rel="canonical" href="https://rezaivision.de/blog" />
       </Helmet>

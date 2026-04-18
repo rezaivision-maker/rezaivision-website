@@ -9,7 +9,7 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-brand-bg pt-24 pb-12 flex">
       <Helmet>
-        <title>CMS Dashboard | RezaEmotion</title>
+        <title>CMS Dashboard | reza-e-motion</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
@@ -17,7 +17,7 @@ export default function AdminDashboard() {
       <aside className="w-64 bg-brand-darker border-r border-white/5 hidden md:flex flex-col h-[calc(100vh-6rem)] sticky top-24">
         <div className="p-6">
           <h2 className="text-xl font-display font-bold text-white mb-2">CMS Backend</h2>
-          <p className="text-xs text-gray-400">RezaEmotion Content Manager</p>
+          <p className="text-xs text-gray-400">reza-e-motion Content Manager</p>
         </div>
         <nav className="flex-1 px-4 space-y-2">
           <button

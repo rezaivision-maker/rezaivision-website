@@ -5,7 +5,7 @@ export default function AGB() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg">
       <Helmet>
-        <title>Allgemeine Geschäftsbedingungen | Rezai Vision & RezaiEmotion</title>
+        <title>Allgemeine Geschäftsbedingungen | Rezai Vision & reza-e-motion</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full">
@@ -21,7 +21,7 @@ export default function AGB() {
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">1. Geltungsbereich und Vertragspartner</h2>
               <p>
-                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge über Videoproduktionen (B2B unter "Rezai Vision" sowie B2C-Events/Hochzeiten unter "RezaiEmotion") zwischen der <strong>Parsha Rezai Mah Videoproduktion</strong> (nachfolgend "Auftragnehmer" genannt) und ihren Kunden (nachfolgend "Auftraggeber" genannt).
+                Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge über Videoproduktionen (B2B unter "Rezai Vision" sowie B2C-Events/Hochzeiten unter "reza-e-motion") zwischen der <strong>Parsha Rezai Mah Videoproduktion</strong> (nachfolgend "Auftragnehmer" genannt) und ihren Kunden (nachfolgend "Auftraggeber" genannt).
               </p>
               <p className="mt-4">
                 Abweichende AGB des Auftraggebers werden nicht anerkannt, es sei denn, der Auftragnehmer stimmt ihrer Geltung ausdrücklich zu.

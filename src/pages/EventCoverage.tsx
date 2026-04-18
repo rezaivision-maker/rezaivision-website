@@ -31,7 +31,7 @@ export default function EventCoverage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-sm font-medium text-purple-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-purple-500" />
-              REZAEMOTION
+              REZA-E-MOTION
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
               Die Energie deines Events. <br />
@@ -43,7 +43,7 @@ export default function EventCoverage() {
               Vergiss langweilige Rückblicke. Wir produzieren dynamische Aftermovies und Eventvideos, die das Gefühl des Tages exakt transportieren – mit starker Bildqualität und perfektem Sound.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/rezaemotion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-500/20">
+              <Button href="/reza-e-motion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-500/20">
                 Event anfragen
               </Button>
               <Button href="#referenzen" variant="outline" size="lg" className="border-purple-500/30 text-purple-400 hover:bg-purple-500/10">
@@ -277,7 +277,7 @@ export default function EventCoverage() {
           <p className="text-xl text-gray-300 mb-10">
             Lass uns darüber sprechen, wie wir dein Event unvergesslich machen. Sichere dir jetzt deinen Termin.
           </p>
-          <Button href="/rezaemotion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white h-14 px-10 text-lg">
+          <Button href="/reza-e-motion#anfrage" size="lg" className="bg-purple-600 hover:bg-purple-700 text-white h-14 px-10 text-lg">
             Unverbindlich anfragen
           </Button>
         </div>

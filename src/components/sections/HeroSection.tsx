@@ -31,7 +31,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              Videoproduktion aus Kaiserslautern
+              Videograf Kaiserslautern & Videoproduktion
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-gray-300 mb-10 font-light"
             >
-              Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands.
+              Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Ihr Content Creator Kaiserslautern für Hero-Content und Kampagnen.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
