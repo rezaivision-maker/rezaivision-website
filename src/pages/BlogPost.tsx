@@ -1,10 +1,10 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useSpring } from "motion/react";
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, ArrowRight, Facebook, Twitter, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Facebook, Instagram, Share2, MessageCircle, Link2, Check } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -18,9 +18,42 @@ export default function BlogPost() {
     restDelta: 0.001
   });
 
+  const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
+
+  const handleShare = (platform: 'facebook' | 'whatsapp' | 'copy') => {
+    const url = window.location.href;
+    const title = post?.title || '';
+
+    if (platform === 'facebook') {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+    } else if (platform === 'whatsapp') {
+      window.open(`https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
+    } else if (platform === 'copy') {
+      navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const handleNativeShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: post?.title,
+          text: post?.excerpt,
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.error('Error sharing:', err);
+      }
+    } else {
+      handleShare('copy');
+    }
+  };
 
   if (!post) {
     return (
@@ -498,9 +531,43 @@ export default function BlogPost() {
           <div className="flex items-center gap-6">
             <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-black">Teilen</span>
             <div className="flex gap-3">
-              <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent hover:text-brand-bg transition-all border border-white/10 group"><Facebook size={20} className="group-hover:scale-110 transition-transform" /></button>
-              <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent hover:text-brand-bg transition-all border border-white/10 group"><Twitter size={20} className="group-hover:scale-110 transition-transform" /></button>
-              <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent hover:text-brand-bg transition-all border border-white/10 group"><Share2 size={20} className="group-hover:scale-110 transition-transform" /></button>
+              <button 
+                onClick={() => handleShare('facebook')}
+                className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all border border-white/10 group"
+                title="Auf Facebook teilen"
+              >
+                <Facebook size={20} className="group-hover:scale-110 transition-transform" />
+              </button>
+              <button 
+                onClick={() => handleShare('whatsapp')}
+                className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all border border-white/10 group"
+                title="Per WhatsApp teilen"
+              >
+                <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
+              </button>
+              <button 
+                onClick={() => handleShare('copy')}
+                className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent hover:text-brand-bg transition-all border border-white/10 group relative"
+                title="Link kopieren"
+              >
+                {copied ? (
+                  <Check size={20} className="text-brand-bg scale-110" />
+                ) : (
+                  <Link2 size={20} className="group-hover:scale-110 transition-transform" />
+                )}
+                {copied && (
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-brand-accent text-brand-bg text-[10px] font-bold py-1 px-2 rounded whitespace-nowrap">
+                    Kopiert!
+                  </span>
+                )}
+              </button>
+              <button 
+                onClick={handleNativeShare}
+                className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-brand-bg transition-all border border-white/10 group"
+                title="Mehr Optionen"
+              >
+                <Share2 size={20} className="group-hover:scale-110 transition-transform" />
+              </button>
             </div>
           </div>
         </div>
