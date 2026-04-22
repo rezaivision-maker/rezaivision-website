@@ -28,6 +28,10 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import GlossaryIndex from "./pages/Glossary";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import NotFound from "./pages/NotFound";
+import Forbidden from "./pages/Forbidden";
+import ServerError from "./pages/ServerError";
+import Maintenance from "./pages/Maintenance";
 import { Analytics } from "./components/Analytics";
 
 export default function App() {
@@ -59,8 +63,12 @@ export default function App() {
           <Route path="agb" element={<AGB />} />
           <Route path="danke" element={<Success />} />
           <Route path="admin" element={<AdminDashboard />} />
-          {/* Fallback for missing legal pages */}
-          <Route path="*" element={<div className="min-h-[50vh] flex items-center justify-center text-2xl font-display">Seite in Bearbeitung</div>} />
+          
+          {/* Error Pages */}
+          <Route path="403" element={<Forbidden />} />
+          <Route path="500" element={<ServerError />} />
+          <Route path="503" element={<Maintenance />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

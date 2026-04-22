@@ -74,7 +74,10 @@ export default function BlogPost() {
     "author": {
       "@type": "Person",
       "name": "Parsha Rezai",
-      "url": "https://rezaivision.de/ueber-uns"
+      "url": "https://rezaivision.de/ueber-uns",
+      "jobTitle": "Lead Videographer & Founder",
+      "description": "Parsha Rezai ist Gründer von Rezai Vision und Experte für Videomarketing mit Fokus auf den Mittelstand.",
+      "knowsAbout": ["Videografie", "Videomarketing", "Social Media Ads", "Recruiting Videos"]
     },
     "publisher": {
       "@type": "Organization",
@@ -403,6 +406,42 @@ export default function BlogPost() {
         <article className="prose prose-invert prose-brand max-w-none">
           {renderContent(post.content)}
         </article>
+
+        {/* Author Bio Box - E-E-A-T Signal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 p-8 md:p-10 bg-white/[0.02] border border-white/10 rounded-[2rem] flex flex-col md:flex-row gap-8 items-center text-center md:text-left relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-full blur-3xl -z-10" />
+          
+          <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-white/10 shrink-0 shadow-2xl">
+            <img 
+              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
+              alt="Parsha Rezai" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          <div className="flex-1">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4 justify-center md:justify-start">
+              <h3 className="text-2xl font-display font-bold text-white">Parsha Rezai</h3>
+              <span className="hidden md:block text-white/20">|</span>
+              <span className="text-brand-accent text-sm font-bold uppercase tracking-widest">Gründer & Lead Videographer</span>
+            </div>
+            
+            <p className="text-gray-400 leading-relaxed font-light mb-6">
+              Parsha blickt auf über **10 Jahre Erfahrung** in der professionellen Videoproduktion zurück. Er spezialisiert sich darauf, die Identität von mittelständischen Marken visuell greifbar zu machen. Zu seinen Projekten zählen Produktionen für namhafte Kunden wie **PFAFF Industriesysteme**, **Social Care Mainz** und **CBL Datenrettung**.
+            </p>
+            
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <Link to="/ueber-uns" className="text-xs font-bold uppercase tracking-widest text-white hover:text-brand-accent transition-colors">Mehr über Parsha</Link>
+              <span className="text-white/10">•</span>
+              <Link to="/kontakt" className="text-xs font-bold uppercase tracking-widest text-white hover:text-brand-accent transition-colors">Projekt anfragen</Link>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Related Articles Sektion für starke interne Verlinkung */}
         <div className="mt-24 pt-16 border-t border-white/10">

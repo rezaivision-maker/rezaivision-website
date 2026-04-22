@@ -27,7 +27,7 @@ export function TrustSection() {
             {[
               {
                 icon: <PlusSquare size={24} className="text-brand-accent" />,
-                text: "8 Jahre Erfahrung in Video & Filmproduktion"
+                text: "10 Jahre Erfahrung in Video & Filmproduktion"
               },
               {
                 icon: <Flag size={24} className="text-brand-accent" />,

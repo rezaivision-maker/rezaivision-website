@@ -144,7 +144,7 @@ export default function CorporateVideo() {
               </Button>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <CheckCircle2 className="text-brand-accent" size={20} />
-                <span>Über 8 Jahre Erfahrung in der Produktion von Filmen und Videos.</span>
+                <span>Über 10 Jahre Erfahrung in der Produktion von Filmen und Videos.</span>
               </div>
             </div>
           </motion.div>

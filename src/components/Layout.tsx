@@ -99,9 +99,16 @@ export function Layout() {
               "areaServed": "DE",
               "availableLanguage": ["German", "English"]
             },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Erfurter Straße 93",
+              "addressLocality": "Kaiserslautern",
+              "postalCode": "67663",
+              "addressRegion": "Rheinland-Pfalz",
+              "addressCountry": "DE"
+            },
             "sameAs": [
               "https://www.instagram.com/rezaivision",
-              "https://www.linkedin.com/in/parsha-rezai",
               "https://www.facebook.com/rezaivision",
               "https://www.tiktok.com/@rezaivision"
             ]
@@ -303,11 +310,7 @@ export function Layout() {
                   <Music size={20} />
                   <span className="sr-only">TikTok</span>
                 </a>
-                <a href="https://www.linkedin.com/in/parsha-rezai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
-                  <Linkedin size={20} />
-                  <span className="sr-only">LinkedIn</span>
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
+                <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
                   <Facebook size={20} />
                   <span className="sr-only">Facebook</span>
                 </a>

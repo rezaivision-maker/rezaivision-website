@@ -32,10 +32,10 @@ export default function About() {
                 Wir sind eine Videoproduktion aus Kaiserslautern mit Fokus auf klare Kommunikation, starke Bilder und durchdachte Umsetzung.
               </p>
               <p>
-                Ich arbeite als persönlicher Ansprechpartner mit einem eingespielten Netzwerk aus Kreativen und Spezialisten zusammen. So entsteht für jedes Projekt genau die Struktur, die es braucht – flexibel, effizient und ohne unnötigen Aufwand.
+                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück und arbeite als persönlicher Ansprechpartner mit einem eingespielten Netzwerk aus Kreativen und Spezialisten zusammen. So entsteht für jedes Projekt genau die Struktur, die es braucht – flexibel, effizient und ohne unnötigen Aufwand.
               </p>
               <p>
-                Wir produzieren Videos für Unternehmen, Marken und Dienstleister in der gesamten Region. Vom Unternehmensfilm über Werbevideos bis hin zu Social-Media-Content entstehen Inhalte, die verständlich kommunizieren, Vertrauen aufbauen und Wirkung erzeugen.
+                Wir produzieren Videos für Unternehmen, Marken und Dienstleister in der gesamten Region. Zu unseren Referenzen zählen namhafte Partner wie **PFAFF Industriesysteme**, **Social Care Mainz**, **CBL Datenrettung** sowie regionale Größen wie **KSB Rechtsanwälte** oder **Aesthetic Ink**.
               </p>
               <p>
                 Was unsere Zusammenarbeit auszeichnet, sind strukturierte Abläufe, transparente Kommunikation und ein Blick für Details, die oft den Unterschied machen. Technik ist dabei nur ein Werkzeug – entscheidend ist, wie Bild, Ton und Story zusammenwirken, um genau das Gefühl zu erzeugen, das beim Zuschauer ankommen soll.
@@ -137,23 +137,23 @@ export default function About() {
             {[
               {
                 icon: <Eye size={24} className="text-brand-accent" />,
-                title: "Klarheit",
-                desc: "statt Komplexität."
+                title: "Expertise",
+                desc: "10 Jahre Videoproduktion."
               },
               {
                 icon: <Target size={24} className="text-brand-accent" />,
                 title: "Qualität",
-                desc: "statt Zufall."
+                desc: "Industrie- & B2B-Fokus."
               },
               {
                 icon: <Heart size={24} className="text-brand-accent" />,
-                title: "Zusammenarbeit",
-                desc: "auf Augenhöhe."
+                title: "Vertrauen",
+                desc: "Über 150+ Projekte."
               },
               {
                 icon: <Shield size={24} className="text-brand-accent" />,
                 title: "Zuverlässigkeit",
-                desc: "in jeder Phase."
+                desc: "Feste Termingarantie."
               }
             ].map((wert, i) => (
               <div key={i} className="bg-brand-bg p-6 rounded-2xl border border-white/5">
