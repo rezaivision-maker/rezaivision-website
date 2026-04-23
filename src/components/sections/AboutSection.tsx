@@ -16,7 +16,7 @@ export function AboutSection() {
           >
             <img
               src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
-              alt="Parsha Rezai - Gründer Rezai Vision"
+              alt="Parsha Rezai - Filmemacher & Gründer Rezai Vision Kaiserslautern"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -25,7 +25,7 @@ export function AboutSection() {
             <div className="absolute bottom-8 left-8 right-8">
               <div className="bg-brand-bg/90 backdrop-blur-md p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-display font-bold mb-2">Parsha Rezai</h3>
-                <p className="text-brand-accent text-sm">Gründer & Creative Director</p>
+                <p className="text-brand-accent text-sm">Filmemacher & Creative Director</p>
               </div>
             </div>
           </motion.div>
@@ -39,22 +39,26 @@ export function AboutSection() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-sm font-medium text-brand-accent mb-8">
               Über uns
             </div>
+            
             <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-              Video ist mehr als schöne Bilder. Es ist Kommunikation – und die muss bei Ihrer Zielgruppe ankommen.
+              Starke Kommunikation beginnt mit dem echten Verständnis für Ihre Vision.
             </p>
+
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Als Filmemacher und Videograf liefere ich keine Standard-Lösungen am Fließband. Mein Ansatz ist persönlich, strategisch und auf Ihre Ziele zugeschnitten. Ich betreue Ihr Projekt von der ersten Idee bis zum finalen Schnitt – Sie haben immer einen festen, verlässlichen Ansprechpartner.
+              Die Motivation entspringt der puren Leidenschaft für das Medium Film: Ein Video ist weit mehr als nur ein schönes Bild – es ist die Synergie aus Ton, Story und Optik. In der Zusammenarbeit als <strong className="text-white font-medium">Filmemacher und Videograf</strong> steht das Ziel im Fokus, jedem Projekt durch einen individuellen Look seinen ganz eigenen Charakter zu verleihen. Hierbei wird konsequent auf hochwertige <strong className="text-white font-medium">Kamerasysteme mit hohem Dynamikumfang</strong> gesetzt, um Ihre Botschaft in bester Bildqualität greifbar zu machen.
             </p>
+
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Je nach Projektumfang ziehe ich flexibel externe Spezialisten aus meinem Netzwerk hinzu. Das bedeutet für Sie: Maximale Effizienz ohne die Overhead-Kosten einer riesigen Agentur, aber mit exakt der gleichen Qualität.
+              Ob ambitionierter <strong className="text-white font-medium">Underdog</strong> oder etablierter Mittelstand in der Region <strong className="text-white font-medium">Kaiserslautern, Mannheim oder Mainz</strong>: Der Anspruch bleibt die filmische Inszenierung, die exakt zu Ihren Zielen passt. Je nach Projektumfang formiert sich flexibel ein Team aus Experten, um für jede <strong className="text-white font-medium">Videoproduktion in Rheinland-Pfalz und dem Saarland</strong> die Struktur zu schaffen, die sie wirklich braucht – effizient, direkt und ohne unnötigen Overhead. Gemeinsam entstehen Ergebnisse, hinter denen wir mit voller Überzeugung stehen können.
             </p>
-            <div className="pt-4"></div>
+
+            <div className="pt-6"></div>
 
             <div className="flex flex-col gap-4 mb-10">
               {[
-                "Direkter Ansprechpartner während des gesamten Projekts",
-                "Klare Abläufe & transparente Kommunikation",
-                "Verlässliche Umsetzung in jeder Phase"
+                "Persönlicher Partner von der Konzeption bis zum Motion Design",
+                "High-End Kamerasysteme für erstklassige Bildqualität",
+                "Effiziente Umsetzung durch ein eingespieltes Experten-Netzwerk"
               ].map((trust, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-300">
                   <CheckCircle2 size={20} className="text-brand-accent shrink-0" />
@@ -64,7 +68,7 @@ export function AboutSection() {
             </div>
 
             <Button href="/ueber-uns" variant="outline" className="gap-2">
-              Mehr über unsere Arbeitsweise <ArrowRight size={16} />
+              Mehr über die Arbeitsweise erfahren <ArrowRight size={16} />
             </Button>
           </motion.div>
         </div>
