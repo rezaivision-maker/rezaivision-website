@@ -233,7 +233,7 @@ export function Layout() {
                 <span className="text-white">Vision</span>
               </Link>
               <p className="text-gray-400 mb-6 max-w-xs text-sm leading-relaxed">
-                Verlässliche & menschliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und ganz Rheinland-Pfalz. Starke Arbeit verdient es, gesehen zu werden.
+                Professionelle & verlässliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und Frankfurt. Starke Arbeit verdient es, gesehen zu werden.
               </p>
             </div>
             
