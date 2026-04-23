@@ -19,14 +19,14 @@ export default function Equipment() {
     {
       icon: <Camera className="text-brand-accent" size={32} />,
       title: "Kamerasysteme",
-      desc: "Wir arbeiten primär mit der Sony Cineline für maximale Flexibilität und erstklassigen Dynamikumfang. Auf Wunsch und für spezielle High-End-Produktionen setzen wir RED Digital Cinema Kameras ein.",
-      details: ["Sony Cineline", "RED (Option)", "4K / High Framerates", "Cinema Prime Lenses"]
+      desc: "Wir arbeiten primär mit der Sony Cineline für maximale Flexibilität und erstklassigen Dynamikumfang. Der intelligente Real-Time Autofokus garantiert dabei gestochen scharfe Ergebnisse, selbst bei schnellsten Bewegungen.",
+      details: ["Sony Cineline", "Real-Time Autofokus", "4K / High Framerates", "RED (Option)"]
     },
     {
       icon: <Monitor className="text-brand-accent" size={32} />,
       title: "Post-Produktion & Farbe",
-      desc: "Color Grading im Industriestandard DaVinci Resolve. Unsere Workflows sind auf Rec.709 kalibriert, mit speziellen Gammakurven für Web (2.2) und Broadcast (2.4).",
-      details: ["DaVinci Resolve Studio", "Kalibrierte EIZO & BenQ Monitore", "4-6 Wochen Rekalibrierung", "Farbechtheits-Garantie"]
+      desc: "Color Grading im Industriestandard DaVinci Resolve. Wir arbeiten mit Spyder Colorcharts für maximale Farbtreue. Monitor-Kalibrierung erfolgt auf Rec.709 für Web (2.2) und Broadcast (2.4).",
+      details: ["DaVinci Resolve Studio", "Kalibrierte EIZO & BenQ Monitore", "Spyder Colorcharts", "Farbakkurate Darstellung"]
     },
     {
       icon: <Mic className="text-brand-accent" size={32} />,
@@ -37,20 +37,20 @@ export default function Equipment() {
     {
       icon: <Sun className="text-brand-accent" size={32} />,
       title: "Licht & Atmosphäre",
-      desc: "Wir bringen das Studio zu Ihnen. Professionelle LED-Panels und Softboxen erzeugen die perfekte Lichtstimmung in Ihren Räumen.",
-      details: ["Hocheffiziente LED-Panels", "Großformat-Softboxen", "Akzentbeleuchtung", "Mobiler Einsatz"]
+      desc: "Wir bringen das Studio zu Ihnen. Professionelle LED-Panels, Softboxen und Practicals vor Ort erzeugen die perfekte Lichtstimmung in Ihren Räumen.",
+      details: ["Hocheffiziente LED-Panels", "Großformat-Softboxen", "Practicals vor Ort", "Mobiler Einsatz"]
     },
     {
       icon: <Wind className="text-brand-accent" size={32} />,
       title: "Drohnen-Perspektiven",
-      desc: "Für beeindruckende Luftaufnahmen arbeiten wir mit spezialisierten Partner-Piloten zusammen, um Ihr Unternehmen aus neuen Perspektiven zu zeigen.",
-      details: ["Professionelle Drohnen-Szenen", "Rechtssichere Abwicklung", "4K-Luftaufnahmen", "Perfekte Integration"]
+      desc: "Für beeindruckende Luftaufnahmen bieten wir professionelle Drohnen-Einsätze an, um Ihr Unternehmen aus neuen Perspektiven zu zeigen.",
+      details: ["Luftbild-Szenen", "Rechtssichere Abwicklung", "4K-Perspektiven", "Nahtlose Integration"]
     },
     {
       icon: <Layers className="text-brand-accent" size={32} />,
       title: "Grip & Statik",
-      desc: "Ruhige, fließende Bewegungen durch Gimbalsysteme und professionelle Stative sorgen für den klassischen Kino-Look.",
-      details: ["3-Achsen Gimbals", "Fluid-Head Stative", "Teleprompter-System", "Slider-Fahrten"]
+      desc: "Dank Gimbalsystemen und robuster Stative garantieren wir einen effektiven Stand sowie ruhige, smoothe und dynamische Bewegungen.",
+      details: ["3-Achsen Gimbals", "Robuste Stative", "Teleprompter-System", "Smoothe Kamerabewegungen"]
     }
   ];
 
