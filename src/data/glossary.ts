@@ -20,6 +20,7 @@ export const glossaryTerms = [
     subheadline: 'Die physische Abmessung des lichtempfindlichen Bildsensors in einer Kamera.',
     definition: 'Der Sensor ist das digitale Äquivalent zum analogen Filmstreifen. Seine physische Größe – gängige Formate sind Vollformat (Full Frame), Super 35 (APS-C) oder Micro Four Thirds – hat massive Auswirkungen auf die Bildästhetik. Ein größerer Sensor bietet eine größere Fläche, um Licht einzufangen. Dies führt zu einem besseren Signal-Rausch-Verhältnis (weniger Bildrauschen bei wenig Licht) und einem höheren Dynamikumfang. Zudem beeinflusst die Sensorgröße den Bildwinkel (Crop-Faktor) und die Schärfentiefe: Bei gleicher Blende und gleichem Bildausschnitt erzeugt ein Vollformatsensor eine deutlich geringere Schärfentiefe als ein kleinerer Sensor, was den Hintergrund stärker verschwimmen lässt.',
     importantInfo: 'Ein häufiger Irrglaube ist, dass nur Vollformatsensoren professionelle Ergebnisse liefern. Tatsächlich ist Super 35 seit Jahrzehnten der absolute Standard in der Kinofilmproduktion. Die Wahl der Sensorgröße sollte immer vom Projekt abhängen: Für Dokumentarfilme, bei denen eine hohe Schärfentiefe von Vorteil ist, eignen sich kleinere Sensoren oft besser als Vollformat.',
+    localContext: 'Besonders bei Drehs in lichtkritischen Umgebungen, wie historischen Industriehallen im Saarland oder schummerigen Event-Locations in Mannheim, nutzen wir große Sensoren, um das Bildrauschen minimal zu halten.'
   },
   {
     id: 'framerate',
@@ -47,6 +48,7 @@ export const glossaryTerms = [
     subheadline: 'Die ästhetische Qualität der Unschärfe in den nicht fokussierten Bildbereichen.',
     definition: 'Der Begriff Bokeh stammt aus dem Japanischen ("boke" für unscharf oder verschwommen) und beschreibt in der Fotografie und Filmkunst den Charakter der Hintergrund- oder Vordergrundunschärfe. Es geht dabei nicht um die Stärke der Unschärfe selbst (die durch die Schärfentiefe definiert wird), sondern darum, wie das Objektiv die unscharfen Lichtpunkte und Konturen rendert. Ein "cremiges" Bokeh zeichnet sich durch weiche, fließende Übergänge und kreisrunde Lichtkreise ohne harte Kanten aus. Es hilft enorm dabei, das Hauptmotiv visuell vom unruhigen Hintergrund zu isolieren und die Aufmerksamkeit des Betrachters gezielt zu lenken.',
     importantInfo: 'Das Bokeh wird maßgeblich durch die Konstruktion der Objektivblende beeinflusst. Objektive mit vielen abgerundeten Blendenlamellen erzeugen meist ein runderes und weicheres Bokeh als solche mit wenigen, geraden Lamellen. Zudem erzeugen anamorphotische Objektive ein charakteristisches, ovales Bokeh, das oft mit großen Hollywood-Produktionen assoziiert wird.',
+    localContext: 'Für hochwertige Portraits im urbanen Raum nutzen wir das Bokeh gezielt, um Personen beispielsweise vor der Frankfurter Skyline oder der Industriearchitektur in Mannheim ästhetisch freizustellen.'
   },
 
   // --- Licht & Beleuchtung ---
@@ -57,6 +59,7 @@ export const glossaryTerms = [
     subheadline: 'Das klassische Beleuchtungs-Setup aus drei Lichtquellen.',
     definition: 'Das Drei-Punkt-Licht (Three-Point Lighting) ist die absolute Grundlage der professionellen Filmbeleuchtung. Es besteht aus drei Lichtquellen: Dem Key Light (Hauptlicht), das die primäre Ausleuchtung und Stimmung vorgibt; dem Fill Light (Fülllicht), das die harten Schatten des Key Lights aufhellt; und dem Back Light (Gegenlicht oder Haarlicht), das die Person vom Hintergrund abhebt und für räumliche Tiefe sorgt. Durch die gezielte Balance dieser drei Lichtquellen entsteht eine ausgewogene, dreidimensionale Ausleuchtung, die das Motiv plastisch und natürlich wirken lässt.',
     importantInfo: 'Ein häufiger Fehler bei der Lichtsetzung ist es, das Fill Light zu stark einzustellen. Dadurch verliert das Gesicht an Kontrast und wirkt flach (sogenanntes "Flat Lighting"). Das Back Light ist oft das Geheimnis für den "Cinematic Look", da es eine klare visuelle Trennung zwischen Motiv und Hintergrund schafft.',
+    localContext: 'Dieses Setup ist unser Standard für professionelle Vorstands-Interviews in den Bürotürmen von Frankfurt oder den modernen Co-Working Spaces in Mannheim und Kaiserslautern.'
   },
 
   // --- Kamerabewegung ---
@@ -78,6 +81,7 @@ export const glossaryTerms = [
     subheadline: 'Die kreative und stilistische Farbbearbeitung von Videomaterial.',
     definition: 'Color Grading ist der finale Schritt der Bildbearbeitung in der Postproduktion, bei dem das Videomaterial seinen spezifischen, atmosphärischen Look erhält. Während die vorangehende Farbkorrektur (Color Correction) lediglich technische Fehler ausgleicht und für einen neutralen Weißabgleich sowie konsistente Kontraste zwischen verschiedenen Einstellungen sorgt, ist das Grading ein rein kreativer Prozess. Hierbei werden Farben gezielt manipuliert, um Emotionen zu wecken, die Tageszeit zu unterstreichen oder die visuelle Identität einer Marke widerzuspiegeln. Bekannte Grading-Stile sind beispielsweise der kontrastreiche "Teal and Orange"-Look aus Hollywood-Blockbustern oder entsättigte, kühle Töne für Thriller.',
     importantInfo: 'Um beim Color Grading maximale Flexibilität ohne Qualitätsverlust zu haben, muss das Rohmaterial idealerweise in einem logarithmischen Farbprofil (Log) oder als RAW-Format aufgenommen werden. Stark komprimiertes 8-Bit-Material neigt beim Grading schnell zu Farbabrissen (Banding) und starkem Bildrauschen in den Schatten.',
+    localContext: 'Durch gezieltes Grading verleihen wir beispielsweise Industriefilmen im Saarland einen kühleren, technischeren Look oder Hochzeitsfilmen in der Pfalz eine warme, zeitlose Vintage-Ästhetik.'
   },
   {
     id: 'jump-cut',
@@ -142,7 +146,8 @@ export const glossaryTerms = [
     title: 'RAW Video',
     subheadline: 'Ein unkomprimiertes oder verlustfrei komprimiertes Videoformat, das die rohen Sensordaten speichert.',
     definition: 'RAW-Video ist das digitale Negativ eines Films. Im Gegensatz zu komprimierten Formaten wie H.264 oder ProRes, bei denen die Kamera bereits Entscheidungen über Weißabgleich, Kontrast und Farbsättigung trifft und diese in die Datei "einbackt", speichert RAW die reinen, unverarbeiteten Lichtinformationen des Sensors. Dies bietet in der Postproduktion maximale Flexibilität: Parameter wie Weißabgleich und ISO können nachträglich verlustfrei geändert werden. RAW liefert die höchste Bildqualität und den größten Dynamikumfang.',
-    importantInfo: 'Der Umgang mit RAW-Daten erfordert enorme Speicherkapazitäten und sehr leistungsstarke Computer für den Schnitt. Für schnelle Social-Media-Produktionen ist RAW meist überdimensioniert, für anspruchsvolle Werbespots oder Kinofilme jedoch unerlässlich.'
+    importantInfo: 'Der Umgang mit RAW-Daten erfordert enorme Speicherkapazitäten und sehr leistungsstarke Computer für den Schnitt. Für schnelle Social-Media-Produktionen ist RAW meist überdimensioniert, für anspruchsvolle Werbespots oder Kinofilme jedoch unerlässlich.',
+    localContext: 'Für unsere Agentur-Partner in Frankfurt und Wiesbaden produzieren wir auf Wunsch komplett in RAW, um in der Postproduktion keine Kompromisse bei der Bildqualität eingehen zu müssen.'
   },
   {
     id: 'brennweite',

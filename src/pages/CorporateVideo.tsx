@@ -73,7 +73,7 @@ export default function CorporateVideo() {
     },
     {
       question: "In welchen Regionen sind Sie tätig?",
-      answer: "Als Videoproduktion aus Kaiserslautern sind wir stark in Rheinland-Pfalz, dem Saarland und der Rhein-Neckar-Region vertreten. Für unsere Kunden im Mittelstand sind wir aber auch deutschlandweit im Einsatz."
+      answer: "Als Videoproduktion aus Kaiserslautern sind wir primär in Rheinland-Pfalz, dem Saarland und der Rhein-Neckar-Region (Mannheim/Heidelberg) aktiv. Wir betreuen aber auch regelmäßig Projekte in Frankfurt und im gesamten Südwesten Deutschlands."
     },
     {
       question: "Wo können wir das Video überall einsetzen?",

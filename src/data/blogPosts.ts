@@ -16,19 +16,19 @@ export const blogPosts: BlogPost[] = [
   {
     id: "1",
     slug: "imagefilm-unternehmen-was-bringt-er-wirklich",
-    title: "Was bringt ein Imagefilm für Unternehmen wirklich?",
-    excerpt: "Ein Imagefilm kann ein starker Vertriebsmotor sein oder völlig wirkungslos verpuffen. Eine objektive Analyse über ROI, Vertrauensaufbau und Markenwahrnehmung.",
+    title: "Was bringt ein Imagefilm? Die Realität für Unternehmen im Südwesten",
+    excerpt: "Ein Imagefilm kann ein starker Vertriebsmotor sein oder wirkungslos verpuffen. Eine ehrliche Analyse über ROI und Vertrauen für den Mittelstand in Kaiserslautern, Mannheim & Saarbrücken.",
     category: "corporate",
     date: "15. April 2026",
     readTime: "5 min",
     image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513545/blog/Blog_Videoproduktion_Kaiserslautern_Post1.jpg",
-    ctaLabel: "Content Konzept anfragen",
+    ctaLabel: "Konzept für die Region anfragen",
     ctaLink: "/kontakt",
     content: `# Imagefilm für Unternehmen: Wann lohnt sich die Investition wirklich?
 
-Ein Imagefilm ist kein Selbstläufer. Manche Unternehmen berichten, dass ihr Film auf der Website läuft und Kunden unvermittelt mehr Vertrauen signalisieren. Andere zahlen fünfstellig und bekommen ein schönes Video, das nichts bewegt – weil niemand es sieht oder weil es an der falschen Stelle eingesetzt wird.
+Ein Imagefilm ist kein Selbstläufer. Besonders im Mittelstand – egal ob in **Kaiserslautern, Mannheim oder Saarbrücken** – berichten Unternehmen oft von zwei Extremen: Entweder der Film sorgt für sofortigen Vertrauensvorschuss, oder er bleibt eine teure Datei ohne Klicks. 
 
-Dieser Artikel erklärt ehrlich, wann ein Imagefilm wirklich etwas bringt – und wann nicht.
+Dieser Artikel erklärt ehrlich, wann ein Film wirklich etwas bewegt – und warum wir bei Rezai Vision auf Augenhöhe statt auf Hochglanz-Phrasen setzen.
 
 ---
 
@@ -87,17 +87,17 @@ Auf der Startseite der Website (am besten im sichtbaren Bereich ganz oben), in A
   {
     id: "2",
     slug: "imagefilm-kosten-was-kostet-ein-unternehmensfilm",
-    title: "Was kostet ein Imagefilm für ein Unternehmen?",
-    excerpt: "Was kostet ein Imagefilm? Wir erklären ehrlich, welche Faktoren den Preis bestimmen – und warum günstiger oft teurer wird.",
+    title: "Was kostet ein Imagefilm? Preis-Transparenz für Kaiserslautern & Mannheim",
+    excerpt: "Ehrliche Kosten-Aufschlüsselung: Was eine professionelle Videoproduktion im Südwesten kostet – und warum wir keine Kryptischen Angebote machen.",
     category: "corporate",
     date: "11. April 2026",
     readTime: "5 min",
     image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513549/blog/Blog_Corporate_Video_Kaiserslautern_Post2.jpg",
-    ctaLabel: "Beratung anfordern",
+    ctaLabel: "Unverbindlich anfragen",
     ctaLink: "/kontakt",
-    content: `# Imagefilm Kosten: Was ein Unternehmensfilm wirklich kostet
+    content: `# Imagefilm Kosten: Was eine Videoproduktion wirklich kostet
 
-"Was kostet so ein Imagefilm ungefähr?" – diese Frage ist vollkommen berechtigt. Und die ehrliche Antwort: Es hängt von einigen Faktoren ab. Aber keine Sorge – die kann man klar benennen, ohne kryptisch zu sein.
+"Was kostet so ein Video ungefähr?" – egal ob Sie in **Kaiserslautern, Saarbrücken oder Frankfurt** sitzen, diese Frage ist vollkommen berechtigt. Bei Rezai Vision glauben wir an Transparenz statt an Agentur-Kauderwelsch. Hier ist die ehrliche Antwort.
 
 ---
 
@@ -235,17 +235,17 @@ Gar nicht. Ein guter Regisseur führt durch authentische Gespräche, sodass niem
   {
     id: "4",
     slug: "recruiting-video-kaiserslautern-sichtbarer-arbeitgeber",
-    title: "Wie Unternehmen in Kaiserslautern mit Video sichtbarere Arbeitgeber werden",
-    excerpt: "Unternehmen in Kaiserslautern können mit Recruiting-Videos als Arbeitgeber sichtbarer werden – regional, glaubwürdig und wirksam.",
+    title: "Recruiting im Südwesten: Wie Unternehmen durch Video sichtbar werden",
+    excerpt: "Betriebe in Kaiserslautern, Saarbrücken & Mannheim können mit Recruiting-Videos als Arbeitgeber endlich sichtbar werden – regional & glaubwürdig.",
     category: "corporate",
     date: "03. April 2026",
     readTime: "4 min",
     image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513552/blog/Blog_Recruiting_Strategie_Kaiserslautern_Post4.jpg",
-    ctaLabel: "Beratung anfordern",
+    ctaLabel: "Recruiting-Check anfragen",
     ctaLink: "/kontakt",
-    content: `# Recruiting in Kaiserslautern: Wie ihr als Arbeitgeber wirklich sichtbar werdet
+    content: `# Recruiting in der Westpfalz & Saarland: Sichtbar werden als Arbeitgeber
 
-Viele Betriebe in der Westpfalz haben exzellente Bedingungen: faire Löhne, gute Ausstattung, ein echtes Miteinander im Team. Das Problem: Von außen sieht man das nicht.
+Viele Betriebe in der Region – von **Kaiserslautern bis Saarbrücken** – haben exzellente Bedingungen: faire Löhne, gute Ausstattung, ein echtes Miteinander im Team. Das Problem: Von außen sieht man das oft nicht.
 
 Eine schlichte Website mit Stock-Fotos und die Standard-Stellenanzeige auf StepStone – das reicht nicht mehr, um gute Leute auf sich aufmerksam zu machen. Besonders nicht bei Fachkräften, die nicht aktiv suchen, aber wechseln würden, wenn das Richtige kommt.
 
