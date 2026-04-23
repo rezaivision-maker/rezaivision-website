@@ -16,8 +16,8 @@ import EventCoverage from "./pages/EventCoverage";
 import MusicVideos from "./pages/MusicVideos";
 import WeddingFilms from "./pages/WeddingFilms";
 import Work from "./pages/Work";
-import Pricing from "./pages/Pricing";
 import About from "./pages/About";
+import Equipment from "./pages/Equipment";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
@@ -53,6 +53,7 @@ export default function App() {
           <Route path="referenzen" element={<Work />} />
           <Route path="preise" element={<Pricing />} />
           <Route path="ueber-uns" element={<About />} />
+          <Route path="technik" element={<Equipment />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="glossar" element={<GlossaryIndex />} />
           <Route path="blog" element={<Blog />} />

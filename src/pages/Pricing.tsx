@@ -6,57 +6,54 @@ import { Helmet } from "react-helmet-async";
 export default function Pricing() {
   const packages = [
     {
-      title: "Social Media Content",
+      title: "Social Essentials",
       price: "ab 490 €",
-      desc: "Kurzvideos und Contentformate für Social Media und regelmäßige Präsenz.",
+      desc: "Authentische Kurzvideos für Ihre Social Media Kanäle – schnell, direkt und nahbar.",
       features: [
-        "Bis zu 60 Sekunden Länge",
-        "Hochformat (9:16) oder Quadrat (1:1)",
-        "Inkl. Untertitel & Musiklizenz",
-        "1 Korrekturschleife",
-        "Perfekt für regelmäßigen Content"
+        "Kurzclips bis 60 Sekunden",
+        "Optimiert für Reels, TikTok & Stories",
+        "Authentischer Look & Feel",
+        "Inkl. Musiklizenz",
+        "Schnelle Umsetzung"
       ],
       popular: false
     },
     {
-      title: "Werbevideo / Kampagne",
-      price: "ab 1.990 €",
-      desc: "Kampagnenvideos, Social Ads oder Produktvideos mit klarer Botschaft und Wirkung.",
+      title: "Werbevideo / Ads",
+      price: "ab 1.490 €",
+      desc: "Performance-orientierte Videos mit klarer Verkaufspsychologie für messbare Resultate.",
       features: [
-        "Konzept & Storyboard",
-        "Halber Drehtag vor Ort",
+        "Konzept & Hook-Entwicklung",
+        "Fokus auf Conversions",
         "Professionelles Color Grading",
-        "Sound Design & Sprecher (optional)",
-        "2 Korrekturschleifen",
-        "Verschiedene Formate für Ads"
+        "Schnitt-Varianten für A/B Tests",
+        "Social Ads Optimierung"
       ],
       popular: false
     },
     {
-      title: "Unternehmensfilm / Recruiting",
-      price: "ab 2.490 €",
-      desc: "Konzept, Dreh und Postproduktion für einen professionellen Unternehmensfilm oder Recruitingvideo.",
+      title: "Smart Recruiting",
+      price: "ab 1.890 €",
+      desc: "Effiziente Videoproduktion zur Gewinnung neuer Mitarbeiter. Authentisch statt aufgeblasen.",
       features: [
-        "Ausführliche Beratung & Konzept",
-        "1 voller Drehtag vor Ort",
-        "Cinematischer Look & Feel",
-        "Interviews & B-Roll Material",
-        "Hochwertige Musiklizenz",
-        "3 Korrekturschleifen"
+        "Fokus auf echte Mitarbeiter-Stimmen",
+        "Kompakter Drehtag vor Ort",
+        "Strukturierte Vorbesprechung",
+        "Wirkungsvolles Storytelling",
+        "Schnelle Postproduktion"
       ],
       popular: true
     },
     {
-      title: "Monatliche Contentproduktion",
-      price: "ab 1.490 € / Monat",
-      desc: "Planbare Inhalte für kontinuierliche Sichtbarkeit. (Optionaler Retainer)",
+      title: "Content-Begleitung",
+      price: "individuell",
+      desc: "Kontinuierlicher Content-Support für Unternehmen, die dauerhaft sichtbar bleiben wollen.",
       features: [
-        "Zielgruppenanalyse & Konzept",
-        "1-2 Drehtage vor Ort",
-        "Mitarbeiter-Interviews",
-        "Fokus auf Unternehmenskultur",
-        "Social Media Cut-downs inkl.",
-        "Beratung zur Distribution"
+        "Monatliche Fix-Termine möglich",
+        "Vorausplanung von Content-Säulen",
+        "Mischung aus Recruiting & Image",
+        "Feste Budget-Kontrolle",
+        "Exklusive Partner-Betreuung"
       ],
       popular: false
     }
@@ -65,8 +62,8 @@ export default function Pricing() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Preise & Pakete | Videoproduktion | reza-e-motion</title>
-        <meta name="description" content="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media." />
+        <title>Preise & Pakete | Rezai Vision | Videoproduktion</title>
+        <meta name="description" content="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media. Top-Niveau ohne Agentur-Overhead." />
         <link rel="canonical" href="https://rezaivision.de/preise" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -77,13 +74,13 @@ export default function Pricing() {
           className="max-w-4xl mb-16 text-center mx-auto"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8">
-            Transparente Preisgestaltung
+            Ehrliche Preise. Echte Ergebnisse.
           </div>
           <h1 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-6">
-            Investition in Ihre Sichtbarkeit
+            Top-Qualität ist <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">keine Budget-Frage.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto">
-            Jedes Projekt ist individuell. Unsere Startpreise geben Ihnen eine erste Orientierung. Den finalen Preis ermitteln wir nach einem gemeinsamen Gespräch.
+            Wir beenden das Zeitalter der undurchsichtigen Agentur-Preise. Mit schlanken Strukturen und Fokus auf das Wesentliche liefern wir Ergebnisse, die sich für Sie rechnen.
           </p>
         </motion.div>
 
