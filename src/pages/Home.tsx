@@ -19,7 +19,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Videoproduktion & Social Media Agentur Kaiserslautern | Umkreis 100km | Rezai Vision</title>
-        <meta name="description" content="Ihre Agentur für Videoproduktion in Kaiserslautern, Mannheim & Rheinland-Pfalz. Wir erstellen performante Unternehmensfilme, Recruiting Videos und Social Media Ads im Umkreis von 100km." />
+        <meta name="description" content="Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen." />
         <link rel="canonical" href="https://rezaivision.de/" />
         <script type="application/ld+json">
           {`
@@ -81,7 +81,7 @@ export default function Home() {
                     "closes": "18:00"
                   }
                 ],
-                "description": "Ihre verlässliche Agentur für Videoproduktion aus Kaiserslautern. Spezialisiert auf authentische Unternehmensfilme, Video Ads, Social Media Reels und Recruiting Videos für den regionalen Mittelstand.",
+                "description": "Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen.",
                 "founder": {
                   "@type": "Person",
                   "name": "Parsha Rezai",

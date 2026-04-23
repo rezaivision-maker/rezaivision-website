@@ -91,8 +91,8 @@ export function ApproachSection() {
                   desc: "Ob erste Idee oder fertige Richtung: Wir steigen dort ein, wo Sie uns brauchen, und begleiten den Weg bis zum fertigen Video."
                 }
               ].map((item, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}

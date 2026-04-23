@@ -31,7 +31,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              Videograf Kaiserslautern & Videoproduktion
+              Videoproduktion & Content Creation im Südwesten
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -39,18 +39,18 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-5xl font-display font-bold tracking-tighter mb-6 leading-tight"
             >
-              Starke Arbeit verdient es, <br className="hidden md:block" />
+              Videoproduktion Kaiserslautern: <br className="hidden md:block" />
               <span className="gold-text-gradient">
-                gesehen zu werden.
+                Warum Wirkung wichtiger ist als nur schöne Bilder.
               </span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg md:text-xl text-gray-300 mb-10 font-light"
+              className="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed"
             >
-              Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Ihr Content Creator Kaiserslautern für Hero-Content und Kampagnen.
+              Strategisch geplante Filme & Social Ads, die echtes Kundenvertrauen aufbauen. Von Kaiserslautern über Mannheim bis Frankfurt inszenieren wir Ihre Qualität mit hochwertiger Bildsprache und klarem Marketing-Verstand.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row items-center gap-4"
             >
               <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
-                20-Minuten Projekt-Check
+                Kostenlosen Projekt-Check anfordern
               </Button>
               <Button href="#showreel" variant="outline" size="lg" className="w-full sm:w-auto">
                 Showreel ansehen
