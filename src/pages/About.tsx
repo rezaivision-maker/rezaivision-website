@@ -24,24 +24,24 @@ export default function About() {
               Über uns
             </div>
             <h1 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-8 leading-tight">
-              Wir machen <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">Sichtbarkeit</span> greifbar.
+              Handwerk mit Haltung und <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">cineastischer Seele.</span>
             </h1>
             
             <div className="space-y-6 text-lg text-gray-400 font-light leading-relaxed">
               <p>
-                Wir sind eine Videoproduktion aus Kaiserslautern mit Fokus auf klare Kommunikation, starke Bilder und durchdachte Umsetzung.
+                Starke Kommunikation beginnt mit dem echten Verständnis für eine Vision. Als Videoproduktion aus Kaiserslautern brennen wir für das Zusammenspiel von Ton, Story und Optik.
               </p>
               <p>
-                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück und arbeite als persönlicher Ansprechpartner mit einem eingespielten Netzwerk aus Kreativen und Spezialisten zusammen. So entsteht für jedes Projekt genau die Struktur, die es braucht – flexibel, effizient und ohne unnötigen Aufwand.
+                Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film. Es geht niemals nur um ein "schönes Bild", sondern um die Kunst, eine Botschaft so zu verpacken, dass sie messbar Wirkung zeigt. Ob etablierte Marke oder ambitionierter <strong className="text-white font-medium">Underdog</strong>: In der Zusammenarbeit auf Augenhöhe wird jedes Projekt so behandelt, dass durch einen individuellen Look ein ganz eigener Charakter entsteht.
               </p>
               <p>
-                Wir produzieren Videos für Unternehmen, Marken und Dienstleister in der gesamten Region. Zu unseren Referenzen zählen namhafte Partner wie **PFAFF Industriesysteme**, **Social Care Mainz**, **CBL Datenrettung** sowie regionale Größen wie **KSB Rechtsanwälte** oder **Aesthetic Ink**.
+                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück und arbeite als persönlicher Ansprechpartner mit einem eingespielten Experten-Netzwerk zusammen. Dabei wird konsequent auf hochwertige <strong className="text-white font-medium">Kamerasysteme mit hohem Dynamikumfang</strong> gesetzt. Technik ist kein Selbstzweck, sondern das essentielle Werkzeug, um Ihre Vision in bester Bildqualität greifbar zu machen.
               </p>
               <p>
-                Was unsere Zusammenarbeit auszeichnet, sind strukturierte Abläufe, transparente Kommunikation und ein Blick für Details, die oft den Unterschied machen. Technik ist dabei nur ein Werkzeug – entscheidend ist, wie Bild, Ton und Story zusammenwirken, um genau das Gefühl zu erzeugen, das beim Zuschauer ankommen soll.
+                Zu unseren Referenzen zählen namhafte Partner wie **PFAFF Industriesysteme**, **Social Care Mainz** und **CBL Datenrettung** sowie regionale Größen wie **KSB Rechtsanwälte** oder **Aesthetic Ink**.
               </p>
-              <p className="text-xl text-gray-200 font-medium mt-8">
-                Jede Produktion entsteht mit einem klaren Ziel: Ihr Unternehmen so zu zeigen, dass Menschen es verstehen, sich angesprochen fühlen und Vertrauen entwickeln.
+              <p className="text-xl text-gray-200 font-medium mt-8 border-l-2 border-brand-accent pl-6">
+                Jede Produktion entsteht mit einem klaren Ziel: Ihr Unternehmen so zu zeigen, dass Menschen es verstehen, sich angesprochen fühlen und echtes Vertrauen entwickeln.
               </p>
             </div>
           </motion.div>
