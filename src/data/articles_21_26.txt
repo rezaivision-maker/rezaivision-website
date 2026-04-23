@@ -34,7 +34,7 @@ Eine professionelle Content Creation Agentur liefert keine Einzelvideos, sondern
 | Metrik | Inhouse ("Wir machen das mal") | Professionelle Agentur |
 | :--- | :--- | :--- |
 | **Zeit-Invest intern** | Hoch & unberechenbar | Minimal & absolut planbar |
-| **Marken-Wahrnehmung** | Oft unprofessionell | Premium & glaubwürdig |
+| **Marken-Wahrnehmung** | Oft unprofessionell | Stark & glaubwürdig |
 | **Distribution** | Sporadisch | Kontinuierlich (z.B. 3x pro Woche) |
 
 [Unverbindliches Agentur-Konzept anfordern](/kontakt)
@@ -103,7 +103,7 @@ Nein, reines Hosting ist inaktiv. Die wahre Power entfaltet sich erst durch die 
     id: "23",
     slug: "was-kostet-ein-professionelles-2-minuten-video",
     title: "Video-Produktionskosten: Die Preis-Architektur eines Imagefilms",
-    excerpt: "Eine transparente Kosten-Aufschlüsselung: Was ein professionelles Premium-Video im B2B-Sektor wirklich kostet.",
+    excerpt: "Eine transparente Kosten-Aufschlüsselung: Was ein professionelles Video auf hohem Niveau im B2B-Sektor wirklich kostet.",
     category: "corporate",
     date: "16. April 2026",
     readTime: "5 min",
@@ -126,7 +126,7 @@ Die Laufzeit ist kein messbarer Indikator für den Aufwand. Ein 60-sekündiger K
 
 ## Budget-Klassen im Überblick
 
-*   **Der Lean-Corporate Clip (Ab ca. 2.000 €):** Ein starker, dokumentarischer Ansatz für kleinere Mittelständler. Ein Drehtag, kompaktes Premium-Equipment, Fokus auf Authentizität.
+*   **Der Lean-Corporate Clip (Ab ca. 2.000 €):** Ein starker, dokumentarischer Ansatz für kleinere Mittelständler. Ein Drehtag, kompaktes Profi-Equipment, Fokus auf Authentizität.
 *   **Der Advanced Brand-Film (Ab ca. 5.000 € - 8.000 €):** Das Kernsegment für den gehobenen B2B-Mittelstand. Inklusive komplexer Licht-Setups, Drohnen-Aufnahmen und ausgearbeitetem Storytelling.
 *   **Commercial High-End (Ab ca. 15.000 € aufwärts):** Klassische Werbeproduktionen, oft mit gebuchten Darstellern, Voice-Over Artists und extremem Perfektionsanspruch.
 
@@ -175,7 +175,7 @@ Hier muss der Schmerzpunkt (Pain Point) des potenziellen Kunden sofort benannt w
 
 Die Lösung wird elegant präsentiert. Anstatt in Superlativen zu sprechen ("Wir sind die Besten"), wird hier mit harten visuellen Fakten gearbeitet. Das Prinzip "Show, don't tell". 
 
-Es werden dynamische Schnittbilder der agilen Arbeitsprozesse, der fehlerfreien Lieferketten oder des hochkonzentrierten Entwicklungsteams gezeigt. Untermalt mit hochwertigem *Foley-Sounddesign* (Rastende Maschinen, Tastaturanschläge, prägnantes Clicks), was den Premium-Anspruch unterstreicht.
+Es werden dynamische Schnittbilder der agilen Arbeitsprozesse, der fehlerfreien Lieferketten oder des hochkonzentrierten Entwicklungsteams gezeigt. Untermalt mit hochwertigem *Foley-Sounddesign* (Rastende Maschinen, Tastaturanschläge, prägnantes Clicks), was den hohen Anspruch unterstreicht.
 
 ## 3. Der Authority Proof & Call to Action (Das Ende)
 

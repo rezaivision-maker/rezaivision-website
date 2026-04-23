@@ -31,7 +31,7 @@ export default function CorporateVideo() {
     {
       title: "Starke Imagefilme",
       desc: "Starke Produktionen für den perfekten ersten Eindruck. Ein Imagefilm Mittelstand, der Ihre Qualität visuell unterstreicht.",
-      benefit: "Premium-Positionierung und maximaler Vertrauensaufbau.",
+      benefit: "Authentische Positionierung und maximaler Vertrauensaufbau.",
       useCase: "Website-Startseite, Messen, Präsentationen",
       icon: <Film className="text-brand-accent" size={24} />
     },
@@ -203,7 +203,7 @@ export default function CorporateVideo() {
                 {[
                   "Austauschbarkeit: Ihre Website sieht aus wie die der Konkurrenz.",
                   "Erklärungsnot: Komplexe Leistungen lassen sich in Texten schwer vermitteln.",
-                  "Verlorenes Vertrauen: Es fällt schwer, den Premium-Anspruch digital zu beweisen.",
+                  "Verlorenes Vertrauen: Es fällt schwer, den hohen Qualitätsanspruch digital zu beweisen.",
                   "Fehlende Sichtbarkeit: Sie gehen in der digitalen Informationsflut unter."
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-300">
@@ -249,7 +249,7 @@ export default function CorporateVideo() {
               },
               {
                 title: "Marke stärken",
-                desc: "Wir machen Ihre Professionalität greifbar und positionieren Sie klar als Premium-Anbieter in Ihrer Branche.",
+                desc: "Wir machen Ihre Professionalität greifbar und positionieren Sie klar als Experten in Ihrer Branche.",
                 icon: <Briefcase className="text-brand-accent" size={32} />
               },
               {
@@ -449,7 +449,7 @@ export default function CorporateVideo() {
               </h2>
               <ul className="space-y-6">
                 {[
-                  { title: "Professioneller Eindruck", desc: "Sie positionieren sich sofort als Premium-Anbieter in Ihrem Markt." },
+                  { title: "Professioneller Eindruck", desc: "Sie positionieren sich sofort als verlässlicher Experte in Ihrem Markt." },
                   { title: "Zeitersparnis", desc: "Kunden sind bereits vorqualifiziert und informiert, bevor sie anrufen." },
                   { title: "Mehr Sichtbarkeit", desc: "Videos werden von Algorithmen bevorzugt und generieren mehr Reichweite." },
                   { title: "Höhere Conversion", desc: "Videos auf Landingpages steigern die Anfragen signifikant." },

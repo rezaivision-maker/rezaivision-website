@@ -81,7 +81,7 @@ export default function Home() {
                     "closes": "18:00"
                   }
                 ],
-                "description": "Premium Agentur für Videoproduktion aus Kaiserslautern. Spezialisiert auf Unternehmensfilme, Video Ads, Social Media Reels und Recruiting Videos für den regionalen Mittelstand.",
+                "description": "Ihre verlässliche Agentur für Videoproduktion aus Kaiserslautern. Spezialisiert auf authentische Unternehmensfilme, Video Ads, Social Media Reels und Recruiting Videos für den regionalen Mittelstand.",
                 "founder": {
                   "@type": "Person",
                   "name": "Parsha Rezai",

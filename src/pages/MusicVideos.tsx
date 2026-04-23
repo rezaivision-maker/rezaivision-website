@@ -111,9 +111,9 @@ export default function MusicVideos() {
               <Button href="/reza-e-motion#anfrage" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none w-full">Anfragen</Button>
             </div>
 
-            {/* Premium */}
+            {/* Cinematic */}
             <div className="bg-brand-darker border border-white/5 p-8 rounded-3xl flex flex-col hover:border-pink-500/30 transition-colors">
-              <h3 className="text-xl font-bold mb-2">Premium / Narrative</h3>
+              <h3 className="text-xl font-bold mb-2">Cinematic / Narrative</h3>
               <p className="text-gray-400 text-sm mb-6 flex-grow">Kino-Produktion für maximale Aufmerksamkeit. Storytelling, Drohnen und Set-Design.</p>
               <ul className="space-y-3 mb-8 text-sm text-gray-300">
                 <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-pink-400" /> Umfangreiche Vorproduktion</li>

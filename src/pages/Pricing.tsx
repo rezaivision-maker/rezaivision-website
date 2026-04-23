@@ -41,7 +41,7 @@ export default function Pricing() {
         "1 voller Drehtag vor Ort",
         "Cinematischer Look & Feel",
         "Interviews & B-Roll Material",
-        "Premium Musiklizenz",
+        "Hochwertige Musiklizenz",
         "3 Korrekturschleifen"
       ],
       popular: true

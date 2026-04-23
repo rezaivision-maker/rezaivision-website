@@ -201,7 +201,7 @@ export default function Services() {
             <Button href="/kontakt" size="lg" className="gap-2">
               Kostenloses Erstgespräch <ArrowRight size={18} />
             </Button>
-            <Button href="/referenzen" variant="outline" size="lg">
+            <Button href="/#cases" variant="outline" size="lg">
               Unsere Arbeiten ansehen
             </Button>
           </div>
