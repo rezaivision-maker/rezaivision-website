@@ -16,6 +16,7 @@ import EventCoverage from "./pages/EventCoverage";
 import MusicVideos from "./pages/MusicVideos";
 import WeddingFilms from "./pages/WeddingFilms";
 import Work from "./pages/Work";
+import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Equipment from "./pages/Equipment";
 import FAQ from "./pages/FAQ";
