@@ -7,8 +7,8 @@ export default function About() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Über uns | reza-e-motion | Videoproduktion Kaiserslautern</title>
-        <meta name="description" content="Lernen Sie das Team hinter reza-e-motion kennen. Ihre Experten für professionelle Videoproduktion aus Kaiserslautern. Klar. Strukturiert. Wirkungsvoll." />
+        <title>Über uns | Rezai Vision | Videoproduktion Kaiserslautern</title>
+        <meta name="description" content="Erfahren Sie mehr über die Philosophie von Rezai Vision. Professionelle Videoproduktion aus Kaiserslautern mit über 10 Jahren Erfahrung. Strategisch, cineastisch und auf Augenhöhe." />
         <link rel="canonical" href="https://rezaivision.de/ueber-uns" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -21,7 +21,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8">
-              Über uns
+              Unsere Geschichte & Haltung
             </div>
             <h1 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-8 leading-tight">
               Handwerk mit Haltung und <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">cineastischer Seele.</span>
@@ -29,19 +29,19 @@ export default function About() {
             
             <div className="space-y-6 text-lg text-gray-400 font-light leading-relaxed">
               <p>
-                Starke Kommunikation beginnt mit dem echten Verständnis für eine Vision. Als Videoproduktion aus Kaiserslautern brennen wir für das Zusammenspiel von Ton, Story und Optik.
+                Starke Kommunikation beginnt nicht beim Drücken des Auslösers, sondern beim echten Verständnis für eine Vision. Als Videoproduktion aus Kaiserslautern brennen wir für das Zusammenspiel von Ton, Story und Optik.
               </p>
               <p>
-                Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film. Es geht niemals nur um ein "schönes Bild", sondern um die Kunst, eine Botschaft so zu verpacken, dass sie messbar Wirkung zeigt. Ob etablierte Marke oder ambitionierter <strong className="text-white font-medium">Underdog</strong>: In der Zusammenarbeit auf Augenhöhe wird jedes Projekt so behandelt, dass durch einen individuellen Look ein ganz eigener Charakter entsteht.
+                Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film. Es geht niemals nur um ein „schönes Bild“, sondern um die Kunst, eine Botschaft so zu verpacken, dass sie messbar Wirkung zeigt. Ob etablierte Marke oder ambitionierter <strong className="text-white font-medium">Underdog</strong>: In der Zusammenarbeit auf Augenhöhe wird jedes Projekt so behandelt, dass durch einen individuellen Look ein ganz eigener Charakter entsteht.
               </p>
               <p>
-                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück und arbeite als persönlicher Ansprechpartner mit einem eingespielten Experten-Netzwerk zusammen. Dabei wird konsequent auf hochwertige <strong className="text-white font-medium">Kamerasysteme mit hohem Dynamikumfang</strong> gesetzt. Technik ist kein Selbstzweck, sondern das essentielle Werkzeug, um Ihre Vision in bester Bildqualität greifbar zu machen.
+                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück. In dieser Zeit habe ich gelernt, dass Technik niemals Selbstzweck sein darf, sondern das essentielle Werkzeug ist, um eine Geschichte greifbar zu machen. Deshalb setzen wir konsequent auf <strong className="text-white font-medium">professionelle Kamerasysteme mit extrem hohem Dynamikumfang</strong> – für Bilder, die Ihre Qualität widerspiegeln.
               </p>
               <p>
-                Zu unseren Referenzen zählen namhafte Partner wie **PFAFF Industriesysteme**, **Social Care Mainz** und **CBL Datenrettung** sowie regionale Größen wie **KSB Rechtsanwälte** oder **Aesthetic Ink**.
+                Als Ihr persönlicher Ansprechpartner koordiniere ich bei Bedarf ein eingespielt Netzwerk aus Experten, um für jedes Projekt die ideale Struktur zu schaffen – effizient, direkt und ohne unnötigen Agentur-Overhead.
               </p>
               <p className="text-xl text-gray-200 font-medium mt-8 border-l-2 border-brand-accent pl-6">
-                Jede Produktion entsteht mit einem klaren Ziel: Ihr Unternehmen so zu zeigen, dass Menschen es verstehen, sich angesprochen fühlen und echtes Vertrauen entwickeln.
+                Unser Ziel: Ihr Unternehmen so zu zeigen, wie es wirklich ist – authentisch, stark und vertrauenswürdig.
               </p>
             </div>
           </motion.div>

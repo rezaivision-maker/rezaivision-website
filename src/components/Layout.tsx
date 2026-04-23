@@ -209,10 +209,7 @@ export function Layout() {
           </nav>
           <div className="mt-auto pb-8">
             <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-3">
-              <span className="flex flex-col items-center text-center leading-tight">
-                <span>20-Minuten</span>
-                <span>Projekt-Check</span>
-              </span>
+              Kostenlosen Projekt-Check anfordern
             </Button>
           </div>
         </div>

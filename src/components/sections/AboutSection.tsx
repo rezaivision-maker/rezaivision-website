@@ -41,15 +41,15 @@ export function AboutSection() {
             </div>
             
             <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-              Starke Kommunikation beginnt mit dem echten Verständnis für Ihre Vision.
+              Starke Kommunikation beginnt auf Augenhöhe.
             </p>
 
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Die Motivation entspringt der puren Leidenschaft für das Medium Film: Ein Video ist weit mehr als nur ein schönes Bild – es ist die Synergie aus Ton, Story und Optik. In der Zusammenarbeit als <strong className="text-white font-medium">Filmemacher und Videograf</strong> steht das Ziel im Fokus, jedem Projekt durch einen individuellen Look seinen ganz eigenen Charakter zu verleihen. Hierbei wird konsequent auf hochwertige <strong className="text-white font-medium">Kamerasysteme mit hohem Dynamikumfang</strong> gesetzt, um Ihre Botschaft in bester Bildqualität greifbar zu machen.
+              Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film – doch wir machen keine Kunst aus Selbstzweck, sondern Strategie mit Wirkung. Ein Video ist für uns weit mehr als nur ein schönes Bild; es ist das stärkste Werkzeug, um Ihre Botschaft in der Region <strong className="text-white font-medium">Kaiserslautern, Mannheim und Mainz</strong> greifbar zu machen.
             </p>
 
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Ob ambitionierter <strong className="text-white font-medium">Underdog</strong> oder etablierter Mittelstand in der Region <strong className="text-white font-medium">Kaiserslautern, Mannheim oder Mainz</strong>: Der Anspruch bleibt die filmische Inszenierung, die exakt zu Ihren Zielen passt. Je nach Projektumfang formiert sich flexibel ein Team aus Experten, um für jede <strong className="text-white font-medium">Videoproduktion in Rheinland-Pfalz und dem Saarland</strong> die Struktur zu schaffen, die sie wirklich braucht – effizient, direkt und ohne unnötigen Overhead. Gemeinsam entstehen Ergebnisse, hinter denen wir mit voller Überzeugung stehen können.
+              Ob ambitionierter <strong className="text-white font-medium">Underdog</strong> oder etablierter Mittelstand: Wir setzen konsequent auf Kamerasysteme mit hohem Dynamikumfang und ein Team, das Ihre Vision versteht. Bei uns gibt es kein Agentur-Overhead, sondern effiziente Zusammenarbeit und Ergebnisse, die Vertrauen aufbauen.
             </p>
 
             <div className="pt-6"></div>
