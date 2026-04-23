@@ -61,7 +61,7 @@ export function HeroSection() {
               <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
                 20-Minuten Projekt-Check
               </Button>
-              <Button href="/referenzen" variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button href="#showreel" variant="outline" size="lg" className="w-full sm:w-auto">
                 Showreel ansehen
               </Button>
             </motion.div>
