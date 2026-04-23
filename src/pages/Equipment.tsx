@@ -140,14 +140,14 @@ export default function Equipment() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg font-medium opacity-90">
-                  Warum wir unsere Monitore alle 4-6 Wochen neu kalibrieren? Damit Ihr Video auf dem Smartphone Ihres Kunden genau so aussieht, wie wir es in der Post-Produktion geplant haben.
+                  Displays variieren – unser Standard bleibt die Konstante. Während Endgeräte Farben individuell interpretieren, arbeiten wir auf genormten Industriestandards für maximale Konsistenz.
                 </p>
                 <ul className="space-y-4">
                   {[
                     "Korrektes Farbmanagement im Rec.709 Standard",
                     "Optimierte Ausgabe: Gamma 2.2 (Web) & Gamma 2.4 (Broadcast)",
-                    "DaVinci Resolve Farb-Workflows auf Kino-Niveau",
-                    "Schluss mit verfälschten Farben auf verschiedenen Displays"
+                    "Referenz-Check: Monitoring via DaVinci Resolve auf dem iPhone",
+                    "Optimale Performance auf den wichtigsten Ziel-Displays"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="shrink-0 mt-1" size={20} />
@@ -159,9 +159,9 @@ export default function Equipment() {
             </div>
             <div className="bg-brand-darker/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
               <Cpu className="mb-6" size={48} />
-              <h4 className="text-2xl font-display font-bold mb-4">Industriestandard. Punkt.</h4>
+              <h4 className="text-2xl font-display font-bold mb-4">Industriestandard. Ohne Umwege.</h4>
               <p className="opacity-80 leading-relaxed mb-6">
-                Unsere Exporte sind für moderne Webdarstellung optimiert. Wir arbeiten im **macOS-Ökosystem** für maximale Effizienz und Stabilität. Jedes Video verlässt unser Studio erst, wenn die technische Qualität Ihren hohen Ansprüchen genügt.
+                Unsere Exporte sind für maximale Performance im Web optimiert. Durch unser macOS-basiertes Ökosystem und strikte interne Qualitätskontrollen stellen wir sicher, dass jedes Video unsere hohen technischen Standards erfüllt – für Ergebnisse, die ab der ersten Sekunde technisch perfekt performen.
               </p>
               <div className="flex gap-4">
                 <div className="bg-brand-darker text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">DaVinci Resolve</div>
