@@ -8,19 +8,43 @@ export function ApproachSection() {
       {/* 3.5 WARUM BEWEGTBILD */}
       <section className="py-24 bg-brand-darker border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="bg-brand-darker/50 p-8 md:p-12 rounded-3xl border border-white/5 h-full">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
               Warum Bewegtbild heute entscheidend ist
             </h2>
-            <div className="space-y-6 text-gray-400">
-              <p className="text-lg font-light leading-relaxed">
-                <strong className="text-white font-medium">TV-Werbung war gestern.</strong> Früher war professionelles Bewegtbild oft nur den ganz großen Konzernen und Marken vorbehalten, die riesige Budgets für das Fernsehen aufbringen konnten. Heute haben sich die Spielregeln massiv geändert.
+            <p className="text-gray-400 text-lg font-light leading-relaxed">
+              Die Spielregeln haben sich geändert. Was früher nur Konzernen mit Millionenbudgets vorbehalten war, ist heute der <strong className="text-white font-medium">wichtigste Hebel für den Mittelstand.</strong>
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-brand-bg/50 p-8 rounded-2xl border border-white/5 hover:border-brand-accent/20 transition-all group">
+              <h3 className="text-xl font-display font-bold mb-4 flex items-center gap-3">
+                <span className="text-brand-accent group-hover:scale-110 transition-transform">01.</span>
+                Demokratisierung
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                Professionelles Bewegtbild ist <strong className="text-brand-accent font-medium">kein Luxus mehr für wenige.</strong> Die Digitalisierung ermöglicht es heute jedem Unternehmen, hocheffizientes Marketing auf Top-Niveau zu betreiben.
               </p>
-              <p className="text-lg font-light leading-relaxed">
-                Werbung und Reichweite sind längst nicht mehr an starre Fernsehplätze und Millionenbudgets gebunden. Heute ist hochwertige Videoproduktion kein Luxus mehr für wenige, sondern eine strategische, messbare Marketing-Investition. Das eröffnet auch dem modernen Mittelstand, Agenturen und regionalen Dienstleistern völlig neue Pforten.
+            </div>
+
+            <div className="bg-brand-bg/50 p-8 rounded-2xl border border-white/5 hover:border-brand-accent/20 transition-all group">
+              <h3 className="text-xl font-display font-bold mb-4 flex items-center gap-3">
+                <span className="text-brand-accent group-hover:scale-110 transition-transform">02.</span>
+                Messbare Strategie
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                Ein Video ist heute eine <strong className="text-brand-accent font-medium">strategische Marketing-Investition.</strong> Statt hoher Streuverluste im TV erreichen Sie Ihre Zielgruppe heute präzise dort, wo sie sich aufhält.
               </p>
-              <p className="text-lg font-light leading-relaxed">
-                Kreatives Video-Recruiting, authentischer Social-Media-Content oder zielgerichtete Imagefilme ermöglichen es Ihnen heute, hochgradig effizient Sichtbarkeit zu skalieren und sofortiges Vertrauen bei Ihren Wunschkunden aufzubauen – ohne die Streuverluste der Vergangenheit.
+            </div>
+
+            <div className="bg-brand-bg/50 p-8 rounded-2xl border border-white/5 hover:border-brand-accent/20 transition-all group">
+              <h3 className="text-xl font-display font-bold mb-4 flex items-center gap-3">
+                <span className="text-brand-accent group-hover:scale-110 transition-transform">03.</span>
+                Vertrauen & Skalierung
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                Bilder sagen mehr als tausend Worte – Videos bauen <strong className="text-brand-accent font-medium">sofortiges Vertrauen</strong> auf. Sie ermöglichen es Ihnen, Ihre Botschaft authentisch und hocheffizient zu skalieren.
               </p>
             </div>
           </div>
@@ -45,10 +69,10 @@ export function ApproachSection() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">sondern vor allem durch seine Wirkung.</span>
               </h2>
               <p className="text-lg md:text-xl text-gray-400 mb-6 font-light leading-relaxed">
-                Deshalb beginnen wir nicht mit der Kamera, sondern mit einer klaren Frage: Was soll Ihr Video konkret erreichen? Erst das Ziel gibt die Richtung vor.
+                Deshalb beginnen wir <strong className="text-white font-medium">nicht mit der Kamera, sondern mit einer klaren Frage:</strong> Was soll Ihr Video konkret erreichen? Erst das Ziel gibt die Richtung vor.
               </p>
               <p className="text-base md:text-lg text-gray-500 mb-8">
-                Wir verbinden hochwertige Bildsprache mit strategischem Marketingverständnis. So entstehen Videos, die Ihre Stärken sichtbar machen und gezielt für Ihr Unternehmen arbeiten.
+                Wir verbinden <strong className="text-gray-300 font-medium">hochwertige Bildsprache mit strategischem Marketingverständnis.</strong> So entstehen Videos, die Ihre Stärken sichtbar machen und gezielt für Ihr Unternehmen arbeiten.
               </p>
             </motion.div>
 
