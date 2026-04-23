@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 export default function FAQ() {
   const faqs = [
     {
-      question: "Was kostet ein Video bei reza-e-motion?",
+      question: "Was kostet ein Video bei Rezai Vision?",
       answer: "Die Kosten variieren je nach Aufwand, Drehtagen und Postproduktion. Ein Social Media Clip startet bei ca. 400 €, ein professioneller Imagefilm bei 2.500 €. Wir besprechen Ihr Budget im Erstgespräch und finden die passende Lösung."
     },
     {
@@ -41,8 +41,8 @@ export default function FAQ() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>FAQ | Häufig gestellte Fragen | reza-e-motion</title>
-        <meta name="description" content="Antworten auf die häufigsten Fragen rund um unsere Videoproduktion, Ablauf und Preise. Klarheit von Anfang an." />
+        <title>FAQ | Häufig gestellte Fragen | Rezai Vision</title>
+        <meta name="description" content="Häufig gestellte Fragen zu Videoproduktion, Ablauf und Preisen bei Rezai Vision. Wir geben Ihnen transparente Antworten auf Ihre Fragen." />
         <link rel="canonical" href="https://rezaivision.de/faq" />
         <script type="application/ld+json">
           {`

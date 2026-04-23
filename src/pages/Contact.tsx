@@ -45,8 +45,8 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Kontakt | reza-e-motion - Ihr Projekt anfragen</title>
-        <meta name="description" content="Fragen Sie jetzt Ihr Videoprojekt bei reza-e-motion an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content." />
+        <title>Kontakt | Rezai Vision - Ihr Projekt anfragen</title>
+        <meta name="description" content="Fragen Sie jetzt Ihr Videoprojekt bei Rezai Vision an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content." />
         <link rel="canonical" href="https://rezaivision.de/kontakt" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">

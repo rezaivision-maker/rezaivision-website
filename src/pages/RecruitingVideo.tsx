@@ -53,7 +53,7 @@ export default function RecruitingVideo() {
   const faqs = [
     {
       question: "Was kostet ein Recruiting Video?",
-      answer: "Ein professionelles Recruiting Video beginnt bei uns ab 2.500 €. Der genaue Preis hängt davon ab, ob wir einen umfassenden Employer Branding Film produzieren oder mehrere kurze Clips für Social Media Ads (z.B. für verschiedene Stellenprofile) benötigen."
+      answer: "Ein smartes Recruiting Video beginnt bei uns ab 1.890 €. Wir bieten effiziente Lösungen an, die schnell einsatzbereit sind. Der Preis hängt davon ab, ob wir einen umfangreichen Employer Branding Film produzieren oder knackige, authentische Statements für Social Media benötigen."
     },
     {
       question: "Unsere Mitarbeiter sind kamerascheu. Ist das ein Problem?",
@@ -77,7 +77,7 @@ export default function RecruitingVideo() {
     <div className="flex flex-col min-h-screen pt-32">
       <Helmet>
         <title>Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim</title>
-        <meta name="description" content="Gewinnen Sie Top-Talente aus der Region mit authentischen Recruiting Videos. Produktion in Kaiserslautern, Mannheim & Saarbrücken." />
+        <meta name="description" content="Gewinnen Sie Top-Talente mit effizienten Recruiting Videos. Authentisch, schnell und bezahlbar ab 1.890 €. Produktion in Kaiserslautern, Mannheim & Südwesten." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/recruiting" />
         <meta name="keywords" content="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur" />
         <script type="application/ld+json">
@@ -104,9 +104,9 @@ export default function RecruitingVideo() {
             },
             "offers": {
               "@type": "Offer",
-              "price": "2500.00",
+              "price": "1890.00",
               "priceCurrency": "EUR",
-              "description": "Ab 2.500 € zzgl. MwSt."
+              "description": "Ab 1.890 € zzgl. MwSt."
             }
           })}
         </script>
@@ -441,7 +441,7 @@ export default function RecruitingVideo() {
               Was kostet ein Recruiting Video?
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Ein professionelles Recruiting Video inklusive Konzept, Interviews vor Ort und Postproduktion beginnt bei uns <strong className="text-white">ab 2.500 €</strong>.
+              Ein effizientes **Smart Recruiting Video** inklusive Konzept, Interviews vor Ort und Postproduktion beginnt bei uns bereits <strong className="text-white">ab 1.890 €</strong>.
             </p>
             <p className="text-gray-400 mb-10">
               Oft macht es Sinn, aus einem Drehtag direkt mehrere kurze Clips für verschiedene Stellenprofile oder Social Media Ads zu produzieren. So nutzen Sie Ihr Budget maximal effizient. Lassen Sie uns Ihre Anforderungen besprechen.

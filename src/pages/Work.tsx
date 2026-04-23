@@ -45,7 +45,7 @@ export default function Work() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <Helmet>
-        <title>Referenzen & Portfolio | reza-e-motion</title>
+        <title>Referenzen & Portfolio | Rezai Vision</title>
         <meta name="description" content="Entdecken Sie unsere bisherigen Videoproduktionen. Erfolgreiche Projekte für Unternehmen aus Kaiserslautern und Umgebung." />
         <link rel="canonical" href="https://rezaivision.de/referenzen" />
       </Helmet>

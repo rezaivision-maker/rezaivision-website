@@ -85,7 +85,7 @@ export default function CorporateVideo() {
     <div className="flex flex-col min-h-screen pt-32">
       <Helmet>
         <title>Imagefilm & Unternehmensfilm produzieren lassen | Kaiserslautern, Mannheim, RLP</title>
-        <meta name="description" content="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 1.990 €." />
+        <meta name="description" content="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 2.490 €." />
         <link rel="canonical" href="https://rezaivision.de/leistungen/unternehmensfilm" />
         <meta name="keywords" content="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video" />
         <script type="application/ld+json">
