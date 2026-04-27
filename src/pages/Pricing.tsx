@@ -6,52 +6,52 @@ import { Helmet } from "react-helmet-async";
 export default function Pricing() {
   const packages = [
     {
-      title: "Social Essentials",
-      price: "ab 490 €",
-      desc: "Authentische Kurzvideos für Ihre Social Media Kanäle – schnell, direkt und nahbar.",
+      title: "Unternehmensfilm",
+      price: "ab 2.490 €",
+      desc: "Der perfekte erste Eindruck für Ihre Website. Wir übersetzen Ihre Unternehmenswerte in eine emotionale Geschichte.",
       features: [
-        "Kurzclips bis 60 Sekunden",
-        "Optimiert für Reels, TikTok & Stories",
-        "Authentischer Look & Feel",
-        "Inkl. Musiklizenz",
-        "Schnelle Umsetzung"
+        "Strategische Konzeption",
+        "1-2 Drehtage vor Ort",
+        "Cinematic Color Grading",
+        "Sounddesign & Korrekturschleifen",
+        "Optimierte Formate für Web"
       ],
       popular: false
     },
     {
-      title: "Werbevideo / Ads",
-      price: "ab 1.490 €",
-      desc: "Performance-orientierte Videos mit klarer Verkaufspsychologie für messbare Resultate.",
-      features: [
-        "Konzept & Hook-Entwicklung",
-        "Fokus auf Conversions",
-        "Professionelles Color Grading",
-        "Schnitt-Varianten für A/B Tests",
-        "Social Ads Optimierung"
-      ],
-      popular: false
-    },
-    {
-      title: "Smart Recruiting",
+      title: "Recruiting Video",
       price: "ab 1.890 €",
-      desc: "Effiziente Videoproduktion zur Gewinnung neuer Mitarbeiter. Authentisch statt aufgeblasen.",
+      desc: "Effiziente Bewerbergewinnung durch authentische Mitarbeiter-Einblicke. Echt statt gestellt.",
       features: [
-        "Fokus auf echte Mitarbeiter-Stimmen",
-        "Kompakter Drehtag vor Ort",
-        "Strukturierte Vorbesprechung",
-        "Wirkungsvolles Storytelling",
-        "Schnelle Postproduktion"
+        "Interviews auf Augenhöhe",
+        "Dreh im laufenden Betrieb",
+        "Fokus auf Arbeitgeber-Vorteile",
+        "Social Media Ready (9:16 + 16:9)",
+        "Schnelle Umsetzung"
       ],
       popular: true
     },
     {
-      title: "Content-Begleitung",
-      price: "individuell",
-      desc: "Kontinuierlicher Content-Support für Unternehmen, die dauerhaft sichtbar bleiben wollen.",
+      title: "Werbevideo / Ads",
+      price: "ab 1.490 €",
+      desc: "Performance-orientierte Clips mit klarer Verkaufspsychologie für messbare Resultate.",
       features: [
-        "Monatliche Fix-Termine möglich",
-        "Vorausplanung von Content-Säulen",
-        "Mischung aus Recruiting & Image",
+        "Zielgruppen-Analyse",
+        "Starke Hook & Call-to-Action",
+        "Schnitt-Varianten für A/B Tests",
+        "Social Ads Optimierung",
+        "Hoher Wiedererkennungswert"
+      ],
+      popular: false
+    },
+    {
+      title: "Social Media Retainer",
+      price: "ab 1.490 € / Monat",
+      desc: "Kontinuierliche Begleitung und Content-Support für dauerhafte Sichtbarkeit.",
+      features: [
+        "Regelmäßige Fix-Termine",
+        "Batch-Produktion (Effizient)",
+        "Format-Mix (Image & Story)",
         "Feste Budget-Kontrolle",
         "Exklusive Partner-Betreuung"
       ],

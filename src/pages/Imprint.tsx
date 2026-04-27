@@ -24,7 +24,7 @@ export default function Imprint() {
                 Inhaber: Parsha Rezai Mah
               </p>
               <p className="mt-4">
-                Erfurterstraße 93<br />
+                Erfurter Straße 93<br />
                 67663 Kaiserslautern<br />
                 Deutschland
               </p>
@@ -50,7 +50,7 @@ export default function Imprint() {
               <h2 className="text-xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
               <p>
                 Parsha Rezai Mah<br />
-                Erfurterstraße 93<br />
+                Erfurter Straße 93<br />
                 67663 Kaiserslautern<br />
                 Deutschland
               </p>

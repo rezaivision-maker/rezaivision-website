@@ -52,7 +52,7 @@ export default function SocialRetainer() {
   const faqs = [
     {
       question: "Was kostet ein Social Media Retainer?",
-      answer: "Unsere Retainer-Pakete beginnen bei 1.500 € pro Monat. Der genaue Preis richtet sich nach der Anzahl der gewünschten Videos (z.B. 4, 8 oder 12 Videos pro Monat) und dem Aufwand für Konzeption und Drehtage."
+      answer: "Unsere Retainer-Pakete beginnen bei 1.490 € pro Monat. Der genaue Preis richtet sich nach der Anzahl der gewünschten Videos (z.B. 4, 8 oder 12 Videos pro Monat) und dem Aufwand für Konzeption und Drehtage."
     },
     {
       question: "Gibt es eine Mindestlaufzeit?",
@@ -103,9 +103,9 @@ export default function SocialRetainer() {
             },
             "offers": {
               "@type": "Offer",
-              "price": "1500.00",
+              "price": "1490.00",
               "priceCurrency": "EUR",
-              "description": "Ab 1.500 € pro Monat zzgl. MwSt."
+              "description": "Ab 1.490 € pro Monat zzgl. MwSt."
             }
           })}
         </script>
@@ -440,7 +440,7 @@ export default function SocialRetainer() {
               Was kostet die monatliche Content-Produktion?
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Unsere Social Media Retainer beginnen <strong className="text-white">ab 1.500 € pro Monat</strong>.
+              Unsere Social Media Retainer beginnen <strong className="text-white">ab 1.490 € pro Monat</strong>.
             </p>
             <p className="text-gray-400 mb-10">
               Der Preis skaliert mit Ihren Anforderungen: Wie viele Plattformen bespielen wir? Wie viele Videos (z.B. 4, 8 oder 12) benötigen Sie pro Monat? Übernehmen wir auch das Community Management? In einem kurzen Gespräch finden wir das perfekte Setup für Ihr Budget.

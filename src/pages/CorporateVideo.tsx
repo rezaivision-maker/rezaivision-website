@@ -60,8 +60,8 @@ export default function CorporateVideo() {
 
   const faqs = [
     {
-      question: "Was kostet ein professioneller Unternehmensfilm?",
-      answer: "Die Kosten hängen vom Umfang ab (Drehtage, Locations, Darsteller). Ein hochwertiger Unternehmensfilm beginnt bei uns in der Regel ab 2.500 €. In einem kurzen Erstgespräch können wir Ihnen schnell eine verlässliche Einschätzung für Ihr Projekt geben."
+      question: "Was kostet ein hochwertiger Unternehmensfilm?",
+      answer: "Die Kosten hängen vom Umfang ab (Drehtage, Locations, Darsteller). Ein hochwertiger Unternehmensfilm beginnt bei uns in der Regel ab 2.490 €. In einem kurzen Erstgespräch können wir Ihnen schnell eine verlässliche Einschätzung für Ihr Projekt geben."
     },
     {
       question: "Wie lange dauert die Produktion?",
@@ -112,9 +112,9 @@ export default function CorporateVideo() {
             },
             "offers": {
               "@type": "Offer",
-              "price": "2500.00",
+              "price": "2490.00",
               "priceCurrency": "EUR",
-              "description": "Ab 2.500 € zzgl. MwSt."
+              "description": "Ab 2.490 € zzgl. MwSt."
             }
           })}
         </script>

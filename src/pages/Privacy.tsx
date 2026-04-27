@@ -27,7 +27,7 @@ export default function Privacy() {
               <p>Verantwortlicher für die Datenverarbeitung auf dieser Website ist:</p>
               <p className="mt-4">
                 Parsha Rezai Mah Videoproduktion<br />
-                Erfurterstraße 93<br />
+                Erfurter Straße 93<br />
                 67663 Kaiserslautern<br />
                 Deutschland
               </p>

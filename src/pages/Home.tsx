@@ -146,7 +146,7 @@ export default function Home() {
                     "name": "Was kostet eine Videoproduktion bei Rezai Vision in Kaiserslautern?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Die Preise für Unternehmensfilme und Recruitingvideos starten bei 2.490 €. Werbekampagnen und Video Ads beginnen bei 1.990 €. Regelmäßige Social Media Content Produktionen (TikToks, Reels) starten bei 490 €."
+                      "text": "Die Preise für Unternehmensfilme starten bei 2.490 €, Recruitingvideos bei 1.890 €. Werbekampagnen und Video Ads beginnen bei 1.490 €. Regelmäßige Social Media Content Produktionen (TikToks, Reels) starten bei 490 €."
                     }
                   },
                   {

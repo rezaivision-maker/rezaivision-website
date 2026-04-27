@@ -16,24 +16,24 @@ export function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
             {
-              title: "Unternehmensfilm / Recruiting",
+              title: "Unternehmensfilm",
               price: "ab 2.490 €",
-              desc: "Konzept, Dreh und Postproduktion für einen professionellen Unternehmensfilm oder Recruitingvideo."
+              desc: "Authentische & hochwertige Videoproduktion für Ihre Website und Markenbildung."
             },
             {
-              title: "Werbevideo / Kampagne",
-              price: "ab 1.990 €",
-              desc: "Kampagnenvideos, Social Ads oder Produktvideos mit klarer Botschaft und Wirkung."
+              title: "Recruiting Video",
+              price: "ab 1.890 €",
+              desc: "Effiziente Bewerbergewinnung durch echten Einblick in Ihre Unternehmenskultur."
             },
             {
-              title: "Social Media Content",
-              price: "ab 490 €",
-              desc: "Kurzvideos und Contentformate für Social Media und regelmäßige Präsenz."
+              title: "Social Ads / Einzelspot",
+              price: "ab 1.490 €",
+              desc: "Verkaufsstarke Clips für Social Media Ads oder Landingpages."
             },
             {
-              title: "Monatliche Contentproduktion",
+              title: "Social Media Retainer",
               price: "ab 1.490 € / Monat",
-              desc: "Planbare Inhalte für kontinuierliche Sichtbarkeit. (Optionaler Retainer)",
+              desc: "Planvolle, kontinuierliche Sichtbarkeit durch regelmäßigen Content-Support.",
               highlight: true
             }
           ].map((plan, i) => (

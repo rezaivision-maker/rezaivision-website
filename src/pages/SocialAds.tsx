@@ -51,8 +51,8 @@ export default function SocialAds() {
 
   const faqs = [
     {
-      question: "Was kosten Werbevideos und Social Media Ads?",
-      answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.500 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.500 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
+      question: "Was kostet ein Social Ad Video?",
+      answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.490 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.490 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
     },
     {
       question: "Schalten Sie die Werbeanzeigen auch für uns?",
@@ -103,9 +103,9 @@ export default function SocialAds() {
             },
             "offers": {
               "@type": "Offer",
-              "price": "1500.00",
+              "price": "1490.00",
               "priceCurrency": "EUR",
-              "description": "Ab 1.500 € zzgl. MwSt."
+              "description": "Ab 1.490 € zzgl. MwSt."
             }
           })}
         </script>
@@ -439,11 +439,11 @@ export default function SocialAds() {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Was kosten Performance Ads?
             </h2>
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Ein einzelner, hochwertiger Werbespot beginnt bei uns <strong className="text-white">ab 1.500 €</strong>.
+            <p className="text-gray-400 text-lg mb-8 leading-relaxed text-left">
+              Ein einzelner, hochwertiger Werbespot beginnt bei uns <strong className="text-white">ab 1.490 €</strong>.
             </p>
-            <p className="text-gray-400 mb-10">
-              Für erfolgreiches Performance Marketing empfehlen wir jedoch unsere <strong className="text-white">Ad-Pakete (ab 2.500 €)</strong>. Hierbei nutzen wir einen Drehtag maximal effizient, um direkt mehrere Hooks, Längen und Varianten für Ihr A/B-Testing zu produzieren. Das senkt Ihre Kosten pro Video enorm.
+            <p className="text-gray-400 mb-10 text-left">
+              Für erfolgreiches Performance Marketing empfehlen wir jedoch unsere <strong className="text-white">Ad-Pakete (ab 2.490 €)</strong>. Hierbei nutzen wir einen Drehtag maximal effizient, um direkt mehrere Hooks, Längen und Varianten für Ihr A/B-Testing zu produzieren. Das senkt Ihre Kosten pro Video enorm.
             </p>
             <Button href="/kontakt?service=werbevideo" variant="outline" size="lg">
               Kostenlose Einschätzung anfragen

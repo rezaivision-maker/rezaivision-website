@@ -8,7 +8,7 @@ export default function FAQ() {
   const faqs = [
     {
       question: "Was kostet ein Video bei Rezai Vision?",
-      answer: "Die Kosten variieren je nach Aufwand, Drehtagen und Postproduktion. Ein Social Media Clip startet bei ca. 400 €, ein professioneller Imagefilm bei 2.500 €. Wir besprechen Ihr Budget im Erstgespräch und finden die passende Lösung."
+      answer: "Die Kosten variieren je nach Aufwand, Drehtagen und Postproduktion. Ein Social Media Clip startet bei ca. 490 €, ein professioneller Imagefilm bei 2.490 €. Wir besprechen Ihr Budget im Erstgespräch und finden die passende Lösung."
     },
     {
       question: "Wie lange dauert die Produktion?",
