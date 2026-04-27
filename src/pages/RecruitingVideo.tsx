@@ -441,7 +441,7 @@ export default function RecruitingVideo() {
               Was kostet ein Recruiting Video?
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Ein effizientes **Smart Recruiting Video** inklusive Konzept, Interviews vor Ort und Postproduktion beginnt bei uns bereits <strong className="text-white">ab 1.890 €</strong>.
+              Ein effizientes <span className="text-gray-100 font-semibold">Smart Recruiting Video</span> inklusive Konzept, Interviews vor Ort und Postproduktion beginnt bei uns bereits <strong className="text-white">ab 1.890 €</strong>.
             </p>
             <p className="text-gray-400 mb-10">
               Oft macht es Sinn, aus einem Drehtag direkt mehrere kurze Clips für verschiedene Stellenprofile oder Social Media Ads zu produzieren. So nutzen Sie Ihr Budget maximal effizient. Lassen Sie uns Ihre Anforderungen besprechen.

@@ -71,7 +71,7 @@ export default function WeddingFilms() {
               </h2>
               <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-light">
                 <p>
-                  Die meisten Paare geben ein kleines Vermögen für die Hochzeit aus: das perfekte Kleid, edles Catering, einen erstklassigen Fotografen. Doch oft wird dabei eines vergessen: **Der Ton und die Bewegung.**
+                  Die meisten Paare geben ein kleines Vermögen für die Hochzeit aus: das perfekte Kleid, edles Catering, einen erstklassigen Fotografen. Doch oft wird dabei eines vergessen: <span className="text-gray-100 font-semibold">Der Ton und die Bewegung.</span>
                 </p>
                 <p>
                   Ein Foto fängt den Kuss ein. Ein Film fängt das Zittern in der Stimme beim Ja-Wort ein, das herzliche Lachen der Großeltern und das Rascheln des Kleides. Es ist das einzige Medium, das euch *wirklich* zurück in diesen Moment katapultiert.

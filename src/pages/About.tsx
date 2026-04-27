@@ -29,16 +29,16 @@ export default function About() {
             
             <div className="space-y-6 text-lg text-gray-400 font-light leading-relaxed">
               <p>
-                Starke Kommunikation beginnt nicht beim Drücken des Auslösers, sondern beim echten Verständnis für eine Vision. Als Videograf aus Kaiserslautern brenne ich für das Zusammenspiel von **Ton, Story und Optik**.
+                Starke Kommunikation beginnt nicht beim Drücken des Auslösers, sondern beim echten Verständnis für eine Vision. Als Videograf aus Kaiserslautern brenne ich für das Zusammenspiel von <span className="text-gray-100 font-semibold">Ton, Story und Optik</span>.
               </p>
               <p>
-                Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film. Es geht niemals nur um ein „schönes Bild“, sondern um die Kunst, eine Botschaft so zu verpacken, dass sie **messbar Wirkung** zeigt. Ob etablierte Marke oder ambitionierter **Underdog**: In der Zusammenarbeit auf Augenhöhe wird jedes Projekt so behandelt, dass durch einen individuellen Look ein ganz eigener Charakter entsteht.
+                Hinter Rezai Vision steht die pure Leidenschaft für das Medium Film. Es geht niemals nur um ein „schönes Bild“, sondern um die Kunst, eine Botschaft so zu verpacken, dass sie <span className="text-gray-100 font-semibold">messbar Wirkung</span> zeigt. Ob etablierte Marke oder ambitionierter <span className="text-gray-100 font-semibold">Underdog</span>: In der Zusammenarbeit auf Augenhöhe wird jedes Projekt so behandelt, dass durch einen individuellen Look ein ganz eigener Charakter entsteht.
               </p>
               <p>
-                Ich blicke auf **über 10 Jahre Erfahrung** in der professionellen Videoproduktion zurück. In dieser Zeit habe ich gelernt, dass Technik niemals Selbstzweck sein darf, sondern das essentielle Werkzeug ist, um eine Geschichte greifbar zu machen. Deshalb setzen wir konsequent auf **professionelle Kamerasysteme mit hohem Dynamikumfang** – für Bilder, die Ihre Qualität im gesamten **Südwesten (RPF, Saarland, Hessen)** widerspiegeln.
+                Ich blicke auf <span className="text-gray-100 font-semibold">über 10 Jahre Erfahrung</span> in der professionellen Videoproduktion zurück. In dieser Zeit habe ich gelernt, dass Technik niemals Selbstzweck sein darf, sondern das essentielle Werkzeug ist, um eine Geschichte greifbar zu machen. Deshalb setzen wir konsequent auf <span className="text-gray-100 font-semibold">professionelle Kamerasysteme mit hohem Dynamikumfang</span> – für Bilder, die Ihre Qualität im gesamten <span className="text-gray-100 font-semibold">Südwesten (RPF, Saarland, Hessen)</span> widerspiegeln.
               </p>
               <p>
-                Als Ihr **persönlicher Ansprechpartner** begleite ich Sie von der ersten Idee bis zum fertigen Film. Sie profitieren von kurzen Wegen, direkter Kommunikation und einer Umsetzung ohne unnötigen Agentur-Overhead. Je nach Projektgröße aktiviere ich hierfür ein bewährtes **Netzwerk bei Bedarf** – so erhalten Sie immer genau die Struktur, die Ihr Vorhaben erfordert.
+                Als Ihr <span className="text-gray-100 font-semibold">persönlicher Ansprechpartner</span> begleite ich Sie von der ersten Idee bis zum fertigen Film. Sie profitieren von kurzen Wegen, direkter Kommunikation und einer Umsetzung ohne unnötigen Agentur-Overhead. Je nach Projektgröße aktiviere ich hierfür ein bewährtes <span className="text-gray-100 font-semibold">Netzwerk bei Bedarf</span> – so erhalten Sie immer genau die Struktur, die Ihr Vorhaben erfordert.
               </p>
               <p className="text-xl text-gray-200 font-medium mt-8 border-l-2 border-brand-accent pl-6">
                 Unser Ziel: Ihr Unternehmen so zu zeigen, wie es wirklich ist – authentisch, stark und vertrauenswürdig.

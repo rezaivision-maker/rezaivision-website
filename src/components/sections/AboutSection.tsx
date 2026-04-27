@@ -45,11 +45,11 @@ export function AboutSection() {
             </p>
 
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Hinter **Rezai Vision** steht die pure Leidenschaft für das Medium Film – doch wir machen keine Kunst aus Selbstzweck, sondern **Strategie mit Wirkung**. Ein Video ist für uns weit mehr als nur ein schönes Bild; es ist das stärkste Werkzeug, um Ihre Botschaft **im gesamten Südwesten (RPF, Saarland, Hessen)** greifbar zu machen.
+              Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die pure Leidenschaft für das Medium Film – doch wir machen keine Kunst aus Selbstzweck, sondern <span className="text-gray-100 font-semibold">Strategie mit Wirkung</span>. Ein Video ist für uns weit mehr als nur ein schönes Bild; es ist das stärkste Werkzeug, um Ihre Botschaft <span className="text-gray-100 font-semibold">im gesamten Südwesten (RPF, Saarland, Hessen)</span> greifbar zu machen.
             </p>
 
             <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Ob ambitionierter **Underdog** oder etablierter **Mittelstand**: Wir setzen konsequent auf **Kamerasysteme mit hohem Dynamikumfang** und eine Zusammenarbeit, die Ihre Vision versteht. Bei uns gibt es kein Agentur-Overhead, sondern **direkte Kommunikation** und Ergebnisse, die Vertrauen aufbauen. Ich bin Ihr **persönlicher Partner** – von der ersten Konzeption bis hin zum fertigen Film. Je nach Projektumfang greife ich dabei auf ein bewährtes **Netzwerk bei Bedarf** zurück.
+              Ob ambitionierter <span className="text-gray-100 font-semibold">Underdog</span> oder etablierter <span className="text-gray-100 font-semibold">Mittelstand</span>: Wir setzen konsequent auf <span className="text-gray-100 font-semibold">Kamerasysteme mit hohem Dynamikumfang</span> und eine Zusammenarbeit, die Ihre Vision versteht. Bei uns gibt es kein Agentur-Overhead, sondern <span className="text-gray-100 font-semibold">direkte Kommunikation</span> und Ergebnisse, die Vertrauen aufbauen. Ich bin Ihr <span className="text-gray-100 font-semibold">persönlicher Partner</span> – von der ersten Konzeption bis hin zum fertigen Film. Je nach Projektumfang greife ich dabei auf ein bewährtes <span className="text-gray-100 font-semibold">Netzwerk bei Bedarf</span> zurück.
             </p>
 
             <div className="pt-6"></div>
