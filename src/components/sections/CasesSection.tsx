@@ -338,10 +338,11 @@ export function CasesSection() {
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
                   <video 
                     src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto/f_auto/v1775985431/Social_Care_EXPOFIX_jftef4.mov"
+                    poster="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp"
                     className="w-full h-full object-cover"
                     controls
                     playsInline
-                    preload="none"
+                    preload="metadata"
                   />
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">
