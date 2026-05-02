@@ -8,12 +8,12 @@ export default function Pricing() {
     {
       title: "Marken-Storytelling",
       price: "Auf Anfrage",
-      desc: "Kein Standard-Imagefilm. Wir übersetzen Ihre Identität in eine visuelle Sprache, die gezielt auf Ihrer Website Vertrauen bei Neukunden aufbaut.",
+      desc: "Die visuelle Visitenkarte Ihres Unternehmens. Rezai Vision übersetzt Identität in eine Bildsprache, die auf Ihrer Website gezielt Vertrauen bei Neukunden aufbaut und die Markenautorität stärkt.",
       features: [
-        "Zielgruppen-Analyse",
-        "1-2 Drehtage vor Ort",
+        "Zielgruppen- & Bedarfsanalyse",
+        "Einsatzplanung für die Website",
         "Cinematic Color Grading",
-        "Optimiert für Website-Conversions",
+        "Conversion-orientierter Schnitt",
         "Korrekturschleifen inklusive"
       ],
       popular: false,
@@ -22,12 +22,12 @@ export default function Pricing() {
     {
       title: "Recruiting-System",
       price: "Auf Anfrage",
-      desc: "Automatisierte Mitarbeitergewinnung durch authentische Einblicke. Wir bauen Content, der in Ihrem Bewerber-Funnel wirklich konvertiert.",
+      desc: "Automatisierte Mitarbeitergewinnung statt passiver Stellenausschreibung. Wir entwickeln Content-Strategien, die Fachkräfte dort erreichen, wo sie scrollen, und Hürden im Bewerberprozess abbauen.",
       features: [
-        "Mitarbeiter-Interviews",
-        "Fokus auf Arbeitgeber-Mehrwert",
+        "Mitarbeiter-Profiling",
+        "Fokus auf Arbeitgeber-Vorteile",
         "Optimiert für Social Ads (9:16)",
-        "Mobile-First Editing",
+        "Mobile-First-Optimierung",
         "Schnelle Bereitstellung"
       ],
       popular: true,
@@ -36,12 +36,12 @@ export default function Pricing() {
     {
       title: "Performance-Ads",
       price: "Auf Anfrage",
-      desc: "Kurzvideos mit klarer Verkaufspsychologie. Entwickelt für Meta, LinkedIn oder TikTok, um messbare Leads zu generieren.",
+      desc: "Visueller Treibstoff für Ihr Marketing. Verkaufspsychologisch optimierte Kurzvideos für Meta, LinkedIn oder TikTok, die gezielt darauf ausgelegt sind, messbare Leads und Interaktionen zu generieren.",
       features: [
-        "A/B Test Varianten",
-        "Starke Hook-Optimierung",
+        "Plattform-Analyse",
+        "Hook-Optimierung (Stop-the-Scroll)",
         "Call-to-Action Fokus",
-        "Plattformspezifischer Schnitt",
+        "A/B Test-Varianten",
         "High-Engagement Sounddesign"
       ],
       popular: false,
@@ -50,13 +50,13 @@ export default function Pricing() {
     {
       title: "Content-Partnerschaft",
       price: "Monatlicher Retainer",
-      desc: "Kontinuierliche Begleitung für Unternehmen, die eine dauerhafte Präsenz auf LinkedIn und Instagram ohne internen Aufwand wollen.",
+      desc: "Dauerhafte Sichtbarkeit ohne internen Aufwand. Rezai Vision begleitet Unternehmen kontinuierlich beim Aufbau einer digitalen Präsenz auf LinkedIn und Instagram durch regelmäßigen, strategischen Content.",
       features: [
         "Monatliche Strategie-Calls",
         "Effiziente Batch-Produktion",
         "Multi-Plattform Verwertung",
-        "Feste Budget-Kontrolle",
-        "Exklusive Betreuung"
+        "Konstante Qualitätskontrolle",
+        "Exklusive Partner-Betreuung"
       ],
       popular: false,
       href: "/kontakt?service=social-media"

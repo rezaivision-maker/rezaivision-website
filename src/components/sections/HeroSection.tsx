@@ -50,7 +50,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed"
             >
-              Ich produziere keine Clips zum Selbstzweck. Ich entwickle Videokontent, der gezielt für Ihre Website, Social Ads oder LinkedIn-Präsenz optimiert ist – um Vertrauen aufzubauen und messbare Interaktionen im Südwesten Deutschlands zu erzeugen.
+              Videos sind kein Selbstzweck – sie sind strategische Werkzeuge für Ihren Erfolg. Rezai Vision entwickelt Videokontent, der gezielt für Websites, Social Ads oder LinkedIn-Präsenzen optimiert ist, um Vertrauen aufzubauen und messbare Ergebnisse im Südwesten Deutschlands zu erzielen.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
