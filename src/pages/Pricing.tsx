@@ -6,57 +6,57 @@ import { SEO } from "@/components/SEO";
 export default function Pricing() {
   const packages = [
     {
-      title: "Unternehmensfilm",
-      price: "ab 2.490 €",
-      desc: "Der perfekte erste Eindruck für Ihre Website. Wir übersetzen Ihre Unternehmenswerte in eine emotionale Geschichte.",
+      title: "Marken-Storytelling",
+      price: "Auf Anfrage",
+      desc: "Kein Standard-Imagefilm. Wir übersetzen Ihre Identität in eine visuelle Sprache, die gezielt auf Ihrer Website Vertrauen bei Neukunden aufbaut.",
       features: [
-        "Strategische Konzeption",
+        "Zielgruppen-Analyse",
         "1-2 Drehtage vor Ort",
         "Cinematic Color Grading",
-        "Sounddesign & Korrekturschleifen",
-        "Optimierte Formate für Web"
+        "Optimiert für Website-Conversions",
+        "Korrekturschleifen inklusive"
       ],
       popular: false,
       href: "/kontakt?service=unternehmensfilm"
     },
     {
-      title: "Recruiting Video",
-      price: "ab 1.890 €",
-      desc: "Effiziente Bewerbergewinnung durch authentische Mitarbeiter-Einblicke. Echt statt gestellt.",
+      title: "Recruiting-System",
+      price: "Auf Anfrage",
+      desc: "Automatisierte Mitarbeitergewinnung durch authentische Einblicke. Wir bauen Content, der in Ihrem Bewerber-Funnel wirklich konvertiert.",
       features: [
-        "Interviews auf Augenhöhe",
-        "Dreh im laufenden Betrieb",
-        "Fokus auf Arbeitgeber-Vorteile",
-        "Social Media Ready (9:16 + 16:9)",
-        "Schnelle Umsetzung"
+        "Mitarbeiter-Interviews",
+        "Fokus auf Arbeitgeber-Mehrwert",
+        "Optimiert für Social Ads (9:16)",
+        "Mobile-First Editing",
+        "Schnelle Bereitstellung"
       ],
       popular: true,
       href: "/kontakt?service=recruiting"
     },
     {
-      title: "Werbevideo / Ads",
-      price: "ab 1.490 €",
-      desc: "Performance-orientierte Clips mit klarer Verkaufspsychologie für messbare Resultate.",
+      title: "Performance-Ads",
+      price: "Auf Anfrage",
+      desc: "Kurzvideos mit klarer Verkaufspsychologie. Entwickelt für Meta, LinkedIn oder TikTok, um messbare Leads zu generieren.",
       features: [
-        "Zielgruppen-Analyse",
-        "Starke Hook & Call-to-Action",
-        "Schnitt-Varianten für A/B Tests",
-        "Social Ads Optimierung",
-        "Hoher Wiedererkennungswert"
+        "A/B Test Varianten",
+        "Starke Hook-Optimierung",
+        "Call-to-Action Fokus",
+        "Plattformspezifischer Schnitt",
+        "High-Engagement Sounddesign"
       ],
       popular: false,
       href: "/kontakt?service=werbevideo"
     },
     {
-      title: "Social Media Retainer",
-      price: "ab 1.490 € / Monat",
-      desc: "Kontinuierliche Begleitung und Content-Support für dauerhafte Sichtbarkeit.",
+      title: "Content-Partnerschaft",
+      price: "Monatlicher Retainer",
+      desc: "Kontinuierliche Begleitung für Unternehmen, die eine dauerhafte Präsenz auf LinkedIn und Instagram ohne internen Aufwand wollen.",
       features: [
-        "Regelmäßige Fix-Termine",
-        "Batch-Produktion (Effizient)",
-        "Format-Mix (Image & Story)",
+        "Monatliche Strategie-Calls",
+        "Effiziente Batch-Produktion",
+        "Multi-Plattform Verwertung",
         "Feste Budget-Kontrolle",
-        "Exklusive Partner-Betreuung"
+        "Exklusive Betreuung"
       ],
       popular: false,
       href: "/kontakt?service=social-media"

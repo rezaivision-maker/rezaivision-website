@@ -41,7 +41,7 @@ export function HeroSection() {
             >
               Videoproduktion Kaiserslautern: <br className="hidden md:block" />
               <span className="gold-text-gradient">
-                Warum Wirkung wichtiger ist als nur schöne Bilder.
+                Videos, die als Werkzeug für Ihre Ziele arbeiten.
               </span>
             </motion.h1>
             <motion.p 
@@ -50,7 +50,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed"
             >
-              Strategisch geplante Filme & Social Ads, die echtes Kundenvertrauen aufbauen. Von Kaiserslautern über Mannheim bis Frankfurt inszenieren wir Ihre Qualität mit hochwertiger Bildsprache und klarem Marketing-Verstand.
+              Ich produziere keine Clips zum Selbstzweck. Ich entwickle Videokontent, der gezielt für Ihre Website, Social Ads oder LinkedIn-Präsenz optimiert ist – um Vertrauen aufzubauen und messbare Interaktionen im Südwesten Deutschlands zu erzeugen.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

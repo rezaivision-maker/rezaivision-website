@@ -10,8 +10,8 @@ interface SEOProps {
   keywords?: string;
 }
 
-const DEFAULT_TITLE = "Videoproduktion & Social Media Agentur Kaiserslautern | Umkreis 100km | Rezai Vision";
-const DEFAULT_DESCRIPTION = "Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen.";
+const DEFAULT_TITLE = "Unsichtbar oder Unvergesslich? | Videoproduktion Kaiserslautern | Rezai Vision";
+const DEFAULT_DESCRIPTION = "Warum manche Marken faszinieren, während andere im Rauschen untergehen. Ich entwickle Videos als strategisches Werkzeug für Ihre Website, Ads und LinkedIn. Videoproduktion in Kaiserslautern & Südwesten.";
 const DEFAULT_IMAGE = "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp";
 const SITE_URL = "https://www.rezaivision.de";
 
