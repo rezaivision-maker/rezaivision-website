@@ -120,7 +120,7 @@ export function Layout() {
         )}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
-          <div className="flex-1 flex justify-start">
+          <div className="flex-1 flex justify-start min-w-[200px]">
             <Link to="/" className="text-2xl font-display font-bold tracking-tighter flex items-center">
               <span className="text-brand-accent">Rezai</span>
               <span className="text-white">Vision</span>
@@ -128,13 +128,13 @@ export function Layout() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex shrink-0 items-center justify-center gap-6 xl:gap-10">
+          <nav className="hidden lg:flex shrink-0 items-center justify-center gap-6 xl:gap-8 mx-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium tracking-wide transition-all duration-300 hover:text-brand-accent hover:scale-105 whitespace-nowrap",
+                  "text-sm font-medium tracking-wide transition-all duration-300 hover:text-brand-accent whitespace-nowrap",
                   location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
                 )}
               >
@@ -145,7 +145,7 @@ export function Layout() {
             <Link
               to="/reza-e-motion"
               className={cn(
-                "text-xs font-bold tracking-widest px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-2 border whitespace-nowrap uppercase",
+                "text-[10px] font-bold tracking-[0.2em] px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-2 border whitespace-nowrap uppercase",
                 location.pathname === "/reza-e-motion" 
                   ? "bg-purple-500/20 text-purple-400 border-purple-500/40" 
                   : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
@@ -156,9 +156,9 @@ export function Layout() {
             </Link>
           </nav>
 
-          <div className="flex-1 flex justify-end items-center">
-            <div className="hidden lg:block ml-4">
-              <Button href="/kontakt" variant="primary" size="sm" className="px-6 py-2 shadow-lg shadow-brand-accent/10">
+          <div className="flex-1 flex justify-end items-center min-w-[200px]">
+            <div className="hidden lg:block">
+              <Button href="/kontakt" variant="primary" size="sm" className="px-6 py-2 whitespace-nowrap shadow-lg shadow-brand-accent/10">
                 Projekt-Check
               </Button>
             </div>
