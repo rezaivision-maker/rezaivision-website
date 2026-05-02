@@ -112,6 +112,24 @@ export function Layout() {
               "https://www.facebook.com/rezaivision",
               "https://www.tiktok.com/@rezaivision"
             ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Videoproduktion & Video-Marketing",
+            "provider": {
+              "@type": "Organization",
+              "name": "Rezai Vision"
+            },
+            "areaServed": "DE",
+            "offers": {
+              "@type": "AggregateOffer",
+              "offerCount": "8",
+              "lowPrice": "0",
+              "priceCurrency": "EUR",
+              "url": "https://rezaivision.de/",
+              "availability": "https://schema.org/InStock"
+            }
           }
         ]}
       />
