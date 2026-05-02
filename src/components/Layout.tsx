@@ -1,5 +1,12 @@
+import { useState, useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music, ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "./ui/Button";
+import { CookieBanner } from "./ui/CookieBanner";
+import { SEO } from "./SEO";
 import { NavDropdown } from "./NavDropdown";
-import { ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 const navLinks = [
   { name: "Referenzen", path: "/#showreel" },

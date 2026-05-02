@@ -95,7 +95,6 @@ export function CasesSection() {
                     alt="Imagefilm Schlossgut Lüll Weingut Rheinhessen — Rezai Vision Videoproduktion" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
-                    loading="lazy"
                   />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
