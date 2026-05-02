@@ -69,6 +69,7 @@ export default function Pricing() {
         title="Preise & Pakete | Rezai Vision | Videoproduktion"
         description="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media. Top-Niveau ohne Agentur-Overhead."
         canonical="/preise"
+        keywords="Preise Videoproduktion, Kosten Imagefilm, Recruiting Video Preis, Social Media Content Flatrate, Rezai Vision Preise"
       />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div

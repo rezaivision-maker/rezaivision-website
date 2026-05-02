@@ -1,0 +1,30 @@
+# Rezai Vision - Videoproduktion & Social Media Agentur Kaiserslautern
+
+Rezai Vision is a premium video production agency based in Kaiserslautern, Germany, specializing in high-end corporate films, recruiting videos, and social media content for B2B clients and SMEs.
+
+## Core Services
+- **Unternehmensfilm (Corporate Film):** Strategy-led branding films that build trust and authority on websites and LinkedIn.
+- **Recruiting Videos:** Automated talent acquisition systems designed to attract skilled workers in the Palatinate (Pfalz) region.
+- **Social Ads:** High-conversion video advertisements optimized for Meta, LinkedIn, and TikTok.
+- **Content Partnerships (Social Media Retainer):** Continuous video production and strategy for long-term digital presence.
+
+## Consumer Brand: reza-e-motion
+Specialized sub-brand for private events, music videos, and emotional storytelling, including weddings and artist support in the RLP/Saarland region.
+
+## Regional Expertise
+Strong focus on the Southwest German region: Kaiserslautern, Mannheim, Saarbrücken, Mainz, and Frankfurt.
+
+## Contact Details
+- **Website:** https://www.rezaivision.de
+- **Location:** Kaiserslautern, Germany
+- **Email:** rezaivision@gmail.com
+- **Phone:** +49 631 62512000
+- **Founder:** Parsha Rezai
+
+## Site Navigation for Agents
+- [/leistungen](https://www.rezaivision.de/leistungen) - Services overview
+- [/referenzen](https://www.rezaivision.de/referenzen) - Portfolio and case studies
+- [/preise](https://www.rezaivision.de/preise) - Investment models and packages
+- [/blog](https://www.rezaivision.de/blog) - Professional magazine with 25+ articles on video marketing ROI, recruiting trends, and production tips.
+- [/reza-e-motion](https://www.rezaivision.de/reza-e-motion) - Private event and music video services
+- [/faq](https://www.rezaivision.de/faq) - Frequently asked questions about process and pricing

@@ -3,43 +3,43 @@
   <!-- Hauptseiten -->
   <url>
     <loc>https://www.rezaivision.de/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/leistungen</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/referenzen</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/preise</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/ueber-uns</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/technik</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/kontakt</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -47,25 +47,25 @@
   <!-- B2B Leistungsseiten -->
   <url>
     <loc>https://www.rezaivision.de/leistungen/unternehmensfilm</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/leistungen/recruiting</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/leistungen/werbevideo</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/leistungen/social-media</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -73,25 +73,25 @@
   <!-- reza-e-motion (B2C) -->
   <url>
     <loc>https://www.rezaivision.de/reza-e-motion</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/reza-e-motion/eventbegleitung</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/reza-e-motion/musikvideos</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/reza-e-motion/hochzeitsfilme</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -99,19 +99,19 @@
   <!-- Wissenswertes -->
   <url>
     <loc>https://www.rezaivision.de/faq</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/glossar</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -119,123 +119,163 @@
   <!-- Magazin / Blog Artikel -->
   <url>
     <loc>https://www.rezaivision.de/blog/imagefilm-unternehmen-was-bringt-er-wirklich</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/imagefilm-kosten-was-kostet-ein-unternehmensfilm</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/recruiting-video-unternehmen-2026</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/recruiting-video-kaiserslautern-sichtbarer-arbeitgeber</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/social-media-videos-fuer-unternehmen</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/werbevideo-unternehmen-was-es-leisten-muss</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/vertrauen-aufbauen-mit-videos</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/videoproduktion-kaiserslautern-worauf-achten</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/unternehmensvideo-erstellen-fehler-vermeiden</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/videos-fuer-unternehmen-kaiserslautern</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Neue Blog-Artikel 2026 -->
   <url>
     <loc>https://www.rezaivision.de/blog/recruitingvideo-pfalz-fachkraefte-gewinnen</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/wedding-content-creator-vs-videograf-kaiserslautern</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/artist-support-musikvideo-rlp</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/hybrid-video-production-ki-kmu-kaiserslautern</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/hochzeitsvideo-locations-kaiserslautern-villa-denis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/recruiting-handwerk-kaiserslautern-video-vs-stellenanzeige</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/social-media-video-flatrate-pfalz-unternehmen</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/authentische-mitarbeitergewinnung-kaiserslautern-vertrauen</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/top-musikvideo-locations-rlp-lost-places</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.rezaivision.de/blog/effiziente-content-erstellung-kmu-videoproduktion-kaiserslautern</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/social-media-content-kaiserslautern-agentur</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/content-creator-kaiserslautern-video-formate</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/was-kostet-ein-professionelles-2-minuten-video</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/wie-erstellt-man-ein-unternehmensvorstellungsvideo</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/was-bedeutet-3-sekunden-videoaufrufe</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/goldene-regel-der-videobearbeitung-80-20</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/blog/mitarbeiter-vor-der-kamera-locker-machen</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -243,7 +283,13 @@
   <!-- Rechtliches -->
   <url>
     <loc>https://www.rezaivision.de/impressum</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.rezaivision.de/datenschutz</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
