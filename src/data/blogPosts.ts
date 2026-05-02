@@ -82,7 +82,7 @@ Ein Werbevideo pusht ein konkretes Angebot ("Jetzt kaufen"). Ein Imagefilm zeigt
 Typisch sind 1 bis 2 Drehtage, gefolgt von ca. einer Woche Schnitt und Finishing. Insgesamt also 3 bis 5 Wochen vom Briefing bis zur fertig abgenommenen Version.
 
 ### Wo sollte der Film eingebunden werden?
-Auf der Startseite der Website (am besten im sichtbaren Bereich ganz oben), in Angebotsmails und auf LinkedIn. Tipp: Nutzt für die Website einen werbefreien Hoster wie Vimeo – bei YouTube werden am Ende Konkurrenz-Videos eingeblendet.`
+Auf der Startseite der Website (am besten im sichtbaren Bereich ganz oben), in Angebotsmails und auf LinkedIn. Tipp: Nutzt für die Website einen werbefreien Hoster wie Vimeo – bei YouTube werden am Ende Konkurrenz-Videos eingeblendet.\``
   },
   {
     id: "2",
@@ -156,7 +156,7 @@ Solide erste Produktionen starten bei ca. 1.500 €. Wer echter Konzeptarbeit un
 Konzept und Storyboard, Drehtag inkl. Equipment, Schnitt, Farbkorrektur, Musik, mindestens eine Korrekturrunde und verschiedene Exportformate.
 
 ### Wie viele Drehtage brauche ich?
-Für einen Betrieb mit einem Standort reicht in den meisten Fällen ein langer Drehtag (8–10 Stunden). Bei mehreren Standorten oder komplexeren Geschichten werden 2 bis 3 Tage kalkuliert.`
+Für einen Betrieb mit einem Standort reicht in den meisten Fällen ein langer Drehtag (8–10 Stunden). Bei mehreren Standorten oder komplexeren Geschichten werden 2 bis 3 Tage kalkuliert.\``
   },
   {
     id: "3",
@@ -230,7 +230,7 @@ Der Imagefilm richtet sich an Kunden. Ein Recruiting-Video richtet sich an Bewer
 Auf der Website: 90 bis 180 Sekunden. Für Social Media (Instagram, LinkedIn): 15 bis 30 Sekunden – mit direktem Einstieg, ohne Intro.
 
 ### Müssen die Mitarbeiter Kamera-Erfahrung haben?
-Gar nicht. Ein guter Regisseur führt durch authentische Gespräche, sodass niemand das Gefühl hat, "aufzutreten". Das Ergebnis ist echter als jedes einstudierte Statement.`
+Gar nicht. Ein guter Regisseur führt durch authentische Gespräche, sodass niemand das Gefühl hat, "aufzutreten". Das Ergebnis ist echter als jedes einstudierte Statement.\``
   },
   {
     id: "4",
@@ -289,7 +289,7 @@ Ein Imagefilm zeigt Produkte und Kunden-Benefits. Bewerber interessiert das kaum
 Über Social Media Anzeigen (z.B. Instagram oder LinkedIn) kann man genau einstellen, wer das Video sieht – Region, Berufsfeld, Alter. Kein Streuverlust nach irgendwo.
 
 ### Wann zahlt sich das aus?
-Oft schon mit der ersten Einstellung. Wenn man berechnet, was eine Stelle unbesetzt kostet (entgangener Umsatz, Mehrarbeit für das Team), ist ein gutes Video schnell amortisiert.`
+Oft schon mit der ersten Einstellung. Wenn man berechnet, was eine Stelle unbesetzt kostet (entgangener Umsatz, Mehrarbeit für das Team), ist ein gutes Video schnell amortisiert.\``
   },
   {
     id: "5",
@@ -352,7 +352,7 @@ Das hängt davon ab, wo jemand im Kaufprozess steht. Jemand, der euch nicht kenn
 Nicht unbedingt. Kurzvideos im Stil von "echter Benutzer dreht selbst" performen manchmal besser als Hochglanz, weil sie nicht nach Werbung aussehen. Wichtiger als das Bild ist fast immer: der Ton muss gut klingen.
 
 ### Warum sinken meine Views auf dem Unternehmenskanal?
-Häufigste Ursache: Das Video beginnt schwach. Wenn in den ersten zwei Sekunden nichts passiert, scrollt die Person weiter. Oder: Der Inhalt dreht sich nur um das Unternehmen – nicht um etwas, das den Zuschauer interessiert.`
+Häufigste Ursache: Das Video beginnt schwach. Wenn in den ersten zwei Sekunden nichts passiert, scrollt die Person weiter. Oder: Der Inhalt dreht sich nur um das Unternehmen – nicht um etwas, das den Zuschauer interessiert.\``
   },
   {
     id: "6",
@@ -419,7 +419,7 @@ Imagefilm = langfristiger Vertrauensaufbau. Werbevideo = kurzfristige, messbare 
 Für Leute, die euch noch nicht kennen: 15–30 Sekunden, sehr direkt. Für Leute, die euch schon kennen (z.B. Website-Besucher, die eine Anzeige sehen): 60–120 Sekunden, mit mehr Tiefe und Einwand-Behandlung.
 
 ### Muss das Werbevideo hochprofessionell aussehen?
-Für Kurzanzeigen auf Instagram und TikTok: Nicht unbedingt. Ein echter, nicht zu polierter Look wirkt manchmal glaubwürdiger. Entscheidend ist immer der Ton – schlechter Sound zerstört jede Botschaft.`
+Für Kurzanzeigen auf Instagram und TikTok: Nicht unbedingt. Ein echter, nicht zu polierter Look wirkt manchmal glaubwürdiger. Entscheidend ist immer der Ton – schlechter Sound zerstört jede Botschaft.\``
   },
   {
     id: "7",
@@ -482,7 +482,7 @@ Auf der Website direkt im sichtbaren Bereich der Startseite und auf der Kontakts
 Nein. Was zählt, ist die Substanz. Ein ehrliches, gut eingespiegeltes Statement – direkt in die Kamera – wirkt oft echter als ein teuer inszeniertes Hochglanz-Video. Wichtig ist guter Ton.
 
 ### Wie viele Kundenstimmen reichen?
-Zwei bis drei tiefe, echte Videos schlagen zehn hastige Kurzaussagen. Besser ein Kunde, der wirklich von seiner Situation erzählt und was sich verändert hat, als acht Leute mit "Alles super!"-Kommentaren.`
+Zwei bis drei tiefe, echte Videos schlagen zehn hastige Kurzaussagen. Besser ein Kunde, der wirklich von seiner Situation erzählt und was sich verändert hat, als acht Leute mit "Alles super!"-Kommentaren.\``
   },
   {
     id: "8",
@@ -554,7 +554,7 @@ Ich empfehle das nicht. Wer zu nah an der Materie ist, verliert den Blick dafür
 Aufpassen auf: Musiklizenzen, Gebühren für Korrekturrunden und Mehrkosten für verschiedene Formate (Hochformat für Instagram, Querformat für Website). Das sollte alles vorab im Angebot stehen.
 
 ### Lohnt sich ein Dauervertrag mit einer Produktion?
-Für Social Media (Reels, LinkedIn) ja – wer monatlich konsistenten Content braucht, fährt mit einem festen Retainer effizienter. Für einen einmaligen Imagefilm eher nicht nötig.`
+Für Social Media (Reels, LinkedIn) ja – wer monatlich konsistenten Content braucht, fährt mit einem festen Retainer effizienter. Für einen einmaligen Imagefilm eher nicht nötig.\``
   },
   {
     id: "9",
@@ -638,7 +638,7 @@ Seriöse Produktionen mit echtem Konzept und Strategie starten in der Regel ab c
 Lieber nicht. Wer zu nah am eigenen Unternehmen ist, schreibt meistens für sich selbst – nicht für den Zuschauer. Externe Unterstützung bringt den nötigen Abstand.
 
 ### Ist ein Teleprompter sinnvoll?
-In den meisten Fällen nein. Abgelesene Texte wirken steif und unecht. Geführte Gespräche klingen natürlicher und wirkungsvoller.`
+In den meisten Fällen nein. Abgelesene Texte wirken steif und unecht. Geführte Gespräche klingen natürlicher und wirkungsvoller.\``
   },
   {
     id: "10",
@@ -697,7 +697,7 @@ Ja. Regionale Authentizität zieht in der Region stärker als generisches Market
 Ja. YouTube erlaubt gezieltes Targeting – z.B. an Menschen, die bestimmte Branchen-Websites besucht haben. Das macht auch für lokale B2B-Unternehmen Sinn.
 
 ### Wie starten wir, wenn wir kein Video-Wissen haben?
-Der einfachste Einstieg: ein kurzer Unternehmensfilm, aus dem dann 3 bis 5 kurze Clips für Social Media geschnitten werden. Das gibt euch sofort Präsenz auf mehreren Kanälen.`
+Der einfachste Einstieg: ein kurzer Unternehmensfilm, aus dem dann 3 bis 5 kurze Clips für Social Media geschnitten werden. Das gibt euch sofort Präsenz auf mehreren Kanälen.\``
   },
   {
     id: "11",
@@ -754,7 +754,7 @@ Für aktiv Suchende vielleicht. Aber die besten Leute suchen gerade nicht. Die e
 Ein Statement der Führung wirkt sehr gut, ist aber kein Muss. Manchmal sind Kollegen-Interviews sogar noch wirkungsvoller, weil sie glaubwürdiger klingen.
 
 ### Wie schnell zeigen sich erste Ergebnisse?
-Wenn das Video gezielt über Social Media ausgespielt wird, kann man innerhalb weniger Wochen erste Reaktionen und Anfragen sehen.`
+Wenn das Video gezielt über Social Media ausgespielt wird, kann man innerhalb weniger Wochen erste Reaktionen und Anfragen sehen.\``
   },
   {
     id: "12",
@@ -809,7 +809,7 @@ Wenn ihr hauptsächlich einen zeitlosen Film wollt: Videograf. Wenn ihr schnelle
 Ja – gerade deshalb, weil er nicht wie ein kurzlebiger Filter wirkt, sondern elegant und beständig.
 
 ### Was sind "Social Clips"?
-Kurze, vertikale Clips (9:16 Format), perfekt für Instagram Stories, Reels und WhatsApp. Sie zeigen die kleinen, spontanen Momente, die im großen Film keinen Platz haben.`
+Kurze, vertikale Clips (9:16 Format), perfekt für Instagram Stories, Reels und WhatsApp. Sie zeigen die kleinen, spontanen Momente, die im großen Film keinen Platz haben.\``
   },
   {
     id: "13",
@@ -866,7 +866,7 @@ Das hängt vom Konzept ab. Das Modell ist so gestaltet, dass auch Künstler ohne
 Sie erzählen sofort eine Geschichte und sehen im YouTube-Thumbnail bereits interessant aus. Das erhöht die Klickrate – noch bevor jemand das Video abspielt.
 
 ### Kann man aus dem Musikvideo-Dreh auch TikTok-Content machen?
-Ja, das ist bei uns Standard. Aus dem Rohmaterial entstehen direkt Teaser-Clips für Social Media, um den Release optimal zu pushen.`
+Ja, das ist bei uns Standard. Aus dem Rohmaterial entstehen direkt Teaser-Clips für Social Media, um den Release optimal zu pushen.\``
   },
   {
     id: "14",
@@ -925,7 +925,7 @@ Ja – im Sinne von "mehr Output für das gleiche Budget". Ihr bekommt für dens
 Nein, solange ein erfahrener Editor die kreativen Entscheidungen trifft. KI übernimmt die Fleißarbeit – Menschen entscheiden, was gut ist.
 
 ### Was ist der größte Vorteil für kleinere Unternehmen?
-Die Planbarkeit. Budget und Ergebnis lassen sich klar kalkulieren – kein Blindflug.`
+Die Planbarkeit. Budget und Ergebnis lassen sich klar kalkulieren – kein Blindflug.\``
   },
   {
     id: "15",
@@ -977,7 +977,7 @@ Modern und natürlich in einem. Vorteile für das Video:
 Ja – sie setzt den Rahmen für alles andere. Eine ausdrucksstarke Location spart oft Aufwand bei Deko und Licht, weil der Raum bereits eine Geschichte erzählt.
 
 ### Kann man in einfacheren Räumen trotzdem schöne Videos drehen?
-Auf jeden Fall. Mit gutem Licht und der richtigen Einstellung lässt sich aus fast jedem Raum etwas Schönes machen. Wir kennen die Kniffe.`
+Auf jeden Fall. Mit gutem Licht und der richtigen Einstellung lässt sich aus fast jedem Raum etwas Schönes machen. Wir kennen die Kniffe.\``
   },
   {
     id: "16",
@@ -1025,7 +1025,7 @@ Dazu: Das Video wird gezielt in einem 30–50 km Radius um Kaiserslautern ausges
 Für aktiv Suchende manchmal noch. Für die wirklich guten Leute – die gerade keinen neuen Job suchen – praktisch nicht mehr.
 
 ### Muss der Inhaber im Video zu sehen sein?
-Es ist empfehlenswert, weil es sofort Vertrauen schafft. Aber auch ein ehrliches Kollegen-Interview funktioniert sehr gut.`
+Es ist empfehlenswert, weil es sofort Vertrauen schafft. Aber auch ein ehrliches Kollegen-Interview funktioniert sehr gut.\``
   },
   {
     id: "17",
@@ -1076,7 +1076,7 @@ Planbarkeit. Social Media ist ein Marathon. Eine Flatrate sorgt dafür, dass eue
 Dass ihr immer aktiv bleibt, ohne ständig neu planen oder beauftragen zu müssen. Konsistenz schlägt Einzelaktionen.
 
 ### Können die Themen monatlich wechseln?
-Ja, absolut. Was im März Sinn macht (z.B. neue Produkte), kann im April komplett anders sein (z.B. Azubi-Suche). Wir planen das gemeinsam vorab.`
+Ja, absolut. Was im März Sinn macht (z.B. neue Produkte), kann im April komplett anders sein (z.B. Azubi-Suche). Wir planen das gemeinsam vorab.\``
   },
   {
     id: "18",
@@ -1131,7 +1131,7 @@ Das Ergebnis klingt dann wie ein normales Gespräch. Wirkt aber stärker als jed
 Im Gegenteil. Unternehmen, die offen zeigen, wie es bei ihnen ist, ziehen genau die Leute an, die dazu passen. Das reduziert Fehleinstellungen erheblich.
 
 ### Was ist besser: Chef oder Mitarbeiter im Video?
-Beide haben ihre Stärken. Der Chef schafft Vertrauen durch Haltung. Mitarbeiter-Interviews schaffen Identifikation. Die Kombination aus beiden ist ideal.`
+Beide haben ihre Stärken. Der Chef schafft Vertrauen durch Haltung. Mitarbeiter-Interviews schaffen Identifikation. Die Kombination aus beiden ist ideal.\``
   },
   {
     id: "19",
@@ -1182,7 +1182,7 @@ Wer die Locations in RLP kennt – auch die versteckten – spart Zeit und Permi
 In der Regel beim Eigentümer oder der zuständigen Gemeinde. Wir unterstützen beim gesamten Permit-Prozess.
 
 ### Macht die Location die Kameraausrüstung teurer?
-Manchmal ja. Große dunkle Hallen brauchen starkes Kunstlicht. Locations mit viel Tageslicht (z.B. Glasfronten) sind dagegen besonders kostengünstig zu beleuchten.`
+Manchmal ja. Große dunkle Hallen brauchen starkes Kunstlicht. Locations mit viel Tageslicht (z.B. Glasfronten) sind dagegen besonders kostengünstig zu beleuchten.\``
   },
   {
     id: "20",
@@ -1228,7 +1228,7 @@ Gerade in der Region, wo Zeit und Budget oft knapp sind, macht dieser Ansatz Sin
 Die Planung (was wird gezeigt, wer spricht, welche Szenen sind wichtig) dauert meist 1–2 Wochen. Der Drehtag selbst läuft dann deutlich flüssiger.
 
 ### Kann das B-Roll-Material (also die "Schnittbilder") später wiederverwendet werden?
-Ja, und das ist einer der größten Vorteile. Bilder aus der Produktion, dem Team oder dem Büro sind für viele spätere Projekte nützlich – z.B. für Messepräsentationen oder neue Anzeigen.`
+Ja, und das ist einer der größten Vorteile. Bilder aus der Produktion, dem Team oder dem Büro sind für viele spätere Projekte nützlich – z.B. für Messepräsentationen oder neue Anzeigen.\``
   },
   {
     id: "21",
@@ -1281,7 +1281,7 @@ Das ist nicht Faulheit. Das ist Realität. Social Media braucht Kontinuität. Un
 Wenig. Die Agentur entwickelt Themen und Skripte – ihr steht als Fachexperte vor der Kamera.
 
 ### Lohnt sich TikTok für B2B?
-Mehr als viele denken. LinkedIn geht stark in Richtung Video, und auch TikTok wird im Employer Branding und Azubi-Recruiting immer wichtiger.`
+Mehr als viele denken. LinkedIn geht stark in Richtung Video, und auch TikTok wird im Employer Branding und Azubi-Recruiting immer wichtiger.\``
   },
   {
     id: "22",
@@ -1346,7 +1346,7 @@ Menschen vertrauen anderen Menschen mehr als Marken. Ein echter regionaler Kunde
 Nein. Wir entwickeln die Themen, führen die Gespräche und schreiben die Grundstruktur. Ihr liefert das Wissen, wir die Umsetzung.
 
 ### Welche Plattform ist die richtige?
-Hochformat-Clips eignen sich gleichzeitig für Instagram, TikTok, Facebook und LinkedIn. Einmal produziert, überall einsetzbar.`
+Hochformat-Clips eignen sich gleichzeitig für Instagram, TikTok, Facebook und LinkedIn. Einmal produziert, überall einsetzbar.\``
   },
   {
     id: "23",
@@ -1402,7 +1402,7 @@ Ein gut eingesetzter Imagefilm kann über mehrere Jahre laufen, den Vertrieb ent
 Ja, und das empfehlen wir immer. Aus dem Rohmaterial entstehen in der Nachbearbeitung oft 4–6 kurze Clips für Instagram oder LinkedIn, ohne extra Drehtag.
 
 ### Warum sind manche Angebote so günstig?
-Günstige Angebote sparen meist bei Konzept und Strategie. Das Ergebnis sieht nett aus – bewegt aber kaum jemanden. Im schlimmsten Fall hinterlässt es einen unprofessionellen Eindruck.`
+Günstige Angebote sparen meist bei Konzept und Strategie. Das Ergebnis sieht nett aus – bewegt aber kaum jemanden. Im schlimmsten Fall hinterlässt es einen unprofessionellen Eindruck.\``
   },
   {
     id: "24",
@@ -1457,7 +1457,7 @@ Die drei häufigsten Fehler dabei:
 Für die Website gilt: 90 bis 150 Sekunden sind ideal. Länger verliert die meisten Zuschauer.
 
 ### Wer sollte im Video zu sehen sein?
-Idealerweise eine Mischung: ein kurzes Statement der Führung für Vertrauen, und ein Mitarbeiter oder zwei für Nähe und Identifikation.`
+Idealerweise eine Mischung: ein kurzes Statement der Führung für Vertrauen, und ein Mitarbeiter oder zwei für Nähe und Identifikation.\``
   },
   {
     id: "25",
@@ -1511,7 +1511,7 @@ Eine grobe Orientierung: Wenn mehr als 25–35% der Menschen, die euer Video seh
 Ja. Wenn viele Leute sofort wegschauen, wertet die Plattform das Video als "nicht relevant" – und zeigt es weniger Leuten oder teurer.
 
 ### Wann ist eine Video-Anzeige wirklich profitabel?
-Wenn der Einstieg hält (3-Sekunden-Rate gut) und die Leute auch lange genug bleiben, um die Botschaft zu verstehen. Beide Werte zusammen entscheiden den Erfolg.`
+Wenn der Einstieg hält (3-Sekunden-Rate gut) und die Leute auch lange genug bleiben, um die Botschaft zu verstehen. Beide Werte zusammen entscheiden den Erfolg.\``
   },
   {
     id: "26",
@@ -1568,7 +1568,7 @@ Das klingt technisch, hat aber einen sehr praktischen Hintergrund: Ein kaputtes 
 Color Grading bedeutet: die Farben im Video anpassen, damit sie eine bestimmte Stimmung erzeugen. Kältere Töne wirken technischer und distanzierter, wärmere Töne wirken nahbarer und bodenständiger. Für professionelle Videos ist das Standard.
 
 ### Lohnt es sich, den Schnitt outzusourcen?
-In den meisten Fällen ja. Guter Schnitt braucht Erfahrung, Software und – vor allem – ein dramaturgisches Gespür. Das lässt sich nicht mal eben lernen.`
+In den meisten Fällen ja. Guter Schnitt braucht Erfahrung, Software und – vor allem – ein dramaturgisches Gespür. Das lässt sich nicht mal eben lernen.\``
   },
   {
     id: "27",
@@ -1675,7 +1675,7 @@ Das kommt vor. In solchen Fällen fange ich immer mit einem kurzen "Off-Camera"-
 Niemals. Auswendig Gelerntes klingt genau so – auswendig gelernt. Wir arbeiten mit Leitfragen und natürlichem Gespräch. Was rauskommt, ist immer besser als jedes einstudierte Statement.
 
 ### Wie viele Takes sind normal?
-Drei bis fünf Takes für eine gute Aussage sind vollkommen normal. Manchmal sind es mehr – und manchmal trifft der erste Take schon perfekt. Es kommt auf den Tag an. Deswegen: sportlich nehmen.`
+Drei bis fünf Takes für eine gute Aussage sind vollkommen normal. Manchmal sind es mehr – und manchmal trifft der erste Take schon perfekt. Es kommt auf den Tag an. Deswegen: sportlich nehmen.\``
   }
 ];
 
