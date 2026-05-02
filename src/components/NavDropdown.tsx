@@ -37,7 +37,7 @@ export function NavDropdown({ title, path, items, isActive, isSpecial }: NavDrop
         <Link
           to={path}
           className={cn(
-            "text-sm font-medium tracking-wide transition-all hover:text-brand-accent py-2 flex items-center gap-1 whitespace-nowrap",
+            "text-sm font-medium tracking-wide transition-all hover:text-brand-accent py-2 flex items-center gap-1 whitespace-nowrap shrink-0",
             isActive ? "text-brand-accent" : "text-gray-300",
             isSpecial && "px-3 py-1.5 rounded-full border border-white/10 bg-white/5 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
           )}

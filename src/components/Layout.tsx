@@ -124,16 +124,16 @@ export function Layout() {
             : "bg-transparent py-6"
         )}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
-          <div className="w-64 flex justify-start">
-            <Link to="/" className="group text-2xl font-display font-bold tracking-tighter flex items-center">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-4">
+          <div className="flex-none lg:w-40 xl:w-64 flex justify-start shrink-0">
+            <Link to="/" className="group text-xl xl:text-2xl font-display font-bold tracking-tighter flex items-center whitespace-nowrap">
               <span className="text-brand-accent transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,164,107,0.4)]">Rezai</span>
               <span className="text-white transition-all duration-300">Vision</span>
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-10 px-4">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 xl:gap-8 px-2">
             <NavDropdown 
               title="Leistungen" 
               path="/leistungen" 
@@ -146,7 +146,7 @@ export function Layout() {
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "relative text-[15px] font-medium tracking-wide transition-all duration-300 py-2 whitespace-nowrap group",
+                  "relative text-sm xl:text-[15px] font-medium tracking-wide transition-all duration-300 py-2 whitespace-nowrap group flex-shrink-0",
                   location.pathname === link.path ? "text-white" : "text-white/70 hover:text-white"
                 )}
               >
@@ -171,7 +171,7 @@ export function Layout() {
             />
           </nav>
 
-          <div className="w-64 flex justify-end items-center">
+          <div className="flex-none lg:w-40 xl:w-64 flex justify-end items-center shrink-0">
             <div className="hidden lg:block">
               <Button 
                 href="/kontakt" 

@@ -6,6 +6,34 @@ import { SEO } from "@/components/SEO";
 export default function Pricing() {
   const packages = [
     {
+      title: "Content-Partnerschaft",
+      price: "Monatlicher Retainer",
+      desc: "Dauerhafte Sichtbarkeit ohne internen Aufwand. Rezai Vision begleitet Unternehmen kontinuierlich beim Aufbau einer digitalen Präsenz auf LinkedIn und Instagram durch regelmäßigen, strategischen Content.",
+      features: [
+        "Monatliche Strategie-Calls",
+        "Effiziente Batch-Produktion",
+        "Multi-Plattform Verwertung",
+        "Konstante Qualitätskontrolle",
+        "Exklusive Partner-Betreuung"
+      ],
+      popular: true,
+      href: "/kontakt?service=social-media"
+    },
+    {
+      title: "Recruiting-System",
+      price: "Auf Anfrage",
+      desc: "Automatisierte Mitarbeitergewinnung statt passiver Stellenausschreibung. Wir entwickeln Content-Strategien, die Fachkräfte dort erreichen, wo sie scrollen, und Hürden im Bewerberprozess abbauen.",
+      features: [
+        "Mitarbeiter-Profiling",
+        "Fokus auf Arbeitgeber-Vorteile",
+        "Optimiert für Social Ads (9:16)",
+        "Mobile-First-Optimierung",
+        "Schnelle Bereitstellung"
+      ],
+      popular: false,
+      href: "/kontakt?service=recruiting"
+    },
+    {
       title: "Marken-Storytelling",
       price: "Auf Anfrage",
       desc: "Die visuelle Visitenkarte Ihres Unternehmens. Rezai Vision übersetzt Identität in eine Bildsprache, die auf Ihrer Website gezielt Vertrauen bei Neukunden aufbaut und die Markenautorität stärkt.",
@@ -20,20 +48,6 @@ export default function Pricing() {
       href: "/kontakt?service=unternehmensfilm"
     },
     {
-      title: "Recruiting-System",
-      price: "Auf Anfrage",
-      desc: "Automatisierte Mitarbeitergewinnung statt passiver Stellenausschreibung. Wir entwickeln Content-Strategien, die Fachkräfte dort erreichen, wo sie scrollen, und Hürden im Bewerberprozess abbauen.",
-      features: [
-        "Mitarbeiter-Profiling",
-        "Fokus auf Arbeitgeber-Vorteile",
-        "Optimiert für Social Ads (9:16)",
-        "Mobile-First-Optimierung",
-        "Schnelle Bereitstellung"
-      ],
-      popular: true,
-      href: "/kontakt?service=recruiting"
-    },
-    {
       title: "Performance-Ads",
       price: "Auf Anfrage",
       desc: "Visueller Treibstoff für Ihr Marketing. Verkaufspsychologisch optimierte Kurzvideos für Meta, LinkedIn oder TikTok, die gezielt darauf ausgelegt sind, messbare Leads und Interaktionen zu generieren.",
@@ -46,20 +60,6 @@ export default function Pricing() {
       ],
       popular: false,
       href: "/kontakt?service=werbevideo"
-    },
-    {
-      title: "Content-Partnerschaft",
-      price: "Monatlicher Retainer",
-      desc: "Dauerhafte Sichtbarkeit ohne internen Aufwand. Rezai Vision begleitet Unternehmen kontinuierlich beim Aufbau einer digitalen Präsenz auf LinkedIn und Instagram durch regelmäßigen, strategischen Content.",
-      features: [
-        "Monatliche Strategie-Calls",
-        "Effiziente Batch-Produktion",
-        "Multi-Plattform Verwertung",
-        "Konstante Qualitätskontrolle",
-        "Exklusive Partner-Betreuung"
-      ],
-      popular: false,
-      href: "/kontakt?service=social-media"
     }
   ];
 
@@ -81,10 +81,10 @@ export default function Pricing() {
             Ehrliche Preise. Echte Ergebnisse.
           </div>
           <h1 className="text-5xl md:text-6xl font-display font-bold tracking-tighter mb-6">
-            Top-Qualität ist <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">keine Budget-Frage.</span>
+            Investitionen, die <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accent-hover">Wachstum schaffen.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto">
-            Wir beenden das Zeitalter der undurchsichtigen Agentur-Preise. Mit schlanken Strukturen und Fokus auf das Wesentliche liefern wir Ergebnisse, die sich für Sie rechnen.
+            Keine starren Standard-Preise, sondern maßgeschneiderte Lösungen. Wir entwickeln für jedes Budget die maximale Wirkung – transparent, effizient und ergebnisorientiert.
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function Pricing() {
               <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                 {pkg.desc}
               </p>
-              <div className="text-4xl font-display font-bold mb-8 text-white shrink-0">
+              <div className="text-2xl font-display font-bold mb-8 text-white shrink-0">
                 {pkg.price}
               </div>
               

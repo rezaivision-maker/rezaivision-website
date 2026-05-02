@@ -19,8 +19,8 @@ export default function PrivateEvents() {
     
     // Web3Forms Configuration
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "e24b689a-c3cd-4bd2-a0c2-cb3bb1a74e65");
-    formData.append("subject", "Neue Anfrage: Rezai Emotion (Hochzeit/Event/Musikvideo)");
-    formData.append("from_name", "Rezai Emotion Website");
+    formData.append("subject", "Neue Anfrage: reza-e-motion (Hochzeit/Event/Musikvideo)");
+    formData.append("from_name", "reza-e-motion Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -45,10 +45,10 @@ export default function PrivateEvents() {
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg">
       <SEO 
-        title="Rezai|Emotion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP"
+        title="reza-e-motion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP"
         description="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland."
-        canonical="/reza-e-motion" />
-        <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo"
+        canonical="/reza-e-motion"
+        keywords="reza-e-motion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo"
       />
       
       {/* Hero Section */}
@@ -65,7 +65,7 @@ export default function PrivateEvents() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-6">
               <span className="w-2 h-2 rounded-full bg-purple-500" />
-              Rezai|Emotion
+              reza-e-motion
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
               Emotionen, die <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">bleiben.</span>
