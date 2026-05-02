@@ -9,7 +9,7 @@ export default function EventCoverage() {
   return (
     <div className="flex flex-col min-h-screen">
       <SEO 
-        title="Eventbegleitung & Aftermovies | Videograf Kaiserslautern, Mannheim & Saarbrücken"
+        title="Eventbegleitung & Aftermovies | Rezai Vision"
         description="Professionelle Eventbegleitung und Aftermovies in Kaiserslautern, Mannheim und der Pfalz. Wir fangen die Energie deines Events ein – unauffällig und hochwertig."
         canonical="/reza-e-motion/eventbegleitung"
         keywords="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo"

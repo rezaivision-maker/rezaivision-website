@@ -267,7 +267,7 @@ export default function Contact() {
           </div>
           <div className="w-full h-[450px] rounded-3xl overflow-hidden border border-white/5 grayscale invert opacity-80 hover:grayscale-0 hover:invert-0 hover:opacity-100 transition-all duration-700">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.346514757534!2d7.747353376878368!3d49.42125696089753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796699666666667%3A0x6666666666666666!2sErfurter%20Str.%2093%2C%2067663%20Kaiserslautern!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.3!2d7.7474!3d49.4213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47966996b5a5e2a1%3A0x422435029b0c810!2sErfurter%20Str.%2093%2C%2067663%20Kaiserslautern!5e0!3m2!1sde!2sde!4v1714600000000!5m2!1sde!2sde"
               width="100%"
               height="100%"
               style={{ border: 0 }}

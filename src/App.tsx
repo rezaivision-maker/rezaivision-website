@@ -3,37 +3,50 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import CorporateVideo from "./pages/CorporateVideo";
-import RecruitingVideo from "./pages/RecruitingVideo";
-import SocialAds from "./pages/SocialAds";
-import SocialRetainer from "./pages/SocialRetainer";
-import PrivateEvents from "./pages/PrivateEvents";
-import EventCoverage from "./pages/EventCoverage";
-import MusicVideos from "./pages/MusicVideos";
-import WeddingFilms from "./pages/WeddingFilms";
-import Work from "./pages/Work";
-import Pricing from "./pages/Pricing";
-import About from "./pages/About";
-import Equipment from "./pages/Equipment";
-import FAQ from "./pages/FAQ";
-import Contact from "./pages/Contact";
-import Imprint from "./pages/Imprint";
-import Privacy from "./pages/Privacy";
-import AGB from "./pages/AGB";
-import Success from "./pages/Success";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import GlossaryIndex from "./pages/Glossary";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import NotFound from "./pages/NotFound";
-import Forbidden from "./pages/Forbidden";
-import ServerError from "./pages/ServerError";
-import Maintenance from "./pages/Maintenance";
 import { Analytics } from "./components/Analytics";
+
+// Critical: Home is loaded eagerly for fastest first paint
+import Home from "./pages/Home";
+
+// Lazy-loaded pages – each becomes its own chunk
+const Services = lazy(() => import("./pages/Services"));
+const CorporateVideo = lazy(() => import("./pages/CorporateVideo"));
+const RecruitingVideo = lazy(() => import("./pages/RecruitingVideo"));
+const SocialAds = lazy(() => import("./pages/SocialAds"));
+const SocialRetainer = lazy(() => import("./pages/SocialRetainer"));
+const PrivateEvents = lazy(() => import("./pages/PrivateEvents"));
+const EventCoverage = lazy(() => import("./pages/EventCoverage"));
+const MusicVideos = lazy(() => import("./pages/MusicVideos"));
+const WeddingFilms = lazy(() => import("./pages/WeddingFilms"));
+const Work = lazy(() => import("./pages/Work"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const About = lazy(() => import("./pages/About"));
+const Equipment = lazy(() => import("./pages/Equipment"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Imprint = lazy(() => import("./pages/Imprint"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const AGB = lazy(() => import("./pages/AGB"));
+const Success = lazy(() => import("./pages/Success"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const GlossaryIndex = lazy(() => import("./pages/Glossary"));
+const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Forbidden = lazy(() => import("./pages/Forbidden"));
+const ServerError = lazy(() => import("./pages/ServerError"));
+const Maintenance = lazy(() => import("./pages/Maintenance"));
+
+function PageLoader() {
+  return (
+    <div className="flex items-center justify-center min-h-[60vh]">
+      <div className="w-8 h-8 border-2 border-brand-accent/30 border-t-brand-accent rounded-full animate-spin" />
+    </div>
+  );
+}
 
 export default function App() {
   return (
@@ -42,35 +55,35 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="leistungen" element={<Services />} />
-          <Route path="leistungen/unternehmensfilm" element={<CorporateVideo />} />
-          <Route path="leistungen/recruiting" element={<RecruitingVideo />} />
-          <Route path="leistungen/werbevideo" element={<SocialAds />} />
-          <Route path="leistungen/social-media" element={<SocialRetainer />} />
-          <Route path="reza-e-motion" element={<PrivateEvents />} />
-          <Route path="reza-e-motion/eventbegleitung" element={<EventCoverage />} />
-          <Route path="reza-e-motion/musikvideos" element={<MusicVideos />} />
-          <Route path="reza-e-motion/hochzeitsfilme" element={<WeddingFilms />} />
-          <Route path="referenzen" element={<Work />} />
-          <Route path="preise" element={<Pricing />} />
-          <Route path="ueber-uns" element={<About />} />
-          <Route path="technik" element={<Equipment />} />
-          <Route path="faq" element={<FAQ />} />
-          <Route path="glossar" element={<GlossaryIndex />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="blog/:slug" element={<BlogPost />} />
-          <Route path="kontakt" element={<Contact />} />
-          <Route path="impressum" element={<Imprint />} />
-          <Route path="datenschutz" element={<Privacy />} />
-          <Route path="agb" element={<AGB />} />
-          <Route path="danke" element={<Success />} />
-          <Route path="admin" element={<AdminDashboard />} />
+          <Route path="leistungen" element={<Suspense fallback={<PageLoader />}><Services /></Suspense>} />
+          <Route path="leistungen/unternehmensfilm" element={<Suspense fallback={<PageLoader />}><CorporateVideo /></Suspense>} />
+          <Route path="leistungen/recruiting" element={<Suspense fallback={<PageLoader />}><RecruitingVideo /></Suspense>} />
+          <Route path="leistungen/werbevideo" element={<Suspense fallback={<PageLoader />}><SocialAds /></Suspense>} />
+          <Route path="leistungen/social-media" element={<Suspense fallback={<PageLoader />}><SocialRetainer /></Suspense>} />
+          <Route path="reza-e-motion" element={<Suspense fallback={<PageLoader />}><PrivateEvents /></Suspense>} />
+          <Route path="reza-e-motion/eventbegleitung" element={<Suspense fallback={<PageLoader />}><EventCoverage /></Suspense>} />
+          <Route path="reza-e-motion/musikvideos" element={<Suspense fallback={<PageLoader />}><MusicVideos /></Suspense>} />
+          <Route path="reza-e-motion/hochzeitsfilme" element={<Suspense fallback={<PageLoader />}><WeddingFilms /></Suspense>} />
+          <Route path="referenzen" element={<Suspense fallback={<PageLoader />}><Work /></Suspense>} />
+          <Route path="preise" element={<Suspense fallback={<PageLoader />}><Pricing /></Suspense>} />
+          <Route path="ueber-uns" element={<Suspense fallback={<PageLoader />}><About /></Suspense>} />
+          <Route path="technik" element={<Suspense fallback={<PageLoader />}><Equipment /></Suspense>} />
+          <Route path="faq" element={<Suspense fallback={<PageLoader />}><FAQ /></Suspense>} />
+          <Route path="glossar" element={<Suspense fallback={<PageLoader />}><GlossaryIndex /></Suspense>} />
+          <Route path="blog" element={<Suspense fallback={<PageLoader />}><Blog /></Suspense>} />
+          <Route path="blog/:slug" element={<Suspense fallback={<PageLoader />}><BlogPost /></Suspense>} />
+          <Route path="kontakt" element={<Suspense fallback={<PageLoader />}><Contact /></Suspense>} />
+          <Route path="impressum" element={<Suspense fallback={<PageLoader />}><Imprint /></Suspense>} />
+          <Route path="datenschutz" element={<Suspense fallback={<PageLoader />}><Privacy /></Suspense>} />
+          <Route path="agb" element={<Suspense fallback={<PageLoader />}><AGB /></Suspense>} />
+          <Route path="danke" element={<Suspense fallback={<PageLoader />}><Success /></Suspense>} />
+          <Route path="admin" element={<Suspense fallback={<PageLoader />}><AdminDashboard /></Suspense>} />
           
           {/* Error Pages */}
-          <Route path="403" element={<Forbidden />} />
-          <Route path="500" element={<ServerError />} />
-          <Route path="503" element={<Maintenance />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="403" element={<Suspense fallback={<PageLoader />}><Forbidden /></Suspense>} />
+          <Route path="500" element={<Suspense fallback={<PageLoader />}><ServerError /></Suspense>} />
+          <Route path="503" element={<Suspense fallback={<PageLoader />}><Maintenance /></Suspense>} />
+          <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFound /></Suspense>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -10,8 +10,8 @@ export default function MusicVideos() {
       <SEO 
         title="Musikvideo Kaiserslautern | Regisseur Rheinland-Pfalz & Saarland"
         description="Professionelle Musikvideos in RLP, Kaiserslautern & Mannheim. Von Konzept- bis Performance-Videos. Wir erschaffen deine visuelle Identität."
-        canonical="/reza-e-motion/musikvideos" />
-        <meta name="keywords" content="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video"
+        canonical="/reza-e-motion/musikvideos"
+        keywords="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video"
       />
 
       {/* Hero Section */}
