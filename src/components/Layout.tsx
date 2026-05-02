@@ -142,8 +142,8 @@ export function Layout() {
             : "bg-transparent py-6"
         )}
       >
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-4">
-          <div className="flex-none lg:w-40 xl:w-64 flex justify-start shrink-0">
+        <div className="max-w-[1500px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-2 xl:gap-4">
+          <div className="flex-none flex justify-start shrink-0">
             <Link to="/" className="group text-xl xl:text-2xl font-display font-bold tracking-tighter flex items-center whitespace-nowrap">
               <span className="text-brand-accent transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,164,107,0.4)]">Rezai</span>
               <span className="text-white transition-all duration-300">Vision</span>
@@ -151,7 +151,7 @@ export function Layout() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-1 xl:gap-8 px-2">
+          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-8 px-2 mx-auto">
             <NavDropdown 
               title="Leistungen" 
               path="/leistungen" 
@@ -189,7 +189,7 @@ export function Layout() {
             />
           </nav>
 
-          <div className="flex-none lg:w-40 xl:w-64 flex justify-end items-center shrink-0">
+          <div className="flex-none flex justify-end items-center shrink-0">
             <div className="hidden lg:block">
               <Button 
                 href="/kontakt" 
@@ -197,7 +197,7 @@ export function Layout() {
                 size="sm" 
                 className="px-6 py-2.5 whitespace-nowrap shadow-[0_0_20px_rgba(200,164,107,0.1)] hover:shadow-[0_0_30px_rgba(200,164,107,0.25)] transition-all duration-300 hover:-translate-y-0.5"
               >
-                Projekt-Check
+                Projekt anfragen
               </Button>
             </div>
 
