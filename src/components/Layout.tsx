@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music, ChevronDown } from "lucide-react";
+import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
 import { CookieBanner } from "./ui/CookieBanner";
 import { SEO } from "./SEO";
-import { NavDropdown } from "./NavDropdown";
-import { AnimatePresence, motion } from "motion/react";
 
 const navLinks = [
+  { name: "Leistungen", path: "/leistungen" },
   { name: "Referenzen", path: "/#showreel" },
   { name: "Preise", path: "/preise" },
   { name: "Technik", path: "/technik" },
@@ -16,24 +15,9 @@ const navLinks = [
   { name: "Kontakt", path: "/kontakt" },
 ];
 
-const leistungenItems = [
-  { name: "Unternehmensfilm", path: "/leistungen/unternehmensfilm", desc: "Strategisches Branding & Vertrauen" },
-  { name: "Recruiting Video", path: "/leistungen/recruiting", desc: "Automatisierte Mitarbeitergewinnung" },
-  { name: "Social Ads", path: "/leistungen/werbevideo", desc: "Messbare Leads & Verkaufspsychologie" },
-  { name: "Social Media Retainer", path: "/leistungen/social-media", desc: "Dauerhafte Präsenz & Betreuung" }
-];
-
-const rezaEmotionItems = [
-  { name: "Eventbegleitung", path: "/reza-e-motion/eventbegleitung", desc: "Aftermovies & Highlights" },
-  { name: "Musikvideos", path: "/reza-e-motion/musikvideos", desc: "Kreative Visuals für Artists" },
-  { name: "Hochzeitsfilme", path: "/reza-e-motion/hochzeitsfilme", desc: "Emotionale Erinnerungen" }
-];
-
 export function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileLeistungenOpen, setMobileLeistungenOpen] = useState(false);
-  const [mobileRezaOpen, setMobileRezaOpen] = useState(false);
   const location = useLocation();
 
   // Breadcrumb logic for SEO
@@ -57,8 +41,6 @@ export function Layout() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    setMobileLeistungenOpen(false);
-    setMobileRezaOpen(false);
     if (location.hash) {
       setTimeout(() => {
         const id = location.hash.replace('#', '');
@@ -107,6 +89,21 @@ export function Layout() {
             "name": "Rezai Vision",
             "url": "https://www.rezaivision.de",
             "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772567552/Rechteck_ts5rt1.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+49-176-31739958",
+              "contactType": "customer service",
+              "areaServed": "DE",
+              "availableLanguage": ["German", "English"]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Erfurter Straße 93",
+              "addressLocality": "Kaiserslautern",
+              "postalCode": "67663",
+              "addressRegion": "Rheinland-Pfalz",
+              "addressCountry": "DE"
+            },
             "sameAs": [
               "https://www.instagram.com/rezaivision",
               "https://www.facebook.com/rezaivision",
@@ -131,41 +128,37 @@ export function Layout() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex shrink-0 items-center justify-center gap-4 xl:gap-8">
-            <NavDropdown 
-              title="Leistungen" 
-              path="/leistungen" 
-              items={leistungenItems} 
-              isActive={location.pathname.startsWith("/leistungen")}
-            />
-            
+          <nav className="hidden lg:flex shrink-0 items-center justify-center gap-6 xl:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-brand-accent whitespace-nowrap",
+                  "text-sm font-medium tracking-wide transition-all duration-300 hover:text-brand-accent hover:scale-105 whitespace-nowrap",
                   location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            
-            <div className="w-px h-6 bg-white/10 mx-2" />
-            
-            <NavDropdown 
-              title="reza-e-motion" 
-              path="/reza-e-motion" 
-              items={rezaEmotionItems} 
-              isActive={location.pathname.startsWith("/reza-e-motion")}
-              isSpecial
-            />
+            <div className="w-px h-5 bg-white/10 mx-1" />
+            <Link
+              to="/reza-e-motion"
+              className={cn(
+                "text-xs font-bold tracking-widest px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-2 border whitespace-nowrap uppercase",
+                location.pathname === "/reza-e-motion" 
+                  ? "bg-purple-500/20 text-purple-400 border-purple-500/40" 
+                  : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
+              )}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+              reza-e-motion
+            </Link>
           </nav>
 
           <div className="flex-1 flex justify-end items-center">
-            <div className="hidden lg:block">
-              <Button href="/kontakt" variant="primary" size="sm">
+            <div className="hidden lg:block ml-4">
+              <Button href="/kontakt" variant="primary" size="sm" className="px-6 py-2 shadow-lg shadow-brand-accent/10">
                 Projekt-Check
               </Button>
             </div>
@@ -182,104 +175,42 @@ export function Layout() {
       </header>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-brand-bg pt-24 px-6 pb-6 flex flex-col overflow-y-auto"
-          >
-            <nav className="flex flex-col gap-4 text-2xl font-display font-semibold">
-              {/* Mobile Leistungen Accordion */}
-              <div>
-                <button 
-                  onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
-                  className={cn(
-                    "flex items-center justify-between w-full py-2 transition-colors",
-                    location.pathname.startsWith("/leistungen") ? "text-brand-accent" : "text-gray-300"
-                  )}
-                >
-                  Leistungen
-                  <ChevronDown className={cn("transition-transform duration-300", mobileLeistungenOpen && "rotate-180")} />
-                </button>
-                <AnimatePresence>
-                  {mobileLeistungenOpen && (
-                    <motion.div 
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden flex flex-col gap-4 pl-4 mt-2 border-l border-brand-accent/20"
-                    >
-                      <Link to="/leistungen" className="text-lg text-brand-accent font-bold">Übersicht: Alle Leistungen</Link>
-                      <div className="w-8 h-px bg-white/10 my-1" />
-                      {leistungenItems.map(item => (
-                        <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={cn(
-                    "py-2 transition-colors hover:text-brand-accent",
-                    location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
-
-              <div className="w-full h-px bg-white/10 my-2" />
-
-              {/* Mobile Reza Accordion */}
-              <div>
-                <button 
-                  onClick={() => setMobileRezaOpen(!mobileRezaOpen)}
-                  className={cn(
-                    "flex items-center justify-between w-full py-3 px-4 rounded-xl border transition-all",
-                    location.pathname.startsWith("/reza-e-motion") 
-                      ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
-                      : "bg-white/5 text-gray-300 border-white/10"
-                  )}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-purple-500" />
-                    reza-e-motion
-                  </div>
-                  <ChevronDown className={cn("transition-transform duration-300", mobileRezaOpen && "rotate-180")} />
-                </button>
-                <AnimatePresence>
-                  {mobileRezaOpen && (
-                    <motion.div 
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden flex flex-col gap-4 pl-4 mt-4 border-l border-purple-500/30"
-                    >
-                      <Link to="/reza-e-motion" className="text-lg text-purple-400 font-bold">Übersicht: reza-e-motion</Link>
-                      <div className="w-8 h-px bg-white/10 my-1" />
-                      {rezaEmotionItems.map(item => (
-                        <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </nav>
-            <div className="mt-auto pb-8">
-              <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-4 text-xl">
-                Projekt-Check anfordern
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-brand-bg pt-24 px-6 pb-6 flex flex-col">
+          <nav className="flex flex-col gap-6 text-2xl font-display font-semibold">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={cn(
+                  "transition-colors hover:text-brand-accent",
+                  location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="w-full h-px bg-white/10 my-2" />
+            <Link
+              to="/reza-e-motion"
+              className={cn(
+                "transition-all flex items-center gap-3 px-4 py-3 rounded-xl border",
+                location.pathname === "/reza-e-motion" 
+                  ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
+                  : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
+              )}
+            >
+              <span className="w-2 h-2 rounded-full bg-purple-500" />
+              reza-e-motion
+            </Link>
+          </nav>
+          <div className="mt-auto pb-8">
+            <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-3">
+              Kostenlosen Projekt-Check anfordern
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="flex-grow">
