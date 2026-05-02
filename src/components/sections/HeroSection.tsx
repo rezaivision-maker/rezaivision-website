@@ -50,7 +50,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed"
             >
-              Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und LinkedIn, der Vertrauen aufbaut und messbare Ergebnisse im Südwesten erzielt.
+              Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut und messbare Ergebnisse im Südwesten erzielt.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
