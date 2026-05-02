@@ -16,7 +16,8 @@ export default function Pricing() {
         "Sounddesign & Korrekturschleifen",
         "Optimierte Formate für Web"
       ],
-      popular: false
+      popular: false,
+      href: "/kontakt?service=unternehmensfilm"
     },
     {
       title: "Recruiting Video",
@@ -29,7 +30,8 @@ export default function Pricing() {
         "Social Media Ready (9:16 + 16:9)",
         "Schnelle Umsetzung"
       ],
-      popular: true
+      popular: true,
+      href: "/kontakt?service=recruiting"
     },
     {
       title: "Werbevideo / Ads",
@@ -42,7 +44,8 @@ export default function Pricing() {
         "Social Ads Optimierung",
         "Hoher Wiedererkennungswert"
       ],
-      popular: false
+      popular: false,
+      href: "/kontakt?service=werbevideo"
     },
     {
       title: "Social Media Retainer",
@@ -55,7 +58,8 @@ export default function Pricing() {
         "Feste Budget-Kontrolle",
         "Exklusive Partner-Betreuung"
       ],
-      popular: false
+      popular: false,
+      href: "/kontakt?service=social-media"
     }
   ];
 
@@ -116,8 +120,8 @@ export default function Pricing() {
                 ))}
               </ul>
               
-              <Button href="/kontakt" variant={pkg.popular ? "primary" : "outline"} className="w-full">
-                Anfragen
+              <Button href={pkg.href} variant={pkg.popular ? "primary" : "outline"} className="w-full">
+                Jetzt anfragen →
               </Button>
             </motion.div>
           ))}

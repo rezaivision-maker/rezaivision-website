@@ -77,7 +77,7 @@ export function TrustSection() {
                 <div key={i} className="flex gap-16 md:gap-24 items-center">
                   {[
                     { name: "KSL - Klinikum Südwestpfalz Logistik", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650602/ksl_logo_header_25_xkxnfe.webp" },
-                    { name: "Paff - Tradition & Qualität", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650428/Paff_LOGO_afp43m.webp" },
+                    { name: "PFAFF Industriesysteme & Maschinen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775651283/Paff_avfrx2.webp" },
                     { name: "KSB Rechtsanwälte Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650320/KSB-Rechtsanwaelte_Logo_xr32rm.webp" },
                     { name: "Vertriebspartner24", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650099/Vertriebspartner24_sclkyd.webp" },
                     { name: "Social Care - Pflegedienst Management", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650095/socialcare-logo_d5acj2.webp" },
