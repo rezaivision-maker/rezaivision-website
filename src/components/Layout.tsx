@@ -118,20 +118,22 @@ export function Layout() {
       {/* Header */}
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-brand-bg/90 backdrop-blur-md py-4 border-b border-white/5" : "bg-transparent py-6"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          isScrolled 
+            ? "bg-brand-bg/95 backdrop-blur-lg py-3 border-b border-brand-accent/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]" 
+            : "bg-transparent py-6"
         )}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
           <div className="w-64 flex justify-start">
-            <Link to="/" className="text-2xl font-display font-bold tracking-tighter flex items-center">
-              <span className="text-brand-accent">Rezai</span>
-              <span className="text-white">Vision</span>
+            <Link to="/" className="group text-2xl font-display font-bold tracking-tighter flex items-center">
+              <span className="text-brand-accent transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,164,107,0.4)]">Rezai</span>
+              <span className="text-white transition-all duration-300">Vision</span>
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-8 px-4">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-10 px-4">
             <NavDropdown 
               title="Leistungen" 
               path="/leistungen" 
@@ -144,11 +146,19 @@ export function Layout() {
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "text-sm font-medium tracking-wide transition-all duration-300 hover:text-brand-accent whitespace-nowrap",
-                  location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
+                  "relative text-[15px] font-medium tracking-wide transition-all duration-300 py-2 whitespace-nowrap group",
+                  location.pathname === link.path ? "text-white" : "text-white/70 hover:text-white"
                 )}
               >
                 {link.name}
+                {location.pathname === link.path && (
+                  <motion.div 
+                    layoutId="nav-active"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-accent rounded-full"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent/50 rounded-full transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
             <div className="w-px h-5 bg-white/10 mx-1 shrink-0" />
@@ -163,7 +173,12 @@ export function Layout() {
 
           <div className="w-64 flex justify-end items-center">
             <div className="hidden lg:block">
-              <Button href="/kontakt" variant="primary" size="sm" className="px-6 py-2 whitespace-nowrap shadow-lg shadow-brand-accent/10">
+              <Button 
+                href="/kontakt" 
+                variant="primary" 
+                size="sm" 
+                className="px-6 py-2.5 whitespace-nowrap shadow-[0_0_20px_rgba(200,164,107,0.1)] hover:shadow-[0_0_30px_rgba(200,164,107,0.25)] transition-all duration-300 hover:-translate-y-0.5"
+              >
                 Projekt-Check
               </Button>
             </div>
@@ -186,12 +201,16 @@ export function Layout() {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-brand-bg pt-24 px-6 pb-6 flex flex-col overflow-y-auto"
+            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+            className="fixed inset-0 z-40 bg-brand-bg/98 backdrop-blur-xl pt-24 px-6 pb-6 flex flex-col overflow-y-auto"
           >
-            <nav className="flex flex-col gap-4 text-2xl font-display font-semibold">
+            <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
               {/* Mobile Leistungen Accordion */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
                 <button 
                   onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
                   className={cn(
@@ -218,25 +237,40 @@ export function Layout() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
 
-              {navLinks.map((link) => (
-                <Link
+              {navLinks.map((link, index) => (
+                <motion.div
                   key={link.name}
-                  to={link.path}
-                  className={cn(
-                    "py-2 transition-colors hover:text-brand-accent",
-                    location.pathname === link.path ? "text-brand-accent" : "text-gray-300"
-                  )}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + (index + 1) * 0.05 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    to={link.path}
+                    className={cn(
+                      "py-2 transition-colors block w-full",
+                      location.pathname === link.path ? "text-brand-accent" : "text-white/90"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
 
-              <div className="w-full h-px bg-white/10 my-2" />
+              <motion.div 
+                className="w-full h-px bg-white/10 my-2"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 0.4 }}
+              />
 
               {/* Mobile Reza Accordion */}
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
                 <button 
                   onClick={() => setMobileRezaOpen(!mobileRezaOpen)}
                   className={cn(
@@ -268,9 +302,20 @@ export function Layout() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             </nav>
-            <div className="mt-auto pb-8">
+            <div className="mt-auto pb-8 flex flex-col gap-8">
+              <div className="flex justify-center gap-8 text-gray-400">
+                <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+                  <Instagram size={28} />
+                </a>
+                <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+                  <Music size={28} />
+                </a>
+                <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+                  <Facebook size={28} />
+                </a>
+              </div>
               <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-4 text-xl">
                 Projekt-Check anfordern
               </Button>
