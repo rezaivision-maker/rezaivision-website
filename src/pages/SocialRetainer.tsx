@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -74,42 +74,40 @@ export default function SocialRetainer() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <Helmet>
-        <title>Social Media Content Kaiserslautern | Video Retainer</title>
-        <meta name="description" content="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km." />
-        <link rel="canonical" href="https://www.rezaivision.de/leistungen/social-media" />
-        <meta name="keywords" content="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Social Media Retainer & Content Produktion",
-            "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Rezai Vision",
-              "url": "https://www.rezaivision.de"
-            },
-            "areaServed": [
-              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "125"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "1490.00",
-              "priceCurrency": "EUR",
-              "description": "Ab 1.490 € pro Monat zzgl. MwSt."
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Social Media Content Kaiserslautern | Video Retainer"
+        description="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km."
+        canonical="/leistungen/social-media"
+        keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Social Media Retainer & Content Produktion",
+          "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rezai Vision",
+            "url": "https://www.rezaivision.de"
+          },
+          "areaServed": [
+            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "125"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1490.00",
+            "priceCurrency": "EUR",
+            "description": "Ab 1.490 € pro Monat zzgl. MwSt."
+          }
+        }}
+      />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -207,7 +205,7 @@ export default function SocialRetainer() {
             <div className="w-full lg:w-1/2 relative">
               <div className="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop" 
                   alt="Social Media Content Creation" 
                   className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
@@ -278,7 +276,7 @@ export default function SocialRetainer() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop" 
                   alt="B2B Personal Branding Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -308,7 +306,7 @@ export default function SocialRetainer() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" 
                   alt="Lifestyle Brand Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"

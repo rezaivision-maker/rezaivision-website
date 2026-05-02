@@ -1,25 +1,25 @@
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Play, ArrowRight, CheckCircle2, Star, ChevronRight, Music, Film, Clapperboard, X } from "lucide-react";
 
 export default function MusicVideos() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Musikvideo Kaiserslautern | Regisseur Rheinland-Pfalz & Saarland</title>
-        <meta name="description" content="Professionelle Musikvideos in RLP, Kaiserslautern & Mannheim. Von Konzept- bis Performance-Videos. Wir erschaffen deine visuelle Identität." />
-        <link rel="canonical" href="https://www.rezaivision.de/reza-e-motion/musikvideos" />
-        <meta name="keywords" content="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video" />
-      </Helmet>
+      <SEO 
+        title="Musikvideo Kaiserslautern | Regisseur Rheinland-Pfalz & Saarland"
+        description="Professionelle Musikvideos in RLP, Kaiserslautern & Mannheim. Von Konzept- bis Performance-Videos. Wir erschaffen deine visuelle Identität."
+        canonical="/reza-e-motion/musikvideos" />
+        <meta name="keywords" content="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-brand-bg/90 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80"
+            loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80"
             alt="Musikvideo Background"
             className="w-full h-full object-cover opacity-30"
             referrerPolicy="no-referrer"
@@ -151,7 +151,7 @@ export default function MusicVideos() {
               </ul>
             </div>
             <div className="relative rounded-3xl overflow-hidden aspect-video gold-border-glow">
-              <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=2056&auto=format&fit=crop" alt="Film Set / Music Video Production" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img loading="lazy" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=2056&auto=format&fit=crop" alt="Film Set / Music Video Production" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 to-transparent" />
             </div>
           </div>

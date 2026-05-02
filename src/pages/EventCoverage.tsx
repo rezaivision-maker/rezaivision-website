@@ -1,6 +1,6 @@
 import { Play, ArrowRight, CheckCircle2, Star, ChevronRight, Video, Users, Target, Zap, Camera, Mic, Clock, X, MessageSquare, HelpCircle, FileText, Layout, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
 
 export default function EventCoverage() {
@@ -8,19 +8,19 @@ export default function EventCoverage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Eventbegleitung & Aftermovies | Videograf Kaiserslautern, Mannheim & Saarbrücken</title>
-        <meta name="description" content="Professionelle Eventbegleitung und Aftermovies in Kaiserslautern, Mannheim und der Pfalz. Wir fangen die Energie deines Events ein – unauffällig und hochwertig." />
-        <link rel="canonical" href="https://www.rezaivision.de/leistungen/eventbegleitung" />
-        <meta name="keywords" content="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo" />
-      </Helmet>
+      <SEO 
+        title="Eventbegleitung & Aftermovies | Videograf Kaiserslautern, Mannheim & Saarbrücken"
+        description="Professionelle Eventbegleitung und Aftermovies in Kaiserslautern, Mannheim und der Pfalz. Wir fangen die Energie deines Events ein – unauffällig und hochwertig."
+        canonical="/leistungen/eventbegleitung" />
+        <meta name="keywords" content="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-brand-bg/90 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
+            loading="lazy" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
             alt="Eventbegleitung Background"
             className="w-full h-full object-cover opacity-30"
             referrerPolicy="no-referrer"

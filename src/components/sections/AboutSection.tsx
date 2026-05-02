@@ -15,7 +15,7 @@ export function AboutSection() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden"
           >
             <img
-              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
+              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
               alt="Parsha Rezai - Filmemacher & Gründer Rezai Vision Kaiserslautern"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

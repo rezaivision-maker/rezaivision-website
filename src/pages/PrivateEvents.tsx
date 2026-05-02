@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Play, Calendar, Music, Heart, ArrowRight, Send, AlertCircle } from "lucide-react";
 import { Button } from "../components/ui/Button";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -44,12 +44,12 @@ export default function PrivateEvents() {
 
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg">
-      <Helmet>
-        <title>Rezai|Emotion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP</title>
-        <meta name="description" content="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland." />
-        <link rel="canonical" href="https://www.rezaivision.de/reza-e-motion" />
-        <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo" />
-      </Helmet>
+      <SEO 
+        title="Rezai|Emotion | Hochzeitsvideograf, Eventbegleitung & Musikvideos RLP"
+        description="Emotionale Hochzeitsvideos, Eventbegleitung und Musikvideos aus Kaiserslautern für die Region Rheinland-Pfalz & Saarland."
+        canonical="/reza-e-motion" />
+        <meta name="keywords" content="Rezai Emotion, Videograf Kaiserslautern, Eventvideografie Mannheim, Hochzeitsvideograf RLP, Saarland, Musikvideo"
+      />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
@@ -96,7 +96,7 @@ export default function PrivateEvents() {
             >
               <div className="relative aspect-video overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=1200&auto=format&fit=crop" 
                   alt="Event-Begleitung"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -132,7 +132,7 @@ export default function PrivateEvents() {
             >
               <div className="relative aspect-video overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=1200&auto=format&fit=crop" 
                   alt="Musikvideos"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -168,7 +168,7 @@ export default function PrivateEvents() {
             >
               <div className="relative aspect-video overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" 
                   alt="Hochzeitsfilme"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -230,7 +230,7 @@ export default function PrivateEvents() {
               className="relative aspect-[4/5] rounded-2xl overflow-hidden"
             >
               <img 
-                src="https://images.unsplash.com/photo-1546707012-c46675f12716?q=80&w=2069&auto=format&fit=crop" 
+                loading="lazy" src="https://images.unsplash.com/photo-1546707012-c46675f12716?q=80&w=2069&auto=format&fit=crop" 
                 alt="Konzert Videoproduktion" 
                 className="w-full h-full object-cover"
               />

@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useSpring } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Facebook, Instagram, Share2, MessageCircle, Link2, Check } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/Button";
@@ -364,23 +364,14 @@ export default function BlogPost() {
 
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg relative">
-      <Helmet>
-        <title>{post.title} | Rezai Vision Magazin</title>
-        <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://www.rezaivision.de/blog/${post.slug}`} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="og:type" content="article" />
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
-        </script>
-        {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
-        )}
-      </Helmet>
+      <SEO 
+        title={`${post.title} | Rezai Vision Magazin`}
+        description={post.excerpt}
+        canonical={`/blog/${post.slug}`}
+        image={imageUrl}
+        type="article"
+        structuredData={faqSchema ? [articleSchema, faqSchema] : articleSchema}
+      />
 
       {/* Reading Progress Bar */}
       <motion.div
@@ -392,7 +383,7 @@ export default function BlogPost() {
       <header className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
           <img 
-            src={post.image} 
+            loading="lazy" src={post.image} 
             alt={post.title}
             className="w-full h-full object-cover opacity-20 blur-sm scale-110"
           />
@@ -451,7 +442,7 @@ export default function BlogPost() {
           
           <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-white/10 shrink-0 shadow-2xl">
             <img 
-              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
+              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
               alt="Parsha Rezai" 
               className="w-full h-full object-cover"
             />
@@ -486,7 +477,7 @@ export default function BlogPost() {
               .map(related => (
                 <Link key={related.id} to={`/blog/${related.slug}`} className="group block bg-white/[0.02] rounded-3xl overflow-hidden border border-white/5 hover:border-brand-accent/50 transition-all shadow-xl hover:shadow-brand-accent/10">
                   <div className="aspect-video overflow-hidden relative">
-                    <img src={related.image.startsWith('http') ? related.image : `https://www.rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src={related.image.startsWith('http') ? related.image : `https://www.rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-80" />
                   </div>
                   <div className="p-8 -mt-10 relative z-10">

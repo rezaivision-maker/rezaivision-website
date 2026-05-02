@@ -26,7 +26,7 @@ export function TestimonialSection() {
                     <div className="relative">
                       <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10">
                         <img
-                          src={testimonial.img}
+                          loading="lazy" src={testimonial.img}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"

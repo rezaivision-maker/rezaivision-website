@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowRight, Video, Users, Target, Zap, BarChart3, Smartphone, Lightbulb } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Services() {
   const services = [
@@ -45,12 +45,12 @@ export default function Services() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <Helmet>
-        <title>Unsere Leistungen B2B | Videoproduktion Rheinland-Pfalz & Saarland</title>
-        <meta name="description" content="Unsere B2B Leistungen: Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content aus Kaiserslautern. Für Mannheim, Saarbrücken und Mainz." />
-        <link rel="canonical" href="https://www.rezaivision.de/leistungen" />
-        <meta name="keywords" content="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz" />
-      </Helmet>
+      <SEO 
+        title="Unsere Leistungen B2B | Videoproduktion Rheinland-Pfalz & Saarland"
+        description="Unsere B2B Leistungen: Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content aus Kaiserslautern. Für Mannheim, Saarbrücken und Mainz."
+        canonical="/leistungen" />
+        <meta name="keywords" content="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz"
+      />
       {/* HERO SECTION */}
       <section className="pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -174,7 +174,7 @@ export default function Services() {
                   className="w-full lg:w-1/2 relative aspect-video rounded-2xl overflow-hidden group shadow-2xl"
                 >
                   <img
-                    src={service.img}
+                    loading="lazy" src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     referrerPolicy="no-referrer"

@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/Button";
 import { motion } from "motion/react";
 import { CheckCircle2, Target, Zap, Shield, Heart, Eye } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Über uns | Rezai Vision | Videoproduktion Kaiserslautern</title>
-        <meta name="description" content="Erfahren Sie mehr über die Philosophie von Rezai Vision. Professionelle Videoproduktion aus Kaiserslautern mit über 10 Jahren Erfahrung. Strategisch, cineastisch und auf Augenhöhe." />
-        <link rel="canonical" href="https://www.rezaivision.de/ueber-uns" />
-      </Helmet>
+      <SEO 
+        title="Über uns | Rezai Vision | Videoproduktion Kaiserslautern"
+        description="Erfahren Sie mehr über die Philosophie von Rezai Vision. Professionelle Videoproduktion aus Kaiserslautern mit über 10 Jahren Erfahrung. Strategisch, cineastisch und auf Augenhöhe."
+        canonical="/ueber-uns"
+      />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         {/* HERO & INTRO */}
@@ -53,7 +53,7 @@ export default function About() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden sticky top-32"
           >
             <img
-              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
+              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
               alt="Parsha Rezai - Gründer Rezai Vision"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

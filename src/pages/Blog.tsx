@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, Filter } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
@@ -14,11 +14,11 @@ export default function Blog() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Magazin | Rezai Vision - Fachwissen & Videografie Highlights</title>
-        <meta name="description" content="Erfahren Sie mehr über Videoproduktion, Recruiting-Videos und Hochzeitsfilme in unserem Magazin. Experten-Tipps für Ihren Erfolg." />
-        <link rel="canonical" href="https://www.rezaivision.de/blog" />
-      </Helmet>
+      <SEO 
+        title="Magazin | Rezai Vision - Fachwissen & Videografie Highlights"
+        description="Erfahren Sie mehr über Videoproduktion, Recruiting-Videos und Hochzeitsfilme in unserem Magazin. Experten-Tipps für Ihren Erfolg."
+        canonical="/blog"
+      />
 
       {/* Header */}
       <div className="mb-20 px-6 md:px-12 max-w-[1400px] mx-auto w-full">
@@ -93,7 +93,7 @@ export default function Blog() {
               <Link to={`/blog/${post.slug}`} className="block">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-6 border border-white/5">
                   <img 
-                    src={post.image} 
+                    loading="lazy" src={post.image} 
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />

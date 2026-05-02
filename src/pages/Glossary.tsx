@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { motion, AnimatePresence } from "motion/react";
 import { BookOpen, Search, Camera, Aperture, Image as ImageIcon, Lightbulb, Settings2, Video, MonitorPlay, Clapperboard, Mic, ChevronDown, Info, MapPin } from "lucide-react";
 import { glossaryCategories, glossaryTerms } from "@/data/glossary";
@@ -24,26 +24,24 @@ export default function GlossaryIndex() {
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
-      <Helmet>
-        <title>Filmmaking & Videoproduktion Glossar | Rezai Vision</title>
-        <meta name="description" content="Das große Videoproduktions-Glossar von Rezai Vision. Wir erklären Fachbegriffe wie B-Roll, Color Grading, Cinematic Look und Imagefilm einfach und verständlich." />
-        <link rel="canonical" href="https://www.rezaivision.de/glossar" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "DefinedTermSet",
-            "@id": "https://www.rezaivision.de/glossar",
-            "name": "Filmmaking & Videoproduktion Glossar",
-            "description": "Das große Videoproduktions-Glossar von Rezai Vision. Erklärungen von Fachbegriffen wie B-Roll, Color Grading, Cinematic Look und mehr.",
-            "hasDefinedTerm": glossaryTerms.map(term => ({
-              "@type": "DefinedTerm",
-              "name": term.title,
-              "description": term.definition,
-              "url": `https://www.rezaivision.de/glossar#${term.id}`
-            }))
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Filmmaking & Videoproduktion Glossar | Rezai Vision"
+        description="Das große Videoproduktions-Glossar von Rezai Vision. Wir erklären Fachbegriffe wie B-Roll, Color Grading, Cinematic Look und Imagefilm einfach und verständlich."
+        canonical="/glossar"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "DefinedTermSet",
+          "@id": "https://www.rezaivision.de/glossar",
+          "name": "Filmmaking & Videoproduktion Glossar",
+          "description": "Das große Videoproduktions-Glossar von Rezai Vision. Erklärungen von Fachbegriffen wie B-Roll, Color Grading, Cinematic Look und mehr.",
+          "hasDefinedTerm": glossaryTerms.map(term => ({
+            "@type": "DefinedTerm",
+            "name": term.title,
+            "description": term.definition,
+            "url": `https://www.rezaivision.de/glossar#${term.id}`
+          }))
+        }}
+      />
 
       <div className="max-w-[1000px] mx-auto px-6 md:px-12">
         <motion.div

@@ -4,7 +4,7 @@ import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music } from 
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
 import { CookieBanner } from "./ui/CookieBanner";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "./SEO";
 
 const navLinks = [
   { name: "Leistungen", path: "/leistungen" },
@@ -56,9 +56,9 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-bg text-brand-text">
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
+      <SEO 
+        structuredData={[
+          {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": breadcrumbs.map((crumb, index) => ({
@@ -67,10 +67,8 @@ export function Layout() {
               "name": crumb.name,
               "item": `https://www.rezaivision.de${crumb.path}`
             }))
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
+          },
+          {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Rezai Vision",
@@ -84,10 +82,8 @@ export function Layout() {
               },
               "query-input": "required name=search_term_string"
             }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
+          },
+          {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Rezai Vision",
@@ -113,9 +109,9 @@ export function Layout() {
               "https://www.facebook.com/rezaivision",
               "https://www.tiktok.com/@rezaivision"
             ]
-          })}
-        </script>
-      </Helmet>
+          }
+        ]}
+      />
       {/* Header */}
       <header
         className={cn(

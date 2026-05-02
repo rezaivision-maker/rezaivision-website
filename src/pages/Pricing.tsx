@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { motion } from "motion/react";
 import { CheckCircle2, HelpCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Pricing() {
   const packages = [
@@ -61,11 +61,11 @@ export default function Pricing() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Preise & Pakete | Rezai Vision | Videoproduktion</title>
-        <meta name="description" content="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media. Top-Niveau ohne Agentur-Overhead." />
-        <link rel="canonical" href="https://www.rezaivision.de/preise" />
-      </Helmet>
+      <SEO 
+        title="Preise & Pakete | Rezai Vision | Videoproduktion"
+        description="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media. Top-Niveau ohne Agentur-Overhead."
+        canonical="/preise"
+      />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ export default function Pricing() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-md mx-auto lg:mx-0">
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
+                loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
                 alt="Parsha Rezai - Gründer Rezai Vision"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

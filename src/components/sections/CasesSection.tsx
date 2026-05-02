@@ -91,7 +91,7 @@ export function CasesSection() {
               <div className="flex flex-col gap-4 lg:gap-6">
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735612/lu%CC%88ll1_bekioh.webp" 
+                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735612/lu%CC%88ll1_bekioh.webp" 
                     alt="Imagefilm Schlossgut Lüll Weingut Rheinhessen — Rezai Vision Videoproduktion" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
@@ -100,7 +100,7 @@ export function CasesSection() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735607/Lu%CC%88ll_2_tjbakc.webp" 
+                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735607/Lu%CC%88ll_2_tjbakc.webp" 
                     alt="Weingut Atmosphäre Schlossgut Lüll — Unternehmensfilm Kaiserslautern" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
@@ -109,7 +109,7 @@ export function CasesSection() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735609/lu%CC%88ll3_uxkzzl.webp" 
+                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735609/lu%CC%88ll3_uxkzzl.webp" 
                     alt="Weinberg Landschaft Schlossgut Lüll — Imagefilm Produktion Pfalz" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
@@ -213,16 +213,16 @@ export function CasesSection() {
               {/* Right: 4 Images Grid */}
               <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:gap-6">
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775733154/Aestethic_Ink_Kaiserslautern__ppagfi.webp" alt="Aesthetic Ink Tattoo Studio Kaiserslautern — Social Media Video Ads Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775733154/Aestethic_Ink_Kaiserslautern__ppagfi.webp" alt="Aesthetic Ink Tattoo Studio Kaiserslautern — Social Media Video Ads Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734649/Aestethic_Ink_5_Kaiserslautern_e8isjk.webp" alt="Aesthetic Ink Reels Content Kaiserslautern — Beauty Marketing Videoproduktion" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734649/Aestethic_Ink_5_Kaiserslautern_e8isjk.webp" alt="Aesthetic Ink Reels Content Kaiserslautern — Beauty Marketing Videoproduktion" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734565/Ausethetik_INK_4_qnvksf.webp" alt="Aesthetic Ink Social Media Content Kaiserslautern — Werbefilm Beauty Branche" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734565/Ausethetik_INK_4_qnvksf.webp" alt="Aesthetic Ink Social Media Content Kaiserslautern — Werbefilm Beauty Branche" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734141/AestethicInk_Kaiserslautern_2_h6yrms.webp" alt="Aesthetic Ink Werbevideo Kaiserslautern — Instagram Reels Tattoo Studio" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775734141/AestethicInk_Kaiserslautern_2_h6yrms.webp" alt="Aesthetic Ink Werbevideo Kaiserslautern — Instagram Reels Tattoo Studio" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -267,10 +267,10 @@ export function CasesSection() {
                 </div>
                 <div className="grid grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775737722/Behnke1_ao07wt.webp" alt="KSB Rechtsanwälte Social Media Content Kaiserslautern — Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775737722/Behnke1_ao07wt.webp" alt="KSB Rechtsanwälte Social Media Content Kaiserslautern — Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775740583/KSB_KL_pttnwy.webp" alt="KSB Rechtsanwälte Kanzlei Video Kaiserslautern — Vertrauensaufbau durch Reels" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775740583/KSB_KL_pttnwy.webp" alt="KSB Rechtsanwälte Kanzlei Video Kaiserslautern — Vertrauensaufbau durch Reels" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
@@ -298,13 +298,13 @@ export function CasesSection() {
 
               <div className="grid grid-cols-3 gap-4 mt-2">
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" alt="Pflege mit Erfolg Recruiting Video Rodalben — Mitarbeitergewinnung Pflegebranche" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" alt="Pflege mit Erfolg Recruiting Video Rodalben — Mitarbeitergewinnung Pflegebranche" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=600" alt="Pflege Recruiting Content Rodalben Pfalz — Bewerbervideo Pflegedienst" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=600" alt="Pflege Recruiting Content Rodalben Pfalz — Bewerbervideo Pflegedienst" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600" alt="Pflege Personal finden Rodalben — Authentisches Recruiting Video Pfalz" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600" alt="Pflege Personal finden Rodalben — Authentisches Recruiting Video Pfalz" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -346,16 +346,16 @@ export function CasesSection() {
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775742144/Social_Care1_slwplk.jpg" alt="Social Care Arbeitsvermittlung Mainz — Social Media Recruiting Content" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775742144/Social_Care1_slwplk.jpg" alt="Social Care Arbeitsvermittlung Mainz — Social Media Recruiting Content" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp" alt="Social Care Talking Head Video Mainz — Instagram Reels Arbeitgeber" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp" alt="Social Care Talking Head Video Mainz — Instagram Reels Arbeitgeber" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775810388/Adonay_welde_social_care_1.12.1_d3uhxu.webp" alt="Social Care Mitarbeiterstimmen Mainz — Authentisches Employer Branding" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775810388/Adonay_welde_social_care_1.12.1_d3uhxu.webp" alt="Social Care Mitarbeiterstimmen Mainz — Authentisches Employer Branding" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775809428/Social_CAre_3.1.1_upw3fj.webp" alt="Social Care Bewerbervideo Mainz — 70 Prozent Bewerbungen über Instagram" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775809428/Social_CAre_3.1.1_upw3fj.webp" alt="Social Care Bewerbervideo Mainz — 70 Prozent Bewerbungen über Instagram" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
@@ -383,17 +383,17 @@ export function CasesSection() {
 
               <div className="grid grid-cols-[4fr_6fr] gap-4 mt-2">
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741110/pfaff1_2.3.1_hxcq6a.webp" alt="Pfaff Industrienähmaschinen Produktvideo Kaiserslautern Bensheim — Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741110/pfaff1_2.3.1_hxcq6a.webp" alt="Pfaff Industrienähmaschinen Produktvideo Kaiserslautern Bensheim — Rezai Vision" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741311/pfaff_4_1.8.2_emhgzd.webp" alt="Pfaff Nähmaschine Detail Produktfilm Kaiserslautern — Industrievideo Messe" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741311/pfaff_4_1.8.2_emhgzd.webp" alt="Pfaff Nähmaschine Detail Produktfilm Kaiserslautern — Industrievideo Messe" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741116/pfaff2_1.9.1_aju6fd.webp" alt="Pfaff Produktpräsentation Video Bensheim — Social Media Content Industrie" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741116/pfaff2_1.9.1_aju6fd.webp" alt="Pfaff Produktpräsentation Video Bensheim — Social Media Content Industrie" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow col-span-2">
-                    <img src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741113/pfaff3_1.3.1_lv6rrj.webp" alt="Pfaff Nähmaschine Nahaufnahme Produktvideo — YouTube und Messe Content" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775741113/pfaff3_1.3.1_lv6rrj.webp" alt="Pfaff Nähmaschine Nahaufnahme Produktvideo — YouTube und Messe Content" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>

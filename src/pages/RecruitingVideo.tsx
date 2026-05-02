@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -75,42 +75,40 @@ export default function RecruitingVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <Helmet>
-        <title>Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim</title>
-        <meta name="description" content="Gewinnen Sie Top-Talente mit effizienten Recruiting Videos. Authentisch, schnell und bezahlbar ab 1.890 €. Produktion in Kaiserslautern, Mannheim & Südwesten." />
-        <link rel="canonical" href="https://www.rezaivision.de/leistungen/recruiting" />
-        <meta name="keywords" content="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Recruiting Video & Employer Branding",
-            "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Rezai Vision",
-              "url": "https://www.rezaivision.de"
-            },
-            "areaServed": [
-              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "125"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "1890.00",
-              "priceCurrency": "EUR",
-              "description": "Ab 1.890 € zzgl. MwSt."
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim"
+        description="Gewinnen Sie Top-Talente mit effizienten Recruiting Videos. Authentisch, schnell und bezahlbar ab 1.890 €. Produktion in Kaiserslautern, Mannheim & Südwesten."
+        canonical="/leistungen/recruiting"
+        keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Recruiting Video & Employer Branding",
+          "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rezai Vision",
+            "url": "https://www.rezaivision.de"
+          },
+          "areaServed": [
+            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "125"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1890.00",
+            "priceCurrency": "EUR",
+            "description": "Ab 1.890 € zzgl. MwSt."
+          }
+        }}
+      />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -208,7 +206,7 @@ export default function RecruitingVideo() {
             <div className="w-full lg:w-1/2 relative">
               <div className="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop" 
                   alt="Bewerbungsgespräch" 
                   className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
@@ -279,7 +277,7 @@ export default function RecruitingVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" 
                   alt="Handwerk Recruiting Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -309,7 +307,7 @@ export default function RecruitingVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
                   alt="IT Unternehmen Recruiting Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"

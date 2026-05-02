@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, MessageCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function FAQ() {
   const faqs = [
@@ -40,27 +40,23 @@ export default function FAQ() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>FAQ | Häufig gestellte Fragen | Rezai Vision</title>
-        <meta name="description" content="Häufig gestellte Fragen zu Videoproduktion, Ablauf und Preisen bei Rezai Vision. Wir geben Ihnen transparente Antworten auf Ihre Fragen." />
-        <link rel="canonical" href="https://www.rezaivision.de/faq" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": ${JSON.stringify(faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              })))}
+      <SEO 
+        title="FAQ | Häufig gestellte Fragen | Rezai Vision"
+        description="Häufig gestellte Fragen zu Videoproduktion, Ablauf und Preisen bei Rezai Vision. Wir geben Ihnen transparente Antworten auf Ihre Fragen."
+        canonical="/faq"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
             }
-          `}
-        </script>
-      </Helmet>
+          }))
+        }}
+      />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <motion.div

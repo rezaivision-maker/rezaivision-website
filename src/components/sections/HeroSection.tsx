@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-brand-bg/80 z-10" />
         <img
-          src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772568178/Hero_BG_bldaur.webp?v=2"
+          loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772568178/Hero_BG_bldaur.webp?v=2"
           alt="Hero Background Video Produktion Kaiserslautern — Rezai Vision"
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
@@ -79,7 +79,7 @@ export function HeroSection() {
                   { name: "Ralph Nist", img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775642376/Ralph_Nist_wmkjpf.webp" }
                 ].map((user, i) => (
                   <img
-                    key={i}
+                    loading="lazy" key={i}
                     src={user.img}
                     alt={`${user.name} Kundenstimme Videoproduktion Kaiserslautern`}
                     className="w-8 h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"
@@ -90,7 +90,7 @@ export function HeroSection() {
 
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full border-2 border-brand-bg bg-white flex items-center justify-center shrink-0">
-                  <img src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
+                  <img loading="lazy" src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex text-brand-accent mb-0.5">
@@ -124,7 +124,7 @@ export function HeroSection() {
               className="relative w-full max-w-[550px] xl:max-w-[650px] -mt-16 xl:-mt-24"
             >
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
+                loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
                 alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
                 className="w-full h-auto object-contain drop-shadow-2xl"
                 style={{ 

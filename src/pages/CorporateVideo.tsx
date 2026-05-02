@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -83,42 +83,40 @@ export default function CorporateVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <Helmet>
-        <title>Imagefilm & Unternehmensfilm produzieren lassen | Kaiserslautern, Mannheim, RLP</title>
-        <meta name="description" content="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 2.490 €." />
-        <link rel="canonical" href="https://www.rezaivision.de/leistungen/unternehmensfilm" />
-        <meta name="keywords" content="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Imagefilm & Unternehmensfilm",
-            "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Rezai Vision",
-              "url": "https://www.rezaivision.de"
-            },
-            "areaServed": [
-              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "125"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "2490.00",
-              "priceCurrency": "EUR",
-              "description": "Ab 2.490 € zzgl. MwSt."
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Imagefilm & Unternehmensfilm produzieren lassen | Kaiserslautern, Mannheim, RLP"
+        description="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 2.490 €."
+        canonical="/leistungen/unternehmensfilm"
+        keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Imagefilm & Unternehmensfilm",
+          "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Rezai Vision",
+            "url": "https://www.rezaivision.de"
+          },
+          "areaServed": [
+            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
+            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
+            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
+            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "125"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "2490.00",
+            "priceCurrency": "EUR",
+            "description": "Ab 2.490 € zzgl. MwSt."
+          }
+        }}
+      />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -216,7 +214,7 @@ export default function CorporateVideo() {
             <div className="w-full lg:w-1/2 relative">
               <div className="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
                   alt="Team in einem Meeting" 
                   className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
@@ -287,7 +285,7 @@ export default function CorporateVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" 
                   alt="Industrieunternehmen Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -317,7 +315,7 @@ export default function CorporateVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop" 
                   alt="B2B Dienstleister Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -347,7 +345,7 @@ export default function CorporateVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
                   alt="Recruiting Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -377,7 +375,7 @@ export default function CorporateVideo() {
             <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
               <div className="aspect-[16/9] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop" 
                   alt="Event Case Study" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"

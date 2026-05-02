@@ -1,25 +1,25 @@
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Play, ArrowRight, CheckCircle2, Star, ChevronRight, Heart, Video, Camera, Mic, X } from "lucide-react";
 
 export default function WeddingFilms() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
-        <title>Hochzeitsvideograf Kaiserslautern, Mannheim & Saarland | Cinematic Wedding Films</title>
-        <meta name="description" content="Emotionale Hochzeitsfilme im Umkreis von 100km (Rheinland-Pfalz, Saarland). Wir fangen die echten Momente eures Tages ein – unauffällig und authentisch." />
-        <link rel="canonical" href="https://www.rezaivision.de/reza-e-motion/hochzeitsfilme" />
-        <meta name="keywords" content="Hochzeitsvideograf Kaiserslautern, Hochzeitsfilm Mannheim, Hochzeitsvideograf Saarland, Cinematic Wedding Video RLP" />
-      </Helmet>
+      <SEO 
+        title="Hochzeitsvideograf Kaiserslautern, Mannheim & Saarland | Cinematic Wedding Films"
+        description="Emotionale Hochzeitsfilme im Umkreis von 100km (Rheinland-Pfalz, Saarland). Wir fangen die echten Momente eures Tages ein – unauffällig und authentisch."
+        canonical="/reza-e-motion/hochzeitsfilme" />
+        <meta name="keywords" content="Hochzeitsvideograf Kaiserslautern, Hochzeitsfilm Mannheim, Hochzeitsvideograf Saarland, Cinematic Wedding Video RLP"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-brand-bg/90 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80"
+            loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80"
             alt="Hochzeitsvideo Background"
             className="w-full h-full object-cover opacity-30"
             referrerPolicy="no-referrer"
@@ -94,7 +94,7 @@ export default function WeddingFilms() {
             >
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5] gold-border-glow">
                 <img 
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" 
+                  loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" 
                   alt="Emotional Wedding Moment" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

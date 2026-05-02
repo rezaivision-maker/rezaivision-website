@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Work() {
   const projects = [
@@ -44,11 +44,11 @@ export default function Work() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Referenzen & Portfolio | Rezai Vision</title>
-        <meta name="description" content="Entdecken Sie unsere bisherigen Videoproduktionen. Erfolgreiche Projekte für Unternehmen aus Kaiserslautern und Umgebung." />
-        <link rel="canonical" href="https://www.rezaivision.de/referenzen" />
-      </Helmet>
+      <SEO 
+        title="Referenzen & Portfolio | Rezai Vision"
+        description="Entdecken Sie unsere bisherigen Videoproduktionen. Erfolgreiche Projekte für Unternehmen aus Kaiserslautern und Umgebung."
+        canonical="/referenzen"
+      />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function Work() {
           className="relative rounded-2xl overflow-hidden aspect-video group cursor-pointer mb-24"
         >
           <img
-            src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2000&auto=format&fit=crop"
+            loading="lazy" src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2000&auto=format&fit=crop"
             alt="Showreel 2024"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             referrerPolicy="no-referrer"
@@ -101,7 +101,7 @@ export default function Work() {
               className={`relative rounded-2xl overflow-hidden aspect-video group cursor-pointer ${project.colSpan}`}
             >
               <img
-                src={project.img}
+                loading="lazy" src={project.img}
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

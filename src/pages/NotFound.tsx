@@ -1,15 +1,12 @@
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { SearchX, ArrowRight } from "lucide-react";
 
 export default function NotFound() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg overflow-hidden relative text-center">
-      <Helmet>
-        <title>404 - Seite nicht gefunden | Rezai Vision</title>
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      <SEO title="404 - Seite nicht gefunden | Rezai Vision" />
 
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />

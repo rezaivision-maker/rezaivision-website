@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, Phone, MapPin, Clock, Send, AlertCircle } from "lucide-react";
 import { useState, type FormEvent } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Contact() {
@@ -44,11 +44,11 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Kontakt | Rezai Vision - Ihr Projekt anfragen</title>
-        <meta name="description" content="Fragen Sie jetzt Ihr Videoprojekt bei Rezai Vision an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content." />
-        <link rel="canonical" href="https://www.rezaivision.de/kontakt" />
-      </Helmet>
+      <SEO 
+        title="Kontakt | Rezai Vision - Ihr Projekt anfragen"
+        description="Fragen Sie jetzt Ihr Videoprojekt bei Rezai Vision an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content."
+        canonical="/kontakt"
+      />
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

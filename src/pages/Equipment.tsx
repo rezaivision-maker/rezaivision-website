@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { 
   Camera, 
   Monitor, 
@@ -74,11 +74,11 @@ export default function Equipment() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
-      <Helmet>
-        <title>Technik & Qualität | Rezai Vision | Videoproduktion Kaiserslautern</title>
-        <meta name="description" content="Erfahren Sie mehr über unsere Technik und Qualitätsstandards. Von Sony Cineline bis DaVinci Resolve – wir liefern Industriestandard für Ihr Unternehmen." />
-        <link rel="canonical" href="https://www.rezaivision.de/technik" />
-      </Helmet>
+      <SEO 
+        title="Technik & Qualität | Rezai Vision | Videoproduktion Kaiserslautern"
+        description="Erfahren Sie mehr über unsere Technik und Qualitätsstandards. Von Sony Cineline bis DaVinci Resolve – wir liefern Industriestandard für Ihr Unternehmen."
+        canonical="/technik"
+      />
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         {/* HERO */}
@@ -181,7 +181,7 @@ export default function Equipment() {
             {looks.map((look, i) => (
               <div key={i} className="group relative overflow-hidden rounded-3xl aspect-square">
                 <img 
-                  src={look.image} 
+                  loading="lazy" src={look.image} 
                   alt={look.title} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"

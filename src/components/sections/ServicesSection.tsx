@@ -59,7 +59,7 @@ export function ServicesSection() {
             >
               <Link to="/leistungen" className="group relative block overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
                 <img
-                  src={service.img}
+                  loading="lazy" src={service.img}
                   alt={`${service.title} Leistung Videoproduktion Kaiserslautern — Rezai Vision`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
