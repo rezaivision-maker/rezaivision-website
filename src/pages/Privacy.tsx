@@ -4,7 +4,7 @@ import { SEO } from "@/components/SEO";
 export default function Privacy() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg">
-      <SEO title="Datenschutzerklärung | Rezai Vision & reza-e-motion" />
+      <SEO title="Datenschutzerklärung | Rezai Vision & reza-e-motion" canonical="/datenschutz" />
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

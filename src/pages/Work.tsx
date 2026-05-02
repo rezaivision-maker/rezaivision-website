@@ -84,7 +84,7 @@ export default function Work() {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-brand-bg to-transparent">
-            <h3 className="text-3xl md:text-4xl font-display font-bold mb-2">Showreel 2024</h3>
+            <h3 className="text-3xl md:text-4xl font-display font-bold mb-2">Showreel 2026</h3>
             <p className="text-gray-300 text-base md:text-lg">Ein Best-of unserer Arbeit</p>
           </div>
         </motion.div>

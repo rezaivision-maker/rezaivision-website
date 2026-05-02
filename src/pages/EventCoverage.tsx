@@ -11,8 +11,8 @@ export default function EventCoverage() {
       <SEO 
         title="Eventbegleitung & Aftermovies | Videograf Kaiserslautern, Mannheim & Saarbrücken"
         description="Professionelle Eventbegleitung und Aftermovies in Kaiserslautern, Mannheim und der Pfalz. Wir fangen die Energie deines Events ein – unauffällig und hochwertig."
-        canonical="/leistungen/eventbegleitung" />
-        <meta name="keywords" content="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo"
+        canonical="/reza-e-motion/eventbegleitung"
+        keywords="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo"
       />
 
       {/* Hero Section */}

@@ -29,7 +29,7 @@ export default function Home() {
             "image": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp",
             "@id": "https://www.rezaivision.de",
             "url": "https://www.rezaivision.de",
-            "telephone": "+4917631739958",
+            "telephone": "+4963162512000",
             "priceRange": "€€",
             "address": {
               "@type": "PostalAddress",

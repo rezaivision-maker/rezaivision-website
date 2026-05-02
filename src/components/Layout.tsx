@@ -127,7 +127,7 @@ export function Layout() {
               "offerCount": "8",
               "lowPrice": "0",
               "priceCurrency": "EUR",
-              "url": "https://rezaivision.de/",
+              "url": "https://www.rezaivision.de/",
               "availability": "https://schema.org/InStock"
             }
           }

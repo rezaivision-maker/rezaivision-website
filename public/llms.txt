@@ -25,6 +25,10 @@ Strong focus on the Southwest German region: Kaiserslautern, Mannheim, Saarbrüc
 - [/leistungen](https://www.rezaivision.de/leistungen) - Services overview
 - [/referenzen](https://www.rezaivision.de/referenzen) - Portfolio and case studies
 - [/preise](https://www.rezaivision.de/preise) - Investment models and packages
+- [/ueber-uns](https://www.rezaivision.de/ueber-uns) - About us and company philosophy
+- [/technik](https://www.rezaivision.de/technik) - Equipment and quality standards
 - [/blog](https://www.rezaivision.de/blog) - Professional magazine with 25+ articles on video marketing ROI, recruiting trends, and production tips.
+- [/glossar](https://www.rezaivision.de/glossar) - Video production glossary with 50+ terms
 - [/reza-e-motion](https://www.rezaivision.de/reza-e-motion) - Private event and music video services
 - [/faq](https://www.rezaivision.de/faq) - Frequently asked questions about process and pricing
+- [/kontakt](https://www.rezaivision.de/kontakt) - Contact and project inquiry

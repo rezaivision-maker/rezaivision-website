@@ -48,8 +48,8 @@ export default function Services() {
       <SEO 
         title="Unsere Leistungen B2B | Videoproduktion Rheinland-Pfalz & Saarland"
         description="Unsere B2B Leistungen: Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content aus Kaiserslautern. Für Mannheim, Saarbrücken und Mainz."
-        canonical="/leistungen" />
-        <meta name="keywords" content="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz"
+        canonical="/leistungen"
+        keywords="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz"
       />
       {/* HERO SECTION */}
       <section className="pb-24">
