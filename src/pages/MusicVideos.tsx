@@ -10,7 +10,7 @@ export default function MusicVideos() {
       <Helmet>
         <title>Musikvideo Kaiserslautern | Regisseur Rheinland-Pfalz & Saarland</title>
         <meta name="description" content="Professionelle Musikvideos in RLP, Kaiserslautern & Mannheim. Von Konzept- bis Performance-Videos. Wir erschaffen deine visuelle Identität." />
-        <link rel="canonical" href="https://rezaivision.de/reza-e-motion/musikvideos" />
+        <link rel="canonical" href="https://www.rezaivision.de/reza-e-motion/musikvideos" />
         <meta name="keywords" content="Musikvideo Produzent Kaiserslautern, Musikvideo Rheinland-Pfalz, Rap Video Frankfurt, Band Video Saarland, Cinematic Music Video" />
       </Helmet>
 

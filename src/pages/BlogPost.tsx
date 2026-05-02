@@ -96,7 +96,7 @@ export default function BlogPost() {
   const faqItems = extractFAQs(post.content);
 
   // Schema.org Article JSON-LD
-  const imageUrl = post.image.startsWith('http') ? post.image : `https://rezaivision.de${post.image}`;
+  const imageUrl = post.image.startsWith('http') ? post.image : `https://www.rezaivision.de${post.image}`;
   
   const articleSchema = {
     "@context": "https://schema.org",
@@ -107,7 +107,7 @@ export default function BlogPost() {
     "author": {
       "@type": "Person",
       "name": "Parsha Rezai",
-      "url": "https://rezaivision.de/ueber-uns",
+      "url": "https://www.rezaivision.de/ueber-uns",
       "jobTitle": "Lead Videographer & Founder",
       "description": "Parsha Rezai ist Gründer von Rezai Vision und Experte für Videomarketing mit Fokus auf den Mittelstand.",
       "knowsAbout": ["Videografie", "Videomarketing", "Social Media Ads", "Recruiting Videos"]
@@ -123,7 +123,7 @@ export default function BlogPost() {
     "datePublished": post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://rezaivision.de/blog/${post.slug}`
+      "@id": `https://www.rezaivision.de/blog/${post.slug}`
     }
   };
 
@@ -367,7 +367,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Rezai Vision Magazin</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://rezaivision.de/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.rezaivision.de/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={imageUrl} />
@@ -486,7 +486,7 @@ export default function BlogPost() {
               .map(related => (
                 <Link key={related.id} to={`/blog/${related.slug}`} className="group block bg-white/[0.02] rounded-3xl overflow-hidden border border-white/5 hover:border-brand-accent/50 transition-all shadow-xl hover:shadow-brand-accent/10">
                   <div className="aspect-video overflow-hidden relative">
-                    <img src={related.image.startsWith('http') ? related.image : `https://rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                    <img src={related.image.startsWith('http') ? related.image : `https://www.rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-bg to-transparent opacity-80" />
                   </div>
                   <div className="p-8 -mt-10 relative z-10">

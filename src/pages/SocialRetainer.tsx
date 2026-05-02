@@ -77,7 +77,7 @@ export default function SocialRetainer() {
       <Helmet>
         <title>Social Media Content Kaiserslautern | Video Retainer</title>
         <meta name="description" content="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km." />
-        <link rel="canonical" href="https://rezaivision.de/leistungen/social-media" />
+        <link rel="canonical" href="https://www.rezaivision.de/leistungen/social-media" />
         <meta name="keywords" content="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -88,7 +88,7 @@ export default function SocialRetainer() {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Rezai Vision",
-              "url": "https://rezaivision.de"
+              "url": "https://www.rezaivision.de"
             },
             "areaServed": [
               "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 

@@ -11,7 +11,7 @@ export default function EventCoverage() {
       <Helmet>
         <title>Eventbegleitung & Aftermovies | Videograf Kaiserslautern, Mannheim & Saarbrücken</title>
         <meta name="description" content="Professionelle Eventbegleitung und Aftermovies in Kaiserslautern, Mannheim und der Pfalz. Wir fangen die Energie deines Events ein – unauffällig und hochwertig." />
-        <link rel="canonical" href="https://rezaivision.de/leistungen/eventbegleitung" />
+        <link rel="canonical" href="https://www.rezaivision.de/leistungen/eventbegleitung" />
         <meta name="keywords" content="Eventvideograf Kaiserslautern, Eventvideo Mannheim, Aftermovie Saarbrücken, Eventbegleitung RLP, Firmenfeier, Messevideo" />
       </Helmet>
 

@@ -48,7 +48,7 @@ export default function Services() {
       <Helmet>
         <title>Unsere Leistungen B2B | Videoproduktion Rheinland-Pfalz & Saarland</title>
         <meta name="description" content="Unsere B2B Leistungen: Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content aus Kaiserslautern. Für Mannheim, Saarbrücken und Mainz." />
-        <link rel="canonical" href="https://rezaivision.de/leistungen" />
+        <link rel="canonical" href="https://www.rezaivision.de/leistungen" />
         <meta name="keywords" content="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz" />
       </Helmet>
       {/* HERO SECTION */}

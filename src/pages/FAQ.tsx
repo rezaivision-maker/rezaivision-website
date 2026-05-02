@@ -43,7 +43,7 @@ export default function FAQ() {
       <Helmet>
         <title>FAQ | Häufig gestellte Fragen | Rezai Vision</title>
         <meta name="description" content="Häufig gestellte Fragen zu Videoproduktion, Ablauf und Preisen bei Rezai Vision. Wir geben Ihnen transparente Antworten auf Ihre Fragen." />
-        <link rel="canonical" href="https://rezaivision.de/faq" />
+        <link rel="canonical" href="https://www.rezaivision.de/faq" />
         <script type="application/ld+json">
           {`
             {

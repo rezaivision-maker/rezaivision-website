@@ -78,7 +78,7 @@ export default function RecruitingVideo() {
       <Helmet>
         <title>Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim</title>
         <meta name="description" content="Gewinnen Sie Top-Talente mit effizienten Recruiting Videos. Authentisch, schnell und bezahlbar ab 1.890 €. Produktion in Kaiserslautern, Mannheim & Südwesten." />
-        <link rel="canonical" href="https://rezaivision.de/leistungen/recruiting" />
+        <link rel="canonical" href="https://www.rezaivision.de/leistungen/recruiting" />
         <meta name="keywords" content="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -89,7 +89,7 @@ export default function RecruitingVideo() {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Rezai Vision",
-              "url": "https://rezaivision.de"
+              "url": "https://www.rezaivision.de"
             },
             "areaServed": [
               "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 

@@ -47,7 +47,7 @@ export default function Work() {
       <Helmet>
         <title>Referenzen & Portfolio | Rezai Vision</title>
         <meta name="description" content="Entdecken Sie unsere bisherigen Videoproduktionen. Erfolgreiche Projekte für Unternehmen aus Kaiserslautern und Umgebung." />
-        <link rel="canonical" href="https://rezaivision.de/referenzen" />
+        <link rel="canonical" href="https://www.rezaivision.de/referenzen" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div

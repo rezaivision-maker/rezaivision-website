@@ -9,7 +9,7 @@ export default function About() {
       <Helmet>
         <title>Über uns | Rezai Vision | Videoproduktion Kaiserslautern</title>
         <meta name="description" content="Erfahren Sie mehr über die Philosophie von Rezai Vision. Professionelle Videoproduktion aus Kaiserslautern mit über 10 Jahren Erfahrung. Strategisch, cineastisch und auf Augenhöhe." />
-        <link rel="canonical" href="https://rezaivision.de/ueber-uns" />
+        <link rel="canonical" href="https://www.rezaivision.de/ueber-uns" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         

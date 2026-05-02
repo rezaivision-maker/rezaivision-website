@@ -10,7 +10,7 @@ export default function WeddingFilms() {
       <Helmet>
         <title>Hochzeitsvideograf Kaiserslautern, Mannheim & Saarland | Cinematic Wedding Films</title>
         <meta name="description" content="Emotionale Hochzeitsfilme im Umkreis von 100km (Rheinland-Pfalz, Saarland). Wir fangen die echten Momente eures Tages ein – unauffällig und authentisch." />
-        <link rel="canonical" href="https://rezaivision.de/reza-e-motion/hochzeitsfilme" />
+        <link rel="canonical" href="https://www.rezaivision.de/reza-e-motion/hochzeitsfilme" />
         <meta name="keywords" content="Hochzeitsvideograf Kaiserslautern, Hochzeitsfilm Mannheim, Hochzeitsvideograf Saarland, Cinematic Wedding Video RLP" />
       </Helmet>
 

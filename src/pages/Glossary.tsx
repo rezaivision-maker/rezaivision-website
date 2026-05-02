@@ -27,19 +27,19 @@ export default function GlossaryIndex() {
       <Helmet>
         <title>Filmmaking & Videoproduktion Glossar | Rezai Vision</title>
         <meta name="description" content="Das große Videoproduktions-Glossar von Rezai Vision. Wir erklären Fachbegriffe wie B-Roll, Color Grading, Cinematic Look und Imagefilm einfach und verständlich." />
-        <link rel="canonical" href="https://rezaivision.de/glossar" />
+        <link rel="canonical" href="https://www.rezaivision.de/glossar" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "DefinedTermSet",
-            "@id": "https://rezaivision.de/glossar",
+            "@id": "https://www.rezaivision.de/glossar",
             "name": "Filmmaking & Videoproduktion Glossar",
             "description": "Das große Videoproduktions-Glossar von Rezai Vision. Erklärungen von Fachbegriffen wie B-Roll, Color Grading, Cinematic Look und mehr.",
             "hasDefinedTerm": glossaryTerms.map(term => ({
               "@type": "DefinedTerm",
               "name": term.title,
               "description": term.definition,
-              "url": `https://rezaivision.de/glossar#${term.id}`
+              "url": `https://www.rezaivision.de/glossar#${term.id}`
             }))
           })}
         </script>

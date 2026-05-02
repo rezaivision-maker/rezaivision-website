@@ -47,7 +47,7 @@ export default function Contact() {
       <Helmet>
         <title>Kontakt | Rezai Vision - Ihr Projekt anfragen</title>
         <meta name="description" content="Fragen Sie jetzt Ihr Videoprojekt bei Rezai Vision an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content." />
-        <link rel="canonical" href="https://rezaivision.de/kontakt" />
+        <link rel="canonical" href="https://www.rezaivision.de/kontakt" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div

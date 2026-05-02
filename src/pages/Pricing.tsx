@@ -64,7 +64,7 @@ export default function Pricing() {
       <Helmet>
         <title>Preise & Pakete | Rezai Vision | Videoproduktion</title>
         <meta name="description" content="Transparente Preise für Ihre Videoproduktion. Entdecken Sie unsere Pakete für Unternehmensfilme, Recruiting und Social Media. Top-Niveau ohne Agentur-Overhead." />
-        <link rel="canonical" href="https://rezaivision.de/preise" />
+        <link rel="canonical" href="https://www.rezaivision.de/preise" />
       </Helmet>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <motion.div

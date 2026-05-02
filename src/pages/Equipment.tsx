@@ -77,7 +77,7 @@ export default function Equipment() {
       <Helmet>
         <title>Technik & Qualität | Rezai Vision | Videoproduktion Kaiserslautern</title>
         <meta name="description" content="Erfahren Sie mehr über unsere Technik und Qualitätsstandards. Von Sony Cineline bis DaVinci Resolve – wir liefern Industriestandard für Ihr Unternehmen." />
-        <link rel="canonical" href="https://rezaivision.de/technik" />
+        <link rel="canonical" href="https://www.rezaivision.de/technik" />
       </Helmet>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">

@@ -77,7 +77,7 @@ export default function SocialAds() {
       <Helmet>
         <title>Social Media Ads & Werbespots Agentur | Saarland & RLP</title>
         <meta name="description" content="Performance-starke Werbevideos und Social Ads für messbare Ergebnisse und Sichtbarkeit im digitalen Raum. Conversion-optimierte Videoproduktion im Umkreis von 100km (Mainz, Mannheim)." />
-        <link rel="canonical" href="https://rezaivision.de/leistungen/werbevideo" />
+        <link rel="canonical" href="https://www.rezaivision.de/leistungen/werbevideo" />
         <meta name="keywords" content="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -88,7 +88,7 @@ export default function SocialAds() {
             "provider": {
               "@type": "LocalBusiness",
               "name": "Rezai Vision",
-              "url": "https://rezaivision.de"
+              "url": "https://www.rezaivision.de"
             },
             "areaServed": [
               "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 

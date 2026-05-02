@@ -20,7 +20,7 @@ export default function Home() {
       <Helmet>
         <title>Videoproduktion & Social Media Agentur Kaiserslautern | Umkreis 100km | Rezai Vision</title>
         <meta name="description" content="Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen." />
-        <link rel="canonical" href="https://rezaivision.de/" />
+        <link rel="canonical" href="https://www.rezaivision.de/" />
         <script type="application/ld+json">
           {`
             [
@@ -29,8 +29,8 @@ export default function Home() {
                 "@type": ["LocalBusiness", "ProfessionalService"],
                 "name": "Rezai Vision",
                 "image": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp",
-                "@id": "https://rezaivision.de",
-                "url": "https://rezaivision.de",
+                "@id": "https://www.rezaivision.de",
+                "url": "https://www.rezaivision.de",
                 "telephone": "+4917631739958",
                 "priceRange": "€€",
                 "address": {
