@@ -100,7 +100,7 @@ export function CasesSection() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735607/Lu%CC%88ll_2_tjbakc.webp" 
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735607/Lu%CC%88ll_2_tjbakc.webp" 
                     alt="Weingut Atmosphäre Schlossgut Lüll — Unternehmensfilm Kaiserslautern" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"
@@ -109,7 +109,7 @@ export function CasesSection() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735609/lu%CC%88ll3_uxkzzl.webp" 
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775735609/lu%CC%88ll3_uxkzzl.webp" 
                     alt="Weinberg Landschaft Schlossgut Lüll — Imagefilm Produktion Pfalz" 
                     className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
                     referrerPolicy="no-referrer"

@@ -84,8 +84,8 @@ export default function CorporateVideo() {
   return (
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
-        title="Imagefilm & Unternehmensfilm produzieren lassen | Kaiserslautern, Mannheim, RLP"
-        description="Professionelle Videoproduktion für Imagefilme in Rheinland-Pfalz, Saarland und Mannheim. Stärken Sie Ihre Marke visuell ab 2.490 €."
+        title="Warum ein Imagefilm Ihr stärkstes Vertriebs-Tool ist | Rezai Vision"
+        description="Vergessen Sie austauschbare Clips. Ich produziere Unternehmensfilme, die als strategisches Werkzeug auf Ihrer Website das Vertrauen Ihrer Wunschkunden in Millisekunden gewinnen."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
         structuredData={{
@@ -130,10 +130,10 @@ export default function CorporateVideo() {
               Imagefilm / Unternehmensfilm
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Ihr Unternehmen im besten Licht: <span className="text-brand-accent italic">Professionelle Unternehmensfilme</span>
+              Unternehmensfilme: Ihr wichtigstes <span className="text-brand-accent italic">Werkzeug für Vertrauen.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Als Ihr Partner für Corporate Video Pfalz inszenieren wir Ihre Marke mit starker Bildqualität und strategischem Storytelling. Zeigen Sie, wofür Sie stehen und gewinnen Sie das Vertrauen Ihrer Wunschkunden.
+              Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Ich entwickle Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

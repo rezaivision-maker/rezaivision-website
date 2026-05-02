@@ -121,10 +121,10 @@ export default function SocialAds() {
               Werbevideo & Social Media Ads
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Mehr Aufmerksamkeit. <span className="text-brand-accent italic">Mehr Umsatz.</span>
+              Social Ads: <span className="text-brand-accent italic">Messbare Leads & Umsatz.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir produzieren Performance-starke Werbevideos und Social Ads, die den Scroll-Vorgang stoppen, Klicks generieren und Ihre Zielgruppe zum Handeln bewegen – professionell umgesetzt für Unternehmen von Kaiserslautern über Mannheim bis Frankfurt.
+              Vergessen Sie austauschbare Werbeclips. Ich produziere verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

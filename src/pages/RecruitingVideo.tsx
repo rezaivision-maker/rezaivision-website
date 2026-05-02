@@ -122,10 +122,10 @@ export default function RecruitingVideo() {
               Recruiting Video / Employer Branding
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Ziehen Sie die <span className="text-brand-accent italic">richtigen Talente</span> an.
+              Recruiting-System: <span className="text-brand-accent italic">Automatisierte Bewerber-Gewinnung.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Machen Sie Ihre Unternehmenskultur erlebbar. Wir produzieren authentische Recruiting Videos, die Fachkräfte überzeugen und Bewerbungshürden abbauen.
+              Machen Sie Ihre Unternehmenskultur erlebbar. Ich produziere authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
