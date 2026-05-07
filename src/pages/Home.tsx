@@ -132,7 +132,8 @@ export default function Home() {
             "sameAs": [
               "https://www.instagram.com/rezaivision",
               "https://www.facebook.com/rezaivision",
-              "https://www.tiktok.com/@rezaivision"
+              "https://www.tiktok.com/@rezaivision",
+              "https://www.linkedin.com/company/rezaivision"
             ]
           },
           {
