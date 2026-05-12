@@ -16,39 +16,43 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Breakout Hero Image — positioned absolutely on xl+ to fill right side of viewport */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="hidden lg:block absolute right-0 bottom-0 z-10 pointer-events-none"
-        style={{ width: 'clamp(400px, 42vw, 1100px)' }}
-      >
-        <motion.div
-          animate={{ y: [0, -12, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <img
-            loading="lazy"
-            src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
-            alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
-            className="w-full h-auto object-contain drop-shadow-2xl"
-            style={{
-              maskImage: 'linear-gradient(to top, transparent 0%, black 12%)',
-              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 12%)'
-            }}
-            referrerPolicy="no-referrer"
-          />
-        </motion.div>
-      </motion.div>
+      {/* Ghost container for absolute image positioning (bounded by max-w) */}
+      <div className="absolute inset-0 z-10 pointer-events-none flex justify-center overflow-hidden">
+        <div className="w-full max-w-[1600px] 3xl:max-w-[2000px] px-6 md:px-12 xl:px-16 3xl:px-20 relative h-full">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="hidden lg:block absolute right-6 md:right-12 xl:right-16 3xl:right-20 bottom-0"
+            style={{ width: 'clamp(500px, 45vw, 1050px)' }}
+          >
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <img
+                loading="lazy"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
+                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
+                className="w-full h-auto object-contain drop-shadow-2xl"
+                style={{
+                  maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',
+                  WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)'
+                }}
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
 
       <div className="max-w-[1600px] 3xl:max-w-[2000px] mx-auto px-6 md:px-12 xl:px-16 3xl:px-20 relative z-20 w-full">
-        <div className="lg:max-w-[55%] xl:max-w-[50%]">
+        <div className="flex w-full items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl text-left"
+            className="w-full lg:w-[60%] xl:w-[55%] 3xl:w-[50%] max-w-3xl text-left py-12 lg:py-0"
           >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
