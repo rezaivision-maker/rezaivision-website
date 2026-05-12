@@ -16,8 +16,34 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 xl:px-16 relative z-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-20 items-center">
+      {/* Breakout Hero Image — positioned absolutely on xl+ to fill right side of viewport */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="hidden lg:block absolute right-0 bottom-0 z-10 pointer-events-none"
+        style={{ width: 'clamp(400px, 42vw, 1100px)' }}
+      >
+        <motion.div
+          animate={{ y: [0, -12, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img
+            loading="lazy"
+            src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
+            alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
+            className="w-full h-auto object-contain drop-shadow-2xl"
+            style={{
+              maskImage: 'linear-gradient(to top, transparent 0%, black 12%)',
+              WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 12%)'
+            }}
+            referrerPolicy="no-referrer"
+          />
+        </motion.div>
+      </motion.div>
+
+      <div className="max-w-[1600px] 3xl:max-w-[2000px] mx-auto px-6 md:px-12 xl:px-16 3xl:px-20 relative z-20 w-full">
+        <div className="lg:max-w-[55%] xl:max-w-[50%]">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -37,7 +63,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display font-bold tracking-tighter mb-5 md:mb-6"
+              className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-display font-bold tracking-tighter mb-5 md:mb-6"
             >
               Videoproduktion Kaiserslautern: <br className="hidden md:block" />
               <span className="gold-text-gradient">
@@ -48,7 +74,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg md:text-xl xl:text-xl text-gray-300 mb-8 md:mb-10 font-light leading-relaxed max-w-2xl"
+              className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-gray-300 mb-8 md:mb-10 3xl:mb-12 font-light leading-relaxed max-w-2xl 3xl:max-w-3xl"
             >
               Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut und messbare Ergebnisse im Südwesten erzielt.
             </motion.p>
@@ -104,36 +130,6 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex justify-end relative self-end"
-          >
-            <motion.div
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative w-full max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px]"
-            >
-              <img
-                loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
-                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
-                className="w-full h-auto object-contain drop-shadow-2xl"
-                style={{
-                  maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',
-                  WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)'
-                }}
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
           </motion.div>
         </div>
       </div>

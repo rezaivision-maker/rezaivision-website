@@ -12,6 +12,8 @@
   --color-brand-dark: #1A1A1A;
   --color-brand-darker: #111111;
 
+  --breakpoint-3xl: 2200px;
+
   --background-image-gold-gradient: linear-gradient(135deg, #A67C45 0%, #C8A46B 50%, #E5C78B 100%);
   --background-image-gold-gradient-hover: linear-gradient(135deg, #C8A46B 0%, #E5C78B 50%, #F5E0B0 100%);
 

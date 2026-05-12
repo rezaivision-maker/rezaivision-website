@@ -143,7 +143,7 @@ export function Layout() {
             : "bg-transparent py-6"
         )}
       >
-        <div className="max-w-[1500px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-2 xl:gap-4">
+        <div className="max-w-[1500px] 3xl:max-w-[2000px] mx-auto px-4 md:px-8 xl:px-12 3xl:px-20 flex items-center justify-between gap-2 xl:gap-4">
           <div className="flex-none flex justify-start shrink-0">
             <Link to="/" className="group text-xl xl:text-2xl font-display font-bold tracking-tighter flex items-center whitespace-nowrap">
               <span className="text-brand-accent transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,164,107,0.4)]">Rezai</span>
