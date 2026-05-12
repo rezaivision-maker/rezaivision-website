@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 export function AboutSection() {
   return (
     <section className="py-24 bg-brand-bg border-b border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

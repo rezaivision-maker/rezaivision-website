@@ -18,7 +18,7 @@ export function CTASection() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-accent/10 rounded-full blur-[120px] pointer-events-none" 
       />
       
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl">
+      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

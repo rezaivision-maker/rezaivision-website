@@ -6,7 +6,7 @@ export function ShowreelSection() {
 
   return (
     <section id="showreel" className="py-24 bg-brand-bg border-t border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
             Showreel

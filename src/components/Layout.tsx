@@ -74,7 +74,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-bg text-brand-text">
-      <SEO 
+      <SEO
         structuredData={[
           {
             "@context": "https://schema.org",
@@ -138,8 +138,8 @@ export function Layout() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled 
-            ? "bg-brand-bg/95 backdrop-blur-lg py-3 border-b border-brand-accent/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]" 
+          isScrolled
+            ? "bg-brand-bg/95 backdrop-blur-lg py-3 border-b border-brand-accent/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
             : "bg-transparent py-6"
         )}
       >
@@ -153,10 +153,10 @@ export function Layout() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-8 px-2 mx-auto">
-            <NavDropdown 
-              title="Leistungen" 
-              path="/leistungen" 
-              items={leistungenItems} 
+            <NavDropdown
+              title="Leistungen"
+              path="/leistungen"
+              items={leistungenItems}
               isActive={location.pathname.startsWith("/leistungen")}
             />
 
@@ -171,7 +171,7 @@ export function Layout() {
               >
                 {link.name}
                 {location.pathname === link.path && (
-                  <motion.div 
+                  <motion.div
                     layoutId="nav-active"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-accent rounded-full"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -181,10 +181,10 @@ export function Layout() {
               </Link>
             ))}
             <div className="w-px h-5 bg-white/10 mx-1 shrink-0" />
-            <NavDropdown 
-              title="reza-e-motion" 
-              path="/reza-e-motion" 
-              items={rezaEmotionItems} 
+            <NavDropdown
+              title="reza-e-motion"
+              path="/reza-e-motion"
+              items={rezaEmotionItems}
               isActive={location.pathname.startsWith("/reza-e-motion")}
               isSpecial
             />
@@ -192,10 +192,10 @@ export function Layout() {
 
           <div className="flex-none flex justify-end items-center shrink-0">
             <div className="hidden lg:block">
-              <Button 
-                href="/kontakt" 
-                variant="primary" 
-                size="sm" 
+              <Button
+                href="/kontakt"
+                variant="primary"
+                size="sm"
                 className="px-6 py-2.5 whitespace-nowrap shadow-[0_0_20px_rgba(200,164,107,0.1)] hover:shadow-[0_0_30px_rgba(200,164,107,0.25)] transition-all duration-300 hover:-translate-y-0.5"
               >
                 Projekt anfragen
@@ -216,7 +216,7 @@ export function Layout() {
       {/* Mobile Menu */}
       <AnimatePresence mode="wait">
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -230,7 +230,7 @@ export function Layout() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <button 
+                <button
                   onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
                   className={cn(
                     "flex items-center justify-between w-full py-2 transition-colors",
@@ -242,7 +242,7 @@ export function Layout() {
                 </button>
                 <AnimatePresence>
                   {mobileLeistungenOpen && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -277,7 +277,7 @@ export function Layout() {
                 </motion.div>
               ))}
 
-              <motion.div 
+              <motion.div
                 className="w-full h-px bg-white/10 my-2"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -290,12 +290,12 @@ export function Layout() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <button 
+                <button
                   onClick={() => setMobileRezaOpen(!mobileRezaOpen)}
                   className={cn(
                     "flex items-center justify-between w-full py-3 px-4 rounded-xl border transition-all",
-                    location.pathname.startsWith("/reza-e-motion") 
-                      ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
+                    location.pathname.startsWith("/reza-e-motion")
+                      ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
                       : "bg-white/5 text-gray-300 border-white/10"
                   )}
                 >
@@ -307,7 +307,7 @@ export function Layout() {
                 </button>
                 <AnimatePresence>
                   {mobileRezaOpen && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -350,7 +350,7 @@ export function Layout() {
 
       {/* Footer */}
       <footer className="bg-brand-darker pt-24 pb-12 border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
               <Link to="/" className="text-2xl font-display font-bold tracking-tighter flex items-center mb-6">
@@ -361,7 +361,7 @@ export function Layout() {
                 Professionelle & verlässliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und Frankfurt. Starke Arbeit verdient es, gesehen zu werden.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-display font-semibold mb-6">Leistungen</h4>
               <ul className="space-y-4 text-gray-400">
@@ -371,18 +371,18 @@ export function Layout() {
                 <li><Link to="/leistungen#social-media" className="hover:text-brand-accent transition-colors">Social Media Content</Link></li>
                 <li className="pt-2">
                   <div className="flex flex-col gap-3">
-                      <Link
-                        to="/reza-e-motion"
-                        className={cn(
-                          "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all text-sm w-fit",
-                          location.pathname === "/reza-e-motion" 
-                            ? "bg-purple-500/10 text-purple-400 border-purple-500/30" 
-                            : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
-                        )}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                        reza-e-motion
-                      </Link>
+                    <Link
+                      to="/reza-e-motion"
+                      className={cn(
+                        "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all text-sm w-fit",
+                        location.pathname === "/reza-e-motion"
+                          ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
+                          : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
+                      )}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                      reza-e-motion
+                    </Link>
                     <div className="pl-4 border-l border-white/10 flex flex-col gap-2 text-sm">
                       <Link to="/reza-e-motion/eventbegleitung" className="text-gray-400 hover:text-purple-400 transition-colors">Eventbegleitung</Link>
                       <Link to="/reza-e-motion/musikvideos" className="text-gray-400 hover:text-purple-400 transition-colors">Musikvideos</Link>

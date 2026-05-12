@@ -80,7 +80,7 @@ export default function Equipment() {
         canonical="/technik"
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         {/* HERO */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

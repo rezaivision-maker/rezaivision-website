@@ -11,7 +11,7 @@ export default function About() {
         description="Erfahren Sie mehr über die Philosophie von Rezai Vision. Professionelle Videoproduktion aus Kaiserslautern mit über 10 Jahren Erfahrung. Strategisch, cineastisch und auf Augenhöhe."
         canonical="/ueber-uns"
       />
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         
         {/* HERO & INTRO */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-32">

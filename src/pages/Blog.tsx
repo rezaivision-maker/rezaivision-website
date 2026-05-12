@@ -21,7 +21,7 @@ export default function Blog() {
       />
 
       {/* Header */}
-      <div className="mb-20 px-6 md:px-12 max-w-[1400px] mx-auto w-full">
+      <div className="mb-20 px-6 md:px-12 max-w-[1600px] mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function Blog() {
       </div>
 
       {/* Blog Grid */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {filteredPosts.map((post, index) => (
             <motion.article
@@ -138,7 +138,7 @@ export default function Blog() {
       </div>
 
       {/* Newsletter / CTA Section */}
-      <section className="mt-32 px-6 md:px-12 max-w-[1400px] mx-auto w-full">
+      <section className="mt-32 px-6 md:px-12 max-w-[1600px] mx-auto w-full">
         <div className="bg-brand-darker border border-white/5 rounded-[2rem] p-8 md:p-16 relative overflow-hidden text-center">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Sie haben ein konkretes <br />Projekt im Kopf?</h2>

@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-start pt-32 pb-12 md:pb-24 overflow-hidden">
+    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 md:pt-28 pb-12 md:pb-20 overflow-hidden">
       {/* Background Video Placeholder */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-brand-bg/80 z-10" />
@@ -16,47 +16,47 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 xl:px-16 relative z-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl text-left"
+            className="max-w-3xl text-left"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-brand-accent mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium text-brand-accent mb-6 md:mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
               Videoproduktion & Content Creation im Südwesten
             </motion.div>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl md:text-5xl font-display font-bold tracking-tighter mb-6 leading-tight"
+              className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display font-bold tracking-tighter mb-5 md:mb-6"
             >
               Videoproduktion Kaiserslautern: <br className="hidden md:block" />
               <span className="gold-text-gradient">
                 Videos, die als Werkzeug für Ihre Ziele arbeiten.
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed"
+              className="text-base sm:text-lg md:text-xl xl:text-xl text-gray-300 mb-8 md:mb-10 font-light leading-relaxed max-w-2xl"
             >
               Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut und messbare Ergebnisse im Südwesten erzielt.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="flex flex-col sm:flex-row items-center gap-4"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
             >
               <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
                 Kostenlosen Projekt-Check anfordern
@@ -65,12 +65,12 @@ export function HeroSection() {
                 Showreel ansehen
               </Button>
             </motion.div>
-            <div className="mt-6 text-sm md:text-base text-gray-400">
+            <div className="mt-5 md:mt-6 text-sm md:text-base text-gray-400">
               Schnelle Frage? <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20habe%20eine%20kurze%20Frage%20zur%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie mir gerne direkt auf WhatsApp.</a>
             </div>
-            
-            <div className="mt-10 flex items-center gap-4 bg-white/5 backdrop-blur-sm p-3 px-5 rounded-2xl border border-white/10 w-fit">
-              <div className="flex -space-x-3 items-center mr-2">
+
+            <div className="mt-8 md:mt-10 flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-sm p-3 px-4 sm:px-5 rounded-2xl border border-white/10 w-fit">
+              <div className="flex -space-x-3 items-center mr-1 sm:mr-2">
                 {[
                   { name: "Ramin Foroozan", img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1775640180/Ramin_jx1axc.webp" },
                   { name: "David Binimann", img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1775639263/David_Biniman_lxgt79.png" },
@@ -82,15 +82,15 @@ export function HeroSection() {
                     loading="lazy" key={i}
                     src={user.img}
                     alt={`${user.name} Kundenstimme Videoproduktion Kaiserslautern`}
-                    className="w-8 h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"
+                    className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"
                     referrerPolicy="no-referrer"
                   />
                 ))}
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border-2 border-brand-bg bg-white flex items-center justify-center shrink-0">
-                  <img loading="lazy" src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-brand-bg bg-white flex items-center justify-center shrink-0">
+                  <img loading="lazy" src="https://www.google.com/favicon.ico" className="w-3.5 h-3.5 sm:w-4 sm:h-4" alt="Google" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex text-brand-accent mb-0.5">
@@ -99,7 +99,7 @@ export function HeroSection() {
                     ))}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-white text-xs sm:text-sm">Über 98+ erfolgreiche Projekte</span>
+                    <span className="font-medium text-white text-[11px] sm:text-sm">Über 98+ erfolgreiche Projekte</span>
                   </div>
                 </div>
               </div>
@@ -110,10 +110,10 @@ export function HeroSection() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex justify-end relative"
+            className="hidden lg:flex justify-end relative self-end"
           >
-            <motion.div 
-              animate={{ 
+            <motion.div
+              animate={{
                 y: [0, -15, 0],
               }}
               transition={{
@@ -121,13 +121,13 @@ export function HeroSection() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="relative w-full max-w-[550px] xl:max-w-[650px] -mt-16 xl:-mt-24"
+              className="relative w-full max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px]"
             >
               <img
                 loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
                 alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
                 className="w-full h-auto object-contain drop-shadow-2xl"
-                style={{ 
+                style={{
                   maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',
                   WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)'
                 }}

@@ -119,7 +119,7 @@ export default function CorporateVideo() {
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function CorporateVideo() {
 
       {/* 2. LEISTUNGSBEREICHE / VIDEOFORMATE */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Welche Videos wir für Unternehmen produzieren
@@ -188,7 +188,7 @@ export default function CorporateVideo() {
 
       {/* 3. PROBLEMVERSTÄNDNIS */}
       <section className="py-24 bg-brand-bg">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -228,7 +228,7 @@ export default function CorporateVideo() {
 
       {/* 4. LÖSUNG & NUTZEN */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Machen Sie Ihre Qualität auf den ersten Blick sichtbar
@@ -270,7 +270,7 @@ export default function CorporateVideo() {
 
       {/* 5. BEISPIELE / REFERENZEN */}
       <section className="py-24 bg-brand-bg">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Projekte, die wirken
@@ -406,7 +406,7 @@ export default function CorporateVideo() {
 
       {/* 6. ABLAUF / PROZESS */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               In 5 Schritten zum fertigen Film
@@ -439,7 +439,7 @@ export default function CorporateVideo() {
 
       {/* 7. VORTEILE / ERGEBNISSE */}
       <section className="py-24 bg-brand-bg">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">
@@ -480,7 +480,7 @@ export default function CorporateVideo() {
 
       {/* 8. SOCIAL PROOF */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
             Was unsere Kunden sagen
           </h2>
@@ -501,7 +501,7 @@ export default function CorporateVideo() {
 
       {/* 9. PREISORIENTIERUNG */}
       <section className="py-24 bg-brand-bg">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Investition in Qualität
@@ -521,7 +521,7 @@ export default function CorporateVideo() {
 
       {/* 10. ABSCHLUSS CALL-TO-ACTION */}
       <section className="py-32 bg-brand-darker text-center border-t border-white/10">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 tracking-tight">
             Lassen Sie uns gemeinsam Ihr Unternehmen inszenieren.
           </h2>

@@ -49,7 +49,7 @@ export default function Work() {
         description="Entdecken Sie unsere bisherigen Videoproduktionen. Erfolgreiche Projekte für Unternehmen aus Kaiserslautern und Umgebung."
         canonical="/referenzen"
       />
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

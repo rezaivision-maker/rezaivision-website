@@ -71,7 +71,7 @@ export default function Pricing() {
         canonical="/preise"
         keywords="Preise Videoproduktion, Kosten Imagefilm, Recruiting Video Preis, Social Media Content Flatrate, Rezai Vision Preise"
       />
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

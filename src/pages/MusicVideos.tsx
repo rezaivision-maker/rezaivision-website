@@ -26,7 +26,7 @@ export default function MusicVideos() {
           />
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-20">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-20">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 text-sm font-medium text-pink-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-pink-500" />
@@ -55,7 +55,7 @@ export default function MusicVideos() {
 
       {/* Strategic Value Section */}
       <section className="py-24 bg-brand-bg border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <h3 className="text-2xl font-display font-bold mb-4 text-white">Visuelle Identität</h3>
@@ -77,7 +77,7 @@ export default function MusicVideos() {
 
       {/* Pricing & Packages */}
       <section id="pakete" className="py-24 bg-brand-bg relative">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Paket Beispiele</h2>
             <p className="text-gray-400 text-lg">Individuelle Formate für jedes Level. Transparente Kalkulation ohne versteckte Kosten.</p>
@@ -129,7 +129,7 @@ export default function MusicVideos() {
 
       {/* Services Breakdown */}
       <section className="py-24 bg-brand-darker">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-8 leading-tight text-pink-400">Full-Service Produktion</h2>
@@ -161,7 +161,7 @@ export default function MusicVideos() {
       {/* Pain Points / Solution */}
       <section className="py-24 bg-brand-bg relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full" />
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -236,7 +236,7 @@ export default function MusicVideos() {
       {/* Showreel Section */}
       <section id="showreel" className="py-24 bg-brand-bg relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/5 blur-[120px] rounded-full" />
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
               Showreel

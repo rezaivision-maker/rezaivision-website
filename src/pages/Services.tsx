@@ -53,7 +53,7 @@ export default function Services() {
       />
       {/* HERO SECTION */}
       <section className="pb-24">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function Services() {
 
       {/* APPROACH SECTION */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Der Unterschied liegt in der Strategie
@@ -117,7 +117,7 @@ export default function Services() {
 
       {/* SERVICES LIST */}
       <section className="py-32 bg-brand-bg">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="space-y-32">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 items-center`}>
@@ -190,7 +190,7 @@ export default function Services() {
 
       {/* CTA SECTION */}
       <section className="py-24 bg-brand-darker border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
             Bereit für Ihr nächstes Projekt?
           </h2>

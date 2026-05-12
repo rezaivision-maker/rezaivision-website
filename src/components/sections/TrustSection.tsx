@@ -5,8 +5,8 @@ export function TrustSection() {
   return (
     <>
       {/* 2. TRUST SECTION */}
-      <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <section className="py-16 md:py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
               Agenturqualität. Persönliche Betreuung. Regionale Nähe.
@@ -23,7 +23,7 @@ export function TrustSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 text-center">
             {[
               {
                 icon: <PlusSquare size={24} className="text-brand-accent" />,
@@ -50,7 +50,7 @@ export function TrustSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex flex-col items-center"
               >
-                <div className="w-16 h-16 rounded-full border border-brand-accent/30 flex items-center justify-center mb-8">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-brand-accent/30 flex items-center justify-center mb-6 md:mb-8">
                   {item.icon}
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-[180px]">
@@ -63,8 +63,8 @@ export function TrustSection() {
       </section>
 
       {/* 2.5 CLIENT LOGOS MARQUEE */}
-      <section className="py-20 bg-brand-bg overflow-hidden border-b border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-12 text-center">
+      <section className="py-14 md:py-20 bg-brand-bg overflow-hidden border-b border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 mb-12 text-center">
           <p className="text-sm md:text-base text-gray-400 font-medium tracking-widest uppercase">
             Zusammenarbeit mit Unternehmen und Marken aus verschiedenen Bereichen
           </p>
