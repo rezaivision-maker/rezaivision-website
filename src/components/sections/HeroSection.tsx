@@ -16,43 +16,13 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Ghost container for absolute image positioning (bounded by max-w) */}
-      <div className="absolute inset-0 z-10 pointer-events-none flex justify-center overflow-hidden">
-        <div className="w-full max-w-[1600px] 3xl:max-w-[2000px] px-6 md:px-12 xl:px-16 3xl:px-20 relative h-full">
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="hidden lg:block absolute right-6 md:right-12 xl:right-16 3xl:right-20 bottom-0"
-            style={{ width: 'clamp(500px, 45vw, 1050px)' }}
-          >
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <img
-                loading="lazy"
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
-                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
-                className="w-full h-auto object-contain drop-shadow-2xl"
-                style={{
-                  maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',
-                  WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)'
-                }}
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
       <div className="max-w-[1600px] 3xl:max-w-[2000px] mx-auto px-6 md:px-12 xl:px-16 3xl:px-20 relative z-20 w-full">
-        <div className="flex w-full items-center">
+        <div className="flex flex-col lg:flex-row w-full items-center justify-between gap-10 xl:gap-0">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-[60%] xl:w-[55%] 3xl:w-[50%] max-w-3xl text-left py-12 lg:py-0"
+            className="w-full lg:w-[55%] xl:w-[50%] 3xl:w-[45%] max-w-3xl text-left py-12 lg:py-0 shrink-0"
           >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -134,6 +104,31 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="hidden lg:flex w-full lg:w-[45%] xl:w-[50%] 3xl:w-[55%] justify-end shrink-0 relative translate-y-12 3xl:translate-y-24"
+          >
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="w-full flex justify-end"
+            >
+              <img
+                loading="lazy"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp?v=2"
+                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
+                className="w-full max-w-[700px] xl:max-w-[850px] 3xl:max-w-[1300px] h-auto object-contain drop-shadow-2xl scale-110 3xl:scale-125 origin-bottom-right"
+                style={{
+                  maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',
+                  WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)'
+                }}
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
