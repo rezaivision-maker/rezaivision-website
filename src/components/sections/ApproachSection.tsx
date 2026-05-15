@@ -21,10 +21,10 @@ export function ApproachSection() {
             <div className="bg-brand-bg/50 p-8 rounded-2xl border border-white/5 hover:border-brand-accent/20 transition-all group">
               <h3 className="text-xl font-display font-bold mb-4 flex items-center gap-3">
                 <span className="text-brand-accent group-hover:scale-110 transition-transform">01.</span>
-                Demokratisierung
+                Neue Möglichkeiten
               </h3>
               <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                Professionelles Bewegtbild ist <strong className="text-brand-accent font-medium">kein Luxus mehr für wenige.</strong> Die Digitalisierung ermöglicht es heute jedem Unternehmen, hocheffizientes Marketing auf Top-Niveau zu betreiben.
+                Professionelles Bewegtbild ist heute <strong className="text-brand-accent font-medium">kein Luxus mehr für wenige.</strong> Die Digitalisierung ermöglicht nahezu jedem Unternehmen hochwertiges Marketing.
               </p>
             </div>
 
@@ -34,7 +34,7 @@ export function ApproachSection() {
                 Messbare Strategie
               </h3>
               <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                Ein Video ist heute eine <strong className="text-brand-accent font-medium">strategische Marketing-Investition.</strong> Statt hoher Streuverluste im TV erreichen Sie Ihre Zielgruppe heute präzise dort, wo sie sich aufhält.
+                Videos sind heute <strong className="text-brand-accent font-medium">mehr als Werbung.</strong> Unternehmen erreichen ihre Zielgruppe gezielt dort, wo täglich Aufmerksamkeit entsteht.
               </p>
             </div>
 
@@ -44,7 +44,7 @@ export function ApproachSection() {
                 Vertrauen & Skalierung
               </h3>
               <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                Bilder sagen mehr als tausend Worte – Videos bauen <strong className="text-brand-accent font-medium">sofortiges Vertrauen</strong> auf. Sie ermöglichen es Ihnen, Ihre Botschaft authentisch und hocheffizient zu skalieren.
+                Videos schaffen <strong className="text-brand-accent font-medium">Vertrauen schneller</strong> als kaum ein anderes Medium. Sie vermitteln Botschaften authentisch, emotional und skalierbar.
               </p>
             </div>
           </div>
