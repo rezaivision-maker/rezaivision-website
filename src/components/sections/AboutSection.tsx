@@ -44,13 +44,15 @@ export function AboutSection() {
               Starke Kommunikation beginnt auf Augenhöhe.
             </p>
 
-            <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die pure Leidenschaft für das Medium Film – doch wir machen keine Kunst aus Selbstzweck, sondern <span className="text-gray-100 font-semibold">Strategie mit Wirkung</span>. Ein Video ist für uns weit mehr als nur ein schönes Bild; es ist das stärkste Werkzeug, um Ihre Botschaft <span className="text-gray-100 font-semibold">im gesamten Südwesten (RPF, Saarland, Hessen)</span> greifbar zu machen.
-            </p>
-
-            <p className="text-gray-400 leading-relaxed font-light mt-4">
-              Ob ambitionierter <span className="text-gray-100 font-semibold">Underdog</span> oder etablierter <span className="text-gray-100 font-semibold">Mittelstand</span>: Wir setzen konsequent auf <span className="text-gray-100 font-semibold">Kamerasysteme mit hohem Dynamikumfang</span> und eine Zusammenarbeit, die Ihre Vision versteht. Bei uns gibt es kein Agentur-Overhead, sondern <span className="text-gray-100 font-semibold">direkte Kommunikation</span> und Ergebnisse, die Vertrauen aufbauen. Ich bin Ihr <span className="text-gray-100 font-semibold">persönlicher Partner</span> – von der ersten Konzeption bis hin zum fertigen Film. Je nach Projektumfang greife ich dabei auf ein bewährtes <span className="text-gray-100 font-semibold">Netzwerk bei Bedarf</span> zurück.
-            </p>
+            <div className="space-y-6 mt-8">
+              <p className="text-gray-400 leading-relaxed font-light">
+                Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die Leidenschaft für Film, die als <span className="text-gray-100 font-semibold">strategisches Werkzeug</span> für Ihr Wachstum arbeitet. Als <span className="text-gray-100 font-semibold">IHK-geprüfte Experten</span> begleiten wir Industrie, Mittelstand und Startups im gesamten <span className="text-gray-100 font-semibold">Südwesten Deutschlands</span>.
+              </p>
+              
+              <p className="text-gray-400 leading-relaxed font-light">
+                Bei uns gibt es keine wechselnden Teams oder Agentur-Overhead. Sie haben einen <span className="text-gray-100 font-semibold">direkten Ansprechpartner</span> für Ihr Projekt – von der ersten Idee bis zum fertigen Film. Wir setzen auf <span className="text-gray-100 font-semibold">High-End-Technik</span> und eine Zusammenarbeit auf Augenhöhe, die messbare Ergebnisse liefert.
+              </p>
+            </div>
 
             <div className="pt-6"></div>
 

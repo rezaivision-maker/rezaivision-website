@@ -17,7 +17,7 @@ import { MessageCircle } from "lucide-react";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <SEO 
+      <SEO
         title="Videoproduktion Kaiserslautern | Rezai Vision"
         description="Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen."
         canonical="/"
@@ -168,7 +168,7 @@ export default function Home() {
           }
         ]}
       />
-      
+
       <HeroSection />
       <TrustSection />
       <ProblemSection />
@@ -184,9 +184,9 @@ export default function Home() {
       <CTASection />
 
       {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20bin%20gerade%20auf%20deiner%20Website..." 
-        target="_blank" 
+      <a
+        href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20bin%20gerade%20auf%20deiner%20Website..."
+        target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center justify-center group"
         aria-label="Kontakt über WhatsApp"

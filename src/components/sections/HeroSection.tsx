@@ -31,7 +31,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium text-brand-accent mb-6 md:mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              Videoproduktion & Content Creation im Südwesten
+              Videoproduktion & Content Creation aus Rheinland-Pfalz
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-gray-300 mb-8 md:mb-10 3xl:mb-12 font-light leading-relaxed max-w-2xl 3xl:max-w-3xl"
             >
-              Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut und messbare Ergebnisse im Südwesten erzielt.
+              Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut für messbare Ergebnisse der Unternehmenskommunikation.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
