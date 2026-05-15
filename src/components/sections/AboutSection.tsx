@@ -40,31 +40,36 @@ export function AboutSection() {
               Über uns
             </div>
             
-            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-              Starke Kommunikation beginnt auf Augenhöhe.
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 leading-tight">
+              Agenturqualität. Persönliche Betreuung. Regionale Nähe.
+            </h2>
+            <p className="text-lg text-brand-accent mb-8">
+              Verlässliche Videoproduktion aus Kaiserslautern für Unternehmen in Deutschland.
             </p>
 
-            <div className="space-y-6 mt-8">
+            <div className="space-y-6">
               <p className="text-gray-400 leading-relaxed font-light">
                 Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die Leidenschaft für Film, die als <span className="text-gray-100 font-semibold">strategisches Werkzeug</span> für Ihr Wachstum arbeitet. Als <span className="text-gray-100 font-semibold">IHK-geprüfte Experten</span> begleiten wir Industrie, Mittelstand und Startups im gesamten <span className="text-gray-100 font-semibold">Südwesten Deutschlands</span>.
               </p>
               
               <p className="text-gray-400 leading-relaxed font-light">
-                Bei uns gibt es keine wechselnden Teams oder Agentur-Overhead. Sie haben einen <span className="text-gray-100 font-semibold">direkten Ansprechpartner</span> für Ihr Projekt – von der ersten Idee bis zum fertigen Film. Wir setzen auf <span className="text-gray-100 font-semibold">High-End-Technik</span> und eine Zusammenarbeit auf Augenhöhe, die messbare Ergebnisse liefert.
+                Bei uns gibt es keine wechselnden Teams oder Agentur-Overhead. Sie haben einen <span className="text-gray-100 font-semibold">direkten Ansprechpartner</span> für Ihr Projekt – von der ersten Idee bis zum fertigen Film.
               </p>
             </div>
 
-            <div className="pt-6"></div>
-
-            <div className="flex flex-col gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-10">
               {[
-                "Persönlicher Partner von der Konzeption bis zum fertigen Film",
-                "High-End Kamerasysteme für erstklassige Bildqualität",
-                "Effiziente Umsetzung ohne unnötigen Agentur-Overhead"
-              ].map((trust, i) => (
-                <div key={i} className="flex items-center gap-3 text-gray-300">
-                  <CheckCircle2 size={20} className="text-brand-accent shrink-0" />
-                  <span>{trust}</span>
+                { title: "10 Jahre Erfahrung", desc: "In Video & Filmproduktion" },
+                { title: "Fokus Südwesten", desc: "RPF, Saarland, Hessen & BW" },
+                { title: "Persönliche Begleitung", desc: "Keine wechselnden Teams" },
+                { title: "IHK-geprüft", desc: "Höchste Qualitätsstandards" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle2 size={20} className="text-brand-accent shrink-0 mt-1" />
+                  <div>
+                    <div className="font-bold text-white text-sm uppercase tracking-wider">{item.title}</div>
+                    <div className="text-gray-500 text-sm">{item.desc}</div>
+                  </div>
                 </div>
               ))}
             </div>
