@@ -21,7 +21,6 @@ const PrivateEvents = lazy(() => import("./pages/PrivateEvents"));
 const EventCoverage = lazy(() => import("./pages/EventCoverage"));
 const MusicVideos = lazy(() => import("./pages/MusicVideos"));
 const WeddingFilms = lazy(() => import("./pages/WeddingFilms"));
-const Work = lazy(() => import("./pages/Work"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const About = lazy(() => import("./pages/About"));
 const Equipment = lazy(() => import("./pages/Equipment"));
@@ -64,7 +63,6 @@ export default function App() {
           <Route path="reza-e-motion/eventbegleitung" element={<Suspense fallback={<PageLoader />}><EventCoverage /></Suspense>} />
           <Route path="reza-e-motion/musikvideos" element={<Suspense fallback={<PageLoader />}><MusicVideos /></Suspense>} />
           <Route path="reza-e-motion/hochzeitsfilme" element={<Suspense fallback={<PageLoader />}><WeddingFilms /></Suspense>} />
-          <Route path="referenzen" element={<Suspense fallback={<PageLoader />}><Work /></Suspense>} />
           <Route path="preise" element={<Suspense fallback={<PageLoader />}><Pricing /></Suspense>} />
           <Route path="ueber-uns" element={<Suspense fallback={<PageLoader />}><About /></Suspense>} />
           <Route path="technik" element={<Suspense fallback={<PageLoader />}><Equipment /></Suspense>} />
