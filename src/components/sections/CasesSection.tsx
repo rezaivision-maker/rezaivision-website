@@ -337,7 +337,6 @@ export function CasesSection() {
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
                   <video 
                     src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto/f_auto/v1775985431/Social_Care_EXPOFIX_jftef4.mov"
-                    poster="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775650095/socialcare-logo_d5acj2.webp"
                     className="w-full h-full object-cover"
                     controls
                     playsInline
