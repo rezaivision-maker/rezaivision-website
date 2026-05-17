@@ -9,7 +9,7 @@ import { NavDropdown } from "./NavDropdown";
 import { AnimatePresence, motion } from "motion/react";
 
 const navLinks = [
-  { name: "Referenzen", path: "/referenzen" },
+  { name: "Referenzen", path: "/#cases" },
   { name: "Preise", path: "/preise" },
   { name: "Technik", path: "/technik" },
   { name: "Über uns", path: "/ueber-uns" },
@@ -396,7 +396,7 @@ export function Layout() {
             <div>
               <h4 className="text-lg font-display font-semibold mb-6">Unternehmen</h4>
               <ul className="space-y-4 text-gray-400">
-                <li><Link to="/referenzen" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
+                <li><Link to="/#cases" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
                 <li><Link to="/preise" className="hover:text-brand-accent transition-colors">Preise</Link></li>
                 <li><Link to="/ueber-uns" className="hover:text-brand-accent transition-colors">Über uns</Link></li>
                 <li><Link to="/technik" className="hover:text-brand-accent transition-colors">Technik & Qualität</Link></li>
