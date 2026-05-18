@@ -107,7 +107,7 @@ export function Layout() {
             "@type": "Organization",
             "name": "Rezai Vision",
             "url": "https://www.rezaivision.de",
-            "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772567552/Rechteck_ts5rt1.png",
+            "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg",
             "sameAs": [
               "https://www.instagram.com/rezaivision",
               "https://www.facebook.com/rezaivision",
@@ -146,9 +146,12 @@ export function Layout() {
       >
         <div className="max-w-[1500px] 3xl:max-w-[2000px] mx-auto px-4 md:px-8 xl:px-12 3xl:px-20 flex items-center justify-between gap-2 xl:gap-4">
           <div className="flex-none flex justify-start shrink-0">
-            <Link to="/" className="group text-xl xl:text-2xl font-display font-bold tracking-tighter flex items-center whitespace-nowrap">
-              <span className="text-brand-accent transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,164,107,0.4)]">Rezai</span>
-              <span className="text-white transition-all duration-300">Vision</span>
+            <Link to="/" className="group flex items-center shrink-0">
+              <img 
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg" 
+                alt="Rezai Vision Logo" 
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              />
             </Link>
           </div>
 
@@ -354,9 +357,12 @@ export function Layout() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
-              <Link to="/" className="text-2xl font-display font-bold tracking-tighter flex items-center mb-6">
-                <span className="text-brand-accent">Rezai</span>
-                <span className="text-white">Vision</span>
+              <Link to="/" className="group inline-block mb-6">
+                <img 
+                  src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg" 
+                  alt="Rezai Vision Logo" 
+                  className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                />
               </Link>
               <p className="text-gray-400 mb-6 max-w-xs text-sm leading-relaxed">
                 Professionelle & verlässliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und Frankfurt. Starke Arbeit verdient es, gesehen zu werden.
