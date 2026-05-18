@@ -17,6 +17,7 @@ const CorporateVideo = lazy(() => import("./pages/CorporateVideo"));
 const RecruitingVideo = lazy(() => import("./pages/RecruitingVideo"));
 const SocialAds = lazy(() => import("./pages/SocialAds"));
 const SocialRetainer = lazy(() => import("./pages/SocialRetainer"));
+const Webdesign = lazy(() => import("./pages/Webdesign"));
 const PrivateEvents = lazy(() => import("./pages/PrivateEvents"));
 const EventCoverage = lazy(() => import("./pages/EventCoverage"));
 const MusicVideos = lazy(() => import("./pages/MusicVideos"));
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="leistungen/recruiting" element={<Suspense fallback={<PageLoader />}><RecruitingVideo /></Suspense>} />
           <Route path="leistungen/werbevideo" element={<Suspense fallback={<PageLoader />}><SocialAds /></Suspense>} />
           <Route path="leistungen/social-media" element={<Suspense fallback={<PageLoader />}><SocialRetainer /></Suspense>} />
+          <Route path="leistungen/webdesign" element={<Suspense fallback={<PageLoader />}><Webdesign /></Suspense>} />
           <Route path="reza-e-motion" element={<Suspense fallback={<PageLoader />}><PrivateEvents /></Suspense>} />
           <Route path="reza-e-motion/eventbegleitung" element={<Suspense fallback={<PageLoader />}><EventCoverage /></Suspense>} />
           <Route path="reza-e-motion/musikvideos" element={<Suspense fallback={<PageLoader />}><MusicVideos /></Suspense>} />

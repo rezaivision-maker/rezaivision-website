@@ -20,7 +20,8 @@ const leistungenItems = [
   { name: "Unternehmensfilm", path: "/leistungen/unternehmensfilm", desc: "Strategisches Branding & Vertrauen" },
   { name: "Recruiting Video", path: "/leistungen/recruiting", desc: "Automatisierte Mitarbeitergewinnung" },
   { name: "Social Ads", path: "/leistungen/werbevideo", desc: "Messbare Leads & Verkaufspsychologie" },
-  { name: "Social Media Retainer", path: "/leistungen/social-media", desc: "Dauerhafte Präsenz & Betreuung" }
+  { name: "Social Media Retainer", path: "/leistungen/social-media", desc: "Dauerhafte Präsenz & Betreuung" },
+  { name: "Webdesign & Websites", path: "/leistungen/webdesign", desc: "Video-optimierte Websites & Landingpages" }
 ];
 
 const rezaEmotionItems = [
