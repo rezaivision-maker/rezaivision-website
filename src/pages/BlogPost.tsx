@@ -117,7 +117,7 @@ export default function BlogPost() {
       "name": "Rezai Vision",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109176/RezaiVision_LOGO_xg2xza.svg"
+        "url": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg"
       }
     },
     "datePublished": post.date,
