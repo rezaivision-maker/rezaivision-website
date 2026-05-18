@@ -150,7 +150,7 @@ export function Layout() {
               <img 
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg" 
                 alt="Rezai Vision Logo" 
-                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                className="h-6 sm:h-7 md:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </Link>
           </div>
