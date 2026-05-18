@@ -107,7 +107,7 @@ export function Layout() {
             "@type": "Organization",
             "name": "Rezai Vision",
             "url": "https://www.rezaivision.de",
-            "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg",
+            "logo": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109176/RezaiVision_LOGO_xg2xza.svg",
             "sameAs": [
               "https://www.instagram.com/rezaivision",
               "https://www.facebook.com/rezaivision",
@@ -148,7 +148,7 @@ export function Layout() {
           <div className="flex-none flex justify-start shrink-0">
             <Link to="/" className="group flex items-center shrink-0">
               <img 
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg" 
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109176/RezaiVision_LOGO_xg2xza.svg" 
                 alt="Rezai Vision Logo" 
                 className="h-6 sm:h-7 md:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
@@ -359,7 +359,7 @@ export function Layout() {
             <div>
               <Link to="/" className="group inline-block mb-6">
                 <img 
-                  src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779108924/RezaiVision_LOGO_pkmrxp.svg" 
+                  src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109176/RezaiVision_LOGO_xg2xza.svg" 
                   alt="Rezai Vision Logo" 
                   className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                 />
