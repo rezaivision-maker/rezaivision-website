@@ -6,23 +6,23 @@ import { Monitor, Zap, TrendingUp, Layers, ArrowRight, CheckCircle2 } from "luci
 const features = [
   {
     icon: <Monitor size={22} className="text-brand-accent" />,
-    title: "Video-First Design",
-    desc: "Deine Website wird von Grund auf um deine Videos herum gebaut – für maximale Wiedergabequalität und Konversion."
+    title: "Flexibles & Modernes Design",
+    desc: "Visuell herausragend und auf deine Marke zugeschnitten – egal ob mit einem starken Video im Fokus oder als klassische, textbasierte Business-Seite."
   },
   {
     icon: <Zap size={22} className="text-brand-accent" />,
-    title: "Blitzschnelle Performance",
-    desc: "100/100 Google PageSpeed. Optimierter Code, Lazy Loading und modernste Web-Technologien (React + Vite)."
+    title: "Conversion optimiert durch KI-Hilfe",
+    desc: "Wir nutzen modernste KI-Technologien für blitzschnellen Code, effiziente Ladezeiten und eine strategische Struktur, die Besucher zu Kunden macht."
   },
   {
     icon: <TrendingUp size={22} className="text-brand-accent" />,
-    title: "Conversion-optimiert",
-    desc: "Jede Sektion, jeder Button und jede Formulierung ist auf Anfragen und Abschlüsse ausgerichtet – nicht auf Awards."
+    title: "Nutzerpsychologie im Fokus",
+    desc: "Jede Sektion, jeder Button und jede Formulierung ist auf Anfragen und Abschlüsse ausgerichtet – nicht nur auf schöne Optik."
   },
   {
     icon: <Layers size={22} className="text-brand-accent" />,
     title: "Alles aus einer Hand",
-    desc: "Video + Website als perfektes Duo. Kein Koordinationsaufwand zwischen Agenturen. Ein Ansprechpartner."
+    desc: "Website und auf Wunsch auch Video als perfektes Duo. Kein Koordinationsaufwand zwischen Agenturen. Ein zentraler Ansprechpartner."
   }
 ];
 
@@ -75,7 +75,7 @@ export default function Webdesign() {
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <SEO
         title="Webdesign & Homepageerstellung Kaiserslautern | Rezai Vision"
-        description="Video-optimierte Websites & Landingpages aus Kaiserslautern. Blitzschnell, conversion-stark und perfekt abgestimmt auf deine Videoproduktion. Alles aus einer Hand."
+        description="Moderne, conversion-starke Websites & Landingpages aus Kaiserslautern. Blitzschnell und durch KI optimiert – perfekt für dein Business, mit oder ohne Video."
         canonical="/leistungen/webdesign"
       />
 
@@ -93,12 +93,12 @@ export default function Webdesign() {
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tighter mb-6 leading-tight">
             Die perfekte Bühne für{" "}
-            <span className="gold-text-gradient">deine Videos.</span>
+            <span className="gold-text-gradient">dein Business.</span>
           </h1>
           <p className="text-xl text-gray-300 font-light leading-relaxed max-w-3xl mb-10">
-            Was bringt der beste Film, wenn er auf einer langsamen, veralteten Website verstaubt? 
-            Wir entwickeln blitzschnelle, video-optimierte Websites und Landingpages, 
-            die deine Videoproduktion perfekt in Szene setzen – und Besucher in Kunden verwandeln.
+            Wir entwickeln blitzschnelle, conversion-starke Websites und Landingpages, 
+            die deine Marke perfekt in Szene setzen und Besucher in Kunden verwandeln – 
+            auf Wunsch ideal abgestimmt auf deine Videoproduktion.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button href="/kontakt" size="lg">
