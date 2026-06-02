@@ -123,3 +123,35 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #C8A46B;
 }
+
+/* Performance: Defer rendering for off-screen sections */
+.section-deferred {
+  content-visibility: auto;
+  contain-intrinsic-size: auto none auto 600px;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* View Transitions: Smooth SPA page navigation */
+::view-transition-old(root) {
+  animation: vt-fade-out 150ms ease-out;
+}
+::view-transition-new(root) {
+  animation: vt-fade-in 150ms ease-in;
+}
+@keyframes vt-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

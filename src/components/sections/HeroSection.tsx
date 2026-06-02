@@ -9,6 +9,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-brand-bg/80 z-10" />
         <img
           fetchPriority="high"
+          decoding="sync"
           src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp"
           srcSet="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_800/v1772568178/Hero_BG_bldaur.webp 800w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1200/v1772568178/Hero_BG_bldaur.webp 1200w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp 1920w"
           sizes="100vw"
@@ -58,7 +59,9 @@ export function HeroSection() {
                   { name: "Ralph Nist", img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_64/v1775642376/Ralph_Nist_wmkjpf.webp" }
                 ].map((user, i) => (
                   <img
-                    loading="lazy" key={i}
+                    loading="lazy"
+                    fetchPriority="low"
+                    key={i}
                     src={user.img}
                     alt={`${user.name} Kundenstimme Videoproduktion Kaiserslautern`}
                     className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"

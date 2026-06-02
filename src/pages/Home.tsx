@@ -175,18 +175,18 @@ export default function Home() {
       <HeroSection />
       
       <Suspense fallback={null}>
-        <TrustSection />
-        <ProblemSection />
-        <ApproachSection />
-        <ServicesSection />
-        <ShowreelSection />
-        <CasesSection />
-        <ProcessSection />
-        <AboutSection />
-        <TestimonialSection />
-        <FAQSection />
-        <PricingSection />
-        <CTASection />
+        <div className="section-deferred"><TrustSection /></div>
+        <div className="section-deferred"><ProblemSection /></div>
+        <div className="section-deferred"><ApproachSection /></div>
+        <div className="section-deferred"><ServicesSection /></div>
+        <div className="section-deferred"><ShowreelSection /></div>
+        <div className="section-deferred"><CasesSection /></div>
+        <div className="section-deferred"><ProcessSection /></div>
+        <div className="section-deferred"><AboutSection /></div>
+        <div className="section-deferred"><TestimonialSection /></div>
+        <div className="section-deferred"><FAQSection /></div>
+        <div className="section-deferred"><PricingSection /></div>
+        <div className="section-deferred"><CTASection /></div>
       </Suspense>
 
       {/* Floating WhatsApp Button */}
