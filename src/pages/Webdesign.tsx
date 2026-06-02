@@ -208,9 +208,9 @@ export default function Webdesign() {
               Wenn sich Texte oder Bilder ändern, schick mir einfach eine kurze Nachricht per WhatsApp oder E-Mail. 
               Ich setze alle Änderungen schnell, sicher und professionell für dich um.
             </p>
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-brand-accent text-sm font-semibold">
-              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-              Bonus: In den ersten 30 Tagen nach Live-Gang sind alle Anpassungen komplett kostenlos!
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-brand-accent text-sm font-semibold text-left max-w-full">
+              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse shrink-0" />
+              <span>Bonus: In den ersten 30 Tagen nach Live-Gang sind kleinere Text- und Bildanpassungen komplett kostenlos!<br/><span className="text-gray-400 font-normal text-xs block mt-1">(Ausgenommen sind Strukturänderungen oder neue Unterseiten)</span></span>
             </div>
           </div>
         </motion.div>
