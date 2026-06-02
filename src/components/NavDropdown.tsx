@@ -58,6 +58,7 @@ export function NavDropdown({ title, path, items, isActive, isSpecial }: NavDrop
         <div className="flex flex-col gap-1 relative z-10">
           <Link
             to={path}
+            onClick={() => setIsOpen(false)}
             className="flex flex-col p-3 rounded-xl hover:bg-brand-accent/10 border border-transparent hover:border-brand-accent/20 transition-all group"
           >
             <span className="text-sm font-bold text-brand-accent flex items-center gap-2">
@@ -70,6 +71,7 @@ export function NavDropdown({ title, path, items, isActive, isSpecial }: NavDrop
             <Link
               key={item.path}
               to={item.path}
+              onClick={() => setIsOpen(false)}
               className="flex flex-col p-3 rounded-xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
             >
               <span className="text-[15px] font-semibold text-white/90 group-hover:text-white transition-colors">
