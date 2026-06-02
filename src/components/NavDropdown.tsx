@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -48,48 +47,45 @@ export function NavDropdown({ title, path, items, isActive, isSpecial }: NavDrop
         </Link>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 p-2 bg-brand-bg/98 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[60]"
-          >
-            <div className="flex flex-col gap-1 relative z-10">
-              <Link
-                to={path}
-                className="flex flex-col p-3 rounded-xl hover:bg-brand-accent/10 border border-transparent hover:border-brand-accent/20 transition-all group"
-              >
-                <span className="text-sm font-bold text-brand-accent flex items-center gap-2">
-                  Alle {title}
-                  <div className="h-px flex-1 bg-brand-accent/20" />
-                </span>
-              </Link>
-              
-              {items.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="flex flex-col p-3 rounded-xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
-                >
-                  <span className="text-[15px] font-semibold text-white/90 group-hover:text-white transition-colors">
-                    {item.name}
-                  </span>
-                  {item.desc && (
-                    <span className="text-xs text-gray-400 leading-tight mt-1 group-hover:text-gray-300 transition-colors">
-                      {item.desc}
-                    </span>
-                  )}
-                </Link>
-              ))}
-            </div>
-            {/* Subtle Gold Glow at the bottom */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-accent/5 rounded-2xl pointer-events-none" />
-          </motion.div>
+      <div
+        className={cn(
+          "absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 p-2 bg-brand-bg/98 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[60] transition-all duration-200 origin-top",
+          isOpen
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-95 translate-y-2 pointer-events-none"
         )}
-      </AnimatePresence>
+      >
+        <div className="flex flex-col gap-1 relative z-10">
+          <Link
+            to={path}
+            className="flex flex-col p-3 rounded-xl hover:bg-brand-accent/10 border border-transparent hover:border-brand-accent/20 transition-all group"
+          >
+            <span className="text-sm font-bold text-brand-accent flex items-center gap-2">
+              Alle {title}
+              <div className="h-px flex-1 bg-brand-accent/20" />
+            </span>
+          </Link>
+          
+          {items.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="flex flex-col p-3 rounded-xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+            >
+              <span className="text-[15px] font-semibold text-white/90 group-hover:text-white transition-colors">
+                {item.name}
+              </span>
+              {item.desc && (
+                <span className="text-xs text-gray-400 leading-tight mt-1 group-hover:text-gray-300 transition-colors">
+                  {item.desc}
+                </span>
+              )}
+            </Link>
+          ))}
+        </div>
+        {/* Subtle Gold Glow at the bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-accent/5 rounded-2xl pointer-events-none" />
+      </div>
     </div>
   );
 }
