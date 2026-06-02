@@ -79,36 +79,39 @@ export default function Webdesign() {
         canonical="/leistungen/webdesign"
       />
 
-      {/* Hero */}
-      <section className="max-w-[1600px] mx-auto px-6 md:px-12 mb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-sm font-medium text-brand-accent mb-8">
-            <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
-            Leistung — Webdesign & Homepageerstellung
-          </div>
-          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tighter mb-6 leading-tight">
-            Die perfekte Bühne für{" "}
-            <span className="gold-text-gradient">dein Business.</span>
-          </h1>
-          <p className="text-xl text-gray-300 font-light leading-relaxed max-w-3xl mb-10">
-            Wir entwickeln blitzschnelle, conversion-starke Websites und Landingpages, 
-            die deine Marke perfekt in Szene setzen und Besucher in Kunden verwandeln – 
-            auf Wunsch ideal abgestimmt auf deine Videoproduktion.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/kontakt" size="lg">
-              Kostenloses Webdesign-Gespräch buchen
-            </Button>
-            <Button href="#pakete" variant="outline" size="lg">
-              Pakete ansehen <ArrowRight size={16} />
-            </Button>
-          </div>
-        </motion.div>
+      {/* 1. HERO SECTION */}
+      <section className="pb-24">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <div className="inline-block px-4 py-1.5 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-brand-accent font-medium text-sm mb-6">
+              <span className="inline-block w-2 h-2 rounded-full bg-brand-accent animate-pulse mr-2" />
+              Leistung — Webdesign & Homepageerstellung
+            </div>
+            <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
+              Die perfekte Bühne für{" "}
+              <span className="gold-text-gradient">dein Business.</span>
+            </h1>
+            <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
+              Wir entwickeln blitzschnelle, conversion-starke Websites und Landingpages, 
+              die deine Marke perfekt in Szene setzen und Besucher in Kunden verwandeln – 
+              auf Wunsch ideal abgestimmt auf deine Videoproduktion.
+            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <Button href="/kontakt" size="lg" className="gap-2">
+                Kostenloses Gespräch buchen <ArrowRight size={18} />
+              </Button>
+              <div className="flex items-center gap-3 text-sm text-gray-400">
+                <CheckCircle2 className="text-brand-accent" size={20} />
+                <span>Modernste KI-Technologien für höchste Performance.</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Features */}
