@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { SEO } from "@/components/SEO";
-import { Monitor, Zap, TrendingUp, Layers, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Monitor, Zap, TrendingUp, Layers, ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 
 const features = [
   {
@@ -184,6 +184,36 @@ export default function Webdesign() {
             <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/80 via-transparent to-transparent" />
           </motion.div>
         </div>
+      </section>
+
+      {/* Managed Service Block */}
+      <section className="max-w-[1200px] mx-auto px-6 md:px-12 mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative overflow-hidden rounded-3xl bg-brand-bg/60 border border-brand-accent/20 p-8 md:p-12 text-center"
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-accent/10 via-transparent to-transparent pointer-events-none" />
+          <div className="relative z-10 flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center mb-6">
+              <ShieldCheck size={32} className="text-brand-accent" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+              Full-Service statt Baukasten-Frust.
+            </h2>
+            <p className="text-gray-300 leading-relaxed font-light max-w-2xl mx-auto mb-8 text-lg">
+              Vergiss komplizierte Baukästen und die Angst, das Design kaputt zu machen. 
+              Wenn sich Texte oder Bilder ändern, schick mir einfach eine kurze Nachricht per WhatsApp oder E-Mail. 
+              Ich setze alle Änderungen schnell, sicher und professionell für dich um.
+            </p>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-brand-accent text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+              Bonus: In den ersten 30 Tagen nach Live-Gang sind alle Anpassungen komplett kostenlos!
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Packages */}
