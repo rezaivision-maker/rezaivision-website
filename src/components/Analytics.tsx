@@ -33,10 +33,12 @@ export function Analytics() {
       });
 
       // 3. Load Scripts immediately (Advanced Consent Mode)
-      const gaScript = document.createElement("script");
-      gaScript.async = true;
-      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-      document.head.appendChild(gaScript);
+      if (!document.querySelector('script[src*="gtag/js"]')) {
+        const gaScript = document.createElement("script");
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+        document.head.appendChild(gaScript);
+      }
 
       window.gtag("js", new Date());
       window.gtag("config", GA_MEASUREMENT_ID, {
