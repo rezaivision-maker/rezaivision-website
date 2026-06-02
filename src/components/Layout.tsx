@@ -210,6 +210,7 @@ export function Layout() {
 
             {/* Mobile Menu Toggle */}
             <button
+              aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
               className="lg:hidden text-brand-text p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -374,7 +375,7 @@ export function Layout() {
             </div>
 
             <div>
-              <h4 className="text-lg font-display font-semibold mb-6">Leistungen</h4>
+              <h3 className="text-lg font-display font-semibold mb-6">Leistungen</h3>
               <ul className="space-y-4 text-gray-400">
                 <li><Link to="/leistungen#unternehmensfilm" className="hover:text-brand-accent transition-colors">Unternehmensfilm</Link></li>
                 <li><Link to="/leistungen#recruiting" className="hover:text-brand-accent transition-colors">Recruiting Video</Link></li>
@@ -405,7 +406,7 @@ export function Layout() {
             </div>
 
             <div>
-              <h4 className="text-lg font-display font-semibold mb-6">Unternehmen</h4>
+              <h3 className="text-lg font-display font-semibold mb-6">Unternehmen</h3>
               <ul className="space-y-4 text-gray-400">
                 <li><Link to="/#cases" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
                 <li><Link to="/preise" className="hover:text-brand-accent transition-colors">Preise</Link></li>
@@ -418,7 +419,7 @@ export function Layout() {
             </div>
 
             <div>
-              <h4 className="text-lg font-display font-semibold mb-6">Kontakt</h4>
+              <h3 className="text-lg font-display font-semibold mb-6">Kontakt</h3>
               <ul className="space-y-4 text-gray-400">
                 <li>Kaiserslautern, Deutschland</li>
                 <li><a href="mailto:rezaivision@gmail.com" className="hover:text-brand-accent transition-colors">rezaivision@gmail.com</a></li>
@@ -435,7 +436,7 @@ export function Layout() {
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
             <p>© {new Date().getFullYear()} Rezai Vision. Alle Rechte vorbehalten.</p>
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex gap-4">

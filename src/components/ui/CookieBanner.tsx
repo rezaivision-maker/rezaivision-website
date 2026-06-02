@@ -57,7 +57,7 @@ export function CookieBanner() {
             <div className="flex-1 relative z-10 w-full">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-xl font-display font-bold">Ihre Privatsphäre ist uns wichtig! 🍪</h3>
-                <button onClick={acceptEssential} className="md:hidden text-gray-400 hover:text-white transition-colors">
+                <button aria-label="Cookie Banner schließen" onClick={acceptEssential} className="md:hidden text-gray-400 hover:text-white transition-colors">
                   <X size={20} />
                 </button>
               </div>

@@ -35,7 +35,7 @@ export function TestimonialSection() {
                     </div>
                     <div className="min-w-0">
                       <div className="font-bold font-display text-lg text-white">{testimonial.name}</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-widest">{testimonial.role}</div>
+                      <div className="text-xs text-gray-400 uppercase tracking-widest">{testimonial.role}</div>
                       <div className="flex gap-0.5 mt-1.5">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <Star key={star} fill="#D4AF37" className="text-brand-accent shrink-0" size={12} />

@@ -50,16 +50,16 @@ export function CasesSection() {
                     <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light">
                       Gezeigt werden Ort, Atmosphäre, Handwerk und die visuelle Identität des Projekts.
                     </p>
-                    <p className="text-gray-500 text-base md:text-lg leading-relaxed font-light">
+                    <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
                       Für einen emotionalen und stimmigen Markenauftritt.
                     </p>
                   </div>
 
                   {/* Untere Tags */}
                   <div className="flex flex-wrap gap-3 mt-8">
-                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Imagefilm</span>
-                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Marke</span>
-                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Atmosphäre</span>
+                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Imagefilm</span>
+                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Marke</span>
+                    <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Atmosphäre</span>
                   </div>
                 </div>
 
@@ -141,12 +141,12 @@ export function CasesSection() {
               <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 gold-text-gradient tracking-tight">Aesthetic Ink</h3>
               <p className="text-gray-300 text-xl font-light mb-4">Reels, Social Content und Videoads für Sichtbarkeit und Nachfrage.</p>
               <p className="text-gray-400 text-lg leading-relaxed font-light mb-4">Visuelle Inhalte für Social Media, Werbeanzeigen und digitale Präsenz im Beauty-Bereich.</p>
-              <p className="text-gray-500 text-base leading-relaxed font-light mb-8">Starkes Angebot und starke Visuals führten in kurzer Zeit zu hoher Nachfrage.</p>
+              <p className="text-gray-400 text-base leading-relaxed font-light mb-8">Starkes Angebot und starke Visuals führten in kurzer Zeit zu hoher Nachfrage.</p>
               
               <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Beauty</span>
-                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Reels</span>
-                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Ads</span>
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Beauty</span>
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Reels</span>
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Ads</span>
               </div>
             </div>
 
@@ -251,13 +251,13 @@ export function CasesSection() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">KSB Rechtsanwälte</h3>
                 <p className="text-gray-300 text-lg font-light mb-3">Social-Media-Content für Aufmerksamkeit, Präsenz und Vertrauen.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Vertikale Inhalte für organische Posts und aktiv beworbene Kampagnen auf Social Media.</p>
-                <p className="text-gray-500 text-sm leading-relaxed font-light mb-6">Eingesetzt für Sichtbarkeit, Vertrauen und gezielte Leads.</p>
+                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Eingesetzt für Sichtbarkeit, Vertrauen und gezielte Leads.</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Contentseries</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Talking Heads</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Broll</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">CTA</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Contentseries</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Talking Heads</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Broll</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">CTA</span>
                 </div>
               </div>
 
@@ -304,12 +304,12 @@ export function CasesSection() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">Pflege mit Erfolg</h3>
                 <p className="text-gray-300 text-lg font-light mb-3">Recruiting-Content zur Mitarbeitergewinnung im Pflegebereich.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Visuelle Inhalte für eine glaubwürdige Ansprache potenzieller Bewerber.</p>
-                <p className="text-gray-500 text-sm leading-relaxed font-light mb-6">Durch Videomarketing konnten passende Mitarbeiter gefunden und eingestellt werden.</p>
+                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Durch Videomarketing konnten passende Mitarbeiter gefunden und eingestellt werden.</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Recruiting</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Bewerber</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Pflege</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Recruiting</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Bewerber</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Pflege</span>
                 </div>
               </div>
 
@@ -342,12 +342,12 @@ export function CasesSection() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">Social Care</h3>
                 <p className="text-gray-300 text-lg font-light mb-3">Reels und Social Content für Sichtbarkeit, Vertrauen und Bewerberansprache.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Talking Heads, Mitarbeiterstimmen und authentische Einblicke für eine Arbeitsvermittlung im sozialen Bereich.</p>
-                <p className="text-gray-500 text-sm leading-relaxed font-light mb-6">Während der Videopostings kamen rund 70 % der Bewerbungen über Instagram.</p>
+                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Während der Videopostings kamen rund 70 % der Bewerbungen über Instagram.</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Recruiting</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Reels</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Instagram</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Recruiting</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Reels</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Instagram</span>
                 </div>
               </div>
 
@@ -406,12 +406,12 @@ export function CasesSection() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">Pfaff</h3>
                 <p className="text-gray-300 text-lg font-light mb-3">Produktcontent für Social Media, Messe und YouTube.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Technische Inhalte zur Präsentation von Funktionen, Anwendung und Produktnutzen.</p>
-                <p className="text-gray-500 text-sm leading-relaxed font-light mb-6">Eingesetzt für klare Produktkommunikation auf Displays, Messen und digitalen Kanälen.</p>
+                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Eingesetzt für klare Produktkommunikation auf Displays, Messen und digitalen Kanälen.</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Industrie</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Produkte</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-500">Messe</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Industrie</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Produkte</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Messe</span>
                 </div>
               </div>
 
