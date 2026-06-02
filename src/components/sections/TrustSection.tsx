@@ -90,6 +90,8 @@ export function TrustSection() {
                         alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
+                        width="200"
+                        height="100"
                       />
                     </div>
                   ))}
@@ -118,6 +120,8 @@ export function TrustSection() {
                         alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
+                        width="200"
+                        height="100"
                       />
                     </div>
                   ))}

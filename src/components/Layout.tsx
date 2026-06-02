@@ -151,6 +151,8 @@ export function Layout() {
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg" 
                 alt="Rezai Vision Logo" 
                 className="h-6 sm:h-7 md:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                width="160"
+                height="32"
               />
             </Link>
           </div>
@@ -362,6 +364,8 @@ export function Layout() {
                   src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg" 
                   alt="Rezai Vision Logo" 
                   className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                  width="240"
+                  height="48"
                 />
               </Link>
               <p className="text-gray-400 mb-6 max-w-xs text-sm leading-relaxed">
