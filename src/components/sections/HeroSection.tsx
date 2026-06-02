@@ -10,7 +10,9 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-brand-bg/80 z-10" />
         <img
           fetchPriority="high"
-          src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp"
+          src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp"
+          srcSet="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_800/v1772568178/Hero_BG_bldaur.webp 800w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1200/v1772568178/Hero_BG_bldaur.webp 1200w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp 1920w"
+          sizes="100vw"
           alt="Hero Background Video Produktion Kaiserslautern — Rezai Vision"
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
