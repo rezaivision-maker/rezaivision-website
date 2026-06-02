@@ -6,7 +6,6 @@ import { Button } from "./ui/Button";
 import { CookieBanner } from "./ui/CookieBanner";
 import { SEO } from "./SEO";
 import { NavDropdown } from "./NavDropdown";
-import { AnimatePresence, motion } from "motion/react";
 
 const navLinks = [
   { name: "Referenzen", path: "/#cases" },
@@ -177,11 +176,7 @@ export function Layout() {
               >
                 {link.name}
                 {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="nav-active"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-accent rounded-full"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-accent rounded-full animate-fade-in-up" />
                 )}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent/50 rounded-full transition-all duration-300 group-hover:w-full" />
               </Link>
@@ -221,134 +216,109 @@ export function Layout() {
       </header>
 
       {/* Mobile Menu */}
-      <AnimatePresence mode="wait">
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-40 bg-brand-bg/98 backdrop-blur-xl pt-24 px-6 pb-6 flex flex-col overflow-y-auto"
-          >
-            <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
-              {/* Mobile Leistungen Accordion */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-              >
-                <button
-                  onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
-                  className={cn(
-                    "flex items-center justify-between w-full py-2 transition-colors",
-                    location.pathname.startsWith("/leistungen") ? "text-brand-accent" : "text-gray-300"
-                  )}
-                >
-                  Leistungen
-                  <ChevronDown className={cn("transition-transform duration-300", mobileLeistungenOpen && "rotate-180")} />
-                </button>
-                <AnimatePresence>
-                  {mobileLeistungenOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden flex flex-col gap-4 pl-4 mt-2 border-l border-brand-accent/20"
-                    >
-                      <Link to="/leistungen" className="text-lg text-brand-accent font-bold">Übersicht: Alle Leistungen</Link>
-                      <div className="w-8 h-px bg-white/10 my-1" />
-                      {leistungenItems.map(item => (
-                        <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + (index + 1) * 0.05 }}
-                >
-                  <Link
-                    to={link.path}
-                    className={cn(
-                      "py-2 transition-colors block w-full",
-                      location.pathname === link.path ? "text-brand-accent" : "text-white/90"
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
-              ))}
-
-              <motion.div
-                className="w-full h-px bg-white/10 my-2"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.4 }}
-              />
-
-              {/* Mobile Reza Accordion */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <button
-                  onClick={() => setMobileRezaOpen(!mobileRezaOpen)}
-                  className={cn(
-                    "flex items-center justify-between w-full py-3 px-4 rounded-xl border transition-all",
-                    location.pathname.startsWith("/reza-e-motion")
-                      ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
-                      : "bg-white/5 text-gray-300 border-white/10"
-                  )}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-purple-500" />
-                    reza-e-motion
-                  </div>
-                  <ChevronDown className={cn("transition-transform duration-300", mobileRezaOpen && "rotate-180")} />
-                </button>
-                <AnimatePresence>
-                  {mobileRezaOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden flex flex-col gap-4 pl-4 mt-4 border-l border-purple-500/30"
-                    >
-                      <Link to="/reza-e-motion" className="text-lg text-purple-400 font-bold">Übersicht: reza-e-motion</Link>
-                      <div className="w-8 h-px bg-white/10 my-1" />
-                      {rezaEmotionItems.map(item => (
-                        <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            </nav>
-            <div className="mt-auto pb-8 flex flex-col gap-8">
-              <div className="flex justify-center gap-8 text-gray-400">
-                <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
-                  <Instagram size={28} />
-                </a>
-                <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
-                  <Music size={28} />
-                </a>
-                <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
-                  <Facebook size={28} />
-                </a>
-              </div>
-              <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-4 text-xl">
-                Projekt-Check anfordern
-              </Button>
-            </div>
-          </motion.div>
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-brand-bg/98 backdrop-blur-xl pt-24 px-6 pb-6 flex flex-col overflow-y-auto transition-all duration-300 ease-out",
+          mobileMenuOpen
+            ? "opacity-100 translate-x-0 pointer-events-auto"
+            : "opacity-0 translate-x-full pointer-events-none"
         )}
-      </AnimatePresence>
+      >
+        <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
+          {/* Mobile Leistungen Accordion */}
+          <div>
+            <button
+              onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
+              className={cn(
+                "flex items-center justify-between w-full py-2 transition-colors",
+                location.pathname.startsWith("/leistungen") ? "text-brand-accent" : "text-gray-300"
+              )}
+            >
+              Leistungen
+              <ChevronDown className={cn("transition-transform duration-300", mobileLeistungenOpen && "rotate-180")} />
+            </button>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-300 ease-out",
+                mobileLeistungenOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              )}
+            >
+              <div className="flex flex-col gap-4 pl-4 mt-2 border-l border-brand-accent/20">
+                <Link to="/leistungen" className="text-lg text-brand-accent font-bold">Übersicht: Alle Leistungen</Link>
+                <div className="w-8 h-px bg-white/10 my-1" />
+                {leistungenItems.map(item => (
+                  <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {navLinks.map((link) => (
+            <div key={link.name}>
+              <Link
+                to={link.path}
+                className={cn(
+                  "py-2 transition-colors block w-full",
+                  location.pathname === link.path ? "text-brand-accent" : "text-white/90"
+                )}
+              >
+                {link.name}
+              </Link>
+            </div>
+          ))}
+
+          <div className="w-full h-px bg-white/10 my-2" />
+
+          {/* Mobile Reza Accordion */}
+          <div>
+            <button
+              onClick={() => setMobileRezaOpen(!mobileRezaOpen)}
+              className={cn(
+                "flex items-center justify-between w-full py-3 px-4 rounded-xl border transition-all",
+                location.pathname.startsWith("/reza-e-motion")
+                  ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
+                  : "bg-white/5 text-gray-300 border-white/10"
+              )}
+            >
+              <div className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-purple-500" />
+                reza-e-motion
+              </div>
+              <ChevronDown className={cn("transition-transform duration-300", mobileRezaOpen && "rotate-180")} />
+            </button>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-300 ease-out",
+                mobileRezaOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              )}
+            >
+              <div className="flex flex-col gap-4 pl-4 mt-4 border-l border-purple-500/30">
+                <Link to="/reza-e-motion" className="text-lg text-purple-400 font-bold">Übersicht: reza-e-motion</Link>
+                <div className="w-8 h-px bg-white/10 my-1" />
+                {rezaEmotionItems.map(item => (
+                  <Link key={item.path} to={item.path} className="text-lg text-gray-300">{item.name}</Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div className="mt-auto pb-8 flex flex-col gap-8">
+          <div className="flex justify-center gap-8 text-gray-400">
+            <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+              <Instagram size={28} />
+            </a>
+            <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+              <Music size={28} />
+            </a>
+            <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+              <Facebook size={28} />
+            </a>
+          </div>
+          <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-4 text-xl">
+            Projekt-Check anfordern
+          </Button>
+        </div>
+      </div>
 
       {/* Main Content */}
       <main className="flex-grow">
