@@ -6,8 +6,7 @@ import { ServerCrash, ArrowRight } from "lucide-react";
 export default function ServerError() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg overflow-hidden relative text-center">
-      <SEO title="500 - Serverfehler | Rezai Vision" />
-      <meta name="robots" content="noindex, nofollow" />
+      <SEO title="500 - Serverfehler | Rezai Vision" noindex={true} />
 
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />

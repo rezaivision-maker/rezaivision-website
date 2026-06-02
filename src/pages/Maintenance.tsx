@@ -5,8 +5,7 @@ import { Wrench } from "lucide-react";
 export default function Maintenance() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg overflow-hidden relative text-center">
-      <SEO title="503 - Wartungsarbeiten | Rezai Vision" />
-      <meta name="robots" content="noindex, nofollow" />
+      <SEO title="Wartungsarbeiten | Rezai Vision" noindex={true} />
 
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />

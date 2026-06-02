@@ -6,8 +6,7 @@ import { SearchX, ArrowRight } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg overflow-hidden relative text-center">
-      <SEO title="404 - Seite nicht gefunden | Rezai Vision" />
-      <meta name="robots" content="noindex, nofollow" />
+      <SEO title="404 - Seite nicht gefunden | Rezai Vision" noindex={true} />
 
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />

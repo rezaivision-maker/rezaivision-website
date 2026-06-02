@@ -8,6 +8,7 @@ interface SEOProps {
   type?: string;
   structuredData?: Record<string, any> | Record<string, any>[];
   keywords?: string;
+  noindex?: boolean;
 }
 
 const DEFAULT_TITLE = "Unsichtbar oder Unvergesslich? | Videoproduktion Kaiserslautern | Rezai Vision";
@@ -23,6 +24,7 @@ export function SEO({
   type = "website",
   structuredData,
   keywords,
+  noindex = false,
 }: SEOProps) {
   const absoluteCanonicalUrl = canonical
     ? (canonical.startsWith("http") ? canonical : `${SITE_URL}${canonical}`)
@@ -34,6 +36,7 @@ export function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Canonical URL */}
       {absoluteCanonicalUrl && <link rel="canonical" href={absoluteCanonicalUrl} />}
