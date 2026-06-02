@@ -32,25 +32,25 @@ export function ServicesSection() {
             {
               title: "Unternehmensfilme",
               desc: "Hochwertige Imagefilme, die zeigen, wer Sie sind, wofür Sie stehen und was Ihr Unternehmen besonders macht.",
-              img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
               link: "/leistungen/unternehmensfilm"
             },
             {
               title: "Recruiting Videos",
               desc: "Gewinnen Sie die besten Talente durch authentische Employer-Branding-Filme und smarte Recruiting-Funnels.",
-              img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
               link: "/leistungen/recruiting"
             },
             {
               title: "Werbevideos",
               desc: "High-Converting Video-Ads und Kurzvideos für Performance-Kampagnen und Social Media Werbung.",
-              img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775639140/Social_Media_Reels_Kaiserslautern_Rezaivision_Videoproduktion_fuer_Social_Media_ek3s0b.webp",
+              img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775639140/Social_Media_Reels_Kaiserslautern_Rezaivision_Videoproduktion_fuer_Social_Media_ek3s0b.webp",
               link: "/leistungen/werbevideo"
             },
             {
               title: "Social Media Content",
               desc: "Regelmäßiger Social Media Content Kaiserslautern (TikToks, Instagram Reels & LinkedIn Videos) für kontinuierliche Reichweite.",
-              img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775649531/Social_Media_Content_Videos_Reels_Rezaivision_Kaiserslautern_wvd12d.webp",
+              img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775649531/Social_Media_Content_Videos_Reels_Rezaivision_Kaiserslautern_wvd12d.webp",
               link: "/leistungen/social-media"
             }
           ].map((service, i) => (
@@ -93,7 +93,7 @@ export function ServicesSection() {
             <Link to="/leistungen/webdesign" className="group relative block overflow-hidden rounded-2xl aspect-[16/5]">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200&auto=format&fit=crop"
                 alt="Webdesign & Homepageerstellung Kaiserslautern — Rezai Vision"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
