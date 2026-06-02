@@ -64,25 +64,31 @@ export function CasesSection() {
 
                 {/* Main Video */}
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-black shadow-2xl gold-border-glow group">
-                  <iframe 
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={`https://player.vimeo.com/video/1180528605?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479${isPlayingLull ? '&autoplay=1' : ''}`} 
-                    title="Schlossgut Lüll - Imagefilm" 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    loading="lazy"
-                  ></iframe>
-                  {!isPlayingLull && (
+                  {!isPlayingLull ? (
                     <div 
-                      className="absolute inset-0 flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
+                      className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
                       onClick={() => setIsPlayingLull(true)}
                     >
-                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white">
+                      <img
+                        src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_900/v1775735612/lu%CC%88ll1_bekioh.webp"
+                        alt="Schlossgut Lüll Imagefilm Vorschaubild"
+                        className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                        loading="lazy"
+                      />
+                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white relative z-10 group-hover:scale-110 transition-transform">
                         <Play size={24} fill="currentColor" />
                       </div>
                     </div>
+                  ) : (
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://player.vimeo.com/video/1180528605?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1" 
+                      title="Schlossgut Lüll - Imagefilm" 
+                      frameBorder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
                   )}
                 </div>
               </div>
@@ -156,7 +162,9 @@ export function CasesSection() {
                     transition={{ duration: 0.3 }}
                     className="absolute inset-0"
                   >
+                    {/* Only load the iframe for the currently visible slide */}
                     <iframe 
+                      key={currentAestheticInkSlide}
                       src={aestheticInkSlides[currentAestheticInkSlide]} 
                       frameBorder="0" 
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
@@ -253,16 +261,25 @@ export function CasesSection() {
               </div>
 
               <div className="grid grid-cols-2 gap-4 mt-2">
-                <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <iframe 
-                    src="https://player.vimeo.com/video/1181564492?badge=0&autopause=0&player_id=0&app_id=58479&muted=0" 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    className="absolute top-0 left-0 w-full h-full" 
-                    title="KSB RECHTSANWÄLTE"
+                <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow group">
+                  {/* Vimeo facade: only load iframe after click */}
+                  <img
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775737722/Behnke1_ao07wt.webp"
+                    alt="KSB Rechtsanwälte Video Vorschau"
+                    className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
-                  ></iframe>
+                  />
+                  <a
+                    href="https://vimeo.com/1181564492"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 flex items-center justify-center z-10"
+                    aria-label="KSB Rechtsanwälte Video auf Vimeo ansehen"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                      <Play size={20} fill="currentColor" />
+                    </div>
+                  </a>
                 </div>
                 <div className="grid grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
@@ -297,13 +314,13 @@ export function CasesSection() {
 
               <div className="grid grid-cols-3 gap-4 mt-2">
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600" alt="Pflege mit Erfolg Recruiting Video Rodalben — Mitarbeitergewinnung Pflegebranche" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp" alt="Pflege mit Erfolg Recruiting Video Rodalben — Mitarbeitergewinnung Pflegebranche" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=600" alt="Pflege Recruiting Content Rodalben Pfalz — Bewerbervideo Pflegedienst" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810388/Adonay_welde_social_care_1.12.1_d3uhxu.webp" alt="Pflege Recruiting Content Rodalben Pfalz — Bewerbervideo Pflegedienst" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600" alt="Pflege Personal finden Rodalben — Authentisches Recruiting Video Pfalz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775809428/Social_CAre_3.1.1_upw3fj.webp" alt="Pflege Personal finden Rodalben — Authentisches Recruiting Video Pfalz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>

@@ -16,25 +16,32 @@ export function ShowreelSection() {
           </p>
         </div>
         <div className="relative rounded-3xl overflow-hidden aspect-video bg-black shadow-[0_20px_50px_rgba(0,0,0,0.5)] gold-border-glow">
-          {!isPlayingShowreel && (
+          {!isPlayingShowreel ? (
             <div 
               className="absolute inset-0 flex items-center justify-center bg-brand-bg/20 z-10 cursor-pointer group"
               onClick={() => setIsPlayingShowreel(true)}
             >
-              <div className="w-20 h-20 rounded-full gold-gradient flex items-center justify-center text-brand-bg transform transition-transform group-hover:scale-110">
+              <img 
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1200/v1772568178/Hero_BG_bldaur.webp" 
+                alt="Showreel Vorschaubild" 
+                className="absolute inset-0 w-full h-full object-cover opacity-50 transition-opacity group-hover:opacity-70"
+                loading="lazy"
+              />
+              <div className="w-20 h-20 rounded-full gold-gradient flex items-center justify-center text-brand-bg transform transition-transform group-hover:scale-110 relative z-20">
                 <Play size={32} fill="currentColor" />
               </div>
             </div>
+          ) : (
+            <iframe 
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://player.vimeo.com/video/1181887633?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1" 
+              title="Showreel" 
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           )}
-          <iframe 
-            className="absolute top-0 left-0 w-full h-full"
-            src={`https://player.vimeo.com/video/1181887633?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479${isPlayingShowreel ? '&autoplay=1' : ''}`} 
-            title="Showreel" 
-            frameBorder="0" 
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
         </div>
       </div>
     </section>
