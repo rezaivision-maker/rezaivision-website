@@ -85,7 +85,7 @@ export default function CorporateVideo() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="Warum ein Imagefilm Ihr stärkstes Vertriebs-Tool ist | Rezai Vision"
-        description="Vergessen Sie austauschbare Clips. Ich produziere Unternehmensfilme, die als strategisches Werkzeug auf Ihrer Website das Vertrauen Ihrer Wunschkunden in Millisekunden gewinnen."
+        description="Vergessen Sie austauschbare Clips. Wir produzieren Unternehmensfilme, die als strategisches Werkzeug auf Ihrer Website das Vertrauen Ihrer Wunschkunden in Millisekunden gewinnen."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
         structuredData={{
@@ -133,7 +133,7 @@ export default function CorporateVideo() {
               Unternehmensfilme: Ihr wichtigstes <span className="text-brand-accent italic">Werkzeug für Vertrauen.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Ich entwickle Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
+              Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Wir entwickeln Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

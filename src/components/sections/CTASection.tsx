@@ -42,7 +42,7 @@ export function CTASection() {
             </Button>
           </div>
           <p className="mt-8 text-lg text-gray-300">
-            Oder unkompliziert: <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Wir%20haben%20Interesse%20an%20einer%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie mir direkt auf WhatsApp.</a>
+            Oder unkompliziert: <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Wir%20haben%20Interesse%20an%20einer%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie uns direkt auf WhatsApp.</a>
           </p>
           <p className="mt-6 text-sm text-gray-400">
             Erstgespräche sind immer kostenlos & unverbindlich.

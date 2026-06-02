@@ -7,7 +7,7 @@ const features = [
   {
     icon: <Monitor size={22} className="text-brand-accent" />,
     title: "Flexibles & Modernes Design",
-    desc: "Visuell herausragend und auf deine Marke zugeschnitten – egal ob mit einem starken Video im Fokus oder als klassische, textbasierte Business-Seite."
+    desc: "Visuell herausragend und auf Ihre Marke zugeschnitten – egal ob mit einem starken Video im Fokus oder als klassische, textbasierte Business-Seite."
   },
   {
     icon: <Zap size={22} className="text-brand-accent" />,
@@ -43,7 +43,7 @@ const packages = [
   {
     name: "Business Website",
     price: "ab 3.490 €",
-    desc: "Eine vollständige Unternehmenswebsite, die als strategisches Werkzeug für dein Wachstum arbeitet.",
+    desc: "Eine vollständige Unternehmenswebsite, die als strategisches Werkzeug für Ihr Wachstum arbeitet.",
     highlight: true,
     items: [
       "Bis zu 8 individuelle Unterseiten",
@@ -58,7 +58,7 @@ const packages = [
   {
     name: "Video + Web Bundle",
     price: "Auf Anfrage",
-    desc: "Video-Produktion und Website-Erstellung in einem Paket – die mächtigste Kombination für dein Marketing.",
+    desc: "Video-Produktion und Website-Erstellung in einem Paket – die mächtigste Kombination für Ihr Marketing.",
     items: [
       "Imagefilm oder Recruiting-Video",
       "Komplette Business Website",
@@ -75,7 +75,7 @@ export default function Webdesign() {
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <SEO
         title="Webdesign & Homepageerstellung Kaiserslautern | Rezai Vision"
-        description="Moderne, conversion-starke Websites & Landingpages aus Kaiserslautern. Blitzschnell und durch KI optimiert – perfekt für dein Business, mit oder ohne Video."
+        description="Moderne, conversion-starke Websites & Landingpages aus Kaiserslautern. Blitzschnell und durch KI optimiert – perfekt für Ihr Business, mit oder ohne Video."
         canonical="/leistungen/webdesign"
       />
 
@@ -94,12 +94,12 @@ export default function Webdesign() {
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
               Die perfekte Bühne für{" "}
-              <span className="gold-text-gradient">dein Business.</span>
+              <span className="gold-text-gradient">Ihr Business.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
               Wir entwickeln blitzschnelle, conversion-starke Websites und Landingpages, 
-              die deine Marke perfekt in Szene setzen und Besucher in Kunden verwandeln – 
-              auf Wunsch ideal abgestimmt auf deine Videoproduktion.
+              die Ihre Marke perfekt in Szene setzen und Besucher in Kunden verwandeln – 
+              auf Wunsch ideal abgestimmt auf Ihre Videoproduktion.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <Button href="/kontakt" size="lg" className="gap-2">
@@ -207,9 +207,9 @@ export default function Webdesign() {
               Full-Service statt Baukasten-Frust.
             </h2>
             <p className="text-gray-300 leading-relaxed font-light max-w-2xl mx-auto mb-8 text-lg">
-              Vergiss komplizierte Baukästen und die Angst, das Design kaputt zu machen. 
-              Wenn sich Texte oder Bilder ändern, schick mir einfach eine kurze Nachricht per WhatsApp oder E-Mail. 
-              Ich setze alle Änderungen schnell, sicher und professionell für dich um.
+              Vergessen Sie komplizierte Baukästen und die Angst, das Design kaputt zu machen. 
+              Wenn sich Texte oder Bilder ändern, schicken Sie uns einfach eine kurze Nachricht per WhatsApp oder E-Mail. 
+              Wir setzen alle Änderungen schnell, sicher und professionell für Sie um.
             </p>
             <div className="inline-block px-6 py-4 rounded-2xl md:rounded-full bg-white/5 border border-white/10 text-center max-w-full mt-2">
               <div className="flex items-center justify-center gap-2 mb-1.5 text-brand-accent text-sm font-semibold">
@@ -230,7 +230,7 @@ export default function Webdesign() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Unsere Webdesign-Pakete</h2>
             <p className="text-gray-400 text-base md:text-lg font-light">
-              Transparente Preise, kein versteckter Aufwand. Du weißt von Anfang an, was du bekommst.
+              Transparente Preise, kein versteckter Aufwand. Sie wissen von Anfang an, was Sie bekommen.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -284,7 +284,7 @@ export default function Webdesign() {
             Bereit für eine Website, die wirklich konvertiert?
           </h2>
           <p className="text-gray-400 text-lg font-light max-w-2xl mx-auto mb-10">
-            In einem kostenlosen 20-Minuten-Gespräch klären wir, welches Paket am besten zu deinen Zielen passt.
+            In einem kostenlosen 20-Minuten-Gespräch klären wir, welches Paket am besten zu Ihren Zielen passt.
           </p>
           <Button href="/kontakt" size="lg">
             Kostenloses Gespräch buchen

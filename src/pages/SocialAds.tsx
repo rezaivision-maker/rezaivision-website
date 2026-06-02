@@ -124,7 +124,7 @@ export default function SocialAds() {
               Social Ads: <span className="text-brand-accent italic">Messbare Leads & Umsatz.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Vergessen Sie austauschbare Werbeclips. Ich produziere verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.
+              Vergessen Sie austauschbare Werbeclips. Wir produzieren verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

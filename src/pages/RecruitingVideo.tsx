@@ -125,7 +125,7 @@ export default function RecruitingVideo() {
               Recruiting-System: <span className="text-brand-accent italic">Automatisierte Bewerber-Gewinnung.</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Machen Sie Ihre Unternehmenskultur erlebbar. Ich produziere authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.
+              Machen Sie Ihre Unternehmenskultur erlebbar. Wir produzieren authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">

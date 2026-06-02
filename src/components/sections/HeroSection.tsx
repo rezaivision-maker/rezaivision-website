@@ -46,7 +46,7 @@ export function HeroSection() {
               </Button>
             </div>
             <div className="mt-5 md:mt-6 text-sm md:text-base text-gray-400">
-              Schnelle Frage? <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20habe%20eine%20kurze%20Frage%20zur%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie mir gerne direkt auf WhatsApp.</a>
+              Schnelle Frage? <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20habe%20eine%20kurze%20Frage%20zur%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie uns gerne direkt auf WhatsApp.</a>
             </div>
 
             <div className="mt-8 md:mt-10 flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-sm p-3 px-4 sm:px-5 rounded-2xl border border-white/10 w-fit">

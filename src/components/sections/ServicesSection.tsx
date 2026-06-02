@@ -107,7 +107,7 @@ export function ServicesSection() {
                   Video-Websites & Homepageerstellung
                 </h3>
                 <p className="text-gray-300 mb-6 max-w-xl text-sm md:text-base leading-relaxed">
-                  Die perfekte Bühne für deine Videos. Blitzschnelle, conversion-optimierte Websites und Landingpages – abgestimmt auf deine Videoproduktion. Alles aus einer Hand.
+                  Die perfekte Bühne für Ihre Videos. Blitzschnelle, conversion-optimierte Websites und Landingpages – abgestimmt auf Ihre Videoproduktion. Alles aus einer Hand.
                 </p>
                 <div className="flex items-center gold-text-gradient font-medium text-sm gap-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                   Mehr erfahren <ArrowRight size={16} />
