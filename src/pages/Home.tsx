@@ -1,18 +1,21 @@
+import { lazy, Suspense } from "react";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { TrustSection } from "@/components/sections/TrustSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { ApproachSection } from "@/components/sections/ApproachSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { ShowreelSection } from "@/components/sections/ShowreelSection";
-import { CasesSection } from "@/components/sections/CasesSection";
-import { ProcessSection } from "@/components/sections/ProcessSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { TestimonialSection } from "@/components/sections/TestimonialSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { PricingSection } from "@/components/sections/PricingSection";
-import { CTASection } from "@/components/sections/CTASection";
 import { MessageCircle } from "lucide-react";
+
+// Lazy load below-the-fold components
+const TrustSection = lazy(() => import("@/components/sections/TrustSection").then(m => ({ default: m.TrustSection })));
+const ProblemSection = lazy(() => import("@/components/sections/ProblemSection").then(m => ({ default: m.ProblemSection })));
+const ApproachSection = lazy(() => import("@/components/sections/ApproachSection").then(m => ({ default: m.ApproachSection })));
+const ServicesSection = lazy(() => import("@/components/sections/ServicesSection").then(m => ({ default: m.ServicesSection })));
+const ShowreelSection = lazy(() => import("@/components/sections/ShowreelSection").then(m => ({ default: m.ShowreelSection })));
+const CasesSection = lazy(() => import("@/components/sections/CasesSection").then(m => ({ default: m.CasesSection })));
+const ProcessSection = lazy(() => import("@/components/sections/ProcessSection").then(m => ({ default: m.ProcessSection })));
+const AboutSection = lazy(() => import("@/components/sections/AboutSection").then(m => ({ default: m.AboutSection })));
+const TestimonialSection = lazy(() => import("@/components/sections/TestimonialSection").then(m => ({ default: m.TestimonialSection })));
+const FAQSection = lazy(() => import("@/components/sections/FAQSection").then(m => ({ default: m.FAQSection })));
+const PricingSection = lazy(() => import("@/components/sections/PricingSection").then(m => ({ default: m.PricingSection })));
+const CTASection = lazy(() => import("@/components/sections/CTASection").then(m => ({ default: m.CTASection })));
 
 export default function Home() {
   return (
@@ -170,18 +173,21 @@ export default function Home() {
       />
 
       <HeroSection />
-      <TrustSection />
-      <ProblemSection />
-      <ApproachSection />
-      <ServicesSection />
-      <ShowreelSection />
-      <CasesSection />
-      <ProcessSection />
-      <AboutSection />
-      <TestimonialSection />
-      <FAQSection />
-      <PricingSection />
-      <CTASection />
+      
+      <Suspense fallback={null}>
+        <TrustSection />
+        <ProblemSection />
+        <ApproachSection />
+        <ServicesSection />
+        <ShowreelSection />
+        <CasesSection />
+        <ProcessSection />
+        <AboutSection />
+        <TestimonialSection />
+        <FAQSection />
+        <PricingSection />
+        <CTASection />
+      </Suspense>
 
       {/* Floating WhatsApp Button */}
       <a

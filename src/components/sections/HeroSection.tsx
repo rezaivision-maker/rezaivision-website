@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { Star } from "lucide-react";
 
@@ -23,53 +22,28 @@ export function HeroSection() {
 
       <div className="max-w-[1600px] 3xl:max-w-[2000px] mx-auto px-6 md:px-12 xl:px-16 3xl:px-20 relative z-20 w-full">
         <div className="flex flex-col lg:flex-row w-full items-center justify-between gap-10 xl:gap-0">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="w-full lg:w-[55%] xl:w-[50%] 3xl:w-[45%] max-w-3xl text-left py-12 lg:py-0 shrink-0"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium text-brand-accent mb-6 md:mb-8"
-            >
+          <div className="w-full lg:w-[55%] xl:w-[50%] 3xl:w-[45%] max-w-3xl text-left py-12 lg:py-0 shrink-0 animate-fade-in-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm font-medium text-brand-accent mb-6 md:mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
               Videoproduktion & Content Creation aus Rheinland-Pfalz
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-display font-bold tracking-tighter mb-5 md:mb-6"
-            >
+            </div>
+            <h1 className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-display font-bold tracking-tighter mb-5 md:mb-6 animate-fade-in-up" style={{ animationDelay: "0.4s", animationFillMode: "both" }}>
               Videoproduktion Kaiserslautern: <br className="hidden md:block" />
               <span className="gold-text-gradient">
                 Videos, die als Werkzeug für Ihre Ziele arbeiten.
               </span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-gray-300 mb-8 md:mb-10 3xl:mb-12 font-light leading-relaxed max-w-2xl 3xl:max-w-3xl"
-            >
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-gray-300 mb-8 md:mb-10 3xl:mb-12 font-light leading-relaxed max-w-2xl 3xl:max-w-3xl animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "both" }}>
               Kein Selbstzweck, sondern Strategie. Wir entwickeln Video-Content für Websites, Ads und Social Media, der Vertrauen aufbaut für messbare Ergebnisse der Unternehmenskommunikation.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
-            >
+            </p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: "0.8s", animationFillMode: "both" }}>
               <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
                 Kostenlosen Projekt-Check anfordern
               </Button>
               <Button href="#showreel" variant="outline" size="lg" className="w-full sm:w-auto">
                 Showreel ansehen
               </Button>
-            </motion.div>
+            </div>
             <div className="mt-5 md:mt-6 text-sm md:text-base text-gray-400">
               Schnelle Frage? <a href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20habe%20eine%20kurze%20Frage%20zur%20Videoproduktion..." target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline font-medium">Schreiben Sie mir gerne direkt auf WhatsApp.</a>
             </div>
@@ -111,19 +85,10 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="hidden lg:flex w-full lg:w-[45%] xl:w-[50%] 3xl:w-[55%] justify-end shrink-0 relative translate-y-12 3xl:translate-y-24"
-          >
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-full flex justify-end"
-            >
+          <div className="hidden lg:flex w-full lg:w-[45%] xl:w-[50%] 3xl:w-[55%] justify-end shrink-0 relative translate-y-12 3xl:translate-y-24 animate-fade-in-right" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
+            <div className="w-full flex justify-end animate-float">
               <img
                 fetchPriority="high"
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp"
@@ -137,8 +102,8 @@ export function HeroSection() {
                 width="1000"
                 height="1000"
               />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
