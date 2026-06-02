@@ -29,7 +29,7 @@ export function PricingSection() {
             </a>
           </div>
 
-          <p className="text-gray-500 text-sm mt-8">
+          <p className="text-gray-400 text-sm mt-8">
             Nach einem kurzen Gespräch erhalten Sie eine transparente, verbindliche Einschätzung.
           </p>
         </div>

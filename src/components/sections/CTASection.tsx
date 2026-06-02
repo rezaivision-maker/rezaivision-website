@@ -50,7 +50,7 @@ export function CTASection() {
         </motion.div>
         
         <div className="mt-20 pt-8 border-t border-white/10">
-          <p className="text-xs text-brand-accent/60 leading-relaxed max-w-3xl mx-auto font-light">
+          <p className="text-xs text-gray-400 leading-relaxed max-w-3xl mx-auto font-light">
             Ihre Agentur für professionelle Videoproduktion in Kaiserslautern, Mannheim, Frankfurt am Main, Mainz, Saarbrücken und Wiesbaden. Wir realisieren leistungsstarke Unternehmensfilme, Recruiting Videos und Social Media Ads im gesamten kaufkräftigen Südwesten (Rheinland-Pfalz, Saarland, Hessen und deutschlandweit).
           </p>
         </div>
