@@ -29,12 +29,10 @@
     }
   },
   "devDependencies": {
-    "@sparticuz/chromium": "^149.0.0",
     "@types/node": "^22.14.0",
     "autoprefixer": "^10.4.21",
     "express": "^5.2.1",
     "puppeteer": "^25.1.0",
-    "puppeteer-core": "^25.1.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
