@@ -18,6 +18,13 @@ const mapDocToPost = (docData: any, id: string): BlogPost => {
     image: docData.image || "",
     ctaLabel: docData.ctaLabel || "",
     ctaLink: docData.ctaLink || "",
+    layout: docData.layout || "standard",
+    kpiTitle1: docData.kpiTitle1 || "",
+    kpiValue1: docData.kpiValue1 || "",
+    kpiTitle2: docData.kpiTitle2 || "",
+    kpiValue2: docData.kpiValue2 || "",
+    clientName: docData.clientName || "",
+    projectDuration: docData.projectDuration || "",
   };
 };
 

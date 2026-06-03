@@ -10,6 +10,13 @@ export interface BlogPost {
   image: string;
   ctaLabel: string;
   ctaLink: string;
+  layout?: 'standard' | 'case-study';
+  kpiTitle1?: string;
+  kpiValue1?: string;
+  kpiTitle2?: string;
+  kpiValue2?: string;
+  clientName?: string;
+  projectDuration?: string;
 }
 
 export const blogPosts: BlogPost[] = [

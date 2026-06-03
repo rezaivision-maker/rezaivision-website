@@ -466,8 +466,40 @@ export default function BlogPost() {
         </div>
       </header>
 
-      {/* Content Section */}
       <main className="py-24 px-6 max-w-4xl mx-auto w-full">
+        {post.layout === 'case-study' && (
+          <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-8 bg-white/[0.02] border border-white/10 rounded-[2rem] relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/5 via-transparent to-transparent pointer-events-none" />
+            
+            {/* Meta details */}
+            <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0 sm:pr-6">
+              <span className="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Kunde</span>
+              <span className="text-white font-display font-bold text-lg">{post.clientName || 'Projekt'}</span>
+            </div>
+            
+            <div className="border-b sm:border-b-0 md:border-r border-white/10 pb-4 sm:pb-0 sm:px-6">
+              <span className="block text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-1">Laufzeit</span>
+              <span className="text-white font-display font-bold text-lg">{post.projectDuration || 'Laufzeit'}</span>
+            </div>
+
+            {/* KPI 1 */}
+            {post.kpiValue1 && (
+              <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-4 sm:pb-0 sm:px-6">
+                <span className="block text-3xl font-display font-bold text-brand-accent mb-1">{post.kpiValue1}</span>
+                <span className="text-xs text-gray-400 font-light leading-snug block">{post.kpiTitle1}</span>
+              </div>
+            )}
+
+            {/* KPI 2 */}
+            {post.kpiValue2 && (
+              <div className="sm:px-6">
+                <span className="block text-3xl font-display font-bold text-brand-accent mb-1">{post.kpiValue2}</span>
+                <span className="text-xs text-gray-400 font-light leading-snug block">{post.kpiTitle2}</span>
+              </div>
+            )}
+          </div>
+        )}
+
         <article className="prose prose-invert prose-brand max-w-none">
           {renderContent(post.content)}
         </article>

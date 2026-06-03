@@ -48,6 +48,39 @@ export default function AdminDashboard() {
   const [formCtaLink, setFormCtaLink] = useState("");
   const [formReadTime, setFormReadTime] = useState("");
   const [formDate, setFormDate] = useState("");
+  const [formLayout, setFormLayout] = useState<'standard' | 'case-study'>("standard");
+  const [formKpiTitle1, setFormKpiTitle1] = useState("");
+  const [formKpiValue1, setFormKpiValue1] = useState("");
+  const [formKpiTitle2, setFormKpiTitle2] = useState("");
+  const [formKpiValue2, setFormKpiValue2] = useState("");
+  const [formClientName, setFormClientName] = useState("");
+  const [formProjectDuration, setFormProjectDuration] = useState("");
+
+  const contentRef = React.useRef<HTMLTextAreaElement>(null);
+
+  const insertFormat = (before: string, after: string = "") => {
+    const textarea = contentRef.current;
+    if (!textarea) return;
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const text = textarea.value;
+    const selectedText = text.substring(start, end);
+    const replacement = before + selectedText + after;
+
+    setFormContent(
+      text.substring(0, start) + replacement + text.substring(end)
+    );
+
+    // Refocus and select
+    setTimeout(() => {
+      textarea.focus();
+      textarea.setSelectionRange(
+        start + before.length,
+        start + before.length + selectedText.length
+      );
+    }, 0);
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -102,6 +135,13 @@ export default function AdminDashboard() {
     setFormCtaLabel("Kostenloses Erstgespräch buchen");
     setFormCtaLink("/kontakt");
     setFormReadTime("5 min");
+    setFormLayout("standard");
+    setFormKpiTitle1("");
+    setFormKpiValue1("");
+    setFormKpiTitle2("");
+    setFormKpiValue2("");
+    setFormClientName("");
+    setFormProjectDuration("");
     
     // Auto-generate today's date in German format (e.g. "03. Juni 2026")
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'long', year: 'numeric' };
@@ -123,6 +163,13 @@ export default function AdminDashboard() {
     setFormCtaLink(post.ctaLink || "/kontakt");
     setFormReadTime(post.readTime || "5 min");
     setFormDate(post.date);
+    setFormLayout(post.layout || "standard");
+    setFormKpiTitle1(post.kpiTitle1 || "");
+    setFormKpiValue1(post.kpiValue1 || "");
+    setFormKpiTitle2(post.kpiTitle2 || "");
+    setFormKpiValue2(post.kpiValue2 || "");
+    setFormClientName(post.clientName || "");
+    setFormProjectDuration(post.projectDuration || "");
     setIsModalOpen(true);
   };
 
@@ -147,7 +194,14 @@ export default function AdminDashboard() {
       ctaLabel: formCtaLabel,
       ctaLink: formCtaLink,
       readTime: formReadTime,
-      date: formDate
+      date: formDate,
+      layout: formLayout,
+      kpiTitle1: formLayout === 'case-study' ? formKpiTitle1 : "",
+      kpiValue1: formLayout === 'case-study' ? formKpiValue1 : "",
+      kpiTitle2: formLayout === 'case-study' ? formKpiTitle2 : "",
+      kpiValue2: formLayout === 'case-study' ? formKpiValue2 : "",
+      clientName: formLayout === 'case-study' ? formClientName : "",
+      projectDuration: formLayout === 'case-study' ? formProjectDuration : ""
     };
 
     try {
@@ -348,7 +402,15 @@ export default function AdminDashboard() {
                     {filteredPosts.map((post) => (
                       <tr key={post.id} className="hover:bg-white/[0.03] transition-colors border-b border-white/5">
                         <td className="px-6 py-4 font-medium text-white max-w-md truncate">
-                          {post.title}
+                          <a 
+                            href={`/blog/${post.slug}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="hover:text-brand-accent hover:underline transition-colors block"
+                            title="Artikel-Vorschau in neuem Tab öffnen"
+                          >
+                            {post.title}
+                          </a>
                           <span className="block text-xs text-gray-400 font-light truncate mt-1">/{post.slug}</span>
                         </td>
                         <td className="px-6 py-4">
@@ -499,6 +561,94 @@ export default function AdminDashboard() {
                     </select>
                   </div>
 
+                  {/* Layout */}
+                  <div>
+                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Layout Template</label>
+                    <select 
+                      value={formLayout}
+                      onChange={(e) => setFormLayout(e.target.value as 'standard' | 'case-study')}
+                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                    >
+                      <option value="standard">Standard (Klassisch)</option>
+                      <option value="case-study">Case Study (Fallstudie mit KPIs)</option>
+                    </select>
+                  </div>
+
+                  {/* Case Study Fields */}
+                  {formLayout === 'case-study' && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                    >
+                      <div className="md:col-span-2">
+                        <h4 className="text-sm font-bold text-brand-accent">Case Study Kennzahlen</h4>
+                        <p className="text-xs text-gray-400">Diese Details werden prominent als Dashboard oben im Artikel gerendert.</p>
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Kunde (Client Name)</label>
+                        <input 
+                          type="text" 
+                          value={formClientName}
+                          onChange={(e) => setFormClientName(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. CBL Datenrettung"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Projektdauer (Duration)</label>
+                        <input 
+                          type="text" 
+                          value={formProjectDuration}
+                          onChange={(e) => setFormProjectDuration(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. 4 Wochen"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Wert</label>
+                        <input 
+                          type="text" 
+                          value={formKpiValue1}
+                          onChange={(e) => setFormKpiValue1(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. +150%"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Beschreibung</label>
+                        <input 
+                          type="text" 
+                          value={formKpiTitle1}
+                          onChange={(e) => setFormKpiTitle1(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. mehr Bewerbungen"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Wert</label>
+                        <input 
+                          type="text" 
+                          value={formKpiValue2}
+                          onChange={(e) => setFormKpiValue2(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. 42"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Beschreibung</label>
+                        <input 
+                          type="text" 
+                          value={formKpiTitle2}
+                          onChange={(e) => setFormKpiTitle2(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. qualifizierte Leads"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+
                   {/* Excerpt */}
                   <div className="md:col-span-2">
                     <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Vorschautext (SEO-Auszug)</label>
@@ -512,16 +662,36 @@ export default function AdminDashboard() {
                     />
                   </div>
 
-                  {/* Content (Markdown Textarea) */}
+                  {/* Content (Markdown Textarea) with Toolbar */}
                   <div className="md:col-span-2">
                     <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Inhalt (Markdown / Text)</label>
+                    
+                    {/* Formatting Toolbar */}
+                    <div className="flex flex-wrap gap-1.5 p-2 bg-black/40 border border-white/10 border-b-0 rounded-t-xl text-xs">
+                      <button type="button" onClick={() => insertFormat("**", "**")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Fett">B</button>
+                      <button type="button" onClick={() => insertFormat("*", "*")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer italic" title="Kursiv">I</button>
+                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                      <button type="button" onClick={() => insertFormat("\n## ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 2">H2</button>
+                      <button type="button" onClick={() => insertFormat("\n### ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 3">H3</button>
+                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                      <button type="button" onClick={() => insertFormat("\n- ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Punkte)">• Liste</button>
+                      <button type="button" onClick={() => insertFormat("\n1. ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Nummern)">1. Liste</button>
+                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                      <button type="button" onClick={() => insertFormat("[Link Text](", ")")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Link">Link</button>
+                      <button type="button" onClick={() => insertFormat("\n**", "**\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-brand-accent border border-brand-accent/20 rounded cursor-pointer font-bold" title="Highlight Box">Highlight Box</button>
+                      <button type="button" onClick={() => insertFormat("\n[Button Text](", ")\n")} className="px-2 py-1 bg-brand-accent text-brand-bg rounded cursor-pointer font-bold" title="CTA Button">CTA Button</button>
+                      <button type="button" onClick={() => insertFormat("\n## FAQ\n### Frage?\nAntwort hier...\n")} className="px-2 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded cursor-pointer font-bold" title="FAQ Accordion">FAQ</button>
+                      <button type="button" onClick={() => insertFormat("\n| Spalte 1 | Spalte 2 |\n|---|---|\n| Wert 1 | Wert 2 |\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Tabelle">Tabelle</button>
+                    </div>
+
                     <textarea 
+                      ref={contentRef}
                       rows={12}
                       required
                       value={formContent}
                       onChange={(e) => setFormContent(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl p-4 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm leading-relaxed"
-                      placeholder="# Hauptüberschrift&#10;&#10;Dein Fließtext hier... Nutze **Fettgedrucktes** oder - Listenpunkte."
+                      className="w-full bg-black/30 border border-white/10 rounded-b-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm leading-relaxed"
+                      placeholder="# Hauptüberschrift&#10;&#10;Dein Fließtext hier... Nutze die Toolbar zum Formatieren."
                     />
                   </div>
 
