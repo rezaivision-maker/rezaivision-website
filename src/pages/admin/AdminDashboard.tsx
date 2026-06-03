@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
-  Globe, LogOut, Lock, Database, X, Loader2 
+  Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns 
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -36,6 +36,10 @@ export default function AdminDashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   const [isImporting, setIsImporting] = useState(false);
+
+  // Live Preview States
+  const [previewMode, setPreviewMode] = useState<'split' | 'edit' | 'preview'>("split");
+  const [mobileTab, setMobileTab] = useState<'edit' | 'preview'>("edit");
 
   // Form States
   const [formTitle, setFormTitle] = useState("");
@@ -85,6 +89,254 @@ export default function AdminDashboard() {
         start + before.length + selectedText.length
       );
     }, 0);
+  };
+
+  const getEmbedUrl = (url?: string) => {
+    if (!url) return "";
+    
+    // YouTube
+    const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
+    if (ytMatch) {
+      return `https://www.youtube.com/embed/${ytMatch[1]}`;
+    }
+    
+    // Vimeo
+    const vimeoMatch = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)/i);
+    if (vimeoMatch) {
+      return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+    }
+    
+    return url;
+  };
+
+  const renderPreviewInline = (text: string, keyPrefix: string = '') => {
+    if (text.match(/^\[(.*?)\]\((.*?)\)$/)) return <span key={keyPrefix}>{text}</span>;
+
+    const linkParts = text.split(/\[(.*?)\]\((.*?)\)/g);
+    
+    return linkParts.map((part, idx) => {
+      if (idx % 3 === 1) {
+        const url = linkParts[idx + 1];
+        return <a key={`${keyPrefix}-${idx}`} href={url} className="text-brand-accent hover:underline font-medium" target="_blank" rel="noopener noreferrer">{part}</a>;
+      }
+      if (idx % 3 === 2) return null;
+
+      const boldParts = part.split(/\*\*(.*?)\*\*/g);
+      return boldParts.map((bPart, bIdx) =>
+        bIdx % 2 === 1
+          ? <strong key={`${keyPrefix}-${idx}-${bIdx}`} className="text-white font-semibold">{bPart}</strong>
+          : <span key={`${keyPrefix}-${idx}-${bIdx}`}>{bPart}</span>
+      );
+    });
+  };
+
+  const renderPreviewContent = (content: string) => {
+    if (!content) return <p className="text-gray-500 italic">Schreibe Inhalt, um eine Vorschau zu sehen...</p>;
+    
+    const lines = content.split('\n');
+    const elements: any[] = [];
+    let i = 0;
+    let inFaqSection = false;
+
+    while (i < lines.length) {
+      const line = lines[i].trim();
+
+      if (line === '---') {
+        elements.push(<hr key={`hr-${i}`} className="my-6 border-white/10" />);
+        i++;
+        continue;
+      }
+
+      if (line.startsWith('# ') && !line.startsWith('## ')) {
+        i++;
+        continue;
+      }
+
+      if (line.startsWith('## ')) {
+        const title = line.replace('## ', '');
+        inFaqSection = title.toLowerCase().includes('faq') || title.toLowerCase().includes('häufige fragen');
+        elements.push(
+          <h2 key={`h2-${i}`} className="text-xl md:text-2xl font-display font-bold mt-8 mb-4 text-white">
+            {renderPreviewInline(title, `h2-${i}`)}
+          </h2>
+        );
+        i++;
+        continue;
+      }
+
+      if (line.startsWith('### ')) {
+        const title = line.replace('### ', '');
+        
+        if (inFaqSection) {
+          i++;
+          const answerLines = [];
+          while (i < lines.length && !lines[i].trim().startsWith('#') && lines[i].trim() !== '---') {
+            if (lines[i].trim() !== '') answerLines.push(lines[i].trim());
+            i++;
+          }
+          elements.push(
+            <details key={`faq-${i}`} className="group bg-white/5 border border-white/10 rounded-xl mb-3 overflow-hidden" open>
+               <summary className="cursor-pointer font-bold text-sm md:text-base p-4 list-none flex justify-between items-center text-white hover:bg-white/5 transition-colors">
+                 {renderPreviewInline(title, `faq-title-${i}`)}
+                 <svg className="w-4 h-4 text-brand-accent group-open:rotate-180 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                 </svg>
+               </summary>
+               <div className="px-4 pb-4 text-gray-300 text-xs leading-relaxed font-light">
+                 {answerLines.map((al, idx) => (
+                   <p key={idx} className="mb-2 last:mb-0">{renderPreviewInline(al, `faq-ans-${idx}`)}</p>
+                 ))}
+               </div>
+            </details>
+          );
+          continue;
+        } else {
+          elements.push(
+            <h3 key={`h3-${i}`} className="text-lg font-display font-bold mt-6 mb-3 text-white">
+              {renderPreviewInline(title, `h3-${i}`)}
+            </h3>
+          );
+          i++;
+          continue;
+        }
+      }
+
+      const imageMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+      if (imageMatch) {
+        elements.push(
+          <figure key={`img-${i}`} className="my-6">
+            <img 
+              loading="lazy" 
+              src={imageMatch[2]} 
+              alt={imageMatch[1]} 
+              className="rounded-xl border border-white/10 w-full object-cover max-h-[300px] shadow-lg" 
+            />
+            {imageMatch[1] && (
+              <figcaption className="text-center text-[10px] text-gray-500 mt-2 uppercase tracking-widest font-bold">
+                {imageMatch[1]}
+              </figcaption>
+            )}
+          </figure>
+        );
+        i++;
+        continue;
+      }
+
+      const buttonMatch = line.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (buttonMatch) {
+         elements.push(
+           <div className="my-4" key={`btn-${i}`}>
+             <span className="inline-block bg-brand-accent text-brand-bg text-xs font-bold px-4 py-2 rounded-full cursor-default">
+               {buttonMatch[1]}
+             </span>
+           </div>
+         );
+         i++;
+         continue;
+      }
+
+      if (line.startsWith('|')) {
+        const tableRows: string[] = [];
+        while (i < lines.length && lines[i].trim().startsWith('|')) {
+          tableRows.push(lines[i].trim());
+          i++;
+        }
+        const rows = tableRows.filter(r => !r.match(/^\|[\s:]*-+/));
+        if (rows.length === 0) continue;
+        elements.push(
+          <div key={`tbl-${i}`} className="my-6 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.03] overflow-hidden">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-white/[0.06]">
+                  {rows[0].split('|').filter(c => c.trim() !== '').map((cell, idx) => (
+                    <th key={idx} className="p-3 text-brand-accent font-bold uppercase text-[10px] tracking-widest border-b border-white/10">
+                      {renderPreviewInline(cell.trim(), `th-${i}-${idx}`)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.slice(1).map((row, rowIdx) => (
+                  <tr key={rowIdx} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                    {row.split('|').filter(c => c.trim() !== '').map((cell, cellIdx) => (
+                      <td key={cellIdx} className="p-3 text-gray-300 text-xs">
+                        {renderPreviewInline(cell.trim(), `td-${i}-${rowIdx}-${cellIdx}`)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+        continue;
+      }
+
+      if (line.startsWith('- ') || line.startsWith('* ')) {
+        const listItems: string[] = [];
+        while (i < lines.length && (lines[i].trim().startsWith('- ') || lines[i].trim().startsWith('* '))) {
+          listItems.push(lines[i].trim().substring(2));
+          i++;
+        }
+        elements.push(
+          <ul key={`ul-${i}`} className="space-y-2 my-4 list-none">
+            {listItems.map((item, idx) => (
+              <li key={idx} className="flex gap-2 text-gray-300 text-sm leading-relaxed">
+                <span className="mt-2 h-1.5 w-1.5 min-w-[6px] rounded-full bg-brand-accent flex-shrink-0" />
+                <span>{renderPreviewInline(item, `li-${i}-${idx}`)}</span>
+              </li>
+            ))}
+          </ul>
+        );
+        continue;
+      }
+
+      if (/^\d+\.\s+/.test(line)) {
+        const listItems: string[] = [];
+        while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) {
+          listItems.push(lines[i].trim().replace(/^\d+\.\s+/, ''));
+          i++;
+        }
+        elements.push(
+          <ol key={`ol-${i}`} className="space-y-2 my-4 list-none">
+            {listItems.map((item, idx) => (
+              <li key={idx} className="flex gap-3 text-gray-300 text-sm leading-relaxed">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-xs font-bold">
+                  {idx + 1}
+                </span>
+                <span className="pt-0.5">{renderPreviewInline(item, `oli-${i}-${idx}`)}</span>
+              </li>
+            ))}
+          </ol>
+        );
+        continue;
+      }
+
+      if (line.startsWith('**') && line.endsWith('**')) {
+        elements.push(
+          <div key={`ab-${i}`} className="my-6 p-4 bg-brand-accent/5 border border-brand-accent/20 rounded-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-brand-accent" />
+            <p className="text-sm md:text-base font-bold text-white leading-relaxed pl-2">
+              {line.replace(/^\*\*|\*\*$/g, '')}
+            </p>
+          </div>
+        );
+        i++;
+        continue;
+      }
+
+      if (line !== '') {
+        elements.push(
+          <p key={`p-${i}`} className="text-gray-300 text-sm leading-relaxed mb-4 font-light">
+            {renderPreviewInline(line, `p-${i}`)}
+          </p>
+        );
+      }
+
+      i++;
+    }
+
+    return elements;
   };
 
   useEffect(() => {
@@ -157,6 +409,8 @@ export default function AdminDashboard() {
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'long', year: 'numeric' };
     setFormDate(new Date().toLocaleDateString('de-DE', options));
     
+    setPreviewMode("split");
+    setMobileTab("edit");
     setIsModalOpen(true);
   };
 
@@ -185,6 +439,8 @@ export default function AdminDashboard() {
     setFormGalleryImage3(post.galleryImages?.[2] || "");
     setFormGalleryImage4(post.galleryImages?.[3] || "");
     setFormVideoUrl(post.videoUrl || "");
+    setPreviewMode("split");
+    setMobileTab("edit");
     setIsModalOpen(true);
   };
 
@@ -529,358 +785,570 @@ export default function AdminDashboard() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-4xl max-h-[90vh] bg-brand-darker border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col z-10"
+              className="relative w-full max-w-[96vw] lg:max-w-[1400px] max-h-[92vh] bg-brand-darker border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col z-10"
             >
               {/* Header */}
-              <div className="p-6 border-b border-white/5 flex justify-between items-center bg-black/20">
-                <h3 className="text-xl font-display font-bold text-white">
-                  {editingPost ? "Beitrag bearbeiten" : "Neuen Beitrag erstellen"}
-                </h3>
+              <div className="p-6 border-b border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-black/20">
+                <div>
+                  <h3 className="text-xl font-display font-bold text-white">
+                    {editingPost ? "Beitrag bearbeiten" : "Neuen Beitrag erstellen"}
+                  </h3>
+                </div>
+
+                {/* Desktop Tabs */}
+                <div className="hidden lg:flex items-center gap-1.5 p-1 bg-black/40 border border-white/10 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => setPreviewMode("split")}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      previewMode === "split" ? "bg-brand-accent text-brand-bg shadow" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <Columns size={14} />
+                    Split-Screen
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewMode("edit")}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      previewMode === "edit" ? "bg-brand-accent text-brand-bg shadow" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <Edit size={14} />
+                    Nur Editor
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewMode("preview")}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      previewMode === "preview" ? "bg-brand-accent text-brand-bg shadow" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <Eye size={14} />
+                    Nur Vorschau
+                  </button>
+                </div>
+
+                {/* Mobile Tab Toggle */}
+                <div className="flex lg:hidden items-center gap-1.5 p-1 bg-black/40 border border-white/10 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => setMobileTab("edit")}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      mobileTab === "edit" ? "bg-brand-accent text-brand-bg shadow" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <Edit size={14} />
+                    Bearbeiten
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMobileTab("preview")}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      mobileTab === "preview" ? "bg-brand-accent text-brand-bg shadow" : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    <Eye size={14} />
+                    Vorschau
+                  </button>
+                </div>
+
                 <button 
                   onClick={() => setIsModalOpen(false)}
-                  className="p-1 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                  className="p-1 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-colors cursor-pointer self-end sm:self-auto"
                 >
                   <X size={20} />
                 </button>
               </div>
 
-              {/* Form Content */}
-              <form onSubmit={handleSave} className="flex-1 overflow-y-auto p-6 space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Title */}
-                  <div className="md:col-span-2">
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Titel</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formTitle}
-                      onChange={(e) => handleTitleChange(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                      placeholder="z.B. Warum Recruiting Videos 2026 funktionieren"
-                    />
-                  </div>
-
-                  {/* Slug */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Slug (URL Pfad)</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formSlug}
-                      onChange={(e) => setFormSlug(generateSlug(e.target.value))}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm"
-                      placeholder="warum-recruiting-videos"
-                    />
-                  </div>
-
-                  {/* Category */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Kategorie</label>
-                    <select 
-                      value={formCategory}
-                      onChange={(e) => setFormCategory(e.target.value as 'corporate' | 'emotion')}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                    >
-                      <option value="corporate">Business (Vision)</option>
-                      <option value="emotion">Emotion</option>
-                    </select>
-                  </div>
-
-                  {/* Layout */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Layout Template</label>
-                    <select 
-                      value={formLayout}
-                      onChange={(e) => setFormLayout(e.target.value as 'standard' | 'case-study' | 'gallery' | 'video')}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                    >
-                      <option value="standard">Standard (Klassisch)</option>
-                      <option value="case-study">Case Study (Fallstudie mit KPIs)</option>
-                      <option value="gallery">Bildergalerie (Visual Showcase)</option>
-                      <option value="video">Video Showcase (YouTube/Vimeo Embed)</option>
-                    </select>
-                  </div>
-
-                  {/* Case Study Fields */}
-                  {formLayout === 'case-study' && (
-                    <motion.div 
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
-                    >
+              {/* Form & Split-Screen Container */}
+              <form onSubmit={handleSave} className="flex-1 overflow-hidden flex flex-col">
+                <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                  {/* Left Column: Form Editor */}
+                  <div className={`overflow-y-auto p-6 space-y-6 border-r border-white/5 ${
+                    previewMode === 'preview' ? 'hidden' : 'block'
+                  } ${
+                    mobileTab === 'preview' ? 'hidden lg:block' : 'block'
+                  }`}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Title */}
                       <div className="md:col-span-2">
-                        <h4 className="text-sm font-bold text-brand-accent">Case Study Kennzahlen</h4>
-                        <p className="text-xs text-gray-400">Diese Details werden prominent als Dashboard oben im Artikel gerendert.</p>
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Kunde (Client Name)</label>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Titel</label>
                         <input 
                           type="text" 
-                          value={formClientName}
-                          onChange={(e) => setFormClientName(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. CBL Datenrettung"
+                          required
+                          value={formTitle}
+                          onChange={(e) => handleTitleChange(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                          placeholder="z.B. Warum Recruiting Videos 2026 funktionieren"
                         />
                       </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Projektdauer (Duration)</label>
-                        <input 
-                          type="text" 
-                          value={formProjectDuration}
-                          onChange={(e) => setFormProjectDuration(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. 4 Wochen"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Wert</label>
-                        <input 
-                          type="text" 
-                          value={formKpiValue1}
-                          onChange={(e) => setFormKpiValue1(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. +150%"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Beschreibung</label>
-                        <input 
-                          type="text" 
-                          value={formKpiTitle1}
-                          onChange={(e) => setFormKpiTitle1(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. mehr Bewerbungen"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Wert</label>
-                        <input 
-                          type="text" 
-                          value={formKpiValue2}
-                          onChange={(e) => setFormKpiValue2(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. 42"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Beschreibung</label>
-                        <input 
-                          type="text" 
-                          value={formKpiTitle2}
-                          onChange={(e) => setFormKpiTitle2(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. qualifizierte Leads"
-                        />
-                      </div>
-                    </motion.div>
-                  )}
 
-                  {/* Gallery Fields */}
-                  {formLayout === 'gallery' && (
-                    <motion.div 
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
-                    >
+                      {/* Slug */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Slug (URL Pfad)</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formSlug}
+                          onChange={(e) => setFormSlug(generateSlug(e.target.value))}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm"
+                          placeholder="warum-recruiting-videos"
+                        />
+                      </div>
+
+                      {/* Category */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Kategorie</label>
+                        <select 
+                          value={formCategory}
+                          onChange={(e) => setFormCategory(e.target.value as 'corporate' | 'emotion')}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                        >
+                          <option value="corporate">Business (Vision)</option>
+                          <option value="emotion">Emotion</option>
+                        </select>
+                      </div>
+
+                      {/* Layout */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Layout Template</label>
+                        <select 
+                          value={formLayout}
+                          onChange={(e) => setFormLayout(e.target.value as 'standard' | 'case-study' | 'gallery' | 'video')}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                        >
+                          <option value="standard">Standard (Klassisch)</option>
+                          <option value="case-study">Case Study (Fallstudie mit KPIs)</option>
+                          <option value="gallery">Bildergalerie (Visual Showcase)</option>
+                          <option value="video">Video Showcase (YouTube/Vimeo Embed)</option>
+                        </select>
+                      </div>
+
+                      {/* Case Study Fields */}
+                      {formLayout === 'case-study' && (
+                        <motion.div 
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                        >
+                          <div className="md:col-span-2">
+                            <h4 className="text-sm font-bold text-brand-accent">Case Study Kennzahlen</h4>
+                            <p className="text-xs text-gray-400">Diese Details werden prominent als Dashboard oben im Artikel gerendert.</p>
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Kunde (Client Name)</label>
+                            <input 
+                              type="text" 
+                              value={formClientName}
+                              onChange={(e) => setFormClientName(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. CBL Datenrettung"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Projektdauer (Duration)</label>
+                            <input 
+                              type="text" 
+                              value={formProjectDuration}
+                              onChange={(e) => setFormProjectDuration(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. 4 Wochen"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Wert</label>
+                            <input 
+                              type="text" 
+                              value={formKpiValue1}
+                              onChange={(e) => setFormKpiValue1(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. +150%"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 1 Beschreibung</label>
+                            <input 
+                              type="text" 
+                              value={formKpiTitle1}
+                              onChange={(e) => setFormKpiTitle1(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. mehr Bewerbungen"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Wert</label>
+                            <input 
+                              type="text" 
+                              value={formKpiValue2}
+                              onChange={(e) => setFormKpiValue2(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. 42"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">KPI 2 Beschreibung</label>
+                            <input 
+                              type="text" 
+                              value={formKpiTitle2}
+                              onChange={(e) => setFormKpiTitle2(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. qualifizierte Leads"
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Gallery Fields */}
+                      {formLayout === 'gallery' && (
+                        <motion.div 
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                        >
+                          <div className="md:col-span-2">
+                            <h4 className="text-sm font-bold text-brand-accent">Galerie-Bilder</h4>
+                            <p className="text-xs text-gray-400">Füge bis zu 4 Bild-URLs hinzu, die im oberen Bereich als Grid angezeigt werden.</p>
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 1 URL</label>
+                            <input 
+                              type="text" 
+                              value={formGalleryImage1}
+                              onChange={(e) => setFormGalleryImage1(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="https://res.cloudinary.com/..."
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 2 URL</label>
+                            <input 
+                              type="text" 
+                              value={formGalleryImage2}
+                              onChange={(e) => setFormGalleryImage2(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="https://res.cloudinary.com/..."
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 3 URL</label>
+                            <input 
+                              type="text" 
+                              value={formGalleryImage3}
+                              onChange={(e) => setFormGalleryImage3(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="https://res.cloudinary.com/..."
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 4 URL</label>
+                            <input 
+                              type="text" 
+                              value={formGalleryImage4}
+                              onChange={(e) => setFormGalleryImage4(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="https://res.cloudinary.com/..."
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Video Fields */}
+                      {formLayout === 'video' && (
+                        <motion.div 
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="md:col-span-2 grid grid-cols-1 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                        >
+                          <div>
+                            <h4 className="text-sm font-bold text-brand-accent">Video Showcase Link</h4>
+                            <p className="text-xs text-gray-400">Das Video wird direkt unter dem Header in einem responsive Player eingebunden.</p>
+                          </div>
+                          <div>
+                            <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">YouTube- oder Vimeo-URL</label>
+                            <input 
+                              type="text" 
+                              value={formVideoUrl}
+                              onChange={(e) => setFormVideoUrl(e.target.value)}
+                              className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                              placeholder="z.B. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Excerpt */}
                       <div className="md:col-span-2">
-                        <h4 className="text-sm font-bold text-brand-accent">Galerie-Bilder</h4>
-                        <p className="text-xs text-gray-400">Füge bis zu 4 Bild-URLs hinzu, die im oberen Bereich als Grid angezeigt werden.</p>
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 1 URL</label>
-                        <input 
-                          type="text" 
-                          value={formGalleryImage1}
-                          onChange={(e) => setFormGalleryImage1(e.target.value)}
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Vorschautext (SEO-Auszug)</label>
+                        <textarea 
+                          rows={2}
+                          required
+                          value={formExcerpt}
+                          onChange={(e) => setFormExcerpt(e.target.value)}
                           className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="https://res.cloudinary.com/..."
+                          placeholder="Ein kurzer, packender Satz für die Blogübersicht und die Google-Meta-Beschreibung..."
                         />
                       </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 2 URL</label>
-                        <input 
-                          type="text" 
-                          value={formGalleryImage2}
-                          onChange={(e) => setFormGalleryImage2(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="https://res.cloudinary.com/..."
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 3 URL</label>
-                        <input 
-                          type="text" 
-                          value={formGalleryImage3}
-                          onChange={(e) => setFormGalleryImage3(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="https://res.cloudinary.com/..."
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 4 URL</label>
-                        <input 
-                          type="text" 
-                          value={formGalleryImage4}
-                          onChange={(e) => setFormGalleryImage4(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="https://res.cloudinary.com/..."
-                        />
-                      </div>
-                    </motion.div>
-                  )}
 
-                  {/* Video Fields */}
-                  {formLayout === 'video' && (
-                    <motion.div 
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="md:col-span-2 grid grid-cols-1 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
-                    >
-                      <div>
-                        <h4 className="text-sm font-bold text-brand-accent">Video Showcase Link</h4>
-                        <p className="text-xs text-gray-400">Das Video wird direkt unter dem Header in einem responsive Player eingebunden.</p>
-                      </div>
-                      <div>
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">YouTube- oder Vimeo-URL</label>
-                        <input 
-                          type="text" 
-                          value={formVideoUrl}
-                          onChange={(e) => setFormVideoUrl(e.target.value)}
-                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="z.B. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                      {/* Content (Markdown Textarea) with Toolbar */}
+                      <div className="md:col-span-2">
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Inhalt (Markdown / Text)</label>
+                        
+                        {/* Formatting Toolbar */}
+                        <div className="flex flex-wrap gap-1.5 p-2 bg-black/40 border border-white/10 border-b-0 rounded-t-xl text-xs">
+                          <button type="button" onClick={() => insertFormat("**", "**")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Fett">B</button>
+                          <button type="button" onClick={() => insertFormat("*", "*")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer italic" title="Kursiv">I</button>
+                          <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                          <button type="button" onClick={() => insertFormat("\n## ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 2">H2</button>
+                          <button type="button" onClick={() => insertFormat("\n### ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 3">H3</button>
+                          <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                          <button type="button" onClick={() => insertFormat("\n- ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Punkte)">• Liste</button>
+                          <button type="button" onClick={() => insertFormat("\n1. ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Nummern)">1. Liste</button>
+                          <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
+                          <button type="button" onClick={() => insertFormat("[Link Text](", ")")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Link">Link</button>
+                          <button type="button" onClick={() => insertFormat("\n**", "**\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-brand-accent border border-brand-accent/20 rounded cursor-pointer font-bold" title="Highlight Box">Highlight Box</button>
+                          <button type="button" onClick={() => insertFormat("\n[Button Text](", ")\n")} className="px-2 py-1 bg-brand-accent text-brand-bg rounded cursor-pointer font-bold" title="CTA Button">CTA Button</button>
+                          <button type="button" onClick={() => insertFormat("\n## FAQ\n### Frage?\nAntwort hier...\n")} className="px-2 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded cursor-pointer font-bold" title="FAQ Accordion">FAQ</button>
+                          <button type="button" onClick={() => insertFormat("\n| Spalte 1 | Spalte 2 |\n|---|---|\n| Wert 1 | Wert 2 |\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Tabelle">Tabelle</button>
+                        </div>
+
+                        <textarea 
+                          ref={contentRef}
+                          rows={12}
+                          required
+                          value={formContent}
+                          onChange={(e) => setFormContent(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-b-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm leading-relaxed"
+                          placeholder="# Hauptüberschrift&#10;&#10;Dein Fließtext hier... Nutze die Toolbar zum Formatieren."
                         />
                       </div>
-                    </motion.div>
-                  )}
 
-                  {/* Excerpt */}
-                  <div className="md:col-span-2">
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Vorschautext (SEO-Auszug)</label>
-                    <textarea 
-                      rows={2}
-                      required
-                      value={formExcerpt}
-                      onChange={(e) => setFormExcerpt(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                      placeholder="Ein kurzer, packender Satz für die Blogübersicht und die Google-Meta-Beschreibung..."
-                    />
-                  </div>
+                      {/* Image URL */}
+                      <div className="md:col-span-2">
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild-URL (Cloudinary/Unsplash)</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formImage}
+                          onChange={(e) => setFormImage(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="https://res.cloudinary.com/..."
+                        />
+                      </div>
 
-                  {/* Content (Markdown Textarea) with Toolbar */}
-                  <div className="md:col-span-2">
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Inhalt (Markdown / Text)</label>
-                    
-                    {/* Formatting Toolbar */}
-                    <div className="flex flex-wrap gap-1.5 p-2 bg-black/40 border border-white/10 border-b-0 rounded-t-xl text-xs">
-                      <button type="button" onClick={() => insertFormat("**", "**")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Fett">B</button>
-                      <button type="button" onClick={() => insertFormat("*", "*")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer italic" title="Kursiv">I</button>
-                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
-                      <button type="button" onClick={() => insertFormat("\n## ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 2">H2</button>
-                      <button type="button" onClick={() => insertFormat("\n### ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold" title="Überschrift 3">H3</button>
-                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
-                      <button type="button" onClick={() => insertFormat("\n- ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Punkte)">• Liste</button>
-                      <button type="button" onClick={() => insertFormat("\n1. ", "\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Liste (Nummern)">1. Liste</button>
-                      <div className="w-px h-5 bg-white/10 mx-1 align-middle inline-block self-center" />
-                      <button type="button" onClick={() => insertFormat("[Link Text](", ")")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Link">Link</button>
-                      <button type="button" onClick={() => insertFormat("\n**", "**\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-brand-accent border border-brand-accent/20 rounded cursor-pointer font-bold" title="Highlight Box">Highlight Box</button>
-                      <button type="button" onClick={() => insertFormat("\n[Button Text](", ")\n")} className="px-2 py-1 bg-brand-accent text-brand-bg rounded cursor-pointer font-bold" title="CTA Button">CTA Button</button>
-                      <button type="button" onClick={() => insertFormat("\n## FAQ\n### Frage?\nAntwort hier...\n")} className="px-2 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded cursor-pointer font-bold" title="FAQ Accordion">FAQ</button>
-                      <button type="button" onClick={() => insertFormat("\n| Spalte 1 | Spalte 2 |\n|---|---|\n| Wert 1 | Wert 2 |\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Tabelle">Tabelle</button>
+                      {/* Date */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Datum</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formDate}
+                          onChange={(e) => setFormDate(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                          placeholder="z.B. 03. Juni 2026"
+                        />
+                      </div>
+
+                      {/* Read Time */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Lesezeit</label>
+                        <input 
+                          type="text" 
+                          required
+                          value={formReadTime}
+                          onChange={(e) => setFormReadTime(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                          placeholder="z.B. 5 min"
+                        />
+                      </div>
+
+                      {/* CTA Label */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">CTA Button Text</label>
+                        <input 
+                          type="text" 
+                          value={formCtaLabel}
+                          onChange={(e) => setFormCtaLabel(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                          placeholder="Kostenloses Erstgespräch buchen"
+                        />
+                      </div>
+
+                      {/* CTA Link */}
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">CTA Link</label>
+                        <input 
+                          type="text" 
+                          value={formCtaLink}
+                          onChange={(e) => setFormCtaLink(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
+                          placeholder="/kontakt"
+                        />
+                      </div>
                     </div>
-
-                    <textarea 
-                      ref={contentRef}
-                      rows={12}
-                      required
-                      value={formContent}
-                      onChange={(e) => setFormContent(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-b-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm leading-relaxed"
-                      placeholder="# Hauptüberschrift&#10;&#10;Dein Fließtext hier... Nutze die Toolbar zum Formatieren."
-                    />
                   </div>
 
-                  {/* Image URL */}
-                  <div className="md:col-span-2">
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild-URL (Cloudinary/Unsplash)</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formImage}
-                      onChange={(e) => setFormImage(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                      placeholder="https://res.cloudinary.com/..."
-                    />
-                  </div>
+                  {/* Right Column: Visual Preview */}
+                  <div className={`overflow-y-auto p-6 bg-brand-bg text-brand-text select-none ${
+                    previewMode === 'edit' ? 'hidden' : 'block'
+                  } ${
+                    mobileTab === 'edit' ? 'hidden lg:block' : 'block'
+                  }`}>
+                    <div className="max-w-2xl mx-auto py-4">
+                      <div className="text-xs text-gray-500 uppercase tracking-widest font-mono mb-4 text-center border-b border-white/5 pb-2">
+                        Live Vorschau
+                      </div>
+                      
+                      {/* Hero Section */}
+                      <header className="relative pt-12 pb-10 overflow-hidden border border-white/5 rounded-3xl mb-8 bg-black/40">
+                        <div className="absolute inset-0 z-0">
+                          {formImage ? (
+                            <img 
+                              loading="lazy" 
+                              src={formImage} 
+                              alt={formTitle}
+                              className="w-full h-full object-cover opacity-25 blur-[2px] scale-110"
+                            />
+                          ) : (
+                            <div className="w-full h-full bg-neutral-900 opacity-30" />
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-b from-brand-bg via-brand-bg/95 to-brand-bg" />
+                        </div>
 
-                  {/* Date */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Datum</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formDate}
-                      onChange={(e) => setFormDate(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                      placeholder="z.B. 03. Juni 2026"
-                    />
-                  </div>
+                        <div className="relative z-10 text-center px-4">
+                          <div className="flex items-center justify-center gap-2 mb-4">
+                            <span className="px-3 py-1 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-[8px] font-bold uppercase tracking-[0.2em]">
+                              {formCategory === 'corporate' ? 'Business Excellence' : 'Emotional Impact'}
+                            </span>
+                          </div>
 
-                  {/* Read Time */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Lesezeit</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formReadTime}
-                      onChange={(e) => setFormReadTime(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                      placeholder="z.B. 5 min"
-                    />
-                  </div>
+                          <h1 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-white font-bold">
+                            {formTitle || "Unbenannter Artikel"}
+                          </h1>
 
-                  {/* CTA Label */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">CTA Button Text</label>
-                    <input 
-                      type="text" 
-                      value={formCtaLabel}
-                      onChange={(e) => setFormCtaLabel(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                      placeholder="Kostenloses Erstgespräch buchen"
-                    />
-                  </div>
+                          <div className="flex items-center justify-center gap-4 text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em]">
+                            <span>{formDate || "Kein Datum"}</span>
+                            <span>•</span>
+                            <span>{formReadTime || "5 min Lesezeit"}</span>
+                          </div>
+                        </div>
+                      </header>
 
-                  {/* CTA Link */}
-                  <div>
-                    <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">CTA Link</label>
-                    <input 
-                      type="text" 
-                      value={formCtaLink}
-                      onChange={(e) => setFormCtaLink(e.target.value)}
-                      className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
-                      placeholder="/kontakt"
-                    />
+                      {/* Layout-dependent header showcase */}
+                      {formLayout === 'case-study' && (
+                        <div className="mb-8 grid grid-cols-2 md:grid-cols-4 gap-4 p-5 bg-white/[0.02] border border-white/10 rounded-2xl relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/5 via-transparent to-transparent pointer-events-none" />
+                          <div className="border-b md:border-b-0 md:border-r border-white/10 pb-2 md:pb-0 md:pr-4">
+                            <span className="block text-[8px] text-gray-500 uppercase tracking-widest font-bold mb-1">Kunde</span>
+                            <span className="text-white font-display font-bold text-sm truncate block">{formClientName || 'Projekt'}</span>
+                          </div>
+                          
+                          <div className="border-b md:border-b-0 md:border-r border-white/10 pb-2 md:pb-0 md:px-4">
+                            <span className="block text-[8px] text-gray-500 uppercase tracking-widest font-bold mb-1">Laufzeit</span>
+                            <span className="text-white font-display font-bold text-sm truncate block">{formProjectDuration || 'Laufzeit'}</span>
+                          </div>
+
+                          <div className="border-b md:border-b-0 md:border-r border-white/10 pb-2 md:pb-0 md:px-4">
+                            <span className="block text-xl font-display font-bold text-brand-accent mb-0.5">{formKpiValue1 || '-'}</span>
+                            <span className="text-[9px] text-gray-400 font-light leading-snug block">{formKpiTitle1 || 'KPI 1'}</span>
+                          </div>
+
+                          <div className="md:px-4">
+                            <span className="block text-xl font-display font-bold text-brand-accent mb-0.5">{formKpiValue2 || '-'}</span>
+                            <span className="text-[9px] text-gray-400 font-light leading-snug block">{formKpiTitle2 || 'KPI 2'}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {formLayout === 'gallery' && (formGalleryImage1 || formGalleryImage2 || formGalleryImage3 || formGalleryImage4) && (
+                        <div className="mb-8 grid grid-cols-2 gap-3">
+                          {[formGalleryImage1, formGalleryImage2, formGalleryImage3, formGalleryImage4].filter(u => u.trim() !== "").map((imgUrl, idx) => (
+                            <div key={idx} className="relative aspect-video rounded-xl overflow-hidden border border-white/10 shadow-lg bg-white/5">
+                              <img 
+                                src={imgUrl} 
+                                alt={`Vorschau ${idx + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {formLayout === 'video' && formVideoUrl && (
+                        <div className="mb-8 aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-xl relative">
+                          <iframe 
+                            src={getEmbedUrl(formVideoUrl)}
+                            className="absolute inset-0 w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title="Video Showcase"
+                          />
+                        </div>
+                      )}
+
+                      {/* Excerpt */}
+                      {formExcerpt && (
+                        <p className="text-gray-400 text-sm italic mb-6 border-l-2 border-brand-accent/50 pl-4 py-1 leading-relaxed">
+                          {formExcerpt}
+                        </p>
+                      )}
+
+                      {/* Main Article Content */}
+                      <article className="prose prose-invert prose-brand max-w-none">
+                        {renderPreviewContent(formContent)}
+                      </article>
+
+                      {/* EEAT Block Mockups */}
+                      <div className="mt-12 pt-8 border-t border-white/5 opacity-60">
+                        <div className="p-4 bg-white/[0.01] border border-white/5 rounded-2xl flex gap-4 items-center">
+                          <div className="w-12 h-12 rounded-xl overflow-hidden border border-white/10 shrink-0">
+                            <img 
+                              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
+                              alt="Parsha Rezai" 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <div className="font-bold text-xs text-white">Parsha Rezai</div>
+                            <div className="text-[10px] text-brand-accent uppercase tracking-wider">Gründer & Lead Videographer</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* CTA Mockup */}
+                      <div className="mt-8 p-6 bg-white/[0.01] border border-white/5 rounded-2xl text-center">
+                        <h4 className="text-sm font-bold text-white mb-2">Bereit für den nächsten Schritt?</h4>
+                        <span className="inline-block bg-brand-accent text-brand-bg text-xs font-bold px-6 py-2.5 rounded-full cursor-default mt-2">
+                          {formCtaLabel || 'Kostenlose Erstberatung'}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Footer Controls */}
-                <div className="flex justify-end gap-3 pt-6 border-t border-white/5">
-                  <button 
-                    type="button"
-                    onClick={() => setIsModalOpen(false)}
-                    className="bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-xl transition-all cursor-pointer font-bold"
-                  >
-                    Abbrechen
-                  </button>
-                  <button 
-                    type="submit"
-                    className="bg-brand-accent text-brand-bg hover:brightness-110 px-8 py-3 rounded-xl transition-all cursor-pointer font-bold"
-                  >
-                    {editingPost ? "Speichern" : "Veröffentlichen"}
-                  </button>
+                <div className="p-6 border-t border-white/5 flex justify-between items-center bg-black/20">
+                  <div className="text-xs text-gray-500 font-mono">
+                    Layout: <span className="text-brand-accent uppercase font-bold">{formLayout}</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button 
+                      type="button"
+                      onClick={() => setIsModalOpen(false)}
+                      className="bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-xl transition-all cursor-pointer font-bold"
+                    >
+                      Abbrechen
+                    </button>
+                    <button 
+                      type="submit"
+                      className="bg-brand-accent text-brand-bg hover:brightness-110 px-8 py-3 rounded-xl transition-all cursor-pointer font-bold"
+                    >
+                      {editingPost ? "Speichern" : "Veröffentlichen"}
+                    </button>
+                  </div>
                 </div>
               </form>
             </motion.div>
