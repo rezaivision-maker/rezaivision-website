@@ -540,6 +540,35 @@ export default function BlogPost() {
           </div>
         )}
 
+        {/* Gallery Layout */}
+        {post.layout === 'gallery' && post.galleryImages && post.galleryImages.length > 0 && (
+          <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {post.galleryImages.map((imgUrl, idx) => (
+              <div key={idx} className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 group shadow-xl bg-white/5">
+                <img 
+                  loading="lazy" 
+                  src={imgUrl} 
+                  alt={`Showcase ${idx + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Video Layout */}
+        {post.layout === 'video' && post.videoUrl && (
+          <div className="mb-16 aspect-video rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl relative">
+            <iframe 
+              src={getEmbedUrl(post.videoUrl)}
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Video Showcase"
+            />
+          </div>
+        )}
+
         <article className="prose prose-invert prose-brand max-w-none">
           {renderContent(post.content)}
         </article>
