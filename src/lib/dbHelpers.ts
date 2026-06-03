@@ -25,6 +25,8 @@ const mapDocToPost = (docData: any, id: string): BlogPost => {
     kpiValue2: docData.kpiValue2 || "",
     clientName: docData.clientName || "",
     projectDuration: docData.projectDuration || "",
+    galleryImages: docData.galleryImages || [],
+    videoUrl: docData.videoUrl || "",
   };
 };
 

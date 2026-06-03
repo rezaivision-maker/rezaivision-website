@@ -48,13 +48,18 @@ export default function AdminDashboard() {
   const [formCtaLink, setFormCtaLink] = useState("");
   const [formReadTime, setFormReadTime] = useState("");
   const [formDate, setFormDate] = useState("");
-  const [formLayout, setFormLayout] = useState<'standard' | 'case-study'>("standard");
+  const [formLayout, setFormLayout] = useState<'standard' | 'case-study' | 'gallery' | 'video'>("standard");
   const [formKpiTitle1, setFormKpiTitle1] = useState("");
   const [formKpiValue1, setFormKpiValue1] = useState("");
   const [formKpiTitle2, setFormKpiTitle2] = useState("");
   const [formKpiValue2, setFormKpiValue2] = useState("");
   const [formClientName, setFormClientName] = useState("");
   const [formProjectDuration, setFormProjectDuration] = useState("");
+  const [formGalleryImage1, setFormGalleryImage1] = useState("");
+  const [formGalleryImage2, setFormGalleryImage2] = useState("");
+  const [formGalleryImage3, setFormGalleryImage3] = useState("");
+  const [formGalleryImage4, setFormGalleryImage4] = useState("");
+  const [formVideoUrl, setFormVideoUrl] = useState("");
 
   const contentRef = React.useRef<HTMLTextAreaElement>(null);
 
@@ -142,6 +147,11 @@ export default function AdminDashboard() {
     setFormKpiValue2("");
     setFormClientName("");
     setFormProjectDuration("");
+    setFormGalleryImage1("");
+    setFormGalleryImage2("");
+    setFormGalleryImage3("");
+    setFormGalleryImage4("");
+    setFormVideoUrl("");
     
     // Auto-generate today's date in German format (e.g. "03. Juni 2026")
     const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'long', year: 'numeric' };
@@ -170,6 +180,11 @@ export default function AdminDashboard() {
     setFormKpiValue2(post.kpiValue2 || "");
     setFormClientName(post.clientName || "");
     setFormProjectDuration(post.projectDuration || "");
+    setFormGalleryImage1(post.galleryImages?.[0] || "");
+    setFormGalleryImage2(post.galleryImages?.[1] || "");
+    setFormGalleryImage3(post.galleryImages?.[2] || "");
+    setFormGalleryImage4(post.galleryImages?.[3] || "");
+    setFormVideoUrl(post.videoUrl || "");
     setIsModalOpen(true);
   };
 
@@ -183,6 +198,14 @@ export default function AdminDashboard() {
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
     const id = editingPost ? editingPost.id : Math.random().toString(36).substring(2, 9);
+    
+    const galleryImages = formLayout === 'gallery' ? [
+      formGalleryImage1,
+      formGalleryImage2,
+      formGalleryImage3,
+      formGalleryImage4
+    ].filter(img => img.trim() !== "") : [];
+
     const newPost: BlogPost = {
       id,
       title: formTitle,
@@ -201,7 +224,9 @@ export default function AdminDashboard() {
       kpiTitle2: formLayout === 'case-study' ? formKpiTitle2 : "",
       kpiValue2: formLayout === 'case-study' ? formKpiValue2 : "",
       clientName: formLayout === 'case-study' ? formClientName : "",
-      projectDuration: formLayout === 'case-study' ? formProjectDuration : ""
+      projectDuration: formLayout === 'case-study' ? formProjectDuration : "",
+      galleryImages,
+      videoUrl: formLayout === 'video' ? formVideoUrl : ""
     };
 
     try {
@@ -566,11 +591,13 @@ export default function AdminDashboard() {
                     <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Layout Template</label>
                     <select 
                       value={formLayout}
-                      onChange={(e) => setFormLayout(e.target.value as 'standard' | 'case-study')}
+                      onChange={(e) => setFormLayout(e.target.value as 'standard' | 'case-study' | 'gallery' | 'video')}
                       className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors"
                     >
                       <option value="standard">Standard (Klassisch)</option>
                       <option value="case-study">Case Study (Fallstudie mit KPIs)</option>
+                      <option value="gallery">Bildergalerie (Visual Showcase)</option>
+                      <option value="video">Video Showcase (YouTube/Vimeo Embed)</option>
                     </select>
                   </div>
 
@@ -644,6 +671,86 @@ export default function AdminDashboard() {
                           onChange={(e) => setFormKpiTitle2(e.target.value)}
                           className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
                           placeholder="z.B. qualifizierte Leads"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Gallery Fields */}
+                  {formLayout === 'gallery' && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                    >
+                      <div className="md:col-span-2">
+                        <h4 className="text-sm font-bold text-brand-accent">Galerie-Bilder</h4>
+                        <p className="text-xs text-gray-400">Füge bis zu 4 Bild-URLs hinzu, die im oberen Bereich als Grid angezeigt werden.</p>
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 1 URL</label>
+                        <input 
+                          type="text" 
+                          value={formGalleryImage1}
+                          onChange={(e) => setFormGalleryImage1(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="https://res.cloudinary.com/..."
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 2 URL</label>
+                        <input 
+                          type="text" 
+                          value={formGalleryImage2}
+                          onChange={(e) => setFormGalleryImage2(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="https://res.cloudinary.com/..."
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 3 URL</label>
+                        <input 
+                          type="text" 
+                          value={formGalleryImage3}
+                          onChange={(e) => setFormGalleryImage3(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="https://res.cloudinary.com/..."
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 4 URL</label>
+                        <input 
+                          type="text" 
+                          value={formGalleryImage4}
+                          onChange={(e) => setFormGalleryImage4(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="https://res.cloudinary.com/..."
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Video Fields */}
+                  {formLayout === 'video' && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="md:col-span-2 grid grid-cols-1 gap-6 p-5 bg-white/[0.02] border border-white/10 rounded-2xl"
+                    >
+                      <div>
+                        <h4 className="text-sm font-bold text-brand-accent">Video Showcase Link</h4>
+                        <p className="text-xs text-gray-400">Das Video wird direkt unter dem Header in einem responsive Player eingebunden.</p>
+                      </div>
+                      <div>
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">YouTube- oder Vimeo-URL</label>
+                        <input 
+                          type="text" 
+                          value={formVideoUrl}
+                          onChange={(e) => setFormVideoUrl(e.target.value)}
+                          className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
+                          placeholder="z.B. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                         />
                       </div>
                     </motion.div>

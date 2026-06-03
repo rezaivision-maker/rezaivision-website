@@ -7,6 +7,24 @@ import { fetchBlogPostBySlug, fetchBlogPosts } from "@/lib/dbHelpers";
 import { Button } from "@/components/ui/Button";
 import { useEffect, useState } from "react";
 
+const getEmbedUrl = (url?: string) => {
+  if (!url) return "";
+  
+  // YouTube
+  const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i);
+  if (ytMatch) {
+    return `https://www.youtube.com/embed/${ytMatch[1]}`;
+  }
+  
+  // Vimeo
+  const vimeoMatch = url.match(/(?:vimeo\.com\/|player\.vimeo\.com\/video\/)(\d+)/i);
+  if (vimeoMatch) {
+    return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+  }
+  
+  return url; // fallback
+};
+
 export default function BlogPost() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -280,6 +298,28 @@ export default function BlogPost() {
           i++;
           continue;
         }
+      }
+
+      // Markdown Images: ![alt](url)
+      const imageMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+      if (imageMatch) {
+        elements.push(
+          <figure key={`img-${i}`} className="my-12">
+            <img 
+              loading="lazy" 
+              src={imageMatch[2]} 
+              alt={imageMatch[1]} 
+              className="rounded-3xl border border-white/10 w-full object-cover max-h-[500px] shadow-2xl" 
+            />
+            {imageMatch[1] && (
+              <figcaption className="text-center text-xs text-gray-500 mt-3 uppercase tracking-widest font-bold">
+                {imageMatch[1]}
+              </figcaption>
+            )}
+          </figure>
+        );
+        i++;
+        continue;
       }
 
       // Buttons [Button Text](/url) als alleinstehende Zeile
