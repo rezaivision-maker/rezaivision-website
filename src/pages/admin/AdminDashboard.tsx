@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
-  Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns 
+  Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
+  TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -23,11 +24,153 @@ const generateSlug = (text: string) => {
     .trim();
 };
 
+// Helper to calculate SVG path coordinates for line charts
+const getSvgCoordinates = (data: any[], key: string, width: number, height: number) => {
+  if (!data || data.length === 0) return { linePath: "", areaPath: "", points: [] };
+  const maxVal = Math.max(...data.map(d => d[key])) * 1.15 || 100;
+  const xStep = width / (data.length - 1);
+  const points = data.map((d, idx) => {
+    const x = idx * xStep;
+    const y = height - (d[key] / maxVal) * height;
+    return { x, y, value: d[key], date: d.date };
+  });
+  const linePath = points.map((p, idx) => `${idx === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+  const areaPath = `${linePath} L ${width} ${height} L 0 ${height} Z`;
+  return { linePath, areaPath, points };
+};
+
+// Radial Gauge component for Lighthouse scores
+const PageSpeedGauge = ({ score, label }: { score: number; label: string }) => {
+  const radius = 36;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (score / 100) * circumference;
+  
+  let strokeColor = "stroke-red-500";
+  let textColor = "text-red-400";
+  if (score >= 90) {
+    strokeColor = "stroke-emerald-500";
+    textColor = "text-emerald-400";
+  } else if (score >= 50) {
+    strokeColor = "stroke-amber-500";
+    textColor = "text-amber-400";
+  }
+
+  return (
+    <div className="flex flex-col items-center p-4 bg-white/[0.02] border border-white/10 rounded-2xl relative overflow-hidden">
+      <div className="relative w-20 h-20 flex items-center justify-center">
+        <svg className="w-full h-full transform -rotate-90">
+          <circle
+            cx="40"
+            cy="40"
+            r={radius}
+            className="stroke-white/5"
+            strokeWidth="6"
+            fill="transparent"
+          />
+          <motion.circle
+            cx="40"
+            cy="40"
+            r={radius}
+            className={strokeColor}
+            strokeWidth="6"
+            fill="transparent"
+            strokeDasharray={circumference}
+            initial={{ strokeDashoffset: circumference }}
+            animate={{ strokeDashoffset }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            strokeLinecap="round"
+          />
+        </svg>
+        <span className={`absolute text-lg font-display font-bold ${textColor}`}>
+          {score}
+        </span>
+      </div>
+      <span className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-3 text-center">
+        {label}
+      </span>
+    </div>
+  );
+};
+
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("blog");
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [loginError, setLoginError] = useState("");
+
+  // Analytics & SEO State
+  const [seoSubTab, setSeoSubTab] = useState<'analytics' | 'search-console' | 'pagespeed' | 'config'>('analytics');
+  const [analyticsData, setAnalyticsData] = useState<any>(null);
+  const [analyticsLoading, setAnalyticsLoading] = useState(true);
+  const [gscData, setGscData] = useState<any>(null);
+  const [gscLoading, setGscLoading] = useState(true);
+  const [pagespeedStrategy, setPagespeedStrategy] = useState<'mobile' | 'desktop'>('mobile');
+  const [pagespeedData, setPagespeedData] = useState<any>(null);
+  const [pagespeedLoading, setPagespeedLoading] = useState(true);
+  const [pagespeedRunning, setPagespeedRunning] = useState(false);
+
+  const fetchAnalytics = async () => {
+    setAnalyticsLoading(true);
+    try {
+      const res = await fetch('/api/analytics');
+      if (res.ok) {
+        const data = await res.json();
+        setAnalyticsData(data);
+      }
+    } catch (err) {
+      console.error('Error fetching analytics:', err);
+    } finally {
+      setAnalyticsLoading(false);
+    }
+  };
+
+  const fetchGsc = async () => {
+    setGscLoading(true);
+    try {
+      const res = await fetch('/api/search-console');
+      if (res.ok) {
+        const data = await res.json();
+        setGscData(data);
+      }
+    } catch (err) {
+      console.error('Error fetching Search Console:', err);
+    } finally {
+      setGscLoading(false);
+    }
+  };
+
+  const fetchPagespeed = async (strat: 'mobile' | 'desktop', runTest: boolean = false) => {
+    if (runTest) {
+      setPagespeedRunning(true);
+    } else {
+      setPagespeedLoading(true);
+    }
+    try {
+      const res = await fetch(`/api/pagespeed?strategy=${strat}`);
+      if (res.ok) {
+        const data = await res.json();
+        setPagespeedData(data);
+      }
+    } catch (err) {
+      console.error('Error fetching PageSpeed:', err);
+    } finally {
+      setPagespeedLoading(false);
+      setPagespeedRunning(false);
+    }
+  };
+
+  useEffect(() => {
+    if (user && activeTab === "seo") {
+      fetchAnalytics();
+      fetchGsc();
+      fetchPagespeed(pagespeedStrategy, false);
+    }
+  }, [user, activeTab]);
+
+  const handlePagespeedStrategyChange = (strat: 'mobile' | 'desktop') => {
+    setPagespeedStrategy(strat);
+    fetchPagespeed(strat, false);
+  };
 
   // CMS Blog States
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -607,7 +750,7 @@ export default function AdminDashboard() {
             }`}
           >
             <Globe size={18} />
-            <span className="font-medium">SEO & Ranking</span>
+            <span className="font-medium">Performance & SEO</span>
           </button>
         </nav>
         <div className="p-4 border-t border-white/5">
@@ -740,30 +883,727 @@ export default function AdminDashboard() {
         )}
 
         {activeTab === "seo" && (
-           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-             <h1 className="text-3xl font-display font-bold mb-2">SEO & Ranking</h1>
-             <p className="text-gray-400 mb-8">Übersicht über Suchmaschinenoptimierung und Rankings.</p>
-             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 max-w-lg">
-               <h3 className="text-lg font-bold text-white mb-2">Robots.txt & Sitemap</h3>
-               <p className="text-sm text-gray-400 mb-4">Das CMS sowie AGB und Impressum sind mit "noindex, nofollow" versehen und werden von Suchmaschinen ignoriert.</p>
-               <div className="flex gap-2">
-                 <a 
-                   href="/sitemap.xml" 
-                   target="_blank"
-                   className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg text-sm transition-all"
-                 >
-                   Sitemap ansehen
-                 </a>
-                 <a 
-                   href="/robots.txt" 
-                   target="_blank"
-                   className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg text-sm transition-all"
-                 >
-                   Robots.txt ansehen
-                 </a>
-               </div>
-             </div>
-           </motion.div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
+            {/* Header */}
+            <div>
+              <h1 className="text-3xl font-display font-bold mb-2">Performance & SEO</h1>
+              <p className="text-gray-400">Analysiere Besucherstatistiken, Suchmaschinen-Rankings und optimiere den Seitenspeed live.</p>
+            </div>
+
+            {/* Sub Tabs Navigation */}
+            <div className="flex flex-wrap gap-2 border-b border-white/5 pb-4">
+              <button
+                type="button"
+                onClick={() => setSeoSubTab('analytics')}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                  seoSubTab === 'analytics' ? 'bg-brand-accent text-brand-bg shadow-lg hover:brightness-110' : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <BarChart3 size={16} />
+                Google Analytics
+              </button>
+              <button
+                type="button"
+                onClick={() => setSeoSubTab('search-console')}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                  seoSubTab === 'search-console' ? 'bg-brand-accent text-brand-bg shadow-lg hover:brightness-110' : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <TrendingUp size={16} />
+                Search Console
+              </button>
+              <button
+                type="button"
+                onClick={() => setSeoSubTab('pagespeed')}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                  seoSubTab === 'pagespeed' ? 'bg-brand-accent text-brand-bg shadow-lg hover:brightness-110' : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <Zap size={16} />
+                PageSpeed Insights
+              </button>
+              <button
+                type="button"
+                onClick={() => setSeoSubTab('config')}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all cursor-pointer ${
+                  seoSubTab === 'config' ? 'bg-brand-accent text-brand-bg shadow-lg hover:brightness-110' : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <Settings size={16} />
+                API Verbindung
+              </button>
+            </div>
+
+            {/* TAB CONTENTS */}
+
+            {/* 1. GOOGLE ANALYTICS */}
+            {seoSubTab === 'analytics' && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+                {analyticsLoading ? (
+                  <div className="py-20 flex flex-col justify-center items-center bg-white/5 border border-white/10 rounded-2xl">
+                    <Loader2 size={32} className="animate-spin text-brand-accent mb-3" />
+                    <span className="text-gray-400 text-sm">Lade Analytics Daten...</span>
+                  </div>
+                ) : analyticsData ? (
+                  <>
+                    {/* Status Banner for Mock Mode */}
+                    {!analyticsData.isConnected && (
+                      <div className="p-4 bg-brand-accent/5 border border-brand-accent/20 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <AlertCircle size={20} className="text-brand-accent shrink-0" />
+                          <div className="text-sm">
+                            <span className="font-bold text-white block sm:inline">Mock-Datenmodus aktiv:</span>
+                            <span className="text-gray-400 ml-1">Es wurden keine Google API Anmeldedaten im Backend gefunden. Das Dashboard zeigt Simulationsdaten.</span>
+                          </div>
+                        </div>
+                        <button 
+                          type="button"
+                          onClick={() => setSeoSubTab('config')} 
+                          className="text-xs font-bold text-brand-accent hover:underline shrink-0"
+                        >
+                          Verbindung einrichten
+                        </button>
+                      </div>
+                    )}
+
+                    {/* GA Metrics Grid */}
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Nutzer (30 Tage)</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {analyticsData.activeUsers.toLocaleString('de-DE')}
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Seitenaufrufe</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {analyticsData.totalPageViews.toLocaleString('de-DE')}
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Absprungrate</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {analyticsData.bounceRate}%
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Sitzungsdauer (Ø)</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {Math.floor(analyticsData.avgSessionDuration / 60)}m {analyticsData.avgSessionDuration % 60}s
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Chart & Distribution Grid */}
+                    <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                      {/* Line Chart */}
+                      <div className="xl:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-6">
+                        <div className="flex justify-between items-center mb-6">
+                          <div>
+                            <h3 className="text-lg font-bold text-white">Besuchertrend</h3>
+                            <p className="text-xs text-gray-400">Vergleich von Nutzern und Seitenaufrufen</p>
+                          </div>
+                          <div className="flex gap-4 text-xs font-bold">
+                            <span className="flex items-center gap-1.5 text-brand-accent">
+                              <span className="w-3 h-3 rounded-full bg-brand-accent" />
+                              Nutzer
+                            </span>
+                            <span className="flex items-center gap-1.5 text-sky-400">
+                              <span className="w-3 h-3 rounded-full bg-sky-400" />
+                              Seitenaufrufe
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Svg Chart */}
+                        <div className="w-full">
+                          {(() => {
+                            const { linePath: visLine, areaPath: visArea, points: visPoints } = getSvgCoordinates(analyticsData.history, 'visitors', 600, 180);
+                            const { linePath: pvLine, areaPath: pvArea } = getSvgCoordinates(analyticsData.history, 'pageviews', 600, 180);
+
+                            return (
+                              <svg viewBox="0 0 600 180" className="w-full h-48 overflow-visible">
+                                <defs>
+                                  <linearGradient id="visGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stopColor="#C8A46B" stopOpacity="0.2" />
+                                    <stop offset="100%" stopColor="#C8A46B" stopOpacity="0.0" />
+                                  </linearGradient>
+                                  <linearGradient id="pvGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.1" />
+                                    <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.0" />
+                                  </linearGradient>
+                                </defs>
+                                <line x1="0" y1="0" x2="600" y2="0" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                                <line x1="0" y1="45" x2="600" y2="45" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                                <line x1="0" y1="90" x2="600" y2="90" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                                <line x1="0" y1="135" x2="600" y2="135" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                                <line x1="0" y1="180" x2="600" y2="180" stroke="rgba(255,255,255,0.08)" />
+
+                                {pvArea && <path d={pvArea} fill="url(#pvGrad)" />}
+                                {visArea && <path d={visArea} fill="url(#visGrad)" />}
+
+                                {pvLine && <path d={pvLine} fill="none" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" />}
+                                {visLine && <path d={visLine} fill="none" stroke="#C8A46B" strokeWidth="2.5" strokeLinecap="round" />}
+                                
+                                {visPoints.length > 0 && (
+                                  <circle 
+                                    cx={visPoints[visPoints.length - 1].x} 
+                                    cy={visPoints[visPoints.length - 1].y} 
+                                    r="4" 
+                                    fill="#C8A46B" 
+                                    stroke="#0E0E0E" 
+                                    strokeWidth="1.5" 
+                                  />
+                                )}
+                              </svg>
+                            );
+                          })()}
+                        </div>
+                      </div>
+
+                      {/* Device & Traffic Sources Distribution */}
+                      <div className="space-y-6">
+                        {/* Traffic Sources */}
+                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                          <h3 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Traffic-Kanäle</h3>
+                          <div className="space-y-3">
+                            {analyticsData.trafficSources.map((source: any, idx: number) => (
+                              <div key={idx} className="space-y-1">
+                                <div className="flex justify-between text-xs font-bold text-gray-400">
+                                  <span>{source.name}</span>
+                                  <span className="text-white">{source.value}%</span>
+                                </div>
+                                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                  <div 
+                                    className={`h-full rounded-full ${
+                                      idx === 0 ? 'bg-brand-accent' : 
+                                      idx === 1 ? 'bg-sky-400' : 
+                                      idx === 2 ? 'bg-purple-400' : 'bg-gray-400'
+                                    }`} 
+                                    style={{ width: `${source.value}%` }} 
+                                  />
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Devices */}
+                        <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                          <h3 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Endgeräte</h3>
+                          <div className="flex gap-4 items-center">
+                            {analyticsData.devices.map((device: any, idx: number) => (
+                              <div key={idx} className="flex-1 text-center bg-black/20 border border-white/5 rounded-xl p-3">
+                                {device.name === 'Mobile' ? (
+                                  <Smartphone size={16} className="mx-auto text-brand-accent mb-1" />
+                                ) : device.name === 'Desktop' ? (
+                                  <Monitor size={16} className="mx-auto text-sky-400 mb-1" />
+                                ) : (
+                                  <Globe size={16} className="mx-auto text-purple-400 mb-1" />
+                                )}
+                                <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-wider">{device.name}</span>
+                                <span className="text-sm text-white font-bold">{device.value}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Top Pages List */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                      <h3 className="text-base font-bold text-white mb-4">Meistbesuchte Seiten</h3>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left text-xs border-collapse">
+                          <thead>
+                            <tr className="border-b border-white/10 text-gray-400 uppercase tracking-widest text-[10px]">
+                              <th className="pb-3 font-bold">Pfad (URL Path)</th>
+                              <th className="pb-3 text-right font-bold w-32">Aufrufe (Views)</th>
+                              <th className="pb-3 text-right font-bold w-48">Anteil</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-white/5">
+                            {analyticsData.topPages.map((page: any, idx: number) => {
+                              const pct = ((page.views / analyticsData.totalPageViews) * 100).toFixed(1);
+                              return (
+                                <tr key={idx} className="hover:bg-white/[0.02]">
+                                  <td className="py-3.5 font-mono text-gray-300 font-light truncate max-w-md">{page.path}</td>
+                                  <td className="py-3.5 text-right text-white font-bold">{page.views.toLocaleString('de-DE')}</td>
+                                  <td className="py-3.5 text-right">
+                                    <div className="flex items-center justify-end gap-3">
+                                      <span className="text-gray-400 font-bold text-[10px]">{pct}%</span>
+                                      <div className="w-20 h-1 bg-white/5 rounded-full overflow-hidden">
+                                        <div className="bg-brand-accent h-full rounded-full" style={{ width: `${pct}%` }} />
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="p-8 text-center text-gray-400 italic">Fehler beim Laden der Analytics Daten.</div>
+                )}
+              </motion.div>
+            )}
+
+            {/* 2. SEARCH CONSOLE */}
+            {seoSubTab === 'search-console' && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+                {gscLoading ? (
+                  <div className="py-20 flex flex-col justify-center items-center bg-white/5 border border-white/10 rounded-2xl">
+                    <Loader2 size={32} className="animate-spin text-brand-accent mb-3" />
+                    <span className="text-gray-400 text-sm">Lade Search Console Rankings...</span>
+                  </div>
+                ) : gscData ? (
+                  <>
+                    {/* Status Banner for Mock Mode */}
+                    {!gscData.isConnected && (
+                      <div className="p-4 bg-brand-accent/5 border border-brand-accent/20 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <AlertCircle size={20} className="text-brand-accent shrink-0" />
+                          <div className="text-sm">
+                            <span className="font-bold text-white block sm:inline">Mock-Datenmodus aktiv:</span>
+                            <span className="text-gray-400 ml-1">Keine Google Search Console Verbindung eingerichtet. Die Daten zeigen Simulationsdaten.</span>
+                          </div>
+                        </div>
+                        <button 
+                          type="button"
+                          onClick={() => setSeoSubTab('config')} 
+                          className="text-xs font-bold text-brand-accent hover:underline shrink-0"
+                        >
+                          Verbindung einrichten
+                        </button>
+                      </div>
+                    )}
+
+                    {/* GSC Cards */}
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Klicks (30 Tage)</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {gscData.totalClicks.toLocaleString('de-DE')}
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Impressionen</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {gscData.totalImpressions.toLocaleString('de-DE')}
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Ø Klickrate (CTR)</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {gscData.avgCtr}%
+                        </span>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-brand-accent/30 transition-all group">
+                        <span className="block text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Ø Position</span>
+                        <span className="text-2xl font-display font-bold text-white group-hover:text-brand-accent transition-colors">
+                          {gscData.avgPosition}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Click & Impression Chart */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                      <div className="flex justify-between items-center mb-6">
+                        <div>
+                          <h3 className="text-lg font-bold text-white">Google Sichtbarkeit</h3>
+                          <p className="text-xs text-gray-400">Verlauf der organischen Suchklicks und Impressionen</p>
+                        </div>
+                        <div className="flex gap-4 text-xs font-bold">
+                          <span className="flex items-center gap-1.5 text-brand-accent">
+                            <span className="w-3 h-3 rounded-full bg-brand-accent" />
+                            Suchklicks
+                          </span>
+                          <span className="flex items-center gap-1.5 text-purple-400">
+                            <span className="w-3 h-3 rounded-full bg-purple-400" />
+                            Impressionen
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Svg Chart */}
+                      <div className="w-full">
+                        {(() => {
+                          const { linePath: clickLine, areaPath: clickArea, points: clickPoints } = getSvgCoordinates(gscData.history, 'clicks', 600, 180);
+                          const { linePath: impLine, areaPath: impArea } = getSvgCoordinates(gscData.history, 'impressions', 600, 180);
+
+                          return (
+                            <svg viewBox="0 0 600 180" className="w-full h-48 overflow-visible">
+                              <defs>
+                                <linearGradient id="clickGrad" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="0%" stopColor="#C8A46B" stopOpacity="0.25" />
+                                  <stop offset="100%" stopColor="#C8A46B" stopOpacity="0.0" />
+                                </linearGradient>
+                                <linearGradient id="impGrad" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="0%" stopColor="#c084fc" stopOpacity="0.1" />
+                                  <stop offset="100%" stopColor="#c084fc" stopOpacity="0.0" />
+                                </linearGradient>
+                              </defs>
+                              <line x1="0" y1="0" x2="600" y2="0" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                              <line x1="0" y1="45" x2="600" y2="45" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                              <line x1="0" y1="90" x2="600" y2="90" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                              <line x1="0" y1="135" x2="600" y2="135" stroke="rgba(255,255,255,0.03)" strokeDasharray="4 4" />
+                              <line x1="0" y1="180" x2="600" y2="180" stroke="rgba(255,255,255,0.08)" />
+
+                              {impArea && <path d={impArea} fill="url(#impGrad)" />}
+                              {clickArea && <path d={clickArea} fill="url(#clickGrad)" />}
+
+                              {impLine && <path d={impLine} fill="none" stroke="#c084fc" strokeWidth="2" strokeLinecap="round" />}
+                              {clickLine && <path d={clickLine} fill="none" stroke="#C8A46B" strokeWidth="2.5" strokeLinecap="round" />}
+                              
+                              {clickPoints.length > 0 && (
+                                <circle 
+                                  cx={clickPoints[clickPoints.length - 1].x} 
+                                  cy={clickPoints[clickPoints.length - 1].y} 
+                                  r="4" 
+                                  fill="#C8A46B" 
+                                  stroke="#0E0E0E" 
+                                  strokeWidth="1.5" 
+                                />
+                              )}
+                            </svg>
+                          );
+                        })()}
+                      </div>
+                    </div>
+
+                    {/* Keywords/Queries Table */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                      <h3 className="text-base font-bold text-white mb-4">Top Suchanfragen & Rankings</h3>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left text-xs border-collapse">
+                          <thead>
+                            <tr className="border-b border-white/10 text-gray-400 uppercase tracking-widest text-[10px] pb-3">
+                              <th className="pb-3 font-bold">Suchbegriff</th>
+                              <th className="pb-3 text-right font-bold w-24">Klicks</th>
+                              <th className="pb-3 text-right font-bold w-28">Impressionen</th>
+                              <th className="pb-3 text-right font-bold w-24">CTR</th>
+                              <th className="pb-3 text-right font-bold w-24">Position</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-white/5">
+                            {gscData.keywords.map((kw: any, idx: number) => (
+                              <tr key={idx} className="hover:bg-white/[0.02]">
+                                <td className="py-3.5 text-white font-bold">{kw.query}</td>
+                                <td className="py-3.5 text-right font-mono text-gray-300">{kw.clicks}</td>
+                                <td className="py-3.5 text-right font-mono text-gray-300">{kw.impressions.toLocaleString('de-DE')}</td>
+                                <td className="py-3.5 text-right font-mono text-gray-300">{kw.ctr}%</td>
+                                <td className="py-3.5 text-right">
+                                  <span className={`inline-block px-2 py-0.5 rounded font-mono text-xs font-bold ${
+                                    kw.position <= 1.5 ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' :
+                                    kw.position <= 3 ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20' :
+                                    'bg-amber-500/10 text-amber-400 border border-amber-500/20'
+                                  }`}>
+                                    #{kw.position}
+                                  </span>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    {/* Sitemap & Robots.txt Links (Original function preserved) */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
+                      <h3 className="text-base font-bold text-white mb-2">Robots.txt & Sitemap</h3>
+                      <p className="text-xs text-gray-400 mb-4">Das CMS sowie AGB und Impressum sind mit "noindex, nofollow" versehen und werden von Suchmaschinen ignoriert. Alle anderen Artikel werden automatisch in der Sitemap gelistet.</p>
+                      <div className="flex gap-2">
+                        <a 
+                          href="/sitemap.xml" 
+                          target="_blank"
+                          className="bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-xl text-xs transition-all border border-white/10"
+                        >
+                          Sitemap.xml ansehen
+                        </a>
+                        <a 
+                          href="/robots.txt" 
+                          target="_blank"
+                          className="bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-xl text-xs transition-all border border-white/10"
+                        >
+                          Robots.txt ansehen
+                        </a>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="p-8 text-center text-gray-400 italic">Fehler beim Laden der Search Console Rankings.</div>
+                )}
+              </motion.div>
+            )}
+
+            {/* 3. PAGESPEED INSIGHTS */}
+            {seoSubTab === 'pagespeed' && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
+                {/* Pagespeed Controller Header */}
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-white/5 border border-white/10 p-5 rounded-3xl">
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Lighthouse Performance Audit</h3>
+                    <p className="text-xs text-gray-400">Analysiert das Frontend auf Ladezeit und Barrierefreiheit.</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3 w-full sm:w-auto">
+                    {/* Strategy Switch */}
+                    <div className="flex bg-black/40 border border-white/10 rounded-xl p-1 text-xs">
+                      <button
+                        type="button"
+                        onClick={() => handlePagespeedStrategyChange('mobile')}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                          pagespeedStrategy === 'mobile' ? 'bg-brand-accent text-brand-bg shadow' : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <Smartphone size={14} />
+                        Mobil
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handlePagespeedStrategyChange('desktop')}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                          pagespeedStrategy === 'desktop' ? 'bg-brand-accent text-brand-bg shadow' : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <Monitor size={14} />
+                        Desktop
+                      </button>
+                    </div>
+
+                    {/* Run Test Button */}
+                    <button
+                      type="button"
+                      onClick={() => fetchPagespeed(pagespeedStrategy, true)}
+                      disabled={pagespeedRunning}
+                      className="flex items-center justify-center gap-2 bg-brand-accent text-brand-bg hover:brightness-110 disabled:opacity-50 px-4 py-2.5 rounded-xl text-xs font-bold font-display cursor-pointer transition-all hover:scale-102"
+                    >
+                      <RefreshCw size={14} className={pagespeedRunning ? 'animate-spin' : ''} />
+                      {pagespeedRunning ? 'Analysiere...' : 'Test starten'}
+                    </button>
+                  </div>
+                </div>
+
+                {pagespeedLoading || pagespeedRunning ? (
+                  /* Loading Skeletons */
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {[1, 2, 3, 4].map(idx => (
+                        <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center h-36 animate-pulse">
+                          <div className="w-16 h-16 rounded-full border-4 border-white/5 border-t-white/10 animate-spin" />
+                          <div className="h-3 w-16 bg-white/10 rounded mt-4" />
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-white/5 border border-white/10 rounded-3xl p-6 h-52 animate-pulse" />
+                      <div className="bg-white/5 border border-white/10 rounded-3xl p-6 h-52 animate-pulse" />
+                    </div>
+                  </div>
+                ) : pagespeedData ? (
+                  <>
+                    {/* Status live/cache */}
+                    {!pagespeedData.isLive && (
+                      <div className="p-3 bg-brand-accent/5 border border-brand-accent/20 rounded-2xl flex items-center gap-3 text-xs text-gray-400">
+                        <AlertCircle size={16} className="text-brand-accent" />
+                        <span>Ergebnisse aus dem Cache geladen (Getestet am {new Date(pagespeedData.testedAt).toLocaleDateString('de-DE')} um {new Date(pagespeedData.testedAt).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })}). Starten Sie einen neuen Test für Live-Ergebnisse.</span>
+                      </div>
+                    )}
+
+                    {/* Gauges Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <PageSpeedGauge score={pagespeedData.scores.performance} label="Performance" />
+                      <PageSpeedGauge score={pagespeedData.scores.accessibility} label="A11y (Barrierefreiheit)" />
+                      <PageSpeedGauge score={pagespeedData.scores.bestPractices} label="Best Practices" />
+                      <PageSpeedGauge score={pagespeedData.scores.seo} label="SEO" />
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {/* Core Web Vitals */}
+                      <div className="bg-white/5 border border-white/10 rounded-3xl p-6 space-y-4">
+                        <div>
+                          <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-1">Nutzererfahrung (Core Web Vitals)</h3>
+                          <p className="text-[10px] text-gray-500">Geschwindigkeitsmetriken gemessen über die Lighthouse Engine.</p>
+                        </div>
+                        
+                        <div className="divide-y divide-white/5 text-xs">
+                          {/* FCP */}
+                          <div className="flex justify-between items-center py-2.5">
+                            <div className="space-y-0.5">
+                              <span className="text-white font-bold block">First Contentful Paint (FCP)</span>
+                              <span className="text-[10px] text-gray-500 block">Zeitpunkt des ersten Bild/Text-Renders</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="font-mono text-white font-semibold">{pagespeedData.metrics.fcp}</span>
+                              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Gut</span>
+                            </div>
+                          </div>
+                          
+                          {/* LCP */}
+                          <div className="flex justify-between items-center py-2.5">
+                            <div className="space-y-0.5">
+                              <span className="text-white font-bold block">Largest Contentful Paint (LCP)</span>
+                              <span className="text-[10px] text-gray-500 block">Ladezeit des Hauptinhalts (Hero-Bild/H1)</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="font-mono text-white font-semibold">{pagespeedData.metrics.lcp}</span>
+                              <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                                parseFloat(pagespeedData.metrics.lcp) <= 2.5 
+                                  ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
+                                  : 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
+                              }`}>{parseFloat(pagespeedData.metrics.lcp) <= 2.5 ? 'Gut' : 'Optimierbar'}</span>
+                            </div>
+                          </div>
+                          
+                          {/* TBT */}
+                          <div className="flex justify-between items-center py-2.5">
+                            <div className="space-y-0.5">
+                              <span className="text-white font-bold block">Total Blocking Time (TBT)</span>
+                              <span className="text-[10px] text-gray-500 block">Gesamtzeit der JS-Verzögerung vor Interaktion</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="font-mono text-white font-semibold">{pagespeedData.metrics.tbt}</span>
+                              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Gut</span>
+                            </div>
+                          </div>
+                          
+                          {/* CLS */}
+                          <div className="flex justify-between items-center py-2.5">
+                            <div className="space-y-0.5">
+                              <span className="text-white font-bold block">Cumulative Layout Shift (CLS)</span>
+                              <span className="text-[10px] text-gray-500 block">Visuelle Stabilität während des Ladevorgangs</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className="font-mono text-white font-semibold">{pagespeedData.metrics.cls}</span>
+                              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Gut</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Diagnostic opportunities */}
+                      <div className="bg-white/5 border border-white/10 rounded-3xl p-6 space-y-4">
+                        <div>
+                          <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-1">Optimierungspotenziale</h3>
+                          <p className="text-[10px] text-gray-500">Diese Maßnahmen verkürzen die Ladezeit des Frontends.</p>
+                        </div>
+                        
+                        <div className="space-y-3.5 overflow-y-auto max-h-[220px] pr-2">
+                          {pagespeedData.opportunities.map((opp: any, idx: number) => (
+                            <div key={idx} className="bg-black/20 border border-white/5 p-3 rounded-xl flex justify-between items-start gap-4">
+                              <div className="space-y-1">
+                                <span className="text-xs font-bold text-white block leading-snug">{opp.title}</span>
+                                <span className="text-[10px] text-gray-400 block leading-relaxed">{opp.description}</span>
+                              </div>
+                              <span className="text-xs font-mono font-bold text-brand-accent bg-brand-accent/10 border border-brand-accent/20 px-2 py-0.5 rounded shrink-0">
+                                -{opp.savings}
+                              </span>
+                            </div>
+                          ))}
+                          {pagespeedData.opportunities.length === 0 && (
+                            <div className="text-center text-xs text-gray-500 py-10 flex flex-col justify-center items-center gap-2">
+                              <CheckCircle2 size={24} className="text-emerald-400" />
+                              <span>Hervorragend! Keine nennenswerten Einsparungspotenziale gefunden.</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="p-8 text-center text-gray-400 italic">Fehler beim Laden des PageSpeed Berichts.</div>
+                )}
+              </motion.div>
+            )}
+
+            {/* 4. CONFIGURATION */}
+            {seoSubTab === 'config' && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white/5 border border-white/10 rounded-3xl p-6 space-y-6">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Google API-Verbindung einrichten</h3>
+                  <p className="text-sm text-gray-400 mt-1">Um Echtzeitdaten aus der Google Search Console und Google Analytics im Dashboard anzuzeigen, müssen entsprechende Umgebungsvariablen konfiguriert werden.</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="p-4 bg-black/40 border border-white/5 rounded-2xl space-y-3">
+                    <h4 className="text-xs uppercase font-bold text-brand-accent tracking-wider">Schritt-für-Schritt Anleitung</h4>
+                    <ol className="list-decimal pl-4 text-xs text-gray-300 space-y-2">
+                      <li>Erstellen Sie ein Google Cloud-Projekt und aktivieren Sie die <strong>Google Analytics Data API</strong> sowie die <strong>Google Search Console API</strong>.</li>
+                      <li>Erstellen Sie ein Dienstkonto (Service Account) und generieren Sie einen privaten Schlüssel im JSON-Format.</li>
+                      <li>Fügen Sie das Dienstkonto in Ihrer Google Search Console als Nutzer hinzu (Vollzugriff).</li>
+                      <li>Fügen Sie das Dienstkonto in Ihrer Google Analytics 4 Property als Analyst/Betrachter hinzu.</li>
+                      <li>Tragen Sie die Umgebungsvariablen in Ihrem Vercel-Projekt unter <strong>Settings &gt; Environment Variables</strong> ein.</li>
+                    </ol>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-xs uppercase font-bold text-white tracking-wider">Erforderliche Umgebungsvariablen</h4>
+                    <div className="overflow-x-auto border border-white/10 rounded-2xl">
+                      <table className="w-full text-left text-xs border-collapse">
+                        <thead>
+                          <tr className="bg-black/35 text-gray-400 border-b border-white/10 font-bold uppercase tracking-wider text-[10px]">
+                            <th className="p-3">Variable Name</th>
+                            <th className="p-3">Beschreibung</th>
+                            <th className="p-3 w-32">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5 font-mono">
+                          <tr>
+                            <td className="p-3 text-white font-bold">GOOGLE_SERVICE_ACCOUNT_EMAIL</td>
+                            <td className="p-3 text-gray-400 font-sans font-light">E-Mail-Adresse des Google Dienstkontos (z. B. `my-sa@project.iam.gserviceaccount.com`).</td>
+                            <td className="p-3">
+                              {analyticsData?.isConnected ? (
+                                <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] font-bold">VERBUNDEN</span>
+                              ) : (
+                                <span className="text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded text-[10px] font-bold">INAKTIV (MOCK)</span>
+                              )}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="p-3 text-white font-bold">GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY</td>
+                            <td className="p-3 text-gray-400 font-sans font-light">Der private RSA-Schlüssel aus der Dienstkonto-JSON-Datei (inklusive `\n` Zeilenumbrüche).</td>
+                            <td className="p-3">
+                              {analyticsData?.isConnected ? (
+                                <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] font-bold">VERBUNDEN</span>
+                              ) : (
+                                <span className="text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded text-[10px] font-bold">INAKTIV (MOCK)</span>
+                              )}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="p-3 text-white font-bold">GA4_PROPERTY_ID</td>
+                            <td className="p-3 text-gray-400 font-sans font-light">Die ID der Google Analytics 4 Property (nur Zahlen, z. B. `294719481`). Zu finden in den GA4 Einstellungen.</td>
+                            <td className="p-3">
+                              {analyticsData?.isConnected ? (
+                                <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] font-bold">VERBUNDEN</span>
+                              ) : (
+                                <span className="text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded text-[10px] font-bold">INAKTIV (MOCK)</span>
+                              )}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td className="p-3 text-white font-bold">SITE_URL</td>
+                            <td className="p-3 text-gray-400 font-sans font-light">Die verifizierte URL der Website in der Search Console (z. B. `https://www.rezaivision.de/` oder `sc-domain:rezaivision.de`).</td>
+                            <td className="p-3">
+                              {gscData?.isConnected ? (
+                                <span className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] font-bold">VERBUNDEN</span>
+                              ) : (
+                                <span className="text-gray-500 bg-white/5 border border-white/10 px-2 py-0.5 rounded text-[10px] font-bold">INAKTIV (MOCK)</span>
+                              )}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </motion.div>
         )}
       </main>
 
