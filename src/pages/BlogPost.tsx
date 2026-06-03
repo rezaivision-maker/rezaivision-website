@@ -2,14 +2,30 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useSpring } from "motion/react";
 import { SEO } from "@/components/SEO";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Facebook, Instagram, Share2, MessageCircle, Link2, Check } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts as staticPosts, BlogPost as BlogPostType } from "@/data/blogPosts";
+import { fetchBlogPostBySlug, fetchBlogPosts } from "@/lib/dbHelpers";
 import { Button } from "@/components/ui/Button";
 import { useEffect, useState } from "react";
 
 export default function BlogPost() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const post = blogPosts.find((p) => p.slug === slug);
+
+  const [post, setPost] = useState<BlogPostType | null>(() => {
+    return staticPosts.find((p) => p.slug === slug) || null;
+  });
+  
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>(() => {
+    const initialPost = staticPosts.find((p) => p.slug === slug);
+    if (initialPost) {
+      return staticPosts
+        .filter(p => p.id !== initialPost.id && p.category === initialPost.category)
+        .slice(0, 2);
+    }
+    return [];
+  });
+
+  const [loading, setLoading] = useState(!post);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -22,6 +38,23 @@ export default function BlogPost() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    if (slug) {
+      // If we don't have it loaded or to check for updates, fetch from db
+      fetchBlogPostBySlug(slug).then((fetchedPost) => {
+        if (fetchedPost) {
+          setPost(fetchedPost);
+          
+          fetchBlogPosts().then((allPosts) => {
+            const related = allPosts
+              .filter(p => p.id !== fetchedPost.id && p.category === fetchedPost.category)
+              .slice(0, 2);
+            setRelatedPosts(related);
+          });
+        }
+        setLoading(false);
+      });
+    }
   }, [slug]);
 
   const handleShare = (platform: 'facebook' | 'whatsapp' | 'copy') => {
@@ -54,6 +87,14 @@ export default function BlogPost() {
       handleShare('copy');
     }
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-brand-bg flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-brand-accent/30 border-t-brand-accent rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   if (!post) {
     return (
@@ -471,10 +512,7 @@ export default function BlogPost() {
         <div className="mt-24 pt-16 border-t border-white/10">
           <h3 className="text-2xl font-display font-bold mb-8 text-white">Passend zum Thema</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts
-              .filter(p => p.id !== post.id && p.category === post.category)
-              .slice(0, 2)
-              .map(related => (
+            {relatedPosts.map(related => (
                 <Link key={related.id} to={`/blog/${related.slug}`} className="group block bg-white/[0.02] rounded-3xl overflow-hidden border border-white/5 hover:border-brand-accent/50 transition-all shadow-xl hover:shadow-brand-accent/10">
                   <div className="aspect-video overflow-hidden relative">
                     <img loading="lazy" src={related.image.startsWith('http') ? related.image : `https://www.rezaivision.de${related.image}`} alt={related.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />

@@ -2,15 +2,23 @@ import { motion } from "motion/react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, Filter } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
-import { useState } from "react";
+import { blogPosts as staticPosts, BlogPost } from "@/data/blogPosts";
+import { fetchBlogPosts } from "@/lib/dbHelpers";
+import { useState, useEffect } from "react";
 
 export default function Blog() {
   const [filter, setFilter] = useState<'all' | 'corporate' | 'emotion'>('all');
+  const [posts, setPosts] = useState<BlogPost[]>(staticPosts);
+
+  useEffect(() => {
+    fetchBlogPosts().then((fetched) => {
+      setPosts(fetched);
+    });
+  }, []);
 
   const filteredPosts = filter === 'all' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === filter);
+    ? posts 
+    : posts.filter(post => post.category === filter);
 
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
