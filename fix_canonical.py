@@ -19,5 +19,6 @@ for root, dirs, files in os.walk('src'):
         if file.endswith(('.tsx', '.ts')):
             process_file(os.path.join(root, file))
 
-process_file('public/sitemap.xml')
+if os.path.exists('public/sitemap.xml'):
+    process_file('public/sitemap.xml')
 process_file('index.html')
