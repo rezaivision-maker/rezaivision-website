@@ -281,22 +281,12 @@
   </url>
 
   <!-- Rechtliches -->
-  <url>
-    <loc>https://www.rezaivision.de/impressum</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+
   <url>
     <loc>https://www.rezaivision.de/datenschutz</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://www.rezaivision.de/agb</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+
 </urlset>

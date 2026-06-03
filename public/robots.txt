@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /impressum
+Disallow: /agb
 
 # AI Agents & LLM Bots
 User-agent: GPTBot

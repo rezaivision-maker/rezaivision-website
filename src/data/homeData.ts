@@ -36,36 +36,49 @@ export const testimonials = [
     quote: "ich bin super zufrieden mit der Arbeit der Agentur. Sie haben für mein Unternehmen Video- und Social-Media-Content erstellt, der richtig gut angekommen ist – nicht nur bei uns, sondern auch bei unseren Kunden. Alles lief professionell, zuverlässig und sehr angenehm. Klare Empfehlung!",
     name: "Ramin Foroozan",
     role: "Gebietsleiter O2",
-    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775640180/Ramin_jx1axc.webp"
+    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775640180/Ramin_jx1axc.webp",
+    date: "vor 2 Wochen",
+    isLocalGuide: true
   },
   {
     quote: "Hervorragender Video-Produzent! Die Zusammenarbeit war von Anfang bis Ende absolut professionell. Die Kommunikation war klar, schnell und zuverlässig. Die kreativen Ideen, die technische Umsetzung und die Qualität der finalen Videos haben meine Erwartungen sogar übertroffen.",
     name: "Adonay Welde",
     role: "Inhaber, Social Care",
-    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775640736/Adonay_W_bo3ddf.webp"
+    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775640736/Adonay_W_bo3ddf.webp",
+    date: "vor 1 Monat",
+    isLocalGuide: true
   },
   {
     quote: "Wir haben REZAIVISION für ein professionelles Shooting gebucht. Von der Planung bis zum finalen Ergebnis lief alles problemlos und mehr als zufriedenstellend ab. Besonders hat mir gefallen, wie Rezai eigene Ideen einbringt und daran interessiert ist, dass das Endergebnis mehr als nur \"super\" ist!",
     name: "David Binimann",
     role: "Geschäftsinhaber, Cinelex Media",
-    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775639263/David_Biniman_lxgt79.png"
+    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775639263/David_Biniman_lxgt79.png",
+    date: "vor 2 Monaten",
+    isLocalGuide: false
   },
   {
     quote: "Die Zusammenarbeit mit REZAIVISION war durchweg positiv. Parsha überzeugt mit einem feinen Gespür für Timing, Atmosphäre und Details – jeder Schnitt und jede Einstellung wirkt präzise auf das Zielpublikum abgestimmt. Die Ergebnisse übertrafen sämtliche Erwartungen.",
     name: "Parnaz Schumacher",
     role: "Inhaberin, Aesthetic Ink",
-    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775641107/Parnaz_v5xc4c.webp"
+    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775641107/Parnaz_v5xc4c.webp",
+    date: "vor 3 Monaten",
+    isLocalGuide: true
   },
   {
     quote: "Ein herausragender Videoproduzent mit einem beeindruckenden Gespür für Bildsprache und Storytelling. Die Zusammenarbeit war kreativ und professionell zugleich.",
     name: "Ralph Nist",
     role: "Selbstständiger SAP Spezialist",
-    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775642376/Ralph_Nist_wmkjpf.webp"
+    img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_120/v1775642376/Ralph_Nist_wmkjpf.webp",
+    date: "vor 4 Monaten",
+    isLocalGuide: false
   },
   {
     quote: "That’s my favorite camera man for my social media content!!!! Always a blast to work with him and hopefully we have many more projects together",
     name: "Mario Shen Dojo",
     role: "Shaolin Influencer - Shaolin Temple Europe",
-    img: "https://yt3.googleusercontent.com/YbKRS3-IHV0g1yZUrUxzD-kB64dDOve5aULNhOhyuHk3EAzRzG8WdpYhszQouDGfwpSP_Bad9kU=s900-c-k-c0x00ffffff-no-rj"
+    img: "https://yt3.googleusercontent.com/YbKRS3-IHV0g1yZUrUxzD-kB64dDOve5aULNhOhyuHk3EAzRzG8WdpYhszQouDGfwpSP_Bad9kU=s900-c-k-c0x00ffffff-no-rj",
+    date: "vor 5 Monaten",
+    isLocalGuide: true
   }
 ];
+
