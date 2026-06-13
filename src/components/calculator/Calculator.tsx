@@ -113,11 +113,48 @@ export default function Calculator() {
     setCalculatedPrice(price);
 
     try {
+      // Build selected modules summary
+      let summaryText = "";
+      steps.forEach(step => {
+        const sel = selections[step.id] || [];
+        if (sel.length > 0) {
+          const optionNames = sel.map(id => step.options.find(o => o.id === id)?.title).join(', ');
+          summaryText += `<li><strong>${step.title}:</strong> ${optionNames}</li>`;
+        }
+      });
+
+      const formattedPrice = price.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const emailHtml = `
+        <div style="font-family: sans-serif; color: #333; max-w: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 12px; overflow: hidden;">
+          <div style="background-color: #ff1564; padding: 24px; text-align: center;">
+            <h1 style="color: #fff; margin: 0; font-size: 24px;">Rezai Vision</h1>
+          </div>
+          <div style="padding: 32px;">
+            <h2 style="margin-top: 0;">Dein Projektbudget</h2>
+            <p>Hallo,</p>
+            <p>vielen Dank für deine Anfrage! Basierend auf deinen Angaben beläuft sich das Projektbudget auf ca.:</p>
+            <div style="font-size: 32px; font-weight: bold; color: #ff1564; margin: 24px 0;">
+              ${formattedPrice} €
+            </div>
+            <h3>Deine Konfiguration:</h3>
+            <ul>
+              ${summaryText}
+            </ul>
+            <p style="margin-top: 32px;">
+              Lass uns gerne kurz über dein Projekt sprechen, um die Details zu klären. 
+              Du erreichst uns unter <a href="mailto:rezaivision@gmail.com" style="color: #ff1564;">rezaivision@gmail.com</a> 
+              oder telefonisch unter <a href="tel:+4963162512000" style="color: #ff1564;">0631 62512000</a>.
+            </p>
+            <p>Viele Grüße,<br/>Parsha Rezai</p>
+          </div>
+        </div>
+      `;
+
       await saveCalculatorLead({
         email,
         selections,
         calculatedPrice: price
-      });
+      }, emailHtml);
       setShowResult(true);
     } catch (err) {
       console.error(err);

@@ -57,12 +57,24 @@ export async function saveCalculatorConfig(steps: CalculatorStep[]): Promise<voi
   await setDoc(configDoc, { steps });
 }
 
-export async function saveCalculatorLead(lead: Omit<CalculatorLead, "id" | "createdAt">): Promise<string> {
+export async function saveCalculatorLead(lead: Omit<CalculatorLead, "id" | "createdAt">, emailHtml?: string): Promise<string> {
   const leadsRef = collection(db, "calculatorLeads");
   const docRef = await addDoc(leadsRef, {
     ...lead,
     createdAt: new Date().toISOString()
   });
+
+  if (emailHtml) {
+    const mailRef = collection(db, "mail");
+    await addDoc(mailRef, {
+      to: lead.email,
+      message: {
+        subject: "Dein kalkuliertes Projektbudget | Rezai Vision",
+        html: emailHtml
+      }
+    });
+  }
+
   return docRef.id;
 }
 
