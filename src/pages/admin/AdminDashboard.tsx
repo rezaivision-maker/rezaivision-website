@@ -4,13 +4,16 @@ import { motion, AnimatePresence } from "motion/react";
 import { 
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
-  TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2
+  TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
+  LayoutTemplate, Sparkles
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts } from "@/lib/dbHelpers";
 import { BlogPost } from "@/data/blogPosts";
 import CalculatorAdmin from "@/components/admin/CalculatorAdmin";
+import PagesSEOManager from "@/components/admin/PagesSEOManager";
+import CreatorChannel from "@/components/admin/CreatorChannel";
 
 const generateSlug = (text: string) => {
   return text
@@ -762,6 +765,24 @@ export default function AdminDashboard() {
             <Monitor size={18} />
             <span className="font-medium">Preisrechner</span>
           </button>
+          <button
+            onClick={() => setActiveTab("pages")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "pages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <LayoutTemplate size={18} />
+            <span className="font-medium">Seiten & SEO</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("creator")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Sparkles size={18} />
+            <span className="font-medium">Creator Channel</span>
+          </button>
         </nav>
         <div className="p-4 border-t border-white/5">
            <button 
@@ -899,12 +920,54 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
+        {activeTab === "pages" && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
+            <div>
+              <h1 className="text-3xl font-display font-bold mb-2">Seiten & SEO Manager</h1>
+              <p className="text-gray-400">Verwalte Meta-Tags, prüfe die Indexierung und nutze KI für bessere Rankings.</p>
+            </div>
+            <PagesSEOManager />
+          </motion.div>
+        )}
+
+        {activeTab === "creator" && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
+            <div>
+              <h1 className="text-3xl font-display font-bold mb-2">Creator Channel</h1>
+              <p className="text-gray-400">Dein KI-Berater für Kundenanalysen, Sales-Strategien und Content-Ideen.</p>
+            </div>
+            <CreatorChannel />
+          </motion.div>
+        )}
+
         {activeTab === "seo" && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
             {/* Header */}
-            <div>
-              <h1 className="text-3xl font-display font-bold mb-2">Performance & SEO</h1>
-              <p className="text-gray-400">Analysiere Besucherstatistiken, Suchmaschinen-Rankings und optimiere den Seitenspeed live.</p>
+            <div className="flex flex-col lg:flex-row justify-between lg:items-start gap-4 mb-2">
+              <div>
+                <h1 className="text-3xl font-display font-bold mb-2">Performance & SEO</h1>
+                <p className="text-gray-400">Analysiere Besucherstatistiken, Suchmaschinen-Rankings und optimiere den Seitenspeed live.</p>
+              </div>
+              <div className="flex gap-3">
+                <a 
+                  href="https://analytics.google.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors cursor-pointer"
+                >
+                  <BarChart3 size={18} />
+                  Analytics öffnen
+                </a>
+                <a 
+                  href="https://search.google.com/search-console" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-brand-accent text-brand-bg px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:brightness-110 transition-all cursor-pointer hover:scale-105"
+                >
+                  <TrendingUp size={18} />
+                  Search Console
+                </a>
+              </div>
             </div>
 
             {/* Sub Tabs Navigation */}
