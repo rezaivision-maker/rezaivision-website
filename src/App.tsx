@@ -36,6 +36,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const GlossaryIndex = lazy(() => import("./pages/Glossary"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const VideoStudio = lazy(() => import("./pages/admin/VideoStudio"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Forbidden = lazy(() => import("./pages/Forbidden"));
 const ServerError = lazy(() => import("./pages/ServerError"));
@@ -82,6 +83,7 @@ export default function App() {
           <Route path="agb" element={<Suspense fallback={<PageLoader />}><AGB /></Suspense>} />
           <Route path="danke" element={<Suspense fallback={<PageLoader />}><Success /></Suspense>} />
           <Route path="admin" element={<Suspense fallback={<PageLoader />}><AdminDashboard /></Suspense>} />
+          <Route path="admin/studio" element={<Suspense fallback={<PageLoader />}><VideoStudio /></Suspense>} />
           
           {/* Error Pages */}
           <Route path="403" element={<Suspense fallback={<PageLoader />}><Forbidden /></Suspense>} />
