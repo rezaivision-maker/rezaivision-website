@@ -10,6 +10,7 @@ import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts } from "@/lib/dbHelpers";
 import { BlogPost } from "@/data/blogPosts";
+import CalculatorAdmin from "@/components/admin/CalculatorAdmin";
 
 const generateSlug = (text: string) => {
   return text
@@ -752,6 +753,15 @@ export default function AdminDashboard() {
             <Globe size={18} />
             <span className="font-medium">Performance & SEO</span>
           </button>
+          <button
+            onClick={() => setActiveTab("calculator")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "calculator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Monitor size={18} />
+            <span className="font-medium">Preisrechner</span>
+          </button>
         </nav>
         <div className="p-4 border-t border-white/5">
            <button 
@@ -848,6 +858,7 @@ export default function AdminDashboard() {
                         </td>
                         <td className="px-6 py-4 text-gray-300 font-light">{post.date}</td>
                         <td className="px-6 py-4 text-gray-300 font-light">{post.readTime}</td>
+
                         <td className="px-6 py-4 text-right">
                           <div className="flex justify-end gap-2">
                             <button 
@@ -879,6 +890,12 @@ export default function AdminDashboard() {
                 </table>
               )}
             </div>
+          </motion.div>
+        )}
+
+        {activeTab === "calculator" && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
+            <CalculatorAdmin />
           </motion.div>
         )}
 
