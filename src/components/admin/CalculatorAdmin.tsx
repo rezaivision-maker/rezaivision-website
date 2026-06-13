@@ -52,6 +52,74 @@ export default function CalculatorAdmin() {
     }
   };
 
+  const loadPremiumFunnel = () => {
+    if (!confirm("Achtung: Dies überschreibt alle bisherigen Schritte mit dem neuen psychologischen Premium-Funnel. Fortfahren?")) return;
+    
+    setSteps([
+      {
+        id: "ziel",
+        order: 1,
+        title: "Was ist das primäre Ziel des Videos?",
+        description: "Bevor wir über Technik sprechen, müssen wir Ihr Business-Ziel verstehen.",
+        multiSelect: false,
+        options: [
+          { id: "opt_ziel1", title: "Mehr qualifizierte Bewerber", description: "Recruiting & Employer Branding", basePrice: 2400, isPackage: true },
+          { id: "opt_ziel2", title: "Mehr Vertrauen & Sichtbarkeit", description: "Imagefilm & Markenaufbau", basePrice: 2800, isPackage: true },
+          { id: "opt_ziel3", title: "Mehr Sales & Conversions", description: "Video Ads für Social Media", basePrice: 1800, isPackage: true },
+          { id: "opt_ziel4", title: "Moderne Social Media Präsenz", description: "TikToks & Reels (Retainer-Basis)", basePrice: 1500, isPackage: true }
+        ]
+      },
+      {
+        id: "qualitaet",
+        order: 2,
+        title: "Wie hoch ist Ihr Qualitätsanspruch?",
+        description: "Wie soll Ihre Marke nach außen wahrgenommen werden?",
+        multiSelect: false,
+        options: [
+          { id: "opt_qual1", title: "Solide & Authentisch", description: "Fokus auf klare Botschaften und echte Einblicke.", basePrice: 0, isPackage: false },
+          { id: "opt_qual2", title: "Premium Cinematic", description: "High-End Look, Kino-Flair & aufwendiges Color Grading.", basePrice: 800, isPackage: false }
+        ]
+      },
+      {
+        id: "umfang",
+        order: 3,
+        title: "Wie schätzen Sie den Umfang ein?",
+        description: "Ein grober Richtwert für die Produktion.",
+        multiSelect: false,
+        options: [
+          { id: "opt_umf1", title: "Knackig & Effizient", description: "1 intensiver Drehtag vor Ort.", basePrice: 0, isPackage: false },
+          { id: "opt_umf2", title: "Umfangreich", description: "2 Drehtage, mehrere Locations & Interviews.", basePrice: 1200, isPackage: false },
+          { id: "opt_umf3", title: "Langfristig", description: "Mehrere Termine für einen großen Content-Pool.", basePrice: 2500, isPackage: false }
+        ]
+      },
+      {
+        id: "addons",
+        order: 4,
+        title: "Gibt es besondere Wünsche? (Optional)",
+        description: "Strategische Add-Ons für maximale Wirkung.",
+        multiSelect: true,
+        options: [
+          { id: "opt_add1", title: "Cinematic FPV / Drohne", description: "Atemberaubende Luftaufnahmen.", basePrice: 350, isPackage: false },
+          { id: "opt_add2", title: "Professioneller Sprecher", description: "Bekannte Voiceover-Stimmen aus TV/Radio.", basePrice: 450, isPackage: false },
+          { id: "opt_add3", title: "Social Media Cut-Downs", description: "3x Kurzversionen im Hochformat (9:16).", basePrice: 400, isPackage: false },
+          { id: "opt_add4", title: "Darsteller / Casting", description: "Externe Models für gezielte Werbekampagnen.", basePrice: 800, isPackage: false }
+        ]
+      },
+      {
+        id: "dringlichkeit",
+        order: 5,
+        title: "Wie ist Ihre zeitliche Planung?",
+        description: "Wann soll das Projekt final abgeschlossen sein?",
+        multiSelect: false,
+        options: [
+          { id: "opt_zeit1", title: "Ganz entspannt", description: "In den nächsten 1-2 Monaten.", basePrice: 0, isPackage: false },
+          { id: "opt_zeit2", title: "Normale Planung", description: "Innerhalb der nächsten 3-4 Wochen.", basePrice: 0, isPackage: false },
+          { id: "opt_zeit3", title: "Express-Produktion", description: "Fertigstellung innerhalb von 10 Tagen (Prio-Zuschlag).", basePrice: 0, isPackage: false, multiplierIndex: 1.25 }
+        ]
+      }
+    ]);
+  };
+
   const addStep = () => {
     const newStep: CalculatorStep = {
       id: `step_${Date.now()}`,
@@ -116,14 +184,23 @@ export default function CalculatorAdmin() {
           <h2 className="text-2xl font-display font-bold text-white mb-2">Preisrechner Konfiguration</h2>
           <p className="text-gray-400">Passe die Schritte und Preise für den interaktiven Rechner an.</p>
         </div>
-        <button
-          onClick={handleSave}
-          disabled={saving}
-          className="bg-brand-accent text-brand-bg px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:brightness-110 transition-all cursor-pointer hover:scale-105 disabled:opacity-50"
-        >
-          {saving ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
-          Speichern
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={loadPremiumFunnel}
+            disabled={saving}
+            className="bg-brand-dark border border-brand-accent/30 text-brand-accent px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-brand-accent/10 transition-all cursor-pointer disabled:opacity-50 text-sm"
+          >
+            Premium Funnel laden
+          </button>
+          <button
+            onClick={handleSave}
+            disabled={saving}
+            className="bg-brand-accent text-brand-bg px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:brightness-110 transition-all cursor-pointer hover:scale-105 disabled:opacity-50"
+          >
+            {saving ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
+            Speichern
+          </button>
+        </div>
       </div>
 
       <div className="space-y-8">

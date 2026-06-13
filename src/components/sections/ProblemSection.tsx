@@ -95,9 +95,12 @@ export function ProblemSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-center max-w-3xl mx-auto"
         >
-          <p className="text-2xl md:text-3xl font-display font-bold text-white leading-tight">
+          <p className="text-2xl md:text-3xl font-display font-bold text-white leading-tight mb-6">
             Das Problem ist meist nicht Ihre Leistung.<br />
             <span className="text-brand-accent">Das Problem ist, dass sie nach außen nicht die Wirkung entfaltet, die sie verdient.</span>
+          </p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Deshalb arbeiten wir mit Strategie und 100% transparenten Festpreisen – damit Ihr Video kein Risiko, sondern ein sicheres Werkzeug für mehr Reichweite wird.
           </p>
         </motion.div>
       </div>

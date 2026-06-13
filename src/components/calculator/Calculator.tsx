@@ -50,45 +50,32 @@ export default function Calculator() {
 
   const calculateTotal = () => {
     let baseSum = 0;
-    let currentMultiplier = 1;
+    let finalMultiplier = 1;
 
-    // First find if there is a package multiplier selected
-    steps.forEach(step => {
-      const selectedIds = selections[step.id] || [];
-      selectedIds.forEach(id => {
-        const opt = step.options.find(o => o.id === id);
-        if (opt && opt.isPackage && opt.multiplierIndex) {
-          currentMultiplier = opt.multiplierIndex;
-        }
-      });
-    });
-
-    // Calculate sum
+    // 1. Calculate sum of all selected base prices
     steps.forEach(step => {
       const selectedIds = selections[step.id] || [];
       selectedIds.forEach(id => {
         const opt = step.options.find(o => o.id === id);
         if (opt) {
-          // If it's the package itself, just add basePrice. 
-          // If it's an add-on, maybe we multiply it by the multiplier.
-          // For simplicity based on Deichblick logic: we multiply add-ons by the multiplier.
-          // We will apply multiplier to everything except the package itself.
-          if (opt.isPackage) {
-            baseSum += opt.basePrice;
-          } else {
-            baseSum += (opt.basePrice * currentMultiplier);
-          }
+          baseSum += opt.basePrice;
         }
       });
     });
 
-    // Discount logic (10% if XL, 5% if L, 2% if M)
-    let discount = 0;
-    if (currentMultiplier === 4) discount = 0.10;
-    else if (currentMultiplier === 3) discount = 0.05;
-    else if (currentMultiplier === 2) discount = 0.02;
+    // 2. Check if any selected option has a multiplier (e.g. Express 1.25x)
+    steps.forEach(step => {
+      const selectedIds = selections[step.id] || [];
+      selectedIds.forEach(id => {
+        const opt = step.options.find(o => o.id === id);
+        if (opt && opt.multiplierIndex) {
+          // If multiple exist, take the highest or multiply them. Here we just take it.
+          finalMultiplier = opt.multiplierIndex;
+        }
+      });
+    });
 
-    const finalPrice = baseSum - (baseSum * discount);
+    const finalPrice = baseSum * finalMultiplier;
     return finalPrice;
   };
 
