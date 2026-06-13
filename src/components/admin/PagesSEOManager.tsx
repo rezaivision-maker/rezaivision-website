@@ -4,12 +4,126 @@ import { db } from '../../lib/firebase';
 import { doc, getDoc, setDoc, collection, getDocs } from 'firebase/firestore';
 
 const PAGES = [
-  { id: 'home', name: 'Startseite', path: '/' },
-  { id: 'preisrechner', name: 'Preisrechner', path: '/preisrechner' },
-  { id: 'kontakt', name: 'Kontakt', path: '/kontakt' },
-  { id: 'portfolio', name: 'Portfolio', path: '/portfolio' },
-  { id: 'blog', name: 'Magazin (Blog)', path: '/blog' },
-  { id: 'ueber-uns', name: 'Über uns', path: '/ueber-uns' }
+  { 
+    id: 'home', name: 'Startseite', path: '/',
+    defaultTitle: "Unsichtbar oder Unvergesslich? | Videoproduktion Kaiserslautern | Rezai Vision",
+    defaultDescription: "Warum manche Marken faszinieren, während andere im Rauschen untergehen. Ich entwickle Videos als strategisches Werkzeug für Ihre Website, Ads und LinkedIn. Videoproduktion in Kaiserslautern & Südwesten.",
+    defaultKeywords: "Videoproduktion, Kaiserslautern, Videograf, Unternehmensfilm, Recruiting Video, Werbevideo"
+  },
+  { 
+    id: 'leistungen', name: 'Leistungen (Übersicht)', path: '/leistungen',
+    defaultTitle: "Leistungen | Videoproduktion & Strategie | Rezai Vision",
+    defaultDescription: "Unsere Leistungen: Unternehmensfilme, Recruiting Videos, Social Media Ads und Webdesign. Strategische Videoproduktion für messbare Ergebnisse.",
+    defaultKeywords: "Leistungen, Videoproduktion, Kaiserslautern, Unternehmensfilm, Recruiting, Ads, Webdesign"
+  },
+  { 
+    id: 'leistungen-unternehmensfilm', name: 'Unternehmensfilm', path: '/leistungen/unternehmensfilm',
+    defaultTitle: "Unternehmensfilm & Imagefilm | Rezai Vision",
+    defaultDescription: "Ein Unternehmensfilm, der nicht nur gut aussieht, sondern Vertrauen schafft und verkauft. Premium Imagefilme aus Kaiserslautern.",
+    defaultKeywords: "Unternehmensfilm, Imagefilm, Videoproduktion Kaiserslautern, B2B Video, Markenaufbau"
+  },
+  { 
+    id: 'leistungen-recruiting', name: 'Recruiting Video', path: '/leistungen/recruiting',
+    defaultTitle: "Recruiting Videos | Fachkräfte gewinnen | Rezai Vision",
+    defaultDescription: "Gewinnen Sie die besten Talente mit authentischen Recruiting Videos. Wir zeigen Ihre Unternehmenskultur, wie sie wirklich ist.",
+    defaultKeywords: "Recruiting Video, Mitarbeitergewinnung, Employer Branding, HR Video, Kaiserslautern"
+  },
+  { 
+    id: 'leistungen-werbevideo', name: 'Werbevideo', path: '/leistungen/werbevideo',
+    defaultTitle: "Werbevideos & Social Ads | Rezai Vision",
+    defaultDescription: "Performance-optimierte Werbevideos für Facebook, Instagram und LinkedIn Ads. Steigern Sie Ihre Conversion Rate mit echtem Storytelling.",
+    defaultKeywords: "Werbevideo, Social Media Ads, Facebook Ads Video, LinkedIn Ads, Conversion Rate"
+  },
+  { 
+    id: 'leistungen-social-media', name: 'Social Media Retainer', path: '/leistungen/social-media',
+    defaultTitle: "Social Media Betreuung & Content | Rezai Vision",
+    defaultDescription: "Monatliche Content-Produktion für Ihre Social Media Kanäle. Wir liefern frische Videos und Bilder im Abo-Modell für kontinuierliche Sichtbarkeit.",
+    defaultKeywords: "Social Media Betreuung, Content Creation, Retainer, Videoproduktion Abo, Instagram Reels"
+  },
+  { 
+    id: 'leistungen-webdesign', name: 'Webdesign', path: '/leistungen/webdesign',
+    defaultTitle: "Webdesign & Conversion-Optimierung | Rezai Vision",
+    defaultDescription: "Modernes, verkaufspsychologisch optimiertes Webdesign, das perfekt mit unseren Videoproduktionen harmoniert.",
+    defaultKeywords: "Webdesign, Kaiserslautern, Conversion-Optimierung, Landingpages, Website Erstellung"
+  },
+  { 
+    id: 'reza-e-motion', name: 'Reza e-motion (Privat)', path: '/reza-e-motion',
+    defaultTitle: "Reza e-motion | Private Events & Emotionen",
+    defaultDescription: "Filmische Begleitung für die wichtigsten Momente des Lebens. Hochzeitsfilme, Eventbegleitung und Musikvideos mit echtem Kino-Look.",
+    defaultKeywords: "Reza e-motion, Eventvideograf, Hochzeitsfilm, Musikvideo, Kaiserslautern"
+  },
+  { 
+    id: 'reza-e-motion-eventbegleitung', name: 'Eventbegleitung', path: '/reza-e-motion/eventbegleitung',
+    defaultTitle: "Eventbegleitung & Aftermovies | Reza e-motion",
+    defaultDescription: "Professionelle Eventbegleitung für Konzerte, Firmenfeiern und private Veranstaltungen. Emotionale Aftermovies, die bleiben.",
+    defaultKeywords: "Eventbegleitung, Aftermovie, Eventvideograf, Kaiserslautern, Partyvideo"
+  },
+  { 
+    id: 'reza-e-motion-musikvideos', name: 'Musikvideos', path: '/reza-e-motion/musikvideos',
+    defaultTitle: "Musikvideos | Kinematische Visuals | Reza e-motion",
+    defaultDescription: "Kreative Musikvideos für Künstler und Bands. Vom Konzept bis zum fertigen Color Grading – wir bringen deinen Sound auf die Leinwand.",
+    defaultKeywords: "Musikvideo, Rap Video, Band Video, Videoproduktion, Kaiserslautern"
+  },
+  { 
+    id: 'reza-e-motion-hochzeitsfilme', name: 'Hochzeitsfilme', path: '/reza-e-motion/hochzeitsfilme',
+    defaultTitle: "Hochzeitsfilme & Hochzeitsvideograf | Reza e-motion",
+    defaultDescription: "Authentische, emotionale Hochzeitsfilme. Wir fangen die kleinen Momente und großen Gefühle eures besonderen Tages für die Ewigkeit ein.",
+    defaultKeywords: "Hochzeitsfilm, Hochzeitsvideograf, Wedding Film, Heiraten Pfalz, Kaiserslautern"
+  },
+  { 
+    id: 'preisrechner', name: 'Preisrechner', path: '/preisrechner',
+    defaultTitle: "Preisrechner | Was kostet eine Videoproduktion? | Rezai Vision",
+    defaultDescription: "Berechnen Sie transparent und unverbindlich die Kosten für Ihre Videoproduktion. Unternehmensfilm, Recruiting oder Werbevideo.",
+    defaultKeywords: "Preisrechner Videoproduktion, Kosten Imagefilm, Preise Recruiting Video, Kostenrechner"
+  },
+  { 
+    id: 'ueber-uns', name: 'Über uns', path: '/ueber-uns',
+    defaultTitle: "Über uns | Parsha Rezai | Rezai Vision",
+    defaultDescription: "Lernen Sie den Kopf hinter Rezai Vision kennen. Mein Ansatz, meine Vision und warum ich Filme mache, die bewegen.",
+    defaultKeywords: "Über uns, Parsha Rezai, Videograf Kaiserslautern, Philosophie"
+  },
+  { 
+    id: 'technik', name: 'Technik & Qualität', path: '/technik',
+    defaultTitle: "Kino-Technik für Ihr Unternehmen | Rezai Vision",
+    defaultDescription: "Wir drehen mit modernster Kino-Kameraausrüstung, Drohnen und Gimbals, um Ihrem Unternehmen einen unverwechselbaren Premium-Look zu verleihen.",
+    defaultKeywords: "Kamera Equipment, Kino Look, Drohne, Sony Cinema Line, Videoproduktion Technik"
+  },
+  { 
+    id: 'faq', name: 'FAQ', path: '/faq',
+    defaultTitle: "Häufige Fragen (FAQ) | Videoproduktion | Rezai Vision",
+    defaultDescription: "Antworten auf die häufigsten Fragen rund um die Videoproduktion, Projektabläufe und Kosten bei Rezai Vision.",
+    defaultKeywords: "FAQ, Häufige Fragen, Ablauf Videoproduktion, Dauer Imagefilm"
+  },
+  { 
+    id: 'blog', name: 'Magazin (Blog)', path: '/blog',
+    defaultTitle: "Magazin für Marketing & Video | Rezai Vision",
+    defaultDescription: "Praxistipps, Insights und strategisches Wissen rund um Videomarketing, SEO und Storytelling für moderne Unternehmen.",
+    defaultKeywords: "Magazin, Blog, Videomarketing Tipps, Content Strategie, Recruiting Tipps"
+  },
+  { 
+    id: 'kontakt', name: 'Kontakt', path: '/kontakt',
+    defaultTitle: "Kontakt aufnehmen | Rezai Vision",
+    defaultDescription: "Lassen Sie uns über Ihr nächstes Videoprojekt sprechen. Kontaktieren Sie uns für ein unverbindliches Erstgespräch in Kaiserslautern oder online.",
+    defaultKeywords: "Kontakt, Erstgespräch, Videoproduktion anfragen, Kaiserslautern"
+  },
+  { 
+    id: 'impressum', name: 'Impressum', path: '/impressum',
+    defaultTitle: "Impressum | Rezai Vision",
+    defaultDescription: "Impressum und rechtliche Angaben von Rezai Vision.",
+    defaultKeywords: "Impressum, rechtliche Angaben"
+  },
+  { 
+    id: 'datenschutz', name: 'Datenschutz', path: '/datenschutz',
+    defaultTitle: "Datenschutzerklärung | Rezai Vision",
+    defaultDescription: "Datenschutzerklärung von Rezai Vision bezüglich der Nutzung dieser Website.",
+    defaultKeywords: "Datenschutz, GDPR, DSGVO"
+  },
+  { 
+    id: 'agb', name: 'AGB', path: '/agb',
+    defaultTitle: "Allgemeine Geschäftsbedingungen | Rezai Vision",
+    defaultDescription: "Allgemeine Geschäftsbedingungen (AGB) von Rezai Vision.",
+    defaultKeywords: "AGB, Geschäftsbedingungen"
+  }
 ];
 
 export default function PagesSEOManager() {
@@ -35,13 +149,13 @@ export default function PagesSEOManager() {
         
         if (docSnap.exists() && isMounted) {
           const data = docSnap.data();
-          setMetaTitle(data.title || `${activePage.name} | Rezai Vision Videoproduktion`);
-          setMetaDescription(data.description || 'Wir produzieren hochkonvertierende Videos in Kaiserslautern.');
-          setMetaKeywords(data.keywords || 'Videoproduktion, Kaiserslautern, ' + activePage.name);
+          setMetaTitle(data.title || activePage.defaultTitle);
+          setMetaDescription(data.description || activePage.defaultDescription);
+          setMetaKeywords(data.keywords || activePage.defaultKeywords);
         } else if (isMounted) {
-          setMetaTitle(`${activePage.name} | Rezai Vision Videoproduktion`);
-          setMetaDescription('Wir produzieren hochkonvertierende Videos in Kaiserslautern.');
-          setMetaKeywords('Videoproduktion, Kaiserslautern, ' + activePage.name);
+          setMetaTitle(activePage.defaultTitle);
+          setMetaDescription(activePage.defaultDescription);
+          setMetaKeywords(activePage.defaultKeywords);
         }
       } catch (e) {
         console.error("Error fetching SEO data", e);
@@ -87,8 +201,8 @@ export default function PagesSEOManager() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          prompt: `Analysiere folgende Meta-Daten für die Seite "${activePage.name}":\nTitle: ${metaTitle}\nDescription: ${metaDescription}\n\nIst das conversion-stark und SEO-optimiert? Gib mir max. 3 Bulletpoints zur Verbesserung auf Deutsch.`,
-          systemInstruction: 'Du bist ein Senior SEO und Copywriting Experte.'
+          prompt: `Analysiere folgende Meta-Daten für die Seite "${activePage.name}":\n\nAktueller Title:\n${metaTitle}\n\nAktuelle Description:\n${metaDescription}\n\nIst das conversion-stark und SEO-optimiert? Bitte antworte EXAKT in folgendem Format:\n\n✨ K.I. Vorschlag (Title):\n[Dein optimierter Titel]\n\n✨ K.I. Vorschlag (Description):\n[Deine optimierte Description]\n\n💡 Warum ist das besser? (max. 3 kurze Bulletpoints):\n- ...`,
+          systemInstruction: 'Du bist ein Senior SEO und Copywriting Experte. Deine Aufgabe ist es, Klickraten zu maximieren.'
         })
       });
       const data = await response.json();

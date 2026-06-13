@@ -8,7 +8,7 @@ import { SEO } from "./SEO";
 import { NavDropdown } from "./NavDropdown";
 
 const navLinks = [
-  { name: "Portfolio", path: "/portfolio" },
+  { name: "Portfolio", path: "/#cases" },
   { name: "Preisrechner", path: "/preisrechner" },
   { name: "Magazin", path: "/blog" },
   { name: "Über uns", path: "/ueber-uns" },

@@ -40,15 +40,7 @@ export function SEO({
     : undefined;
 
   useEffect(() => {
-    let pageId = "";
-    const path = location.pathname;
-    
-    if (path === "/") pageId = "home";
-    else if (path === "/preisrechner") pageId = "preisrechner";
-    else if (path === "/kontakt") pageId = "kontakt";
-    else if (path === "/portfolio") pageId = "portfolio";
-    else if (path === "/blog") pageId = "blog";
-    else if (path === "/ueber-uns") pageId = "ueber-uns";
+    let pageId = location.pathname === "/" ? "home" : location.pathname.replace(/^\//, "").replace(/\//g, "-");
 
     if (!pageId) return;
 
