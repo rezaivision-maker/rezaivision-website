@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { db } from '../../lib/firebase';
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore';
-import { Save, FileVideo, Wand2, Loader2, Plus, Trash2, Printer, AlignLeft, ListVideo, PenTool } from 'lucide-react';
+import { Save, FileVideo, Wand2, Loader2, Plus, Trash2, Printer, AlignLeft, ListVideo, PenTool, ExternalLink } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 interface Shot {
@@ -230,9 +230,26 @@ Format für jeden Shot im JSON Array:
                   <FileVideo className="text-brand-accent" />
                   {activeProject.title}
                 </h2>
-                <p className="text-sm text-gray-400 mt-1">Erstellt am {new Date(activeProject.createdAt).toLocaleDateString('de-DE')}</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded ${
+                    activeProject.status === 'approved' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-brand-accent/20 text-brand-accent'
+                  }`}>
+                    {activeProject.status === 'approved' ? 'Freigegeben (Kunde)' : 'In Bearbeitung'}
+                  </span>
+                  <p className="text-xs text-gray-400">Erstellt am {new Date(activeProject.createdAt).toLocaleDateString('de-DE')}</p>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <button 
+                  onClick={() => {
+                    const url = `${window.location.origin}/portal/${activeProject.id}`;
+                    navigator.clipboard.writeText(url);
+                    alert("Kunden-Portal Link kopiert: " + url);
+                  }}
+                  className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-all text-sm"
+                >
+                  <ExternalLink size={16} /> Kunden-Portal Link
+                </button>
                 <button 
                   onClick={printDocument}
                   className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-all text-sm"

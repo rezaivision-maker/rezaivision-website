@@ -40,6 +40,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Forbidden = lazy(() => import("./pages/Forbidden"));
 const ServerError = lazy(() => import("./pages/ServerError"));
 const Maintenance = lazy(() => import("./pages/Maintenance"));
+const LandingPage = lazy(() => import("./pages/LandingPage"));
+const ClientPortal = lazy(() => import("./pages/ClientPortal"));
 
 function PageLoader() {
   return (
@@ -87,6 +89,12 @@ export default function App() {
           <Route path="503" element={<Suspense fallback={<PageLoader />}><Maintenance /></Suspense>} />
           <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFound /></Suspense>} />
         </Route>
+        
+        {/* Standalone Funnel / Landing Pages (Outside main layout) */}
+        <Route path="/l/:slug" element={<Suspense fallback={<PageLoader />}><LandingPage /></Suspense>} />
+        
+        {/* Client Portal */}
+        <Route path="/portal/:id" element={<Suspense fallback={<PageLoader />}><ClientPortal /></Suspense>} />
       </Routes>
     </BrowserRouter>
   );

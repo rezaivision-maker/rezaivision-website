@@ -17,6 +17,9 @@ import CreatorChannel from "@/components/admin/CreatorChannel";
 import CRMManager from "@/components/admin/CRMManager";
 import EmailMarketingSetup from "@/components/admin/EmailMarketingSetup";
 import ProductionSuite from "@/components/admin/ProductionSuite";
+import LandingpageBuilder from "@/components/admin/LandingpageBuilder";
+import MarketingStudio from "@/components/admin/MarketingStudio";
+import InvoiceGenerator from "@/components/admin/InvoiceGenerator";
 
 const generateSlug = (text: string) => {
   return text
@@ -788,21 +791,37 @@ export default function AdminDashboard() {
           </button>
           <button
             onClick={() => setActiveTab("email")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Mail size={18} />
-            <span className="font-medium">E-Mail Marketing</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("production")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
             }`}
           >
             <FileText size={18} />
             <span className="font-medium">Production Suite</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("marketing")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "marketing" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Instagram size={18} />
+            <span className="font-medium">Marketing Studio</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("invoice")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "invoice" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <FileText size={18} />
+            <span className="font-medium">Business (PDFs)</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("landingpages")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "landingpages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Globe size={18} />
+            <span className="font-medium">Landingpages</span>
           </button>
           <button
             onClick={() => setActiveTab("creator")}
@@ -836,6 +855,42 @@ export default function AdminDashboard() {
             className="space-y-6"
           >
             <ProductionSuite />
+          </motion.div>
+        )}
+
+        {activeTab === 'landingpages' && (
+          <motion.div
+            key="landingpages"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <LandingpageBuilder />
+          </motion.div>
+        )}
+
+        {activeTab === 'marketing' && (
+          <motion.div
+            key="marketing"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <MarketingStudio />
+          </motion.div>
+        )}
+
+        {activeTab === 'invoice' && (
+          <motion.div
+            key="invoice"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <InvoiceGenerator />
           </motion.div>
         )}
 
