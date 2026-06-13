@@ -6,7 +6,7 @@ import {
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
   LayoutTemplate, Sparkles, Users, Mail, Video, Brain, BookOpen, Instagram,
-  Palette, Target, Cpu
+  Palette, Target, Cpu, Megaphone, Mic, Network
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -29,6 +29,10 @@ import CIManager from "@/components/admin/CIManager";
 import ICPGenerator from "@/components/admin/ICPGenerator";
 import AIModelManager from "@/components/admin/AIModelManager";
 import AgencyGrowth from "@/components/admin/AgencyGrowth";
+import CampaignManager from "@/components/admin/CampaignManager";
+import SettingsTab from "@/components/admin/SettingsTab";
+import JarvisCopilot from "@/components/admin/JarvisCopilot";
+import AgentSwarms from "@/components/admin/AgentSwarms";
 
 const generateSlug = (text: string) => {
   return text
@@ -927,6 +931,15 @@ export default function AdminDashboard() {
             <span className="font-medium">KI Modelle & APIs</span>
           </button>
           <button
+            onClick={() => setActiveTab("swarms")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "swarms" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Network size={18} />
+            <span className="font-medium">Agent Swarms</span>
+          </button>
+          <button
             onClick={() => setActiveTab("creator")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -934,6 +947,33 @@ export default function AdminDashboard() {
           >
             <Sparkles size={18} />
             <span className="font-medium">Creator Channel</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("jarvis")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "jarvis" ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Mic size={18} />
+            <span className="font-medium uppercase tracking-wider text-sm">J.A.R.V.I.S. Voice</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("campaign-manager")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "campaign-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Megaphone size={18} />
+            <span className="font-medium">Ads & Manus AI</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("settings")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "settings" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Settings size={18} />
+            <span className="font-medium">Einstellungen & API</span>
           </button>
         </nav>
         <div className="p-4 border-t border-white/5">
@@ -997,6 +1037,30 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
+        {activeTab === 'campaign-manager' && (
+          <motion.div
+            key="campaign-manager"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <CampaignManager />
+          </motion.div>
+        )}
+
+        {activeTab === 'settings' && (
+          <motion.div
+            key="settings"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <SettingsTab />
+          </motion.div>
+        )}
+
         {activeTab === 'invoice' && (
           <motion.div
             key="invoice"
@@ -1048,6 +1112,18 @@ export default function AdminDashboard() {
         {activeTab === 'ai-models' && (
           <motion.div key="ai-models" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <AIModelManager />
+          </motion.div>
+        )}
+
+        {activeTab === 'swarms' && (
+          <motion.div key="swarms" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <AgentSwarms />
+          </motion.div>
+        )}
+
+        {activeTab === 'jarvis' && (
+          <motion.div key="jarvis" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.98 }}>
+            <JarvisCopilot />
           </motion.div>
         )}
 

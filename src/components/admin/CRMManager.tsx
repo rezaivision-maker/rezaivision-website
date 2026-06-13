@@ -15,6 +15,7 @@ interface Lead {
   status: 'neu' | 'kontaktiert' | 'angebot' | 'kunde' | 'absage';
   details?: string;
   rawSelections?: any; // To pass to AI
+  knowledgeBase?: string; // Client specific RAG context
 }
 
 const COLUMNS = [
@@ -57,7 +58,8 @@ export default function CRMManager() {
           createdAt: data.createdAt || new Date().toISOString(),
           status: st,
           details: `Budget ca. ${data.totalPrice}€ | ${data.selections?.videoType || ''}`,
-          rawSelections: data.selections
+          rawSelections: data.selections,
+          knowledgeBase: data.knowledgeBase || ''
         };
       });
 
@@ -80,7 +82,8 @@ export default function CRMManager() {
             createdAt: data.createdAt || new Date().toISOString(),
             status: st,
             details: data.message || '-',
-            rawSelections: data.message
+            rawSelections: data.message,
+            knowledgeBase: data.knowledgeBase || ''
           };
         });
       } catch(e) { }
@@ -167,6 +170,20 @@ Gib mir in kurzen, prägnanten Bulletpoints (Markdown):
   const openLead = (lead: Lead) => {
     setSelectedLead(lead);
     setAiAnalysis('');
+  };
+
+  const saveKnowledgeBase = async (id: string, source: string, kbContent: string) => {
+    const collectionName = source === 'Preisrechner' ? 'calculatorLeads' : 'contactLeads';
+    try {
+      await updateDoc(doc(db, collectionName, id), { knowledgeBase: kbContent });
+      setLeads(prev => prev.map(l => l.id === id ? { ...l, knowledgeBase: kbContent } : l));
+      if (selectedLead && selectedLead.id === id) {
+        setSelectedLead({ ...selectedLead, knowledgeBase: kbContent });
+      }
+    } catch (e) {
+      console.error('Error saving knowledge base:', e);
+      alert('Fehler beim Speichern des Dossiers.');
+    }
   };
 
   return (
@@ -281,6 +298,30 @@ Gib mir in kurzen, prägnanten Bulletpoints (Markdown):
               <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                 <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Lead Infos ({selectedLead.source})</h4>
                 <p className="text-white text-sm">{selectedLead.details}</p>
+              </div>
+
+              {/* RAG Knowledge Base (Client Dossier) */}
+              <div className="bg-brand-darker border border-white/10 rounded-xl p-4 relative">
+                <div className="flex justify-between items-center mb-3">
+                  <h4 className="font-bold text-white flex items-center gap-2">
+                    <BrainCircuit size={16} className="text-brand-accent" />
+                    Kunden-Dossier (Knowledge Base)
+                  </h4>
+                  <button 
+                    onClick={() => saveKnowledgeBase(selectedLead.id, selectedLead.source, selectedLead.knowledgeBase || '')}
+                    className="text-xs bg-brand-accent text-brand-bg px-3 py-1.5 rounded-lg font-bold hover:brightness-110 transition-all"
+                  >
+                    Speichern
+                  </button>
+                </div>
+                <p className="text-xs text-gray-400 mb-3">Hinterlege hier Hintergrundinfos (Zielgruppe, Produkte, Tonfall). Die KI greift später im Marketing Studio genau auf diese Infos zu.</p>
+                <textarea
+                  value={selectedLead.knowledgeBase || ''}
+                  onChange={(e) => setSelectedLead({...selectedLead, knowledgeBase: e.target.value})}
+                  placeholder="Z.B.: Zielgruppe sind Handwerker. Lockere Sprache. USP: 24h Lieferung."
+                  rows={4}
+                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-brand-accent focus:outline-none resize-y"
+                />
               </div>
 
               {/* Creator Channel / AI Box */}

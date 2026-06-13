@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../lib/firebase';
 import { collection, getDocs, addDoc, deleteDoc, doc, updateDoc, query, orderBy } from 'firebase/firestore';
-import { BookOpen, Plus, Trash2, Edit3, Save, Search, Wand2, Loader2, X, Tag, CheckSquare, FileText, Zap, Lightbulb } from 'lucide-react';
+import { BookOpen, Plus, Trash2, Edit3, Save, Search, Wand2, Loader2, X, Tag, CheckSquare, FileText, Zap, Lightbulb, BrainCircuit } from 'lucide-react';
 
 interface WikiItem {
   id: string;
@@ -9,6 +9,7 @@ interface WikiItem {
   content: string;
   category: 'checkliste' | 'prompt' | 'template' | 'workflow' | 'notiz';
   tags: string[];
+  isGlobalContext?: boolean; // True if this should be injected into AI prompts
   createdAt: string;
   updatedAt: string;
 }
@@ -215,6 +216,7 @@ export default function KnowledgeWiki() {
   const [editContent, setEditContent] = useState('');
   const [editCategory, setEditCategory] = useState<WikiItem['category']>('notiz');
   const [editTags, setEditTags] = useState('');
+  const [editIsGlobal, setEditIsGlobal] = useState(false);
   const [saving, setSaving] = useState(false);
   const [aiGenerating, setAiGenerating] = useState(false);
   const [aiPrompt, setAiPrompt] = useState('');
@@ -248,6 +250,7 @@ export default function KnowledgeWiki() {
     setEditContent('');
     setEditCategory('notiz');
     setEditTags('');
+    setEditIsGlobal(false);
     setIsEditing(true);
   };
 
@@ -257,6 +260,7 @@ export default function KnowledgeWiki() {
     setEditContent(item.content);
     setEditCategory(item.category);
     setEditTags(item.tags.join(', '));
+    setEditIsGlobal(!!item.isGlobalContext);
     setIsEditing(true);
   };
 
@@ -269,13 +273,13 @@ export default function KnowledgeWiki() {
     try {
       if (selectedItem) {
         await updateDoc(doc(db, 'knowledgeItems', selectedItem.id), {
-          title: editTitle, content: editContent, category: editCategory, tags, updatedAt: now,
+          title: editTitle, content: editContent, category: editCategory, tags, isGlobalContext: editIsGlobal, updatedAt: now,
         });
-        const updated = { ...selectedItem, title: editTitle, content: editContent, category: editCategory, tags, updatedAt: now };
+        const updated = { ...selectedItem, title: editTitle, content: editContent, category: editCategory, tags, isGlobalContext: editIsGlobal, updatedAt: now };
         setItems(items.map(i => i.id === selectedItem.id ? updated : i));
         setSelectedItem(updated);
       } else {
-        const newItem = { title: editTitle, content: editContent, category: editCategory, tags, createdAt: now, updatedAt: now };
+        const newItem = { title: editTitle, content: editContent, category: editCategory, tags, isGlobalContext: editIsGlobal, createdAt: now, updatedAt: now };
         const ref = await addDoc(collection(db, 'knowledgeItems'), newItem);
         const created = { id: ref.id, ...newItem };
         setItems([created, ...items]);
@@ -385,7 +389,10 @@ Sprache: Deutsch.`
                 >
                   <div className="flex items-start gap-2">
                     <Icon size={14} className={`mt-0.5 shrink-0 ${color}`} />
-                    <p className="text-sm font-medium leading-tight line-clamp-2">{item.title}</p>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium leading-tight line-clamp-2">{item.title}</p>
+                      {item.isGlobalContext && <span className="text-[10px] text-brand-accent uppercase tracking-widest font-bold">RAG Aktiv</span>}
+                    </div>
                   </div>
                 </button>
               );
@@ -446,15 +453,35 @@ Sprache: Deutsch.`
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-gray-500 uppercase mb-2">Tags (kommagetrennt)</label>
-                <input
-                  type="text"
-                  value={editTags}
-                  onChange={e => setEditTags(e.target.value)}
-                  placeholder="z.B. drehtag, checkliste, produktion"
-                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:border-brand-accent focus:outline-none"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-gray-500 uppercase mb-2">Tags (kommagetrennt)</label>
+                  <input
+                    type="text"
+                    value={editTags}
+                    onChange={e => setEditTags(e.target.value)}
+                    placeholder="z.B. drehtag, checkliste, produktion"
+                    className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-2.5 text-white focus:border-brand-accent focus:outline-none"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <label className="flex items-center gap-3 cursor-pointer mt-6">
+                    <div className="relative">
+                      <input 
+                        type="checkbox" 
+                        className="sr-only" 
+                        checked={editIsGlobal}
+                        onChange={(e) => setEditIsGlobal(e.target.checked)}
+                      />
+                      <div className={`block w-10 h-6 rounded-full transition-colors ${editIsGlobal ? 'bg-brand-accent' : 'bg-gray-600'}`}></div>
+                      <div className={`dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform ${editIsGlobal ? 'transform translate-x-4' : ''}`}></div>
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-white block">Als RAG-Kontext setzen</span>
+                      <span className="text-[10px] text-gray-400">KI nutzt diesen Text global.</span>
+                    </div>
+                  </label>
+                </div>
               </div>
 
               {/* AI Content Generator */}
@@ -520,6 +547,13 @@ Sprache: Deutsch.`
               </div>
             </div>
 
+            {selectedItem.isGlobalContext && (
+              <div className="bg-brand-accent/10 border-b border-brand-accent/20 px-6 py-2 flex items-center gap-2">
+                <BrainCircuit size={14} className="text-brand-accent" />
+                <span className="text-xs font-bold text-brand-accent">In RAG-Datenbank aktiv (KI liest diesen Text)</span>
+              </div>
+            )}
+
             {/* Tags */}
             {selectedItem.tags.length > 0 && (
               <div className="px-6 py-3 border-b border-white/10 flex flex-wrap gap-2">
@@ -542,10 +576,11 @@ Sprache: Deutsch.`
           </div>
         ) : (
           <div className="flex-1 flex flex-col items-center justify-center text-center p-8">
-            <BookOpen size={48} className="text-gray-700 mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">Wissens-Wiki</h3>
+            <BrainCircuit size={48} className="text-gray-700 mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-2">Knowledge Base & RAG</h3>
             <p className="text-gray-500 max-w-md">
-              Dein internes Agentur-Gehirn. Checklisten, Templates, Workflows und KI-Prompts – alles an einem Ort.
+              Dein internes Agentur-Gehirn. Checklisten, Templates, Workflows und KI-Prompts – alles an einem Ort. 
+              Aktiviere "RAG-Kontext", damit die KI das Dokument automatisch lernt.
             </p>
             <button onClick={openNewItem} className="mt-6 bg-brand-accent text-brand-bg px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:brightness-110 transition-all">
               <Plus size={18} /> Ersten Eintrag erstellen
