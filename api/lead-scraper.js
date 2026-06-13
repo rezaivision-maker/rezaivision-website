@@ -117,7 +117,7 @@ export default async function handler(req, res) {
   if (action === 'enrich-lead' && req.method === 'POST') {
     if (!GEMINI_KEY) return res.status(503).json({ error: 'GEMINI_API_KEY not configured.' });
 
-    const { business } = req.body;
+    const { business, customInstructions } = req.body;
     if (!business) return res.status(400).json({ error: 'business data required' });
 
     const prompt = `
@@ -130,6 +130,8 @@ Website: ${business.website || 'Unbekannt'}
 Telefon: ${business.phone || 'Unbekannt'}
 Google-Bewertung: ${business.rating || 'Keine'} (${business.reviewCount || 0} Bewertungen)
 Branchen-Tags: ${(business.types || []).join(', ')}
+
+${customInstructions ? `SPEZIELLE FOKUS-ANWEISUNG VOM NUTZER:\n"${customInstructions}"\nBitte richte das K.I.-Lead-Profil, die Video-Ideen und insbesondere das Anschreiben exakt an dieser Anweisung aus!\n` : ''}
 
 Erstelle ein JSON-Lead-Profil:
 {

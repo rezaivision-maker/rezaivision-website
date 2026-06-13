@@ -109,6 +109,7 @@ export default function LeadScraper() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
   const [searchRadius, setSearchRadius] = useState(20);
+  const [customInstructions, setCustomInstructions] = useState('');
   const [searching, setSearching] = useState(false);
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [searchError, setSearchError] = useState('');
@@ -172,7 +173,7 @@ export default function LeadScraper() {
       const res = await fetch('/api/lead-scraper?action=enrich-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ business: place }),
+        body: JSON.stringify({ business: place, customInstructions }),
       });
       const data = await res.json();
       if (data.success) {
@@ -314,6 +315,15 @@ export default function LeadScraper() {
                     onKeyDown={e => e.key === 'Enter' && searchPlaces()}
                   />
                 </div>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-500 uppercase mb-2">K.I. Analyse-Fokus & Akquise-Ziel (Optional)</label>
+                <textarea
+                  value={customInstructions}
+                  onChange={e => setCustomInstructions(e.target.value)}
+                  placeholder="z.B. Fokus auf Recruiting-Videos, E-Mail im lockeren 'Du'-Stil verfassen, Fokus auf Imagefilme für Social Media..."
+                  className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-brand-accent focus:outline-none h-20 resize-none text-sm"
+                />
               </div>
               <div>
                 <label className="block text-xs font-bold text-gray-500 uppercase mb-2">Suchradius: {searchRadius} km</label>

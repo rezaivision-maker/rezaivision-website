@@ -608,7 +608,7 @@ export default function VideoIntelligence() {
     setAnalysisError('');
 
     try {
-      const res = await fetch('/api/video-analyze', {
+      const res = await fetch('/api/ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -640,7 +640,7 @@ export default function VideoIntelligence() {
     setFindingFormats(true);
     setFormatData(null);
     try {
-      const res = await fetch('/api/video-analyze', {
+      const res = await fetch('/api/ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mode: 'format-finder', niche: formatNiche, platform: formatPlatform }),
@@ -659,7 +659,7 @@ export default function VideoIntelligence() {
     setRebuilding(true);
     setRebuildResult(null);
     try {
-      const res = await fetch('/api/video-analyze', {
+      const res = await fetch('/api/ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
