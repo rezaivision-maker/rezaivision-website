@@ -1,0 +1,608 @@
+{
+  "storytelling_psychology": {
+    "frameworks": [
+      {
+        "name": "PAS (Problem, Agitation, Solution)",
+        "phase_1_problem": "Identifiziere den exakten, schmerzhaften Ist-Zustand der Zielgruppe in Sekunde 1-3.",
+        "phase_2_agitation": "Vergrößere den Schmerz. Beschreibe die emotionalen und finanziellen Konsequenzen, wenn das Problem ungelöst bleibt (Sekunde 3-15).",
+        "phase_3_solution": "Präsentiere dein Angebot als die einzige logische Rettung (Sekunde 15-60)."
+      },
+      {
+        "name": "AIDA (Attention, Interest, Desire, Action)",
+        "phase_1_attention": "Brich das Scrollverhalten mit einem unerwarteten visuellen oder verbalen Hook.",
+        "phase_2_interest": "Liefere überraschende Daten, Fakten oder eine Story, die das Interesse aufrechterhalten.",
+        "phase_3_desire": "Zeige die Transformation und den emotionalen Gewinn (Vorher/Nachher).",
+        "phase_4_action": "Klare Handlungsaufforderung (CTA) mit geringer Hürde (z.B. 'Kommentiere INFO')."
+      },
+      {
+        "name": "Short-Form Hero's Journey",
+        "phase_1_call": "Der gewohnte Alltag des Kunden und das plötzliche Problem.",
+        "phase_2_struggle": "Der Kampf gegen das Problem und das Scheitern klassischer Methoden.",
+        "phase_3_mentor": "Das Kennenlernen deiner Methode/deines Service als Mentor.",
+        "phase_4_victory": "Der neue, erfolgreiche Zustand (Social Proof / Fallstudie)."
+      }
+    ],
+    "emotional_triggers": {
+      "anger": "Ungerechtigkeit aufzeigen (z.B. 'Warum dich dein Steuerberater belügt...').",
+      "fear": "Verlust-Aversion triggern (z.B. 'Wenn du das nicht tust, verlierst du jeden Tag...').",
+      "greed": "Extreme Effizienz oder Abkürzung versprechen (z.B. 'Wie ich mit 2h Arbeit...').",
+      "curiosity": "Unerwartete Logik (z.B. 'Warum du weniger arbeiten solltest, um mehr zu verdienen...')."
+    }
+  },
+  "retention_and_open_loops": {
+    "open_loop_templates": [
+      "Aber der wichtigste Fehler kommt erst bei Punkt 4...",
+      "Dazu gleich mehr, aber zuerst...",
+      "Was dann passierte, hat mein ganzes Business verändert...",
+      "Ich verrate dir gleich das Geheimnis, aber vorher musst du das verstehen..."
+    ],
+    "retention_tricks": [
+      {
+        "type": "Visual Reset",
+        "interval": "Jede 1.5 bis 2.5 Sekunden ein neuer Bildschnitt, Zoom oder Texteffekt."
+      },
+      {
+        "type": "Pattern Interrupt",
+        "desc": "Eine plötzliche Bewegung, ein Geräusch (Whoosh/Plop) oder eine unerwartete Grafik in Sekunde 1."
+      },
+      {
+        "type": "Micro-Animations",
+        "desc": "Untertitel, die Wort für Wort aufpoppen, um das Auge zu binden."
+      }
+    ]
+  },
+  "social_media_formats_top50": [
+    {
+      "id": 1,
+      "name": "Der Nischen-Mythbuster",
+      "concept": "Ein weit verbreiteter Irrglaube in einer Nische wird lautstark widerlegt.",
+      "structure": ["0-3s: Zeige den Mythos als Fakt", "3-15s: Erkläre, warum es eine Lüge ist", "15-45s: Zeige die echte Wahrheit auf", "45-60s: CTA zur Kontaktaufnahme"]
+    },
+    {
+      "id": 2,
+      "name": "Das unzensierte Behind-the-Scenes",
+      "concept": "Roher, authentischer Einblick in die Produktion oder den Alltag, der Vertrauen aufbaut.",
+      "structure": ["0-3s: Visueller Interrupt (z.B. Fehler/Chaos)", "3-20s: Zeige den echten Prozess", "20-40s: Erkläre das Learning daraus", "40-60s: CTA 'Folge mir'"]
+    },
+    {
+      "id": 3,
+      "name": "Die 100k-Fallstudie (Case Study)",
+      "concept": "Detaillierte Analyse eines Kundenerfolgs mit echten Zahlen.",
+      "structure": ["0-3s: Erreichtes Ergebnis nennen ('Wie wir X in Y Tagen geschafft haben')", "3-15s: Das Ausgangsproblem des Kunden", "15-45s: Die 3 Schritte der Umsetzung", "45-60s: CTA 'Lass uns dein Potenzial prüfen'"]
+    },
+    {
+      "id": 4,
+      "name": "Das 'Hör auf damit'-Video",
+      "concept": "Negativ-Framing, um die Zielgruppe vor einem teuren Fehler zu warnen.",
+      "structure": ["0-3s: 'Hör auf, X zu tun, wenn du Y willst!'", "3-15s: Warum dieser Fehler so teuer ist", "15-45s: Die bessere Alternative", "45-60s: CTA zur Strategieberatung"]
+    },
+    {
+      "id": 5,
+      "name": "Der Zeitraffer mit Voiceover",
+      "concept": "Ästhetischer B-Roll Zeitraffer, kombiniert mit einem psychologischen Deep-Dive Voiceover.",
+      "structure": ["0-5s: Catchy Text-Overlay + B-Roll", "5-50s: Hochwertiges Voiceover (PAS/Story)", "50-60s: CTA im Text und Voiceover"]
+    },
+    {
+      "id": 6,
+      "name": "Das Q&A aus echten Kommentaren",
+      "concept": "Beantwortung eines kritischen Kommentars, um Einwände öffentlich auszuräumen.",
+      "structure": ["0-3s: Kommentar einblenden + Vorlesen", "3-30s: Detaillierte, sachliche Beantwortung mit Mehrwert", "30-45s: Beweis anführen", "45-60s: CTA 'Schreib deine Frage in die Kommentare'"]
+    },
+    {
+      "id": 7,
+      "name": "Das 3-Tools-Video",
+      "concept": "Vorstellung von 3 kostenlosen oder unbekannten Tools, die ein großes Nischenproblem lösen.",
+      "structure": ["0-3s: 'Diese 3 Tools sparen dir 10 Stunden pro Woche'", "3-30s: Tool 1, 2 und 3 kurz demonstrieren", "30-50s: Das beste Tool hervorheben", "50-60s: CTA 'Speichere dieses Video'"]
+    },
+    {
+      "id": 8,
+      "name": "Die Vorher-Nachher Transformation",
+      "concept": "Visueller Vergleich eines schlechten Zustands mit dem perfekten Endergebnis.",
+      "structure": ["0-3s: Schockierendes 'Vorher'", "3-15s: Warum es so weit kam", "15-45s: Der Transformationsprozess", "45-60s: Überraschendes 'Nachher' + CTA"]
+    },
+    {
+      "id": 9,
+      "name": "Der Tag im Leben eines...",
+      "concept": "Vlog-Stil, der Professionalität nahbar und sympathisch macht.",
+      "structure": ["0-3s: Catchy Tagesziel nennen", "3-40s: Schnelle Schnitte aus dem Arbeitsalltag", "40-50s: Abendliches Fazit / Learning", "50-60s: CTA"]
+    },
+    {
+      "id": 10,
+      "name": "Das 'Geheime Google-Doc'",
+      "concept": "Du teilst eine interne Checkliste oder ein Dokument als Freebie gegen einen Lead.",
+      "structure": ["0-3s: Zeige das Dokument am Screen ('Ich schenke dir meine Checkliste')", "3-20s: Erkläre die 2 wichtigsten Punkte daraus", "20-40s: Warum dieses Dokument so viel Wert ist", "40-60s: CTA 'Kommentiere DOC und ich schicke es dir'"]
+    },
+    {
+      "id": 11,
+      "name": "Der schweigende Screencast",
+      "concept": "Nur Bildschirm-Aufnahme mit schnellen Textblasen und ASMR Keyboard-Sound.",
+      "structure": ["0-5s: Das Problem auf dem Screen zeigen", "5-30s: Schritt-für-Schritt Lösung demonstrieren", "30-45s: Das perfekte Ergebnis zeigen", "45-60s: CTA einblenden"]
+    },
+    {
+      "id": 12,
+      "name": "Das Branchen-Insider-Geheimnis",
+      "concept": "Wissen teilen, das sonst nur hinter verschlossenen Türen besprochen wird.",
+      "structure": ["0-3s: 'Was dir die [Branche] Agenturen verheimlichen...'", "3-25s: Enthüllung des Prozesses/Tricks", "25-45s: Wie man es selbst umsetzt", "45-60s: CTA"]
+    },
+    {
+      "id": 13,
+      "name": "Die Live-Reaktion / Analyse",
+      "concept": "Reaktion auf ein virales Video oder eine Werbeanzeige deiner Nische aus Experten-Sicht.",
+      "structure": ["0-3s: Originalvideo kurz anspielen + Reizwort", "3-35s: Analysiere, was gut/schlecht ist", "35-50s: Bessere Alternative aufzeigen", "50-60s: CTA"]
+    },
+    {
+      "id": 14,
+      "name": "Der Anfänger-Fehler #1",
+      "concept": "Den typischsten Fehler ansprechen, den Einsteiger machen.",
+      "structure": ["0-3s: 'Machst du immer noch diesen Fehler bei X?'", "3-20s: Erklärung des Fehlers", "20-40s: Schritt-für-Schritt Korrektur", "40-60s: CTA"]
+    },
+    {
+      "id": 15,
+      "name": "Das provokante Statement",
+      "concept": "Eine starke, kontroverse These aufstellen, die zur Diskussion anregt.",
+      "structure": ["0-5s: Die kontroverse These raushauen", "5-25s: Argumente und Beweise dafür liefern", "25-45s: Warum die Masse falsch liegt", "45-60s: CTA 'Wie siehst du das?'"]
+    },
+    {
+      "id": 16,
+      "name": "Die Tool-Alternative",
+      "concept": "Ein teures Standard-Tool (z.B. Adobe) mit einer kostenlosen K.I.-Alternative vergleichen.",
+      "structure": ["0-3s: 'Zahle nicht mehr für Tool X'", "3-25s: Vorstellung der kostenlosen Alternative", "25-45s: Direktvergleich der Features", "45-60s: CTA"]
+    },
+    {
+      "id": 17,
+      "name": "Die 'Keine Zeit'-Methode",
+      "concept": "Einen komplexen Prozess in eine extrem zeitsparende Methode herunterbrechen.",
+      "structure": ["0-3s: 'Keine Zeit für X? Mach das in 5 Minuten!'", "3-30s: Die komprimierten Schritte erklären", "30-45s: Zeige die Zeitersparnis", "45-60s: CTA"]
+    },
+    {
+      "id": 18,
+      "name": "Das Hardware / Setup Review",
+      "concept": "Zeige dein Equipment und erkläre, wie es die Arbeitsqualität verbessert.",
+      "structure": ["0-3s: 'Mein 2026er Setup für maximale Produktivität'", "3-35s: Vorstellung von 2-3 Gadgets + Nutzen", "35-50s: Preis-Leistungs-Fazit", "50-60s: CTA"]
+    },
+    {
+      "id": 19,
+      "name": "Der Vorher-Nachher-Schnitt",
+      "concept": "Schneller, rhythmischer Schnittvergleich zwischen Rohmaterial und finalem Color-Grading.",
+      "structure": ["0-5s: Rohmaterial zeigen + Frage aufwerfen", "5-20s: Zeige das Color Grading live", "20-40s: Der Vorher-Nachher-Split", "40-60s: CTA"]
+    },
+    {
+      "id": 20,
+      "name": "Der Nischen-Trend-Report",
+      "concept": "Einen neuen Trend in deiner Branche aufdecken und erklären, wie man profitiert.",
+      "structure": ["0-3s: 'Dieser neue Trend ändert alles für X'", "3-25s: Was ist der Trend genau?", "25-45s: Konkrete Handlungsanweisung", "45-60s: CTA"]
+    },
+    {
+      "id": 21,
+      "name": "Die 'Wenn ich neu anfangen würde'-Story",
+      "concept": "Deine Erfahrungen verpackt als Guide für dein jüngeres Ich.",
+      "structure": ["0-5s: 'Wenn ich heute bei Null starten müsste...'", "5-35s: Die 3 wichtigsten strategischen Schritte", "35-50s: Was ich ignorieren würde", "50-60s: CTA"]
+    },
+    {
+      "id": 22,
+      "name": "Das 'Wir müssen reden'-Video",
+      "concept": "Ernstes, direktes Ansprechen eines Missstands in deiner Nische.",
+      "structure": ["0-5s: Ernstes Intro am Schreibtisch", "5-30s: Problembeschreibung mit Beispielen", "30-50s: Appell und Lösungsansatz", "50-60s: CTA"]
+    },
+    {
+      "id": 23,
+      "name": "Die K.I. Prompt-Anleitung",
+      "concept": "Du zeigst einen exakten Prompt, der ein großes Problem löst.",
+      "structure": ["0-3s: Das Ergebnis des Prompts zeigen", "3-20s: Den Prompt einblenden und erklären", "20-40s: Das K.I.-Ergebnis live testen", "40-60s: CTA 'Kommentiere PROMPT'"]
+    },
+    {
+      "id": 24,
+      "name": "Das Kunden-Interview (Short)",
+      "concept": "Kurzer, emotionaler Ausschnitt aus einem echten Kunden-Erfolgsgespräch.",
+      "structure": ["0-5s: Der emotionalste Satz des Kunden", "5-35s: Kunde beschreibt die Transformation", "35-50s: Du erklärst den Kontext", "50-60s: CTA"]
+    },
+    {
+      "id": 25,
+      "name": "Die 'X Dinge, die ich hasse'-Liste",
+      "concept": "Humorvolles, aber ehrliches Aufzeigen von Problemen in deiner Branche.",
+      "structure": ["0-5s: '3 Dinge, die ich als Filmemacher hasse'", "5-35s: Punkt 1, 2 und 3 mit einem Augenzwinkern", "35-50s: Wie wir es bei Rezai Vision lösen", "50-60s: CTA"]
+    },
+    {
+      "id": 26,
+      "name": "Der 'So sparst du X'-Rechner",
+      "concept": "Milchmädchenrechnung auf dem Whiteboard oder iPad widerlegen und vorrechnen.",
+      "structure": ["0-5s: Die falsche Rechnung zeigen", "5-30s: Live vorrechnen, wie es richtig geht", "30-45s: Das Sparpotenzial verdeutlichen", "45-60s: CTA zum Rechner"]
+    },
+    {
+      "id": 27,
+      "name": "Das 'Wie viel verdient ein...'-Video",
+      "concept": "Transparente Analyse der Umsätze und Margen in deiner Nische.",
+      "structure": ["0-5s: Nenne die Summe ('So viel verdient ein X wirklich')", "5-35s: Aufschlüsselung der Einnahmen/Ausgaben", "35-50s: Fazit zur Rentabilität", "50-60s: CTA"]
+    },
+    {
+      "id": 28,
+      "name": "Das 'Unpopuläre Meinung'-Format",
+      "concept": "Deine ehrliche Meinung zu einem gehypten Nischen-Produkt.",
+      "structure": ["0-5s: 'Unpopuläre Meinung: Tool X ist Müll'", "5-35s: Detaillierte Begründung", "35-50s: Bessere Alternative", "50-60s: CTA"]
+    },
+    {
+      "id": 29,
+      "name": "Der 'Cheat Code' für...",
+      "concept": "Einen extrem schnellen und effektiven Nischen-Hack präsentieren.",
+      "structure": ["0-3s: 'Hier ist der Cheat Code für X'", "3-30s: Demonstration des Hacks", "30-45s: Warum das kaum jemand weiß", "45-60s: CTA"]
+    },
+    {
+      "id": 30,
+      "name": "Die 'Warum du scheiterst'-Analyse",
+      "concept": "Ehrliche, psychologische Analyse, warum die meisten in deiner Nische scheitern.",
+      "structure": ["0-5s: 'Darum scheiterst du bei X'", "5-30s: Psychologische Blockaden aufzeigen", "30-50s: Wie man sie überwindet", "50-60s: CTA"]
+    },
+    {
+      "id": 31,
+      "name": "Das 'Schnelle Rezept' (Anleitung)",
+      "concept": "Ein schnelles, visuelles Tutorial ohne Umschweife.",
+      "structure": ["0-3s: Endergebnis zeigen", "3-30s: Die Schritte im Schnelldurchlauf", "30-45s: Wichtige Tipps", "45-60s: CTA"]
+    },
+    {
+      "id": 32,
+      "name": "Die Branchen-Kritik",
+      "concept": "Kritische Auseinandersetzung mit den schwarzen Schafen in deiner Nische.",
+      "structure": ["0-5s: Missstand nennen", "5-30s: Wie abgezockt wird", "30-50s: Wie man sich schützt", "50-60s: CTA"]
+    },
+    {
+      "id": 33,
+      "name": "Das 'Hinter den Kulissen'-Outtake",
+      "concept": "Lustige Fehler und Patzer vom Dreh, gefolgt von einer Überleitung zum fertigen Video.",
+      "structure": ["0-10s: Best-of Bloopers / Outtakes", "10-25s: 'Aber so sieht es fertig aus:'", "25-45s: Finales Video", "45-60s: CTA"]
+    },
+    {
+      "id": 34,
+      "name": "Das '10-Sekunden-Tutorial'",
+      "concept": "Ein extrem kurzes Video, das nur eine einzige Funktion zeigt (z.B. Premiere Shortcut).",
+      "structure": ["0-2s: Das Ziel nennen", "2-8s: Die Ausführung zeigen", "8-10s: CTA (Text-Overlay)"]
+    },
+    {
+      "id": 35,
+      "name": "Die Buchempfehlung",
+      "concept": "Vorstellung eines Buchs, das dein Business oder deine Nische geprägt hat.",
+      "structure": ["0-3s: 'Dieses Buch hat mir X beigebracht'", "3-30s: Die 2 wichtigsten Learnings", "30-45s: Für wen das Buch geeignet ist", "45-60s: CTA"]
+    },
+    {
+      "id": 36,
+      "name": "Die 'Was passiert wenn'-Simulation",
+      "concept": "Ein Experiment oder eine Simulation mit unerwartetem Ausgang.",
+      "structure": ["0-5s: Start des Experiments", "5-35s: Verlauf und Probleme", "35-50s: Das überraschende Ergebnis", "50-60s: CTA"]
+    },
+    {
+      "id": 37,
+      "name": "Der Nischen-Glossar-Begriff",
+      "concept": "Einen komplexen Fachbegriff deiner Nische für Laien verständlich erklären.",
+      "structure": ["0-3s: 'Was bedeutet eigentlich X?'", "3-25s: Einfache Erklärung mit Alltags-Analogie", "25-45s: Warum das wichtig für den Kunden ist", "45-60s: CTA"]
+    },
+    {
+      "id": 38,
+      "name": "Die 'Besser als X'-Kampagne",
+      "concept": "Du vergleichst deine Arbeitsweise direkt mit der einer klassischen Agentur.",
+      "structure": ["0-5s: 'Warum klassische Agenturen dich Geld kosten'", "5-35s: Der direkte Vergleich (Prozess vs. Bürokratie)", "35-50s: Dein Alleinstellungsmerkmal", "50-60s: CTA"]
+    },
+    {
+      "id": 39,
+      "name": "Das Vorurteil aufräumen",
+      "concept": "Ein negatives Vorurteil über deine Nische entkräften.",
+      "structure": ["0-5s: 'Videoproduktion ist zu teuer? Falsch!'", "5-35s: Erklärung des Return on Investment (ROI)", "35-50s: Rechenbeispiel", "50-60s: CTA"]
+    },
+    {
+      "id": 40,
+      "name": "Das K.I.-Gegenwart-Zukunft-Video",
+      "concept": "Vergleich: Wie man einen Job heute macht vs. wie man ihn mit K.I. macht.",
+      "structure": ["0-5s: Die manuelle Methode zeigen", "5-35s: Die K.I.-gestützte Methode zeigen", "35-50s: Zeitersparnis-Fazit", "50-60s: CTA"]
+    },
+    {
+      "id": 41,
+      "name": "Die 'Keine Fehler mehr'-Checkliste",
+      "concept": "Eine schnelle Liste von Dingen, die man vor einem Projekt prüfen muss.",
+      "structure": ["0-5s: 'Prüfe diese 5 Dinge vor deinem nächsten Dreh'", "5-35s: Schnelle Nennung der 5 Punkte", "35-50s: Warum Punkt 4 der wichtigste ist", "50-60s: CTA"]
+    },
+    {
+      "id": 42,
+      "name": "Der 'Geheime Trick' in CapCut/Premiere",
+      "concept": "Ein spezieller Editing-Trick, der die Videoqualität sofort anhebt.",
+      "structure": ["0-3s: Vorher-Nachher des Effekts zeigen", "3-30s: Screen-Recording der Schritte", "30-45s: Optimaler Anwendungsfall", "45-60s: CTA"]
+    },
+    {
+      "id": 43,
+      "name": "Die 'Warum ich X gekündigt habe'-Story",
+      "concept": "Persönliche Story über eine mutige Entscheidung, die deine Qualität gesteigert hat.",
+      "structure": ["0-5s: Nenne die Kündigung / den Bruch", "5-35s: Die Gründe und das Risiko", "35-50s: Das positive Resultat heute", "50-60s: CTA"]
+    },
+    {
+      "id": 44,
+      "name": "Die 'X Schritte bis zum Traum-Video'-Roadmap",
+      "concept": "Dein kompletter Produktions-Workflow übersichtlich erklärt.",
+      "structure": ["0-5s: 'So entsteht dein Video bei uns'", "5-35s: Vorbereitung, Dreh, Postproduktion", "35-50s: Zeitlicher Rahmen", "50-60s: CTA"]
+    },
+    {
+      "id": 45,
+      "name": "Das 'Unangenehme Wahrheit'-Video",
+      "concept": "Ein hartes, aber wahres Statement, das die Zielgruppe wachrüttelt.",
+      "structure": ["0-5s: 'Die unangenehme Wahrheit über dein Marketing...'", "5-30s: Warum bisherige Methoden scheitern", "30-50s: Die unbequeme Lösung", "50-60s: CTA"]
+    },
+    {
+      "id": 46,
+      "name": "Das 'Dieses eine Tool'-Video",
+      "concept": "Vorstellung eines einzigen, bahnbrechenden Tools für deine Nische.",
+      "structure": ["0-3s: 'Wenn ich nur noch ein Tool nutzen dürfte...'", "3-30s: Demonstration des All-in-one Tools", "30-45s: Warum es alle anderen ersetzt", "45-60s: CTA"]
+    },
+    {
+      "id": 47,
+      "name": "Der 'Kundengewinnungs-Hack'",
+      "concept": "Konkrete Strategie zeigen, wie du oder deine Kunden Leads generieren.",
+      "structure": ["0-5s: 'Wie wir 5 neue Kunden in 7 Tagen gewonnen haben'", "5-35s: Die konkrete outbound/inbound Taktik", "35-50s: Nachbau-Anleitung", "50-60s: CTA"]
+    },
+    {
+      "id": 48,
+      "name": "Das 'Warum du kein Video brauchst'-Video",
+      "concept": "Reverse-Psychologie: Nenne Fälle, in denen Videoproduktion keinen Sinn macht.",
+      "structure": ["0-5s: 'Buch kein Werbevideo, wenn...'", "5-35s: Die Ausschlusskriterien (z.B. kein Angebot, kein Budget)", "35-50s: Ab wann es Sinn macht", "50-60s: CTA"]
+    },
+    {
+      "id": 49,
+      "name": "Die K.I.-Avatar-Vorführung",
+      "concept": "Du demonstrierst deinen geklonten Avatar und lässt ihn die Hälfte des Videos sprechen.",
+      "structure": ["0-5s: Du sprichst live in die Kamera", "5-35s: Schnitt zum K.I. Avatar ('Das spricht gerade mein K.I.-Klon...')", "35-50s: Erklärung der Technologie und Zeitersparnis", "50-60s: CTA"]
+    },
+    {
+      "id": 50,
+      "name": "Die 'Das ändert alles'-News",
+      "concept": "Eilmeldung / Branchen-News analysieren und bewerten.",
+      "structure": ["0-3s: 'Das ändert ab heute alles für [Zielgruppe]'", "3-30s: Die News verständlich erklären", "30-45s: Deine Experten-Einschätzung", "45-60s: CTA"]
+    }
+  ],
+  "hooks_250_edition_2026": [
+    { "id": 1, "category": "Curiosity", "text": "Das ist das am schlechtesten gehütete Geheimnis in der [Nische]..." },
+    { "id": 2, "category": "Curiosity", "text": "Ich durfte das eigentlich nicht filmen, aber..." },
+    { "id": 3, "category": "Curiosity", "text": "Jeder redet über [Trend], aber niemand spricht über dieses Problem..." },
+    { "id": 4, "category": "Curiosity", "text": "Das passiert, wenn du [Aktion] mit [Aktion] kombinierst..." },
+    { "id": 5, "category": "Curiosity", "text": "Warum 99% der Leute [Ziel] niemals erreichen werden..." },
+    { "id": 6, "category": "Negative Bias", "text": "Hör sofort auf, [Aktion] zu tun! Es kostet dich jeden Tag Geld..." },
+    { "id": 7, "category": "Negative Bias", "text": "Das ist der dümmste Fehler, den ich je im Bereich [Thema] gesehen habe..." },
+    { "id": 8, "category": "Negative Bias", "text": "Warum dein [Dienstleister] dich heimlich belügt..." },
+    { "id": 9, "category": "Negative Bias", "text": "Glaube diesen 3 Mythen über [Nische] auf keinen Fall..." },
+    { "id": 10, "category": "Negative Bias", "text": "Das ist der Grund, warum deine Werbeanzeigen scheitern..." },
+    { "id": 11, "category": "Social Proof", "text": "Wie dieser [Kunde] ohne Vorerfahrung [Ergebnis] erreicht hat..." },
+    { "id": 12, "category": "Social Proof", "text": "Die exakte Strategie, die uns [Umsatz/Ergebnis] eingebracht hat..." },
+    { "id": 13, "category": "Social Proof", "text": "Wir haben [Aktion] bei 100 Kunden getestet. Das ist das Ergebnis..." },
+    { "id": 14, "category": "Social Proof", "text": "Warum unsere Kunden im Durchschnitt [Ergebnis] erreichen..." },
+    { "id": 15, "category": "Social Proof", "text": "Dieses eine Dokument hat ein [Branche] komplett transformiert..." },
+    { "id": 16, "category": "Authority", "text": "Als Videograf mit 10 Jahren Erfahrung sage ich dir: [These]..." },
+    { "id": 17, "category": "Authority", "text": "Das ist die wichtigste Lektion aus über 500 produzierten Reels..." },
+    { "id": 18, "category": "Authority", "text": "Warum ich all meine Kameras verkauft habe und nur noch [Equipment] nutze..." },
+    { "id": 19, "category": "Authority", "text": "Dieses K.I. Tool spart meiner Agentur monatlich 2.000€..." },
+    { "id": 20, "category": "Authority", "text": "Die ungeschminkte Wahrheit über das Skalieren einer Videoagentur..." },
+    { "id": 21, "category": "Benefit", "text": "Hier ist der einfachste Weg, um [Ergebnis] in unter 30 Tagen zu erreichen..." },
+    { "id": 22, "category": "Benefit", "text": "Kopiere diesen exakten Prompt, um [Ergebnis] zu erzielen..." },
+    { "id": 23, "category": "Benefit", "text": "3 kostenlose Tools, die sich illegal anfühlen zu wissen..." },
+    { "id": 24, "category": "Benefit", "text": "Wie du [Problem] löst, ohne [unbeliebte Aktion] zu tun..." },
+    { "id": 25, "category": "Benefit", "text": "Dieses 5-Minuten-Setup ändert alles für deine Produktivität..." },
+    { "id": 26, "category": "Storytime", "text": "Es war der schlimmste Tag meiner Karriere, als..." },
+    { "id": 27, "category": "Storytime", "text": "Wie ein einziger Kommentar mein ganzes Leben verändert hat..." },
+    { "id": 28, "category": "Storytime", "text": "Warum ich fast meine gesamte Agentur geschlossen hätte..." },
+    { "id": 29, "category": "Storytime", "text": "Ich habe einen Kunden abgelehnt, der mir [Summe] geboten hat. Hier ist der Grund..." },
+    { "id": 30, "category": "Storytime", "text": "Alles begann mit einer verrückten Idee auf einer Serviette..." },
+    { "id": 31, "category": "Curiosity", "text": "Die Wahrheit über [Thema], die dir niemand erzählt..." },
+    { "id": 32, "category": "Curiosity", "text": "Warum du [Aktion] tun musst, um [Ergebnis] zu verhindern..." },
+    { "id": 33, "category": "Curiosity", "text": "Dieses eine Detail unterscheidet erfolgreiche von erfolglosen [Branche]..." },
+    { "id": 34, "category": "Curiosity", "text": "Wenn du nur eine Sache über [Thema] weißt, lass es diese sein..." },
+    { "id": 35, "category": "Curiosity", "text": "Der wahre Grund, warum [Problem] immer schlimmer wird..." },
+    { "id": 36, "category": "Negative Bias", "text": "Lass dich nicht von [Produkt/Dienstleistung] abzocken..." },
+    { "id": 37, "category": "Negative Bias", "text": "Die meisten [Zielgruppe] machen diesen kritischen Fehler..." },
+    { "id": 38, "category": "Negative Bias", "text": "Warum [Lösung] in 90% der Fälle reine Zeitverschwendung ist..." },
+    { "id": 39, "category": "Negative Bias", "text": "Wenn du das tust, zerstörst du deine organische Reichweite..." },
+    { "id": 40, "category": "Negative Bias", "text": "Das ist die größte Lüge über [Thema], die du je gehört hast..." },
+    { "id": 41, "category": "Social Proof", "text": "Wie wir [Ziel] in Rekordzeit erreicht haben, ohne einen Cent für Ads auszugeben..." },
+    { "id": 42, "category": "Social Proof", "text": "Das Feedback dieses Kunden hat uns sprachlos gemacht..." },
+    { "id": 43, "category": "Social Proof", "text": "Warum dieses [Ergebnis] kein Zufall war..." },
+    { "id": 44, "category": "Social Proof", "text": "Die Fallstudie, die beweist, dass [Methode] funktioniert..." },
+    { "id": 45, "category": "Social Proof", "text": "So hat [Name] sein Business in nur 3 Monaten verdoppelt..." },
+    { "id": 46, "category": "Authority", "text": "Ich habe mir über 1.000 Werbevideos angeschaut. Das ist mein Fazit..." },
+    { "id": 47, "category": "Authority", "text": "Der Unterschied zwischen einem 1.000€ und einem 10.000€ Video..." },
+    { "id": 48, "category": "Authority", "text": "Warum die meisten Videografen kein funktionierendes Business haben..." },
+    { "id": 49, "category": "Authority", "text": "Das ist der exakte Workflow, den wir für Rezai Vision nutzen..." },
+    { "id": 50, "category": "Authority", "text": "Was ich in 5 Jahren K.I. Entwicklung gelernt habe..." },
+    { "id": 51, "category": "Benefit", "text": "Die 3 besten Hacks, um deine Videos sofort professioneller wirken zu lassen..." },
+    { "id": 52, "category": "Benefit", "text": "Wie du [Ergebnis] erreichst, während du schläfst..." },
+    { "id": 53, "category": "Benefit", "text": "Dieses Tool übernimmt 80% deiner manuellen Arbeit..." },
+    { "id": 54, "category": "Benefit", "text": "Eine Schritt-für-Schritt Anleitung, um [Ziel] zu knacken..." },
+    { "id": 55, "category": "Benefit", "text": "So erstellst du 30 Reels in unter 2 Stunden..." },
+    { "id": 56, "category": "Storytime", "text": "Die dümmste Entscheidung meines Lebens war..." },
+    { "id": 57, "category": "Storytime", "text": "Als ich pleite war, tat ich diese eine Sache..." },
+    { "id": 58, "category": "Storytime", "text": "Warum ein verärgerter Kunde mein bestes Marketing-Tool wurde..." },
+    { "id": 59, "category": "Storytime", "text": "Wie wir durch einen dummen Zufall [Ergebnis] erzielt haben..." },
+    { "id": 60, "category": "Storytime", "text": "Die Geschichte hinter unserem erfolgreichsten Projekt..." },
+    { "id": 61, "category": "Curiosity", "text": "Das wusste ich vor 5 Jahren über [Nische] leider noch nicht..." },
+    { "id": 62, "category": "Curiosity", "text": "Dieser Denkfehler kostet dich täglich [Ergebnis]..." },
+    { "id": 63, "category": "Curiosity", "text": "Warum du aufhören solltest, [Aktion] zu googeln..." },
+    { "id": 64, "category": "Curiosity", "text": "Das Geheimnis hinter [Ergebnis] liegt in diesem einen Satz..." },
+    { "id": 65, "category": "Curiosity", "text": "Warum [System] völlig falsch verstanden wird..." },
+    { "id": 66, "category": "Negative Bias", "text": "Zahle niemals für [Dienstleistung], bevor du das geprüft hast..." },
+    { "id": 67, "category": "Negative Bias", "text": "Der größte Fehler beim Skalieren von [Thema]..." },
+    { "id": 68, "category": "Negative Bias", "text": "Warum [Aktion] dein Marketing sabotiert..." },
+    { "id": 69, "category": "Negative Bias", "text": "Tu das nicht, außer du willst [negatives Ergebnis]..." },
+    { "id": 70, "category": "Negative Bias", "text": "Das ist der Grund, warum du keine qualifizierten Bewerbungen erhältst..." },
+    { "id": 71, "category": "Social Proof", "text": "Wie wir für ein [Branche] 50 neue Leads generiert haben..." },
+    { "id": 72, "category": "Social Proof", "text": "Diese Zahlen lügen nicht. Schau dir das an..." },
+    { "id": 73, "category": "Social Proof", "text": "Warum unsere Methode [Ergebnis] garantiert..." },
+    { "id": 74, "category": "Social Proof", "text": "Die Transformation dieses Kunden wird dich umblasen..." },
+    { "id": 75, "category": "Social Proof", "text": "Vom Fast-Bankrott zum Marktführer: Die Story von [Kunde]..." },
+    { "id": 76, "category": "Authority", "text": "Das ist das Erste, was ich bei einem neuen Kunden analysiere..." },
+    { "id": 77, "category": "Authority", "text": "Warum K.I. deine Agentur nicht ersetzen, sondern verzehnfachen wird..." },
+    { "id": 78, "category": "Authority", "text": "Die wichtigste Metrik für erfolgreiche Social Ads..." },
+    { "id": 79, "category": "Authority", "text": "Als Brancheninsider verrate ich dir heute..." },
+    { "id": 80, "category": "Authority", "text": "Der exakte Leitfaden für professionelles Color Grading..." },
+    { "id": 81, "category": "Benefit", "text": "Mit diesem einfachen Trick verbesserst du deine Audioqualität um 200%..." },
+    { "id": 82, "category": "Benefit", "text": "Wie du deine Konkurrenz mit [Aktion] komplett abhängst..." },
+    { "id": 83, "category": "Benefit", "text": "Das einzige Template, das du für [Ziel] brauchst..." },
+    { "id": 84, "category": "Benefit", "text": "Wie du ein [Problem] in unter 60 Sekunden löst..." },
+    { "id": 85, "category": "Benefit", "text": "Dieser kostenlose Shortcut spart dir Stunden beim Editieren..." },
+    { "id": 86, "category": "Storytime", "text": "Wie ich durch einen Programmierfehler fast [Summe] verloren hätte..." },
+    { "id": 87, "category": "Storytime", "text": "Der Tag, an dem wir [Kunde] retten mussten..." },
+    { "id": 88, "category": "Storytime", "text": "Warum ich vor 3 Jahren fast alles hingeschmissen hätte..." },
+    { "id": 89, "category": "Storytime", "text": "Die dümmste Ausrede, die ich je von einem Mitarbeiter gehört habe..." },
+    { "id": 90, "category": "Storytime", "text": "Wie wir aus einer Krise unser profitabelstes Angebot gebaut haben..." },
+    { "id": 91, "category": "Curiosity", "text": "Das Geheimnis hinter dem Algorithmus in 2026..." },
+    { "id": 92, "category": "Curiosity", "text": "Warum manche Videos viral gehen und andere nicht..." },
+    { "id": 93, "category": "Curiosity", "text": "Das hättest du über [Thema] schon viel früher wissen müssen..." },
+    { "id": 94, "category": "Curiosity", "text": "Was passiert, wenn du [Aktion] für eine Woche einstellst..." },
+    { "id": 95, "category": "Curiosity", "text": "Warum dieser unscheinbare Trick [Ergebnis] bringt..." },
+    { "id": 96, "category": "Negative Bias", "text": "Glaube diesen Social Media Gurus kein einziges Wort..." },
+    { "id": 97, "category": "Negative Bias", "text": "Warum deine Website Leads abschreckt, statt sie zu gewinnen..." },
+    { "id": 98, "category": "Negative Bias", "text": "Das zerstört das Vertrauen deiner Kunden in Sekunden..." },
+    { "id": 99, "category": "Negative Bias", "text": "Warum [Aktion] die dümmste Idee für dein Branding ist..." },
+    { "id": 100, "category": "Negative Bias", "text": "Mach diesen Fehler nicht beim Erstellen deines ersten K.I. Klons..." },
+    { "id": 101, "category": "Social Proof", "text": "Das ist die erfolgreichste Kampagne, die wir je geschaltet haben..." },
+    { "id": 102, "category": "Social Proof", "text": "Wie wir die Bewerberkosten für [Kunde] um 70% gesenkt haben..." },
+    { "id": 103, "category": "Social Proof", "text": "Unsere Kundenstimmen sprechen eine deutliche Sprache..." },
+    { "id": 104, "category": "Social Proof", "text": "Warum [Zahl]% unserer Neukunden über Weiterempfehlungen kommen..." },
+    { "id": 105, "category": "Social Proof", "text": "Der Live-Beweis: So sieht ein erfolgreicher Funnel aus..." },
+    { "id": 106, "category": "Authority", "text": "Die 3 goldenen Regeln für virales Storytelling..." },
+    { "id": 107, "category": "Authority", "text": "Warum gute Ausrüstung zweitrangig ist für den Videoerfolg..." },
+    { "id": 108, "category": "Authority", "text": "Das ist das Geheimnis hinter unserem High-End Look..." },
+    { "id": 109, "category": "Authority", "text": "Was ein echtes Recruiting-Video leisten muss..." },
+    { "id": 110, "category": "Authority", "text": "Meine ehrliche Meinung zu den neuesten Kamera-Trends..." },
+    { "id": 111, "category": "Benefit", "text": "So schreibst du ein Skript in unter 10 Minuten..." },
+    { "id": 112, "category": "Benefit", "text": "Der ultimative Spickzettel für deine nächste Social-Media-Kampagne..." },
+    { "id": 113, "category": "Benefit", "text": "Mit diesem Tool automatisierst du dein komplettes Posten..." },
+    { "id": 114, "category": "Benefit", "text": "Wie du Einwände deiner Kunden elegant im Video entkräftest..." },
+    { "id": 115, "category": "Benefit", "text": "Der schnellste Weg, um deine Conversion Rate zu verdoppeln..." },
+    { "id": 116, "category": "Storytime", "text": "Wie wir einen fast verlorenen Drehtag noch gerettet haben..." },
+    { "id": 117, "category": "Storytime", "text": "Warum ich mich weigere, mit [Branche] zusammenzuarbeiten..." },
+    { "id": 118, "category": "Storytime", "text": "Die schmerzhafteste Lektion aus meiner Anfangszeit..." },
+    { "id": 119, "category": "Storytime", "text": "Wir hatten 24 Stunden Zeit, um ein Video fertigzustellen..." },
+    { "id": 120, "category": "Storytime", "text": "Wie eine kleine Änderung am Hook unseren Umsatz gerettet hat..." },
+    { "id": 121, "category": "Curiosity", "text": "Warum die meisten Leute [Thema] völlig falsch angehen..." },
+    { "id": 122, "category": "Curiosity", "text": "Das ist der Grund, warum du [Aktion] nicht vernachlässigen darfst..." },
+    { "id": 123, "category": "Curiosity", "text": "Was dich wirklich davon abhält, [Ziel] zu erreichen..." },
+    { "id": 124, "category": "Curiosity", "text": "Dieses eine Experiment hat alles verändert..." },
+    { "id": 125, "category": "Curiosity", "text": "Warum du nicht mehr auf [Kanal] setzen solltest..." },
+    { "id": 126, "category": "Negative Bias", "text": "Lass die Finger von diesen billigen Video-Templates..." },
+    { "id": 127, "category": "Negative Bias", "text": "Warum deine Social Media Strategie veraltet ist..." },
+    { "id": 128, "category": "Negative Bias", "text": "Das vertreibt deine Traumkunden in Sekundenschnelle..." },
+    { "id": 129, "category": "Negative Bias", "text": "Warum [Methode] absolut tot ist..." },
+    { "id": 130, "category": "Negative Bias", "text": "Das ist der größte Fehler beim Schreiben von Video-Hooks..." },
+    { "id": 131, "category": "Social Proof", "text": "Wie wir das Vertrauen einer ganzen Nische gewonnen haben..." },
+    { "id": 132, "category": "Social Proof", "text": "Dieses Kundenfeedback ist der Grund, warum wir das tun..." },
+    { "id": 133, "category": "Social Proof", "text": "Das Ergebnis spricht für sich: [Zahl]% Steigerung..." },
+    { "id": 134, "category": "Social Proof", "text": "Wie ein [Kunde] dank unserer Videos seine Traumkandidaten fand..." },
+    { "id": 135, "category": "Social Proof", "text": "Der Beweis, dass K.I.-Videoproduktion funktioniert..." },
+    { "id": 136, "category": "Authority", "text": "Die Anatomie eines viralen Videos erklärt in 60 Sekunden..." },
+    { "id": 137, "category": "Authority", "text": "Warum die meisten Marketing-Konzepte in der Praxis versagen..." },
+    { "id": 138, "category": "Authority", "text": "Das ist der Unterschied zwischen Klick-Bait und echtem Interesse..." },
+    { "id": 139, "category": "Authority", "text": "Was ich in hunderten Verkaufsgesprächen gelernt habe..." },
+    { "id": 140, "category": "Authority", "text": "Mein persönlicher Workflow für schnelles Video-Editing..." },
+    { "id": 141, "category": "Benefit", "text": "3 Geheimnisse für die perfekte Ausleuchtung deines Studios..." },
+    { "id": 142, "category": "Benefit", "text": "Wie du deinen Umsatz steigerst, ohne mehr arbeiten zu müssen..." },
+    { "id": 143, "category": "Benefit", "text": "Das exakte Skript-Template für deine nächste Ad..." },
+    { "id": 144, "category": "Benefit", "text": "Wie du komplexe Themen einfach im Video erklärst..." },
+    { "id": 145, "category": "Benefit", "text": "Dieses Plugin erspart dir stundenlanges Color Grading..." },
+    { "id": 146, "category": "Storytime", "text": "Wie uns ein Stromausfall fast das ganze Projekt gekostet hätte..." },
+    { "id": 147, "category": "Storytime", "text": "Die verrückteste Kundenanfrage, die ich je bekommen habe..." },
+    { "id": 148, "category": "Storytime", "text": "Warum wir vor einem Jahr unser Konzept komplett geändert haben..." },
+    { "id": 149, "category": "Storytime", "text": "Der Tag, an dem mein K.I.-Avatar besser ankam als ich..." },
+    { "id": 150, "category": "Storytime", "text": "Wie wir durch ein Versehen [Zahl] Leads an einem Tag generiert haben..." },
+    { "id": 151, "category": "Curiosity", "text": "Das wussten selbst erfahrene Marketer über [Thema] nicht..." },
+    { "id": 152, "category": "Curiosity", "text": "Warum du deine Strategie heute noch überdenken solltest..." },
+    { "id": 153, "category": "Curiosity", "text": "Was wirklich hinter den viralen Trends steckt..." },
+    { "id": 154, "category": "Curiosity", "text": "Dieses kleine Detail entscheidet über Erfolg oder Misserfolg..." },
+    { "id": 155, "category": "Curiosity", "text": "Warum [System] in der Zukunft scheitern wird..." },
+    { "id": 156, "category": "Negative Bias", "text": "Verlass dich nicht nur auf organische Reichweite..." },
+    { "id": 157, "category": "Negative Bias", "text": "Warum dein Content ohne diese Zutat niemals konvertieren wird..." },
+    { "id": 158, "category": "Negative Bias", "text": "Das ruiniert das Image deiner Marke nachhaltig..." },
+    { "id": 159, "category": "Negative Bias", "text": "Warum der klassische Funnel tot ist..." },
+    { "id": 160, "category": "Negative Bias", "text": "Mach nicht diese 3 Fehler beim Schreiben deiner Skripte..." },
+    { "id": 161, "category": "Social Proof", "text": "Wie dieser Kunde seine Mitarbeitergewinnung revolutioniert hat..." },
+    { "id": 162, "category": "Social Proof", "text": "Die Auswertung zeigt: [Kunde] hat alle Rekorde gebrochen..." },
+    { "id": 163, "category": "Social Proof", "text": "Warum unsere Partner uns langfristig treu bleiben..." },
+    { "id": 164, "category": "Social Proof", "text": "Der Beweis, dass authentische Videos besser performen als Hochglanz..." },
+    { "id": 165, "category": "Social Proof", "text": "So hat eine einzige Ad-Kampagne das Jahresziel gerettet..." },
+    { "id": 166, "category": "Authority", "text": "Die wichtigste Regel für die Zusammenarbeit mit einer Videoproduktion..." },
+    { "id": 167, "category": "Authority", "text": "Warum K.I. deine Arbeit nicht ersetzt, sondern befreit..." },
+    { "id": 168, "category": "Authority", "text": "Das ist der wahre Wert einer durchdachten Video-Strategie..." },
+    { "id": 169, "category": "Authority", "text": "Was ich nach 100 Stunden K.I.-Klon-Optimierung gelernt habe..." },
+    { "id": 170, "category": "Authority", "text": "Mein persönlicher Guide für die perfekte Ausleuchtung am Set..." },
+    { "id": 171, "category": "Benefit", "text": "So erstellst du ansprechende Captions in Sekunden..." },
+    { "id": 172, "category": "Benefit", "text": "Wie du deinen Return on Ad Spend (ROAS) massiv steigerst..." },
+    { "id": 173, "category": "Benefit", "text": "Das einzige Skript-Format, das du für Social-Media-Recruiting brauchst..." },
+    { "id": 174, "category": "Benefit", "text": "Wie du Lampenfieber vor der Kamera sofort ablegst..." },
+    { "id": 175, "category": "Benefit", "text": "Dieses Tool schneidet deine Videos vollautomatisch..." },
+    { "id": 176, "category": "Storytime", "text": "Wie uns eine Kamera-Panne am Set eine geniale Idee beschert hat..." },
+    { "id": 177, "category": "Storytime", "text": "Warum wir ein Projekt kurz vor der Veröffentlichung gestoppt haben..." },
+    { "id": 178, "category": "Storytime", "text": "Die wichtigste Erfahrung aus meinem härtesten Kundenprojekt..." },
+    { "id": 179, "category": "Storytime", "text": "Der Tag, an dem wir das erste Mal K.I. am echten Filmset eingesetzt haben..." },
+    { "id": 180, "category": "Storytime", "text": "Wie aus einer simplen Instagram Story ein großer Kundenauftrag wurde..." },
+    { "id": 181, "category": "Curiosity", "text": "Warum du nicht auf die üblichen Ratschläge hören solltest..." },
+    { "id": 182, "category": "Curiosity", "text": "Das Geheimnis hinter konvertierenden Hooks..." },
+    { "id": 183, "category": "Curiosity", "text": "Was deine Kunden wirklich wollen (aber dir nicht sagen)..." },
+    { "id": 184, "category": "Curiosity", "text": "Dieses Experiment zeigt, wie wichtig die erste Sekunde ist..." },
+    { "id": 185, "category": "Curiosity", "text": "Warum manche Branchen keine Mitarbeiter mehr finden..." },
+    { "id": 186, "category": "Negative Bias", "text": "Vermeide diese 3 Fehler bei deinem nächsten Videoshoot..." },
+    { "id": 187, "category": "Negative Bias", "text": "Warum teures Equipment dein Marketing ruinieren kann..." },
+    { "id": 188, "category": "Negative Bias", "text": "Das schreckt qualifizierte Bewerber ab, statt sie anzuziehen..." },
+    { "id": 189, "category": "Negative Bias", "text": "Warum Standard-Werbevideos heute nicht mehr funktionieren..." },
+    { "id": 190, "category": "Negative Bias", "text": "Das ist der größte Fehler beim Skalieren deines Funnels..." },
+    { "id": 191, "category": "Social Proof", "text": "Wie wir den Umsatz von [Kunde] in Rekordzeit gesteigert haben..." },
+    { "id": 192, "category": "Social Proof", "text": "Das ehrliche Fazit nach 6 Monaten Zusammenarbeit..." },
+    { "id": 193, "category": "Social Proof", "text": "Warum unsere Methode die sicherste Investition für [Branche] ist..." },
+    { "id": 194, "category": "Social Proof", "text": "Der Beweis: So einfach kann Recruiting mit Videos sein..." },
+    { "id": 195, "category": "Social Proof", "text": "Wie dieser K.I. Funnel einem Kunden täglich neue Leads bringt..." },
+    { "id": 196, "category": "Authority", "text": "Die Kunst, in den ersten 3 Sekunden eine Geschichte zu erzählen..." },
+    { "id": 197, "category": "Authority", "text": "Warum Konzeption wichtiger ist als der eigentliche Drehtag..." },
+    { "id": 198, "category": "Authority", "text": "Das ist das Fundament für eine erfolgreiche Marken-Identität..." },
+    { "id": 199, "category": "Authority", "text": "Was ich durch das Analysieren hunderter Recruiting-Kampagnen gelernt habe..." },
+    { "id": 200, "category": "Authority", "text": "Mein persönlicher Workflow für perfektes Editing am Mac..." },
+    { "id": 201, "category": "Benefit", "text": "So optimierst du dein Smartphone für professionelle Videos..." },
+    { "id": 202, "category": "Benefit", "text": "Wie du deine Reichweite organisch verzehnfachst..." },
+    { "id": 203, "category": "Benefit", "text": "Das beste Template für dein nächstes Angebotsschreiben..." },
+    { "id": 204, "category": "Benefit", "text": "Wie du vor der Kamera sofort sympathisch und kompetent wirkst..." },
+    { "id": 205, "category": "Benefit", "text": "Dieses Tool entfernt Hintergrundgeräusche mit K.I. in Sekunden..." },
+    { "id": 206, "category": "Storytime", "text": "Wie uns eine kreative Idee am Set den besten Lead des Jahres gebracht hat..." },
+    { "id": 207, "category": "Storytime", "text": "Warum wir ein fast fertiges Projekt aus Qualitätsgründen neu gedreht haben..." },
+    { "id": 208, "category": "Storytime", "text": "Die wichtigste Lektion aus einem gescheiterten Pitch..." },
+    { "id": 209, "category": "Storytime", "text": "Der Moment, als wir das erste Mal ein vollautomatisiertes Angebot verschickt haben..." },
+    { "id": 210, "category": "Storytime", "text": "Wie aus einer spontanen Idee am Set unser erfolgreichstes Video-Format wurde..." },
+    { "id": 211, "category": "Curiosity", "text": "Warum die meisten Leute die Psychologie hinter Videos unterschätzen..." },
+    { "id": 212, "category": "Curiosity", "text": "Das ist der Grund, warum dein Angebot nicht verstanden wird..." },
+    { "id": 213, "category": "Curiosity", "text": "Was wirklich über den Erfolg deines Contents entscheidet..." },
+    { "id": 214, "category": "Curiosity", "text": "Dieses Experiment zeigt den Unterschied zwischen B-Roll und A-Roll..." },
+    { "id": 215, "category": "Curiosity", "text": "Warum manche Agenturen keine Kunden mehr gewinnen..." },
+    { "id": 216, "category": "Negative Bias", "text": "Vermeide diese 3 Fehler bei deiner nächsten Kampagne..." },
+    { "id": 217, "category": "Negative Bias", "text": "Warum billige Stock-Videos deine Brand schädigen..." },
+    { "id": 218, "category": "Negative Bias", "text": "Das vertreibt qualifizierte Bewerber sofort..." },
+    { "id": 219, "category": "Negative Bias", "text": "Warum klassische Stellenanzeigen Geldverschwendung sind..." },
+    { "id": 220, "category": "Negative Bias", "text": "Das ist der größte Fehler beim Skalieren deiner Social Ads..." },
+    { "id": 221, "category": "Social Proof", "text": "Wie wir für einen Kunden den Markt dominiert haben..." },
+    { "id": 222, "category": "Social Proof", "text": "Das ehrliche Feedback nach einem Jahr Zusammenarbeit..." },
+    { "id": 223, "category": "Social Proof", "text": "Warum unsere Video-Strategie die beste Investition ist..." },
+    { "id": 224, "category": "Social Proof", "text": "Der Beweis: So einfach gewinnst du Kunden mit K.I.-Unterstützung..." },
+    { "id": 225, "category": "Social Proof", "text": "Wie ein [Kunde] dank unserer Videos seine Conversion verdoppelt hat..." },
+    { "id": 226, "category": "Authority", "text": "Die Kunst des perfekten Video-Intros in 3 Sekunden..." },
+    { "id": 227, "category": "Authority", "text": "Warum die Vorbereitung wichtiger ist als der Drehtag selbst..." },
+    { "id": 228, "category": "Authority", "text": "Das ist der Grundstein für ein starkes Branding..." },
+    { "id": 229, "category": "Authority", "text": "Was ich beim Analysieren hunderter Social-Media-Kanäle gelernt habe..." },
+    { "id": 230, "category": "Authority", "text": "Mein persönlicher Workflow für schnellen Export..." },
+    { "id": 231, "category": "Benefit", "text": "So verbesserst du deine Smartphone-Aufnahmen in wenigen Schritten..." },
+    { "id": 232, "category": "Benefit", "text": "Wie du deine organische Reichweite massiv steigerst..." },
+    { "id": 233, "category": "Benefit", "text": "Das beste Skript-Template für deinen nächsten Pitch..." },
+    { "id": 234, "category": "Benefit", "text": "Wie du vor der Kamera absolut natürlich und souverän wirkst..." },
+    { "id": 235, "category": "Benefit", "text": "Dieses Tool entfernt lästige Pausen aus deinem Audio..." },
+    { "id": 236, "category": "Storytime", "text": "Wie uns eine spontane Änderung am Set die beste Hook des Jahres geliefert hat..." },
+    { "id": 237, "category": "Storytime", "text": "Warum wir ein Projekt kurz vor dem Launch komplett überarbeitet haben..." },
+    { "id": 238, "category": "Storytime", "text": "Die wichtigste Lektion, die ich aus einem verpatzten Angebot gelernt habe..." },
+    { "id": 239, "category": "Storytime", "text": "Der Moment, als wir das erste Mal K.I.-generierte Stimmen eingesetzt haben..." },
+    { "id": 240, "category": "Storytime", "text": "Wie aus einer simplen B-Roll-Idee unser erfolgreichstes Video-Format wurde..." },
+    { "id": 241, "category": "Curiosity", "text": "Warum die meisten Leute den Wert von gutem Sound unterschätzen..." },
+    { "id": 242, "category": "Curiosity", "text": "Das ist der Grund, warum dein Content nicht konvertiert..." },
+    { "id": 243, "category": "Curiosity", "text": "What really happens when you cut out pauses in editing..." },
+    { "id": 244, "category": "Curiosity", "text": "Dieses Experiment zeigt, wie wichtig die erste Sekunde ist..." },
+    { "id": 245, "category": "Curiosity", "text": "Warum manche Handwerksbetriebe keine Mitarbeiter mehr finden..." },
+    { "id": 246, "category": "Negative Bias", "text": "Vermeide diese 3 Fehler bei deiner nächsten Ad..." },
+    { "id": 247, "category": "Negative Bias", "text": "Warum billige Videos deiner Brand schaden..." },
+    { "id": 248, "category": "Negative Bias", "text": "Das vertreibt qualifizierte Kandidaten sofort..." },
+    { "id": 249, "category": "Negative Bias", "text": "Warum klassische Stellenanzeigen nicht mehr funktionieren..." },
+    { "id": 250, "category": "Negative Bias", "text": "Das ist der größte Fehler beim Skalieren deines Marketings..." }
+  ]
+}

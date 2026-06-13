@@ -3,6 +3,7 @@ import { db } from '../../lib/firebase';
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore';
 import { Save, FileVideo, Wand2, Loader2, Plus, Trash2, Printer, AlignLeft, ListVideo, PenTool, ExternalLink } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import marketingKnowledge from '../../../api/data/marketingKnowledge.json';
 
 interface Shot {
   id: string;
@@ -11,6 +12,12 @@ interface Shot {
   shotType: string; // e.g., "Close Up", "Wide Shot"
   action: string;
   equipment: string;
+  motionGraphic?: {
+    preset: 'lower-third' | 'social-callout' | 'kinetic' | 'wipe' | 'cta';
+    text1: string;
+    text2?: string;
+    description: string;
+  };
 }
 
 interface ProductionProject {
@@ -19,6 +26,9 @@ interface ProductionProject {
   clientName: string;
   script: string;
   shotlist: Shot[];
+  status?: string;
+  ciProfileId?: string;
+  icpProfileId?: string;
   createdAt: string;
 }
 
@@ -35,11 +45,34 @@ export default function ProductionSuite() {
   // UI Tabs
   const [activeTab, setActiveTab] = useState<'script' | 'shotlist'>('script');
 
+  // CI/ICP & Briefing states
+  const [ciProfiles, setCiProfiles] = useState<any[]>([]);
+  const [icpProfiles, setIcpProfiles] = useState<any[]>([]);
+  const [selectedCiId, setSelectedCiId] = useState('');
+  const [selectedIcpId, setSelectedIcpId] = useState('');
+  const [briefing, setBriefing] = useState('');
+  const [generatingScript, setGeneratingScript] = useState(false);
+
   const printRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetchProjects();
+    fetchProfiles();
   }, []);
+
+  const fetchProfiles = async () => {
+    try {
+      const ciSnap = await getDocs(collection(db, 'clientCIs'));
+      const ciData = ciSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+      setCiProfiles(ciData);
+
+      const icpSnap = await getDocs(collection(db, 'clientICPs'));
+      const icpData = icpSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+      setIcpProfiles(icpData);
+    } catch (e) {
+      console.error("Error loading CI/ICP profiles in ProductionSuite:", e);
+    }
+  };
 
   const fetchProjects = async () => {
     setLoading(true);
@@ -63,6 +96,8 @@ export default function ProductionSuite() {
   const selectProject = (project: ProductionProject) => {
     setActiveProject(project);
     setScriptContent(project.script || '');
+    setSelectedCiId(project.ciProfileId || '');
+    setSelectedIcpId(project.icpProfileId || '');
   };
 
   const createNewProject = async () => {
@@ -74,6 +109,8 @@ export default function ProductionSuite() {
       clientName: '',
       script: '',
       shotlist: [],
+      ciProfileId: '',
+      icpProfileId: '',
       createdAt: new Date().toISOString()
     };
     
@@ -93,9 +130,20 @@ export default function ProductionSuite() {
     setSaving(true);
     try {
       const docRef = doc(db, 'productionProjects', activeProject.id);
-      await updateDoc(docRef, { script: scriptContent });
-      setProjects(projects.map(p => p.id === activeProject.id ? { ...p, script: scriptContent } : p));
-      setActiveProject({ ...activeProject, script: scriptContent });
+      await updateDoc(docRef, { 
+        script: scriptContent,
+        ciProfileId: selectedCiId,
+        icpProfileId: selectedIcpId
+      });
+      const updated = { 
+        ...activeProject, 
+        script: scriptContent,
+        ciProfileId: selectedCiId,
+        icpProfileId: selectedIcpId
+      };
+      setProjects(projects.map(p => p.id === activeProject.id ? updated : p));
+      setActiveProject(updated);
+      alert('Projekt erfolgreich gespeichert!');
     } catch (e) {
       console.error(e);
       alert('Fehler beim Speichern.');
@@ -112,12 +160,43 @@ export default function ProductionSuite() {
     
     setGenerating(true);
     
+    const selectedCi = ciProfiles.find(p => p.id === selectedCiId);
+    const selectedIcp = icpProfiles.find(p => p.id === selectedIcpId);
+    
+    let brandDesignContext = "";
+    if (selectedCi) {
+      brandDesignContext = `
+Corporate Design Farben für Motion Graphics:
+- Primärfarbe: ${selectedCi.primaryColor}
+- Sekundärfarbe: ${selectedCi.secondaryColor}
+- Akzentfarbe: ${selectedCi.accentColor}
+- Schriftart: ${selectedCi.fontFamily}
+- Tone of Voice: ${selectedCi.toneOfVoice}
+Achte darauf, diese Designfarben in den Text1/Text2 Vorschlägen der Motion Graphics oder in der Regieanweisung zu erwähnen.
+      `;
+    }
+
+    let targetAudienceContext = "";
+    if (selectedIcp) {
+      targetAudienceContext = `
+Zielgruppe (ICP):
+- Name: ${selectedIcp.persona.name}
+- Job: ${selectedIcp.persona.job}
+- Heidelberg Sinus-Milieu: ${selectedIcp.persona.sinusMilieu || 'Nicht angegeben'}
+- Answer the Public Suchanfragen: ${(selectedIcp.persona.answerThePublicQuestions || []).join(', ')}
+Der visuelle Stil und die B-Rolls sollten auf diese Zielgruppe abgestimmt sein.
+      `;
+    }
+
     const prompt = `
 Du bist ein professioneller Regisseur und Kameramann.
 Hier ist das Skript/Konzept für ein Video:
 """
 ${scriptContent}
 """
+
+${brandDesignContext}
+${targetAudienceContext}
 
 Deine Aufgabe:
 Erstelle eine professionelle, tabellarische Shotlist im JSON-Format.
@@ -131,7 +210,13 @@ Format für jeden Shot im JSON Array:
     "location": "Innenstadt / Straße",
     "shotType": "Wide Shot / Drohne",
     "action": "Kamera fliegt über die Straße, Protagonist läuft ins Bild.",
-    "equipment": "Mavic 3 Pro"
+    "equipment": "Mavic 3 Pro",
+    "motionGraphic": {
+      "preset": "lower-third",  // optional: "lower-third" | "social-callout" | "kinetic" | "wipe" | "cta" (nur falls passend für diesen Shot, sonst weglassen)
+      "text1": "Max Rezai",     // z.B. Name des Sprechers, Social Handle (@rezaivision) oder Button Text
+      "text2": "Director",      // optional: Untertitel / Jobtitel (nur bei preset lower-third)
+      "description": "Bauchbinde zur Vorstellung von Max"
+    }
   }
 ]
     `;
@@ -164,6 +249,130 @@ Format für jeden Shot im JSON Array:
       alert('Fehler bei der K.I. Generierung. Die K.I. hat vermutlich ein falsches Format geliefert.');
     } finally {
       setGenerating(false);
+    }
+  };
+
+  const generateScript = async () => {
+    if (!activeProject) return;
+    if (!selectedCiId || !selectedIcpId || !briefing.trim()) {
+      alert("Bitte wähle ein CI-Profil, ein ICP-Profil und gib ein Kurz-Briefing ein.");
+      return;
+    }
+
+    setGeneratingScript(true);
+
+    const selectedCi = ciProfiles.find(p => p.id === selectedCiId);
+    const selectedIcp = icpProfiles.find(p => p.id === selectedIcpId);
+
+    if (!selectedCi || !selectedIcp) {
+      alert("Ausgewählte Profile konnten nicht gefunden werden.");
+      setGeneratingScript(false);
+      return;
+    }
+
+    const brandValuesStr = (selectedCi.brandValues || []).join(", ");
+    const forbiddenWordsStr = (selectedCi.forbiddenWords || []).join(", ");
+    
+    const p = selectedIcp.persona;
+    const dailyFrustrationsStr = (p.daily_frustrations || []).join("\n- ");
+    const objectionsStr = (p.objections || []).map((o: any) => `Einwand: ${o.objection} -> Reframe: ${o.reframing}`).join("\n");
+    const buyingTriggersStr = (p.buying_triggers || []).join("\n- ");
+    
+    const sinusMilieuStr = p.sinusMilieu || 'Nicht explizit angegeben';
+    const answerThePublicStr = (p.answerThePublicQuestions || []).join("\n- ");
+
+    // Extract storytelling outlines and samples of formats and hooks from imported marketingKnowledge
+    const storytellingOutline = JSON.stringify(marketingKnowledge.storytelling_psychology, null, 2);
+    const formatsOutline = JSON.stringify(marketingKnowledge.social_media_formats_top50.slice(0, 15), null, 2);
+    const hooksOutline = JSON.stringify(marketingKnowledge.hooks_250_edition_2026.slice(0, 30), null, 2);
+
+    const prompt = `
+Du bist ein weltklasse Social-Media-Copywriter und Video-Strategist für Rezai Vision.
+Deine Aufgabe ist es, ein hochkonvertierendes Video-Skript (ca. 45-60 Sekunden, ca. 120-150 Wörter gesprochener Text) zu schreiben.
+
+Hier ist das Kunden-Briefing für das Video:
+"${briefing}"
+
+Dieses Skript MUSS perfekt auf die folgende Zielgruppe (ICP Persona) und deren psychologisches Profil abgestimmt sein:
+### Zielgruppen-Profil (ICP):
+- Name: ${p.name}
+- Alter: ${p.alter}
+- Job: ${p.job}
+- Einkommen: ${p.income}
+- Primäre Angst/Frust: ${p.biggest_fear}
+- Primärer Wunsch/Ziel: ${p.biggest_desire}
+- Heidelberg Sinus-Milieu Einordnung: ${sinusMilieuStr}
+- Tägliche Hürden:
+- ${dailyFrustrationsStr}
+- Typische Kauf-Einwände & Reframings:
+${objectionsStr}
+- Kauf-Auslöser (Triggers):
+- ${buyingTriggersStr}
+- Answer the Public (Suchfragen & Intent):
+- ${answerThePublicStr}
+
+### Corporate Identity (CI) Richtlinien:
+- Tonalität / Tone of Voice: ${selectedCi.toneOfVoice}
+- Markenwerte: ${brandValuesStr}
+- Auszuschließende Begriffe (ABSOLUTES VERBOT): ${forbiddenWordsStr ? forbiddenWordsStr : 'Keine'}
+
+### Marketing-Psychologie (Verwende diese Frameworks):
+${storytellingOutline}
+
+### Erlaubte Hook-Vorlagen & Social-Media-Formate:
+Wähle das am besten passende Format aus diesen Beispielen aus:
+${formatsOutline}
+
+Und wähle oder adaptiere einen Hook aus diesen Beispielen:
+${hooksOutline}
+
+### Richtlinien für das Skript:
+1. Beginne das Skript DIREKT mit einem extrem starken verbalen Hook in den ersten 3 Sekunden. Verwende ein Negativ-Framing oder Neugier-Hook, das die Sinus-Milieu-Werte und Suchfragen (Answer the Public) anspricht.
+2. Baue mindestens einen Open Loop in der Mitte des Skripts ein.
+3. Behandle mindestens einen der typischen Einwände (Objections) auf clevere Weise und entkräfte ihn (Reframe).
+4. Das Skript muss im genauen Tone of Voice geschrieben sein. Vermeide alle verbotenen Begriffe!
+5. Schreibe das Skript im deutschen Sprachgebrauch (Du/Sie passend zur Zielgruppe/Tonalität).
+6. Kennzeichne visuelle Regieanweisungen und B-Roll Vorschläge in eckigen Klammern [z.B. Kamera schwenkt auf überarbeiteten Chef].
+
+Schreibe das Skript direkt hin. Gib nur das fertige Skript zurück, ohne Kommentare vorab oder danach.
+    `;
+
+    try {
+      const response = await fetch('/api/ai-chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
+      });
+      const data = await response.json();
+      
+      if (data.reply) {
+        setScriptContent(data.reply);
+        // Save automatically to Firestore
+        const docRef = doc(db, 'productionProjects', activeProject.id);
+        await updateDoc(docRef, { 
+          script: data.reply,
+          ciProfileId: selectedCiId,
+          icpProfileId: selectedIcpId
+        });
+        setProjects(projects.map(p => p.id === activeProject.id ? { 
+          ...p, 
+          script: data.reply,
+          ciProfileId: selectedCiId,
+          icpProfileId: selectedIcpId
+        } : p));
+        setActiveProject({ 
+          ...activeProject, 
+          script: data.reply,
+          ciProfileId: selectedCiId,
+          icpProfileId: selectedIcpId
+        });
+        alert("Skript erfolgreich generiert!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Fehler bei der K.I.-Generierung des Skripts.");
+    } finally {
+      setGeneratingScript(false);
     }
   };
 
@@ -292,36 +501,101 @@ Format für jeden Shot im JSON Array:
             </div>
 
             {/* Workspace Area */}
-            <div className="flex-1 overflow-y-auto p-6 print:p-0 print:overflow-visible">
+            <div className="flex-1 overflow-y-auto print:p-0 print:overflow-visible flex flex-col">
               
               {/* SCRIPT TAB */}
               {activeTab === 'script' && (
-                <div className="h-full flex flex-col print:block">
-                  <div className="flex justify-between items-center mb-4 no-print">
-                    <p className="text-sm text-gray-400">Schreibe hier dein Voiceover, deine Hook und den generellen Ablauf nieder.</p>
-                    <button 
-                      onClick={generateShotlist}
-                      disabled={generating || !scriptContent}
-                      className="bg-purple-500/20 text-purple-400 border border-purple-500/30 px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-purple-500/30 transition-all text-sm disabled:opacity-50"
-                    >
-                      {generating ? <Loader2 size={16} className="animate-spin" /> : <Wand2 size={16} />}
-                      K.I. Shotlist generieren
-                    </button>
+                <div className="flex-1 flex overflow-hidden print:block h-full">
+                  {/* Editor Column */}
+                  <div className="flex-1 flex flex-col p-6 print:p-0">
+                    <div className="flex justify-between items-center mb-4 no-print">
+                      <p className="text-sm text-gray-400">Schreibe hier dein Voiceover, deine Hook und den generellen Ablauf nieder.</p>
+                      <button 
+                        onClick={generateShotlist}
+                        disabled={generating || !scriptContent}
+                        className="bg-purple-500/20 text-purple-400 border border-purple-500/30 px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-purple-500/30 transition-all text-sm disabled:opacity-50"
+                      >
+                        {generating ? <Loader2 size={16} className="animate-spin" /> : <Wand2 size={16} />}
+                        K.I. Shotlist generieren
+                      </button>
+                    </div>
+                    
+                    {/* Editor */}
+                    <textarea
+                      value={scriptContent}
+                      onChange={(e) => setScriptContent(e.target.value)}
+                      placeholder="Schreibe dein Skript oder nutze den K.I. Skript Generator rechts..."
+                      className="flex-1 w-full bg-transparent text-white border-0 resize-none focus:outline-none focus:ring-0 prose prose-invert max-w-none text-lg leading-relaxed print:text-black print:text-base print:h-[60vh] min-h-[400px]"
+                    />
                   </div>
-                  
-                  {/* Editor */}
-                  <textarea
-                    value={scriptContent}
-                    onChange={(e) => setScriptContent(e.target.value)}
-                    placeholder="Titel: Der neue Imagefilm..."
-                    className="flex-1 w-full bg-transparent text-white border-0 resize-none focus:outline-none focus:ring-0 prose prose-invert max-w-none text-lg leading-relaxed print:text-black print:text-base print:h-auto"
-                  />
+
+                  {/* K.I. Script Config Panel */}
+                  <div className="w-96 border-l border-white/10 bg-white/5 p-6 overflow-y-auto space-y-5 no-print shrink-0">
+                    <div className="flex items-center gap-2 border-b border-white/10 pb-3">
+                      <Wand2 className="text-brand-accent animate-pulse" size={18} />
+                      <h3 className="font-bold text-white text-sm">K.I. Skript Generator</h3>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">1. Corporate Identity (CI)</label>
+                        <select
+                          value={selectedCiId}
+                          onChange={e => setSelectedCiId(e.target.value)}
+                          className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-brand-accent animate-all"
+                        >
+                          <option value="">-- CI-Profil wählen --</option>
+                          {ciProfiles.map(p => (
+                            <option key={p.id} value={p.id}>{p.name}</option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">2. ICP Persona (Zielgruppe)</label>
+                        <select
+                          value={selectedIcpId}
+                          onChange={e => setSelectedIcpId(e.target.value)}
+                          className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-brand-accent animate-all"
+                        >
+                          <option value="">-- Persona wählen --</option>
+                          {icpProfiles.map(p => (
+                            <option key={p.id} value={p.id}>{p.projectName} ({p.niche})</option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">3. Video Kurz-Briefing / Thema</label>
+                        <textarea
+                          value={briefing}
+                          onChange={e => setBriefing(e.target.value)}
+                          rows={5}
+                          placeholder="Beschreibe kurz das Ziel des Videos (z.B. 4-Tage-Woche bei uns im Pflegeheim vorstellen, Vorteile betonen, Vorurteile abbauen)..."
+                          className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2.5 text-xs text-white focus:border-brand-accent focus:outline-none resize-none animate-all"
+                        />
+                      </div>
+
+                      <button
+                        onClick={generateScript}
+                        disabled={generatingScript || !selectedCiId || !selectedIcpId || !briefing.trim()}
+                        className="w-full bg-brand-accent text-brand-bg py-3.5 rounded-xl font-black text-xs flex items-center justify-center gap-2 hover:brightness-110 transition-all disabled:opacity-50 cursor-pointer shadow-lg shadow-brand-accent/20"
+                      >
+                        {generatingScript ? <Loader2 size={14} className="animate-spin" /> : <Wand2 size={14} />}
+                        {generatingScript ? 'Skript wird geschrieben...' : 'K.I. Skript generieren'}
+                      </button>
+
+                      <p className="text-[10px] text-gray-500 leading-normal">
+                        K.I. berücksichtigt Tonalität, Markenwerte, verbotene Wörter aus der CI sowie Sinus-Milieus, Suchanfragen (Answer the Public), Ängste und Einwände aus dem ICP-Profil und verfeinert dies mit bewährten Hooks & Formaten aus der Marketingdatenbank.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
 
               {/* SHOTLIST TAB */}
               {activeTab === 'shotlist' && (
-                <div className="print:block">
+                <div className="p-6 print:block">
                   {(!activeProject.shotlist || activeProject.shotlist.length === 0) ? (
                     <div className="text-center py-20 border-2 border-dashed border-white/10 rounded-xl no-print">
                       <ListVideo className="w-12 h-12 text-gray-500 mx-auto mb-4" />
@@ -354,7 +628,42 @@ Format für jeden Shot im JSON Array:
                               <td className="p-4 text-gray-400 font-mono print:text-black print:border print:border-gray-400">{shot.shotNumber || idx+1}</td>
                               <td className="p-4 font-bold text-gray-200 print:text-black print:border print:border-gray-400">{shot.location}</td>
                               <td className="p-4 text-emerald-400 text-sm print:text-black print:border print:border-gray-400">{shot.shotType}</td>
-                              <td className="p-4 text-gray-300 print:text-black print:border print:border-gray-400">{shot.action}</td>
+                              <td className="p-4 text-gray-300 print:text-black print:border print:border-gray-400">
+                                <div>{shot.action}</div>
+                                {shot.motionGraphic && (
+                                  <div className="mt-2 flex flex-wrap items-center gap-2 bg-brand-accent/5 border border-brand-accent/20 rounded-lg p-2 no-print">
+                                    <span className="text-[10px] font-bold text-brand-accent uppercase tracking-wider flex items-center gap-1">
+                                      <Wand2 size={10} /> Motion Graphic:
+                                    </span>
+                                    <span className="text-xs text-white">
+                                      {shot.motionGraphic.preset === 'lower-third' && 'Bauchbinde'}
+                                      {shot.motionGraphic.preset === 'social-callout' && 'Social Bar'}
+                                      {shot.motionGraphic.preset === 'kinetic' && 'Word Pop Text'}
+                                      {shot.motionGraphic.preset === 'wipe' && 'Transition Wipe'}
+                                      {shot.motionGraphic.preset === 'cta' && 'CTA Button'}
+                                      {` (${shot.motionGraphic.text1}${shot.motionGraphic.text2 ? ' - ' + shot.motionGraphic.text2 : ''})`}
+                                    </span>
+                                    <button
+                                      onClick={() => {
+                                        localStorage.setItem('pending-motion-export', JSON.stringify({
+                                          preset: shot.motionGraphic?.preset,
+                                          text1: shot.motionGraphic?.text1,
+                                          text2: shot.motionGraphic?.text2,
+                                        }));
+                                        window.dispatchEvent(new CustomEvent('switch-admin-tab', { detail: { tab: 'motion' } }));
+                                      }}
+                                      className="text-[10px] bg-brand-accent text-brand-bg px-2.5 py-1 rounded font-black hover:brightness-110 transition-all flex items-center gap-0.5 cursor-pointer ml-auto"
+                                    >
+                                      Exportieren
+                                    </button>
+                                  </div>
+                                )}
+                                {shot.motionGraphic && (
+                                  <div className="hidden print:block text-xs text-gray-600 mt-1 italic">
+                                    [Grafik-Overlay: {shot.motionGraphic.preset} - {shot.motionGraphic.text1}]
+                                  </div>
+                                )}
+                              </td>
                               <td className="p-4 text-amber-400 text-sm print:text-black print:border print:border-gray-400">{shot.equipment}</td>
                             </tr>
                           ))}

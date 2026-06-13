@@ -5,7 +5,8 @@ import {
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
-  LayoutTemplate, Sparkles, Users, Mail, Video, Brain, BookOpen, Instagram
+  LayoutTemplate, Sparkles, Users, Mail, Video, Brain, BookOpen, Instagram,
+  Palette, Target, Cpu
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -24,6 +25,9 @@ import AIVideoHub from "@/components/admin/AIVideoHub";
 import MotionStudio from "@/components/admin/MotionStudio";
 import SalesToolkit from "@/components/admin/SalesToolkit";
 import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
+import CIManager from "@/components/admin/CIManager";
+import ICPGenerator from "@/components/admin/ICPGenerator";
+import AIModelManager from "@/components/admin/AIModelManager";
 
 const generateSlug = (text: string) => {
   return text
@@ -504,6 +508,17 @@ export default function AdminDashboard() {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    const handleSwitchTab = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail && customEvent.detail.tab) {
+        setActiveTab(customEvent.detail.tab);
+      }
+    };
+    window.addEventListener('switch-admin-tab', handleSwitchTab);
+    return () => window.removeEventListener('switch-admin-tab', handleSwitchTab);
+  }, []);
+
   const refreshPosts = async () => {
     setPostsLoading(true);
     try {
@@ -875,6 +890,33 @@ export default function AdminDashboard() {
             <span className="font-medium">Wissens-Wiki</span>
           </button>
           <button
+            onClick={() => setActiveTab("icp-generator")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "icp-generator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Target size={18} />
+            <span className="font-medium">K.I. ICP Persona</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("ci-manager")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "ci-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Palette size={18} />
+            <span className="font-medium">CI Manager</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("ai-models")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "ai-models" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Cpu size={18} />
+            <span className="font-medium">KI Modelle & APIs</span>
+          </button>
+          <button
             onClick={() => setActiveTab("creator")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -966,6 +1008,24 @@ export default function AdminDashboard() {
         {activeTab === 'wiki' && (
           <motion.div key="wiki" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
             <KnowledgeWiki />
+          </motion.div>
+        )}
+
+        {activeTab === 'ci-manager' && (
+          <motion.div key="ci-manager" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <CIManager />
+          </motion.div>
+        )}
+
+        {activeTab === 'icp-generator' && (
+          <motion.div key="icp-generator" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <ICPGenerator />
+          </motion.div>
+        )}
+
+        {activeTab === 'ai-models' && (
+          <motion.div key="ai-models" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <AIModelManager />
           </motion.div>
         )}
 
