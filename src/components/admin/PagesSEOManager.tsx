@@ -174,6 +174,14 @@ export default function PagesSEOManager() {
         }
       } catch (e) {
         console.error("Error fetching SEO data", e);
+        if (isMounted) {
+          setMetaTitle('');
+          setMetaDescription('');
+          setMetaKeywords('');
+          setCurrentTitle(activePage.defaultTitle);
+          setCurrentDescription(activePage.defaultDescription);
+          setCurrentKeywords(activePage.defaultKeywords);
+        }
       }
     };
     
