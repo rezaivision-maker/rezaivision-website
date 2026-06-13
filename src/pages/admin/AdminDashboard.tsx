@@ -791,6 +791,17 @@ export default function AdminDashboard() {
           </button>
           <button
             onClick={() => setActiveTab("email")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Mail size={18} />
+            <span className="font-medium">E-Mail Marketing</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("production")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
             }`}
           >
             <FileText size={18} />
