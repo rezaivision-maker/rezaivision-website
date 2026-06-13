@@ -25,23 +25,51 @@ export default function PagesSEOManager() {
   const [loadingAi, setLoadingAi] = useState(false);
   const [saving, setSaving] = useState(false);
 
-  // Note: in a real app, we'd fetch from firestore `seoMetadata` collection here.
+  // Fetch from firestore
   useEffect(() => {
-    // Mock loading for now, we'll implement DB fetch if needed.
-    setMetaTitle(`${activePage.name} | Rezai Vision Videoproduktion`);
-    setMetaDescription('Wir produzieren hochkonvertierende Videos in Kaiserslautern.');
-    setMetaKeywords('Videoproduktion, Kaiserslautern, ' + activePage.name);
+    let isMounted = true;
+    const fetchSEO = async () => {
+      try {
+        const docRef = doc(db, "seoMetadata", activePage.id);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists() && isMounted) {
+          const data = docSnap.data();
+          setMetaTitle(data.title || `${activePage.name} | Rezai Vision Videoproduktion`);
+          setMetaDescription(data.description || 'Wir produzieren hochkonvertierende Videos in Kaiserslautern.');
+          setMetaKeywords(data.keywords || 'Videoproduktion, Kaiserslautern, ' + activePage.name);
+        } else if (isMounted) {
+          setMetaTitle(`${activePage.name} | Rezai Vision Videoproduktion`);
+          setMetaDescription('Wir produzieren hochkonvertierende Videos in Kaiserslautern.');
+          setMetaKeywords('Videoproduktion, Kaiserslautern, ' + activePage.name);
+        }
+      } catch (e) {
+        console.error("Error fetching SEO data", e);
+      }
+    };
+    
+    fetchSEO();
     setAiReview('');
     setIsIndexed(null);
+
+    return () => { isMounted = false; };
   }, [activePage]);
 
   const handleSave = async () => {
     setSaving(true);
-    // await setDoc(doc(db, "seoMetadata", activePage.id), { title: metaTitle, description: metaDescription, keywords: metaKeywords });
-    setTimeout(() => {
+    try {
+      await setDoc(doc(db, "seoMetadata", activePage.id), { 
+        title: metaTitle, 
+        description: metaDescription, 
+        keywords: metaKeywords 
+      }, { merge: true });
+      alert('SEO Daten erfolgreich gespeichert!');
+    } catch (e) {
+      console.error("Error saving SEO data", e);
+      alert('Fehler beim Speichern der SEO Daten.');
+    } finally {
       setSaving(false);
-      alert('SEO Daten gespeichert!');
-    }, 800);
+    }
   };
 
   const checkIndexing = () => {
