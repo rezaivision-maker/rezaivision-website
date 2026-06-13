@@ -4,10 +4,29 @@ import { SEO } from "../../components/SEO";
 export default function VideoStudio() {
   const [prompt, setPrompt] = useState("");
   const [mediaFile, setMediaFile] = useState<File | null>(null);
+  const [htmlUrl, setHtmlUrl] = useState("");
 
-  const handleGenerateAI = () => {
-    alert("KI Video Generierung (LTX 2.3) wird gestartet mit Prompt: " + prompt);
-    // Hier kommt später der API Aufruf hin
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+
+  const handleGenerateAI = async () => {
+    if (!prompt) return alert("Bitte gib einen Prompt ein.");
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:8000/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt, num_frames: 24, width: 512, height: 512 }),
+      });
+      const data = await response.json();
+      setResult(data);
+      alert(`Erfolg: ${data.message} (Gerät: ${data.device_used})`);
+    } catch (error) {
+      console.error(error);
+      alert("Fehler bei der Verbindung zur lokalen KI-API. Läuft der Server auf Port 8000?");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleRenderRemotion = () => {
@@ -46,10 +65,17 @@ export default function VideoStudio() {
 
           <button 
             onClick={handleGenerateAI}
-            className="px-6 py-3 bg-brand-accent text-white font-medium rounded-lg hover:bg-brand-accent/90 transition-colors"
+            disabled={loading}
+            className="px-6 py-3 bg-brand-accent text-white font-medium rounded-lg hover:bg-brand-accent/90 transition-colors disabled:opacity-50"
           >
-            KI Clip Generieren
+            {loading ? "Generiere..." : "KI Clip Generieren"}
           </button>
+          {result && (
+            <div className="mt-4 p-4 bg-slate-100 dark:bg-slate-700 rounded-lg text-sm text-slate-700 dark:text-slate-300">
+              <p><strong>Status:</strong> {result.status}</p>
+              <p><strong>Gerät:</strong> {result.device_used}</p>
+            </div>
+          )}
         </div>
 
         <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm mb-8">
@@ -75,18 +101,39 @@ export default function VideoStudio() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm mb-8">
           <h2 className="text-2xl font-semibold mb-6 text-slate-900 dark:text-white">
-            3. Programmgesteuerte Montage (Remotion)
+            3. Hyperframes (HTML to Video)
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            Kombiniere KI-Assets, Text und deine Uploads zu einem finalen Video.
+            Wandle eine Web-URL oder ein HTML-Layout in eine Video-Animation um.
+          </p>
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              Website URL (z.B. für animierte Charts oder UI-Mockups)
+            </label>
+            <input
+              type="url"
+              className="w-full p-4 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white"
+              placeholder="https://deine-website.de/animation"
+              value={htmlUrl}
+              onChange={(e) => setHtmlUrl(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm">
+          <h2 className="text-2xl font-semibold mb-6 text-slate-900 dark:text-white">
+            4. Programmgesteuerte Montage (Remotion)
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
+            Kombiniere KI-Assets, deine Uploads und Hyperframes zu einem finalen Video.
           </p>
           <button 
             onClick={handleRenderRemotion}
             className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-medium rounded-lg hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
           >
-            Finales Video Rendern
+            Finales Video Rendern (Vorschau öffnen)
           </button>
         </div>
 
