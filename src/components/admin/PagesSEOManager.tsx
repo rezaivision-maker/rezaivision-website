@@ -292,7 +292,7 @@ export default function PagesSEOManager() {
             </a>
             <button 
               onClick={() => {
-                window.open('https://www.google.com/ping?sitemap=https://www.rezaivision.de/api/sitemap.xml', '_blank');
+                window.open('https://www.google.com/ping?sitemap=https://www.rezaivision.de/sitemap.xml', '_blank');
               }}
               className="bg-brand-accent text-brand-bg px-4 py-2 rounded-lg font-bold text-sm transition-all hover:brightness-110 flex items-center justify-center"
             >
