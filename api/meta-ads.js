@@ -217,7 +217,7 @@ export default async function handler(req, res) {
       }
 
       // Step 1: Create ad creative
-      const creative: any = {
+      const creative = {
         name: `Creative: ${name}`,
         object_story_spec: {
           page_id: PAGE_ID,

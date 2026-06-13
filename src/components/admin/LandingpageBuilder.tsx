@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../lib/firebase';
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from 'firebase/firestore';
-import { Save, Plus, Loader2, Trash2, Wand2, Globe, Copy, ExternalLink, RefreshCw } from 'lucide-react';
+import { Save, Plus, Loader2, Trash2, Wand2, Globe, Copy, ExternalLink, RefreshCw, Sparkles } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 interface LandingPageConfig {
