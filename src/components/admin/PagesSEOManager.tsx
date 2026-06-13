@@ -132,6 +132,10 @@ export default function PagesSEOManager() {
   const [metaDescription, setMetaDescription] = useState('');
   const [metaKeywords, setMetaKeywords] = useState('');
   
+  const [currentTitle, setCurrentTitle] = useState('');
+  const [currentDescription, setCurrentDescription] = useState('');
+  const [currentKeywords, setCurrentKeywords] = useState('');
+  
   const [isIndexed, setIsIndexed] = useState<boolean | null>(null);
   const [checkingIndex, setCheckingIndex] = useState(false);
   
@@ -152,10 +156,16 @@ export default function PagesSEOManager() {
           setMetaTitle(data.title || activePage.defaultTitle);
           setMetaDescription(data.description || activePage.defaultDescription);
           setMetaKeywords(data.keywords || activePage.defaultKeywords);
+          setCurrentTitle(data.title || activePage.defaultTitle);
+          setCurrentDescription(data.description || activePage.defaultDescription);
+          setCurrentKeywords(data.keywords || activePage.defaultKeywords);
         } else if (isMounted) {
           setMetaTitle(activePage.defaultTitle);
           setMetaDescription(activePage.defaultDescription);
           setMetaKeywords(activePage.defaultKeywords);
+          setCurrentTitle(activePage.defaultTitle);
+          setCurrentDescription(activePage.defaultDescription);
+          setCurrentKeywords(activePage.defaultKeywords);
         }
       } catch (e) {
         console.error("Error fetching SEO data", e);
@@ -172,12 +182,17 @@ export default function PagesSEOManager() {
   const handleSave = async () => {
     setSaving(true);
     try {
-      await setDoc(doc(db, "seoMetadata", activePage.id), { 
+      const docRef = doc(db, "seoMetadata", activePage.id);
+      await setDoc(docRef, { 
         title: metaTitle, 
         description: metaDescription, 
-        keywords: metaKeywords 
+        keywords: metaKeywords,
+        updatedAt: new Date().toISOString()
       }, { merge: true });
-      alert('SEO Daten erfolgreich gespeichert!');
+      setCurrentTitle(metaTitle);
+      setCurrentDescription(metaDescription);
+      setCurrentKeywords(metaKeywords);
+      alert('Erfolgreich gespeichert!');
     } catch (e) {
       console.error("Error saving SEO data", e);
       alert('Fehler beim Speichern der SEO Daten.');
@@ -281,9 +296,31 @@ export default function PagesSEOManager() {
             </button>
           </div>
 
+          {/* Current Stand */}
+          <div className="mb-8 p-4 bg-black/30 rounded-xl border border-white/5">
+            <h4 className="text-sm font-bold text-gray-300 mb-3 flex items-center gap-2">
+              <CheckCircle2 size={16} className="text-brand-accent" />
+              Aktuell Live
+            </h4>
+            <div className="space-y-3">
+              <div>
+                <span className="text-xs text-gray-500 uppercase">Title</span>
+                <p className="text-sm text-gray-200 mt-0.5">{currentTitle}</p>
+              </div>
+              <div>
+                <span className="text-xs text-gray-500 uppercase">Description</span>
+                <p className="text-sm text-gray-200 mt-0.5">{currentDescription}</p>
+              </div>
+              <div>
+                <span className="text-xs text-gray-500 uppercase">Keywords</span>
+                <p className="text-sm text-gray-200 mt-0.5">{currentKeywords}</p>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Meta Title</label>
+              <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Meta Title (Bearbeiten)</label>
               <input
                 type="text"
                 value={metaTitle}

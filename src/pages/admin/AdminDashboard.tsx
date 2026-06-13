@@ -5,7 +5,7 @@ import {
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
-  LayoutTemplate, Sparkles
+  LayoutTemplate, Sparkles, Users, Mail
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -14,6 +14,8 @@ import { BlogPost } from "@/data/blogPosts";
 import CalculatorAdmin from "@/components/admin/CalculatorAdmin";
 import PagesSEOManager from "@/components/admin/PagesSEOManager";
 import CreatorChannel from "@/components/admin/CreatorChannel";
+import CRMManager from "@/components/admin/CRMManager";
+import EmailMarketingSetup from "@/components/admin/EmailMarketingSetup";
 
 const generateSlug = (text: string) => {
   return text
@@ -775,6 +777,24 @@ export default function AdminDashboard() {
             <span className="font-medium">Seiten & SEO</span>
           </button>
           <button
+            onClick={() => setActiveTab("crm")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "crm" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Users size={18} />
+            <span className="font-medium">Kontakte & Leads</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("email")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Mail size={18} />
+            <span className="font-medium">E-Mail Marketing</span>
+          </button>
+          <button
             onClick={() => setActiveTab("creator")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -797,6 +817,8 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="flex-1 px-6 md:px-12 py-8 overflow-y-auto">
+        {activeTab === "crm" && <CRMManager />}
+        {activeTab === "email" && <EmailMarketingSetup />}
         {activeTab === "blog" && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-8">

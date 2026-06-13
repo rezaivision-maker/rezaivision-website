@@ -1,23 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /impressum
-Disallow: /agb
 
-# AI Agents & LLM Bots
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Anthropic-ai
-Allow: /
-
-Sitemap: https://www.rezaivision.de/sitemap.xml
+Sitemap: https://www.rezaivision.de/api/sitemap.xml
