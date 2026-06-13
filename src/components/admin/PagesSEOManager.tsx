@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Save, Search, Sparkles, Loader2, CheckCircle2, AlertCircle, LayoutTemplate } from 'lucide-react';
+import { Save, Search, Sparkles, Loader2, CheckCircle2, AlertCircle, LayoutTemplate, Globe } from 'lucide-react';
 import { db } from '../../lib/firebase';
 import { doc, getDoc, setDoc, collection, getDocs } from 'firebase/firestore';
 
@@ -260,8 +260,36 @@ export default function PagesSEOManager() {
       {/* Main Form */}
       <div className="lg:col-span-3 space-y-6">
         
+        {/* Sitemap Box */}
+        <div className="bg-brand-accent/10 border border-brand-accent/20 rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 className="text-lg font-bold text-white mb-1 flex items-center gap-2">
+              <Globe size={18} className="text-brand-accent" /> Sitemap & Robots.txt
+            </h3>
+            <p className="text-sm text-gray-400">Deine dynamische Sitemap.xml ist live. Reiche sie bei Google ein.</p>
+          </div>
+          <div className="flex gap-3">
+            <a 
+              href="/api/sitemap.xml" 
+              target="_blank" 
+              rel="noreferrer"
+              className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center justify-center"
+            >
+              Ansehen
+            </a>
+            <button 
+              onClick={() => {
+                window.open('https://www.google.com/ping?sitemap=https://www.rezaivision.de/api/sitemap.xml', '_blank');
+              }}
+              className="bg-brand-accent text-brand-bg px-4 py-2 rounded-lg font-bold text-sm transition-all hover:brightness-110 flex items-center justify-center"
+            >
+              Google anpingen
+            </button>
+          </div>
+        </div>
+
         {/* Indexing Status Box */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h3 className="text-lg font-bold text-white mb-1">Indexierungs-Status</h3>
             <p className="text-sm text-gray-400">Ist diese Seite bei Google im Index?</p>
