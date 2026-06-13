@@ -153,16 +153,21 @@ export default function PagesSEOManager() {
         
         if (docSnap.exists() && isMounted) {
           const data = docSnap.data();
-          setMetaTitle(data.title || activePage.defaultTitle);
-          setMetaDescription(data.description || activePage.defaultDescription);
-          setMetaKeywords(data.keywords || activePage.defaultKeywords);
+          // Input fields should only show what the user actually saved (no pre-fill with defaults)
+          setMetaTitle(data.title || '');
+          setMetaDescription(data.description || '');
+          setMetaKeywords(data.keywords || '');
+          
+          // "Aktuell Live" shows the saved data, or falls back to the default if nothing saved
           setCurrentTitle(data.title || activePage.defaultTitle);
           setCurrentDescription(data.description || activePage.defaultDescription);
           setCurrentKeywords(data.keywords || activePage.defaultKeywords);
         } else if (isMounted) {
-          setMetaTitle(activePage.defaultTitle);
-          setMetaDescription(activePage.defaultDescription);
-          setMetaKeywords(activePage.defaultKeywords);
+          // No DB entry -> Inputs empty, Live view shows default
+          setMetaTitle('');
+          setMetaDescription('');
+          setMetaKeywords('');
+          
           setCurrentTitle(activePage.defaultTitle);
           setCurrentDescription(activePage.defaultDescription);
           setCurrentKeywords(activePage.defaultKeywords);

@@ -53,68 +53,69 @@ export default function CalculatorAdmin() {
   };
 
   const loadPremiumFunnel = () => {
-    if (!confirm("Achtung: Dies überschreibt alle bisherigen Schritte mit dem neuen psychologischen Premium-Funnel. Fortfahren?")) return;
+    if (!confirm("Möchtest du den neuen regionalen Preis-Funnel (Kaiserslautern -15%) laden?")) return;
     
     setSteps([
       {
         id: "ziel",
         order: 1,
         title: "Was ist das primäre Ziel des Videos?",
-        description: "Bevor wir über Technik sprechen, müssen wir Ihr Business-Ziel verstehen.",
+        description: "Wähle das Format, das am besten zu deinen Zielen passt.",
         multiSelect: false,
         options: [
-          { id: "opt_ziel1", title: "Mehr qualifizierte Bewerber", description: "Recruiting & Employer Branding", basePrice: 2400, isPackage: true },
-          { id: "opt_ziel2", title: "Mehr Vertrauen & Sichtbarkeit", description: "Imagefilm & Markenaufbau", basePrice: 2800, isPackage: true },
-          { id: "opt_ziel3", title: "Mehr Sales & Conversions", description: "Video Ads für Social Media", basePrice: 1800, isPackage: true },
-          { id: "opt_ziel4", title: "Moderne Social Media Präsenz", description: "TikToks & Reels (Retainer-Basis)", basePrice: 1500, isPackage: true }
+          { id: "opt_ziel2", title: "Unternehmens- / Imagefilm", description: "Vertrauen & Sichtbarkeit", basePrice: 3990, isPackage: true },
+          { id: "opt_ziel1", title: "Recruiting & Employer Branding", description: "Mehr qualifizierte Bewerber", basePrice: 3820, isPackage: true },
+          { id: "opt_ziel3", title: "Social Media Video Ads", description: "Performante Kurz-Werbefilme", basePrice: 1700, isPackage: true },
+          { id: "opt_ziel4", title: "Social Media Content (Reels/TikToks)", description: "1 Tag Produktion für massenhaft Content", basePrice: 990, isPackage: true }
         ]
       },
       {
         id: "qualitaet",
         order: 2,
-        title: "Wie hoch ist Ihr Qualitätsanspruch?",
-        description: "Wie soll Ihre Marke nach außen wahrgenommen werden?",
+        title: "Wie hoch ist dein Qualitätsanspruch?",
+        description: "Entscheidet über Kameras, Licht und Color-Grading-Aufwand.",
         multiSelect: false,
         options: [
-          { id: "opt_qual1", title: "Solide & Authentisch", description: "Fokus auf klare Botschaften und echte Einblicke.", basePrice: 0, isPackage: false },
-          { id: "opt_qual2", title: "Premium Cinematic", description: "High-End Look, Kino-Flair & aufwendiges Color Grading.", basePrice: 800, isPackage: false }
+          { id: "opt_qual1", title: "Solide & Authentisch", description: "Professioneller Look, echte Einblicke.", basePrice: 0, isPackage: false },
+          { id: "opt_qual2", title: "High-End Cinematic", description: "Kino-Look, aufwendiges Licht & Color Grading.", basePrice: 850, isPackage: false }
         ]
       },
       {
         id: "umfang",
         order: 3,
-        title: "Wie schätzen Sie den Umfang ein?",
-        description: "Ein grober Richtwert für die Produktion.",
+        title: "Wie schätzt du den Produktionsumfang ein?",
+        description: "Ein grober Richtwert für die Drehtage.",
         multiSelect: false,
         options: [
           { id: "opt_umf1", title: "Knackig & Effizient", description: "1 intensiver Drehtag vor Ort.", basePrice: 0, isPackage: false },
-          { id: "opt_umf2", title: "Umfangreich", description: "2 Drehtage, mehrere Locations & Interviews.", basePrice: 1200, isPackage: false },
-          { id: "opt_umf3", title: "Langfristig", description: "Mehrere Termine für einen großen Content-Pool.", basePrice: 2500, isPackage: false }
+          { id: "opt_umf2", title: "Umfangreich", description: "2 Drehtage, mehrere Locations.", basePrice: 1200, isPackage: false },
+          { id: "opt_umf3", title: "Großprojekt", description: "3+ Drehtage, große Crew.", basePrice: 2500, isPackage: false }
         ]
       },
       {
         id: "addons",
         order: 4,
         title: "Gibt es besondere Wünsche? (Optional)",
-        description: "Strategische Add-Ons für maximale Wirkung.",
+        description: "Diese Add-Ons heben dein Video auf das nächste Level.",
         multiSelect: true,
         options: [
-          { id: "opt_add1", title: "Cinematic FPV / Drohne", description: "Atemberaubende Luftaufnahmen.", basePrice: 350, isPackage: false },
-          { id: "opt_add2", title: "Professioneller Sprecher", description: "Bekannte Voiceover-Stimmen aus TV/Radio.", basePrice: 450, isPackage: false },
-          { id: "opt_add3", title: "Social Media Cut-Downs", description: "3x Kurzversionen im Hochformat (9:16).", basePrice: 400, isPackage: false },
-          { id: "opt_add4", title: "Darsteller / Casting", description: "Externe Models für gezielte Werbekampagnen.", basePrice: 800, isPackage: false }
+          { id: "opt_add1", title: "FPV Drohnenflug / Luftaufnahmen", description: "Atemberaubende Perspektiven.", basePrice: 390, isPackage: false },
+          { id: "opt_add2", title: "Professioneller Voiceover", description: "Bekannte Stimmen aus TV/Radio.", basePrice: 450, isPackage: false },
+          { id: "opt_add3", title: "3x Social Media Cut-Downs", description: "Kurzversionen im 9:16 Format.", basePrice: 490, isPackage: false },
+          { id: "opt_add4", title: "Darsteller / Casting", description: "Externe Models für Werbekampagnen.", basePrice: 850, isPackage: false },
+          { id: "opt_add5", title: "Visagist / Maske vor Ort", description: "Für den perfekten Look vor der Kamera.", basePrice: 450, isPackage: false }
         ]
       },
       {
         id: "dringlichkeit",
         order: 5,
-        title: "Wie ist Ihre zeitliche Planung?",
-        description: "Wann soll das Projekt final abgeschlossen sein?",
+        title: "Wie ist deine zeitliche Planung?",
+        description: "Wann soll das Projekt fertiggestellt sein?",
         multiSelect: false,
         options: [
-          { id: "opt_zeit1", title: "Ganz entspannt", description: "In den nächsten 1-2 Monaten.", basePrice: 0, isPackage: false },
-          { id: "opt_zeit2", title: "Normale Planung", description: "Innerhalb der nächsten 3-4 Wochen.", basePrice: 0, isPackage: false },
-          { id: "opt_zeit3", title: "Express-Produktion", description: "Fertigstellung innerhalb von 10 Tagen (Prio-Zuschlag).", basePrice: 0, isPackage: false, multiplierIndex: 1.25 }
+          { id: "opt_zeit1", title: "Normale Planung", description: "In den nächsten 4-8 Wochen.", basePrice: 0, isPackage: false, multiplierIndex: 1 },
+          { id: "opt_zeit2", title: "Zeitnah", description: "Innerhalb der nächsten 2-4 Wochen.", basePrice: 0, isPackage: false, multiplierIndex: 1 },
+          { id: "opt_zeit3", title: "Express-Produktion", description: "Innerhalb von 10 Tagen (+25%).", basePrice: 0, isPackage: false, multiplierIndex: 1.25 }
         ]
       }
     ]);
