@@ -16,6 +16,7 @@ import PagesSEOManager from "@/components/admin/PagesSEOManager";
 import CreatorChannel from "@/components/admin/CreatorChannel";
 import CRMManager from "@/components/admin/CRMManager";
 import EmailMarketingSetup from "@/components/admin/EmailMarketingSetup";
+import ProductionSuite from "@/components/admin/ProductionSuite";
 
 const generateSlug = (text: string) => {
   return text
@@ -795,6 +796,15 @@ export default function AdminDashboard() {
             <span className="font-medium">E-Mail Marketing</span>
           </button>
           <button
+            onClick={() => setActiveTab("production")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <FileText size={18} />
+            <span className="font-medium">Production Suite</span>
+          </button>
+          <button
             onClick={() => setActiveTab("creator")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -817,6 +827,18 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="flex-1 px-6 md:px-12 py-8 overflow-y-auto">
+        {activeTab === 'production' && (
+          <motion.div
+            key="production"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <ProductionSuite />
+          </motion.div>
+        )}
+
         {activeTab === "crm" && <CRMManager />}
         {activeTab === "email" && <EmailMarketingSetup />}
         {activeTab === "blog" && (
