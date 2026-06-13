@@ -85,8 +85,8 @@ export default function AgentSwarms() {
       const agent = agents[i];
 
       try {
-        // Send to local ollama bridge
-        const res = await fetch('/api/ollama-chat', {
+        // Send directly to local Ollama instance running on port 11434
+        const res = await fetch('http://localhost:11434/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -97,7 +97,8 @@ export default function AgentSwarms() {
                   ? `Hier ist die Aufgabe: ${currentPayload}` 
                   : `Hier ist die Vorarbeit deines Kollegen. Bitte bearbeite sie entsprechend deiner Rolle weiter:\n\n${currentPayload}` 
               }
-            ]
+            ],
+            stream: false
           })
         });
 
