@@ -144,7 +144,7 @@ export default function LeadScraper() {
     setApiNotConfigured(false);
 
     try {
-      const res = await fetch('/api/lead-scraper?action=search-places', {
+      const res = await fetch('/api/leads/scraper?action=search-places', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: searchQuery, location: searchLocation, radius: searchRadius * 1000 }),
@@ -170,7 +170,7 @@ export default function LeadScraper() {
   const enrichLead = async (place: any, index: number) => {
     setEnrichingId(place.id || index.toString());
     try {
-      const res = await fetch('/api/lead-scraper?action=enrich-lead', {
+      const res = await fetch('/api/leads/scraper?action=enrich-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ business: place, customInstructions }),

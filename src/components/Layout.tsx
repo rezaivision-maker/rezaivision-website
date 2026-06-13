@@ -326,112 +326,114 @@ export function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-brand-darker pt-24 pb-12 border-t border-white/5">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <div>
-              <Link to="/" className="group inline-block mb-6">
-                <img 
-                  src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg" 
-                  alt="Rezai Vision Logo" 
-                  className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                  width="240"
-                  height="48"
-                />
-              </Link>
-              <p className="text-gray-400 mb-6 max-w-xs text-sm leading-relaxed">
-                Professionelle & verlässliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und Frankfurt. Starke Arbeit verdient es, gesehen zu werden.
-              </p>
-            </div>
+      {!location.pathname.startsWith("/admin") && (
+        <footer className="bg-brand-darker pt-24 pb-12 border-t border-white/5">
+          <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+              <div>
+                <Link to="/" className="group inline-block mb-6">
+                  <img 
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg" 
+                    alt="Rezai Vision Logo" 
+                    className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                    width="240"
+                    height="48"
+                  />
+                </Link>
+                <p className="text-gray-400 mb-6 max-w-xs text-sm leading-relaxed">
+                  Professionelle & verlässliche Videoproduktion mit Hauptsitz in Kaiserslautern. Wir produzieren Filme, Social Ads und Eventvideos im Umkreis von 100 km, inklusive Mannheim, Saarbrücken, Mainz und Frankfurt. Starke Arbeit verdient es, gesehen zu werden.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="text-lg font-display font-semibold mb-6">Leistungen</h3>
-              <ul className="space-y-4 text-gray-400">
-                <li><Link to="/leistungen#unternehmensfilm" className="hover:text-brand-accent transition-colors">Unternehmensfilm</Link></li>
-                <li><Link to="/leistungen#recruiting" className="hover:text-brand-accent transition-colors">Recruiting Video</Link></li>
-                <li><Link to="/leistungen#werbevideo" className="hover:text-brand-accent transition-colors">Werbevideo</Link></li>
-                <li><Link to="/leistungen#social-media" className="hover:text-brand-accent transition-colors">Social Media Content</Link></li>
-                <li className="pt-2">
-                  <div className="flex flex-col gap-3">
-                    <Link
-                      to="/reza-e-motion"
-                      className={cn(
-                        "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all text-sm w-fit",
-                        location.pathname === "/reza-e-motion"
-                          ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
-                          : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
-                      )}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                      reza-e-motion
-                    </Link>
-                    <div className="pl-4 border-l border-white/10 flex flex-col gap-2 text-sm">
-                      <Link to="/reza-e-motion/eventbegleitung" className="text-gray-400 hover:text-purple-400 transition-colors">Eventbegleitung</Link>
-                      <Link to="/reza-e-motion/musikvideos" className="text-gray-400 hover:text-purple-400 transition-colors">Musikvideos</Link>
-                      <Link to="/reza-e-motion/hochzeitsfilme" className="text-gray-400 hover:text-purple-400 transition-colors">Hochzeitsfilme</Link>
+              <div>
+                <h3 className="text-lg font-display font-semibold mb-6">Leistungen</h3>
+                <ul className="space-y-4 text-gray-400">
+                  <li><Link to="/leistungen#unternehmensfilm" className="hover:text-brand-accent transition-colors">Unternehmensfilm</Link></li>
+                  <li><Link to="/leistungen#recruiting" className="hover:text-brand-accent transition-colors">Recruiting Video</Link></li>
+                  <li><Link to="/leistungen#werbevideo" className="hover:text-brand-accent transition-colors">Werbevideo</Link></li>
+                  <li><Link to="/leistungen#social-media" className="hover:text-brand-accent transition-colors">Social Media Content</Link></li>
+                  <li className="pt-2">
+                    <div className="flex flex-col gap-3">
+                      <Link
+                        to="/reza-e-motion"
+                        className={cn(
+                          "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all text-sm w-fit",
+                          location.pathname === "/reza-e-motion"
+                            ? "bg-purple-500/10 text-purple-400 border-purple-500/30"
+                            : "bg-white/5 text-gray-300 border-white/10 hover:bg-purple-500/10 hover:text-purple-400 hover:border-purple-500/30"
+                        )}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                        reza-e-motion
+                      </Link>
+                      <div className="pl-4 border-l border-white/10 flex flex-col gap-2 text-sm">
+                        <Link to="/reza-e-motion/eventbegleitung" className="text-gray-400 hover:text-purple-400 transition-colors">Eventbegleitung</Link>
+                        <Link to="/reza-e-motion/musikvideos" className="text-gray-400 hover:text-purple-400 transition-colors">Musikvideos</Link>
+                        <Link to="/reza-e-motion/hochzeitsfilme" className="text-gray-400 hover:text-purple-400 transition-colors">Hochzeitsfilme</Link>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-display font-semibold mb-6">Unternehmen</h3>
-              <ul className="space-y-4 text-gray-400">
-                <li><Link to="/#cases" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
-                <li><Link to="/preisrechner" className="hover:text-brand-accent transition-colors">Preisrechner</Link></li>
-                <li><Link to="/ueber-uns" className="hover:text-brand-accent transition-colors">Über uns</Link></li>
-                <li><Link to="/technik" className="hover:text-brand-accent transition-colors">Technik & Qualität</Link></li>
-                <li><Link to="/blog" className="hover:text-brand-accent transition-colors">Magazin</Link></li>
-                <li><Link to="/faq" className="hover:text-brand-accent transition-colors">FAQ</Link></li>
-                <li><Link to="/glossar" className="hover:text-brand-accent transition-colors">Glossar</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-display font-semibold mb-6">Kontakt</h3>
-              <ul className="space-y-4 text-gray-400">
-                <li>Kaiserslautern, Deutschland</li>
-                <li><a href="mailto:rezaivision@gmail.com" className="hover:text-brand-accent transition-colors">rezaivision@gmail.com</a></li>
-                <li>
-                  <div className="flex flex-col gap-1">
-                    <a href="tel:+4963162512000" className="hover:text-brand-accent transition-colors">0631 62512000</a>
-                    <a href="tel:+4917631739958" className="hover:text-brand-accent transition-colors">0176 31739958</a>
-                  </div>
-                </li>
-              </ul>
-              <Button href="/kontakt" variant="outline" size="sm" className="mt-6 w-full">
-                Projekt anfragen
-              </Button>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Rezai Vision. Alle Rechte vorbehalten.</p>
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="flex gap-4">
-                <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
-                  <Instagram size={20} />
-                  <span className="sr-only">Instagram</span>
-                </a>
-                <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
-                  <Music size={20} />
-                  <span className="sr-only">TikTok</span>
-                </a>
-                <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
-                  <Facebook size={20} />
-                  <span className="sr-only">Facebook</span>
-                </a>
+                  </li>
+                </ul>
               </div>
-              <div className="flex gap-6">
-                <Link to="/impressum" className="hover:text-white transition-colors">Impressum</Link>
-                <Link to="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
-                <Link to="/agb" className="hover:text-white transition-colors">AGB</Link>
+
+              <div>
+                <h3 className="text-lg font-display font-semibold mb-6">Unternehmen</h3>
+                <ul className="space-y-4 text-gray-400">
+                  <li><Link to="/#cases" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
+                  <li><Link to="/preisrechner" className="hover:text-brand-accent transition-colors">Preisrechner</Link></li>
+                  <li><Link to="/ueber-uns" className="hover:text-brand-accent transition-colors">Über uns</Link></li>
+                  <li><Link to="/technik" className="hover:text-brand-accent transition-colors">Technik & Qualität</Link></li>
+                  <li><Link to="/blog" className="hover:text-brand-accent transition-colors">Magazin</Link></li>
+                  <li><Link to="/faq" className="hover:text-brand-accent transition-colors">FAQ</Link></li>
+                  <li><Link to="/glossar" className="hover:text-brand-accent transition-colors">Glossar</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-display font-semibold mb-6">Kontakt</h3>
+                <ul className="space-y-4 text-gray-400">
+                  <li>Kaiserslautern, Deutschland</li>
+                  <li><a href="mailto:rezaivision@gmail.com" className="hover:text-brand-accent transition-colors">rezaivision@gmail.com</a></li>
+                  <li>
+                    <div className="flex flex-col gap-1">
+                      <a href="tel:+4963162512000" className="hover:text-brand-accent transition-colors">0631 62512000</a>
+                      <a href="tel:+4917631739958" className="hover:text-brand-accent transition-colors">0176 31739958</a>
+                    </div>
+                  </li>
+                </ul>
+                <Button href="/kontakt" variant="outline" size="sm" className="mt-6 w-full">
+                  Projekt anfragen
+                </Button>
               </div>
             </div>
+
+            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+              <p>© {new Date().getFullYear()} Rezai Vision. Alle Rechte vorbehalten.</p>
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex gap-4">
+                  <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
+                    <Instagram size={20} />
+                    <span className="sr-only">Instagram</span>
+                  </a>
+                  <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
+                    <Music size={20} />
+                    <span className="sr-only">TikTok</span>
+                  </a>
+                  <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors">
+                    <Facebook size={20} />
+                    <span className="sr-only">Facebook</span>
+                  </a>
+                </div>
+                <div className="flex gap-6">
+                  <Link to="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+                  <Link to="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+                  <Link to="/agb" className="hover:text-white transition-colors">AGB</Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      )}
       <CookieBanner />
     </div>
   );

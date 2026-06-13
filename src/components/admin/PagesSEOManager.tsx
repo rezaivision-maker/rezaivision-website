@@ -225,7 +225,7 @@ export default function PagesSEOManager() {
   const runAiReview = async () => {
     setLoadingAi(true);
     try {
-      const response = await fetch('/api/ai-chat', {
+      const response = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -283,7 +283,7 @@ export default function PagesSEOManager() {
           </div>
           <div className="flex gap-3">
             <a 
-              href="/api/sitemap.xml" 
+              href="/api/seo/sitemap.xml" 
               target="_blank" 
               rel="noreferrer"
               className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all flex items-center justify-center"

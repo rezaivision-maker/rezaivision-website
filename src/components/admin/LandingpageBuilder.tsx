@@ -124,7 +124,7 @@ Generiere ein JSON mit EXAKT diesen Schlüsseln (KEIN Markdown außenrum, nur da
     `;
 
     try {
-      const response = await fetch('/api/ai-chat', {
+      const response = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })

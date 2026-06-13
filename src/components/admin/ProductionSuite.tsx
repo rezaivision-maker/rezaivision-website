@@ -86,7 +86,7 @@ Gebe für jede Idee an:
 2. Warum es psychologisch funktioniert.
 3. Welche SFX (Soundeffekte) und Musikrichtung (Vibe) den Clip tragen.
       `;
-      const res = await fetch('/api/ai-chat', {
+      const res = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
@@ -304,7 +304,7 @@ Format für jeden Shot im JSON Array:
     `;
 
     try {
-      const response = await fetch('/api/ai-chat', {
+      const response = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
@@ -440,7 +440,7 @@ Schreibe das Skript direkt hin. Gib nur das fertige Skript zurück, ohne Komment
     `;
 
     try {
-      const response = await fetch('/api/ai-chat', {
+      const response = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })

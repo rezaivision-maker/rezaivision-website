@@ -231,7 +231,7 @@ export default function AIVideoHub() {
       const body: any = { prompt: genPrompt, mode: genMode, duration: genDuration };
       if (genMode === 'image-to-video' && genImageUrl) body.imageUrl = genImageUrl;
 
-      const res = await fetch('/api/higgsfield?action=generate', {
+      const res = await fetch('/api/marketing/higgsfield?action=generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
@@ -342,7 +342,7 @@ Antworte NUR mit gültigem JSON, kein Markdown:
     `;
 
     try {
-      const res = await fetch('/api/ai-chat', {
+      const res = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: systemPrompt }),

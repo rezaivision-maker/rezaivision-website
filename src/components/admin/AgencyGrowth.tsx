@@ -123,7 +123,7 @@ Schreibe eine unwiderstehliche, psychologisch optimierte Kalt-Akquise Nachricht.
 - Tonalität muss exakt zum CI-Profil passen.
       `;
 
-      const res = await fetch('/api/ai-chat', {
+      const res = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),
@@ -192,7 +192,7 @@ Struktur der Antwort:
 4. **Benötigte SOPs** (3-4 Punkte, was er dokumentieren muss, bevor der Freelancer startet).
       `;
 
-      const res = await fetch('/api/ai-chat', {
+      const res = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),

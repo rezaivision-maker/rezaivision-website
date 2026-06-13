@@ -142,7 +142,7 @@ Erstelle ein hochqualitatives, psychologisches Profil in folgendem JSON-Format (
     `;
 
     try {
-      const response = await fetch('/api/ai-chat', {
+      const response = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })

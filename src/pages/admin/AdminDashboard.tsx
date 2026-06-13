@@ -135,7 +135,7 @@ export default function AdminDashboard() {
   const fetchAnalytics = async () => {
     setAnalyticsLoading(true);
     try {
-      const res = await fetch('/api/analytics');
+      const res = await fetch('/api/analytics/ga4');
       if (res.ok) {
         const data = await res.json();
         setAnalyticsData(data);
@@ -150,7 +150,7 @@ export default function AdminDashboard() {
   const fetchGsc = async () => {
     setGscLoading(true);
     try {
-      const res = await fetch('/api/search-console');
+      const res = await fetch('/api/analytics/search-console');
       if (res.ok) {
         const data = await res.json();
         setGscData(data);
@@ -853,228 +853,262 @@ export default function AdminDashboard() {
 
   // DASHBOARD
   return (
-    <div className="min-h-screen bg-brand-bg pt-24 pb-12 flex">
+    <div className="h-screen bg-brand-bg pt-24 flex overflow-hidden">
       <Helmet>
         <title>CMS Dashboard | reza-e-motion</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       {/* Sidebar */}
-      <aside className="w-64 bg-brand-darker border-r border-white/5 hidden md:flex flex-col h-[calc(100vh-6rem)] sticky top-24">
-        <div className="p-6">
+      <aside className="w-64 bg-brand-darker border-r border-white/5 hidden md:flex flex-col h-full shrink-0">
+        <div className="p-6 shrink-0">
           <h2 className="text-xl font-display font-bold text-white mb-2">CMS Backend</h2>
           <p className="text-xs text-gray-400">Eingeloggt als {user.email}</p>
         </div>
-        <nav className="flex-1 px-4 space-y-2">
-          <button
-            onClick={() => setActiveTab("blog")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "blog" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <FileText size={18} />
-            <span className="font-medium">Blog & Artikel</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("seo")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "seo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Globe size={18} />
-            <span className="font-medium">Performance & SEO</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("calculator")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "calculator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Monitor size={18} />
-            <span className="font-medium">Preisrechner</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("pages")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "pages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <LayoutTemplate size={18} />
-            <span className="font-medium">Seiten & SEO</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("crm")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "crm" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Users size={18} />
-            <span className="font-medium">Kontakte & Leads</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("email")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Mail size={18} />
-            <span className="font-medium">E-Mail Marketing</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("production")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <FileText size={18} />
-            <span className="font-medium">Production Suite</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("marketing")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "marketing" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Instagram size={18} />
-            <span className="font-medium">Marketing Studio</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("agency-growth")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "agency-growth" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <TrendingUp size={18} />
-            <span className="font-medium">Agency Growth</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("invoice")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "invoice" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <FileText size={18} />
-            <span className="font-medium">Business (PDFs)</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("landingpages")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "landingpages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Globe size={18} />
-            <span className="font-medium">Landingpages</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("aivideo")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "aivideo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Video size={18} />
-            <span className="font-medium">KI Video Hub</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("motion")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "motion" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Zap size={18} />
-            <span className="font-medium">Motion Studio (Framer)</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("sales")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "sales" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Brain size={18} />
-            <span className="font-medium">Sales & Psychologie</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("wiki")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "wiki" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <BookOpen size={18} />
-            <span className="font-medium">Wissens-Wiki</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("icp-generator")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "icp-generator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Target size={18} />
-            <span className="font-medium">K.I. ICP Persona</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("ci-manager")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "ci-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Palette size={18} />
-            <span className="font-medium">CI Manager</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("ai-models")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "ai-models" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Cpu size={18} />
-            <span className="font-medium">KI Modelle & APIs</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("swarms")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "swarms" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Network size={18} />
-            <span className="font-medium">Agent Swarms</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("creator")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Sparkles size={18} />
-            <span className="font-medium">Creator Channel</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("jarvis")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "jarvis" ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Mic size={18} />
-            <span className="font-medium uppercase tracking-wider text-sm">J.A.R.V.I.S. Voice</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("campaign-manager")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "campaign-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Megaphone size={18} />
-            <span className="font-medium">Ads & Manus AI</span>
-          </button>
-          <button
-            onClick={() => setActiveTab("settings")}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
-              activeTab === "settings" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-            }`}
-          >
-            <Settings size={18} />
-            <span className="font-medium">Einstellungen & API</span>
-          </button>
+        <nav className="flex-1 px-4 space-y-6 overflow-y-auto pb-6 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          {/* Creation & Branding */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-2 px-3 select-none">
+              Creation & Branding
+            </div>
+            <button
+              onClick={() => setActiveTab("production")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <FileText size={18} />
+              <span className="font-medium">Production Suite</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("marketing")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "marketing" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Instagram size={18} />
+              <span className="font-medium">Marketing Studio</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("aivideo")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "aivideo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Video size={18} />
+              <span className="font-medium">KI Video Hub</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("motion")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "motion" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Zap size={18} />
+              <span className="font-medium">Motion Studio (Framer)</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("ci-manager")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "ci-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Palette size={18} />
+              <span className="font-medium">CI Manager</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("blog")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "blog" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <FileText size={18} />
+              <span className="font-medium">Blog & Artikel</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("creator")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Sparkles size={18} />
+              <span className="font-medium">Creator Channel</span>
+            </button>
+          </div>
+
+          {/* Leads & Clients */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
+              Leads & Clients
+            </div>
+            <button
+              onClick={() => setActiveTab("crm")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "crm" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Users size={18} />
+              <span className="font-medium">Kontakte & Leads</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("email")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Mail size={18} />
+              <span className="font-medium">E-Mail Marketing</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("sales")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "sales" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Brain size={18} />
+              <span className="font-medium">Sales & Psychologie</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("jarvis")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "jarvis" ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Mic size={18} />
+              <span className="font-medium uppercase tracking-wider text-xs">J.A.R.V.I.S. Voice</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("swarms")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "swarms" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Network size={18} />
+              <span className="font-medium">Agent Swarms</span>
+            </button>
+          </div>
+
+          {/* Growth & Ads */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
+              Growth & Ads
+            </div>
+            <button
+              onClick={() => setActiveTab("agency-growth")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "agency-growth" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <TrendingUp size={18} />
+              <span className="font-medium">Agency Growth</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("campaign-manager")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "campaign-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Megaphone size={18} />
+              <span className="font-medium">Ads & Manus AI</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("icp-generator")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "icp-generator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Target size={18} />
+              <span className="font-medium">K.I. ICP Persona</span>
+            </button>
+          </div>
+
+          {/* SEO & Website */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
+              SEO & Website
+            </div>
+            <button
+              onClick={() => setActiveTab("seo")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "seo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Globe size={18} />
+              <span className="font-medium">Performance & SEO</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("pages")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "pages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <LayoutTemplate size={18} />
+              <span className="font-medium">Seiten & SEO</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("landingpages")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "landingpages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Globe size={18} />
+              <span className="font-medium">Landingpages</span>
+            </button>
+          </div>
+
+          {/* Admin & Tools */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
+              Admin & Tools
+            </div>
+            <button
+              onClick={() => setActiveTab("calculator")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "calculator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Monitor size={18} />
+              <span className="font-medium">Preisrechner</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("invoice")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "invoice" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <FileText size={18} />
+              <span className="font-medium">Business (PDFs)</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("wiki")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "wiki" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <BookOpen size={18} />
+              <span className="font-medium">Wissens-Wiki</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("ai-models")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "ai-models" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Cpu size={18} />
+              <span className="font-medium">KI Modelle & APIs</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("settings")}
+              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
+                activeTab === "settings" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              <Settings size={18} />
+              <span className="font-medium">Einstellungen & API</span>
+            </button>
+          </div>
         </nav>
-        <div className="p-4 border-t border-white/5">
+        <div className="p-4 border-t border-white/5 shrink-0">
            <button 
              onClick={handleLogout}
              className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-red-400 hover:bg-white/5 transition-colors cursor-pointer"
@@ -1086,7 +1120,7 @@ export default function AdminDashboard() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 px-6 md:px-12 py-8 overflow-y-auto">
+      <main className="flex-1 px-6 md:px-12 py-8 overflow-y-auto h-full">
         {activeTab === 'production' && (
           <motion.div
             key="production"

@@ -826,7 +826,7 @@ Antworte NUR mit dem Code, kein erklärender Text davor oder danach, kein Markdo
     `;
 
     try {
-      const res = await fetch('/api/ai-chat', {
+      const res = await fetch('/api/ai/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),
