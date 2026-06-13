@@ -5,7 +5,7 @@ import {
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
-  LayoutTemplate, Sparkles, Users, Mail
+  LayoutTemplate, Sparkles, Users, Mail, Video, Brain, BookOpen, Instagram
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
@@ -20,6 +20,10 @@ import ProductionSuite from "@/components/admin/ProductionSuite";
 import LandingpageBuilder from "@/components/admin/LandingpageBuilder";
 import MarketingStudio from "@/components/admin/MarketingStudio";
 import InvoiceGenerator from "@/components/admin/InvoiceGenerator";
+import AIVideoHub from "@/components/admin/AIVideoHub";
+import MotionStudio from "@/components/admin/MotionStudio";
+import SalesToolkit from "@/components/admin/SalesToolkit";
+import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
 
 const generateSlug = (text: string) => {
   return text
@@ -835,6 +839,42 @@ export default function AdminDashboard() {
             <span className="font-medium">Landingpages</span>
           </button>
           <button
+            onClick={() => setActiveTab("aivideo")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "aivideo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Video size={18} />
+            <span className="font-medium">KI Video Hub</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("motion")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "motion" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Zap size={18} />
+            <span className="font-medium">Motion Studio (Framer)</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("sales")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "sales" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Brain size={18} />
+            <span className="font-medium">Sales & Psychologie</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("wiki")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "wiki" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <BookOpen size={18} />
+            <span className="font-medium">Wissens-Wiki</span>
+          </button>
+          <button
             onClick={() => setActiveTab("creator")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -902,6 +942,30 @@ export default function AdminDashboard() {
             className="space-y-6"
           >
             <InvoiceGenerator />
+          </motion.div>
+        )}
+
+        {activeTab === 'aivideo' && (
+          <motion.div key="aivideo" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <AIVideoHub />
+          </motion.div>
+        )}
+
+        {activeTab === 'motion' && (
+          <motion.div key="motion" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <MotionStudio />
+          </motion.div>
+        )}
+
+        {activeTab === 'sales' && (
+          <motion.div key="sales" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <SalesToolkit />
+          </motion.div>
+        )}
+
+        {activeTab === 'wiki' && (
+          <motion.div key="wiki" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
+            <KnowledgeWiki />
           </motion.div>
         )}
 
