@@ -28,6 +28,7 @@ import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
 import CIManager from "@/components/admin/CIManager";
 import ICPGenerator from "@/components/admin/ICPGenerator";
 import AIModelManager from "@/components/admin/AIModelManager";
+import AgencyGrowth from "@/components/admin/AgencyGrowth";
 
 const generateSlug = (text: string) => {
   return text
@@ -836,6 +837,15 @@ export default function AdminDashboard() {
             <span className="font-medium">Marketing Studio</span>
           </button>
           <button
+            onClick={() => setActiveTab("agency-growth")}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
+              activeTab === "agency-growth" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <TrendingUp size={18} />
+            <span className="font-medium">Agency Growth</span>
+          </button>
+          <button
             onClick={() => setActiveTab("invoice")}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors cursor-pointer ${
               activeTab === "invoice" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -972,6 +982,18 @@ export default function AdminDashboard() {
             className="space-y-6"
           >
             <MarketingStudio />
+          </motion.div>
+        )}
+
+        {activeTab === 'agency-growth' && (
+          <motion.div
+            key="agency-growth"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            <AgencyGrowth />
           </motion.div>
         )}
 
