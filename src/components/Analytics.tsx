@@ -12,7 +12,7 @@ declare global {
 
 export function Analytics() {
   const location = useLocation();
-  const GA_MEASUREMENT_ID = "G-4PW8QWJLCN";
+  const GA_MEASUREMENT_ID = "G-PKCY73WX1V";
   const FB_PIXEL_ID = ""; // Hier Ihre Meta Pixel ID eintragen
 
   useEffect(() => {

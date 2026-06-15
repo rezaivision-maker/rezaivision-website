@@ -15,8 +15,8 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const DEFAULT_TITLE = "Unsichtbar oder Unvergesslich? | Videoproduktion Kaiserslautern | Rezai Vision";
-const DEFAULT_DESCRIPTION = "Warum manche Marken faszinieren, während andere im Rauschen untergehen. Ich entwickle Videos als strategisches Werkzeug für Ihre Website, Ads und LinkedIn. Videoproduktion in Kaiserslautern & Südwesten.";
+const DEFAULT_TITLE = "Videoproduktion Kaiserslautern – Imagefilme, Reels & Video Ads | Rezai Vision";
+const DEFAULT_DESCRIPTION = "Videoproduktion Kaiserslautern – Rezai Vision erstellt professionelle Imagefilme, Recruiting Videos, Social Media Reels und Video Ads für Unternehmen im Südwesten.";
 const DEFAULT_IMAGE = "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp";
 const SITE_URL = "https://www.rezaivision.de";
 
@@ -37,7 +37,7 @@ export function SEO({
 
   const absoluteCanonicalUrl = canonical
     ? (canonical.startsWith("http") ? canonical : `${SITE_URL}${canonical}`)
-    : undefined;
+    : `${SITE_URL}${location.pathname}`;
 
   useEffect(() => {
     let pageId = location.pathname === "/" ? "home" : location.pathname.replace(/^\//, "").replace(/\//g, "-");

@@ -189,20 +189,6 @@ export default function Home() {
         <div className="section-deferred"><CTASection /></div>
       </Suspense>
 
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/4917631739958?text=Hallo%20Parsha!%20Ich%20bin%20gerade%20auf%20deiner%20Website..."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center justify-center group"
-        aria-label="Kontakt über WhatsApp"
-      >
-        <MessageCircle size={28} />
-        {/* Tooltip on hover */}
-        <span className="absolute right-full mr-4 bg-brand-darker border border-white/10 text-white text-sm px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none drop-shadow-xl">
-          Schnelle Frage?
-        </span>
-      </a>
     </div>
   );
 }
