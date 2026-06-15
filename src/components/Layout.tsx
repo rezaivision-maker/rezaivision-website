@@ -8,7 +8,7 @@ import { SEO } from "./SEO";
 import { NavDropdown } from "./NavDropdown";
 
 const navLinks = [
-  { name: "Portfolio", path: "/#showreel" },
+  { name: "Portfolio", path: "/#cases" },
   { name: "Preisrechner", path: "/preisrechner" },
   { name: "Magazin", path: "/blog" },
   { name: "Über uns", path: "/ueber-uns" },
@@ -60,13 +60,20 @@ export function Layout() {
     setMobileLeistungenOpen(false);
     setMobileRezaOpen(false);
     if (location.hash) {
-      setTimeout(() => {
-        const id = location.hash.replace('#', '');
+      // Sections are lazy-loaded, so the anchor element may not exist yet.
+      // Retry for up to ~2s until it mounts, then scroll to it.
+      const id = location.hash.replace('#', '');
+      let attempts = 0;
+      const tryScroll = () => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+        } else if (attempts < 20) {
+          attempts++;
+          setTimeout(tryScroll, 100);
         }
-      }, 100);
+      };
+      setTimeout(tryScroll, 100);
     } else {
       window.scrollTo(0, 0);
     }

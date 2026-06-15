@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { SEO } from "@/components/SEO";
+import { reviewStats, schemaReviews } from "@/data/reviews";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MessageCircle } from "lucide-react";
 
@@ -90,48 +91,12 @@ export default function Home() {
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "125",
+              "ratingValue": String(reviewStats.rating),
+              "reviewCount": String(reviewStats.count),
               "bestRating": "5",
               "worstRating": "1"
             },
-            "review": [
-              {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Ramin F." },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Parsha hat für unser Unternehmen einen Imagefilm produziert, der unsere Erwartungen übertroffen hat. Sehr professionell und kreativ.",
-                "datePublished": "2025-11-15"
-              },
-              {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Marcel W." },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Dank der Social Media Videos von Rezai Vision kamen 70% unserer Bewerbungen über Instagram. Absolute Empfehlung für Recruiting!",
-                "datePublished": "2025-09-20"
-              },
-              {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "David B." },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Die Reels und Ads für unser Tattoo-Studio haben unsere Sichtbarkeit in Kaiserslautern enorm gesteigert. Top Qualität!",
-                "datePublished": "2025-08-10"
-              },
-              {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Ralph N." },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Professionelle Produktvideos für unsere Industrienähmaschinen. Perfekte Umsetzung für Messe und Social Media.",
-                "datePublished": "2026-01-05"
-              },
-              {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Parnaz S." },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Der Hochzeitsfilm war einfach perfekt. Jeder Moment wurde eingefangen, ohne dass wir etwas davon gemerkt haben. Wunderschön!",
-                "datePublished": "2025-07-22"
-              }
-            ],
+            "review": schemaReviews,
             "sameAs": [
               "https://www.instagram.com/rezaivision",
               "https://www.facebook.com/rezaivision",

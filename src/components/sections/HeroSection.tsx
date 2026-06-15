@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Star } from "lucide-react";
+import { reviewStats } from "@/data/reviews";
 
 export function HeroSection() {
   return (
@@ -83,7 +84,7 @@ export function HeroSection() {
                     ))}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-white text-[11px] sm:text-sm">Über 98+ erfolgreiche Projekte</span>
+                    <span className="font-medium text-white text-[11px] sm:text-sm">{reviewStats.rating.toFixed(1).replace(".", ",")} Sterne auf Google</span>
                   </div>
                 </div>
               </div>

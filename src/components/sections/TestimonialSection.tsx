@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import { testimonials } from "@/data/homeData";
+import { reviewStats } from "@/data/reviews";
 
 const GoogleIcon = () => (
   <svg width="16" height="16" viewBox="0 0 48 48" className="shrink-0">
@@ -27,12 +28,12 @@ export function TestimonialSection() {
            <div className="max-w-2xl">
              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Das sagen unsere Kunden</h2>
              <div className="flex flex-wrap items-center gap-3 bg-white/5 border border-white/10 px-5 py-3 rounded-2xl w-fit">
-               <span className="text-2xl font-bold font-display text-white">5.0</span>
+               <span className="text-2xl font-bold font-display text-white">{reviewStats.rating.toFixed(1).replace(".", ",")}</span>
                <div className="flex gap-1 mr-2">
                  {[1,2,3,4,5].map(i => <Star key={i} fill="#fbbc04" className="text-[#fbbc04]" size={20} />)}
                </div>
                <span className="text-sm text-gray-400 flex items-center gap-2">
-                 125+ Bewertungen auf 
+                 {reviewStats.count}{reviewStats.isLive ? "" : "+"} Bewertungen auf
                  <div className="bg-white rounded-full p-1 inline-flex items-center justify-center">
                    <GoogleIcon />
                  </div>

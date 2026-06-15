@@ -101,13 +101,6 @@ export default function RecruitingVideo() {
             "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
             "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
           ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "125",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
           "offers": {
             "@type": "Offer",
             "price": "1890.00",
