@@ -1,0 +1,11 @@
+node_modules/
+venv/
+dist/
+build/
+coverage/
+scratch/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+instagram_highlights/
