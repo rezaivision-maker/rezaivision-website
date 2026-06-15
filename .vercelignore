@@ -8,3 +8,11 @@ __pycache__/
 .DS_Store
 *.log
 instagram_highlights/
+lighthouse-*.json
+lint_output.txt
+fix.py
+fix_blog.py
+fix_canonical.py
+rename.js
+rename.py
+test-ga4.js

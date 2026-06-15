@@ -13,3 +13,18 @@ __pycache__/
 
 # Scratch / temp files
 scratch/
+
+# Audit reports & logs (nicht Teil der Website)
+lighthouse-*.json
+lint_output.txt
+
+# Social-Media-Assets (gehören nicht zur Website)
+instagram_highlights/
+
+# Einmal- / Dev-Skripte
+fix.py
+fix_blog.py
+fix_canonical.py
+rename.js
+rename.py
+test-ga4.js
