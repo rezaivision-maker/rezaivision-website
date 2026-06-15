@@ -38,8 +38,10 @@ const staticRoutes = [
 
 async function fetchDynamicBlogRoutes() {
   const dynamicRoutes = [];
+  
+  // 1. Fetch live routes from Firestore (correct collection is 'posts')
   try {
-    const firestoreUrl = 'https://firestore.googleapis.com/v1/projects/rezaivisioncms/databases/(default)/documents/blogPosts';
+    const firestoreUrl = 'https://firestore.googleapis.com/v1/projects/rezaivisioncms/databases/(default)/documents/posts';
     const response = await fetch(firestoreUrl);
     if (response.ok) {
       const data = await response.json();
@@ -54,10 +56,31 @@ async function fetchDynamicBlogRoutes() {
           }
         });
       }
+    } else {
+      console.warn(`Firestore API returned status ${response.status} when fetching from ${firestoreUrl}`);
     }
   } catch (error) {
-    console.error('Error fetching dynamic routes:', error);
+    console.error('Error fetching dynamic routes from Firestore:', error);
   }
+
+  // 2. Load local static blog routes as fallback/merge source
+  try {
+    const filePath = path.resolve(__dirname, '../src/data/blogPosts.ts');
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const slugRegex = /slug:\s*["']([^"']+)["']/g;
+      let match;
+      while ((match = slugRegex.exec(content)) !== null) {
+        const route = `/blog/${match[1]}`;
+        if (!dynamicRoutes.includes(route)) {
+          dynamicRoutes.push(route);
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error parsing local blog post slugs:', error);
+  }
+
   return dynamicRoutes;
 }
 
@@ -104,8 +127,8 @@ async function prerender() {
   const sitemapRoutes = [...staticRoutes, ...dynamicRoutes];
   generateSitemap(sitemapRoutes);
 
-  // We want to prerender staticRoutes plus a fake 404 route to generate 404.html
-  const renderRoutes = [...staticRoutes, '/404-not-found-page'];
+  // We want to prerender staticRoutes, dynamic routes, plus a fake 404 route to generate 404.html
+  const renderRoutes = [...staticRoutes, ...dynamicRoutes, '/404-not-found-page'];
 
   console.log('Starting prerendering HTML...');
 
