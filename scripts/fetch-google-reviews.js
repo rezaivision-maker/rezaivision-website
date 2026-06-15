@@ -41,14 +41,18 @@ function loadEnv() {
   }
 }
 
+// Place-ID des Rezai Vision Google-Profils (öffentlich, kein Geheimnis).
+// Kann bei Bedarf per GOOGLE_PLACE_ID in der .env überschrieben werden.
+const DEFAULT_PLACE_ID = 'ChIJD7JhyphzlkcRd7x7mWqgUFg';
+
 async function main() {
   loadEnv();
 
   const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
-  const PLACE_ID = process.env.GOOGLE_PLACE_ID;
+  const PLACE_ID = process.env.GOOGLE_PLACE_ID || DEFAULT_PLACE_ID;
 
-  if (!API_KEY || !PLACE_ID) {
-    console.log('[google-reviews] Kein GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID in .env — nutze Fallback.');
+  if (!API_KEY) {
+    console.log('[google-reviews] Kein GOOGLE_PLACES_API_KEY in .env — nutze Fallback.');
     return;
   }
 
