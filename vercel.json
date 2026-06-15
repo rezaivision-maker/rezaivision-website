@@ -43,12 +43,17 @@
   ],
   "rewrites": [
     {
-      "source": "/sitemap.xml",
-      "destination": "/api/seo/sitemap.xml"
+      "source": "/blog/:slug",
+      "destination": "/index.html"
     },
     {
-      "source": "/((?!.*\\.).*)",
+      "source": "/portal/:id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }

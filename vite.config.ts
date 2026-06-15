@@ -47,6 +47,13 @@ export default defineConfig(({mode}) => {
             'vendor-react': ['react', 'react-dom', 'react-router-dom'],
             'vendor-motion': ['motion/react'],
             'vendor-helmet': ['react-helmet-async'],
+            'admin': [
+              './src/pages/admin/AdminDashboard.tsx',
+              './src/pages/admin/VideoStudio.tsx',
+              './src/components/admin/CRMManager.tsx',
+              './src/components/admin/LeadScraper.tsx',
+              './src/components/admin/CalculatorAdmin.tsx'
+            ]
           },
         },
       },
