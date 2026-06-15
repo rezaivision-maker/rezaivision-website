@@ -1,8 +1,28 @@
-import puppeteer from 'puppeteer';
+import puppeteerCore from 'puppeteer-core';
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+// Launches Chrome differently depending on the environment:
+// - On Vercel (Linux build container): use the serverless-compatible Chromium binary.
+// - Locally (e.g. macOS): use the full `puppeteer` package with its bundled Chrome.
+async function launchBrowser() {
+  const isServerless = !!process.env.VERCEL || !!process.env.AWS_LAMBDA_FUNCTION_NAME;
+
+  if (isServerless) {
+    const chromium = (await import('@sparticuz/chromium')).default;
+    return puppeteerCore.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: true,
+    });
+  }
+
+  const puppeteer = (await import('puppeteer')).default;
+  return puppeteer.launch({ headless: 'new' });
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -119,7 +139,7 @@ async function startServer() {
 
 async function prerender() {
   const server = await startServer();
-  const browser = await puppeteer.launch({ headless: 'new' });
+  const browser = await launchBrowser();
   const page = await browser.newPage();
 
   console.log('Fetching dynamic routes...');
