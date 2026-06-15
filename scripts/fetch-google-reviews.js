@@ -1,14 +1,17 @@
 // Holt die LIVE Google-Bewertungen (Schnitt + Anzahl) und schreibt sie nach
 // src/data/googleReviews.json. Läuft beim Build vor `vite build`.
 //
-// Aktivierung: in den Environment Variables setzen
-//   GOOGLE_PLACES_API_KEY = dein Google Places API Key
-//   GOOGLE_PLACE_ID       = die Place-ID deines Google-Business-Profils
+// Aktivierung: trage in die Datei .env (im Projekt-Hauptordner) ein:
+//   GOOGLE_PLACES_API_KEY=dein_google_places_api_key
+//   GOOGLE_PLACE_ID=deine_google_place_id
+//
+// Wichtig: Weil der Build LOKAL läuft (Weg A), müssen die Werte in der lokalen
+// .env stehen — NICHT bei Vercel.
 //
 // Place-ID finden: https://developers.google.com/maps/documentation/places/web-service/place-id
 //
-// Ist kein Key/keine Place-ID gesetzt (oder die API antwortet nicht), bleibt die
-// vorhandene Fallback-Datei unverändert — der Build bricht NIE ab.
+// Ohne Key/Place-ID (oder wenn die API nicht antwortet) bleibt die vorhandene
+// Fallback-Datei unverändert — der Build bricht NIE ab.
 
 import fs from 'fs';
 import path from 'path';
@@ -17,12 +20,35 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.resolve(__dirname, '../src/data/googleReviews.json');
 
-const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
-const PLACE_ID = process.env.GOOGLE_PLACE_ID;
+// Lädt die .env-Datei (dependency-frei), ohne bereits gesetzte Variablen zu überschreiben.
+function loadEnv() {
+  try {
+    const envPath = path.resolve(__dirname, '../.env');
+    if (!fs.existsSync(envPath)) return;
+    const content = fs.readFileSync(envPath, 'utf-8');
+    for (const line of content.split('\n')) {
+      const m = line.match(/^\s*([\w.-]+)\s*=\s*(.*)\s*$/);
+      if (!m) continue;
+      const key = m[1];
+      let val = m[2].trim();
+      if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+        val = val.slice(1, -1);
+      }
+      if (!(key in process.env)) process.env[key] = val;
+    }
+  } catch {
+    /* ignore */
+  }
+}
 
 async function main() {
+  loadEnv();
+
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+  const PLACE_ID = process.env.GOOGLE_PLACE_ID;
+
   if (!API_KEY || !PLACE_ID) {
-    console.log('[google-reviews] Kein GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID gesetzt — nutze Fallback.');
+    console.log('[google-reviews] Kein GOOGLE_PLACES_API_KEY / GOOGLE_PLACE_ID in .env — nutze Fallback.');
     return;
   }
 
