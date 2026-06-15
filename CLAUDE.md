@@ -65,6 +65,15 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 12. **Nicht** echte API-Keys / Secrets in den Code schreiben. Die gehören in Vercel
     Environment Variables. (Die Firebase-Config in `src/lib/firebase.ts` ist öffentlich
     und in Ordnung — die ist absichtlich client-seitig.)
+13. **Nicht** Zahlen, Bewertungen oder Knappheit erfinden. Bewertungen kommen aus
+    ECHTEN Testimonials (`src/data/homeData.ts`) + Live-Google (`src/data/reviews.ts`).
+    `aggregateRating` NUR auf der Startseite und nur passend zu den sichtbaren Reviews.
+    Keine Fake-Urgency/Scarcity, keine erfundenen Kundenzahlen (z.B. „187 Kunden",
+    „nur noch 2 Plätze", „12 sehen gerade zu"). Das untergräbt Vertrauen + Google.
+14. **Nicht** seitenspezifische Meta-Tags (title/description/canonical/OG) in
+    `index.html` schreiben. Die kommen AUSSCHLIESSLICH aus `SEO.tsx` (react-helmet),
+    sonst entstehen doppelte/widersprüchliche Tags und ein falscher canonical auf
+    Unterseiten (war ein realer Bug). `index.html` enthält nur globale Tags.
 
 ---
 
@@ -72,7 +81,7 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 
 | Befehl | Zweck |
 |---|---|
-| `npm run build` | **Der wichtige Befehl.** Baut `dist/` + rendert alle Seiten als HTML + erzeugt `sitemap.xml`. Vor jedem Push ausführen. |
+| `npm run build` | **Der wichtige Befehl.** Kette: `fetch-google-reviews.js` (Live-Sterne) → `vite build` → `prerender.js` (HTML + `sitemap.xml`). Bricht NIE an fehlenden Keys ab (ehrlicher Fallback). Vor jedem Push ausführen. |
 | `npm run dev` | Lokaler Entwicklungsserver (Port 3000). |
 | `npm run lint` | TypeScript-Check (`tsc --noEmit`). Bei Code-Änderungen vorher prüfen. |
 | `npm run preview` | Vorschau des gebauten `dist/`. |
@@ -97,6 +106,12 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
    Hero-Bild, das `fetchPriority="high"` braucht).
 6. Nach Änderungen am Blog: `npm run build` holt neue Blog-Posts automatisch aus
    Firestore (`posts`-Collection) und rendert sie als HTML.
+7. `noindex`-Seiten (`/impressum`, `/datenschutz`, `/agb`) gehören NICHT in die
+   Sitemap. `scripts/prerender.js` filtert sie über das Array `NOINDEX_ROUTES` raus
+   (sonst Search-Console-Warnung „in Sitemap, aber noindex"). Sie werden trotzdem gerendert.
+8. Blog-Schema `datePublished` muss **ISO 8601** sein (`2026-04-07`). Der Helfer
+   `toISODate()` in `src/pages/BlogPost.tsx` wandelt das deutsche Anzeige-Datum
+   („07. April 2026") um. Die sichtbare Anzeige bleibt deutsch.
 
 ---
 
@@ -138,6 +153,34 @@ vercel.json           Header, Rewrites, buildCommand (skip), outputDirectory
 - Firebase Firestore (Blog `posts`, Leads `calculatorLeads`/`contactLeads`, `seoMetadata`)
 - Vercel (Hosting + Serverless `/api`)
 - Kontaktformular: Web3Forms
+
+---
+
+## Bewertungen (Architektur)
+
+- `src/data/reviews.ts` — exportiert `reviewStats` (Rating + Anzahl) und `schemaReviews`,
+  beide abgeleitet aus den **echten** Testimonials in `src/data/homeData.ts`. Hero,
+  TestimonialSection und das Home-Schema lesen daraus.
+- `src/data/googleReviews.json` — ehrlicher Fallback (`5.0` / Anzahl = sichtbare
+  Testimonials). Wird beim Build überschrieben, wenn Live-Daten kommen.
+- `scripts/fetch-google-reviews.js` — holt Live-Schnitt + Anzahl von Google Places.
+  Aktivierung: `GOOGLE_PLACES_API_KEY` in `.env` (lokal, weil Build lokal läuft!).
+  Die Place-ID ist im Script fest hinterlegt (`ChIJD7JhyphzlkcRd7x7mWqgUFg`).
+
+---
+
+## Search Console & Vercel (Zugriff für SEO-Analysen)
+
+- Echte GSC-Daten via Service-Account in `.env` (`GOOGLE_SERVICE_ACCOUNT_EMAIL` +
+  `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`). Scope `webmasters.readonly` (lesen) bzw.
+  `webmasters` (Sitemap einreichen).
+- Property ist **`sc-domain:rezaivision.de`** — NICHT die URL-Variante
+  `https://www.rezaivision.de/` (darauf hat der Service-Account keine Rechte).
+- `searchAnalytics`-Abfragen brauchen echte Datumsformate `YYYY-MM-DD` (NICHT
+  „30daysAgo" — das wirft 400). URL-Inspektion + Sitemap-Einreichung gehen per API.
+- „Indexierung beantragen" geht **nicht** per API — nur manuell in der GSC-UI.
+- Vercel-MCP ist angebunden (Projekt `rezaivision-website`). Nur `www` ist Projekt-Domain;
+  der non-www→www-Redirect ist 307 auf DNS-Ebene (Backlog, niedrige Prio).
 
 ---
 
