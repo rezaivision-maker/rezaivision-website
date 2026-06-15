@@ -81,9 +81,14 @@ export default function SocialAds() {
         keywords="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz"
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "Service",
+          "@type": ["Product", "Service"],
           "name": "Social Media Ads & Werbevideos",
+          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
           "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Rezai Vision"
+          },
           "provider": {
             "@type": "LocalBusiness",
             "name": "Rezai Vision",
@@ -98,13 +103,18 @@ export default function SocialAds() {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "125"
+            "reviewCount": "125",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "offers": {
             "@type": "Offer",
             "price": "1490.00",
             "priceCurrency": "EUR",
-            "description": "Ab 1.490 € zzgl. MwSt."
+            "description": "Ab 1.490 € zzgl. MwSt.",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.rezaivision.de/leistungen/werbevideo"
           }
         }}
       />

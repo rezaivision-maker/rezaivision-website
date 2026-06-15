@@ -81,9 +81,14 @@ export default function SocialRetainer() {
         keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "Service",
+          "@type": ["Product", "Service"],
           "name": "Social Media Retainer & Content Produktion",
+          "image": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop",
           "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Rezai Vision"
+          },
           "provider": {
             "@type": "LocalBusiness",
             "name": "Rezai Vision",
@@ -98,13 +103,18 @@ export default function SocialRetainer() {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "125"
+            "reviewCount": "125",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "offers": {
             "@type": "Offer",
             "price": "1490.00",
             "priceCurrency": "EUR",
-            "description": "Ab 1.490 € pro Monat zzgl. MwSt."
+            "description": "Ab 1.490 € pro Monat zzgl. MwSt.",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.rezaivision.de/leistungen/social-media"
           }
         }}
       />

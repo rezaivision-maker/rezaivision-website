@@ -90,9 +90,14 @@ export default function CorporateVideo() {
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "Service",
+          "@type": ["Product", "Service"],
           "name": "Imagefilm & Unternehmensfilm",
+          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
           "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Rezai Vision"
+          },
           "provider": {
             "@type": "LocalBusiness",
             "name": "Rezai Vision",
@@ -107,13 +112,18 @@ export default function CorporateVideo() {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "125"
+            "reviewCount": "125",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "offers": {
             "@type": "Offer",
             "price": "2490.00",
             "priceCurrency": "EUR",
-            "description": "Ab 2.490 € zzgl. MwSt."
+            "description": "Ab 2.490 € zzgl. MwSt.",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"
           }
         }}
       />

@@ -82,9 +82,14 @@ export default function RecruitingVideo() {
         keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "Service",
+          "@type": ["Product", "Service"],
           "name": "Recruiting Video & Employer Branding",
+          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
           "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Rezai Vision"
+          },
           "provider": {
             "@type": "LocalBusiness",
             "name": "Rezai Vision",
@@ -99,13 +104,18 @@ export default function RecruitingVideo() {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "125"
+            "reviewCount": "125",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "offers": {
             "@type": "Offer",
             "price": "1890.00",
             "priceCurrency": "EUR",
-            "description": "Ab 1.890 € zzgl. MwSt."
+            "description": "Ab 1.890 € zzgl. MwSt.",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.rezaivision.de/leistungen/recruiting"
           }
         }}
       />
