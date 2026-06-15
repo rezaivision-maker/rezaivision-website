@@ -25,6 +25,25 @@ const getEmbedUrl = (url?: string) => {
   return url; // fallback
 };
 
+const GERMAN_MONTHS: Record<string, string> = {
+  januar: "01", februar: "02", "märz": "03", april: "04",
+  mai: "05", juni: "06", juli: "07", august: "08",
+  september: "09", oktober: "10", november: "11", dezember: "12",
+};
+
+// Wandelt ein deutsches Datum ("07. April 2026") in ISO 8601 ("2026-04-07") um,
+// damit Google es im BlogPosting-Schema (datePublished) korrekt als Datum erkennt.
+const toISODate = (dateStr?: string): string | undefined => {
+  if (!dateStr) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}/.test(dateStr)) return dateStr.slice(0, 10); // schon ISO
+  const m = dateStr.match(/(\d{1,2})\.?\s+([A-Za-zäöüÄÖÜ]+)\s+(\d{4})/);
+  if (m) {
+    const month = GERMAN_MONTHS[m[2].toLowerCase()];
+    if (month) return `${m[3]}-${month}-${m[1].padStart(2, "0")}`;
+  }
+  return undefined; // unparsbar → lieber weglassen als falsches Format senden
+};
+
 export default function BlogPost() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -191,7 +210,7 @@ export default function BlogPost() {
         "url": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1779109661/Rezaivisionlogo_Website_z2jteg.svg"
       }
     },
-    "datePublished": post.date,
+    "datePublished": toISODate(post.date),
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://www.rezaivision.de/blog/${post.slug}`
