@@ -47,7 +47,7 @@ export default function Services() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="B2B Leistungen | Videoproduktion | Rezai Vision"
-        description="Unsere B2B Leistungen: Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content aus Kaiserslautern. Für Mannheim, Saarbrücken und Mainz."
+        description="Videoproduktion Kaiserslautern – Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content für Unternehmen im Südwesten Deutschlands."
         canonical="/leistungen"
         keywords="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz"
       />

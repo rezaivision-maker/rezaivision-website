@@ -76,7 +76,7 @@ export default function SocialAds() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="Social Media Ads & Werbespots Agentur | Saarland & RLP"
-        description="Performance-starke Werbevideos und Social Ads für messbare Ergebnisse und Sichtbarkeit im digitalen Raum. Conversion-optimierte Videoproduktion im Umkreis von 100km (Mainz, Mannheim)."
+        description="Video Ads Kaiserslautern – performance-starke Werbevideos für Social Media mit messbaren Conversion-Ergebnissen. Videoproduktion in Kaiserslautern, Mannheim, Mainz."
         canonical="/leistungen/werbevideo"
         keywords="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz"
         structuredData={{

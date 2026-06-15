@@ -22,7 +22,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <SEO
         title="Videoproduktion Kaiserslautern | Rezai Vision"
-        description="Strategisch geplante Videos mit hochwertiger Bildsprache, die Vertrauen aufbauen und Wirkung entfalten – für Unternehmen im Südwesten Deutschlands. Content Creator Kaiserslautern für Hero-Content und Kampagnen."
+        description="Videoproduktion Kaiserslautern – Rezai Vision produziert Imagefilme, Recruiting Videos, Social Media Reels und Video Ads für Unternehmen im Südwesten Deutschlands."
         canonical="/"
         structuredData={[
           {

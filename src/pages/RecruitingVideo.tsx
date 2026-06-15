@@ -77,7 +77,7 @@ export default function RecruitingVideo() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim"
-        description="Gewinnen Sie Top-Talente mit effizienten Recruiting Videos. Authentisch, schnell und bezahlbar ab 1.890 €. Produktion in Kaiserslautern, Mannheim & Südwesten."
+        description="Recruiting Video Kaiserslautern – authentische Mitarbeitergewinnung mit professionellem Video ab 1.890 €. Für Unternehmen in Kaiserslautern, Mannheim & Südwesten."
         canonical="/leistungen/recruiting"
         keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
         structuredData={{

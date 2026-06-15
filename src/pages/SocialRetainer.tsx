@@ -76,7 +76,7 @@ export default function SocialRetainer() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="Social Media Content Kaiserslautern | Video Retainer"
-        description="Regelmäßiger, hochwertiger Social Media Content (TikTok, Instagram, LinkedIn). Ihre Content Creation Agentur im Umkreis von 100km."
+        description="Social Media Video Kaiserslautern – regelmäßiger TikTok, Instagram und LinkedIn Content für dauerhafte Sichtbarkeit. Content Creation Agentur aus dem Südwesten."
         canonical="/leistungen/social-media"
         keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
         structuredData={{
