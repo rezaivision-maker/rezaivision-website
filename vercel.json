@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'Using pre-built dist — no build on Vercel'",
+  "outputDirectory": "dist",
   "headers": [
     {
       "source": "/assets/(.*)",
