@@ -626,7 +626,11 @@ export default function AdminDashboard() {
     setPostsLoading(true);
     try {
       const fetched = await fetchBlogPosts();
-      setPosts(fetched);
+      const sanitized = fetched.map(p => ({
+        ...p,
+        content: p.content && p.content.endsWith('`') ? p.content.slice(0, -1) : p.content
+      }));
+      setPosts(sanitized);
     } catch (err) {
       console.error(err);
     } finally {

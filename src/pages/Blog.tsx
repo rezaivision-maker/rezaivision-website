@@ -8,11 +8,18 @@ import { useState, useEffect } from "react";
 
 export default function Blog() {
   const [filter, setFilter] = useState<'all' | 'corporate' | 'emotion'>('all');
-  const [posts, setPosts] = useState<BlogPost[]>(staticPosts);
+  const sanitizePosts = (pList: BlogPost[]) => {
+    return pList.map(p => ({
+      ...p,
+      content: p.content && p.content.endsWith('`') ? p.content.slice(0, -1) : p.content
+    }));
+  };
+
+  const [posts, setPosts] = useState<BlogPost[]>(() => sanitizePosts(staticPosts));
 
   useEffect(() => {
     fetchBlogPosts().then((fetched) => {
-      setPosts(fetched);
+      setPosts(sanitizePosts(fetched));
     });
   }, []);
 

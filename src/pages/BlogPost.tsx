@@ -29,16 +29,28 @@ export default function BlogPost() {
   const { slug } = useParams();
   const navigate = useNavigate();
 
+  const sanitizePost = (p: BlogPostType | null): BlogPostType | null => {
+    if (!p) return null;
+    return {
+      ...p,
+      content: p.content && p.content.endsWith('`') ? p.content.slice(0, -1) : p.content
+    };
+  };
+
+  const sanitizePosts = (pList: BlogPostType[]) => {
+    return pList.map(p => sanitizePost(p) as BlogPostType);
+  };
+
   const [post, setPost] = useState<BlogPostType | null>(() => {
-    return staticPosts.find((p) => p.slug === slug) || null;
+    return sanitizePost(staticPosts.find((p) => p.slug === slug) || null);
   });
   
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>(() => {
     const initialPost = staticPosts.find((p) => p.slug === slug);
     if (initialPost) {
-      return staticPosts
+      return sanitizePosts(staticPosts
         .filter(p => p.id !== initialPost.id && p.category === initialPost.category)
-        .slice(0, 2);
+        .slice(0, 2));
     }
     return [];
   });
@@ -61,13 +73,13 @@ export default function BlogPost() {
       // If we don't have it loaded or to check for updates, fetch from db
       fetchBlogPostBySlug(slug).then((fetchedPost) => {
         if (fetchedPost) {
-          setPost(fetchedPost);
+          setPost(sanitizePost(fetchedPost));
           
           fetchBlogPosts().then((allPosts) => {
             const related = allPosts
               .filter(p => p.id !== fetchedPost.id && p.category === fetchedPost.category)
               .slice(0, 2);
-            setRelatedPosts(related);
+            setRelatedPosts(sanitizePosts(related));
           });
         }
         setLoading(false);
