@@ -8,11 +8,14 @@ import OptionCard from "./OptionCard";
 export default function Calculator() {
   const [steps, setSteps] = useState<CalculatorStep[]>([]);
   const [loading, setLoading] = useState(true);
-  
+
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [selections, setSelections] = useState<Record<string, string[]>>({});
-  
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submittingLead, setSubmittingLead] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [calculatedPrice, setCalculatedPrice] = useState(0);
@@ -93,14 +96,13 @@ export default function Calculator() {
 
   const handleSubmitLead = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !name || !consent) return;
 
     setSubmittingLead(true);
     const price = calculateTotal();
     setCalculatedPrice(price);
 
     try {
-      // Build selected modules summary
       let summaryText = "";
       steps.forEach(step => {
         const sel = selections[step.id] || [];
@@ -111,37 +113,60 @@ export default function Calculator() {
       });
 
       const formattedPrice = price.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      const emailHtml = `
-        <div style="font-family: sans-serif; color: #333; max-w: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 12px; overflow: hidden;">
+
+      // E-Mail an den Kunden
+      const customerEmailHtml = `
+        <div style="font-family: sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 12px; overflow: hidden;">
           <div style="background-color: #ff1564; padding: 24px; text-align: center;">
             <h1 style="color: #fff; margin: 0; font-size: 24px;">Rezai Vision</h1>
           </div>
           <div style="padding: 32px;">
             <h2 style="margin-top: 0;">Dein Projektbudget</h2>
-            <p>Hallo,</p>
+            <p>Hallo ${name},</p>
             <p>vielen Dank für deine Anfrage! Basierend auf deinen Angaben beläuft sich das Projektbudget auf ca.:</p>
-            <div style="font-size: 32px; font-weight: bold; color: #ff1564; margin: 24px 0;">
+            <div style="font-size: 40px; font-weight: bold; color: #ff1564; margin: 24px 0;">
               ${formattedPrice} €
             </div>
             <h3>Deine Konfiguration:</h3>
-            <ul>
+            <ul style="padding-left: 20px; line-height: 1.8;">
               ${summaryText}
             </ul>
             <p style="margin-top: 32px;">
-              Lass uns gerne kurz über dein Projekt sprechen, um die Details zu klären. 
-              Du erreichst uns unter <a href="mailto:rezaivision@gmail.com" style="color: #ff1564;">rezaivision@gmail.com</a> 
+              Lass uns kurz über dein Projekt sprechen — ich melde mich in Kürze bei dir!<br/>
+              Du erreichst mich unter <a href="mailto:rezaivision@gmail.com" style="color: #ff1564;">rezaivision@gmail.com</a>
               oder telefonisch unter <a href="tel:+4963162512000" style="color: #ff1564;">0631 62512000</a>.
             </p>
-            <p>Viele Grüße,<br/>Parsha Rezai</p>
+            <p>Viele Grüße,<br/>Parsha Rezai<br/><strong>Rezai Vision</strong></p>
           </div>
         </div>
       `;
 
-      await saveCalculatorLead({
-        email,
-        selections,
-        calculatedPrice: price
-      }, emailHtml);
+      // Benachrichtigungs-E-Mail an Parsha
+      const notificationEmailHtml = `
+        <div style="font-family: sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 2px solid #ff1564; border-radius: 12px; overflow: hidden;">
+          <div style="background-color: #111; padding: 20px; text-align: center;">
+            <h1 style="color: #ff1564; margin: 0; font-size: 20px;">🎯 Neuer Kalkulator-Lead!</h1>
+          </div>
+          <div style="padding: 24px;">
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+              <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name / Firma:</td><td style="padding: 8px 0; font-weight: bold;">${name}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666;">E-Mail:</td><td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #ff1564;">${email}</a></td></tr>
+              <tr><td style="padding: 8px 0; color: #666;">Telefon:</td><td style="padding: 8px 0;"><a href="tel:${phone}" style="color: #ff1564;">${phone || '–'}</a></td></tr>
+              <tr style="border-top: 2px solid #ff1564;"><td style="padding: 12px 0; font-size: 18px; font-weight: bold;">Kalkulierter Preis:</td><td style="padding: 12px 0; font-size: 22px; font-weight: bold; color: #ff1564;">${formattedPrice} €</td></tr>
+            </table>
+            <h3 style="margin-top: 0;">Gewählte Konfiguration:</h3>
+            <ul style="padding-left: 20px; line-height: 1.8;">
+              ${summaryText}
+            </ul>
+          </div>
+        </div>
+      `;
+
+      await saveCalculatorLead(
+        { email, name, phone, selections, calculatedPrice: price },
+        customerEmailHtml,
+        notificationEmailHtml
+      );
       setShowResult(true);
     } catch (err) {
       console.error(err);
@@ -221,22 +246,56 @@ export default function Calculator() {
                     Trage deine E-Mail-Adresse ein, um sofort deinen maßgeschneiderten Preis auf dem Bildschirm zu sehen.
                   </p>
 
-                  <form onSubmit={handleSubmitLead} className="max-w-sm mx-auto">
+                  <form onSubmit={handleSubmitLead} className="max-w-sm mx-auto space-y-3">
+                    <input
+                      type="text"
+                      required
+                      placeholder="Dein Name oder Firmenname"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full bg-black/40 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Telefonnummer (optional)"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="w-full bg-black/40 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
+                    />
                     <input
                       type="email"
                       required
                       placeholder="Deine E-Mail Adresse"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-black/40 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all mb-4"
+                      className="w-full bg-black/40 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all"
                     />
+                    <label className="flex items-start gap-3 text-left cursor-pointer">
+                      <input
+                        type="checkbox"
+                        required
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="mt-1 w-4 h-4 flex-shrink-0 accent-brand-accent cursor-pointer"
+                      />
+                      <span className="text-xs text-gray-400 leading-relaxed">
+                        Ich habe die{" "}
+                        <a href="/datenschutz" target="_blank" className="text-brand-accent underline">
+                          Datenschutzerklärung
+                        </a>{" "}
+                        gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gemäß Art. 6 Abs. 1 lit. b DSGVO verarbeitet werden.
+                      </span>
+                    </label>
                     <button
                       type="submit"
-                      disabled={submittingLead || !email}
+                      disabled={submittingLead || !email || !name || !consent}
                       className="w-full bg-brand-accent text-brand-bg py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all cursor-pointer disabled:opacity-50"
                     >
                       {submittingLead ? <Loader2 className="animate-spin" /> : "Ergebnis anzeigen"}
                     </button>
+                    <p className="text-xs text-gray-500 text-center">
+                      Unverbindliche Schätzung · Alle Preise zzgl. 19 % MwSt.
+                    </p>
                   </form>
                 </div>
               )}
@@ -273,11 +332,12 @@ export default function Calculator() {
                 <CheckCircle2 size={48} className="text-emerald-500" />
               </div>
               <h2 className="text-3xl font-display font-bold text-white mb-4">Dein Kalkulationsergebnis</h2>
-              <p className="text-gray-400 mb-8">Basierend auf deinen Angaben beläuft sich das Projektbudget auf ca.</p>
-              
-              <div className="text-6xl font-display font-black text-brand-accent mb-8">
+              <p className="text-gray-400 mb-8">Basierend auf deinen Angaben beläuft sich das unverbindliche Projektbudget auf ca.</p>
+
+              <div className="text-6xl font-display font-black text-brand-accent mb-2">
                 {calculatedPrice.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €
               </div>
+              <p className="text-sm text-gray-500 mb-8">zzgl. 19 % MwSt. · unverbindliche Schätzung</p>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 max-w-md mx-auto mb-8 text-left">
                 <h4 className="font-bold text-white mb-4">Deine gewählten Module:</h4>

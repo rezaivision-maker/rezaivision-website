@@ -34,8 +34,10 @@ export interface CalculatorStep {
 
 export interface CalculatorLead {
   id?: string;
+  name: string;
+  phone?: string;
   email: string;
-  selections: any; // The chosen options
+  selections: any;
   calculatedPrice: number;
   createdAt: string;
 }
@@ -57,20 +59,35 @@ export async function saveCalculatorConfig(steps: CalculatorStep[]): Promise<voi
   await setDoc(configDoc, { steps });
 }
 
-export async function saveCalculatorLead(lead: Omit<CalculatorLead, "id" | "createdAt">, emailHtml?: string): Promise<string> {
+export async function saveCalculatorLead(
+  lead: Omit<CalculatorLead, "id" | "createdAt">,
+  customerEmailHtml?: string,
+  notificationEmailHtml?: string
+): Promise<string> {
   const leadsRef = collection(db, "calculatorLeads");
   const docRef = await addDoc(leadsRef, {
     ...lead,
     createdAt: new Date().toISOString()
   });
 
-  if (emailHtml) {
-    const mailRef = collection(db, "mail");
+  const mailRef = collection(db, "mail");
+
+  if (customerEmailHtml) {
     await addDoc(mailRef, {
       to: lead.email,
       message: {
         subject: "Dein kalkuliertes Projektbudget | Rezai Vision",
-        html: emailHtml
+        html: customerEmailHtml
+      }
+    });
+  }
+
+  if (notificationEmailHtml) {
+    await addDoc(mailRef, {
+      to: "rezaivision@gmail.com",
+      message: {
+        subject: `🎯 Neuer Lead: ${lead.name} — ${lead.calculatedPrice.toLocaleString('de-DE')} €`,
+        html: notificationEmailHtml
       }
     });
   }

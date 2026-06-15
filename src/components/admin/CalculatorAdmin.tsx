@@ -2,6 +2,79 @@ import React, { useState, useEffect } from "react";
 import { Plus, Trash2, Save, Loader2, GripVertical } from "lucide-react";
 import { getCalculatorConfig, saveCalculatorConfig, CalculatorStep, CalculatorOption } from "../../lib/firebase/calculatorAPI";
 
+const DEFAULT_CALCULATOR_STEPS: CalculatorStep[] = [
+  {
+    id: "step1_videotyp", order: 1,
+    title: "Was für ein Video möchtest du?",
+    description: "Wähle den Videotyp, der am besten zu deinem Ziel passt.",
+    multiSelect: false,
+    options: [
+      { id: "imagefilm", title: "Imagefilm / Markenstory", description: "Unternehmensfilm, Markenvideo, emotionale Markengeschichte", basePrice: 1800 },
+      { id: "recruiting", title: "Recruiting Film", description: "Employer Branding, Mitarbeitergewinnung, Unternehmenskultur zeigen", basePrice: 1500 },
+      { id: "socialmedia", title: "Social Media Content", description: "Reels, TikToks, YouTube Shorts — für organische Reichweite", basePrice: 800 },
+      { id: "ads", title: "Performance Ads / Werbeclip", description: "Video-Anzeigen für Meta, YouTube oder LinkedIn", basePrice: 1000 },
+      { id: "event", title: "Event / Dokumentation", description: "Veranstaltungen, Konferenzen, Behind the Scenes", basePrice: 1200 },
+    ],
+  },
+  {
+    id: "step2_paket", order: 2,
+    title: "Welches Paket passt zu dir?",
+    description: "Die Paketgröße bestimmt Umfang und Anzahl der Videos.",
+    multiSelect: false,
+    options: [
+      { id: "paket_s", title: "S – Starter", description: "1 fertiges Video, 1 Drehtag, Basis-Schnitt", basePrice: 0 },
+      { id: "paket_m", title: "M – Standard", description: "2–3 Videos, 1–2 Drehtage, inkl. Farbkorrektur", basePrice: 700 },
+      { id: "paket_l", title: "L – Pro", description: "3–5 Videos, 2 Drehtage, Full Edit + Sounddesign", basePrice: 1500 },
+      { id: "paket_xl", title: "XL – Premium Campaign", description: "5+ Videos / komplette Kampagne, mehrere Drehtage", basePrice: 3000 },
+    ],
+  },
+  {
+    id: "step3_crew", order: 3,
+    title: "Wie groß soll das Team sein?",
+    description: "Mehr Crew bedeutet mehr Perspektiven und ein professionelleres Set.",
+    multiSelect: false,
+    options: [
+      { id: "crew_1vg", title: "1 Videograf", description: "Ideal für Interviews, Social Content oder kompakte Drehs", basePrice: 0 },
+      { id: "crew_1vg_assi", title: "1 Videograf + Assistent", description: "Mehr Flexibilität, zweite Kamera oder B-Roll möglich", basePrice: 500 },
+      { id: "crew_2vg", title: "2 Videografen", description: "Zwei Kameras gleichzeitig, mehr Schnittmaterial", basePrice: 800 },
+      { id: "crew_2vg_assi", title: "2 Videografen + Assistent", description: "Professionelles Setup, Licht & Ton optimal betreut", basePrice: 1200 },
+      { id: "crew_2vg_regie", title: "2 Videografen + Regie", description: "Volles Filmteam mit kreativem Gesamtverantwortlichen", basePrice: 2000 },
+    ],
+  },
+  {
+    id: "step4_stil", order: 4,
+    title: "Welchen Look möchtest du?",
+    description: "Der Stil bestimmt Ästhetik und Produktionsaufwand.",
+    multiSelect: false,
+    options: [
+      { id: "stil_ugc", title: "Authentic / UGC-Style", description: "Natürlich, roh, glaubwürdig — ideal für Social Media & Ads", basePrice: 0 },
+      { id: "stil_standard", title: "Standard Cinematic", description: "Professionell, sauber, markengerecht — der Klassiker", basePrice: 200 },
+      { id: "stil_premium", title: "Premium Cinematic", description: "Kinoreife Bildsprache, aufwändige Lichtgestaltung, höchste Qualität", basePrice: 700 },
+    ],
+  },
+  {
+    id: "step5_extras", order: 5,
+    title: "Brauchst du zusätzliche Leistungen?",
+    description: "Optional — alles was über Dreh & Schnitt hinausgeht.",
+    multiSelect: true,
+    options: [
+      { id: "extra_konzept", title: "Konzept & Strategie", description: "Wir entwickeln den roten Faden, Botschaft und Zielgruppenansprache", basePrice: 380 },
+      { id: "extra_script", title: "Script / Drehbuch", description: "Professionell geschriebenes Skript oder Interview-Leitfaden", basePrice: 280 },
+      { id: "extra_analyse", title: "Zielgruppen-Analyse", description: "ICP-Definition, Plattformstrategie, Content-Empfehlung", basePrice: 320 },
+    ],
+  },
+  {
+    id: "step6_lieferzeit", order: 6,
+    title: "Wie schnell brauchst du es?",
+    description: "Express-Projekte werden priorisiert und durchgeplant.",
+    multiSelect: false,
+    options: [
+      { id: "normal", title: "Normal (3–4 Wochen)", description: "Entspannte Planung, optimales Ergebnis", basePrice: 0 },
+      { id: "express", title: "Express (1–2 Wochen)", description: "Priorität im Kalender, beschleunigter Post-Prozess — +25 % Aufschlag", basePrice: 0, multiplierIndex: 1.25 },
+    ],
+  },
+];
+
 export default function CalculatorAdmin() {
   const [steps, setSteps] = useState<CalculatorStep[]>([]);
   const [loading, setLoading] = useState(true);
@@ -18,19 +91,7 @@ export default function CalculatorAdmin() {
       if (data && data.length > 0) {
         setSteps(data);
       } else {
-        // Init with default structure
-        setSteps([
-          {
-            id: "step1",
-            order: 1,
-            title: "Umfang des Projekts",
-            description: "Wähle das passende Paket für deine Videoproduktion",
-            multiSelect: false,
-            options: [
-              { id: "opt1", title: "Content Day S", description: "1 Drehtag", basePrice: 625, isPackage: true, multiplierIndex: 1 }
-            ]
-          }
-        ]);
+        setSteps(DEFAULT_CALCULATOR_STEPS);
       }
     } catch (err) {
       console.error(err);
