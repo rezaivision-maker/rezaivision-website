@@ -1,6 +1,14 @@
 {
   "buildCommand": "echo 'Using pre-built dist — no build on Vercel'",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "rezaivision.de" }],
+      "destination": "https://www.rezaivision.de/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

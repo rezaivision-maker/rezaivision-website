@@ -124,7 +124,10 @@ async function prerender() {
 
   console.log('Fetching dynamic routes...');
   const dynamicRoutes = await fetchDynamicBlogRoutes();
-  const sitemapRoutes = [...staticRoutes, ...dynamicRoutes];
+  // Seiten mit noindex gehören NICHT in die Sitemap (sonst Search-Console-Warnung
+  // "in Sitemap eingereicht, aber als noindex markiert"). Sie werden trotzdem gerendert.
+  const NOINDEX_ROUTES = ['/impressum', '/datenschutz', '/agb'];
+  const sitemapRoutes = [...staticRoutes, ...dynamicRoutes].filter(r => !NOINDEX_ROUTES.includes(r));
   generateSitemap(sitemapRoutes);
 
   // We want to prerender staticRoutes, dynamic routes, plus a fake 404 route to generate 404.html
