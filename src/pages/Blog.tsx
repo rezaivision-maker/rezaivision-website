@@ -164,7 +164,7 @@ export default function Blog() {
             to="/kontakt" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-brand-bg rounded-full font-bold hover:brightness-110 transition-all hover:scale-105"
           >
-            Kostenloses Erstgespräch buchen <ArrowRight size={18} />
+            Kostenloses Erstgespräch vereinbaren <ArrowRight size={18} />
           </Link>
         </div>
       </section>

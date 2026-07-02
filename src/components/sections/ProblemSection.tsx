@@ -38,7 +38,7 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="bg-brand-darker border border-white/5 p-8 md:p-10 rounded-3xl"
           >
             <div className="text-brand-accent mb-6"><Video size={32} /></div>
@@ -56,7 +56,7 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="bg-brand-darker border border-white/5 p-8 md:p-10 rounded-3xl"
           >
             <div className="text-brand-accent mb-6"><Target size={32} /></div>
@@ -74,7 +74,7 @@ export function ProblemSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
             className="bg-brand-darker border border-white/5 p-8 md:p-10 rounded-3xl"
           >
             <div className="text-brand-accent mb-6"><Zap size={32} /></div>
@@ -92,7 +92,7 @@ export function ProblemSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
           className="mt-12 text-center max-w-3xl mx-auto"
         >
           <p className="text-2xl md:text-3xl font-display font-bold text-white leading-tight mb-6">

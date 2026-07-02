@@ -185,7 +185,7 @@ export default function About() {
           
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">Lassen Sie uns zusammenarbeiten</h2>
           <Button href="/kontakt" size="lg" className="px-12 h-16 text-lg">
-            20-Minuten Projekt-Check buchen
+            Kostenloses 20-Minuten-Erstgespräch vereinbaren
           </Button>
         </div>
 

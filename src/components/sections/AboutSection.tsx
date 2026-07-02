@@ -11,7 +11,7 @@ export function AboutSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.45 }}
             className="relative aspect-[4/5] rounded-2xl overflow-hidden"
           >
             <img
@@ -34,17 +34,17 @@ export function AboutSection() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.45 }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-sm font-medium text-brand-accent mb-8">
               Über uns
             </div>
             
             <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 leading-tight">
-              Agenturqualität. Persönliche Betreuung. Regionale Nähe.
+              Ein direkter Ansprechpartner. Kein Agentur-Overhead.
             </h2>
             <p className="text-lg text-brand-accent mb-8">
-              Verlässliche Videoproduktion aus Kaiserslautern für Unternehmen in Deutschland.
+              Persönlich geführt von Parsha Rezai – Videoproduktion aus Kaiserslautern.
             </p>
 
             <div className="space-y-6">

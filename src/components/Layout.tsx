@@ -213,7 +213,7 @@ export function Layout() {
                 size="sm"
                 className="px-6 py-2.5 whitespace-nowrap shadow-[0_0_20px_rgba(200,164,107,0.1)] hover:shadow-[0_0_30px_rgba(200,164,107,0.25)] transition-all duration-300 hover:-translate-y-0.5"
               >
-                Projekt anfragen
+                Kostenloses Erstgespräch
               </Button>
             </div>
 
@@ -329,7 +329,7 @@ export function Layout() {
             </a>
           </div>
           <Button href="/kontakt" variant="primary" size="lg" className="w-full h-auto py-4 text-xl">
-            Projekt-Check anfordern
+            Kostenloses Erstgespräch
           </Button>
         </div>
       </div>
@@ -416,7 +416,7 @@ export function Layout() {
                   </li>
                 </ul>
                 <Button href="/kontakt" variant="outline" size="sm" className="mt-6 w-full">
-                  Projekt anfragen
+                  Kostenloses Erstgespräch
                 </Button>
               </div>
             </div>

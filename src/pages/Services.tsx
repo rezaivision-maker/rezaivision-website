@@ -162,7 +162,7 @@ export default function Services() {
                     size="lg" 
                     className="gap-2"
                   >
-                    {service.id === "unternehmensfilm" || service.id === "recruiting" || service.id === "werbevideo" || service.id === "social-media" ? "Mehr erfahren" : "Projekt anfragen"} <ArrowRight size={18} />
+                    {service.id === "unternehmensfilm" || service.id === "recruiting" || service.id === "werbevideo" || service.id === "social-media" ? "Mehr erfahren" : "Kostenloses Erstgespräch"} <ArrowRight size={18} />
                   </Button>
                 </motion.div>
                 

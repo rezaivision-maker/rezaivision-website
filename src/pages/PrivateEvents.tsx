@@ -75,7 +75,7 @@ export default function PrivateEvents() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href="#anfrage" variant="primary" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 border-none text-white">
-                Projekt anfragen
+                Kostenloses Erstgespräch
               </Button>
             </div>
           </motion.div>

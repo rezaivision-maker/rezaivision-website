@@ -58,8 +58,8 @@ export function ApproachSection() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45 }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-sm font-medium text-brand-accent mb-8">
                 Unser Ansatz
@@ -95,8 +95,8 @@ export function ApproachSection() {
                   key={i}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: 0.2 + (i * 0.1) }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.4, delay: 0.1 + (i * 0.06) }}
                   className="bg-brand-darker border border-white/5 p-8 rounded-2xl flex gap-6 items-start hover:border-brand-accent/30 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0 mt-1 group-hover:scale-110 transition-transform">
@@ -115,7 +115,7 @@ export function ApproachSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
             className="mt-16 text-center max-w-3xl mx-auto flex flex-col items-center"
           >
             <p className="text-2xl md:text-3xl font-display font-bold text-white leading-tight mb-8">

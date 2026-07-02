@@ -125,7 +125,7 @@ export default function FAQ() {
           <MessageCircle className="mx-auto text-brand-accent mb-6" size={48} />
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Ihre Frage war nicht dabei?</h2>
           <p className="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
-            Kein Problem. Schreiben Sie uns einfach eine Nachricht oder buchen Sie direkt einen kurzen Termin. Wir klären alle offenen Punkte gerne persönlich.
+            Kein Problem. Schreiben Sie uns einfach eine Nachricht oder vereinbaren Sie direkt ein kurzes Erstgespräch. Wir klären alle offenen Punkte gerne persönlich.
           </p>
           <Button href="/kontakt" size="lg">
             Kontakt aufnehmen

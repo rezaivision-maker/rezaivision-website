@@ -141,7 +141,7 @@ export default function CorporateVideo() {
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <Button href="/kontakt?service=unternehmensfilm" size="lg" className="gap-2">
-                Projekt anfragen <ArrowRight size={18} />
+                Kostenloses Erstgespräch <ArrowRight size={18} />
               </Button>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <CheckCircle2 className="text-brand-accent" size={20} />

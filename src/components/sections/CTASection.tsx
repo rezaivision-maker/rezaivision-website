@@ -23,7 +23,7 @@ export function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.45 }}
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
             Bereit für den <span className="gold-text-gradient">nächsten Schritt?</span>
@@ -37,7 +37,7 @@ export function CTASection() {
               size="lg" 
               className="text-lg h-16 px-12 group relative overflow-hidden transition-all duration-300"
             >
-              <span className="relative z-10">Projektanfrage starten</span>
+              <span className="relative z-10">Kostenloses Erstgespräch vereinbaren</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </Button>
           </div>

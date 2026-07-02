@@ -635,7 +635,7 @@ export default function BlogPost() {
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <Link to="/ueber-uns" className="text-xs font-bold uppercase tracking-widest text-white hover:text-brand-accent transition-colors">Mehr über Parsha</Link>
               <span className="text-white/10">•</span>
-              <Link to="/kontakt" className="text-xs font-bold uppercase tracking-widest text-white hover:text-brand-accent transition-colors">Projekt anfragen</Link>
+              <Link to="/kontakt" className="text-xs font-bold uppercase tracking-widest text-white hover:text-brand-accent transition-colors">Kostenloses Erstgespräch</Link>
             </div>
           </div>
         </motion.div>

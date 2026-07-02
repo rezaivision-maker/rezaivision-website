@@ -205,7 +205,7 @@ export default function Equipment() {
             Lassen Sie uns gemeinsam besprechen, wie wir Ihre Vision mit modernster Technik in Realität verwandeln.
           </p>
           <Button href="/kontakt" size="lg" className="relative z-10">
-            Kostenlosen Projekt-Check anfordern
+            Kostenloses Erstgespräch vereinbaren
           </Button>
         </div>
       </div>

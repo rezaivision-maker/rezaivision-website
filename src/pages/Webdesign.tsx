@@ -103,7 +103,7 @@ export default function Webdesign() {
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <Button href="/kontakt" size="lg" className="gap-2">
-                Kostenloses Gespräch buchen <ArrowRight size={18} />
+                Kostenloses Erstgespräch vereinbaren <ArrowRight size={18} />
               </Button>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <CheckCircle2 className="text-brand-accent" size={20} />
@@ -287,7 +287,7 @@ export default function Webdesign() {
             In einem kostenlosen 20-Minuten-Gespräch klären wir, welches Paket am besten zu Ihren Zielen passt.
           </p>
           <Button href="/kontakt" size="lg">
-            Kostenloses Gespräch buchen
+            Kostenloses Erstgespräch vereinbaren
           </Button>
         </motion.div>
       </section>

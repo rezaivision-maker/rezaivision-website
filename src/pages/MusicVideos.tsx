@@ -43,7 +43,7 @@ export default function MusicVideos() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button href="/reza-e-motion#anfrage" size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white border-none shadow-pink-500/20">
-                Projekt anfragen
+                Kostenloses Erstgespräch
               </Button>
               <Button href="#showreel" variant="outline" size="lg" className="border-pink-500/30 text-pink-400 hover:bg-pink-500/10">
                 Showreel ansehen

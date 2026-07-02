@@ -11,7 +11,7 @@ export function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.45 }}
           className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
         >
           <div className="max-w-2xl">
@@ -58,8 +58,8 @@ export function ServicesSection() {
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: i * 0.06 }}
             >
               <Link to={service.link} className="group relative block overflow-hidden rounded-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9]">
                 <img
@@ -86,8 +86,8 @@ export function ServicesSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45, delay: 0.15 }}
             className="md:col-span-2"
           >
             <Link to="/leistungen/webdesign" className="group relative block overflow-hidden rounded-2xl aspect-[16/5]">

@@ -47,13 +47,13 @@ export function TrustSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="flex flex-col items-center"
               >
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-brand-accent/30 flex items-center justify-center mb-6 md:mb-8">
                   {item.icon}
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-[180px]">
+                <p className="text-gray-300 text-sm leading-relaxed max-w-[180px]">
                   {item.text}
                 </p>
               </motion.div>
@@ -84,7 +84,7 @@ export function TrustSection() {
                     { name: "Shogun Gym Kaiserslautern Kampfsport", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650090/shogun_gym_tcwvyk.webp" },
                     { name: "Schlossgut Lüll - Eventlocation & Weingut", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650086/Schlossgut-Lull-01_-_weiss_lvq8cd.webp" }
                   ].map((client, idx) => (
-                    <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                    <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         loading="lazy" src={client.url}
                         srcSet={`${client.url} 1x, ${client.url.replace('w_100', 'w_200')} 2x`}
@@ -115,7 +115,7 @@ export function TrustSection() {
                     { name: "Cinelex Media Videoproduktion", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650053/cinelex-media-logo-transparent-kaiserslautern_ueqzjq.webp" },
                     { name: "CBL Logistik Gruppe", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650047/CBL_Logo_transparent_kkhdqm.png" }
                   ].map((client, idx) => (
-                    <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                    <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         loading="lazy" src={client.url}
                         srcSet={`${client.url} 1x, ${client.url.replace('w_100', 'w_200')} 2x`}

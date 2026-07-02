@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <SEO 
-        title="Kontakt | Rezai Vision - Ihr Projekt anfragen"
+        title="Kontakt | Rezai Vision – Kostenloses Erstgespräch"
         description="Fragen Sie jetzt Ihr Videoprojekt bei Rezai Vision an. Wir beraten Sie unverbindlich zu Unternehmensfilmen, Recruiting-Videos und Social Media Content."
         canonical="/kontakt"
       />
@@ -63,7 +63,7 @@ export default function Contact() {
             Bereit für Ihr nächstes Projekt?
           </h1>
           <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl">
-            Buchen Sie einen unverbindlichen 20-Minuten Projekt-Check oder schreiben Sie uns direkt. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+            Vereinbaren Sie ein kostenloses, unverbindliches 20-Minuten-Erstgespräch oder schreiben Sie uns direkt. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function Contact() {
             className="bg-brand-darker border border-white/5 rounded-3xl p-8 md:p-12"
           >
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">Projekt anfragen</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-8">Kostenloses Erstgespräch</h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <input type="hidden" name="recap" value="true" />
                 {error && (
