@@ -21,7 +21,7 @@ export default function Pricing() {
     },
     {
       title: "Recruiting-System",
-      price: "ab 1.890 €",
+      price: "ab 3.820 €",
       desc: "Automatisierte Mitarbeitergewinnung statt passiver Stellenausschreibung. Wir entwickeln Content-Strategien, die Fachkräfte dort erreichen, wo sie scrollen, und Hürden im Bewerberprozess abbauen.",
       features: [
         "Mitarbeiter-Profiling",
@@ -35,7 +35,7 @@ export default function Pricing() {
     },
     {
       title: "Marken-Storytelling",
-      price: "ab 2.490 €",
+      price: "ab 3.490 €",
       desc: "Die visuelle Visitenkarte Ihres Unternehmens. Rezai Vision übersetzt Identität in eine Bildsprache, die auf Ihrer Website gezielt Vertrauen bei Neukunden aufbaut und die Markenautorität stärkt.",
       features: [
         "Zielgruppen- & Bedarfsanalyse",
@@ -49,7 +49,7 @@ export default function Pricing() {
     },
     {
       title: "Performance-Ads",
-      price: "ab 1.490 €",
+      price: "ab 1.799 €",
       desc: "Visueller Treibstoff für Ihr Marketing. Verkaufspsychologisch optimierte Kurzvideos für Meta, LinkedIn oder TikTok, die gezielt darauf ausgelegt sind, messbare Leads und Interaktionen zu generieren.",
       features: [
         "Plattform-Analyse",

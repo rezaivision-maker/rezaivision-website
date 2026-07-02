@@ -61,7 +61,7 @@ export default function CorporateVideo() {
   const faqs = [
     {
       question: "Was kostet ein hochwertiger Unternehmensfilm?",
-      answer: "Die Kosten hängen vom Umfang ab (Drehtage, Locations, Darsteller). Ein hochwertiger Unternehmensfilm beginnt bei uns in der Regel ab 2.490 €. In einem kurzen Erstgespräch können wir Ihnen schnell eine verlässliche Einschätzung für Ihr Projekt geben."
+      answer: "Die Kosten hängen vom Umfang ab (Drehtage, Locations, Darsteller). Ein hochwertiger Unternehmensfilm beginnt bei uns in der Regel ab 3.490 €. In einem kurzen Erstgespräch können wir Ihnen schnell eine verlässliche Einschätzung für Ihr Projekt geben."
     },
     {
       question: "Wie lange dauert die Produktion?",
@@ -85,7 +85,7 @@ export default function CorporateVideo() {
     <div className="flex flex-col min-h-screen pt-32">
       <SEO 
         title="Warum ein Imagefilm Ihr stärkstes Vertriebs-Tool ist | Rezai Vision"
-        description="Imagefilm Kaiserslautern – strategische Unternehmensfilme, die Vertrauen aufbauen und Wunschkunden in Millisekunden überzeugen. Rezai Vision, ab 2.490 €."
+        description="Imagefilm Kaiserslautern – strategische Unternehmensfilme, die Vertrauen aufbauen und Wunschkunden in Millisekunden überzeugen. Rezai Vision, ab 3.490 €."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
         structuredData={{
@@ -113,7 +113,7 @@ export default function CorporateVideo() {
             "@type": "Offer",
             "price": "2490.00",
             "priceCurrency": "EUR",
-            "description": "Ab 2.490 € zzgl. MwSt.",
+            "description": "Ab 3.490 € zzgl. MwSt.",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"

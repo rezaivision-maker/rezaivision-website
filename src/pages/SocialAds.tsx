@@ -52,7 +52,7 @@ export default function SocialAds() {
   const faqs = [
     {
       question: "Was kostet ein Social Ad Video?",
-      answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.490 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.490 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
+      answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.799 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.490 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
     },
     {
       question: "Schalten Sie die Werbeanzeigen auch für uns?",
@@ -104,7 +104,7 @@ export default function SocialAds() {
             "@type": "Offer",
             "price": "1490.00",
             "priceCurrency": "EUR",
-            "description": "Ab 1.490 € zzgl. MwSt.",
+            "description": "Ab 1.799 € zzgl. MwSt.",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://www.rezaivision.de/leistungen/werbevideo"
@@ -441,7 +441,7 @@ export default function SocialAds() {
               Was kosten Performance Ads?
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed text-left">
-              Ein einzelner, hochwertiger Werbespot beginnt bei uns <strong className="text-white">ab 1.490 €</strong>.
+              Ein einzelner, hochwertiger Werbespot beginnt bei uns <strong className="text-white">ab 1.799 €</strong>.
             </p>
             <p className="text-gray-400 mb-10 text-left">
               Für erfolgreiches Performance Marketing empfehlen wir jedoch unsere <strong className="text-white">Ad-Pakete (ab 2.490 €)</strong>. Hierbei nutzen wir einen Drehtag maximal effizient, um direkt mehrere Hooks, Längen und Varianten für Ihr A/B-Testing zu produzieren. Das senkt Ihre Kosten pro Video enorm.
