@@ -71,7 +71,7 @@ export function ApproachSection() {
               <p className="text-lg md:text-xl text-gray-400 mb-6 font-light leading-relaxed">
                 Deshalb beginnen wir <strong className="text-white font-medium">nicht mit der Kamera, sondern mit einer klaren Frage:</strong> Was soll Ihr Video konkret erreichen? Erst das Ziel gibt die Richtung vor.
               </p>
-              <p className="text-base md:text-lg text-gray-500 mb-8">
+              <p className="text-base md:text-lg text-gray-400 mb-8">
                 Wir verbinden <strong className="text-gray-300 font-medium">hochwertige Bildsprache mit strategischem Marketingverständnis.</strong> So entstehen Videos, die Ihre Stärken sichtbar machen und gezielt für Ihr Unternehmen arbeiten.
               </p>
             </motion.div>

@@ -68,7 +68,7 @@ export function AboutSection() {
                   <CheckCircle2 size={20} className="text-brand-accent shrink-0 mt-1" />
                   <div>
                     <div className="font-bold text-white text-sm uppercase tracking-wider">{item.title}</div>
-                    <div className="text-gray-500 text-sm">{item.desc}</div>
+                    <div className="text-gray-400 text-sm">{item.desc}</div>
                   </div>
                 </div>
               ))}

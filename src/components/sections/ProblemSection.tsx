@@ -28,7 +28,7 @@ export function ProblemSection() {
             <p className="text-gray-300 italic mb-6 text-lg">
               „Wir haben tolle Benefits und ein super Team, aber es bewerben sich einfach nicht die richtigen Leute. Wie sollen wir unsere Arbeitskultur nach außen zeigen?“
             </p>
-            <p className="text-base text-gray-500">
+            <p className="text-base text-gray-400">
               Ihre echten Werte bleiben unsichtbar, während die Konkurrenz die besten Talente abwirbt.
             </p>
           </motion.div>
@@ -46,7 +46,7 @@ export function ProblemSection() {
             <p className="text-gray-300 italic mb-6 text-lg">
               „Die einen machen nur bunte Clips ohne Strategie, die anderen rufen direkt überzogene Preise auf. Wer versteht eigentlich unser Geschäft?“
             </p>
-            <p className="text-base text-gray-500">
+            <p className="text-base text-gray-400">
               Entscheidungsstress pur. Sie suchen einen Partner auf Augenhöhe, keine abgehobene Werbeagentur.
             </p>
           </motion.div>
@@ -64,7 +64,7 @@ export function ProblemSection() {
             <p className="text-gray-300 italic mb-6 text-lg">
               „Ein Video-Projekt klingt nach einem Fass ohne Boden. Was ist, wenn wir viel Geld ausgeben und es bringt am Ende gar nichts?“
             </p>
-            <p className="text-base text-gray-500">
+            <p className="text-base text-gray-400">
               Das Risiko einer Fehlinvestition hemmt Sie, den nächsten wichtigen Schritt in die Sichtbarkeit zu gehen.
             </p>
           </motion.div>
@@ -82,7 +82,7 @@ export function ProblemSection() {
             <p className="text-gray-300 italic mb-6 text-lg">
               „Wir stecken Zeit und Geld ins Marketing, aber irgendwie nimmt uns online niemand als den Experten wahr, der wir eigentlich sind.“
             </p>
-            <p className="text-base text-gray-500">
+            <p className="text-base text-gray-400">
               Ihre Online-Präsenz spiegelt nicht die hohe Qualität Ihrer tatsächlichen Arbeit wider.
             </p>
           </motion.div>

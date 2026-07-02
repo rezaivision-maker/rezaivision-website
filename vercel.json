@@ -7,6 +7,11 @@
       "has": [{ "type": "host", "value": "rezaivision.de" }],
       "destination": "https://www.rezaivision.de/:path*",
       "permanent": true
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "https://res.cloudinary.com/dzt4f9xdi/image/upload/w_32,h_32,c_fit/v1779109522/favicon_Rezaivision_pbmh2p.png",
+      "permanent": false
     }
   ],
   "headers": [

@@ -141,6 +141,13 @@ export function Layout() {
           }
         ]}
       />
+      {/* Skip-Link für Tastaturnutzer */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-brand-accent focus:text-brand-dark focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
+      >
+        Zum Inhalt springen
+      </a>
       {/* Header */}
       <header
         className={cn(
@@ -311,13 +318,13 @@ export function Layout() {
         </nav>
         <div className="mt-auto pb-8 flex flex-col gap-8">
           <div className="flex justify-center gap-8 text-gray-400">
-            <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+            <a href="https://www.instagram.com/rezaivision" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-brand-accent transition-colors p-2">
               <Instagram size={28} />
             </a>
-            <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+            <a href="https://www.tiktok.com/@rezaivision" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="hover:text-brand-accent transition-colors p-2">
               <Music size={28} />
             </a>
-            <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors p-2">
+            <a href="https://www.facebook.com/rezaivision" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-brand-accent transition-colors p-2">
               <Facebook size={28} />
             </a>
           </div>
@@ -328,7 +335,7 @@ export function Layout() {
       </div>
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow">
         <Outlet />
       </main>
 
