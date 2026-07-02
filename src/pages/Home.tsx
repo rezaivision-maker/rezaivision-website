@@ -17,6 +17,7 @@ const TestimonialSection = lazy(() => import("@/components/sections/TestimonialS
 const FAQSection = lazy(() => import("@/components/sections/FAQSection").then(m => ({ default: m.FAQSection })));
 const PricingSection = lazy(() => import("@/components/sections/PricingSection").then(m => ({ default: m.PricingSection })));
 const CTASection = lazy(() => import("@/components/sections/CTASection").then(m => ({ default: m.CTASection })));
+const InlineCTA = lazy(() => import("@/components/sections/InlineCTA").then(m => ({ default: m.InlineCTA })));
 
 export default function Home() {
   return (
@@ -142,10 +143,12 @@ export default function Home() {
       <Suspense fallback={null}>
         <div className="section-deferred"><TrustSection /></div>
         <div className="section-deferred"><ProblemSection /></div>
+        <InlineCTA text="Kommt Ihnen das bekannt vor? Lassen Sie uns unverbindlich darüber sprechen." />
         <div className="section-deferred"><ApproachSection /></div>
         <div className="section-deferred"><ServicesSection /></div>
         <div className="section-deferred"><ShowreelSection /></div>
         <div className="section-deferred"><CasesSection /></div>
+        <InlineCTA text="Solche Ergebnisse wünschen Sie sich für Ihr Unternehmen?" />
         <div className="section-deferred"><ProcessSection /></div>
         <div className="section-deferred"><AboutSection /></div>
         <div className="section-deferred"><TestimonialSection /></div>

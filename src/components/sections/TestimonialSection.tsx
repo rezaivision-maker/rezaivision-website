@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Star } from "lucide-react";
+import { Star, ChevronDown } from "lucide-react";
 import { testimonials } from "@/data/homeData";
 import { reviewStats } from "@/data/reviews";
 
@@ -13,6 +14,9 @@ const GoogleIcon = () => (
 );
 
 export function TestimonialSection() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleTestimonials = testimonials.slice(0, showAll ? testimonials.length : 3);
+
   return (
     <section className="py-24 bg-brand-darker border-y border-white/5 relative overflow-hidden">
       {/* Background Decorative Elements */}
@@ -44,7 +48,7 @@ export function TestimonialSection() {
 
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(0, 6).map((testimonial: any, i) => (
+            {visibleTestimonials.map((testimonial: any, i) => (
               <div key={i} className="h-full">
                 {/* Google Darkmode Card Style */}
                 <div className="h-full rounded-2xl bg-[#202124] border border-white/5 p-6 md:p-8 flex flex-col relative group transition-transform hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:border-brand-accent/20">
@@ -90,7 +94,7 @@ export function TestimonialSection() {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-[15px] text-gray-200 leading-relaxed flex-grow whitespace-pre-wrap">
+                  <p className={`text-[15px] text-gray-200 leading-relaxed flex-grow whitespace-pre-wrap ${showAll ? "" : "line-clamp-5"}`}>
                     {testimonial.quote}
                   </p>
                 </div>
@@ -98,12 +102,25 @@ export function TestimonialSection() {
             ))}
         </div>
 
+        {/* Mehr anzeigen */}
+        {!showAll && testimonials.length > 3 && (
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 text-gray-300 hover:text-white hover:border-brand-accent/40 transition-colors text-sm md:text-base"
+            >
+              Alle {testimonials.length} Bewertungen anzeigen
+              <ChevronDown size={18} />
+            </button>
+          </div>
+        )}
+
         {/* Footer CTA */}
         <div className="text-center mt-12 md:mt-16">
           <div className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full bg-white/5 border border-white/10 text-sm md:text-base text-gray-300 hover:bg-white/10 transition-colors shadow-lg">
             <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse shrink-0"></span>
             Bereit für Ihr eigenes Erfolgsprojekt?
-            <Link to="/kontakt" className="text-brand-accent font-bold hover:underline ml-1">Jetzt anfragen</Link>
+            <Link to="/kontakt" className="text-brand-accent font-bold hover:underline ml-1">Kostenloses Erstgespräch</Link>
           </div>
         </div>
         
