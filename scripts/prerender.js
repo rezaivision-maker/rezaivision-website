@@ -146,8 +146,18 @@ async function prerender() {
       // Give the app time to mount
       await new Promise(r => setTimeout(r, 2500));
   
-      const html = await page.content();
-      
+      const rawHtml = await page.content();
+
+      // Der Prerender fuehrt das onload der async-Font-CSS aus und friert dadurch
+      // media="all" ein -> im echten Browser wuerde das Schrift-Stylesheet dann
+      // render-blocking laden (der onload-Swap ist ein No-op, wenn media schon "all"
+      // ist). Zuruecksetzen auf media="print", damit die Schrift wieder non-blocking
+      // laedt und der onload-Swap im Browser greift.
+      const html = rawHtml.replace(
+        /media="all" onload="this\.media='all'"/g,
+        `media="print" onload="this.media='all'"`
+      );
+
       if (route === '/404-not-found-page') {
         const filePath = path.join(DIST_DIR, '404.html');
         fs.writeFileSync(filePath, html);
