@@ -153,10 +153,18 @@ async function prerender() {
       // render-blocking laden (der onload-Swap ist ein No-op, wenn media schon "all"
       // ist). Zuruecksetzen auf media="print", damit die Schrift wieder non-blocking
       // laedt und der onload-Swap im Browser greift.
-      const html = rawHtml.replace(
+      let html = rawHtml.replace(
         /media="all" onload="this\.media='all'"/g,
         `media="print" onload="this.media='all'"`
       );
+
+      // Die zwei Homepage-Hero-Bilder werden global im index.html per <link rel="preload"
+      // as="image"> vorgeladen. Auf allen Nicht-Startseiten sind sie ungenutzt und
+      // verschwenden Prioritaets-Bandbreite (verzoegern die echte LCP der Unterseite).
+      // Darum nur auf '/' behalten, sonst entfernen.
+      if (route !== '/') {
+        html = html.replace(/\s*<link\b[^>]*\brel="preload"[^>]*\bas="image"[^>]*>/g, '');
+      }
 
       if (route === '/404-not-found-page') {
         const filePath = path.join(DIST_DIR, '404.html');

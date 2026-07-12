@@ -494,9 +494,13 @@ export default function BlogPost() {
       {/* Hero Section */}
       <header className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
-          <img 
-            loading="lazy" src={post.image} 
+          <img
+            src={post.image}
             alt={post.title}
+            fetchPriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
             className="w-full h-full object-cover opacity-20 blur-sm scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-bg via-brand-bg/95 to-brand-bg" />
