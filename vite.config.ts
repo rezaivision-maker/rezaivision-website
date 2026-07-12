@@ -47,13 +47,10 @@ export default defineConfig(({mode}) => {
             'vendor-react': ['react', 'react-dom', 'react-router-dom'],
             'vendor-motion': ['motion/react'],
             'vendor-helmet': ['react-helmet-async'],
-            'admin': [
-              './src/pages/admin/AdminDashboard.tsx',
-              './src/pages/admin/VideoStudio.tsx',
-              './src/components/admin/CRMManager.tsx',
-              './src/components/admin/LeadScraper.tsx',
-              './src/components/admin/CalculatorAdmin.tsx'
-            ]
+            // NOTE: kein erzwungener 'admin'-Chunk. AdminDashboard/VideoStudio sind
+            // bereits lazy (siehe App.tsx) und werden von Vite automatisch als eigener
+            // Async-Chunk gesplittet. Ein manueller 'admin'-Chunk zog das 1,26-MB-Bundle
+            // per modulepreload in JEDE öffentliche Seite (LCP/INP-Schaden). Nicht wieder hinzufügen.
           },
         },
       },
