@@ -96,76 +96,155 @@ Auf der Startseite der Website (am besten im sichtbaren Bereich ganz oben), in A
   {
     id: "2",
     slug: "imagefilm-kosten-was-kostet-ein-unternehmensfilm",
-    title: "Was kostet ein Imagefilm? Preis-Transparenz für Kaiserslautern & Mannheim",
-    excerpt: "Ehrliche Kosten-Aufschlüsselung: Was eine professionelle Videoproduktion im Südwesten kostet – und warum wir keine Kryptischen Angebote machen.",
+    title: "Imagefilm Kosten: Was ein Unternehmensfilm wirklich kostet – ehrliche Preise für den Mittelstand",
+    excerpt: "Imagefilm Kosten transparent erklärt: Erfahren Sie, welche Faktoren den Preis bestimmen, wo realistische Tagessätze liegen und wie wir Ihre Videoproduktion exakt an Ihr Budget anpassen – von Kaiserslautern bis Mannheim.",
     category: "corporate",
-    date: "11. April 2026",
-    readTime: "5 min",
-    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513549/blog/Blog_Corporate_Video_Kaiserslautern_Post2.jpg",
-    ctaLabel: "Unverbindlich anfragen",
+    date: "13. Juli 2026",
+    readTime: "12 min",
+    image: "/images/blog/imagefilm-kosten-hero.png",
+    ctaLabel: "Kostenlose Budget-Einschätzung anfragen",
     ctaLink: "/kontakt",
-    content: `# Imagefilm Kosten: Was eine Videoproduktion wirklich kostet
+    content: `# Was kostet ein Imagefilm für Unternehmen wirklich? Ehrliche Preise statt „Es kommt darauf an"
 
-"Was kostet so ein Video ungefähr?" – egal ob Sie in **Kaiserslautern, Saarbrücken oder Frankfurt** sitzen, diese Frage ist vollkommen berechtigt. Bei Rezai Vision glauben wir an Transparenz statt an Agentur-Kauderwelsch. Hier ist die ehrliche Antwort.
+Wer im Internet nach den Kosten für einen professionellen [Imagefilm](/leistungen/unternehmensfilm) oder ein Unternehmensvideo sucht, liest fast immer denselben unkonkreten Satz: „Das kommt ganz darauf an ..."
 
----
+Ja, natürlich kommt es darauf an. Aber mal ehrlich: Niemand geht in ein Autohaus und fragt den Verkäufer pauschal: „Was kostet eigentlich ein Auto?"
 
-## Warum es keinen Festpreis gibt
+Jeder weiß sofort, dass die Antwort absurd wäre. Die Auswahl reicht vom zuverlässigen VW Golf bis hin zum Lamborghini. Zwischen diesen Fahrzeugen liegen Welten – in der Ausstattung, in der Technik, im Zweck und natürlich auch im Preis.
 
-Ein Imagefilm ist kein Standardprodukt wie ein Druckflyer. Jede Produktion ist anders, weil jedes Unternehmen anders ist. Trotzdem lässt sich der Preis gut nachvollziehen, wenn man weiß, woraus er sich zusammensetzt.
-
-### 1. Konzept und Planung (vor dem Dreh)
-Das ist der Teil, den man nicht sieht – aber der entscheidet, ob der Film später wirklich etwas bringt. Hier wird erarbeitet, was das Video genau sagen soll, wer das eigentlich schauen wird, wie die Szenen aufgebaut sind und was die Kernbotschaft ist. Wer diese Phase überspringt, dreht ins Blaue.
-
-### 2. Der Drehtag selbst
-Hier summieren sich: Wie viele Stunden wird gedreht? Gibt es nur einen Standort oder mehrere? Braucht ihr spezielle Kamera-Technik, eine Drohne oder aufwändiges Licht? Ist es ein Videograf allein oder ein ganzes Team? Je nach Antwort kann allein dieser Punkt sehr unterschiedlich ausfallen.
-
-### 3. Schnitt und Nachbearbeitung
-Der Drehtag ist oft der kürzere Teil – der Schnitt dauert meist länger. Farb-Abstimmung (sogenanntes Color Grading), Musik, Sounddesign und das Erstellen von Exportversionen für verschiedene Kanäle (Website, Instagram, LinkedIn) gehören dazu.
+Genau so verhält es sich bei der Produktion eines Imagefilms. Als Geschäftsführer oder Marketingverantwortlicher – ob in **Kaiserslautern, Mannheim, Saarbrücken** oder anderswo im Südwesten – hilft Ihnen ein vages „Es kommt darauf an" bei der Budgetplanung nicht weiter. Deshalb machen wir hier Schluss mit dem Herumdrucksen. Hier erfahren Sie schwarz auf weiß, welche Faktoren den Preis bestimmen, wo realistische Tagessätze in der Branche liegen und wie wir gemeinsam das passende „Modell" für Ihre Ziele und Ihr Budget finden.
 
 ---
 
-## Was ist realistisch zu erwarten?
+## Die ehrliche Antwort vorweg: Vom „Golf" bis zum „Lamborghini"
 
-Hier drei grobe Klassen, ohne dass wir so tun, als wären das feste Preislisten:
+Die Preisspanne für einen professionellen Unternehmens- und Imagefilm ist breit – und das ist kein Zufall, sondern spiegelt den enormen Unterschied in Konzept, Aufwand und Anspruch wider.
 
-**Einfacher Einstieg (ab ca. 1.500 – 3.000 €)**
-Ein Videograf, ein Drehtag, ein Standort. Ideal als erste Visitenkarte. Oft ohne tiefere Strategie – der Film sieht gut aus, ist aber nicht auf Vertrieb ausgerichtet.
+![Kompaktes Filmset vs. Großproduktion – der Umfang bestimmt den Preis](/images/blog/imagefilm-kosten-vergleich.png)
 
-**Solider Imagefilm für den Mittelstand (ca. 4.000 – 10.000 €)**
-Hier steckt wirklich Konzept drin. Das ist der Standard für Betriebe, die ihre Website aufwerten, Bewerber ansprechen und Kunden überzeugen wollen. Inkludiert professionelles Equipment, gutes Licht und Formate für verschiedene Plattformen.
+**Professionelle Produktion (ab ca. 2.500 €, mit viel Luft nach oben):** Ab hier beginnt professionelle Qualität – kein Handyvideo, kein Hobbyprojekt. Ideal für kleine und mittelständische Unternehmen in der Pfalz und Rheinland-Pfalz, die einen strategisch durchdachten [Unternehmensfilm](/leistungen/unternehmensfilm) benötigen. Ein authentisches Portrait der eigenen Firma, der Produktion, der Werte und des echten Teams – für die Website und das [Recruiting](/leistungen/recruiting). Kompakt und hocheffizient an einem oder zwei Tagen gedreht, mit voller professioneller Qualität. Je nach Anspruch, Umfang und Zielsetzung skaliert das Projekt nach oben – und genau da liegt die Stärke einer individuellen Produktion.
 
-**Aufwändige Produktion (ab 10.000 €)**
-Mehrere Drehtage, größere Crew, Schauspieler, komplexe Ton- und Bildbearbeitung. Das ist eher für große Kampagnen oder Konzerne.
+**Groß angelegte Produktionen (ab ca. 15.000 € aufwärts):** Mehrtägige Drehs über verschiedene Standorte, aufwendige Storys mit eigener Regie, Schauspielern, einer großen Crew und High-End-Kino-Equipment. Diese Projekte werden in der Regel von größeren Unternehmen oder Konzernen beauftragt, die einen maximalen visuellen und emotionalen Impact benötigen.
 
----
+**Entscheidend ist nicht der Preis, sondern die Wirkung.** Wir beraten Sie ehrlich, welcher Produktionsumfang für Ihre konkreten Unternehmensziele den größten Hebel hat. Manchmal ist das ein fokussierter Ein-Tages-Dreh, manchmal eine mehrtägige Produktion mit größerem Team. Die Qualität unserer Arbeit beginnt bei jedem Projekt auf dem gleichen hohen Niveau.
 
-## Die "günstig kaufen, teuer bezahlen"-Falle
-
-Wer bei der Videoproduktion in Kaiserslautern oder im ganzen Südwesten spart, spart oft genau an der Stelle, die entscheidend ist: dem Konzept. Das Ergebnis ist ein nett aussehendes Video ohne Botschaft – ähnlich wie ein Flyer ohne Text. Im schlimmsten Fall schadet es sogar dem Ruf, wenn Kunden oder Bewerber merken, dass der Film billig wirkt.
-
-Ein guter Film zahlt sich dagegen über viele Jahre aus. Er läuft auf der Website, wird in Gesprächen gezeigt und spart langfristig Vertriebsaufwand.
-
-[Kostenlose Potenzialanalyse anfragen](/kontakt)
+Doch wie setzen sich diese Investitionen zusammen? Schauen wir uns die konkreten Posten an.
 
 ---
 
-## Fazit
+## Die Realität der Tagessätze: Was kostet Crew, Technik und Vorbereitung?
 
-Ein Imagefilm ist keine Ausgabe, sondern eine Investition. Betrachtet ihn wie ein gut geschriebenes Angebot – wenn er gut gemacht ist, bringt er euch Kunden und Mitarbeiter. Wenn nicht, liegt er in einer Schublade.
+Ein hochwertiger Imagefilm entsteht nicht per Knopfdruck. Dahinter stehen ausgebildete Fachkräfte, spezialisierte Technik und ein strukturierter Prozess von der Planung bis zum fertigen Film. Die folgende Tabelle zeigt Ihnen die in Deutschland **üblichen durchschnittlichen Tagessätze (Dayrates)** – damit Sie verstehen, wie sich ein Angebot zusammensetzt. Bei kompakten Produktionen werden viele dieser Rollen gebündelt, sodass die Gesamtkosten deutlich niedriger ausfallen.
+
+| Rolle / Posten im Projekt | Durchschnittlicher Tagessatz |
+|---|---|
+| Konzeption / Pre-Production (Ideenentwicklung, Moodboard, Storyboard, Shotlist) | 600 € bis 1.200 € |
+| Projektleiter / Producer (Koordination, Logistik, Zeitpläne, Kundenabstimmung) | 500 € bis 900 € |
+| Regie / Realisation (Führung von Crew & Protagonisten, Bildgestaltung) | 800 € bis 1.500 € |
+| Geschulter Videograf / DoP (Director of Photography, inkl. Basis-Kamera-Equipment) | 700 € bis 1.300 € |
+| Zweiter Kameramann / Kamera-Assistent (AC) | 400 € bis 750 € |
+| Equipment-Miete & Technik-Pauschale (Eigene Basis-Technik + Zumiete von Spezial-Equipment) | 200 € bis 1.500 €+ pro Tag |
+| **Editor / Schnittmeister (Montage, Story-Rhythmus, Sounddesign-Basis)** | **500 € bis 900 €** |
+| **Colorist (Professionelle Farbkorrektur & Look-Entwicklung)** | **600 € bis 1.100 €** |
+| Professioneller Sprecher (Voiceover) | 300 € bis 1.200 € |
+| Make-up Artist (Visa) | 450 € bis 750 € |
+| Schauspieler / Statisten | 400 € bis 1.500 € (zzgl. Nutzungsrechte) |
+| Revisionen / Korrekturschleifen | 1–2 Schleifen meist im Paket inklusive |
+| Catering, Logistik & Nebenkosten | nach Aufwand (nicht bei jedem Projekt nötig) |
+
+**Wichtig zu wissen:** Bei kompakten Imagefilmen werden viele dieser Rollen gebündelt – ein erfahrener Videograf übernimmt dann z. B. Kamera, Schnitt und Color Grading in Personalunion, während ein Projektleiter die Abstimmung hält. **Das bedeutet: Sie zahlen nicht alle diese Posten einzeln.** Erst bei größeren Produktionen, wenn Aufgaben auf spezialisierte Experten aufgeteilt werden, fallen die individuellen Tagessätze an. Ein Drehtag erfordert in der Postproduktion zudem oft noch einmal die doppelte bis dreifache Arbeitszeit.
+
+---
+
+## Die 5 Hebel, die den Preis Ihres Imagefilms bestimmen
+
+Wenn Sie einen Imagefilm planen, entscheiden fünf Stellschrauben über das Budget. Das Gute daran: **An jeder dieser Schrauben können wir gemeinsam drehen**, um die Produktion exakt an Ihren finanziellen Rahmen anzupassen.
+
+### 1. Pre-Production, Konzept & KI: Eigene Idee vs. Komplettbetreuung
+
+Der erste große Kostenhebel liegt ganz am Anfang. Viele Unternehmen kommen vorbildlich schon mit einer fertigen, durchdachten Idee oder einem bestehenden Konzept zu uns. Das ist großartig! In diesem Fall entfallen viele aufwendige Vorbereitungsschritte, was Ihr Budget spürbar entlastet.
+
+Für Unternehmen, die noch gar keine Idee haben, übernehmen wir die komplette Pre-Production: fundiertes Konzept, visuelle Struktur, Moodboard, detailliertes Storyboard und präzise Shotlist. Das ist echte Planung, die uns wie ein roter Faden durch die Produktion führt und zu 90 % darüber entscheidet, ob der Zuschauer nach 3 Sekunden abschaltet oder bis zum Ende zusieht.
+
+Aber Achtung: Pre-Production besteht nicht nur aus Brainstorming am Schreibtisch! Zur Vorbereitung gehört auch handfeste, technische Logistik: das Vorbereiten und Prüfen des Equipment-Materials, Kalkulation von Fahrtkosten und Reiserouten sowie das Rigging der Cinema-Kameras für spezifische Setups.
+
+**Ein offenes Wort zum Thema KI:** Wir nutzen KI-Tools, um Ideen und Pläne schneller zu strukturieren und Arbeitsabläufe zu optimieren. Aber: KI unterstützt uns – sie ersetzt nicht die komplette kreative und strategische Arbeit. Wer sich ein Skript einfach nur blind von einer Standard-KI zusammenbasteln lässt, bekommt generischen Inhalt, der niemals das Optimum aus dem herausholt, was Ihr Unternehmen wirklich einzigartig macht.
+
+### 2. Projektleitung, Regie & Führung am Set
+
+Ein stressfreier Ablauf braucht Struktur. Der Projektleiter hält Ihnen den Rücken frei, koordiniert Drehtage, Locations und Zeitpläne. Am Set übernimmt bei kompakteren Imagefilmen oft der erfahrene Videograf die Bildgestaltung und die Anweisung der Mitarbeiter in Personalunion. Bei größeren Produktionen mit mehreren Drehorten oder Schauspielern ist eine eigene Regie unverzichtbar.
+
+### 3. Kamera, Technik & Crew: Warum das geschulte Auge den Unterschied macht
+
+Eine hochwertige Kamera und saubere Technik sind fundamental – aber sie sind wertlos ohne das geschulte Auge, das sie bedient. Weil gute Kameratechnik heute erschwinglicher geworden ist, gibt es unzählige Anbieter am Markt, die sich „Videograf" nennen. Die entscheidende Frage lautet: **Wie gut schafft es dieser Imagefilm, Ihre Message so zu transportieren, dass er Ihrem Unternehmen wirtschaftlich nützt?**
+
+In der professionellen [Videoproduktion](/leistungen) werden heute hervorragende Profikameras im kompakten Format eingesetzt. Diese stehen den riesigen Cinema-Boliden in Dynamikumfang und Bildqualität kaum noch nach – kompakte Profi-Kameras bringen gewaltige Vorteile bei Flexibilität und Schnelligkeit am Set und sind für nahezu alle Unternehmensziele absolut ausreichend.
+
+**Wichtig zum Thema Technik-Kosten:** Jede professionelle Produktionsfirma besitzt eigenes, hochwertiges Basis-Equipment. Diese eigene Technik wird in der Kalkulation berechnet – schließlich entstehen Kosten für Anschaffung, Wartung und Verschleiß. Spezial-Equipment wie Kran-Systeme, spezielle Kino-Objektive oder Schwerlast-Drohnen wird projektbezogen extern zugemietet.
+
+### 4. Voiceover & Sound: KI-Stimme oder Profi-Sprecher?
+
+Heutzutage werben viele mit günstigen KI-Stimmen. Die Technologie wird besser, aber Menschen haben ein feines Gespür für Nuancen. Eine echte, professionelle Sprecherstimme transportiert Emotionen, die eine KI (noch) nicht kopieren kann. Das Publikum merkt oft unbewusst, wenn die Stimme „künstlich" ist – das kann schnell billig wirken und das Vertrauen in Ihre Marke beschädigen. Ein passender, lizenzierter Soundtrack und professionelles Sounddesign runden das Erlebnis ab.
+
+### 5. Postproduktion: Schnitt, Color Grading & Revisionen
+
+![Professioneller Color-Grading-Arbeitsplatz – hier entsteht der finale Look](/images/blog/imagefilm-kosten-postproduktion.png)
+
+Die Postproduktion ist der Ort, an dem aus einzelnen Puzzleteilen die Magie entsteht. Der **Editor (Schnittmeister)** bringt die Story in einen dynamischen Rhythmus, wählt die besten Takes aus und setzt den Schnitt. Anschließend übernimmt der **Colorist**: Da hochwertige Kameras in flachen Farbprofilen aufnehmen, entwickelt er in der Farbkorrektur den finalen, cineastischen Look Ihres Films.
+
+Ein entscheidender Punkt für das Budget sind die **Revisionen (Korrekturschleifen)**. In unserer Kalkulation sind in der Regel 1 bis 2 Feedback-Runden im Festpreis enthalten, in denen Sie Änderungswünsche äußern können. Endlose Korrekturschleifen durch unklare interne Absprachen erfordern zusätzliche Arbeitszeit und werden nach Aufwand berechnet. Eine saubere Planung in der Pre-Production spart Ihnen hier bares Geld!
+
+---
+
+## Wie wir arbeiten: Maximale Qualität durch skalierbare Teams
+
+Nach all diesen Zahlen stellt sich die entscheidende Frage: Wie setzen wir das in der Praxis für Sie um?
+
+Unsere Philosophie ist einfach: **Gleiche professionelle Qualität – skaliert auf Ihr Projekt.**
+
+**Fokussiert & hochprofessionell für kompakte Projekte:** Wenn Sie einen strategisch klaren [Unternehmensfilm](/leistungen/unternehmensfilm) ohne unnötigen Ballast benötigen, arbeiten wir in kleinen, eingespielten Teams. Mit moderner Profi-Technik sind wir flexibel vor Ort und liefern maximale visuelle Qualität – schnell, strukturiert und auf den Punkt.
+
+**Kraftvoll & umfassend für Großproduktionen:** Wenn Ihr Projekt mehr verlangt, schalten wir mühelos einen Gang hoch. Durch unser starkes, über Jahre gewachsenes Netzwerk aus spezialisierten Regisseuren, Beleuchtern, Tonmeistern und Make-up Artists haben wir jederzeit die Schlagkraft, auch aufwendige Produktionen reibungslos abzuwickeln.
+
+Der Unterschied liegt im Umfang – nicht in der Qualität. Egal ob ein fokussierter Ein-Tages-Dreh oder eine mehrtägige Produktion: Unser Anspruch an Bild, Ton und Story bleibt derselbe.
+
+[Projekt unverbindlich besprechen](/kontakt)
+
+---
+
+## Fazit: Welches Budget ist für Ihren Imagefilm das richtige?
+
+Es muss nicht immer die große Produktion sein, um Eindruck zu hinterlassen. Für kleine und mittelständische Unternehmen in **Kaiserslautern, Mannheim und der gesamten Region** ist der beste Weg meist der gesunde Menschenverstand:
+
+**Investieren Sie dort, wo es auffällt:** Sparen Sie nicht am Konzept, der sauberen Pre-Production und dem geschulten Auge. Ein perfekt geplanter Unternehmensfilm und ein Team, das weiß, wie es Ihre Message transportiert, schlagen eine teure, aber inhaltlich langweilige Produktion jedes Mal.
+
+**Nutzen Sie die Flexibilität moderner Technik:** Dank enorm leistungsstarker und kompakter Profi-Kameras kann ein smart aufgestelltes Team heute einen Imagefilm liefern, für den man vor zehn Jahren noch einen ganzen Transporter voll Equipment brauchte.
+
+Sie planen einen neuen Imagefilm und möchten eine ehrliche, transparente Einschätzung für Ihr Budget? Wir analysieren gemeinsam, welches Setup für Ihre Ziele den größten Hebel hat – skalierbar, effizient und genau auf den Punkt.
+
+[Jetzt unverbindliche Budget-Einschätzung anfragen](/kontakt)
 
 ---
 
 ## FAQ
 
-### Was kostet ein einfacher Imagefilm für ein kleines Unternehmen?
-Solide erste Produktionen starten bei ca. 1.500 €. Wer echter Konzeptarbeit und Vertriebswirkung will, sollte 3.500–5.000 € einplanen.
+### Was kostet ein professioneller Imagefilm?
+Unsere Produktionen starten ab ca. 2.500 € – das ist der Einstieg in professionelle Qualität mit Konzept, Planung und hochwertigem Equipment. Je nach Umfang, Anzahl der Drehtage und Anspruch an Postproduktion skaliert die Investition nach oben. In einem unverbindlichen Erstgespräch klären wir, welcher Umfang für Ihre Ziele der richtige ist.
 
-### Was sollte im Preis enthalten sein?
-Konzept und Storyboard, Drehtag inkl. Equipment, Schnitt, Farbkorrektur, Musik, mindestens eine Korrekturrunde und verschiedene Exportformate.
+### Warum schwanken die Preise so stark?
+Die Spanne spiegelt den enormen Unterschied im Aufwand wider: Ein fokussierter Ein-Tages-Dreh mit einem erfahrenen Videografen ist eine andere Produktion als ein mehrtägiges Projekt mit großer Crew, eigener Regie und aufwendiger Postproduktion. Beides hat seine Berechtigung – entscheidend ist, was Ihr Unternehmen braucht.
+
+### Was sollte in einer professionellen Produktion enthalten sein?
+Konzept und Storyboard, Drehtag inklusive professionellem Equipment, Schnitt (Editor), Farbkorrektur (Color Grading), Musik-Lizenz, mindestens eine Korrekturrunde und Exportformate für verschiedene Kanäle (Website, Social Media, Präsentationen). Alles darunter ist keine vollwertige Produktion.
+
+### Was unterscheidet euch von günstigeren Anbietern?
+Bei uns beginnt jedes Projekt mit einer strategischen Konzeption – nicht einfach mit dem Aufstellen einer Kamera. Der Unterschied zeigt sich im Ergebnis: Ein Film, der Ihre Botschaft trifft, Vertrauen aufbaut und wirtschaftlich wirkt, statt einfach nur „gut auszusehen". Dazu kommen professionelle Postproduktion mit Schnitt und Color Grading, die den cineastischen Look ausmachen.
 
 ### Wie viele Drehtage brauche ich?
-Für einen Betrieb mit einem Standort reicht in den meisten Fällen ein langer Drehtag (8–10 Stunden). Bei mehreren Standorten oder komplexeren Geschichten werden 2 bis 3 Tage kalkuliert.`
+Für einen Betrieb mit einem Standort reicht in den meisten Fällen ein Drehtag (8–10 Stunden). Bei mehreren Standorten oder komplexeren Storys werden 2 bis 3 Tage kalkuliert. Bei einem [unverbindlichen Erstgespräch](/kontakt) klären wir, was für Ihre Situation sinnvoll ist.
+
+### Arbeitet ihr auch außerhalb von Kaiserslautern?
+Ja. Unser Einzugsgebiet umfasst die gesamte Pfalz, Rheinland-Pfalz, das Saarland und die Metropolregion Rhein-Neckar (Mannheim, Heidelberg, Ludwigshafen). Für Projekte außerhalb berechnen wir lediglich eine Fahrtkostenpauschale.`
   },
   {
     id: "3",
