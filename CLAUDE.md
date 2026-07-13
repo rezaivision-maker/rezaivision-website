@@ -81,7 +81,8 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 
 | Befehl | Zweck |
 |---|---|
-| `npm run build` | **Der wichtige Befehl.** Kette: `fetch-google-reviews.js` (Live-Sterne) → `vite build` → `prerender.js` (HTML + `sitemap.xml`). Bricht NIE an fehlenden Keys ab (ehrlicher Fallback). Vor jedem Push ausführen. |
+| `npm run build` | **Voller Build.** Kette: `fetch-google-reviews.js` (Live-Sterne) → `vite build` → `prerender.js` (HTML + `sitemap.xml`). Nur bei Code-Änderungen (Komponenten, Styles, Config) nötig. |
+| `node scripts/prerender-blog.js <slug>` | **Für neue Blog-Posts.** Rendert nur `/blog/<slug>` + `/blog`-Übersicht + Sitemap. Kein `vite build` nötig, deutlich schneller. |
 | `npm run dev` | Lokaler Entwicklungsserver (Port 3000). |
 | `npm run lint` | TypeScript-Check (`tsc --noEmit`). Bei Code-Änderungen vorher prüfen. |
 | `npm run preview` | Vorschau des gebauten `dist/`. |
@@ -104,8 +105,16 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
    nicht in der Sitemap.
 5. Bilder: immer `width`, `height`, `alt` setzen und `loading="lazy"` (außer dem
    Hero-Bild, das `fetchPriority="high"` braucht).
-6. Nach Änderungen am Blog: `npm run build` holt neue Blog-Posts automatisch aus
-   Firestore (`posts`-Collection) und rendert sie als HTML.
+6. **Neue Blog-Posts: NUR über Firestore, NICHT in `blogPosts.ts`!**
+   Neue Artikel werden ausschließlich über das Admin-Dashboard (`/admin` → Blog & Artikel)
+   in Firestore (`posts`-Collection) angelegt. `src/data/blogPosts.ts` dient nur als
+   statischer Fallback für bestehende Posts und wird für neue Artikel NICHT angefasst.
+   Dadurch bleibt das JS-Bundle unverändert und es reicht:
+   ```bash
+   node scripts/prerender-blog.js <neuer-slug>
+   git add -A && git commit -m "Blog: <Titel>" && git push
+   ```
+   Ein voller `npm run build` ist nur bei Code-Änderungen (Komponenten, Styles) nötig.
 7. `noindex`-Seiten (`/impressum`, `/datenschutz`, `/agb`) gehören NICHT in die
    Sitemap. `scripts/prerender.js` filtert sie über das Array `NOINDEX_ROUTES` raus
    (sonst Search-Console-Warnung „in Sitemap, aber noindex"). Sie werden trotzdem gerendert.
