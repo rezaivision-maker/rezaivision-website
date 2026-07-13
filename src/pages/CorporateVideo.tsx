@@ -283,9 +283,29 @@ export default function CorporateVideo() {
             </p>
           </div>
 
+          <div className="max-w-4xl bg-brand-darker border border-white/5 rounded-3xl p-8 md:p-12 mb-10">
+            <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Premium-Video-Branding · Rechtsanwaltskanzlei</div>
+            <h3 className="text-2xl md:text-3xl font-display font-bold mb-6">Spärzel Rechtsanwälte</h3>
+            <div className="space-y-4 text-gray-300 leading-relaxed">
+              <p><strong className="text-white">Die Herausforderung:</strong> Ein vielbeschäftigter Anwalt braucht repräsentative Videos im Premium-Look – ohne Störung des Kanzleialltags.</p>
+              <div>
+                <strong className="text-white">Unsere Lösung:</strong>
+                <ul className="mt-3 space-y-2">
+                  <li className="flex items-start gap-3"><CheckCircle2 className="text-brand-accent shrink-0 mt-1" size={18} /><span><strong className="text-white">Smarte Terminierung:</strong> Dreh an einem Feiertag für maximale Ruhe und Fokus vor der Kamera.</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="text-brand-accent shrink-0 mt-1" size={18} /><span><strong className="text-white">High-End Look &amp; Feel:</strong> perfektes Licht- und Kamera-Setup für den klassischen Business-Look (Anzug &amp; Hemd).</span></li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="text-brand-accent shrink-0 mt-1" size={18} /><span><strong className="text-white">Premium-Branding:</strong> maßgeschneiderte animierte Titel im Post-Processing, die den Expertenstatus unterstreichen.</span></li>
+                </ul>
+              </div>
+            </div>
+            <blockquote className="mt-8 border-l-2 border-brand-accent pl-6 italic text-gray-300">
+              „Die Technik klappte hervorragend und das Ergebnis sieht extrem stark aus. Auf den Videos wirke ich absolut perfekt – die animierten Titel passen hervorragend!"
+              <footer className="mt-3 not-italic text-sm text-gray-400">— Harald Hotze, Spärzel Rechtsanwälte</footer>
+            </blockquote>
+          </div>
+
           <div className="max-w-3xl">
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Ein Unternehmensfilm entscheidet sich an der Umsetzung – an Bild, Licht, Schnitt und Ton. Statt austauschbarer Erfolgsversprechen zeigen wir Ihnen lieber echte Arbeit: In unserem Showreel sehen Sie, wie wir Marken, Menschen und Produkte in Szene setzen. Konkrete Beispiele aus Ihrer Branche besprechen wir gerne im persönlichen Erstgespräch.
+              Weitere Projekte sehen Sie in unserem Showreel – konkrete Beispiele aus Ihrer Branche besprechen wir gerne im persönlichen Erstgespräch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button href="/#showreel" size="lg">Showreel ansehen</Button>
