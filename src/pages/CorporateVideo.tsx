@@ -274,134 +274,22 @@ export default function CorporateVideo() {
       {/* 5. BEISPIELE / REFERENZEN */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="mb-16">
+          <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Projekte, die wirken
+              Echte Arbeit statt Behauptungen
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
               Wir produzieren nicht nur schöne Bilder, sondern lösen konkrete unternehmerische Herausforderungen.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Case 1 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Industrieunternehmen Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Industrie & Fertigung</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Innovation sichtbar machen</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Hochkomplexe Fertigungsprozesse waren für internationale B2B-Kunden online nicht greifbar.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Ein dynamischer Markenfilm mit Fokus auf High-Tech-Prozesse und Mitarbeiter-Expertise.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Deutliche Aufwertung des Markenimages und spürbar mehr qualifizierte B2B-Anfragen.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Case 2 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop" 
-                  alt="B2B Dienstleister Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">B2B Dienstleister</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Vertrauen bei Neukunden</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Lange Sales-Zyklen, da die Beratungsleistung stark erklärungsbedürftig war.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Kombination aus Unternehmensportrait und echten Kundenstimmen (Testimonials).</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Das Video dient als Türöffner. Die Abschlussrate nach Erstgesprächen stieg signifikant an.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Case 3 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Recruiting Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Recruiting</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Talente gewinnen</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Fachkräftemangel und Schwierigkeiten, junge Talente anzusprechen.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Authentisches Recruiting-Video mit Fokus auf Unternehmenskultur und Teamgeist.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Mehr qualifizierte Bewerbungen und eine stärkere Arbeitgebermarke.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Case 4 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Event Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Event</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Events nacherleben</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Events sind flüchtig, der Hype verfliegt schnell.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Dynamischer Aftermovie, der die Energie und Atmosphäre des Events einfängt.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Langfristige Sichtbarkeit und Begeisterung bei Teilnehmern und Interessenten.</span>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-3xl">
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              Ein Unternehmensfilm entscheidet sich an der Umsetzung – an Bild, Licht, Schnitt und Ton. Statt austauschbarer Erfolgsversprechen zeigen wir Ihnen lieber echte Arbeit: In unserem Showreel sehen Sie, wie wir Marken, Menschen und Produkte in Szene setzen. Konkrete Beispiele aus Ihrer Branche besprechen wir gerne im persönlichen Erstgespräch.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button href="/#showreel" size="lg">Showreel ansehen</Button>
+              <Button href="/kontakt?service=unternehmensfilm" variant="outline" size="lg">Beispiele im Erstgespräch</Button>
             </div>
           </div>
         </div>
