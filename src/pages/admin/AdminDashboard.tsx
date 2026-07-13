@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
-import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts } from "@/lib/dbHelpers";
-import { BlogPost } from "@/data/blogPosts";
+import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts, importSelectedStaticPosts } from "@/lib/dbHelpers";
+import { BlogPost, blogPosts as staticPosts } from "@/data/blogPosts";
 import CalculatorAdmin from "@/components/admin/CalculatorAdmin";
 import PagesSEOManager from "@/components/admin/PagesSEOManager";
 import CreatorChannel from "@/components/admin/CreatorChannel";
@@ -299,6 +299,10 @@ export default function AdminDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
+  
+  // Import Modal States
+  const [isImportModalOpen, setIsImportModalOpen] = useState(false);
+  const [selectedStaticPosts, setSelectedStaticPosts] = useState<string[]>([]);
   const [isImporting, setIsImporting] = useState(false);
 
   // Live Preview States
@@ -784,8 +788,36 @@ export default function AdminDashboard() {
     }
   };
 
+  const openImportModal = () => {
+    // Determine which static posts are already in Firestore by comparing IDs
+    const existingPostIds = new Set(posts.map(p => p.id));
+    const missingPosts = staticPosts.filter(sp => !existingPostIds.has(sp.id));
+    
+    // Auto-select those that are missing
+    setSelectedStaticPosts(missingPosts.map(p => p.id));
+    setIsImportModalOpen(true);
+  };
+
+  const handleSelectedImport = async () => {
+    if (selectedStaticPosts.length === 0) {
+      alert("Bitte wähle mindestens einen Beitrag aus.");
+      return;
+    }
+    setIsImporting(true);
+    try {
+      await importSelectedStaticPosts(selectedStaticPosts);
+      setIsImportModalOpen(false);
+      refreshPosts();
+      alert(`${selectedStaticPosts.length} Beitrag/Beiträge erfolgreich in Firestore importiert!`);
+    } catch (err) {
+      alert("Import fehlgeschlagen: " + err);
+    } finally {
+      setIsImporting(false);
+    }
+  };
+
   const handleImport = async () => {
-    if (confirm("Möchtest du alle 33 Standard-Blogbeiträge in deine Google Cloud Firestore-Datenbank importieren? Bereits existierende Beiträge werden überschrieben.")) {
+    if (confirm("Möchtest du wirklich ALLE Standard-Blogbeiträge importieren? Existierende werden überschrieben.")) {
       setIsImporting(true);
       try {
         await importStaticPosts();
@@ -1274,12 +1306,12 @@ export default function AdminDashboard() {
               </div>
               <div className="flex gap-3">
                 <button 
-                  onClick={handleImport}
+                  onClick={openImportModal}
                   disabled={isImporting}
                   className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
                 >
                   <Database size={18} />
-                  {isImporting ? "Importiere..." : "33 Beiträge importieren"}
+                  Aus Code (blogPosts.ts) importieren
                 </button>
                 <button 
                   onClick={openCreateModal}
@@ -2739,6 +2771,126 @@ export default function AdminDashboard() {
                   </div>
                 </div>
               </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Import Static Posts Modal */}
+      <AnimatePresence>
+        {isImportModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }} 
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              onClick={() => setIsImportModalOpen(false)}
+            />
+            
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }} 
+              animate={{ opacity: 1, scale: 1, y: 0 }} 
+              exit={{ opacity: 0, scale: 0.95, y: 20 }} 
+              className="relative w-full max-w-3xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden"
+            >
+              <div className="p-6 border-b border-white/5 flex justify-between items-center bg-black/40">
+                <div>
+                  <h2 className="text-xl font-bold font-display flex items-center gap-2">
+                    <Database size={20} className="text-brand-accent" />
+                    Beiträge importieren
+                  </h2>
+                  <p className="text-sm text-gray-400 mt-1">
+                    Wähle Artikel aus deiner lokalen <code className="text-brand-accent">blogPosts.ts</code>, die in die Datenbank hochgeladen werden sollen.
+                  </p>
+                </div>
+                <button 
+                  onClick={() => setIsImportModalOpen(false)}
+                  className="p-2 text-gray-400 hover:text-white rounded-xl hover:bg-white/5 transition-colors cursor-pointer"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <div className="p-6 overflow-y-auto custom-scrollbar flex-1">
+                <div className="mb-4 flex justify-between items-center">
+                  <span className="text-sm text-gray-400">
+                    <span className="text-white font-bold">{selectedStaticPosts.length}</span> von {staticPosts.length} ausgewählt
+                  </span>
+                  <div className="flex gap-2">
+                    <button 
+                      onClick={() => setSelectedStaticPosts(staticPosts.map(p => p.id))}
+                      className="text-xs text-brand-accent hover:underline cursor-pointer"
+                    >
+                      Alle auswählen
+                    </button>
+                    <span className="text-gray-600">|</span>
+                    <button 
+                      onClick={() => setSelectedStaticPosts([])}
+                      className="text-xs text-brand-accent hover:underline cursor-pointer"
+                    >
+                      Auswahl aufheben
+                    </button>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  {staticPosts.map(post => {
+                    const isExisting = posts.some(p => p.id === post.id);
+                    const isSelected = selectedStaticPosts.includes(post.id);
+
+                    return (
+                      <div 
+                        key={post.id}
+                        onClick={() => {
+                          if (isSelected) {
+                            setSelectedStaticPosts(prev => prev.filter(id => id !== post.id));
+                          } else {
+                            setSelectedStaticPosts(prev => [...prev, post.id]);
+                          }
+                        }}
+                        className={`p-3 rounded-lg border cursor-pointer flex items-center gap-3 transition-colors ${
+                          isSelected 
+                            ? 'bg-brand-accent/10 border-brand-accent/30' 
+                            : 'bg-white/5 border-white/5 hover:border-white/10 hover:bg-white/10'
+                        }`}
+                      >
+                        <div className={`w-5 h-5 rounded flex items-center justify-center shrink-0 border ${
+                          isSelected ? 'bg-brand-accent border-brand-accent text-brand-bg' : 'border-gray-500 bg-transparent'
+                        }`}>
+                          {isSelected && <CheckCircle2 size={14} />}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-bold text-white truncate">{post.title}</div>
+                          <div className="text-xs text-gray-400 font-mono truncate">{post.slug}</div>
+                        </div>
+                        {isExisting && (
+                          <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded">
+                            Schon in DB
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="p-6 border-t border-white/5 bg-black/40 flex justify-end gap-3 shrink-0">
+                <button 
+                  onClick={() => setIsImportModalOpen(false)}
+                  className="px-6 py-2.5 rounded-xl font-bold text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  Abbrechen
+                </button>
+                <button 
+                  onClick={handleSelectedImport}
+                  disabled={isImporting || selectedStaticPosts.length === 0}
+                  className="px-6 py-2.5 rounded-xl font-bold bg-brand-accent text-brand-bg hover:brightness-110 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center gap-2"
+                >
+                  {isImporting && <Loader2 size={16} className="animate-spin" />}
+                  {isImporting ? 'Importiere...' : 'Ausgewählte importieren'}
+                </button>
+              </div>
             </motion.div>
           </div>
         )}

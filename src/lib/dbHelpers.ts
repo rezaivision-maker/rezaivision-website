@@ -106,3 +106,13 @@ export async function importStaticPosts(): Promise<void> {
     await saveBlogPost(post);
   }
 }
+
+/**
+ * Imports only specific static blog posts into Firestore by their IDs.
+ */
+export async function importSelectedStaticPosts(ids: string[]): Promise<void> {
+  const postsToImport = staticPosts.filter(post => ids.includes(post.id));
+  for (const post of postsToImport) {
+    await saveBlogPost(post);
+  }
+}
