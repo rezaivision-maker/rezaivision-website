@@ -3,34 +3,6 @@ export const aestheticInkSlides = [
   "https://player.vimeo.com/video/1180533973?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&muted=0"
 ];
 
-export const socialClips = [
-  {
-    url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775649531/Social_Media_Content_Videos_Reels_Rezaivision_Kaiserslautern_wvd12d.webp",
-    title: "Social Media Content",
-    category: "Reels / TikTok"
-  },
-  {
-    url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775639140/Social_Media_Reels_Kaiserslautern_Rezaivision_Videoproduktion_fuer_Social_Media_ek3s0b.webp",
-    title: "Brand Story Reels",
-    category: "Ads"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=800&auto=format&fit=crop",
-    title: "Corporate Workflow",
-    category: "Business"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1492691523567-6170c8175d71?q=80&w=800&auto=format&fit=crop",
-    title: "Cinematic Showcase",
-    category: "Portfolio"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
-    title: "Live Event Energy",
-    category: "Recap"
-  }
-];
-
 export const testimonials = [
   {
     quote: "ich bin super zufrieden mit der Arbeit der Agentur. Sie haben für mein Unternehmen Video- und Social-Media-Content erstellt, der richtig gut angekommen ist – nicht nur bei uns, sondern auch bei unseren Kunden. Alles lief professionell, zuverlässig und sehr angenehm. Klare Empfehlung!",

@@ -90,7 +90,6 @@ export function TestimonialSection() {
                         <Star key={star} fill="#fbbc04" className="text-[#fbbc04] shrink-0" size={16} />
                       ))}
                     </div>
-                    <span className="text-[13px] text-gray-400">{testimonial.date}</span>
                   </div>
 
                   {/* Review Text */}
