@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { ServiceBlogLinks } from "@/components/ServiceBlogLinks";
 import { motion, AnimatePresence } from "motion/react";
 import { SEO } from "@/components/SEO";
 import { 
@@ -543,6 +544,8 @@ export default function CorporateVideo() {
           </div>
         </div>
       </section>
+
+      <ServiceBlogLinks service="unternehmensfilm" />
 
       {/* 10. ABSCHLUSS CALL-TO-ACTION */}
       <section className="py-32 bg-brand-darker text-center border-t border-white/10">

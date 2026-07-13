@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { ServiceBlogLinks } from "@/components/ServiceBlogLinks";
 import { motion, AnimatePresence } from "motion/react";
 import { SEO } from "@/components/SEO";
 import { 
@@ -435,6 +436,8 @@ export default function SocialAds() {
           </div>
         </div>
       </section>
+
+      <ServiceBlogLinks service="werbevideo" />
 
       {/* 10. ABSCHLUSS CALL-TO-ACTION */}
       <section className="py-32 bg-brand-accent text-brand-darker text-center">
