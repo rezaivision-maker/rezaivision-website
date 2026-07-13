@@ -303,6 +303,20 @@ export default function CorporateVideo() {
             </blockquote>
           </div>
 
+          <div className="max-w-4xl bg-brand-darker border border-white/5 rounded-3xl p-8 md:p-12 mb-10">
+            <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Kooperation · Imagefilm-Serie</div>
+            <h3 className="text-2xl md:text-3xl font-display font-bold mb-6">
+              <a href="https://www.schlossgut-luell.de/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors">Schlossgut Lüll</a>
+            </h3>
+            <div className="space-y-4 text-gray-300 leading-relaxed">
+              <p>Für die neue Website des Schlossgut Lüll entstand eine dreiteilige Imagefilm-Serie – als gleichberechtigte Zusammenarbeit zweier Videoproduktionsunternehmen mit einer starken gemeinsamen Idee: Pop-Media (Nicholas Adkins) und rezaivision (Parsha Rezai Mah), zu gleichen Teilen an Umsetzung und Vision beteiligt. Ziel war, einzufangen, was das Schlossgut und die drei Frauen dahinter ausmacht.</p>
+            </div>
+            <blockquote className="mt-8 border-l-2 border-brand-accent pl-6 italic text-gray-300">
+              „Die insgesamt 3 Filme sind das Highlight unserer Webseite und spiegeln uns zu 100 % wider. Ihr habt wirklich und ungelogen einen wahnsinnig guten Job gemacht. Besonders wichtig dabei war, dass es um den Spaß an der Sache geht und darin seid ihr Profis, das merkt man euch mit jeder Faser an."
+              <footer className="mt-3 not-italic text-sm text-gray-400">— Constance, Sophie und Anna, Schlossgut Lüll</footer>
+            </blockquote>
+          </div>
+
           <div className="max-w-3xl">
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
               Weitere Projekte sehen Sie in unserem Showreel – konkrete Beispiele aus Ihrer Branche besprechen wir gerne im persönlichen Erstgespräch.
