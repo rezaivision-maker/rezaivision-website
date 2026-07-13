@@ -69,7 +69,19 @@ export default function RecruitingVideo() {
     },
     {
       question: "Helfen Sie auch bei der Verbreitung der Videos?",
-      answer: "Wir sind Experten für die Videoproduktion. Für die Ausspielung (Social Recruiting Ads) arbeiten wir bei Bedarf mit spezialisierten Partneragenturen zusammen oder liefern Ihrem internen Marketing-Team das perfekte Material für erfolgreiche Kampagnen."
+      answer: "Wir sind Experten für die Videoproduktion. Für die zielgerichtete Ausspielung (Social Recruiting Ads) arbeiten wir mit einem erfahrenen Marketer und Social-Media-Ad-Buyer zusammen – oder liefern Ihrem internen Marketing-Team das perfekte Material für erfolgreiche Kampagnen."
+    },
+    {
+      question: "Wie viele Recruiting Videos brauchen wir?",
+      answer: "Das hängt vom Ziel ab. Manchmal reicht ein einziges Video – idealerweise mit vier verschiedenen Hooks zum Testen. Unsere klare Empfehlung sind aber 3 bis 4 Creatives. Kombiniert man diese mit 3 bis 4 unterschiedlichen Hooks, ergeben sich daraus 9 bis 16 Ad-Versionen, mit denen sich systematisch testen lässt, welche Ansprache am besten funktioniert."
+    },
+    {
+      question: "Wie lange können wir ein Recruiting Video nutzen?",
+      answer: "Ein richtig aufgesetztes Recruiting-Video bleibt in der Regel 1 bis 3 Jahre nutzbar. Bei anhaltendem Fachkräfte- und Mitarbeitermangel lässt es sich immer wieder einsetzen – ein einmaliges Investment, das lange arbeitet."
+    },
+    {
+      question: "Bekommen wir dadurch auch die passenden Bewerber?",
+      answer: "Genau das ist das Ziel – nicht die höchste Zahl an Bewerbungen, sondern die richtigen. Wir haben festgestellt: Die Qualität des Videos beeinflusst maßgeblich die Qualität der Bewerbungen. Ein Video, das inhaltlich und visuell auf Ihre Ziele abgestimmt ist, zieht passende Kandidaten an und sortiert unpassende von selbst vor."
     }
   ];
 
@@ -263,7 +275,7 @@ export default function RecruitingVideo() {
         </div>
       </section>
 
-      {/* 5. BEISPIELE / REFERENZEN */}
+      {/* 5. REFERENZEN (ECHT) */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
@@ -271,69 +283,55 @@ export default function RecruitingVideo() {
               Recruiting, das funktioniert
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
-              Wie wir Unternehmen helfen, ihre offenen Stellen mit den richtigen Köpfen zu besetzen.
+              Zwei echte Beispiele, wie Video-Content trotz Fachkräftemangel die richtigen Bewerbungen bringt.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Case 1 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Handwerk Recruiting Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Handwerk & Technik</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Fachkräfte für den Mittelstand</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Monatelang unbesetzte Stellen für spezialisierte Techniker. Klassische Anzeigen blieben wirkungslos.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Eine Serie kurzer, authentischer Social Media Clips, in denen die Monteure ihren echten Arbeitsalltag und die Vorteile (z.B. eigenes Fahrzeug) zeigen.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Über 15 qualifizierte Bewerbungen innerhalb von 4 Wochen durch gezielte Social Media Kampagnen.</span>
-                  </div>
-                </div>
+            {/* Social Care */}
+            <div className="rounded-2xl border border-white/5 bg-brand-darker p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Personalvermittlung · soziale Branche</div>
+              <h3 className="text-2xl font-display font-bold mb-6">Social Care</h3>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>Als Startup ohne Social-Media-Präsenz wollte Social Care zeigen, dass Personaldienstleistung anders geht – mit Mitarbeitern, die sich wohlfühlen, fair bezahlt werden und ein echtes Mitspracherecht haben. Wir produzierten authentische Inhaber- und Mitarbeiter-Interviews sowie ein kreatives Reel.</p>
+                <p>Wer sich heute bewirbt, recherchiert vorher – und stößt auf Instagram und Website auf genau diese Videos. Sie schaffen das Vertrauen und die Nahbarkeit, die aus Interesse eine Bewerbung machen.</p>
+                <p className="text-white font-semibold">Ergebnis: 70 % der Fachkräfte-Bewerbungen kamen rein über Social Media – ganz ohne bezahlte Ads.</p>
               </div>
             </div>
 
-            {/* Case 2 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
-                  alt="IT Unternehmen Recruiting Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
+            {/* Pflege mit Erfolg */}
+            <div className="rounded-2xl border border-white/5 bg-brand-darker p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Pflegebranche</div>
+              <h3 className="text-2xl font-display font-bold mb-6">Pflege mit Erfolg</h3>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>Fachkräftemangel in der Pflege – und trotzdem eine offene Stelle zu besetzen. Mit gezielten Recruiting-Ads auf Social Media haben wir genau das erreicht: die Position wurde besetzt.</p>
+                <p>Der Hebel dahinter ist eine einfache Rechnung: Eine unbesetzte Stelle kostet jeden Tag Geld und entgangenen Umsatz. Ein gutes Recruiting-Video ist damit keine Ausgabe, sondern eine Investition, die sich auszahlt.</p>
               </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">IT & Software</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Kultur als Wettbewerbsvorteil</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Starke Konkurrenz durch Großkonzerne im Kampf um Entwickler. Das Startup-Feeling kam online nicht rüber.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Ein dynamischer Employer Branding Film, der den Team-Spirit, die modernen Büros und die flexiblen Arbeitsweisen in den Fokus rückt.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Signifikante Steigerung der Initiativbewerbungen und eine deutlich gestärkte Arbeitgebermarke in der Region.</span>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INSIGHT: QUALITÄT & INVESTITION */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Qualität entscheidet – auch über Ihre Bewerber
+            </h2>
+            <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
+              <p>
+                Ein Recruiting-Video ist eine Investition, kein Kostenpunkt. Aber Vorsicht: Wer billig kauft, kauft zweimal. Ein Video wirkt erst dann richtig, wenn es inhaltlich und visuell exakt auf Ihre Ziele abgestimmt ist – denn <strong className="text-white">die Qualität des Videos bestimmt die Qualität der Bewerbungen.</strong>
+              </p>
+              <p>
+                Ziel ist nicht die höchste Zahl an Bewerbungen, sondern die <strong className="text-white">richtigen</strong>: Ein starkes Video zieht passende Kandidaten an und sortiert unpassende von selbst vor.
+              </p>
+              <p>
+                Wie viele Videos es braucht, hängt vom Ziel ab. Manchmal reicht ein einziges – idealerweise mit vier verschiedenen Hooks zum Testen. Unsere klare Empfehlung sind aber <strong className="text-white">3–4 Creatives</strong>; kombiniert mit 3–4 unterschiedlichen Hooks ergeben sich daraus <strong className="text-white">9–16 Ad-Versionen</strong>, mit denen sich systematisch testen lässt, was am besten zieht. Für die zielgerichtete Ausspielung arbeiten wir mit einem erfahrenen Marketer und Social-Media-Ad-Buyer zusammen.
+              </p>
+              <p>
+                Und das Beste: Ein richtig aufgesetztes Recruiting-Video bleibt <strong className="text-white">1–3 Jahre nutzbar</strong> und lässt sich bei anhaltendem Personalmangel immer wieder einsetzen.
+              </p>
             </div>
           </div>
         </div>
@@ -424,7 +422,7 @@ export default function RecruitingVideo() {
               {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" size={24} />)}
             </div>
             <p className="text-xl md:text-2xl font-light italic text-gray-300 mb-8 leading-relaxed">
-              "Wir hatten große Bedenken, ob unsere Mitarbeiter vor der Kamera frei sprechen können. Das Team von Rezai Vision hat ihnen aber sofort die Nervosität genommen. Das Ergebnis ist so authentisch geworden, dass wir bereits in der ersten Woche nach Veröffentlichung drei sehr gute Bewerbungen erhalten haben."
+              "Hervorragender Video-Produzent! Die Zusammenarbeit war von Anfang bis Ende absolut professionell. Die Kommunikation war klar, schnell und zuverlässig. Die kreativen Ideen, die technische Umsetzung und die Qualität der finalen Videos haben meine Erwartungen sogar übertroffen. Ich kann diesen Video-Produzenten uneingeschränkt weiterempfehlen und freue mich schon auf zukünftige Projekte!"
             </p>
             <div>
               <strong className="text-white block text-lg">Adonay Welde</strong>
