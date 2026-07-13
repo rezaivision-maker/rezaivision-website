@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 3000",
-    "build": "node scripts/fetch-google-reviews.js && vite build && node scripts/prerender.js",
+    "build": "node scripts/fetch-google-reviews.js && vite build && node scripts/prerender.js && node scripts/submit-sitemap.mjs && node scripts/submit-indexnow.mjs",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",

@@ -67,9 +67,9 @@ export default function BlogPost() {
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>(() => {
     const initialPost = staticPosts.find((p) => p.slug === slug);
     if (initialPost) {
-      return sanitizePosts(staticPosts
-        .filter(p => p.id !== initialPost.id && p.category === initialPost.category)
-        .slice(0, 2));
+      const rest = staticPosts.filter(p => p.id !== initialPost.id);
+      const ranked = [...rest.filter(p => p.category === initialPost.category), ...rest.filter(p => p.category !== initialPost.category)];
+      return sanitizePosts(ranked.slice(0, 4));
     }
     return [];
   });
@@ -95,9 +95,8 @@ export default function BlogPost() {
           setPost(sanitizePost(fetchedPost));
           
           fetchBlogPosts().then((allPosts) => {
-            const related = allPosts
-              .filter(p => p.id !== fetchedPost.id && p.category === fetchedPost.category)
-              .slice(0, 2);
+            const rest = allPosts.filter(p => p.id !== fetchedPost.id);
+            const related = [...rest.filter(p => p.category === fetchedPost.category), ...rest.filter(p => p.category !== fetchedPost.category)].slice(0, 4);
             setRelatedPosts(sanitizePosts(related));
           });
         }
@@ -211,6 +210,7 @@ export default function BlogPost() {
       }
     },
     "datePublished": toISODate(post.date),
+    "dateModified": toISODate(post.date),
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://www.rezaivision.de/blog/${post.slug}`
