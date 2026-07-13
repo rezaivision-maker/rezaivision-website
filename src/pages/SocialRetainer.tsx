@@ -10,7 +10,6 @@ import {
   Video, 
   TrendingUp, 
   ChevronDown,
-  Star,
   Clock,
   Zap
 } from "lucide-react";
@@ -69,6 +68,22 @@ export default function SocialRetainer() {
     {
       question: "Was passiert, wenn wir mal keine Ideen haben?",
       answer: "Das ist unser Job. Wir analysieren Trends, Ihre Zielgruppe und Ihre Branche und kommen jeden Monat mit einem fertigen Redaktionsplan und konkreten Video-Ideen proaktiv auf Sie zu."
+    },
+    {
+      question: "Ich bin nervös vor der Kamera – funktioniert das trotzdem?",
+      answer: "Fast alle unsere Kunden sind keine Schauspieler und verkrampfen anfangs vor der Kamera. Genau hier liegt unsere Stärke: Wir arbeiten auf Augenhöhe, mit Empathie und den richtigen Fragen, bis Sie locker werden und echte, authentische Aussagen entstehen. Für den Einstieg gibt es drei Wege – frei sprechen, Teleprompter mit vollständigem Text oder Teleprompter mit Stichpunkten zur Gesprächsführung."
+    },
+    {
+      question: "Was passiert, wenn ein Video mal nicht funktioniert?",
+      answer: "Das gehört zu unserem Ansatz. Unsere Devise ist Overproduction – wir produzieren lieber mehr als zu wenig. Test-Formate gehen live, wir analysieren, was ankommt, und entscheiden datenbasiert, ob wir ein Video nachschneiden (Reedit) oder neu drehen. So wird Ihr Content mit der Zeit besser, nicht beliebiger."
+    },
+    {
+      question: "Bekommen wir das Rohmaterial?",
+      answer: "Auf Wunsch heben wir das Rohmaterial für Sie auf, sodass es sich später für weitere Schnitte und Formate wiederverwenden lässt."
+    },
+    {
+      question: "Übernehmt ihr auch größere Produktionen wie Messen oder Produktshootings?",
+      answer: "Ja. Neben Talking-Head- und Social-Content begleiten wir auch Messen, produzieren Produkt- und Detailaufnahmen sowie Fotomaterial. Für aufwändigere Produktionen holen wir gezielt erfahrene Partner aus unserem Netzwerk dazu – koordiniert über einen festen Ansprechpartner, ohne Agentur-Overhead."
     }
   ];
 
@@ -262,78 +277,107 @@ export default function SocialRetainer() {
         </div>
       </section>
 
-      {/* 5. BEISPIELE / REFERENZEN */}
+      {/* STRATEGISCHER MIX */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="mb-16">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Kontinuierliches Wachstum
+              Kein Reel-Zufall, sondern ein strategischer Content-Mix
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl">
-              Wie unsere Retainer-Kunden durch regelmäßigen Video-Content ihre Branche dominieren.
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Guter Social-Media-Content ist keine Aneinanderreihung hübscher Clips. Er ist eine bewusste Mischung, die Menschen über mehrere Stufen begleitet – vom ersten Kontakt bis zur Anfrage. Genau das liefert der Retainer: einen Mix, der je nach Ziel unterschiedlich gewichtet wird.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Case 1 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop" 
-                  alt="B2B Personal Branding Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {[
+              { title: "Vertrauen & Sympathie", desc: "Echte Gesichter und Stimmen, die Nähe schaffen, bevor jemand kauft oder sich bewirbt." },
+              { title: "Information & Expertise", desc: "Sie zeigen, dass Sie Ihr Handwerk verstehen – und werden zur naheliegenden Wahl." },
+              { title: "Visuelle Darstellung", desc: "Produkte, Ergebnisse, Atmosphäre. Was man sieht, glaubt man eher." },
+              { title: "Problemlösung", desc: "Sie beantworten die Fragen, die Ihre Zielgruppe ohnehin hat." },
+              { title: "Leads & Conversion", desc: "Formate, die gezielt zur Handlung führen und auf Umsatz einzahlen." },
+              { title: "Die richtige Gewichtung", desc: "Welche Mischung passt, hängt davon ab, was Sie gerade brauchen – Sichtbarkeit, Vertrauen oder konkrete Anfragen." }
+            ].map((item, i) => (
+              <div key={i} className="bg-brand-darker border border-white/5 p-6 rounded-2xl">
+                <h3 className="text-lg font-display font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">B2B Beratung</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Personal Branding auf LinkedIn</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Der Geschäftsführer hatte extrem viel Fachwissen, aber keine Zeit, dieses regelmäßig auf LinkedIn zu teilen.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Ein monatlicher 4-Stunden-Dreh im Büro. Daraus schneiden wir 8 professionelle Video-Statements (2 pro Woche) inklusive Untertiteln.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Aufbau eines Expertenstatus. Nach 4 Monaten generierte der GF regelmäßig Inbound-Anfragen direkt über LinkedIn-Nachrichten.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Case 2 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Lifestyle Brand Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Dienstleistung / Handwerk</div>
-                <h3 className="text-2xl font-display font-bold mb-6">TikTok & Reels als Recruiting-Motor</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Das Unternehmen war für junge Talente unsichtbar. Eigene Versuche auf TikTok wirkten unprofessionell und "cringe".</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Ein 6-Monats-Retainer für TikTok und Reels. Wir entwickelten trendbasierte, aber authentische Formate aus dem Arbeitsalltag der Azubis.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Mehrere virale Videos (über 100k Views) und die Besetzung aller offenen Ausbildungsplätze ohne einen Cent für Ads auszugeben.</span>
-                  </div>
+          <div className="bg-brand-darker border border-brand-accent/20 p-8 md:p-10 rounded-3xl max-w-4xl">
+            <h3 className="text-2xl font-display font-bold mb-4">Reichweite ist nicht gleich Umsatz</h3>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Nicht jedes Reel hat denselben Job. <strong className="text-white">Virale und Entertainment-Reels</strong> bauen Reichweite und Bekanntheit auf – sie bringen Sie ins Gespräch, machen für sich genommen aber meist wenig bis keinen direkten Umsatz. <strong className="text-white">Lead- und Conversion-Reels</strong> sind der eigentliche Umsatzhebel – sie bekommen organisch oft weniger Aufmerksamkeit, führen aber gezielt zur Handlung.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              Deshalb unsere Empfehlung: Reichweiten-Content organisch laufen lassen – und die umsatzstarken Lead- und Conversion-Reels zusätzlich <strong className="text-white">gezielt über Ads bewerben</strong>, damit sie genau die Menschen erreichen, die sonst nie darüber gestolpert wären. So arbeitet Ihr Content nicht nur für Likes, sondern für Ihr Geschäft.
+            </p>
+            <Button href="/leistungen/werbevideo" variant="outline">
+              Mehr zu Werbevideos &amp; Social Ads
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* REFERENZ: GEWE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Aus der Praxis: eine laufende Content-Partnerschaft
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl">
+              Wie wir einen Mittelständler Monat für Monat beim Aufbau seiner Video-Präsenz begleiten.
+            </p>
+          </div>
+
+          <div className="max-w-4xl bg-brand-bg border border-white/5 rounded-3xl p-8 md:p-12">
+            <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Content-Partnerschaft · 12 Monate</div>
+            <h3 className="text-2xl md:text-3xl font-display font-bold mb-6">GEWE Reifen &amp; Räder – Felgenmarken ASA &amp; TEC</h3>
+            <div className="space-y-5 text-gray-300 leading-relaxed">
+              <p>
+                GEWE Reifen &amp; Räder – der Großhändler hinter den Felgenmarken <strong className="text-white">ASA</strong> und <strong className="text-white">TEC</strong> – öffnet sich gerade dem Endkundengeschäft: neuer Konfigurator, Direktbestellung für Privatkunden. Ein Schritt, der Sichtbarkeit und Vertrauen braucht – und dafür gibt es kaum ein stärkeres Mittel als Video und Social Media.
+              </p>
+              <p>
+                Seit dem Start der Partnerschaft produzieren wir das komplette Content-Fundament: bis zu <strong className="text-white">20 Talking-Head-Clips aus nur 1–2 Stunden Interviewmaterial</strong> (mit Untertiteln), Produktvideos von Felgen und Reifen – als Einzelteil und komplett am Fahrzeug montiert –, Unboxings, Messebegleitung und Fotomaterial sowie werbetaugliche, auf Leads und Conversions ausgelegte Reels, auf Wunsch mit Motion Graphics.
+              </p>
+              <p>
+                Unsere Devise: <strong className="text-white">Overproduction</strong>. Wir produzieren genug für bis zu ein Reel pro Tag – lieber mehr, damit das Unternehmen durchgängig versorgt ist. Jedes Format beginnt strategisch: Was soll es erreichen, wie bauen wir es auf? Test-Reels gehen live, wir analysieren die Performance und entscheiden datenbasiert – Reedit oder Neuverfilmung. Auf Wunsch archivieren wir das Rohmaterial für spätere Weiterverwertung.
+              </p>
+              <p>
+                Die Bildsprache: starke Visuals, wie es einem Mittelständler gebührt – professionell ausgeleuchtet, mit <strong className="text-white">Charakter statt Hochglanz</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WAS UNS UNTERSCHEIDET */}
+      <section className="py-24 bg-brand-bg">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Was uns von einer klassischen Social-Media-Agentur unterscheidet
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { title: "Echte Menschen, ohne gestellten Look", desc: "Ihre Mitarbeiter und Sie sind keine Schauspieler – die meisten verkrampfen vor der Kamera, und genau das spürt der Zuschauer. Unsere wichtigste Fähigkeit ist deshalb die Menschenführung: auf Augenhöhe, mit Empathie und den richtigen Fragen, bis echte, fühlbare Aussagen entstehen. Für den Einstieg: frei sprechen, Teleprompter mit Volltext oder mit Stichpunkten." },
+              { title: "Licht als Werkzeug, kein Zufall", desc: "Von dezent-aber-sauber bis zum aufwändigen Setup steuern wir die Wirkung gezielt – professionell, aber mit Charakter statt seelenlosem Hochglanz. Der Zuschauer soll fühlen, was gesagt wird." },
+              { title: "Ein Drehtag, viele Formate", desc: "Aus 1–2 Stunden Interviewmaterial entstehen bis zu 20 Talking-Head-Clips. Das hält Ihren Zeitaufwand gering und Ihren Content-Kalender voll." },
+              { title: "Overproduction & datenbasiertes Nachschärfen", desc: "Wir produzieren lieber mehr als zu wenig. Test-Formate gehen live, wir analysieren, was funktioniert, und entscheiden datenbasiert: Reedit oder neu drehen. So wird der Content mit der Zeit besser, nicht beliebiger." },
+              { title: "Ein fester Ansprechpartner aus der Region", desc: "Sie arbeiten direkt mit dem Gründer, aus Kaiserslautern, mit kurzen Wegen in der Pfalz. Kein wechselndes Junior-Team, kein Agentur-Overhead." },
+              { title: "Alles aus einer Hand", desc: "Konzept, Dreh, Licht, Schnitt, Motion Graphics und Untertitel – aus einer Hand. Für größere Produktionen holen wir gezielt erfahrene Partner aus unserem Netzwerk dazu." }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <CheckCircle2 className="text-brand-accent shrink-0 mt-1" size={24} />
+                <div>
+                  <strong className="text-white block text-lg mb-2">{item.title}</strong>
+                  <span className="text-gray-400 leading-relaxed">{item.desc}</span>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -407,27 +451,6 @@ export default function SocialRetainer() {
                   Vertrauen baut sich auf, wenn Ihre Zielgruppe Sie <strong className="text-white">immer wieder</strong> sieht. Mit hochwertigen Inhalten, die echte Probleme lösen. Ein Social Media Retainer ist kein Sprint, sondern ein strategischer Marathon, der Ihre Marke langfristig unangreifbar macht.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. SOCIAL PROOF */}
-      <section className="py-24 bg-brand-darker border-y border-white/5">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
-            Was unsere Kunden sagen
-          </h2>
-          <div className="max-w-4xl mx-auto bg-brand-bg border border-white/5 p-10 md:p-16 rounded-3xl relative">
-            <div className="text-brand-accent mb-6 flex justify-center gap-1">
-              {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" size={24} />)}
-            </div>
-            <p className="text-xl md:text-2xl font-light italic text-gray-300 mb-8 leading-relaxed">
-              "Vor der Zusammenarbeit war Social Media für uns ein ständiger Stressfaktor. Jetzt haben wir einen festen Drehtag im Monat, der sogar Spaß macht. Rezai Vision liefert pünktlich ab, die Qualität ist überragend und unsere Reichweite auf LinkedIn hat sich vervielfacht."
-            </p>
-            <div>
-              <strong className="text-white block text-lg">Geschäftsführer</strong>
-              <span className="text-gray-400">Unternehmensberatung</span>
             </div>
           </div>
         </div>
