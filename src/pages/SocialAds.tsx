@@ -69,6 +69,14 @@ export default function SocialAds() {
     {
       question: "Wie schnell können die Ads produziert werden?",
       answer: "Da im Performance Marketing oft Schnelligkeit zählt, haben wir unsere Prozesse für Social Ads optimiert. Von der Hook-Entwicklung bis zur Auslieferung der fertigen Creatives vergehen in der Regel 2 bis 4 Wochen."
+    },
+    {
+      question: "Brauchen wir zwingend ein Werbebudget?",
+      answer: "Für echtes Performance-Marketing und Skalierung ist bezahlte Ausspielung der Hebel. Aber ein starkes Creative kann auch organisch verkaufen: Bei einem Kunden (Aesthetic Ink) füllte bereits der organisch getestete Rohschnitt innerhalb von zwei Wochen den Terminkalender – ganz ohne Ad-Budget. Entscheidend ist, dass Angebot, Story und Call-to-Action sitzen und die Visuals überzeugen."
+    },
+    {
+      question: "Übernehmt ihr auch das Schalten der Ads (Media Buying)?",
+      answer: "Unser Fokus ist die Kreation hochkonvertierender Creatives. Für die Ausspielung arbeiten wir mit erfahrenen Media-Buyern und Marketern aus unserem Netzwerk zusammen – etwa bei der laufenden Kampagne für KSB Rechtsanwälte über Kanzleiperformance.de. Alternativ liefern wir Ihrem internen Team das perfekte Material."
     }
   ];
 
@@ -262,7 +270,7 @@ export default function SocialAds() {
         </div>
       </section>
 
-      {/* 5. BEISPIELE / REFERENZEN */}
+      {/* 5. REFERENZEN (ECHT) */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
@@ -270,70 +278,45 @@ export default function SocialAds() {
               Performance, die sich auszahlt
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
-              Wie wir mit strategischen Video-Creatives die Marketingziele unserer Kunden übertroffen haben.
+              Zwei echte Beispiele – vom Creative, das sogar organisch verkauft, bis zur laufenden Ad-Kampagne.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Case 1 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" 
-                  alt="E-Commerce Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">E-Commerce & Retail</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Umsatzskalierung durch Video Ads</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Die bisherigen Bild-Anzeigen auf Meta (Facebook/Instagram) wurden zu teuer, der ROAS sank kontinuierlich.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Produktion eines Ad-Pakets mit 4 verschiedenen Hooks (Problem-Fokus, Produkt-Fokus, UGC-Style) für intensives A/B-Testing.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Halbierung der Cost-per-Acquisition (CPA) und eine Steigerung des ROAS um 140 % innerhalb von 6 Wochen.</span>
-                  </div>
-                </div>
+            {/* Aesthetic Ink */}
+            <div className="rounded-2xl border border-white/5 bg-brand-darker p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Beauty · PMU &amp; Microblading</div>
+              <h3 className="text-2xl font-display font-bold mb-6">Aesthetic Ink</h3>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>Für ein zeitlich begrenztes Sonderangebot produzierten wir eine Werbe-Ad. Noch während der finale Schnitt in Arbeit war, testeten wir den Rohschnitt organisch auf Social Media – ganz ohne Ad-Budget.</p>
+                <p>Schon dieser erste Schnitt füllte innerhalb von zwei Wochen den Terminkalender des Studios. Der finale Edit war noch stärker – aber selbst die erste Version brachte mehr Kundinnen als erwartet.</p>
+                <p className="text-white font-semibold">Ergebnis: ausgebuchte Termine, null Ad-Spend – maximale Wirkung durch Angebot, Story und Umsetzung.</p>
               </div>
             </div>
 
-            {/* Case 2 */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/5 bg-brand-darker">
-              <div className="aspect-[16/9] overflow-hidden">
-                <img 
-                  loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
-                  alt="B2B Software Case Study" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="p-8">
-                <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">B2B Software (SaaS)</div>
-                <h3 className="text-2xl font-display font-bold mb-6">Qualifizierte Leadgenerierung</h3>
-                <div className="space-y-4">
-                  <div>
-                    <strong className="text-white block mb-1">Problem:</strong>
-                    <span className="text-gray-400 text-sm">Whitepaper-Downloads generierten zwar Leads, aber die Qualität war zu niedrig für den Vertrieb.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Lösung:</strong>
-                    <span className="text-gray-400 text-sm">Eine LinkedIn-Videokampagne, die das komplexe Software-Problem visuell in 45 Sekunden auf den Punkt bringt.</span>
-                  </div>
-                  <div>
-                    <strong className="text-white block mb-1">Ergebnis:</strong>
-                    <span className="text-gray-400 text-sm">Weniger, aber dafür hochqualifizierte Leads. Die Abschlussrate des Vertriebs stieg um 35 %.</span>
-                  </div>
-                </div>
+            {/* KSB Rechtsanwälte */}
+            <div className="rounded-2xl border border-white/5 bg-brand-darker p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Rechtsanwaltskanzlei · laufende Kampagne</div>
+              <h3 className="text-2xl font-display font-bold mb-6">
+                <a href="https://ksb-rechtsanwaelte.de/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent transition-colors">KSB Rechtsanwälte</a>
+              </h3>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>Für die Kanzlei produzieren wir monatlich 10 Reels quer durch Straf-, Arbeits- und Familienrecht – 6 bis 8 authentische Talking-Heads und 2 bis 3 mit Storyline, jeweils 30–45 Sekunden mit Untertiteln. Sie greifen die Pain-Points der Mandanten emotional auf und bieten eine Erstberatung an.</p>
+                <p>Der Social-Media-Ad-Buyer von Kanzleiperformance.de macht daraus laufend Leads und Conversions.</p>
+                <p className="text-white font-semibold">Die Kampagne läuft bis heute – Content aus drei Monaten, der bis jetzt Bewerbungen und Mandate bringt.</p>
               </div>
             </div>
+          </div>
+
+          {/* INSIGHT */}
+          <div className="mt-8 bg-brand-darker border border-brand-accent/20 p-8 md:p-10 rounded-3xl max-w-4xl">
+            <h3 className="text-2xl font-display font-bold mb-4">Manchmal reicht der erste Schnitt – wenn das Handwerk stimmt</h3>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Ein High-End-Werbespot ist immer sinnvoll. Aber wie Aesthetic Ink zeigt, kann schon der erste, ehrliche Schnitt das Ziel erreichen – null Ad-Spend, maximale Wirkung durch die richtige Idee und Umsetzung.
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              Der Unterschied liegt im Handwerk. Wir machen uns Gedanken über <strong className="text-white">Lichtsetzung und Komposition</strong> – selbst simpler Content wirkt mit professionellem Licht, passendem Sound und präzisem Schnitt völlig anders und bekommt eine ganz eigene Dramatik. Wo andere schnell abarbeiten, bauen wir das Bild bewusst auf. Und die besten Creatives lassen sich – wie bei GEWE – gezielt in Funnel und Ads einspielen, wo sie den größten Mehrwert bringen.
+            </p>
           </div>
         </div>
       </section>
@@ -423,11 +406,11 @@ export default function SocialAds() {
               {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" size={24} />)}
             </div>
             <p className="text-xl md:text-2xl font-light italic text-gray-300 mb-8 leading-relaxed">
-              "Wir hatten das Problem der 'Creative Fatigue' – unsere Ads wurden einfach zu teuer. Das Team hat uns nicht nur ein tolles Video gedreht, sondern direkt ein ganzes Paket an Hooks und Varianten geliefert. Damit konnten wir unseren ROAS innerhalb von wenigen Wochen wieder in den profitablen Bereich skalieren."
+              "Ich bin fast froh, dass wir dich und nicht einen anderen Videografen bekommen haben."
             </p>
             <div>
-              <strong className="text-white block text-lg">Marketing Manager</strong>
-              <span className="text-gray-400">E-Commerce Brand</span>
+              <strong className="text-white block text-lg">Behnke</strong>
+              <span className="text-gray-400">KSB Rechtsanwälte</span>
             </div>
           </div>
         </div>
