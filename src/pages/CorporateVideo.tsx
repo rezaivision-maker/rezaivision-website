@@ -78,6 +78,18 @@ export default function CorporateVideo() {
     {
       question: "Wo können wir das Video überall einsetzen?",
       answer: "Wir liefern Ihnen das Video in den passenden Formaten für alle Ihre Kanäle: 16:9 für Ihre Website, YouTube oder Messen, sowie auf Wunsch optimierte Hochformate (9:16) für Social Media wie LinkedIn, Instagram oder TikTok."
+    },
+    {
+      question: "Lohnt sich ein Imagefilm auch mit kleinerem Budget?",
+      answer: "Ja. Wir sortieren niemanden aus, sondern arbeiten in zwei Wegen: Option A ist der schnelle, effiziente Imagefilm – professionell und authentisch in Szene gesetzt, ohne monatelange Konzeption. Option B ist das strategische High-End-Flaggschiff. So bekommen Sie in jedem Budgetrahmen ein hochwertiges Ergebnis."
+    },
+    {
+      question: "Was ist die 3-5-Sekunden-Regel?",
+      answer: "Die Aufmerksamkeit online ist kurz. Damit niemand wegklickt, setzen wir alle 3 bis 5 Sekunden einen neuen visuellen oder auditiven Impuls – und lassen im entscheidenden Moment vier Elemente verschmelzen: das Gesagte, das Gezeigte, die Musik und das Sounddesign. Genau dieses Timing entscheidet, ob ein Film nur gefällt oder wirklich bewegt."
+    },
+    {
+      question: "Unsere Mitarbeiter sind nervös vor der Kamera. Ist das ein Problem?",
+      answer: "Überhaupt nicht – das ist völlig normal. Wir arbeiten auf Augenhöhe, mit Empathie und den richtigen Fragen, bis die Anspannung weicht und echte, glaubwürdige Aussagen entstehen. Für den Einstieg gibt es drei Wege: frei sprechen, Teleprompter mit vollständigem Text oder Teleprompter mit Stichpunkten."
     }
   ];
 
@@ -271,6 +283,78 @@ export default function CorporateVideo() {
         </div>
       </section>
 
+      {/* KAUFPSYCHOLOGIE */}
+      <section className="py-24 bg-brand-bg">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Warum ein Imagefilm wirkt: Kaufpsychologie
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Kein Mensch kauft rein rational – weder im B2C noch im B2B. Entscheidungen fallen zuerst im Bauch und werden erst danach im Kopf gerechtfertigt. Ein Imagefilm liefert genau dieses positive Bauchgefühl, damit Fakten und Daten danach nur noch die logische Bestätigung sind.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[
+              { title: "Emotionales Bindeglied", desc: "Der Film strahlt Vertrauen, Größe, Stärke und Sicherheit aus – das Gefühl, diesen Menschen blind vertrauen zu können, noch bevor ein Wort über Preise fällt." },
+              { title: "Mensch zu Mensch", desc: "Wir trennen nicht künstlich zwischen B2B und B2C. Vor jedem Bildschirm sitzt ein Mensch, der vertrauen will – genau ihn holen wir ab." },
+              { title: "Qualitäts-Transfer", desc: "Die cineastische, hochwertige Optik ist kein Selbstzweck: Der Zuschauer schließt unterbewusst von der Qualität des Films auf die Qualität Ihrer Produkte und Leistungen." }
+            ].map((item, i) => (
+              <div key={i} className="bg-brand-darker border border-white/5 p-6 rounded-2xl">
+                <h3 className="text-lg font-display font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-brand-darker border border-brand-accent/20 p-8 rounded-3xl max-w-4xl">
+            <h3 className="text-xl font-display font-bold mb-4">Wann sich ein Imagefilm besonders lohnt</h3>
+            <p className="text-gray-400 leading-relaxed mb-4">Typische Kunden sind der ambitionierte Mittelstand und B2B-Unternehmen ab ca. 20 Mitarbeitern (Industrie, Handwerk, IT, Dienstleistung, Gesundheitswesen), die ein Image zu verlieren haben – oder Marken im Wachstum, deren Außenauftritt der eigenen Qualität hinterherhinkt. Die häufigsten Auslöser:</p>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {[
+                "Akuter Fachkräftemangel – klassische Stellenanzeigen wirken nicht mehr.",
+                "Die sogenannte 2010er-Falle – Website und altes Videomaterial wirken veraltet und kosten Vertrauen.",
+                "Repositionierung & Rebranding – Generationenwechsel, neue Zielgruppe oder Schritt zur Premium-Marke.",
+                "Vertrauensaufbau im Vertrieb – lange B2B-Sales-Cycles verkürzen, Einwände vorwegnehmen."
+              ].map((t, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-300"><CheckCircle2 className="text-brand-accent shrink-0 mt-0.5" size={16} /><span>{t}</span></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* HANDWERK & DRAMATURGIE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Das Handwerk dahinter: das 3-5-Sekunden-Gesetz
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Wirkung ist keine zufällige Achterbahnfahrt. Jede Szene baut logisch auf der vorherigen auf, und die richtige Emotion sitzt im genau richtigen Moment. Damit niemand wegklickt, setzen wir alle 3 bis 5 Sekunden einen neuen visuellen oder auditiven Impuls.
+            </p>
+          </div>
+
+          <p className="text-gray-300 font-medium mb-6">Maximale Wirkung entsteht, wenn vier Elemente im selben Moment chirurgisch präzise verschmelzen:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { n: "01", title: "Das Gesagte", desc: "Text und Wort – die Botschaft, präzise auf den Punkt." },
+              { n: "02", title: "Das Gezeigte", desc: "Bildgewalt – Komposition und Kameraführung, die den Blick führen." },
+              { n: "03", title: "Die Musik", desc: "Pacing und Herzschlag des Films – sie trägt die Emotion." },
+              { n: "04", title: "Das Sounddesign", desc: "Atmosphäre, Effekte und Akzente, die jeden Moment spürbar machen." }
+            ].map((item, i) => (
+              <div key={i} className="bg-brand-bg border border-white/5 p-6 rounded-2xl">
+                <div className="text-brand-accent font-display font-bold text-lg mb-2">{item.n}</div>
+                <h3 className="text-lg font-display font-bold mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5. BEISPIELE / REFERENZEN */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
@@ -424,18 +508,34 @@ export default function CorporateVideo() {
         </div>
       </section>
 
-      {/* 9. PREISORIENTIERUNG */}
+      {/* 9. ZWEI WEGE / PREIS */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Investition in Qualität
+              Zwei Wege zu Ihrem Imagefilm
             </h2>
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Ein hochwertiger Unternehmensfilm ist eine Investition in Ihre Marke. Wir entwickeln gemeinsam mit Ihnen ein Konzept, das Ihre Ziele präzise verfolgt – vom ersten Brainstorming über den professionellen Drehtag bis hin zur finalen Postproduktion.
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Wir arbeiten flexibel nach Ihrem Budget und sortieren niemanden aus. Deshalb gibt es zwei klare Produktionswege – vom schnellen, hochwertigen Ergebnis bis zum strategischen Flaggschiff.
             </p>
-            <p className="text-gray-400 mb-10">
-              Jedes Projekt ist individuell. Lassen Sie uns in einem kurzen Gespräch klären, was für Ihr Unternehmen die beste Lösung ist.
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-brand-darker border border-white/5 rounded-3xl p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Option A</div>
+              <h3 className="text-2xl font-display font-bold mb-4">Der schnelle, effiziente Imagefilm</h3>
+              <p className="text-gray-300 leading-relaxed">Zügig gedreht, professionell und authentisch in Szene gesetzt, sauber geschnitten und passend vertont. Ideal für Unternehmen, die ohne monatelange Konzeption schnell hochwertige Sichtbarkeit brauchen, ihren Außenauftritt aufwerten wollen oder mit einem klaren Budget arbeiten.</p>
+            </div>
+            <div className="bg-brand-darker border border-brand-accent/30 rounded-3xl p-8 md:p-10">
+              <div className="text-brand-accent text-sm font-bold uppercase tracking-wider mb-2">Option B · Flaggschiff</div>
+              <h3 className="text-2xl font-display font-bold mb-4">Der durchdachte, echte Imagefilm</h3>
+              <p className="text-gray-300 leading-relaxed">Kompromisslose High-End-Produktion mit fundierter Storytelling-Strategie vorab. Hier ziehen wir die komplette Klaviatur der Kaufpsychologie, arbeiten strikt nach dem 3-5-Sekunden-Gesetz, nutzen maßgeschneidertes Sounddesign und kreieren ein Meisterwerk, das unübersehbare Autorität ausstrahlt und gezielt Kauf- oder Bewerbungsimpulse auslöst.</p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl">
+            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+              Ein hochwertiger Unternehmensfilm beginnt bei uns <strong className="text-white">ab 3.490 €</strong>. Welcher Weg zu Ihrem Ziel passt, klären wir in einem kurzen Erstgespräch.
             </p>
             <Button href="/kontakt?service=unternehmensfilm" variant="outline" size="lg">
               Individuelles Angebot anfragen
