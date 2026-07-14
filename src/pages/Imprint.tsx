@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 
 export default function Imprint() {
   return (
-    <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg" data-ci-test="2026-07-14">
+    <div className="flex flex-col min-h-screen pt-32 pb-24 bg-brand-bg">
       <SEO title="Impressum | Rezai Vision & reza-e-motion" canonical="/impressum" noindex={true} />
       <div className="max-w-3xl mx-auto px-6 md:px-12 w-full">
         <motion.div
