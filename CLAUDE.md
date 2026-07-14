@@ -8,32 +8,35 @@ liest. KI-Assistenten lesen diese Datei zuerst.
 
 ## ⚠️ WICHTIGSTE REGEL — nach JEDER inhaltlichen Änderung
 
-Diese Website wird **lokal vorgerendert** (Weg A). Vercel baut die Seite **nicht**
-selbst, sondern liefert nur den fertig gebauten `dist/`-Ordner aus.
+Diese Website wird vorgerendert (`dist/` = fertiges HTML für Google). Vercel baut
+**nicht** selbst, sondern liefert nur den fertig gebauten `dist/`-Ordner aus.
 
-Das heißt: Wenn du **irgendetwas** an einer Seite, einem Text, einem Meta-Tag,
-einem Blog-Post oder einer Komponente änderst, musst du danach **immer** dies
-ausführen, sonst sieht Google die alte Version:
+**Seit 2026-07-14 baut ein GitHub-Actions-Workflow
+(`.github/workflows/build-and-deploy.yml`) `dist/` bei jedem Push auf `main`
+automatisch neu und committet es zurück.** Deshalb ist der bevorzugte Ablauf jetzt:
 
 ```bash
-npm run build      # baut dist/ neu inkl. Prerendering (statisches HTML für Google)
+git pull                                    # WICHTIG: holt das von CI gebaute dist/
+# ... Änderung in src/ machen ...
 git add -A
 git commit -m "kurze Beschreibung der Änderung"
-git push           # erst hierdurch startet der Vercel-Deploy
+git push                                    # CI baut dist/ + Vercel deployt (~3-4 Min)
 ```
 
-**Ohne `npm run build` vor dem Push ist die Änderung für Google unsichtbar.**
+**Kein lokales `npm run build` mehr nötig** — die CI übernimmt das. Wichtig ist nur:
 
-**Automatisches Sicherheitsnetz (seit 2026-07-14):** Ein GitHub-Actions-Workflow
-(`.github/workflows/build-and-deploy.yml`) baut bei jedem Push auf `main`
-zusätzlich automatisch `dist/` neu und committet es zurück, falls lokal
-vergessen wurde, `npm run build` auszuführen. Das ersetzt die manuelle Regel
-oben NICHT — lokal bauen bleibt der schnellere, bevorzugte Weg — aber falls
-doch mal nur `src/`-Änderungen gepusht werden, holt CI das automatisch nach
-(kein Datenverlust, kein „Google sieht alte Version"-Risiko mehr). Die dafür
-nötigen Secrets (`GOOGLE_PLACES_API_KEY`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`,
-`GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`) liegen in den GitHub-Actions-Secrets des
-Repos, nicht im Code.
+1. **Immer `git pull` VOR** einer neuen Änderung (holt den letzten CI-`dist/`-Commit).
+2. **`dist/` NIE selbst bauen/committen.** Nur `src/` (und Config, Docs) anfassen.
+   Wenn du lokal baust UND committest, rennst du mit dem CI-Build um die Wette →
+   `dist/`-Merge-Konflikte bei jedem Push (war der alte, mühsame Weg).
+
+**Ausnahme — wenn du das Ergebnis lokal sofort prüfen willst:** `npm run build`
+lokal ist weiterhin möglich (z.B. zum Testen mit `npm run preview`), aber dann
+`dist/` NICHT committen — nur die `src/`-Änderung pushen und CI bauen lassen.
+
+Die für den CI-Build nötigen Secrets (`GOOGLE_PLACES_API_KEY`,
+`GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`) liegen in
+den GitHub-Actions-Secrets des Repos, nicht im Code.
 
 ---
 
@@ -61,9 +64,12 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
    `dist/` muss committet werden, sonst hat Vercel nichts zum Ausliefern.
 3. **Nicht** den `buildCommand` / `outputDirectory` in `vercel.json` ändern.
    Vercel darf **nicht** selbst bauen.
-4. **Nicht** `git push` ohne vorher `npm run build` — sonst sieht Google alte Inhalte.
-5. **Nicht** `dist/` von Hand bearbeiten. Der Ordner wird komplett von
-   `npm run build` erzeugt. Änderungen immer in `src/` machen, dann neu bauen.
+4. **Nicht** `dist/` lokal bauen UND committen — das rennt mit dem automatischen
+   CI-Build um die Wette und erzeugt bei jedem Push `dist/`-Merge-Konflikte. Nur
+   `src/` committen, CI baut `dist/` (siehe „WICHTIGSTE REGEL" oben). Und **immer
+   `git pull` vor** einer neuen Änderung.
+5. **Nicht** `dist/` von Hand bearbeiten. Der Ordner wird komplett vom Build
+   (lokal oder CI) erzeugt. Änderungen immer in `src/` machen.
 6. **Nicht** an `vite.config.ts` (Chunking / Build-Optionen) herumschrauben, nur weil
    beim Build eine **Warnung** „chunk larger than 500 kB" erscheint. Das ist eine
    harmlose Warnung, **kein Fehler**. Die Seite funktioniert damit normal.
@@ -92,11 +98,11 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 
 | Befehl | Zweck |
 |---|---|
-| `npm run build` | **Voller Build.** Kette: `fetch-google-reviews.js` (Live-Sterne) → `vite build` → `prerender.js` (HTML + `sitemap.xml`). Nur bei Code-Änderungen (Komponenten, Styles, Config) nötig. |
-| `node scripts/prerender-blog.js <slug>` | **Für neue Blog-Posts.** Rendert nur `/blog/<slug>` + `/blog`-Übersicht + Sitemap. Kein `vite build` nötig, deutlich schneller. |
+| `npm run build` | **Voller Build.** Kette: `fetch-google-reviews.js` (Live-Sterne) → `vite build` → `prerender.js` (HTML + `sitemap.xml`). **Läuft normal in der CI** (GitHub Actions) — lokal nur optional zum Testen mit `npm run preview`; das lokal gebaute `dist/` dann NICHT committen. |
+| `node scripts/prerender-blog.js <slug>` | Rendert nur `/blog/<slug>` + `/blog`-Übersicht + Sitemap. Meist unnötig, da CI ohnehin voll baut. |
 | `npm run dev` | Lokaler Entwicklungsserver (Port 3000). |
 | `npm run lint` | TypeScript-Check (`tsc --noEmit`). Bei Code-Änderungen vorher prüfen. |
-| `npm run preview` | Vorschau des gebauten `dist/`. |
+| `npm run preview` | Vorschau des lokal gebauten `dist/` (nach `npm run build`). |
 
 ---
 
@@ -120,12 +126,8 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
    Neue Artikel werden ausschließlich über das Admin-Dashboard (`/admin` → Blog & Artikel)
    in Firestore (`posts`-Collection) angelegt. `src/data/blogPosts.ts` dient nur als
    statischer Fallback für bestehende Posts und wird für neue Artikel NICHT angefasst.
-   Dadurch bleibt das JS-Bundle unverändert und es reicht:
-   ```bash
-   node scripts/prerender-blog.js <neuer-slug>
-   git add -A && git commit -m "Blog: <Titel>" && git push
-   ```
-   Ein voller `npm run build` ist nur bei Code-Änderungen (Komponenten, Styles) nötig.
+   Neue Firestore-Artikel erscheinen automatisch beim nächsten CI-Build (Prerender liest
+   Firestore) — ein Commit/Push, der die CI auslöst, reicht.
 7. `noindex`-Seiten (`/impressum`, `/datenschutz`, `/agb`) gehören NICHT in die
    Sitemap. `scripts/prerender.js` filtert sie über das Array `NOINDEX_ROUTES` raus
    (sonst Search-Console-Warnung „in Sitemap, aber noindex"). Sie werden trotzdem gerendert.
@@ -206,9 +208,9 @@ vercel.json           Header, Rewrites, buildCommand (skip), outputDirectory
 
 ## Checkliste für KI bei „ändere Seite X"
 
-1. Änderung in der jeweiligen Datei unter `src/` machen.
-2. Bei neuer Route: Pfad in `scripts/prerender.js` → `staticRoutes` ergänzen.
-3. `npm run lint` (bei Code-Änderungen).
-4. `npm run build` ausführen (Pflicht!).
-5. `git add -A && git commit -m "..."` .
-6. Dem Nutzer sagen, dass er `git push` machen kann (oder pushen, wenn er es will).
+1. `git pull` (holt den letzten CI-`dist/`-Commit — verhindert Konflikte).
+2. Änderung in der jeweiligen Datei unter `src/` machen.
+3. Bei neuer Route: Pfad in `scripts/prerender.js` → `staticRoutes` ergänzen.
+4. `npm run lint` (bei Code-Änderungen).
+5. `git add -A && git commit -m "..."` — **nur `src/`, NICHT lokal bauen/`dist/` committen.**
+6. `git push` — die CI baut `dist/` automatisch und Vercel deployt (~3-4 Min).
