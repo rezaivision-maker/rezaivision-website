@@ -460,6 +460,18 @@ export function CasesSection() {
               </div>
             </div>
 
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-brand-darker gold-border-glow">
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034826/20260619-DSC00186_e5zrtv.jpg" alt="ASA Felgen Produktshooting GEWE Reifen &amp; Räder — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+              </div>
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-brand-darker gold-border-glow">
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034826/20260619-DSC00335_qtuf4s.jpg" alt="ASA Felgen Detailaufnahme GEWE Content-Partnerschaft — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+              </div>
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-brand-darker gold-border-glow">
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034825/20260619-DSC00037_qzj2em.jpg" alt="ASA Felgen am Fahrzeug GEWE Reifen &amp; Räder Produktvideo — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+              </div>
+            </div>
+
             <div className="rounded-3xl overflow-hidden bg-brand-darker gold-border-glow flex flex-wrap items-center justify-center gap-8 p-8 mt-2">
               <img
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/imgi_3_gewe_white_1_rzj5xh.png"
