@@ -443,7 +443,7 @@ export function CasesSection() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-4"></div>
 
           {/* GEWE / ASA / TEC */}
-          <div className="flex flex-col gap-4 max-w-2xl mx-auto w-full">
+          <div className="flex flex-col gap-4 w-full">
             <div className="flex flex-wrap gap-3 px-2">
               <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Social Content</span>
               <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Videoads</span>
@@ -465,33 +465,33 @@ export function CasesSection() {
 
             <div className="grid grid-cols-3 gap-4 mt-2">
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034826/20260619-DSC00186_e5zrtv.jpg" alt="ASA Felgen Produktshooting GEWE Reifen &amp; Räder — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034826/20260619-DSC00186_e5zrtv.jpg" alt="ASA Felgen Produktshooting GEWE Reifen &amp; Räder — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034826/20260619-DSC00335_qtuf4s.jpg" alt="ASA Felgen Detailaufnahme GEWE Content-Partnerschaft — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034826/20260619-DSC00335_qtuf4s.jpg" alt="ASA Felgen Detailaufnahme GEWE Content-Partnerschaft — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784034825/20260619-DSC00037_qzj2em.jpg" alt="ASA Felgen am Fahrzeug GEWE Reifen &amp; Räder Produktvideo — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034825/20260619-DSC00037_qzj2em.jpg" alt="ASA Felgen am Fahrzeug GEWE Reifen &amp; Räder Produktvideo — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden bg-brand-darker gold-border-glow flex flex-wrap items-center justify-center gap-8 p-8 mt-2">
+            <div className="rounded-3xl overflow-hidden bg-brand-darker gold-border-glow flex flex-wrap items-center justify-around gap-8 md:gap-12 px-8 md:px-16 py-10 md:py-12 mt-2">
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/imgi_3_gewe_white_bsh1xj.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784035840/imgi_3_gewe_white_bsh1xj.png"
                 alt="GEWE Reifen &amp; Räder Logo"
-                className="h-12 w-auto object-contain"
+                className="h-14 md:h-20 w-auto object-contain shrink-0"
                 loading="lazy"
               />
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/tec_speedwheels_2017_white_nezbgd.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784035840/tec_speedwheels_2017_white_nezbgd.png"
                 alt="TEC Speedwheels Felgen Logo"
-                className="h-12 w-auto object-contain"
+                className="h-14 md:h-20 w-auto object-contain shrink-0"
                 loading="lazy"
               />
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/asa-driving-revolution-vector-logo_beirxb.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1784035840/asa-driving-revolution-vector-logo_beirxb.png"
                 alt="ASA Driving Revolution Felgen Logo"
-                className="h-12 w-auto object-contain"
+                className="h-14 md:h-20 w-auto object-contain shrink-0"
                 loading="lazy"
               />
             </div>
