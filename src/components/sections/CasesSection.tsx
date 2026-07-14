@@ -6,6 +6,7 @@ import { aestheticInkSlides } from "@/data/homeData";
 
 export function CasesSection() {
   const [isPlayingLull, setIsPlayingLull] = useState(false);
+  const [isPlayingBehnke, setIsPlayingBehnke] = useState(false);
   const [isPlayingSocialCare, setIsPlayingSocialCare] = useState(false);
   const [currentAestheticInkSlide, setCurrentAestheticInkSlide] = useState(0);
 
@@ -263,24 +264,32 @@ export function CasesSection() {
 
               <div className="grid grid-cols-2 gap-4 mt-2">
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow group">
-                  {/* Vimeo facade: only load iframe after click */}
-                  <img
-                    src="https://i.vimeocdn.com/video/2143957678-edb503703d2aaf3cb4b95e40e7146271786761190cba628df3c3d92623337568-d_960?region=us"
-                    alt="KSB Rechtsanwälte Video Vorschau"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <a
-                    href="https://vimeo.com/1181564492"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute inset-0 flex items-center justify-center z-10"
-                    aria-label="KSB Rechtsanwälte Video auf Vimeo ansehen"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-                      <Play size={20} fill="currentColor" />
+                  {!isPlayingBehnke ? (
+                    <div
+                      className="absolute inset-0 flex items-center justify-center cursor-pointer z-10"
+                      onClick={() => setIsPlayingBehnke(true)}
+                    >
+                      <img
+                        src="https://i.vimeocdn.com/video/2143957678-edb503703d2aaf3cb4b95e40e7146271786761190cba628df3c3d92623337568-d_960?region=us"
+                        alt="KSB Rechtsanwälte Video Vorschau"
+                        className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                        loading="lazy"
+                      />
+                      <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white relative z-10 group-hover:scale-110 transition-transform">
+                        <Play size={20} fill="currentColor" />
+                      </div>
                     </div>
-                  </a>
+                  ) : (
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://player.vimeo.com/video/1181564492?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1"
+                      title="KSB Rechtsanwälte Video"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  )}
                 </div>
                 <div className="grid grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
@@ -305,18 +314,15 @@ export function CasesSection() {
                 <p className="text-gray-300 text-lg font-light mb-3">Recruiting-Content zur Mitarbeitergewinnung im Pflegebereich.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Visuelle Inhalte für eine glaubwürdige Ansprache potenzieller Bewerber.</p>
                 <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Fachkräfte finden und einstellen durch Videomarketing.</p>
-                
+                <p className="text-gray-300 text-base leading-relaxed font-light mb-6">
+                  Trotz Fachkräftemangel: eine offene Stelle gezielt über Social-Media-Recruiting-Ads besetzt. Eine unbesetzte Stelle kostet täglich Geld – professionelles Video-Recruiting zahlt sich aus.
+                </p>
+
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Recruiting</span>
                   <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Bewerber</span>
                   <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Pflege</span>
                 </div>
-              </div>
-
-              <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow mt-2">
-                <p className="text-gray-300 text-base leading-relaxed font-light">
-                  Trotz Fachkräftemangel: eine offene Stelle gezielt über Social-Media-Recruiting-Ads besetzt. Eine unbesetzte Stelle kostet täglich Geld – professionelles Video-Recruiting zahlt sich aus.
-                </p>
               </div>
             </div>
           </div>
@@ -421,7 +427,13 @@ export function CasesSection() {
                     <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775741116/pfaff2_1.9.1_aju6fd.webp" alt="Pfaff Produktpräsentation Video Bensheim — Social Media Content Industrie" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow col-span-2">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_800/v1775741113/pfaff3_1.3.1_lv6rrj.webp" alt="Pfaff Nähmaschine Nahaufnahme Produktvideo — YouTube und Messe Content" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <video
+                      src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto,f_mp4/v1784031792/PFAFF_Keder_207_720p_i3g6vr.mov"
+                      poster="https://res.cloudinary.com/dzt4f9xdi/video/upload/so_0,q_auto,f_auto,w_800/v1784031792/PFAFF_Keder_207_720p_i3g6vr.jpg"
+                      className="w-full h-full object-cover"
+                      controls
+                      playsInline
+                    />
                   </div>
                 </div>
               </div>
@@ -430,21 +442,43 @@ export function CasesSection() {
 
           <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-4"></div>
 
-          {/* ASA */}
-          <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-            <img
-              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png"
-              alt="ASA Driving Revolution Felgen Logo"
-              className="h-12 w-auto object-contain shrink-0"
-              loading="lazy"
-            />
-            <div>
-              <div className="flex flex-wrap gap-3 mb-3">
-                <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Felgenmarke</span>
+          {/* GEWE / ASA / TEC */}
+          <div className="flex flex-col gap-4 max-w-2xl mx-auto w-full">
+            <div className="flex flex-wrap gap-3 px-2">
+              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Reifen &amp; Räder</span>
+            </div>
+
+            <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow flex-1">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">GEWE</h3>
+              <p className="text-gray-300 text-lg font-light mb-3">GEWE Reifen &amp; Räder — Großhandel mit den Felgenmarken ASA und TEC.</p>
+              <p className="text-gray-400 text-base leading-relaxed font-light mb-6">Teil der laufenden Content-Partnerschaft.</p>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Felgen</span>
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Reifen</span>
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">GEWE-Partnerschaft</span>
               </div>
-              <p className="text-gray-300 text-base leading-relaxed font-light">
-                ASA — Felgenmarke von GEWE Reifen &amp; Räder, Teil der laufenden Content-Partnerschaft.
-              </p>
+            </div>
+
+            <div className="rounded-3xl overflow-hidden bg-brand-darker gold-border-glow flex flex-wrap items-center justify-center gap-8 p-8 mt-2">
+              <img
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/imgi_3_gewe_white_1_rzj5xh.png"
+                alt="GEWE Reifen &amp; Räder Logo"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+              />
+              <img
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/tec_speedwheels_2017_white_o3upna.png"
+                alt="TEC Speedwheels Felgen Logo"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+              />
+              <img
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png"
+                alt="ASA Driving Revolution Felgen Logo"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
