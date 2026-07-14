@@ -304,7 +304,7 @@ export function CasesSection() {
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">Pflege mit Erfolg</h3>
                 <p className="text-gray-300 text-lg font-light mb-3">Recruiting-Content zur Mitarbeitergewinnung im Pflegebereich.</p>
                 <p className="text-gray-400 text-base leading-relaxed font-light mb-3">Visuelle Inhalte für eine glaubwürdige Ansprache potenzieller Bewerber.</p>
-                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Durch Videomarketing konnten passende Mitarbeiter gefunden und eingestellt werden.</p>
+                <p className="text-gray-400 text-sm leading-relaxed font-light mb-6">Fachkräfte finden und einstellen durch Videomarketing.</p>
                 
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Recruiting</span>
