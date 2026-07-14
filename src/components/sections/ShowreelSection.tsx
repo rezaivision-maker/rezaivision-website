@@ -5,7 +5,7 @@ export function ShowreelSection() {
   const [isPlayingShowreel, setIsPlayingShowreel] = useState(false);
 
   return (
-    <section id="showreel" className="py-24 bg-brand-bg border-t border-white/5">
+    <section id="showreel" className="py-24 bg-black border-t border-white/5">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
@@ -15,7 +15,7 @@ export function ShowreelSection() {
             Ein Einblick in unsere Arbeit und visuelle Handschrift.
           </p>
         </div>
-        <div className="relative rounded-3xl overflow-hidden aspect-video bg-black shadow-[0_20px_50px_rgba(0,0,0,0.5)] gold-border-glow">
+        <div className="relative rounded-3xl overflow-hidden aspect-video bg-black shadow-[0_20px_50px_rgba(0,0,0,0.5)] gold-border-glow max-w-4xl mx-auto">
           {!isPlayingShowreel ? (
             <div 
               className="absolute inset-0 flex items-center justify-center bg-brand-bg/20 z-10 cursor-pointer group"
