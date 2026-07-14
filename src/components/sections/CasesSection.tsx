@@ -265,7 +265,7 @@ export function CasesSection() {
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow group">
                   {/* Vimeo facade: only load iframe after click */}
                   <img
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775737722/Behnke1_ao07wt.webp"
+                    src="https://i.vimeocdn.com/video/2143957678-edb503703d2aaf3cb4b95e40e7146271786761190cba628df3c3d92623337568-d_960?region=us"
                     alt="KSB Rechtsanwälte Video Vorschau"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -313,16 +313,10 @@ export function CasesSection() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mt-2">
-                <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp" alt="Pflege mit Erfolg Recruiting Video Rodalben — Mitarbeitergewinnung Pflegebranche" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
-                </div>
-                <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810388/Adonay_welde_social_care_1.12.1_d3uhxu.webp" alt="Pflege Recruiting Content Rodalben Pfalz — Bewerbervideo Pflegedienst" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
-                </div>
-                <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775809428/Social_CAre_3.1.1_upw3fj.webp" alt="Pflege Personal finden Rodalben — Authentisches Recruiting Video Pfalz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
-                </div>
+              <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow mt-2">
+                <p className="text-gray-300 text-base leading-relaxed font-light">
+                  Trotz Fachkräftemangel: eine offene Stelle gezielt über Social-Media-Recruiting-Ads besetzt. Eine unbesetzte Stelle kostet täglich Geld – professionelles Video-Recruiting zahlt sich aus.
+                </p>
               </div>
             </div>
           </div>
@@ -359,7 +353,7 @@ export function CasesSection() {
                       onClick={() => setIsPlayingSocialCare(true)}
                     >
                       <img
-                        src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775742144/Social_Care1_slwplk.jpg"
+                        src="https://res.cloudinary.com/dzt4f9xdi/video/upload/so_0,q_auto,f_auto,w_400/v1784029896/Social_Care_SHORT_zbjsxu.jpg"
                         alt="Social Care Video Vorschau"
                         className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                         loading="lazy"
@@ -433,8 +427,28 @@ export function CasesSection() {
               </div>
             </div>
           </div>
+
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-4"></div>
+
+          {/* ASA */}
+          <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+            <img
+              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png"
+              alt="ASA Driving Revolution Felgen Logo"
+              className="h-12 w-auto object-contain shrink-0"
+              loading="lazy"
+            />
+            <div>
+              <div className="flex flex-wrap gap-3 mb-3">
+                <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Felgenmarke</span>
+              </div>
+              <p className="text-gray-300 text-base leading-relaxed font-light">
+                ASA — Felgenmarke von GEWE Reifen &amp; Räder, Teil der laufenden Content-Partnerschaft.
+              </p>
+            </div>
+          </div>
         </div>
-        
+
         <div className="mt-16 text-center">
           <Button href="/kontakt" variant="outline" size="lg">
             Jetzt Kontakt aufnehmen
