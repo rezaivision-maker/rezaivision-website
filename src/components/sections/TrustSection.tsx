@@ -82,7 +82,9 @@ export function TrustSection() {
                     { name: "Vertriebspartner24", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650099/Vertriebspartner24_sclkyd.webp" },
                     { name: "Social Care - Pflegedienst Management", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650095/socialcare-logo_d5acj2.webp" },
                     { name: "Shogun Gym Kaiserslautern Kampfsport", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650090/shogun_gym_tcwvyk.webp" },
-                    { name: "Schlossgut Lüll - Eventlocation & Weingut", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650086/Schlossgut-Lull-01_-_weiss_lvq8cd.webp" }
+                    { name: "Schlossgut Lüll - Eventlocation & Weingut", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650086/Schlossgut-Lull-01_-_weiss_lvq8cd.webp" },
+                    { name: "GEWE Reifen & Räder Großhandel", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/imgi_3_gewe_white_1_rzj5xh.png" },
+                    { name: "ASA Driving Revolution Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png" }
                   ].map((client, idx) => (
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
@@ -113,7 +115,8 @@ export function TrustSection() {
                     { name: "Pflege mit Erfolg - Pflegedienst Region Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650081/Pflege_mit_Erfolg_yrjkmx.webp" },
                     { name: "Tanzschule Marquardt Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650076/logo_tanzschule_marquardt_znwhzr.webp" },
                     { name: "Cinelex Media Videoproduktion", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650053/cinelex-media-logo-transparent-kaiserslautern_ueqzjq.webp" },
-                    { name: "CBL Logistik Gruppe", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650047/CBL_Logo_transparent_kkhdqm.png" }
+                    { name: "CBL Logistik Gruppe", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650047/CBL_Logo_transparent_kkhdqm.png" },
+                    { name: "TEC Speedwheels Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/tec_speedwheels_2017_white_o3upna.png" }
                   ].map((client, idx) => (
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
