@@ -24,6 +24,17 @@ git push           # erst hierdurch startet der Vercel-Deploy
 
 **Ohne `npm run build` vor dem Push ist die Änderung für Google unsichtbar.**
 
+**Automatisches Sicherheitsnetz (seit 2026-07-14):** Ein GitHub-Actions-Workflow
+(`.github/workflows/build-and-deploy.yml`) baut bei jedem Push auf `main`
+zusätzlich automatisch `dist/` neu und committet es zurück, falls lokal
+vergessen wurde, `npm run build` auszuführen. Das ersetzt die manuelle Regel
+oben NICHT — lokal bauen bleibt der schnellere, bevorzugte Weg — aber falls
+doch mal nur `src/`-Änderungen gepusht werden, holt CI das automatisch nach
+(kein Datenverlust, kein „Google sieht alte Version"-Risiko mehr). Die dafür
+nötigen Secrets (`GOOGLE_PLACES_API_KEY`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`,
+`GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`) liegen in den GitHub-Actions-Secrets des
+Repos, nicht im Code.
+
 ---
 
 ## Warum das so ist (Hintergrund)
