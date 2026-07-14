@@ -789,60 +789,103 @@ Der einfachste Einstieg: ein kurzer Unternehmensfilm, aus dem dann 3 bis 5 kurze
   },
   {
     id: "11",
-    slug: "recruitingvideo-pfalz-fachkraefte-gewinnen",
-    title: "Warum klassische Stellenanzeigen 2026 scheitern – Recruiting-Videos in der Pfalz",
-    excerpt: "Klassische Stellenanzeigen reichen 2026 nicht mehr aus. Erfahre, wie Recruiting-Videos in der Pfalz echte Fachkräfte überzeugen.",
+    slug: "recruiting-video-erstellen-lassen-kosten-ablauf-roi",
+    title: "Recruiting Video erstellen lassen: Kosten, Ablauf & ROI für den Mittelstand",
+    excerpt: "Lohnt sich ein Recruiting Video für Handwerk und Industrie? Wir erklären transparent die Kosten, den perfekten Ablauf und warum klassische Stellenanzeigen 2026 in Kaiserslautern & Mannheim nicht mehr funktionieren.",
     category: "corporate",
-    date: "18. April 2026",
-    readTime: "6 min",
+    date: "25. Mai 2026",
+    readTime: "7 min",
     image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513527/blog/Recruiting_Video_Pfalz_Kaiserslautern_Rezaivision.jpg",
-    ctaLabel: "Recruiting-Check anfragen",
+    ctaLabel: "Unverbindliche Recruiting-Beratung",
     ctaLink: "/kontakt?service=recruiting",
-    content: `# Klassische Stellenanzeigen funktionieren nicht mehr – und warum Recruiting-Videos in der Pfalz den Unterschied machen
+    layout: "standard",
+    content: `# Recruiting Video erstellen lassen: Kosten, Ablauf & ROI für den Mittelstand in der Region (Kaiserslautern, Mannheim & Co.)
 
-**Gute Fachkräfte suchen nicht aktiv auf Jobportalen. Sie sitzen in festen Jobs und wechseln nur, wenn etwas sie wirklich anspricht. Eine Textanzeige schafft das kaum noch.**
+Wenn wir ehrlich sind: Der regionale Arbeitsmarkt für Fachkräfte ist extrem angespannt. Handwerksbetriebe, Industrieunternehmen und IT-Dienstleister in **Kaiserslautern, Mannheim oder Saarbrücken** suchen händeringend nach gutem Personal. 
 
----
+Die bittere Realität 2026: **Gute Leute suchen nicht aktiv nach Jobs.** Sie sitzen in sicheren Anstellungen. Eine langweilige Text-Stellenanzeige auf Indeed oder Stepstone erreicht diese Zielgruppe nicht. Sie scrollen daran vorbei. 
 
-## Der Arbeitsmarkt hat sich gedreht
-
-Im Handwerk und im produzierenden Mittelstand in Rheinland-Pfalz ist die Situation klar: Wirklich gute Leute sind vergeben. Sie sind nicht auf der Suche – aber viele wären bereit zu wechseln, wenn das Richtige kommt.
-
-Das Problem: Textanzeigen erreichen genau diese Gruppe nicht. Jemand, der zufrieden beschäftigt ist, öffnet kein Jobportal. Und selbst wenn er es tut, unterscheiden sich die meisten Stellenanzeigen so wenig voneinander, dass sie keine Entscheidung auslösen.
-
-Menschen möchten wissen, wie es bei euch wirklich ist. Bevor sie überhaupt anfragen.
+Was sie stoppt, ist Emotion, Authentizität und ein echter Einblick in die Firmenkultur. Und genau hier kommt ein professionelles [Recruiting Video](/leistungen/recruiting) ins Spiel.
 
 ---
 
-## Warum viele zögern – und wie Video das löst
+## Warum klassische Stellenanzeigen scheitern (und Video funktioniert)
 
-Viele erfahrene Mitarbeiter bleiben in einem Job, den sie nicht mehr mögen – weil der Schritt in etwas Unbekanntes riskant wirkt. Ist der neue Chef wirklich so, wie er klingt? Stimmt das mit der modernen Ausstattung? Passen die Kollegen zu mir?
+Versetz dich in einen CNC-Fräser, Anlagenmechaniker oder Softwareentwickler, der eigentlich zufrieden ist, sich aber manchmal über seinen Chef ärgert. Wenn dieser Fachmann abends auf Instagram oder Facebook scrollt, sucht er keinen Job. 
 
-Ein gut gemachtes Recruiting-Video beantwortet genau diese Fragen. Nicht durch Versprechen, sondern durch echte Bilder. Das senkt die Hemmschwelle, den ersten Schritt zu machen.
+Liest er eine Textanzeige ("*Wir bieten: Flache Hierarchien, Obstkorb, leistungsgerechte Bezahlung*"), löst das nichts in ihm aus. Das schreibt jeder.
 
----
+**Sieht er aber ein Video**, in dem der Werkstattleiter seiner (vielleicht) neuen Firma authentisch über den Zusammenhalt im Team spricht, während im Hintergrund moderne Maschinen zu sehen sind, passiert psychologisch etwas völlig anderes: Er baut in Sekunden Vertrauen auf. Die Hemmschwelle, sich zu bewerben, sinkt massiv.
 
-## Was ein starkes Recruiting-Video zeigen sollte
+![Ein echter Facharbeiter schaut sich in seiner Pause ein Recruiting-Video an](/worker_watching_video_1783981352706.png)
 
-1. **Das Team in Aktion** – nicht gestellt, sondern wie es wirklich ist.
-2. **Einen kurzen Einblick in die Technik** – Maschinen, Software, Werkzeuge. Das interessiert Fachleute sofort.
-3. **Eine echte Aussage** – vom Chef oder einem Kollegen, ohne Skript. Wer abgelesen spricht, klingt fake.
-4. **Gezielte regionale Ausspielung** – das Video wird genau den Menschen gezeigt, die in einem 30–50 km Radius wohnen und potenziell wechselbereit sind.
-
-[Kostenlosen Recruiting-Check anfragen](/kontakt)
+> **Tipp aus der Praxis:** Perfektion wirkt künstlich. Ein echtes Lachen, ein kleiner Versprecher eines echten Mitarbeiters wirken 10x besser als ein hochbezahlter Schauspieler.
 
 ---
 
-## FAQ
+## Was kostet ein gutes Recruiting Video?
 
-### Reicht eine gute Stellenanzeige nicht mehr aus?
-Für aktiv Suchende vielleicht. Aber die besten Leute suchen gerade nicht. Die erreicht ihr nur mit Sichtbarkeit – und Video ist das wirkungsvollste Instrument dafür.
+Die Frage nach den **Recruiting Video Kosten** ist für den Mittelstand entscheidend. Wir bei Rezai Vision stehen für absolute Transparenz. Die Kosten hängen von drei Faktoren ab:
 
-### Muss die Geschäftsführung im Video mitspielen?
-Ein Statement der Führung wirkt sehr gut, ist aber kein Muss. Manchmal sind Kollegen-Interviews sogar noch wirkungsvoller, weil sie glaubwürdiger klingen.
+1. **Konzept & Strategie:** Wie spitz ist die Zielgruppe? Brauchen wir ein komplexes Storyboard oder dokumentarische Interviews?
+2. **Drehtage:** Reicht ein Drehtag in Kaiserslautern aus, oder drehen wir an mehreren Standorten (z.B. Mannheim und Saarbrücken)?
+3. **Ausspielung (Social Media Cuts):** Ein langer Film bringt nichts. Du brauchst 4-5 kurze, vertikale Clips (9:16) für Instagram, TikTok und LinkedIn.
 
-### Wie schnell zeigen sich erste Ergebnisse?
-Wenn das Video gezielt über Social Media ausgespielt wird, kann man innerhalb weniger Wochen erste Reaktionen und Anfragen sehen.`
+### Realistische Budgets für B2B-Unternehmen
+
+* **Das Starter-Paket (ab ca. 2.500 € - 3.500 €):** Ein halber bis ganzer Drehtag. Fokus auf authentische Mitarbeiter-Interviews am Arbeitsplatz. Ergebnis: 1 Hauptfilm für die Website, 2-3 kurze Social Media Clips. Ideal für Handwerksbetriebe, die schnell Sichtbarkeit brauchen.
+* **Das Premium-Paket (ab ca. 5.000 € - 8.000 €):** Mehrere Drehtage, aufwendiges Storytelling, dynamische Kamerafahrten, Drohnenaufnahmen. Mehrere Interviewpartner, intensive Postproduktion (Color Grading, Sounddesign) und ein massives Paket an Social Media Content (6-10 Clips). Ideal für größere Mittelständler und Industrie.
+
+*Hinweis: Wenn eine Agentur dir ein Video für 500 € anbietet, kaufst du kein Recruiting. Du kaufst jemanden, der eine Kamera bedienen kann. Ohne strategisches Konzept wird dieses Video keine einzige Bewerbung generieren.*
+
+---
+
+## Der perfekte Ablauf: Vom Erstgespräch bis zur Einstellung
+
+Wie läuft so eine Produktion mit Rezai Vision ab? Hier ist der Prozess, der uns in der Region Südwest so erfolgreich macht:
+
+### 1. Strategie-Workshop (Nicht Kamera-Setup!)
+Bevor wir auch nur eine Linse putzen, müssen wir deine Zielgruppe verstehen. Suchen wir Azubis (Fokus auf TikTok, schnelle Schnitte, Team-Vibe) oder erfahrene Ingenieure (Fokus auf LinkedIn, komplexe Technik, Sicherheit)?
+
+### 2. Der Dreh (Authentisch & Effizient)
+Wir kommen in deinen Betrieb. Egal ob in der lauten Werkstatt oder im ruhigen Großraumbüro – wir wissen, wie wir Mitarbeiter vor der Kamera locker machen. 
+
+![Blick hinter die Kulissen: Unser Kamerateam beim Dreh in einer industriellen Werkstatt](/recruiting_video_bts_1783981337896.png)
+
+Unsere oberste Regel: **Wir nutzen keinen Teleprompter.** Abgelesene Texte klingen wie ein schlechtes Gedicht. Wir führen Interviews als echte Gespräche, aus denen wir später die stärksten Sätze herausschneiden.
+
+### 3. Postproduktion & Formate
+Im Schnitt entsteht die Magie. Wir kolorieren die Bilder (Color Grading) auf Kino-Niveau, mischen den Ton perfekt ab und liefern dir genau die Formate, die du brauchst: 16:9 für YouTube und deine Karriereseite, 9:16 für Meta-Ads (Facebook/Instagram).
+
+---
+
+## Der ROI (Return on Investment) eines Recruiting Videos
+
+Ist ein Video teuer? Lass uns rechnen.
+Wenn du über eine Headhunter-Agentur einen erfahrenen Anlagenmechaniker suchst, zahlst du schnell **20% bis 30% eines Jahresgehalts als Provision**. Das sind oft 10.000 € bis 15.000 € – für *einen* Mitarbeiter.
+
+Investierst du **5.000 € in eine starke Recruiting-Video-Kampagne**, gehört dir dieses Material. Es ist auf deiner Karriereseite, es läuft in deinen Ads. Es kann dir über die nächsten 2 Jahre nicht nur einen, sondern 5, 10 oder 20 neue Bewerber bringen. Der ROI eines guten Videos im Personalwesen ist gigantisch.
+
+---
+
+## Fazit: Wer jetzt nicht handelt, wird unsichtbar
+
+Der Wettbewerb um die besten Köpfe in der Region Kaiserslautern, Mannheim und der Pfalz wird härter. Ein Unternehmen ohne Gesicht, ohne Stimme und ohne emotionale Einblicke wird von den Kandidaten ignoriert.
+
+Ein professionell produziertes Recruiting Video ist heute kein Luxus mehr für Großkonzerne – es ist die Basis-Ausstattung für jedes Unternehmen, das wachsen will.
+
+---
+
+## Häufige Fragen (FAQ)
+
+### Unsere Mitarbeiter sind kamerascheu. Was nun?
+Das ist völlig normal! 99% unserer Protagonisten standen noch nie vor einer Kamera. Unsere Kernkompetenz ist es, eine lockere Atmosphäre zu schaffen. Meistens vergessen die Mitarbeiter nach 10 Minuten völlig, dass wir filmen. Wir drängen niemanden.
+
+### Wie lange dauert die Produktion?
+Nach dem Erstgespräch und Konzept-Freigabe drehen wir meistens innerhalb von 1-2 Wochen. Der fertige Schnitt liegt dir dann noch einmal ca. 7-10 Tage später zur Abnahme vor. Insgesamt dauert es oft nur 3 bis 4 Wochen bis zum fertigen Video.
+
+### Übernehmen Sie auch die Ausspielung (Werbeanzeigen)?
+Wir konzentrieren uns auf das, was wir am besten können: High-End Videoproduktion und Content Creation. Für das Schalten von Paid Ads (Meta, LinkedIn) arbeiten wir entweder mit deiner Inhouse-Marketingabteilung zusammen oder empfehlen dir erstklassige Performance-Agenturen aus unserem Netzwerk.`
   },
   {
     id: "12",
