@@ -122,6 +122,22 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
    nicht in der Sitemap.
 5. Bilder: immer `width`, `height`, `alt` setzen und `loading="lazy"` (außer dem
    Hero-Bild, das `fetchPriority="high"` braucht).
+5a. **AUFLÖSUNG MUSS STIMMEN — Bilder/Logos/Videos dürfen NIE unscharf/verpixelt
+    sein.** Regeln:
+    - Die **Cloudinary-Quelldatei** muss mindestens **2× so groß** sein wie der
+      Anzeigebereich (für scharfe Darstellung auf Retina-/Handy-Displays). Ein
+      größerer `w_`-Wert hilft NICHT, wenn die Quelle klein ist — Cloudinary
+      skaliert dann nur hoch (= unscharf). Vor dem Einbauen die native Größe
+      prüfen: `curl -s "https://res.cloudinary.com/dzt4f9xdi/image/upload/fl_getinfo/<version>/<datei>" | grep -o '"width":[0-9]*'`.
+    - Ist die Quelle zu klein (z. B. Logos mit nur 200px Breite), muss der Nutzer
+      eine **höher aufgelöste Version neu hochladen** (Logos: mind. 600px breit,
+      transparentes PNG oder besser SVG). Das lässt sich NICHT per Transformation
+      reparieren.
+    - Retina-Schärfe im Code über `srcSet` (`w_200 1x, w_400 2x, w_600 3x`) — aber
+      nur sinnvoll, wenn die Quelle diese Größen auch wirklich hergibt.
+    - Videos: `q_auto:best,f_mp4` für gute Qualität in kompatiblem Container
+      (NICHT `q_auto` allein — komprimiert zu stark; NICHT `.mov`/`vc_auto` als
+      Container — spielt nicht überall). Quellvideo sollte ≥1080p sein.
 6. **Neue Blog-Posts: NUR über Firestore, NICHT in `blogPosts.ts`!**
    Neue Artikel werden ausschließlich über das Admin-Dashboard (`/admin` → Blog & Artikel)
    in Firestore (`posts`-Collection) angelegt. `src/data/blogPosts.ts` dient nur als

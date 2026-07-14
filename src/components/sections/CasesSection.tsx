@@ -428,8 +428,8 @@ export function CasesSection() {
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow col-span-2">
                     <video
-                      src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto,f_mp4/v1784031792/PFAFF_Keder_207_720p_i3g6vr.mov"
-                      poster="https://res.cloudinary.com/dzt4f9xdi/video/upload/so_0,q_auto,f_auto,w_800/v1784031792/PFAFF_Keder_207_720p_i3g6vr.jpg"
+                      src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto:best,f_mp4/v1784031792/PFAFF_Keder_207_720p_i3g6vr.mov"
+                      poster="https://res.cloudinary.com/dzt4f9xdi/video/upload/so_0,q_auto:best,f_auto,w_1280/v1784031792/PFAFF_Keder_207_720p_i3g6vr.jpg"
                       className="w-full h-full object-cover"
                       controls
                       playsInline
@@ -445,13 +445,16 @@ export function CasesSection() {
           {/* GEWE / ASA / TEC */}
           <div className="flex flex-col gap-4 max-w-2xl mx-auto w-full">
             <div className="flex flex-wrap gap-3 px-2">
-              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Reifen &amp; Räder</span>
+              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Social Content</span>
+              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Videoads</span>
+              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Produktvideos</span>
+              <span className="px-3 py-1 bg-white/5 border border-brand-accent/20 rounded-full text-[10px] uppercase tracking-widest font-medium text-brand-accent">Produktfotos</span>
             </div>
 
             <div className="bg-brand-darker/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/5 gold-border-glow flex-1">
               <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 gold-text-gradient tracking-tight">GEWE</h3>
               <p className="text-gray-300 text-lg font-light mb-3">GEWE Reifen &amp; Räder — Großhandel mit den Felgenmarken ASA und TEC.</p>
-              <p className="text-gray-400 text-base leading-relaxed font-light mb-6">Teil der laufenden Content-Partnerschaft.</p>
+              <p className="text-gray-400 text-base leading-relaxed font-light mb-6">Social Content, Videoads, Produktvideos und Produktfotos im Rahmen der laufenden Content-Partnerschaft.</p>
 
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-medium text-gray-400">Felgen</span>
