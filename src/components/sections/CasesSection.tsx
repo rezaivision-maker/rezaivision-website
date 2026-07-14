@@ -477,19 +477,19 @@ export function CasesSection() {
 
             <div className="rounded-3xl overflow-hidden bg-brand-darker gold-border-glow flex flex-wrap items-center justify-center gap-8 p-8 mt-2">
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/imgi_3_gewe_white_1_rzj5xh.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/imgi_3_gewe_white_bsh1xj.png"
                 alt="GEWE Reifen &amp; Räder Logo"
                 className="h-12 w-auto object-contain"
                 loading="lazy"
               />
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/tec_speedwheels_2017_white_o3upna.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/tec_speedwheels_2017_white_nezbgd.png"
                 alt="TEC Speedwheels Felgen Logo"
                 className="h-12 w-auto object-contain"
                 loading="lazy"
               />
               <img
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1784035840/asa-driving-revolution-vector-logo_beirxb.png"
                 alt="ASA Driving Revolution Felgen Logo"
                 className="h-12 w-auto object-contain"
                 loading="lazy"
