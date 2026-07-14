@@ -54,5 +54,13 @@ jobs:
             echo "Nothing changed — skipping commit."
           else
             git commit -m "chore: rebuild dist via CI [skip ci]"
-            git push
+            # Push. Falls das Remote sich weiterbewegt hat (neuerer Commit gepusht,
+            # während dieser Build lief), ist dieses dist/ veraltet — dann NICHT
+            # erzwingen, sondern sauber überspringen: der neuere Commit hat seinen
+            # eigenen Build, der das korrekte dist/ pusht. Kein CI-"failure" mehr.
+            if git push; then
+              echo "dist/ gepusht."
+            else
+              echo "::notice::Push abgelehnt — neuerer Commit existiert, dessen Build baut das aktuelle dist/. Übersprungen."
+            fi
           fi
