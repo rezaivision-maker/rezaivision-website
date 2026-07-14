@@ -76,25 +76,25 @@ export function TrustSection() {
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="flex gap-16 md:gap-24 items-center">
                   {[
-                    { name: "KSL - Klinikum Südwestpfalz Logistik", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650602/ksl_logo_header_25_xkxnfe.webp" },
-                    { name: "PFAFF Industriesysteme & Maschinen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775651283/Paff_avfrx2.webp" },
-                    { name: "KSB Rechtsanwälte Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650320/KSB-Rechtsanwaelte_Logo_xr32rm.webp" },
-                    { name: "Vertriebspartner24", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650099/Vertriebspartner24_sclkyd.webp" },
-                    { name: "Social Care - Pflegedienst Management", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650095/socialcare-logo_d5acj2.webp" },
-                    { name: "Shogun Gym Kaiserslautern Kampfsport", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650090/shogun_gym_tcwvyk.webp" },
-                    { name: "Schlossgut Lüll - Eventlocation & Weingut", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650086/Schlossgut-Lull-01_-_weiss_lvq8cd.webp" },
-                    { name: "GEWE Reifen & Räder Großhandel", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/imgi_3_gewe_white_1_rzj5xh.png" },
-                    { name: "ASA Driving Revolution Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png" }
+                    { name: "KSL - Klinikum Südwestpfalz Logistik", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650602/ksl_logo_header_25_xkxnfe.webp" },
+                    { name: "PFAFF Industriesysteme & Maschinen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775651283/Paff_avfrx2.webp" },
+                    { name: "KSB Rechtsanwälte Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650320/KSB-Rechtsanwaelte_Logo_xr32rm.webp" },
+                    { name: "Vertriebspartner24", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650099/Vertriebspartner24_sclkyd.webp" },
+                    { name: "Social Care - Pflegedienst Management", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650095/socialcare-logo_d5acj2.webp" },
+                    { name: "Shogun Gym Kaiserslautern Kampfsport", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650090/shogun_gym_tcwvyk.webp" },
+                    { name: "Schlossgut Lüll - Eventlocation & Weingut", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650086/Schlossgut-Lull-01_-_weiss_lvq8cd.webp" },
+                    { name: "GEWE Reifen & Räder Großhandel", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1784019284/imgi_3_gewe_white_1_rzj5xh.png" },
+                    { name: "ASA Driving Revolution Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1784019284/asa-driving-revolution-vector-logo_sinmx8.png" }
                   ].map((client, idx) => (
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         loading="lazy" src={client.url}
-                        srcSet={`${client.url} 1x, ${client.url.replace('w_100', 'w_200')} 2x`}
-                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
+                        srcSet={`${client.url} 1x, ${client.url.replace('w_200', 'w_400')} 2x, ${client.url.replace('w_200', 'w_600')} 3x`}
+                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`}
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
-                        width="200"
-                        height="100"
+                        width="400"
+                        height="200"
                       />
                     </div>
                   ))}
@@ -109,24 +109,24 @@ export function TrustSection() {
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="flex gap-16 md:gap-24 items-center">
                   {[
-                    { name: "Fit for Drive - MPU Beratung Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650059/fitfordrive_m8sbug.webp" },
-                    { name: "Folienritter - Fahrzeugfolierung Pfalz", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650065/Folienritter_Logo_mzz194.webp" },
-                    { name: "Aesthetic Ink - Tattoo Studio Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650037/Aestethic_Ink_Weiss_250_px_gc2mh0.webp" },
-                    { name: "Pflege mit Erfolg - Pflegedienst Region Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650081/Pflege_mit_Erfolg_yrjkmx.webp" },
-                    { name: "Tanzschule Marquardt Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650076/logo_tanzschule_marquardt_znwhzr.webp" },
-                    { name: "Cinelex Media Videoproduktion", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650053/cinelex-media-logo-transparent-kaiserslautern_ueqzjq.webp" },
-                    { name: "CBL Logistik Gruppe", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1775650047/CBL_Logo_transparent_kkhdqm.png" },
-                    { name: "TEC Speedwheels Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_100/v1784019284/tec_speedwheels_2017_white_o3upna.png" }
+                    { name: "Fit for Drive - MPU Beratung Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650059/fitfordrive_m8sbug.webp" },
+                    { name: "Folienritter - Fahrzeugfolierung Pfalz", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650065/Folienritter_Logo_mzz194.webp" },
+                    { name: "Aesthetic Ink - Tattoo Studio Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650037/Aestethic_Ink_Weiss_250_px_gc2mh0.webp" },
+                    { name: "Pflege mit Erfolg - Pflegedienst Region Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650081/Pflege_mit_Erfolg_yrjkmx.webp" },
+                    { name: "Tanzschule Marquardt Kaiserslautern", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650076/logo_tanzschule_marquardt_znwhzr.webp" },
+                    { name: "Cinelex Media Videoproduktion", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650053/cinelex-media-logo-transparent-kaiserslautern_ueqzjq.webp" },
+                    { name: "CBL Logistik Gruppe", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1775650047/CBL_Logo_transparent_kkhdqm.png" },
+                    { name: "TEC Speedwheels Felgen", url: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_200/v1784019284/tec_speedwheels_2017_white_o3upna.png" }
                   ].map((client, idx) => (
                     <div key={`${client.name}-${idx}`} className="w-32 md:w-48 h-12 md:h-16 flex items-center justify-center grayscale opacity-75 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                       <img 
                         loading="lazy" src={client.url}
-                        srcSet={`${client.url} 1x, ${client.url.replace('w_100', 'w_200')} 2x`}
-                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`} 
+                        srcSet={`${client.url} 1x, ${client.url.replace('w_200', 'w_400')} 2x, ${client.url.replace('w_200', 'w_600')} 3x`}
+                        alt={`Kunde ${client.name} — Referenz Videoproduktion Kaiserslautern`}
                         className="max-w-full max-h-full object-contain"
                         referrerPolicy="no-referrer"
-                        width="200"
-                        height="100"
+                        width="400"
+                        height="200"
                       />
                     </div>
                   ))}
