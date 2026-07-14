@@ -370,7 +370,7 @@ export function CasesSection() {
                     </div>
                   ) : (
                     <video 
-                      src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto,f_mp4/v1775985431/Social_Care_EXPOFIX_jftef4.mp4"
+                      src="https://res.cloudinary.com/dzt4f9xdi/video/upload/q_auto,f_mp4/v1784029896/Social_Care_SHORT_zbjsxu.mov"
                       className="w-full h-full object-cover"
                       controls
                       autoPlay
