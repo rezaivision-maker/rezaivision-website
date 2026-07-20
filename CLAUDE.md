@@ -218,7 +218,13 @@ vercel.json           Header, Rewrites, buildCommand (skip), outputDirectory
   „30daysAgo" — das wirft 400). URL-Inspektion + Sitemap-Einreichung gehen per API.
 - „Indexierung beantragen" geht **nicht** per API — nur manuell in der GSC-UI.
 - Vercel-MCP ist angebunden (Projekt `rezaivision-website`). Nur `www` ist Projekt-Domain;
-  der non-www→www-Redirect ist 307 auf DNS-Ebene (Backlog, niedrige Prio).
+  der non-www→www-Redirect ist ein **308 Permanent Redirect** (SEO-korrekt, erledigt —
+  war früher als 307/Backlog notiert, stimmt nicht mehr).
+- **`https://rezaivision.de/` (ohne www) wird bewusst NICHT indexiert.** GSC meldet dort
+  „Seite mit Weiterleitung" / Verdict NEUTRAL — das ist **kein Fehler**, sondern korrekt:
+  Google indexiert das Weiterleitungsziel. Geprüft 2026-07-20: `www.rezaivision.de` =
+  Verdict **PASS**, „Gesendet und indexiert", google- und userCanonical beide
+  `https://www.rezaivision.de/`. Also nichts reparieren, wenn diese Meldung auftaucht.
 
 ---
 
