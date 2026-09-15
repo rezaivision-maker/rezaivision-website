@@ -56,11 +56,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.rezaivision.de/preisrechner</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.rezaivision.de/preise</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
