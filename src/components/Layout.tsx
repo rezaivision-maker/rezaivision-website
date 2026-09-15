@@ -9,7 +9,6 @@ import { NavDropdown } from "./NavDropdown";
 
 const navLinks = [
   { name: "Portfolio", path: "/#cases" },
-  { name: "Preisrechner", path: "/preisrechner" },
   { name: "Magazin", path: "/blog" },
   { name: "Über uns", path: "/ueber-uns" },
   { name: "Kontakt", path: "/kontakt" },
@@ -394,7 +393,6 @@ export function Layout() {
                 <h3 className="text-lg font-display font-semibold mb-6">Unternehmen</h3>
                 <ul className="space-y-4 text-gray-400">
                   <li><Link to="/#cases" className="hover:text-brand-accent transition-colors">Referenzen</Link></li>
-                  <li><Link to="/preisrechner" className="hover:text-brand-accent transition-colors">Preisrechner</Link></li>
                   <li><Link to="/ueber-uns" className="hover:text-brand-accent transition-colors">Über uns</Link></li>
                   <li><Link to="/technik" className="hover:text-brand-accent transition-colors">Technik & Qualität</Link></li>
                   <li><Link to="/blog" className="hover:text-brand-accent transition-colors">Magazin</Link></li>

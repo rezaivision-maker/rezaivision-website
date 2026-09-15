@@ -15,7 +15,6 @@ const ProcessSection = lazy(() => import("@/components/sections/ProcessSection")
 const AboutSection = lazy(() => import("@/components/sections/AboutSection").then(m => ({ default: m.AboutSection })));
 const TestimonialSection = lazy(() => import("@/components/sections/TestimonialSection").then(m => ({ default: m.TestimonialSection })));
 const FAQSection = lazy(() => import("@/components/sections/FAQSection").then(m => ({ default: m.FAQSection })));
-const PricingSection = lazy(() => import("@/components/sections/PricingSection").then(m => ({ default: m.PricingSection })));
 const CTASection = lazy(() => import("@/components/sections/CTASection").then(m => ({ default: m.CTASection })));
 const InlineCTA = lazy(() => import("@/components/sections/InlineCTA").then(m => ({ default: m.InlineCTA })));
 
@@ -153,7 +152,6 @@ export default function Home() {
         <div className="section-deferred"><AboutSection /></div>
         <div className="section-deferred"><TestimonialSection /></div>
         <div className="section-deferred"><FAQSection /></div>
-        <div className="section-deferred"><PricingSection /></div>
         <div className="section-deferred"><CTASection /></div>
       </Suspense>
 

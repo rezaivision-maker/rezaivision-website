@@ -14,10 +14,10 @@ export function PricingSection() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/preisrechner"
+              to="/kontakt"
               className="bg-brand-accent text-brand-dark px-8 py-4 rounded-full font-bold hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] text-center w-full sm:w-auto"
             >
-              Jetzt Preis berechnen
+              Projekt anfragen
             </Link>
             <a
               href="https://wa.me/4917631739958"

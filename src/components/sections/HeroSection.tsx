@@ -39,8 +39,8 @@ export function HeroSection() {
               Der Unterschied ist kein Zufall – er ist Strategie. Videoproduktion aus Kaiserslautern für den Mittelstand in der Pfalz.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: "0.8s", animationFillMode: "both" }}>
-              <Button href="/preisrechner" size="lg" className="w-full sm:w-auto">
-                Projektbudget in 60s berechnen
+              <Button href="/kontakt" size="lg" className="w-full sm:w-auto">
+                Projekt anfragen
               </Button>
               <Button href="#showreel" variant="outline" size="lg" className="w-full sm:w-auto">
                 Showreel ansehen

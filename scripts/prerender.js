@@ -23,7 +23,6 @@ const staticRoutes = [
   '/reza-e-motion/eventbegleitung',
   '/reza-e-motion/musikvideos',
   '/reza-e-motion/hochzeitsfilme',
-  '/preisrechner',
   '/preise',
   '/ueber-uns',
   '/technik',
