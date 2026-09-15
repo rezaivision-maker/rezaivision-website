@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91mm" height="61mm" viewBox="0 0 91 61">
+  <!-- ============================================================
+       REZAI VISION – Visitenkarte RÜCKSEITE
+       Endformat 85 x 55 mm + 3 mm Beschnitt ringsum = 91 x 61 mm
+       Schriftarten: "Montserrat" (Name/Logo) & "Inter" (Kontaktdaten)
+       QR-Code = PLATZHALTER (rechts) – später echten QR einsetzen
+       ============================================================ -->
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15161B"/>
+      <stop offset="0.55" stop-color="#0E0F13"/>
+      <stop offset="1" stop-color="#08090C"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="91" height="61" fill="url(#bg2)"/>
+
+  <!-- kleine Wortmarke oben -->
+  <text x="8" y="13" font-family="Montserrat, sans-serif" font-weight="700" font-size="4.2"
+        letter-spacing="0.3" fill="#F5F5F2">REZAI<tspan font-weight="300" fill="#C9A24B"> VISION</tspan></text>
+
+  <!-- Name -->
+  <text x="8" y="27.5" font-family="Montserrat, sans-serif" font-weight="600" font-size="4.4"
+        fill="#F5F5F2">Parsha Rezai Mah</text>
+  <text x="8" y="32.2" font-family="Inter, sans-serif" font-weight="500" font-size="2.4"
+        letter-spacing="0.8" fill="#C9A24B">VIDEOPRODUKTION &#183; FILM</text>
+
+  <!-- Trennlinie -->
+  <rect x="8" y="35.6" width="14" height="0.4" rx="0.2" fill="#C9A24B"/>
+
+  <!-- Kontaktdaten -->
+  <g font-family="Inter, sans-serif" fill="#CFD2D8">
+    <text x="8" y="41.2" font-size="2.7" font-weight="600" fill="#F5F5F2">Erfurterstraße 93</text>
+    <text x="8" y="45.0" font-size="2.7">67663 Kaiserslautern</text>
+    <text x="8" y="50.0" font-size="2.7">rezaivision.de</text>
+    <text x="8" y="53.8" font-size="2.7">rezaivision@gmail.com</text>
+  </g>
+
+  <!-- ===================== QR-CODE PLATZHALTER ===================== -->
+  <g transform="translate(59,17.5)">
+    <rect x="-1.5" y="-1.5" width="27" height="27" rx="2" fill="#FFFFFF"/>
+    <!-- vereinfachtes QR-Muster (Platzhalter) -->
+    <g fill="#0E0F13">
+      <!-- Finder oben links -->
+      <rect x="1" y="1" width="6" height="6"/><rect x="2" y="2" width="4" height="4" fill="#FFFFFF"/><rect x="3" y="3" width="2" height="2"/>
+      <!-- Finder oben rechts -->
+      <rect x="17" y="1" width="6" height="6"/><rect x="18" y="2" width="4" height="4" fill="#FFFFFF"/><rect x="19" y="3" width="2" height="2"/>
+      <!-- Finder unten links -->
+      <rect x="1" y="17" width="6" height="6"/><rect x="2" y="18" width="4" height="4" fill="#FFFFFF"/><rect x="3" y="19" width="2" height="2"/>
+      <!-- Streu-Module -->
+      <rect x="9" y="1" width="1.4" height="1.4"/><rect x="12" y="1.5" width="1.4" height="1.4"/><rect x="14.5" y="2.5" width="1.4" height="1.4"/>
+      <rect x="9.5" y="4" width="1.4" height="1.4"/><rect x="11.5" y="5" width="1.4" height="1.4"/><rect x="14" y="4.5" width="1.4" height="1.4"/>
+      <rect x="1.5" y="9" width="1.4" height="1.4"/><rect x="4" y="9.5" width="1.4" height="1.4"/><rect x="6.5" y="10.5" width="1.4" height="1.4"/>
+      <rect x="9" y="9" width="1.4" height="1.4"/><rect x="11.5" y="8.5" width="1.4" height="1.4"/><rect x="14" y="9.5" width="1.4" height="1.4"/>
+      <rect x="16.5" y="9" width="1.4" height="1.4"/><rect x="19" y="10" width="1.4" height="1.4"/><rect x="21.5" y="9.5" width="1.4" height="1.4"/>
+      <rect x="9.5" y="12" width="1.4" height="1.4"/><rect x="12" y="12.5" width="1.4" height="1.4"/><rect x="15" y="13" width="1.4" height="1.4"/>
+      <rect x="18" y="13" width="1.4" height="1.4"/><rect x="21" y="12.5" width="1.4" height="1.4"/>
+      <rect x="9" y="16.5" width="1.4" height="1.4"/><rect x="11.5" y="17.5" width="1.4" height="1.4"/><rect x="14" y="16.5" width="1.4" height="1.4"/>
+      <rect x="16.5" y="17" width="1.4" height="1.4"/><rect x="19.5" y="18" width="1.4" height="1.4"/><rect x="21.5" y="17" width="1.4" height="1.4"/>
+      <rect x="9.5" y="20" width="1.4" height="1.4"/><rect x="12.5" y="20.5" width="1.4" height="1.4"/><rect x="15.5" y="20" width="1.4" height="1.4"/>
+      <rect x="18.5" y="21" width="1.4" height="1.4"/><rect x="21" y="20.5" width="1.4" height="1.4"/>
+    </g>
+  </g>
+  <text x="71.5" y="48.5" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500"
+        font-size="2.2" letter-spacing="1.4" fill="#8A8D95">QR-CODE</text>
+
+  <!-- Beschnittmarken -->
+  <g stroke="#555" stroke-width="0.2">
+    <line x1="0" y1="3" x2="2" y2="3"/><line x1="3" y1="0" x2="3" y2="2"/>
+    <line x1="91" y1="3" x2="89" y2="3"/><line x1="88" y1="0" x2="88" y2="2"/>
+    <line x1="0" y1="58" x2="2" y2="58"/><line x1="3" y1="61" x2="3" y2="59"/>
+    <line x1="91" y1="58" x2="89" y2="58"/><line x1="88" y1="61" x2="88" y2="59"/>
+  </g>
+</svg>

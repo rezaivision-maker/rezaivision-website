@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="220" viewBox="0 0 680 220">
+  <!-- Rezai Vision – Icon-Set (Bronze): Phone · Film-Mail · Play -->
+  <defs>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7DFBB"/><stop offset="0.28" stop-color="#E4B87F"/>
+      <stop offset="0.6" stop-color="#BE8850"/><stop offset="0.82" stop-color="#95602F"/>
+      <stop offset="1" stop-color="#6B4321"/>
+    </linearGradient>
+    <linearGradient id="bronzeDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B98A54"/><stop offset="1" stop-color="#6A431F"/>
+    </linearGradient>
+    <radialGradient id="disc" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#C89257"/><stop offset="0.6" stop-color="#9A6636"/><stop offset="1" stop-color="#5E3C1F"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBEAD0"/><stop offset="0.5" stop-color="#B7844C"/><stop offset="1" stop-color="#6B4321"/>
+    </linearGradient>
+    <linearGradient id="playGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBE6C4"/><stop offset="0.55" stop-color="#E5B77C"/><stop offset="1" stop-color="#B07E45"/>
+    </linearGradient>
+    <filter id="sh" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <pattern id="perf" width="27" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)">
+      <rect x="6" y="4.5" width="15" height="7" rx="3.5" fill="#33220f" fill-opacity="0.72"/>
+    </pattern>
+    <clipPath id="hsClip">
+      <path transform="translate(30,30) scale(6.667)" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Phone -->
+  <g filter="url(#sh)">
+    <path transform="translate(30,30) scale(6.667)" fill="url(#bronze)"
+      d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+    <rect x="0" y="0" width="240" height="220" fill="url(#perf)" clip-path="url(#hsClip)"/>
+  </g>
+
+  <!-- Film-Mail -->
+  <g transform="translate(225,0)" filter="url(#sh)">
+    <g transform="rotate(-7 100 60)">
+      <g transform="rotate(-15 34 44)">
+        <rect x="30" y="36" width="140" height="15" rx="3.5" fill="url(#bronze)"/>
+        <g fill="#2c1d0f" fill-opacity="0.8">
+          <polygon points="40,36 52,36 44,51 32,51"/><polygon points="64,36 76,36 68,51 56,51"/>
+          <polygon points="88,36 100,36 92,51 80,51"/><polygon points="112,36 124,36 116,51 104,51"/>
+          <polygon points="136,36 148,36 140,51 128,51"/><polygon points="160,36 170,36 164,51 152,51"/>
+        </g>
+      </g>
+      <rect x="30" y="53" width="140" height="17" rx="3.5" fill="url(#bronze)"/>
+      <circle cx="34.5" cy="47" r="3.2" fill="#3a2712"/>
+    </g>
+    <rect x="30" y="80" width="140" height="92" rx="11" fill="url(#bronze)"/>
+    <path d="M34,86 L100,132 L166,86" fill="none" stroke="#3a2712" stroke-opacity="0.45" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M34,166 L82,128 M166,166 L118,128" fill="none" stroke="#3a2712" stroke-opacity="0.35" stroke-width="3.5" stroke-linecap="round"/>
+    <g transform="translate(100,128)" fill="none">
+      <circle r="22" stroke="#3a2712" stroke-opacity="0.4" stroke-width="6.5"/>
+      <circle r="9" stroke="#3a2712" stroke-opacity="0.55" stroke-width="5"/>
+      <path d="M9,-7 v12 q0,7 9,4.5" stroke="#3a2712" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Play -->
+  <g transform="translate(450,0)" filter="url(#sh)">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ring)" stroke-width="13"/>
+    <circle cx="100" cy="100" r="60" fill="none" stroke="url(#ring)" stroke-width="8"/>
+    <circle cx="100" cy="100" r="48" fill="url(#disc)"/>
+    <path d="M87,73 L133,100 L87,127 Z" fill="url(#playGrad)" stroke="#3a2712" stroke-opacity="0.5" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M62,60 A80,80 0 0 1 150,52" fill="none" stroke="#FFF6E8" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

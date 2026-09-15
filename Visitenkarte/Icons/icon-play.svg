@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Rezai Vision – Icon "Play / Objektiv" (Bronze) -->
+  <defs>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7DFBB"/>
+      <stop offset="0.28" stop-color="#E4B87F"/>
+      <stop offset="0.6" stop-color="#BE8850"/>
+      <stop offset="0.82" stop-color="#95602F"/>
+      <stop offset="1" stop-color="#6B4321"/>
+    </linearGradient>
+    <radialGradient id="disc" cx="0.38" cy="0.32" r="0.78">
+      <stop offset="0" stop-color="#C89257"/>
+      <stop offset="0.6" stop-color="#9A6636"/>
+      <stop offset="1" stop-color="#5E3C1F"/>
+    </radialGradient>
+    <linearGradient id="playGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBE6C4"/>
+      <stop offset="0.55" stop-color="#E5B77C"/>
+      <stop offset="1" stop-color="#B07E45"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBEAD0"/>
+      <stop offset="0.5" stop-color="#B7844C"/>
+      <stop offset="1" stop-color="#6B4321"/>
+    </linearGradient>
+    <filter id="sh" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#sh)">
+    <!-- Äußerer Ring -->
+    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ring)" stroke-width="13"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#3a2712" stroke-opacity="0.25" stroke-width="1.5"/>
+    <!-- Mittlerer Ring -->
+    <circle cx="100" cy="100" r="60" fill="none" stroke="url(#ring)" stroke-width="8"/>
+    <!-- Innere Scheibe -->
+    <circle cx="100" cy="100" r="48" fill="url(#disc)"/>
+    <circle cx="100" cy="100" r="48" fill="none" stroke="#3a2712" stroke-opacity="0.3" stroke-width="1.5"/>
+    <!-- Play-Dreieck -->
+    <path d="M87,73 L133,100 L87,127 Z" fill="url(#playGrad)" stroke="#3a2712" stroke-opacity="0.5"
+          stroke-width="2" stroke-linejoin="round"/>
+    <!-- Glanzlicht -->
+    <path d="M62,60 A80,80 0 0 1 150,52" fill="none" stroke="#FFF6E8" stroke-opacity="0.55"
+          stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
