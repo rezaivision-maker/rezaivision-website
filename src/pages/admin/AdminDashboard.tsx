@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "motion/react";
-import { 
-  FileText, Settings, BarChart3, Plus, Search, Edit, Trash2, 
+import {
+  FileText, Settings, BarChart3, Plus, Search, Edit, Trash2,
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
-  LayoutTemplate, Sparkles, Users, Mail, Video, Brain, BookOpen, Instagram,
-  Palette, Target, Cpu, Megaphone, Mic, Network
+  LayoutTemplate, Sparkles, Users, Mail, BookOpen, Instagram,
+  Palette
 } from "lucide-react";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts, importSelectedStaticPosts } from "@/lib/dbHelpers";
 import { BlogPost, blogPosts as staticPosts } from "@/data/blogPosts";
-import CalculatorAdmin from "@/components/admin/CalculatorAdmin";
 import PagesSEOManager from "@/components/admin/PagesSEOManager";
 import CreatorChannel from "@/components/admin/CreatorChannel";
 import CRMManager from "@/components/admin/CRMManager";
@@ -21,18 +20,9 @@ import ProductionSuite from "@/components/admin/ProductionSuite";
 import LandingpageBuilder from "@/components/admin/LandingpageBuilder";
 import MarketingStudio from "@/components/admin/MarketingStudio";
 import InvoiceGenerator from "@/components/admin/InvoiceGenerator";
-import AIVideoHub from "@/components/admin/AIVideoHub";
-import MotionStudio from "@/components/admin/MotionStudio";
-import SalesToolkit from "@/components/admin/SalesToolkit";
 import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
 import CIManager from "@/components/admin/CIManager";
-import ICPGenerator from "@/components/admin/ICPGenerator";
-import AIModelManager from "@/components/admin/AIModelManager";
-import AgencyGrowth from "@/components/admin/AgencyGrowth";
-import CampaignManager from "@/components/admin/CampaignManager";
 import SettingsTab from "@/components/admin/SettingsTab";
-import JarvisCopilot from "@/components/admin/JarvisCopilot";
-import AgentSwarms from "@/components/admin/AgentSwarms";
 
 const generateSlug = (text: string) => {
   return text
@@ -925,24 +915,7 @@ export default function AdminDashboard() {
               <Instagram size={18} />
               <span className="font-medium">Marketing Studio</span>
             </button>
-            <button
-              onClick={() => setActiveTab("aivideo")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "aivideo" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Video size={18} />
-              <span className="font-medium">KI Video Hub</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("motion")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "motion" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Zap size={18} />
-              <span className="font-medium">Motion Studio (Framer)</span>
-            </button>
+
             <button
               onClick={() => setActiveTab("ci-manager")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
@@ -995,67 +968,6 @@ export default function AdminDashboard() {
               <Mail size={18} />
               <span className="font-medium">E-Mail Marketing</span>
             </button>
-            <button
-              onClick={() => setActiveTab("sales")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "sales" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Brain size={18} />
-              <span className="font-medium">Sales & Psychologie</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("jarvis")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "jarvis" ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)]" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Mic size={18} />
-              <span className="font-medium uppercase tracking-wider text-xs">J.A.R.V.I.S. Voice</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("swarms")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "swarms" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Network size={18} />
-              <span className="font-medium">Agent Swarms</span>
-            </button>
-          </div>
-
-          {/* Growth & Ads */}
-          <div className="space-y-1">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
-              Growth & Ads
-            </div>
-            <button
-              onClick={() => setActiveTab("agency-growth")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "agency-growth" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <TrendingUp size={18} />
-              <span className="font-medium">Agency Growth</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("campaign-manager")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "campaign-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Megaphone size={18} />
-              <span className="font-medium">Ads & Manus AI</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("icp-generator")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "icp-generator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Target size={18} />
-              <span className="font-medium">K.I. ICP Persona</span>
-            </button>
           </div>
 
           {/* SEO & Website */}
@@ -1097,15 +1009,7 @@ export default function AdminDashboard() {
             <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
               Admin & Tools
             </div>
-            <button
-              onClick={() => setActiveTab("calculator")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "calculator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Monitor size={18} />
-              <span className="font-medium">Preisrechner</span>
-            </button>
+
             <button
               onClick={() => setActiveTab("invoice")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
@@ -1124,15 +1028,7 @@ export default function AdminDashboard() {
               <BookOpen size={18} />
               <span className="font-medium">Wissens-Wiki</span>
             </button>
-            <button
-              onClick={() => setActiveTab("ai-models")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "ai-models" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Cpu size={18} />
-              <span className="font-medium">KI Modelle & APIs</span>
-            </button>
+
             <button
               onClick={() => setActiveTab("settings")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
@@ -1193,29 +1089,6 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
-        {activeTab === 'agency-growth' && (
-          <motion.div
-            key="agency-growth"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <AgencyGrowth />
-          </motion.div>
-        )}
-
-        {activeTab === 'campaign-manager' && (
-          <motion.div
-            key="campaign-manager"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <CampaignManager />
-          </motion.div>
-        )}
 
         {activeTab === 'settings' && (
           <motion.div
@@ -1241,23 +1114,6 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
-        {activeTab === 'aivideo' && (
-          <motion.div key="aivideo" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <AIVideoHub />
-          </motion.div>
-        )}
-
-        {activeTab === 'motion' && (
-          <motion.div key="motion" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <MotionStudio />
-          </motion.div>
-        )}
-
-        {activeTab === 'sales' && (
-          <motion.div key="sales" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <SalesToolkit />
-          </motion.div>
-        )}
 
         {activeTab === 'wiki' && (
           <motion.div key="wiki" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
@@ -1271,29 +1127,6 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
-        {activeTab === 'icp-generator' && (
-          <motion.div key="icp-generator" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <ICPGenerator />
-          </motion.div>
-        )}
-
-        {activeTab === 'ai-models' && (
-          <motion.div key="ai-models" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <AIModelManager />
-          </motion.div>
-        )}
-
-        {activeTab === 'swarms' && (
-          <motion.div key="swarms" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <AgentSwarms />
-          </motion.div>
-        )}
-
-        {activeTab === 'jarvis' && (
-          <motion.div key="jarvis" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.98 }}>
-            <JarvisCopilot />
-          </motion.div>
-        )}
 
         {activeTab === "crm" && <CRMManager />}
         {activeTab === "email" && <EmailMarketingSetup />}
@@ -1414,11 +1247,6 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
-        {activeTab === "calculator" && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
-            <CalculatorAdmin />
-          </motion.div>
-        )}
 
         {activeTab === "pages" && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
