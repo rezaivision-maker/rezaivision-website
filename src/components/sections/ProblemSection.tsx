@@ -100,7 +100,7 @@ export function ProblemSection() {
             <span className="text-brand-accent">Das Problem ist, dass sie nach außen nicht die Wirkung entfaltet, die sie verdient.</span>
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Deshalb arbeiten wir mit Strategie und 100% transparenten Festpreisen – damit Ihr Video kein Risiko, sondern ein sicheres Werkzeug für mehr Reichweite wird.
+            Deshalb arbeiten wir mit Strategie und fairer, transparenter Kalkulation – damit Ihr Video kein Risiko, sondern ein verlässliches Instrument für mehr Reichweite wird.
           </p>
         </motion.div>
       </div>
