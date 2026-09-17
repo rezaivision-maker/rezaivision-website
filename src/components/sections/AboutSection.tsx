@@ -49,7 +49,7 @@ export function AboutSection() {
 
             <div className="space-y-6">
               <p className="text-gray-400 leading-relaxed font-light">
-                Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die Leidenschaft für Film, die als <span className="text-gray-100 font-semibold">strategisches Werkzeug</span> für Ihr Wachstum arbeitet. Als <span className="text-gray-100 font-semibold">IHK-geprüfte Experten</span> begleiten wir Industrie, Mittelstand und Startups im gesamten <span className="text-gray-100 font-semibold">Südwesten Deutschlands</span>.
+                Hinter <span className="text-gray-100 font-semibold">Rezai Vision</span> steht die Leidenschaft für Film und Videografie, die als <span className="text-gray-100 font-semibold">strategisches Werkzeug</span> für Ihr Wachstum arbeitet. Als <span className="text-gray-100 font-semibold">IHK-geprüfte Mediengestalter</span> begleiten wir Industrie, Mittelstand und Startups im gesamten <span className="text-gray-100 font-semibold">Südwesten Deutschlands</span>.
               </p>
               
               <p className="text-gray-400 leading-relaxed font-light">
@@ -59,10 +59,10 @@ export function AboutSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-10">
               {[
-                { title: "10 Jahre Erfahrung", desc: "In Video & Filmproduktion" },
+                { title: "10+ Jahre Erfahrung", desc: "In Video & Filmproduktion" },
                 { title: "Fokus Südwesten", desc: "RPF, Saarland, Hessen & BW" },
                 { title: "Persönliche Begleitung", desc: "Keine wechselnden Teams" },
-                { title: "IHK-geprüft", desc: "Höchste Qualitätsstandards" }
+                { title: "IHK-geprüft", desc: "Hohe Qualitätsstandards" }
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle2 size={20} className="text-brand-accent shrink-0 mt-1" />
