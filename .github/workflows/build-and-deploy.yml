@@ -6,6 +6,13 @@ on:
     paths-ignore:
       - 'dist/**'
   workflow_dispatch: {}
+  # Nächtlicher Rebuild: zieht neue Blog-Artikel aus Firestore ins vorgerenderte
+  # HTML + Sitemap, reicht die Sitemap bei Google neu ein und meldet URLs per
+  # IndexNow an Bing. So werden im Admin gespeicherte Artikel automatisch
+  # Google-fertig — ohne git push. 02:00 UTC ≈ 03:00-04:00 deutscher Zeit
+  # (Cron kennt keine Sommerzeit, daher ±1 h — für einen Nachtlauf egal).
+  schedule:
+    - cron: '0 2 * * *'
 
 permissions:
   contents: write
