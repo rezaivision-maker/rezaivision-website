@@ -91,3 +91,6 @@ Um Verwirrung zu vermeiden, wurden alle API-Routen in thematische Unterordner ei
 4.  **Vercel Duplicate-Content-Prävention:**
     *   *Problem:* Die automatischen Branch-Deployments von Vercel erzeugen `*.vercel.app` Subdomains, was Google als Duplicate Content wertet.
     *   *Lösung:* Konsequente Nutzung einer dynamischen `<SEO />` Komponente mit absoluten Canonical-Tags auf der Hauptdomain.
+5.  **Unvollstaendiges FAQPage-Schema in Blogartikeln:**
+    *   *Problem:* `extractFAQs()` in `src/pages/BlogPost.tsx` suchte die FAQ-Ueberschrift nur in einem Fenster von 10 Zeilen vor der Frage. Bei laengeren FAQ-Sektionen landeten dadurch nur die ersten drei Fragen im JSON-LD.
+    *   *Loesung:* Umstellung auf ein Section-Flag (H2 mit "FAQ"/"Haeufige Fragen" setzt den Zustand, die naechste H2 beendet ihn). Seitdem stehen alle Fragen einer Sektion im FAQPage-Schema. Verifiziert am Artikel `/blog/unternehmensvideo-selbst-drehen` (5 von 5 Fragen).
