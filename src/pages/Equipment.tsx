@@ -25,8 +25,8 @@ export default function Equipment() {
     {
       icon: <Monitor className="text-brand-accent" size={32} />,
       title: "Post-Produktion & Farbe",
-      desc: "Color Grading im Industriestandard DaVinci Resolve. Wir arbeiten mit Spyder Colorcharts für maximale Farbtreue. Monitor-Kalibrierung erfolgt auf Rec.709 für Web (2.2) und Broadcast (2.4).",
-      details: ["DaVinci Resolve Studio", "Kalibrierte EIZO & BenQ Monitore", "Spyder Colorcharts", "Farbakkurate Darstellung"]
+      desc: "Color Grading im Industriestandard DaVinci Resolve. Monitor-Kalibrierung erfolgt auf Rec.709 für Web (2.2) und Broadcast (2.4).",
+      details: ["DaVinci Resolve Studio", "Kalibrierte EIZO & BenQ Monitore", "Rec.709 Kalibrierung", "Farbakkurate Darstellung"]
     },
     {
       icon: <Mic className="text-brand-accent" size={32} />,
@@ -49,8 +49,8 @@ export default function Equipment() {
     {
       icon: <Layers className="text-brand-accent" size={32} />,
       title: "Grip & Statik",
-      desc: "Dank Gimbalsystemen und robuster Stative garantieren wir einen effektiven Stand sowie ruhige, smoothe und dynamische Bewegungen.",
-      details: ["3-Achsen Gimbals", "Robuste Stative", "Teleprompter-System", "Smoothe Kamerabewegungen"]
+      desc: "Dank Gimbalsystemen und robuster Stative garantieren wir einen effektiven Stand sowie ruhige und dynamische Bewegungen.",
+      details: ["3-Achsen Gimbals", "Robuste Stative", "Teleprompter-System", "Sicherer, ruhiger Stand"]
     }
   ];
 
@@ -146,7 +146,7 @@ export default function Equipment() {
                   {[
                     "Korrektes Farbmanagement im Rec.709 Standard",
                     "Optimierte Ausgabe: Gamma 2.2 (Web) & Gamma 2.4 (Broadcast)",
-                    "Referenz-Check: Monitoring via DaVinci Resolve auf dem iPhone",
+                    "Referenz-Check: Monitoring via DaVinci Resolve, z. B. auf iPhone oder Android",
                     "Optimale Performance auf den wichtigsten Ziel-Displays"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -161,7 +161,7 @@ export default function Equipment() {
               <Cpu className="mb-6" size={48} />
               <h4 className="text-2xl font-display font-bold mb-4">Industriestandard. Ohne Umwege.</h4>
               <p className="opacity-80 leading-relaxed mb-6">
-                Unsere Exporte sind für maximale Performance im Web optimiert. Durch unser macOS-basiertes Ökosystem und strikte interne Qualitätskontrollen stellen wir sicher, dass jedes Video unsere hohen technischen Standards erfüllt – für Ergebnisse, die ab der ersten Sekunde technisch perfekt performen.
+                Unsere Exporte sind für maximale Performance im Web optimiert. Durch unser macOS-basiertes Ökosystem stellen wir sicher, dass jedes Video unsere hohen technischen Standards erfüllt – für Ergebnisse, die ab der ersten Sekunde technisch perfekt performen.
               </p>
               <div className="flex gap-4">
                 <div className="bg-brand-darker text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest">DaVinci Resolve</div>
