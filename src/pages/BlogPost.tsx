@@ -157,26 +157,33 @@ export default function BlogPost() {
   }
 
   // Extract FAQ items from content for schema
+  // Section-Flag statt 10-Zeilen-Fenster: so landen ALLE Fragen einer FAQ-Sektion im Schema,
+  // nicht nur die ersten drei (frueherer Bug -> unvollstaendiges FAQPage-Schema).
   const extractFAQs = (content: string) => {
     const faqs: { question: string; answer: string }[] = [];
     const lines = content.split('\n');
+    let inFaq = false;
     for (let j = 0; j < lines.length; j++) {
-      if (lines[j].trim().startsWith('### ') && j > 0) {
-        // Check if we're in the FAQ section
-        const prevLines = lines.slice(Math.max(0, j - 10), j).join('\n');
-        if (prevLines.includes('## FAQ')) {
-          const question = lines[j].trim().replace('### ', '');
-          // Collect answer lines until next heading or empty section
-          let answer = '';
-          let k = j + 1;
-          while (k < lines.length && !lines[k].trim().startsWith('#') && !(lines[k].trim() === '---')) {
-            if (lines[k].trim()) answer += lines[k].trim() + ' ';
-            k++;
-          }
-          if (question && answer.trim()) {
-            faqs.push({ question, answer: answer.trim() });
-          }
+      const line = lines[j].trim();
+
+      if (line.startsWith('## ')) {
+        const heading = line.replace('## ', '').toLowerCase();
+        inFaq = heading.includes('faq') || heading.includes('haufige fragen') || heading.includes('h\u00e4ufige fragen');
+        continue;
+      }
+
+      if (inFaq && line.startsWith('### ')) {
+        const question = line.replace('### ', '');
+        let answer = '';
+        let k = j + 1;
+        while (k < lines.length && !lines[k].trim().startsWith('#') && lines[k].trim() !== '---') {
+          if (lines[k].trim()) answer += lines[k].trim() + ' ';
+          k++;
         }
+        if (question && answer.trim()) {
+          faqs.push({ question, answer: answer.trim() });
+        }
+        j = k - 1;
       }
     }
     return faqs;
