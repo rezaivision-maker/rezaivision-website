@@ -27,12 +27,17 @@ import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
 import CIManager from "@/components/admin/CIManager";
 import SettingsTab from "@/components/admin/SettingsTab";
 
-// Deep-Link in die Google-Search-Console-URL-Prüfung für einen Blog-Beitrag.
-// Zeigt dort Index-Status + den offiziellen Button "Indexierung beantragen".
+// Google Search Console: öffnet die richtige Property (Index-Status prüfen +
+// "Indexierung beantragen" über die Prüf-Leiste oben).
+// WICHTIG: GSC unterstützt KEINEN Deep-Link, der eine beliebige Seiten-URL
+// automatisch vor-prüft — der /inspect-"id"-Parameter ist ein server-seitig
+// erzeugter Token, keine URL. Eine URL als id ergibt (eingeloggt) einen 404.
+// Deshalb öffnen wir die Property und kopieren die Beitrags-URL in die
+// Zwischenablage, damit sie nur noch oben eingefügt werden muss.
 const GSC_PROPERTY = "sc-domain:rezaivision.de";
 const SITE_ORIGIN = "https://www.rezaivision.de";
-const gscInspectUrl = (slug: string) =>
-  `https://search.google.com/search-console/inspect?resource_id=${encodeURIComponent(GSC_PROPERTY)}&id=${encodeURIComponent(`${SITE_ORIGIN}/blog/${slug}`)}`;
+const GSC_PROPERTY_URL = `https://search.google.com/search-console?resource_id=${encodeURIComponent(GSC_PROPERTY)}`;
+const blogLiveUrl = (slug: string) => `${SITE_ORIGIN}/blog/${slug}`;
 
 const generateSlug = (text: string) => {
   return text
@@ -1280,11 +1285,12 @@ export default function AdminDashboard() {
                         <td className="px-6 py-4 text-right">
                           <div className="flex justify-end gap-2">
                             <a
-                              href={gscInspectUrl(post.slug)}
+                              href={GSC_PROPERTY_URL}
                               target="_blank"
                               rel="noopener noreferrer"
+                              onClick={() => { navigator.clipboard?.writeText(blogLiveUrl(post.slug)).catch(() => {}); }}
                               className="p-2 text-gray-400 hover:text-brand-accent hover:bg-brand-accent/5 rounded-lg transition-colors cursor-pointer"
-                              title="In Google Search Console prüfen / indexieren"
+                              title="Search Console öffnen — Beitrags-URL wird kopiert, oben in die Prüf-Leiste einfügen (prüfen/indexieren)"
                             >
                               <Globe size={16} />
                             </a>
