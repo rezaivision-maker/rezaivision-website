@@ -5,8 +5,8 @@ import {
   FileText, Settings, BarChart3, Plus, Search, Edit, Trash2,
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
-  LayoutTemplate, Sparkles, Users, Mail, BookOpen, Instagram,
-  Palette, ChevronUp, ChevronDown, Image as ImageIcon
+  LayoutTemplate, Users, Mail,
+  ChevronUp, ChevronDown, Image as ImageIcon
 } from "lucide-react";
 import { germanDateToTimestamp } from "@/lib/utils";
 import { uploadToCloudinary } from "@/lib/cloudinary";
@@ -16,15 +16,7 @@ import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User 
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts, importSelectedStaticPosts } from "@/lib/dbHelpers";
 import { BlogPost, blogPosts as staticPosts } from "@/data/blogPosts";
 import PagesSEOManager from "@/components/admin/PagesSEOManager";
-import CreatorChannel from "@/components/admin/CreatorChannel";
 import CRMManager from "@/components/admin/CRMManager";
-import EmailMarketingSetup from "@/components/admin/EmailMarketingSetup";
-import ProductionSuite from "@/components/admin/ProductionSuite";
-import LandingpageBuilder from "@/components/admin/LandingpageBuilder";
-import MarketingStudio from "@/components/admin/MarketingStudio";
-import InvoiceGenerator from "@/components/admin/InvoiceGenerator";
-import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
-import CIManager from "@/components/admin/CIManager";
 import SettingsTab from "@/components/admin/SettingsTab";
 
 // Google Search Console: öffnet die richtige Property (Index-Status prüfen +
@@ -952,39 +944,11 @@ export default function AdminDashboard() {
           <p className="text-xs text-gray-400">Eingeloggt als {user.email}</p>
         </div>
         <nav className="flex-1 px-4 space-y-6 overflow-y-auto pb-6 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
-          {/* Creation & Branding */}
+          {/* Inhalte */}
           <div className="space-y-1">
             <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-2 px-3 select-none">
-              Creation & Branding
+              Inhalte
             </div>
-            <button
-              onClick={() => setActiveTab("production")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "production" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <FileText size={18} />
-              <span className="font-medium">Production Suite</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("marketing")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "marketing" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Instagram size={18} />
-              <span className="font-medium">Marketing Studio</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab("ci-manager")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "ci-manager" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Palette size={18} />
-              <span className="font-medium">CI Manager</span>
-            </button>
             <button
               onClick={() => setActiveTab("blog")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
@@ -993,40 +957,6 @@ export default function AdminDashboard() {
             >
               <FileText size={18} />
               <span className="font-medium">Blog & Artikel</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("creator")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "creator" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Sparkles size={18} />
-              <span className="font-medium">Creator Channel</span>
-            </button>
-          </div>
-
-          {/* Leads & Clients */}
-          <div className="space-y-1">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
-              Leads & Clients
-            </div>
-            <button
-              onClick={() => setActiveTab("crm")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "crm" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Users size={18} />
-              <span className="font-medium">Kontakte & Leads</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("email")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "email" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <Mail size={18} />
-              <span className="font-medium">E-Mail Marketing</span>
             </button>
           </div>
 
@@ -1053,42 +983,29 @@ export default function AdminDashboard() {
               <LayoutTemplate size={18} />
               <span className="font-medium">Seiten & SEO</span>
             </button>
+          </div>
+
+          {/* Leads */}
+          <div className="space-y-1">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
+              Leads
+            </div>
             <button
-              onClick={() => setActiveTab("landingpages")}
+              onClick={() => setActiveTab("crm")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "landingpages" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
+                activeTab === "crm" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
               }`}
             >
-              <Globe size={18} />
-              <span className="font-medium">Landingpages</span>
+              <Users size={18} />
+              <span className="font-medium">Kontakte & Leads</span>
             </button>
           </div>
 
-          {/* Admin & Tools */}
+          {/* System */}
           <div className="space-y-1">
             <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-2 mt-4 px-3 select-none">
-              Admin & Tools
+              System
             </div>
-
-            <button
-              onClick={() => setActiveTab("invoice")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "invoice" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <FileText size={18} />
-              <span className="font-medium">Business (PDFs)</span>
-            </button>
-            <button
-              onClick={() => setActiveTab("wiki")}
-              className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                activeTab === "wiki" ? "bg-brand-accent/10 text-brand-accent" : "text-gray-400 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <BookOpen size={18} />
-              <span className="font-medium">Wissens-Wiki</span>
-            </button>
-
             <button
               onClick={() => setActiveTab("settings")}
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-colors cursor-pointer ${
@@ -1113,43 +1030,6 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="flex-1 px-6 md:px-12 py-8 overflow-y-auto h-full">
-        {activeTab === 'production' && (
-          <motion.div
-            key="production"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <ProductionSuite />
-          </motion.div>
-        )}
-
-        {activeTab === 'landingpages' && (
-          <motion.div
-            key="landingpages"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <LandingpageBuilder />
-          </motion.div>
-        )}
-
-        {activeTab === 'marketing' && (
-          <motion.div
-            key="marketing"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <MarketingStudio />
-          </motion.div>
-        )}
-
-
         {activeTab === 'settings' && (
           <motion.div
             key="settings"
@@ -1162,34 +1042,7 @@ export default function AdminDashboard() {
           </motion.div>
         )}
 
-        {activeTab === 'invoice' && (
-          <motion.div
-            key="invoice"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="space-y-6"
-          >
-            <InvoiceGenerator />
-          </motion.div>
-        )}
-
-
-        {activeTab === 'wiki' && (
-          <motion.div key="wiki" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <KnowledgeWiki />
-          </motion.div>
-        )}
-
-        {activeTab === 'ci-manager' && (
-          <motion.div key="ci-manager" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}>
-            <CIManager />
-          </motion.div>
-        )}
-
-
         {activeTab === "crm" && <CRMManager />}
-        {activeTab === "email" && <EmailMarketingSetup />}
         {activeTab === "blog" && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4 mb-8">
@@ -1334,16 +1187,6 @@ export default function AdminDashboard() {
               <p className="text-gray-400">Verwalte Meta-Tags, prüfe die Indexierung und nutze KI für bessere Rankings.</p>
             </div>
             <PagesSEOManager />
-          </motion.div>
-        )}
-
-        {activeTab === "creator" && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
-            <div>
-              <h1 className="text-3xl font-display font-bold mb-2">Creator Channel</h1>
-              <p className="text-gray-400">Dein KI-Berater für Kundenanalysen, Sales-Strategien und Content-Ideen.</p>
-            </div>
-            <CreatorChannel />
           </motion.div>
         )}
 
