@@ -1,12 +1,32 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { getServiceBlogLinks } from "@/lib/serviceBlogLinks";
+import { blogPosts as staticPosts, BlogPost } from "@/data/blogPosts";
+import { fetchBlogPosts } from "@/lib/dbHelpers";
 
 // Zeigt thematisch passende Blogartikel auf einer Leistungsseite (interne
 // Verlinkung: gibt den Artikeln Autorität von der starken Leistungsseite).
 // Rendert nichts, wenn kein passender Artikel existiert.
 export function ServiceBlogLinks({ service }: { service: string }) {
-  const posts = getServiceBlogLinks(service, 3);
+  // Start mit den statischen Artikeln, damit im Prerender sofort Links stehen.
+  // Danach die Firestore-Artikel dazumergen (gleicher Slug -> Firestore
+  // gewinnt), damit im Admin angelegte Artikel hier ebenfalls erscheinen.
+  const [allPosts, setAllPosts] = useState<BlogPost[]>(staticPosts);
+
+  useEffect(() => {
+    let active = true;
+    fetchBlogPosts().then((fetched) => {
+      if (!active) return;
+      const bySlug = new Map<string, BlogPost>();
+      staticPosts.forEach((p) => bySlug.set(p.slug, p));
+      fetched.forEach((p) => { if (p.slug) bySlug.set(p.slug, p); });
+      setAllPosts(Array.from(bySlug.values()));
+    });
+    return () => { active = false; };
+  }, []);
+
+  const posts = getServiceBlogLinks(service, 3, allPosts);
   if (!posts.length) return null;
 
   return (
@@ -19,7 +39,7 @@ export function ServiceBlogLinks({ service }: { service: string }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((p) => (
             <Link
-              key={p.id}
+              key={p.slug}
               to={`/blog/${p.slug}`}
               className="group block bg-brand-bg border border-white/5 rounded-2xl p-6 hover:border-brand-accent/50 transition-all"
             >

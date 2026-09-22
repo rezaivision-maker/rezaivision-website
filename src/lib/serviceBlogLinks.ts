@@ -8,6 +8,7 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
     "imagefilm", "unternehmensfilm", "unternehmensvideo", "firmenvideo",
     "markenfilm", "vorstellungsvideo", "unternehmensvorstellung",
     "videos-fuer-unternehmen", "videos für unternehmen", "2-minuten-video",
+    "unternehmenskommunikation", "bewegtbild",
   ],
   recruiting: [
     "recruiting", "mitarbeitergewinnung", "fachkräfte", "fachkraefte",
@@ -24,10 +25,17 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   webdesign: ["webdesign", "landingpage", "web design"],
 };
 
-export function getServiceBlogLinks(service: string, limit = 3): BlogPost[] {
+// `posts` ist standardmaessig das statische Array. Seiten, die die aktuellen
+// Firestore-Artikel schon geladen haben, reichen sie hier herein - sonst
+// tauchen ueber das Admin angelegte Artikel auf den Leistungsseiten nie auf.
+export function getServiceBlogLinks(
+  service: string,
+  limit = 3,
+  posts: BlogPost[] = blogPosts,
+): BlogPost[] {
   const kws = SERVICE_KEYWORDS[service] || [];
   if (!kws.length) return [];
-  const scored = blogPosts
+  const scored = posts
     // Alle Leistungsseiten sind B2B -> nur "corporate"-Artikel zulassen, damit
     // Hochzeits-/Musik-Artikel ("emotion") nicht über generische Begriffe
     // (z.B. "Content Creator", "Instagram") auf eine Business-Seite rutschen.
