@@ -6,8 +6,9 @@ import {
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
   LayoutTemplate, Sparkles, Users, Mail, BookOpen, Instagram,
-  Palette
+  Palette, ChevronUp, ChevronDown
 } from "lucide-react";
+import { germanDateToTimestamp } from "@/lib/utils";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts, importSelectedStaticPosts } from "@/lib/dbHelpers";
@@ -287,6 +288,7 @@ export default function AdminDashboard() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [postsLoading, setPostsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortNewestFirst, setSortNewestFirst] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   
@@ -821,10 +823,15 @@ export default function AdminDashboard() {
     }
   };
 
-  const filteredPosts = posts.filter(post => 
-    post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredPosts = posts
+    .filter(post =>
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      const diff = germanDateToTimestamp(b.date) - germanDateToTimestamp(a.date);
+      return sortNewestFirst ? diff : -diff;
+    });
 
   if (authLoading) {
     return (
@@ -1181,7 +1188,16 @@ export default function AdminDashboard() {
                     <tr>
                       <th className="px-6 py-4 font-medium">Titel</th>
                       <th className="px-6 py-4 font-medium">Kategorie</th>
-                      <th className="px-6 py-4 font-medium">Datum</th>
+                      <th className="px-6 py-4 font-medium">
+                        <button
+                          onClick={() => setSortNewestFirst(prev => !prev)}
+                          className="flex items-center gap-1 uppercase tracking-wider hover:text-white transition-colors cursor-pointer"
+                          title={sortNewestFirst ? "Neueste zuerst – klicken für älteste zuerst" : "Älteste zuerst – klicken für neueste zuerst"}
+                        >
+                          Datum
+                          {sortNewestFirst ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+                        </button>
+                      </th>
                       <th className="px-6 py-4 font-medium">Lesezeit</th>
                       <th className="px-6 py-4 font-medium text-right">Aktionen</th>
                     </tr>
