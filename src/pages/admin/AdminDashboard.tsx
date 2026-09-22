@@ -25,6 +25,13 @@ import KnowledgeWiki from "@/components/admin/KnowledgeWiki";
 import CIManager from "@/components/admin/CIManager";
 import SettingsTab from "@/components/admin/SettingsTab";
 
+// Deep-Link in die Google-Search-Console-URL-Prüfung für einen Blog-Beitrag.
+// Zeigt dort Index-Status + den offiziellen Button "Indexierung beantragen".
+const GSC_PROPERTY = "sc-domain:rezaivision.de";
+const SITE_ORIGIN = "https://www.rezaivision.de";
+const gscInspectUrl = (slug: string) =>
+  `https://search.google.com/search-console/inspect?resource_id=${encodeURIComponent(GSC_PROPERTY)}&id=${encodeURIComponent(`${SITE_ORIGIN}/blog/${slug}`)}`;
+
 const generateSlug = (text: string) => {
   return text
     .toLowerCase()
@@ -1231,7 +1238,16 @@ export default function AdminDashboard() {
 
                         <td className="px-6 py-4 text-right">
                           <div className="flex justify-end gap-2">
-                            <button 
+                            <a
+                              href={gscInspectUrl(post.slug)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-2 text-gray-400 hover:text-brand-accent hover:bg-brand-accent/5 rounded-lg transition-colors cursor-pointer"
+                              title="In Google Search Console prüfen / indexieren"
+                            >
+                              <Globe size={16} />
+                            </a>
+                            <button
                               onClick={() => openEditModal(post)}
                               className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
                               title="Bearbeiten"
