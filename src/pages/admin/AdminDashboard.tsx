@@ -6,9 +6,11 @@ import {
   Globe, LogOut, Lock, Database, X, Loader2, Eye, Columns,
   TrendingUp, Zap, RefreshCw, Smartphone, Monitor, AlertCircle, CheckCircle2,
   LayoutTemplate, Sparkles, Users, Mail, BookOpen, Instagram,
-  Palette, ChevronUp, ChevronDown
+  Palette, ChevronUp, ChevronDown, Image as ImageIcon
 } from "lucide-react";
 import { germanDateToTimestamp } from "@/lib/utils";
+import { uploadToCloudinary } from "@/lib/cloudinary";
+import CloudinaryDropzone from "@/components/admin/CloudinaryDropzone";
 import { auth } from "@/lib/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, User } from "firebase/auth";
 import { fetchBlogPosts, saveBlogPost, deleteBlogPost, importStaticPosts, importSelectedStaticPosts } from "@/lib/dbHelpers";
@@ -356,6 +358,45 @@ export default function AdminDashboard() {
         start + before.length + selectedText.length
       );
     }, 0);
+  };
+
+  // Inline-Bild: fügt an der Cursor-Position ein Markdown-Bild ein und markiert
+  // den Alt-Text-Platzhalter, damit er direkt überschrieben werden kann.
+  const [contentImgUploading, setContentImgUploading] = useState(false);
+  const [contentImgError, setContentImgError] = useState<string | null>(null);
+  const contentImgInputRef = React.useRef<HTMLInputElement>(null);
+
+  const insertImageMarkdown = (url: string) => {
+    const altPlaceholder = "Bildbeschreibung";
+    const snippet = `\n![${altPlaceholder}](${url})\n`;
+    const textarea = contentRef.current;
+    if (!textarea) {
+      setFormContent((prev) => prev + snippet);
+      return;
+    }
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const text = textarea.value;
+    setFormContent(text.substring(0, start) + snippet + text.substring(end));
+    setTimeout(() => {
+      textarea.focus();
+      const altStart = start + 3; // hinter "\n![" steht der Platzhalter
+      textarea.setSelectionRange(altStart, altStart + altPlaceholder.length);
+    }, 0);
+  };
+
+  const handleContentImageFile = async (file: File | undefined | null) => {
+    if (!file) return;
+    setContentImgError(null);
+    setContentImgUploading(true);
+    try {
+      const url = await uploadToCloudinary(file);
+      insertImageMarkdown(url);
+    } catch (e: any) {
+      setContentImgError(e?.message || "Upload fehlgeschlagen.");
+    } finally {
+      setContentImgUploading(false);
+    }
   };
 
   const getEmbedUrl = (url?: string) => {
@@ -2301,6 +2342,7 @@ export default function AdminDashboard() {
                               className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
                               placeholder="https://res.cloudinary.com/..."
                             />
+                            <CloudinaryDropzone compact onUploaded={setFormGalleryImage1} currentUrl={formGalleryImage1} label="Ziehen/klicken" className="mt-2" />
                           </div>
                           <div>
                             <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 2 URL</label>
@@ -2311,6 +2353,7 @@ export default function AdminDashboard() {
                               className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
                               placeholder="https://res.cloudinary.com/..."
                             />
+                            <CloudinaryDropzone compact onUploaded={setFormGalleryImage2} currentUrl={formGalleryImage2} label="Ziehen/klicken" className="mt-2" />
                           </div>
                           <div>
                             <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 3 URL</label>
@@ -2321,6 +2364,7 @@ export default function AdminDashboard() {
                               className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
                               placeholder="https://res.cloudinary.com/..."
                             />
+                            <CloudinaryDropzone compact onUploaded={setFormGalleryImage3} currentUrl={formGalleryImage3} label="Ziehen/klicken" className="mt-2" />
                           </div>
                           <div>
                             <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild 4 URL</label>
@@ -2331,6 +2375,7 @@ export default function AdminDashboard() {
                               className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
                               placeholder="https://res.cloudinary.com/..."
                             />
+                            <CloudinaryDropzone compact onUploaded={setFormGalleryImage4} currentUrl={formGalleryImage4} label="Ziehen/klicken" className="mt-2" />
                           </div>
                         </motion.div>
                       )}
@@ -2393,29 +2438,58 @@ export default function AdminDashboard() {
                           <button type="button" onClick={() => insertFormat("\n[Button Text](", ")\n")} className="px-2 py-1 bg-brand-accent text-brand-bg rounded cursor-pointer font-bold" title="CTA Button">CTA Button</button>
                           <button type="button" onClick={() => insertFormat("\n## FAQ\n### Frage?\nAntwort hier...\n")} className="px-2 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded cursor-pointer font-bold" title="FAQ Accordion">FAQ</button>
                           <button type="button" onClick={() => insertFormat("\n| Spalte 1 | Spalte 2 |\n|---|---|\n| Wert 1 | Wert 2 |\n")} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer" title="Tabelle">Tabelle</button>
+                          <button type="button" onClick={() => contentImgInputRef.current?.click()} disabled={contentImgUploading} className="px-2 py-1 bg-white/5 hover:bg-white/10 text-white rounded cursor-pointer font-bold flex items-center gap-1 disabled:opacity-50" title="Bild hochladen & an Cursor-Position einfügen">
+                            {contentImgUploading ? <Loader2 size={12} className="animate-spin" /> : <ImageIcon size={12} />} Bild
+                          </button>
                         </div>
 
-                        <textarea 
+                        <textarea
                           ref={contentRef}
                           rows={12}
                           required
                           value={formContent}
                           onChange={(e) => setFormContent(e.target.value)}
+                          onDragOver={(e) => e.preventDefault()}
+                          onDrop={(e) => {
+                            const file = e.dataTransfer.files?.[0];
+                            if (file) {
+                              e.preventDefault();
+                              handleContentImageFile(file);
+                            }
+                          }}
                           className="w-full bg-black/30 border border-white/10 rounded-b-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors font-mono text-sm leading-relaxed"
                           placeholder="# Hauptüberschrift&#10;&#10;Dein Fließtext hier... Nutze die Toolbar zum Formatieren."
                         />
+                        <input
+                          ref={contentImgInputRef}
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(e) => { handleContentImageFile(e.target.files?.[0]); e.target.value = ""; }}
+                        />
+                        {contentImgError ? (
+                          <p className="mt-1 flex items-center gap-1 text-xs text-red-400"><AlertCircle size={12} /> {contentImgError}</p>
+                        ) : (
+                          <p className="mt-1 text-xs text-gray-500">Tipp: Bild direkt in den Text ziehen oder Toolbar-Button „Bild" nutzen — es wird an der Cursor-Position eingefügt.</p>
+                        )}
                       </div>
 
                       {/* Image URL */}
                       <div className="md:col-span-2">
-                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Bild-URL (Cloudinary/Unsplash)</label>
-                        <input 
-                          type="text" 
+                        <label className="block text-xs uppercase tracking-wider font-bold text-gray-400 mb-2">Beitragsbild (Cloudinary/Unsplash)</label>
+                        <CloudinaryDropzone
+                          onUploaded={setFormImage}
+                          currentUrl={formImage}
+                          label="Beitragsbild hierher ziehen oder klicken"
+                          className="mb-2"
+                        />
+                        <input
+                          type="text"
                           required
                           value={formImage}
                           onChange={(e) => setFormImage(e.target.value)}
                           className="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent transition-colors text-sm"
-                          placeholder="https://res.cloudinary.com/..."
+                          placeholder="https://res.cloudinary.com/... (oder Bild oben hochladen)"
                         />
                       </div>
 
