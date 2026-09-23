@@ -396,6 +396,23 @@ export default function SocialAds() {
         </div>
       </section>
 
+      {/* 7.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Werbevideos für Kaiserslautern, Mannheim & den Südwesten</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Als Videoproduktion aus Kaiserslautern verstehen wir die lokalen Märkte und den Mittelstand. Egal ob Einzelhandel, E-Commerce, Dienstleistung oder B2B – wir sprechen die Sprache Ihrer Zielgruppe und übersetzen Ihre Geschäftsziele in konvertierende Werbevideos.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Für Unternehmen in Kaiserslautern, Mannheim, Saarland und Rheinland-Pfalz produzieren wir Ads, die sich an die lokale Kultur anpassen und gleichzeitig bundes- oder EU-weit skalierbar sind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 8. SOCIAL PROOF */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">

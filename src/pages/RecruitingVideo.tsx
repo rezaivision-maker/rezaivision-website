@@ -433,6 +433,23 @@ export default function RecruitingVideo() {
         </div>
       </section>
 
+      {/* 8.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Recruiting Videos für Kaiserslautern, Pfalz & Saarland</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Als spezialisierte Produktionsagentur aus Kaiserslautern kennen wir die regionalen Besonderheiten des Mittelstands – ob Handwerk, Industrie, IT oder Dienstleistung. Wir verstehen Ihre Zielgruppe und wissen genau, wie Sie als Arbeitgeber authentisch wirken.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Ob Sie in Kaiserslautern, der Pfalz, Mannheim oder dem Saarland tätig sind: Wir drehen vor Ort, sprechen Ihre Sprache und zeigen echte Mitarbeiter, mit denen sich lokale Kandidaten identifizieren können.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 9. PREISORIENTIERUNG */}
       <section className="py-24 bg-brand-bg">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">

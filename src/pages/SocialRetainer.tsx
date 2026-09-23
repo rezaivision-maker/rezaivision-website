@@ -479,6 +479,23 @@ export default function SocialRetainer() {
 
       <ServiceBlogLinks service="social-media" />
 
+      {/* 9.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Social Media Agentur aus Kaiserslautern für regionales Marketing</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Für Unternehmen in Kaiserslautern, der Pfalz, dem Saarland und Rheinland-Pfalz bieten wir den Social Media Retainer mit lokalem Know-how. Wir verstehen Ihre Zielgruppe, sprechen die regionale Sprache und zeigen Ihre echten Mitarbeiter, nicht gespielten Content.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Ein fester Ansprechpartner aus der Region, kurze Wege, direkter Draht zum Gründer – das ist unser Angebot für seriöse, nachhaltige Content-Zusammenarbeit ohne Agentur-Ballast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 10. ABSCHLUSS CALL-TO-ACTION */}
       <section className="py-32 bg-brand-accent text-brand-darker text-center">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
