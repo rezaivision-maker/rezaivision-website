@@ -1305,57 +1305,114 @@ Ja, und das ist einer der größten Vorteile. Bilder aus der Produktion, dem Tea
   {
     id: "21",
     slug: "social-media-content-kaiserslautern-agentur",
-    title: "Social Media Agentur vs. Inhouse: Wann sich Outsourcing lohnt",
-    excerpt: "Sollten Unternehmen Reels selbst produzieren oder eine Agentur beauftragen? Eine ehrliche Analyse für den B2B-Mittelstand in der Pfalz.",
+    title: "Social Media Agentur Kaiserslautern: Agentur vs. Inhouse – ROI Vergleich",
+    excerpt: "Social Media Agentur Kaiserslautern: Zeit, Kosten & Qualität im ehrlichen Vergleich. Inhouse vs. Outsourcing für den Mittelstand – mit ROI-Rechner.",
     category: "corporate",
     date: "18. April 2026",
-    readTime: "5 min",
+    readTime: "7 min",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
-    ctaLabel: "Content Strategie besprechen",
+    ctaLabel: "Kostenloses Erstgespräch",
     ctaLink: "/kontakt",
-    content: `# Reels selbst drehen oder auslagern? Eine ehrliche Einschätzung
+    content: `# Social Media Agentur Kaiserslautern oder Inhouse? Wann sich Outsourcing lohnt
 
-Viele Unternehmen stellen sich genau diese Frage. Und die ehrliche Antwort lautet: Es kommt darauf an, was ihr damit erreichen wollt.
+Die meisten Unternehmen in Kaiserslautern und der Pfalz scheitern bei Social Media nicht an Ideen, sondern an der Zeit. Dieser Artikel zeigt ehrlich, wann Sie Ihre Reels selbst produzieren sollten, wann eine [Social Media Agentur](/leistungen/social-media) die bessere Wahl ist und wie ein Mittelweg aussieht. Plus: Konkrete Kosten und ein ROI-Vergleich.
 
----
+## Was passiert, wenn man „einfach mal selbst anfängt"
 
-## Was passiert, wenn man "einfach mal selbst anfängt"
+Der Start ist fast immer gleich: Jemand im Team hat Lust auf Instagram oder LinkedIn, die ersten Videos entstehen mit dem Smartphone, die Motivation ist hoch. Nach sechs bis acht Wochen kommt das Tagesgeschäft dazwischen. Ein Auftrag drängt, eine Kollegin ist im Urlaub, der Post für Donnerstag wird auf nächste Woche geschoben.
 
-Im ersten Monat läuft es noch. Jemand aus dem Team dreht ein paar Clips, postet sie, freut sich über die ersten Kommentare. Dann kommt das Tagesgeschäft. Der Kanal wird stiller. Die Qualität wird schwankend. Irgendwann postet niemand mehr – oder nur noch "wenn gerade jemand dran denkt".
+Das Ergebnis kennen Sie wahrscheinlich aus Ihrem eigenen Feed: Kanäle mit drei starken Videos im Frühjahr und danach Funkstille. Für potenzielle Kunden und Bewerber wirkt das schlimmer als gar kein Kanal, weil es den Eindruck hinterlässt, dass im Unternehmen etwas liegen bleibt.
 
-Das ist nicht Faulheit. Das ist Realität. Social Media braucht Kontinuität. Und die lässt sich nur schwer nebenbei stemmen.
+Social Media funktioniert nur mit **Regelmäßigkeit**. Genau die ist in kleinen und mittleren Unternehmen am schwersten herzustellen.
 
-## Was eine Agentur besser macht
+## Was Inhouse wirklich kostet
 
-- **Konsistenz:** Jemand ist verantwortlich. Nicht "je nach Wetterlage".
-- **Qualität:** Kein verschwommenes Bild, kein Hall, kein wackeliges Selfie-Video als Firmenpräsentation.
-- **Planung:** Themen, Skripte, Zeitplan – das läuft, ohne dass die Führungskraft jede Woche dran denken muss.
+Selbst produzieren wirkt kostenlos, ist es aber nicht. Rechnen Sie für ein einziges Reel mit diesen Arbeitsschritten:
 
-Eine [professionelle Social Media Agentur](/leistungen/social-media) bringt alle drei Faktoren zusammen – und gibt euch damit die Freiheit, auf eure Kernaufgabe zu konzentrieren.
+- Idee und Skript
+- Dreh inklusive Aufbau, Licht und Ton
+- Schnitt, Untertitel, Musik, Farbkorrektur
+- Posting, Beschreibung, Hashtags und Community-Management
 
-| | Selbst machen | Mit Agentur |
-| :--- | :--- | :--- |
-| **Zeitaufwand intern** | Hoch und chaotisch | Gering und planbar |
-| **Qualität** | Schwankend | Gleichmäßig hoch |
-| **Kontinuität** | Oft nicht gegeben | Vertraglich gesichert |
+Bei acht Videos im Monat summiert sich das schnell auf mehrere Arbeitstage pro Monat, die einer Fachkraft im Kerngeschäft fehlen. Rechnung: 5–8 Tage à 200–400 € Stundensatz = **1.000–3.200 € pro Monat** nur Arbeitszeit. Dazu kommen Technik (Kamera, Mikrofone, Licht, Schnittsoftware, ca. 2.000–5.000 € Anschaffung) und die Lernkurve, bis die Videos wirklich professionell aussehen.
+
+**Fazit Inhouse:** Ab 1.200–3.500 € monatlich (versteckt in Arbeitszeit + Technik) — ohne Garantie auf Regelmäßigkeit.
+
+Inhouse lohnt sich deshalb vor allem dann, wenn Sie eine Person haben, die Social Media als **festen Teil ihrer Stelle** betreut und nicht „nebenbei".
+
+## Was eine Social Media Agentur besser macht
+
+Eine gute Agentur nimmt Ihnen nicht nur die Technik ab, sondern vor allem die Planung und die Disziplin.
+
+- **Konsistenz:** Es gibt einen festen Redaktionsplan und eine verantwortliche Person, die dafür sorgt, dass jede Woche Inhalte erscheinen. Keine Ausfälle, keine Unterbrechungen.
+- **Qualität:** Bild, Ton und Schnitt bleiben auf gleichem Niveau, egal wie stressig Ihr Tagesgeschäft gerade ist. Das baut Vertrauen auf.
+- **Strategie & ROI:** Formate werden nach Zielgruppe und Ziel ausgewählt (Recruiting, Vertrieb, Markenaufbau) und anhand konkreter Zahlen angepasst — nicht nach Bauchgefühl.
+- **Effizienz:** An einem Drehtag pro Monat entsteht Content für 4–6 Wochen. Ihr Team steht nur als Fachexperte vor der Kamera, keine technischen Hürden.
+- **Kosten transparent:** 1.490–3.490 € pro Monat, je nach Paket. Besser als versteckte Arbeitszeit.
+
+## Agentur oder Inhouse im Vergleich
+
+| Kriterium | Inhouse | Social Media Agentur |
+| --- | --- | --- |
+| Monatliche Gesamtkosten | 1.200–3.500 € (Arbeitszeit + Technik) | 1.490–3.490 € (transparent, im Paket) |
+| Zeitaufwand für Ihr Team | 40–60 Stunden/Monat | ~4 Stunden (1 Drehtag) |
+| Regelmäßigkeit | Oft unterbrochen (Urlaub, Projekte) | Vertraglich geplant, zuverlässig |
+| Bild- und Tonqualität | Schwankend (Lernkurve) | Gleichbleibend professionell |
+| Strategie & ROI-Tracking | Meist nebenbei | Fester Bestandteil, monatliche Reports |
+| Nähe zum Unternehmen | Sehr hoch (Ihr Team kennt sich) | Hoch, wenn die Agentur regional arbeitet |
+
+## Warum eine regionale Agentur aus Kaiserslautern Sinn ergibt
+
+Social-Media-Videos leben von echten Menschen und echten Orten. Eine Agentur vor Ort kennt die Region, kann kurzfristig zum Dreh vorbeikommen und spricht die Sprache Ihrer Kunden und Bewerber in der Pfalz.
+
+Rezai Vision sitzt in Kaiserslautern und produziert für Unternehmen im Umkreis von rund 100 Kilometern, unter anderem in Mannheim, Saarbrücken, Mainz und Frankfurt. So haben wir zum Beispiel für einen sozialen Träger in Mainz Videos mit Mitarbeitern und Geschäftsführung gedreht, die vor allem Bewerbern einen echten Einblick ins Unternehmen geben.
+
+Der Vorteil für Sie: kurze Wege, ein fester Ansprechpartner und keine anonyme Content-Fabrik.
+
+## Der Mittelweg: Agentur produziert, Ihr Team postet
+
+Viele unserer Kunden wählen ein hybrides Modell. Wir übernehmen Konzept, Dreh und Schnitt, Ihr Team veröffentlicht die Videos und beantwortet Kommentare. So bleiben Sie nah an Ihrer Community und sparen trotzdem den aufwendigsten Teil der Arbeit.
+
+Das funktioniert besonders gut, wenn intern schon jemand für Marketing zuständig ist, aber keine Zeit oder Ausrüstung für professionelle Videos hat.
 
 ## Wann lohnt sich was?
 
-**Selbst starten** macht Sinn, wenn ihr gerade anfangt, kein Budget für eine Agentur habt und erst testen wollt.
+**Inhouse ist sinnvoll, wenn …**
 
-**Eine Agentur beauftragen** macht Sinn, wenn ihr ernsthaft als Arbeitgeber oder Anbieter wahrgenommen werden wollt und ein unprofessioneller Auftritt euch schadet.
+- Sie Social Media erst einmal testen wollen und das Budget knapp ist.
+- eine Person im Team fest Zeit dafür eingeplant hat.
+- Ihre Zielgruppe eher lockere Handyvideos als hochwertige Produktion erwartet.
 
-[Agentur-Konzept anfragen](/kontakt)
+**Eine Social Media Agentur ist sinnvoll, wenn …**
 
----
+- Sie als Arbeitgeber oder Anbieter professionell wahrgenommen werden wollen.
+- Ihre bisherigen Kanäle immer wieder einschlafen.
+- Sie Fachkräfte über Social Media gewinnen möchten, siehe unsere [Recruiting-Videos](/leistungen/recruiting).
+- Sie planbare Kosten statt versteckter Arbeitszeit bevorzugen.
+
+Wenn Sie wissen möchten, wie sich ein festes Monatspaket rechnet, lesen Sie unseren Artikel zur [Social Media Video Flatrate](/blog/social-media-video-flatrate-pfalz-unternehmen) oder nutzen Sie direkt den [Preisrechner](/preisrechner).
 
 ## FAQ
 
-### Was brauchen wir intern vorzubereiten?
-Wenig. Die Agentur entwickelt Themen und Skripte – ihr steht als Fachexperte vor der Kamera.
+### Was kostet eine Social Media Agentur in Kaiserslautern?
 
-### Lohnt sich TikTok für B2B?
-Mehr als viele denken. LinkedIn geht stark in Richtung Video, und auch TikTok wird im Employer Branding und Azubi-Recruiting immer wichtiger.`
+Das hängt von der Anzahl der Videos und Plattformen ab. Unsere Social-Media-Pakete mit Video starten bei 1.490 € pro Monat. Alle Leistungen und Pakete finden Sie auf der Seite [Social Media Content Kaiserslautern](/leistungen/social-media).
+
+### Wie viel Vorbereitung braucht mein Team?
+
+Wenig. Wir entwickeln Themen und Skripte, Ihr Team steht als Fachexperte vor der Kamera. Wie Mitarbeiter vor der Kamera entspannt bleiben, zeigen wir in [diesem Artikel](/blog/mitarbeiter-vor-der-kamera-locker-machen).
+
+### Lohnt sich TikTok auch für B2B-Unternehmen?
+
+Ja, vor allem für Recruiting. Viele junge Fachkräfte informieren sich dort über Arbeitgeber. Für Entscheider im B2B spielt LinkedIn meist die größere Rolle, deshalb planen wir Formate oft für beide Plattformen.
+
+### Wann sieht man erste Ergebnisse?
+
+Erste Reichweite zeigt sich oft nach wenigen Wochen. Messbare Effekte auf Anfragen oder Bewerbungen brauchen in der Regel mehrere Monate kontinuierlicher Arbeit. Welche Zahlen dabei zählen, erklären wir im Artikel zu [3-Sekunden-Videoaufrufen](/blog/was-bedeutet-3-sekunden-videoaufrufe).
+
+### Kann ich die Videos auch selbst posten?
+
+Ja. Im hybriden Modell liefern wir fertige Videos inklusive Untertitel und Textvorschlag, und Ihr Team veröffentlicht sie.`
   },
   {
     id: "22",
