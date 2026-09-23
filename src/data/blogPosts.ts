@@ -1128,7 +1128,7 @@ Social Media belohnt Kontinuität. Wer einmal im Jahr postet, bleibt unsichtbar.
 
 ## Was ein Flatrate-Modell konkret bedeutet
 
-Die Idee: Ein Drehtag pro Monat bei euch im Betrieb – komprimiert auf wenige Stunden. Aus diesem Material entstehen die Videos für den gesamten nächsten Monat.
+Die Idee: Ein Drehtag pro Monat bei euch im Betrieb – komprimiert auf wenige Stunden. Aus diesem Material entstehen die Videos für den gesamten nächsten Monat. Mit einem [Social Media Retainer](/leistungen/social-media) läuft dieser Prozess zuverlässig und vorausschaubar.
 
 | Paket | Videos pro Monat | Fokus |
 | :--- | :--- | :--- |
@@ -1330,6 +1330,8 @@ Das ist nicht Faulheit. Das ist Realität. Social Media braucht Kontinuität. Un
 - **Konsistenz:** Jemand ist verantwortlich. Nicht "je nach Wetterlage".
 - **Qualität:** Kein verschwommenes Bild, kein Hall, kein wackeliges Selfie-Video als Firmenpräsentation.
 - **Planung:** Themen, Skripte, Zeitplan – das läuft, ohne dass die Führungskraft jede Woche dran denken muss.
+
+Eine [professionelle Social Media Agentur](/leistungen/social-media) bringt alle drei Faktoren zusammen – und gibt euch damit die Freiheit, auf eure Kernaufgabe zu konzentrieren.
 
 | | Selbst machen | Mit Agentur |
 | :--- | :--- | :--- |
