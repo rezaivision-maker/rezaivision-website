@@ -1503,6 +1503,8 @@ Die wichtigste Phase – und die unsichtbarste. Hier werden die Fragen beantwort
 - **Wer schaut diesen Film?** Ein 3-minütiges Video für Kunden ist etwas völlig anderes als ein 90-Sekünder für potenzielle Bewerber.
 - **Was macht euch wirklich besonders?** Nicht "wir sind innovativ" – das sagt jeder. Sondern die konkrete Geschichte, die nur ihr erzählen könnt.
 
+Genau diese Klarheit hilft bei der Produktion eines professionellen [Unternehmensfilms oder Imagefilms](/leistungen/unternehmensfilm). Mit den richtigen Fragen im Vorfeld entsteht nachher kein verwässertes Generalist-Video, sondern ein Film, der echte Wirkung hat.
+
 ## Phase 2: Drehen
 
 Jetzt kommt Equipment ins Spiel. Wir arbeiten mit Cinema-Kameras für einen Bildlook, der direkt nach Qualität aussieht.
