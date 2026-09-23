@@ -143,7 +143,7 @@ export default function SocialRetainer() {
               Social Media Agentur in Kaiserslautern <span className="text-brand-accent">für Video-Content</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir übernehmen Ihren Social Media Content Kaiserslautern im monatlichen Retainer. Ein Drehtag im Monat = Content für Wochen. Planbar, professionell und reichweitenstark.
+              Social Media Agentur aus Kaiserslautern: Wir übernehmen Ihren Video-Content für Instagram, TikTok und LinkedIn im monatlichen Retainer. Ein Batch-Drehtag im Monat = professioneller Content für Wochen. Planbar, konsistent, reichweitenstark. Für Unternehmen in Kaiserslautern und der Region, die sichtbar bleiben wollen, ohne den Aufwand.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -503,7 +503,7 @@ export default function SocialRetainer() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Social Media Retainer
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über unsere Social Media Retainer wissen müssen.

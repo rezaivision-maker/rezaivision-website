@@ -149,7 +149,7 @@ export default function CorporateVideo() {
               Imagefilm & <span className="text-brand-accent">Unternehmensfilm</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Wir entwickeln Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
+              Imagefilm und Unternehmensfilm aus Kaiserslautern: Wir entwickeln strategische Filme, die Ihre Unternehmenswerte greifbar machen und echtes Vertrauen aufbauen. Ein Imagefilm ist kein Selbstzweck – er ist das Werkzeug, das auf Ihrer Website die entscheidende Brücke zum Kunden schlägt. Wir zeigen nicht nur, was Sie tun, sondern machen spürbar, warum Kunden Ihnen vertrauen sollten. Für Unternehmen im Mittelstand in Kaiserslautern, der Pfalz, dem Saarland und Rheinland-Pfalz.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -170,7 +170,7 @@ export default function CorporateVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Welche Videos wir für Unternehmen produzieren
+              Welche Unternehmensfilme wir produzieren
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
               Ein Unternehmensfilm ist nicht gleich ein Unternehmensfilm. Wir entwickeln genau das Format, das Ihre Ziele unterstützt und Ihre Zielgruppe erreicht.
@@ -419,7 +419,7 @@ export default function CorporateVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              In 5 Schritten zum fertigen Film
+              So entsteht Ihr Unternehmensfilm in 5 Schritten
             </h2>
             <p className="text-gray-400 text-lg">
               Unser Prozess ist darauf ausgelegt, Ihre Zeit zu schonen und maximale Ergebnisse zu liefern.
@@ -571,7 +571,7 @@ export default function CorporateVideo() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Unternehmensfilm
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion eines Imagefilms wissen müssen.

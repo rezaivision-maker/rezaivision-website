@@ -136,7 +136,7 @@ export default function SocialAds() {
               Werbevideos & <span className="text-brand-accent">Video Ads</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Vergessen Sie austauschbare Werbeclips. Wir produzieren verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.
+              Werbevideos und Video Ads aus Kaiserslautern: Vergessen Sie austauschbare Werbeclips. Wir produzieren hochkonvertierende Performance Ads, die den Scroll-Vorgang stoppen und messbar Leads bringen. Mit Konzept, Dreh und Schnitt optimiert für Meta, TikTok, YouTube und LinkedIn – für Unternehmen in Kaiserslauterns und der Region, die ihre Werbebudgets smart einsetzen möchten.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -400,7 +400,7 @@ export default function SocialAds() {
       <section className="py-24 bg-brand-darker border-y border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
-            Was unsere Kunden sagen
+            Erfahrungen mit unseren Werbevideos und Video Ads
           </h2>
           <div className="max-w-4xl mx-auto bg-brand-bg border border-white/5 p-10 md:p-16 rounded-3xl relative">
             <div className="text-brand-accent mb-6 flex justify-center gap-1">
@@ -463,7 +463,7 @@ export default function SocialAds() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zu Werbevideos und Video Ads
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion von Werbevideos und Social Ads wissen müssen.

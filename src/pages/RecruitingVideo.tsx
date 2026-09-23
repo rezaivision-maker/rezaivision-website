@@ -141,7 +141,7 @@ export default function RecruitingVideo() {
               Recruiting Videos aus Kaiserslautern, <span className="text-brand-accent">die passende Bewerber bringen</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Machen Sie Ihre Unternehmenskultur erlebbar. Wir produzieren authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.
+              Recruiting Videos aus Kaiserslautern: Authentische Arbeitgeberfilme, die passende Bewerber anziehen und Ihre Unternehmenskultur erlebbar machen. Wir produzieren Recruiting Videos speziell für Social Media Ads, Karriereseiten und Jobplattformen – optimiert, um genau die richtigen Talente zu erreichen. Für Unternehmen in Kaiserslautern, der Pfalz, Mannheim und dem Saarland, die ihren Fachkräftemangel aktiv lösen wollen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -343,7 +343,7 @@ export default function RecruitingVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              In 5 Schritten zu mehr Bewerbungen
+              So entsteht Ihr Recruiting Video in 5 Schritten
             </h2>
             <p className="text-gray-400 text-lg">
               Wir wissen, dass Ihre Mitarbeiter keine Schauspieler sind. Unser Prozess sorgt für eine entspannte Atmosphäre und authentische Ergebnisse.
@@ -416,7 +416,7 @@ export default function RecruitingVideo() {
       <section className="py-24 bg-brand-darker border-y border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
-            Was unsere Kunden sagen
+            Erfahrungen mit unseren Recruiting Videos
           </h2>
           <div className="max-w-4xl mx-auto bg-brand-bg border border-white/5 p-10 md:p-16 rounded-3xl relative">
             <div className="text-brand-accent mb-6 flex justify-center gap-1">
@@ -479,7 +479,7 @@ export default function RecruitingVideo() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Recruiting Video
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion von Recruiting Videos wissen müssen.
