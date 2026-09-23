@@ -83,9 +83,9 @@ export default function SocialAds() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Social Media Ads & Werbespots Agentur | Saarland & RLP"
-        description="Video Ads Kaiserslautern – performance-starke Werbevideos für Social Media mit messbaren Conversion-Ergebnissen. Videoproduktion in Kaiserslautern, Mannheim, Mainz."
+      <SEO
+        title="Werbevideo & Video Ads Kaiserslautern | Rezai Vision"
+        description="Werbevideos und Social Media Ads aus Kaiserslautern, die messbar Leads bringen. Konzept, Dreh und Schnitt für Meta, TikTok, YouTube & LinkedIn."
         canonical="/leistungen/werbevideo"
         keywords="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz"
         structuredData={{
@@ -133,7 +133,7 @@ export default function SocialAds() {
               Werbevideo & Social Media Ads
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Social Ads: <span className="text-brand-accent italic">Messbare Leads & Umsatz.</span>
+              Werbevideos & <span className="text-brand-accent">Video Ads</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
               Vergessen Sie austauschbare Werbeclips. Wir produzieren verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.

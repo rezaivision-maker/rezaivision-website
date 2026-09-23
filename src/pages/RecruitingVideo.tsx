@@ -88,9 +88,9 @@ export default function RecruitingVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim"
-        description="Recruiting Video Kaiserslautern – authentische Mitarbeitergewinnung mit professionellem Video ab 3.820 €. Für Unternehmen in Kaiserslautern, Mannheim & Südwesten."
+      <SEO
+        title="Recruiting Video Kaiserslautern | Rezai Vision"
+        description="Recruiting Videos aus Kaiserslautern: authentische Arbeitgeberfilme, die passende Bewerber anziehen. Für Unternehmen in Pfalz, Mannheim & Saarland."
         canonical="/leistungen/recruiting"
         keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
         structuredData={{
@@ -138,7 +138,7 @@ export default function RecruitingVideo() {
               Recruiting Video / Employer Branding
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Recruiting-System: <span className="text-brand-accent italic">Automatisierte Bewerber-Gewinnung.</span>
+              Recruiting Videos aus Kaiserslautern, <span className="text-brand-accent">die passende Bewerber bringen</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
               Machen Sie Ihre Unternehmenskultur erlebbar. Wir produzieren authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.

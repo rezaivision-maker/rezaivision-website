@@ -29,12 +29,15 @@ export function HeroSection() {
               <span className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
               Videoproduktion & Content Creation aus Rheinland-Pfalz
             </div>
-            <h1 className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-display font-bold tracking-tighter mb-5 md:mb-6 animate-fade-in-up" style={{ animationDelay: "0.4s", animationFillMode: "both" }}>
+            <h1 className="text-3xl sm:text-2xl md:text-3xl font-display font-bold tracking-tight mb-4 md:mb-5 text-gray-300 animate-fade-in-up" style={{ animationDelay: "0.4s", animationFillMode: "both" }}>
+              Videoproduktion in Kaiserslautern für den Mittelstand
+            </h1>
+            <p className="text-[2.25rem] leading-[1.15] sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-display font-bold tracking-tighter mb-5 md:mb-6 animate-fade-in-up" style={{ animationDelay: "0.4s", animationFillMode: "both" }}>
               Manche Videos gefallen. <br className="hidden md:block" />
               <span className="gold-text-gradient">
                 Andere bewegen.
               </span>
-            </h1>
+            </p>
             <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-gray-300 mb-8 md:mb-10 3xl:mb-12 font-light leading-relaxed max-w-2xl 3xl:max-w-3xl animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "both" }}>
               Der Unterschied ist kein Zufall – er ist Strategie. Videoproduktion aus Kaiserslautern für den Mittelstand in der Pfalz.
             </p>

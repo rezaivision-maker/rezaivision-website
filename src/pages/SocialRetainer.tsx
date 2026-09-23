@@ -90,9 +90,9 @@ export default function SocialRetainer() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Social Media Content Kaiserslautern | Video Retainer"
-        description="Social Media Video Kaiserslautern – regelmäßiger TikTok, Instagram und LinkedIn Content für dauerhafte Sichtbarkeit. Content Creation Agentur aus dem Südwesten."
+      <SEO
+        title="Social Media Agentur Kaiserslautern | Rezai Vision"
+        description="Social Media Agentur aus Kaiserslautern: regelmäßiger Video-Content für Instagram, TikTok & LinkedIn im monatlichen Retainer. Planung, Dreh, Schnitt."
         canonical="/leistungen/social-media"
         keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
         structuredData={{
@@ -140,7 +140,7 @@ export default function SocialRetainer() {
               Social Media Retainer / Content Produktion
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Konstante Sichtbarkeit. <span className="text-brand-accent italic">Ohne den Stress.</span>
+              Social Media Agentur in Kaiserslautern <span className="text-brand-accent">für Video-Content</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
               Wir übernehmen Ihren Social Media Content Kaiserslautern im monatlichen Retainer. Ein Drehtag im Monat = Content für Wochen. Planbar, professionell und reichweitenstark.

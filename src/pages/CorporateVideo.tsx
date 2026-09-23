@@ -96,9 +96,9 @@ export default function CorporateVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Warum ein Imagefilm Ihr stärkstes Vertriebs-Tool ist | Rezai Vision"
-        description="Imagefilm Kaiserslautern – strategische Unternehmensfilme, die Vertrauen aufbauen und Wunschkunden in Millisekunden überzeugen. Rezai Vision, ab 3.490 €."
+      <SEO
+        title="Imagefilm Kaiserslautern | Unternehmensfilm | Rezai Vision"
+        description="Imagefilm & Unternehmensfilm aus Kaiserslautern: strategische Filme, die Vertrauen aufbauen und Kunden überzeugen. Für den Mittelstand in RLP & Saarland."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
         structuredData={{
@@ -146,7 +146,7 @@ export default function CorporateVideo() {
               Imagefilm / Unternehmensfilm
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Unternehmensfilme: Ihr wichtigstes <span className="text-brand-accent italic">Werkzeug für Vertrauen.</span>
+              Imagefilm & <span className="text-brand-accent">Unternehmensfilm</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
               Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Wir entwickeln Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
