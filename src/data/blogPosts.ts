@@ -321,65 +321,6 @@ Auf der Website: 90 bis 180 Sekunden. Für Social Media (Instagram, LinkedIn): 1
 Gar nicht. Ein guter Regisseur führt durch authentische Gespräche, sodass niemand das Gefühl hat, "aufzutreten". Das Ergebnis ist echter als jedes einstudierte Statement.`
   },
   {
-    id: "4",
-    slug: "recruiting-video-kaiserslautern-sichtbarer-arbeitgeber",
-    title: "Recruiting im Südwesten: Wie Unternehmen durch Video sichtbar werden",
-    excerpt: "Betriebe in Kaiserslautern, Saarbrücken & Mannheim können mit Recruiting-Videos als Arbeitgeber endlich sichtbar werden – regional & glaubwürdig.",
-    category: "corporate",
-    date: "03. April 2026",
-    readTime: "4 min",
-    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513552/blog/Blog_Recruiting_Strategie_Kaiserslautern_Post4.jpg",
-    ctaLabel: "Recruiting-Check anfragen",
-    ctaLink: "/kontakt",
-    content: `# Recruiting in der Westpfalz & Saarland: Sichtbar werden als Arbeitgeber
-
-Viele Betriebe in der Region – von **Kaiserslautern bis Saarbrücken** – haben exzellente Bedingungen: faire Löhne, gute Ausstattung, ein echtes Miteinander im Team. Das Problem: Von außen sieht man das oft nicht.
-
-Eine schlichte Website mit Stock-Fotos und die Standard-Stellenanzeige auf StepStone – das reicht nicht mehr, um gute Leute auf sich aufmerksam zu machen. Besonders nicht bei Fachkräften, die nicht aktiv suchen, aber wechseln würden, wenn das Richtige kommt.
-
----
-
-## Warum gute Betriebe trotzdem unsichtbar bleiben
-
-Wer seinen Betrieb nie vor die Kamera bringt, bleibt digital unsichtbar. Das klingt simpel, aber es hat echte Konsequenzen: Erfahrene Fachkräfte googeln mögliche Arbeitgeber. Wenn sie keine echten Einblicke finden, weichen sie auf bekannte Großunternehmen aus – nicht weil es dort besser ist, sondern weil es dort einfacher zu recherchieren ist.
-
-Ein Recruiting-Video schließt diese Lücke. Es gibt Interessierten einen realen Blick in euren Alltag, bevor sie überhaupt fragen.
-
----
-
-## Drei Vorteile regionaler Betriebe – die oft ungenutzt bleiben
-
-### 1. Ihr seid nahbarer als jeder Konzern
-Ein kleines bis mittelgroßes Team kann in einem Video zeigen, wie nah Führungskraft und Mitarbeiter zusammenarbeiten. Das ist ein echter Vorteil gegenüber anonymen Großunternehmen – und viele Bewerber suchen genau das.
-
-### 2. Ihr könnt gezielt in eurer Region werben
-Ein Video auf Instagram oder LinkedIn lässt sich so einstellen, dass es nur Menschen im Umkreis von 30 km sieht. Kein Streuverlust nach Berlin oder München – nur potenzielle Bewerber aus der Region, die sowieso in der Pfalz wohnen oder zurückwollen.
-
-### 3. Ihr bleibt im Gedächtnis, auch wenn gerade kein Bedarf besteht
-Jemand sieht euer Video heute – und denkt in sechs Monaten daran, wenn die Situation im aktuellen Job nervt. Das ist keine Magie, das ist Wiederholung. Videos bleiben hängen.
-
-[Regionale Video-Strategie entwickeln](/kontakt)
-
----
-
-## Fazit
-
-Ihr müsst kein riesiges Marketingbudget haben, um als Arbeitgeber in der Region wahrgenommen zu werden. Ihr müsst einfach zeigen, wer ihr seid – ehrlich, direkt und in Bewegtbild.
-
----
-
-## FAQ
-
-### Warum funktioniert ein normaler Imagefilm nicht für Recruiting?
-Ein Imagefilm zeigt Produkte und Kunden-Benefits. Bewerber interessiert das kaum. Sie wollen sehen, wie das Team arbeitet, wie der Chef mit dem Team umgeht und ob die Ausstattung stimmt.
-
-### Wie erreicht mein Video Bewerber in der Region?
-Über Social Media Anzeigen (z.B. Instagram oder LinkedIn) kann man genau einstellen, wer das Video sieht – Region, Berufsfeld, Alter. Kein Streuverlust nach irgendwo.
-
-### Wann zahlt sich das aus?
-Oft schon mit der ersten Einstellung. Wenn man berechnet, was eine Stelle unbesetzt kostet (entgangener Umsatz, Mehrarbeit für das Team), ist ein gutes Video schnell amortisiert.`
-  },
-  {
     id: "5",
     slug: "social-media-videos-fuer-unternehmen",
     title: "Welche Social-Media-Videos Unternehmen heute wirklich brauchen",
