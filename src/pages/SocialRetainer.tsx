@@ -51,6 +51,10 @@ export default function SocialRetainer() {
 
   const faqs = [
     {
+      question: "Ihr Sitz ist in Kaiserslautern – müssen wir auch dort sein?",
+      answer: "Nein. Wir haben ein flexibles Modell: Der Großteil der Arbeit (Konzeption, Schnitt, Untertitel) findet digital statt. Für den monatlichen Drehtag kommen wir gerne zu Ihnen – ob Kaiserslautern, Pfalz, Saarland oder bundesweit. Dank unseres regionalen Netzwerks können wir auch vor Ort produzieren, wo Sie sind."
+    },
+    {
       question: "Was kostet ein Social Media Retainer?",
       answer: "Unsere Retainer-Pakete beginnen bei 1.490 € pro Monat. Der genaue Preis richtet sich nach der Anzahl der gewünschten Videos (z.B. 4, 8 oder 12 Videos pro Monat) und dem Aufwand für Konzeption und Drehtage."
     },

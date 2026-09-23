@@ -53,6 +53,10 @@ export default function RecruitingVideo() {
 
   const faqs = [
     {
+      question: "Drehen Sie Recruiting Videos auch außerhalb von Kaiserslautern?",
+      answer: "Ja, absolut. Als Videoproduktion aus Kaiserslautern sind wir primär in Rheinland-Pfalz, dem Saarland und der Rhein-Neckar-Region (Mannheim/Heidelberg) aktiv. Wir betreuen aber auch regelmäßig Projekte in Frankfurt, Stuttgart und bundesweit – überall dort, wo Sie mit uns drehen möchten."
+    },
+    {
       question: "Was kostet ein Recruiting Video?",
       answer: "Ein smartes Recruiting Video beginnt bei uns ab 3.820 €. Wir bieten effiziente Lösungen an, die schnell einsatzbereit sind. Der Preis hängt davon ab, ob wir einen umfangreichen Employer Branding Film produzieren oder knackige, authentische Statements für Social Media benötigen."
     },

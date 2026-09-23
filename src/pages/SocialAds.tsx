@@ -52,6 +52,10 @@ export default function SocialAds() {
 
   const faqs = [
     {
+      question: "Drehen Sie Werbevideos auch in meiner Region (außerhalb Kaiserslauterns)?",
+      answer: "Selbstverständlich. Wir sind zwar aus Kaiserslautern, sind aber bundesweit tätig. Egal ob Mannheim, Frankfurt, Stuttgart oder sonst wo in Deutschland – wir kommen zu Ihnen vor Ort oder organisieren die Produktion so, dass sie für Sie praktikabel ist."
+    },
+    {
       question: "Was kostet ein Social Ad Video?",
       answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.799 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.490 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
     },
