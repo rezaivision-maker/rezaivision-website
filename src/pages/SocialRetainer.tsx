@@ -51,6 +51,10 @@ export default function SocialRetainer() {
 
   const faqs = [
     {
+      question: "Ihr Sitz ist in Kaiserslautern – müssen wir auch dort sein?",
+      answer: "Nein. Wir haben ein flexibles Modell: Der Großteil der Arbeit (Konzeption, Schnitt, Untertitel) findet digital statt. Für den monatlichen Drehtag kommen wir gerne zu Ihnen – ob Kaiserslautern, Pfalz, Saarland oder bundesweit. Dank unseres regionalen Netzwerks können wir auch vor Ort produzieren, wo Sie sind."
+    },
+    {
       question: "Was kostet ein Social Media Retainer?",
       answer: "Unsere Retainer-Pakete beginnen bei 1.490 € pro Monat. Der genaue Preis richtet sich nach der Anzahl der gewünschten Videos (z.B. 4, 8 oder 12 Videos pro Monat) und dem Aufwand für Konzeption und Drehtage."
     },
@@ -90,42 +94,79 @@ export default function SocialRetainer() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Social Media Content Kaiserslautern | Video Retainer"
-        description="Social Media Video Kaiserslautern – regelmäßiger TikTok, Instagram und LinkedIn Content für dauerhafte Sichtbarkeit. Content Creation Agentur aus dem Südwesten."
+      <SEO
+        title="Social Media Agentur Kaiserslautern | Rezai Vision"
+        description="Social Media Agentur aus Kaiserslautern: regelmäßiger Video-Content für Instagram, TikTok & LinkedIn im monatlichen Retainer. Planung, Dreh, Schnitt."
         canonical="/leistungen/social-media"
         keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Social Media Retainer & Content Produktion",
-          "image": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop",
-          "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Social Media Retainer & Content Produktion",
+            "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "1490.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.490 € pro Monat zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/social-media"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 1.490 € pro Monat zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/social-media"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Social Media Retainer",
+                "item": "https://www.rezaivision.de/leistungen/social-media"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
@@ -140,10 +181,10 @@ export default function SocialRetainer() {
               Social Media Retainer / Content Produktion
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Konstante Sichtbarkeit. <span className="text-brand-accent italic">Ohne den Stress.</span>
+              Social Media Agentur in Kaiserslautern <span className="text-brand-accent">für Video-Content</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Wir übernehmen Ihren Social Media Content Kaiserslautern im monatlichen Retainer. Ein Drehtag im Monat = Content für Wochen. Planbar, professionell und reichweitenstark.
+              Social Media Agentur aus Kaiserslautern: Wir übernehmen Ihren Video-Content für Instagram, TikTok und LinkedIn im monatlichen Retainer. Ein Batch-Drehtag im Monat = professioneller Content für Wochen. Planbar, konsistent, reichweitenstark. Für Unternehmen in Kaiserslautern und der Region, die sichtbar bleiben wollen, ohne den Aufwand.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -479,6 +520,23 @@ export default function SocialRetainer() {
 
       <ServiceBlogLinks service="social-media" />
 
+      {/* 9.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Social Media Agentur aus Kaiserslautern für regionales Marketing</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Für Unternehmen in Kaiserslautern, der Pfalz, dem Saarland und Rheinland-Pfalz bieten wir den Social Media Retainer mit lokalem Know-how. Wir verstehen Ihre Zielgruppe, sprechen die regionale Sprache und zeigen Ihre echten Mitarbeiter, nicht gespielten Content.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Ein fester Ansprechpartner aus der Region, kurze Wege, direkter Draht zum Gründer – das ist unser Angebot für seriöse, nachhaltige Content-Zusammenarbeit ohne Agentur-Ballast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 10. ABSCHLUSS CALL-TO-ACTION */}
       <section className="py-32 bg-brand-accent text-brand-darker text-center">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
@@ -503,7 +561,7 @@ export default function SocialRetainer() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Social Media Retainer
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über unsere Social Media Retainer wissen müssen.

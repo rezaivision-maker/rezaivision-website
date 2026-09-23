@@ -45,8 +45,8 @@ export default function Services() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="B2B Leistungen | Videoproduktion | Rezai Vision"
+      <SEO
+        title="Leistungen Videoproduktion Kaiserslautern | Rezai Vision"
         description="Videoproduktion Kaiserslautern – Unternehmensfilme, Recruiting-Videos, Video Ads und Social Media Content für Unternehmen im Südwesten Deutschlands."
         canonical="/leistungen"
         keywords="Videoproduktion Leistungen Kaiserslautern, B2B Video Agentur Mannheim, Corporate Content Rheinland-Pfalz"
@@ -64,7 +64,7 @@ export default function Services() {
               Unsere Expertise
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Videos, die <span className="text-brand-accent italic">Ergebnisse</span> liefern.
+              Unsere Leistungen in der Videoproduktion
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed">
               Wir produzieren nicht einfach nur schöne Bilder. Wir entwickeln strategische Videoinhalte, die genau auf Ihre Unternehmensziele und Ihre Zielgruppe zugeschnitten sind.

@@ -96,42 +96,79 @@ export default function CorporateVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Warum ein Imagefilm Ihr stärkstes Vertriebs-Tool ist | Rezai Vision"
-        description="Imagefilm Kaiserslautern – strategische Unternehmensfilme, die Vertrauen aufbauen und Wunschkunden in Millisekunden überzeugen. Rezai Vision, ab 3.490 €."
+      <SEO
+        title="Imagefilm Kaiserslautern | Unternehmensfilm | Rezai Vision"
+        description="Imagefilm & Unternehmensfilm aus Kaiserslautern: strategische Filme, die Vertrauen aufbauen und Kunden überzeugen. Für den Mittelstand in RLP & Saarland."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Imagefilm & Unternehmensfilm",
-          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-          "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Imagefilm & Unternehmensfilm",
+            "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "3490.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 3.490 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "2490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 3.490 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Imagefilm & Unternehmensfilm",
+                "item": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
@@ -146,10 +183,10 @@ export default function CorporateVideo() {
               Imagefilm / Unternehmensfilm
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Unternehmensfilme: Ihr wichtigstes <span className="text-brand-accent italic">Werkzeug für Vertrauen.</span>
+              Imagefilm & <span className="text-brand-accent">Unternehmensfilm</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Ein Imagefilm ist kein Selbstzweck. Er ist das Werkzeug, das Ihre Unternehmenswerte greifbar macht und auf Ihrer Website die Brücke zum Kunden schlägt. Wir entwickeln Filme, die Ihre Qualität nicht nur zeigen, sondern für den Besucher spürbar machen.
+              Imagefilm und Unternehmensfilm aus Kaiserslautern: Wir entwickeln strategische Filme, die Ihre Unternehmenswerte greifbar machen und echtes Vertrauen aufbauen. Ein Imagefilm ist kein Selbstzweck – er ist das Werkzeug, das auf Ihrer Website die entscheidende Brücke zum Kunden schlägt. Wir zeigen nicht nur, was Sie tun, sondern machen spürbar, warum Kunden Ihnen vertrauen sollten. Für Unternehmen im Mittelstand in Kaiserslautern, der Pfalz, dem Saarland und Rheinland-Pfalz.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -170,7 +207,7 @@ export default function CorporateVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              Welche Videos wir für Unternehmen produzieren
+              Welche Unternehmensfilme wir produzieren
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl">
               Ein Unternehmensfilm ist nicht gleich ein Unternehmensfilm. Wir entwickeln genau das Format, das Ihre Ziele unterstützt und Ihre Zielgruppe erreicht.
@@ -419,7 +456,7 @@ export default function CorporateVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              In 5 Schritten zum fertigen Film
+              So entsteht Ihr Unternehmensfilm in 5 Schritten
             </h2>
             <p className="text-gray-400 text-lg">
               Unser Prozess ist darauf ausgelegt, Ihre Zeit zu schonen und maximale Ergebnisse zu liefern.
@@ -571,7 +608,7 @@ export default function CorporateVideo() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Unternehmensfilm
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion eines Imagefilms wissen müssen.

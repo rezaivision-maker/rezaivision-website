@@ -53,6 +53,10 @@ export default function RecruitingVideo() {
 
   const faqs = [
     {
+      question: "Drehen Sie Recruiting Videos auch außerhalb von Kaiserslautern?",
+      answer: "Ja, absolut. Als Videoproduktion aus Kaiserslautern sind wir primär in Rheinland-Pfalz, dem Saarland und der Rhein-Neckar-Region (Mannheim/Heidelberg) aktiv. Wir betreuen aber auch regelmäßig Projekte in Frankfurt, Stuttgart und bundesweit – überall dort, wo Sie mit uns drehen möchten."
+    },
+    {
       question: "Was kostet ein Recruiting Video?",
       answer: "Ein smartes Recruiting Video beginnt bei uns ab 3.820 €. Wir bieten effiziente Lösungen an, die schnell einsatzbereit sind. Der Preis hängt davon ab, ob wir einen umfangreichen Employer Branding Film produzieren oder knackige, authentische Statements für Social Media benötigen."
     },
@@ -88,42 +92,79 @@ export default function RecruitingVideo() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Recruiting Videos & Employer Branding | Kaiserslautern & Mannheim"
-        description="Recruiting Video Kaiserslautern – authentische Mitarbeitergewinnung mit professionellem Video ab 3.820 €. Für Unternehmen in Kaiserslautern, Mannheim & Südwesten."
+      <SEO
+        title="Recruiting Video Kaiserslautern | Rezai Vision"
+        description="Recruiting Videos aus Kaiserslautern: authentische Arbeitgeberfilme, die passende Bewerber anziehen. Für Unternehmen in Pfalz, Mannheim & Saarland."
         canonical="/leistungen/recruiting"
         keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Recruiting Video & Employer Branding",
-          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-          "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Recruiting Video & Employer Branding",
+            "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "3820.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 3.820 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/recruiting"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1890.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 3.820 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/recruiting"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Recruiting Video",
+                "item": "https://www.rezaivision.de/leistungen/recruiting"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
@@ -138,10 +179,10 @@ export default function RecruitingVideo() {
               Recruiting Video / Employer Branding
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Recruiting-System: <span className="text-brand-accent italic">Automatisierte Bewerber-Gewinnung.</span>
+              Recruiting Videos aus Kaiserslautern, <span className="text-brand-accent">die passende Bewerber bringen</span>
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Machen Sie Ihre Unternehmenskultur erlebbar. Wir produzieren authentische Recruiting Videos, die gezielt für Social Media Ads und Funnels optimiert sind – um Bewerbungshürden abzubauen und Talente dort zu erreichen, wo sie wirklich scrollen.
+              Recruiting Videos aus Kaiserslautern: Authentische Arbeitgeberfilme, die passende Bewerber anziehen und Ihre Unternehmenskultur erlebbar machen. Wir produzieren Recruiting Videos speziell für Social Media Ads, Karriereseiten und Jobplattformen – optimiert, um genau die richtigen Talente zu erreichen. Für Unternehmen in Kaiserslautern, der Pfalz, Mannheim und dem Saarland, die ihren Fachkräftemangel aktiv lösen wollen.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -343,7 +384,7 @@ export default function RecruitingVideo() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              In 5 Schritten zu mehr Bewerbungen
+              So entsteht Ihr Recruiting Video in 5 Schritten
             </h2>
             <p className="text-gray-400 text-lg">
               Wir wissen, dass Ihre Mitarbeiter keine Schauspieler sind. Unser Prozess sorgt für eine entspannte Atmosphäre und authentische Ergebnisse.
@@ -416,7 +457,7 @@ export default function RecruitingVideo() {
       <section className="py-24 bg-brand-darker border-y border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
-            Was unsere Kunden sagen
+            Erfahrungen mit unseren Recruiting Videos
           </h2>
           <div className="max-w-4xl mx-auto bg-brand-bg border border-white/5 p-10 md:p-16 rounded-3xl relative">
             <div className="text-brand-accent mb-6 flex justify-center gap-1">
@@ -428,6 +469,23 @@ export default function RecruitingVideo() {
             <div>
               <strong className="text-white block text-lg">Adonay Welde</strong>
               <span className="text-gray-400">Inhaber, Social Care</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Recruiting Videos für Kaiserslautern, Pfalz & Saarland</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Als spezialisierte Produktionsagentur aus Kaiserslautern kennen wir die regionalen Besonderheiten des Mittelstands – ob Handwerk, Industrie, IT oder Dienstleistung. Wir verstehen Ihre Zielgruppe und wissen genau, wie Sie als Arbeitgeber authentisch wirken.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Ob Sie in Kaiserslautern, der Pfalz, Mannheim oder dem Saarland tätig sind: Wir drehen vor Ort, sprechen Ihre Sprache und zeigen echte Mitarbeiter, mit denen sich lokale Kandidaten identifizieren können.
+              </p>
             </div>
           </div>
         </div>
@@ -479,7 +537,7 @@ export default function RecruitingVideo() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zum Recruiting Video
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion von Recruiting Videos wissen müssen.

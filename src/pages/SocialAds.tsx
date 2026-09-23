@@ -52,6 +52,10 @@ export default function SocialAds() {
 
   const faqs = [
     {
+      question: "Drehen Sie Werbevideos auch in meiner Region (außerhalb Kaiserslauterns)?",
+      answer: "Selbstverständlich. Wir sind zwar aus Kaiserslautern, sind aber bundesweit tätig. Egal ob Mannheim, Frankfurt, Stuttgart oder sonst wo in Deutschland – wir kommen zu Ihnen vor Ort oder organisieren die Produktion so, dass sie für Sie praktikabel ist."
+    },
+    {
       question: "Was kostet ein Social Ad Video?",
       answer: "Ein einzelner, hochwertiger Werbespot beginnt bei uns ab ca. 1.799 €. Für Performance Marketing empfehlen wir jedoch Ad-Pakete (ab 2.490 €), bei denen wir aus einem Drehtag direkt mehrere Hooks, Längen und Varianten für A/B-Testing produzieren."
     },
@@ -83,42 +87,79 @@ export default function SocialAds() {
 
   return (
     <div className="flex flex-col min-h-screen pt-32">
-      <SEO 
-        title="Social Media Ads & Werbespots Agentur | Saarland & RLP"
-        description="Video Ads Kaiserslautern – performance-starke Werbevideos für Social Media mit messbaren Conversion-Ergebnissen. Videoproduktion in Kaiserslautern, Mannheim, Mainz."
+      <SEO
+        title="Werbevideo & Video Ads Kaiserslautern | Rezai Vision"
+        description="Werbevideos und Social Media Ads aus Kaiserslautern, die messbar Leads bringen. Konzept, Dreh und Schnitt für Meta, TikTok, YouTube & LinkedIn."
         canonical="/leistungen/werbevideo"
         keywords="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Social Media Ads & Werbevideos",
-          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
-          "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Social Media Ads & Werbevideos",
+            "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "1799.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.799 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/werbevideo"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 1.799 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/werbevideo"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Werbevideos & Video Ads",
+                "item": "https://www.rezaivision.de/leistungen/werbevideo"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
@@ -133,10 +174,10 @@ export default function SocialAds() {
               Werbevideo & Social Media Ads
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8 leading-[1.1]">
-              Social Ads: <span className="text-brand-accent italic">Messbare Leads & Umsatz.</span>
+              Werbevideos & <span className="text-brand-accent">Video Ads</span> aus Kaiserslautern
             </h1>
             <p className="text-xl text-gray-400 font-light max-w-2xl leading-relaxed mb-10">
-              Vergessen Sie austauschbare Werbeclips. Wir produzieren verkaufspsychologische Social Ads, die den Scroll-Vorgang stoppen und Ihre Zielgruppe auf Meta, LinkedIn oder TikTok zum Handeln bewegen.
+              Werbevideos und Video Ads aus Kaiserslautern: Vergessen Sie austauschbare Werbeclips. Wir produzieren hochkonvertierende Performance Ads, die den Scroll-Vorgang stoppen und messbar Leads bringen. Mit Konzept, Dreh und Schnitt optimiert für Meta, TikTok, YouTube und LinkedIn – für Unternehmen in Kaiserslauterns und der Region, die ihre Werbebudgets smart einsetzen möchten.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
@@ -396,11 +437,28 @@ export default function SocialAds() {
         </div>
       </section>
 
+      {/* 7.5 REGIONALE REICHWEITE */}
+      <section className="py-24 bg-brand-darker border-y border-white/5">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12">
+          <div className="max-w-3xl">
+            <div className="bg-brand-bg border border-white/5 p-10 rounded-3xl">
+              <h3 className="text-2xl font-display font-bold mb-6">Werbevideos für Kaiserslautern, Mannheim & den Südwesten</h3>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Als Videoproduktion aus Kaiserslautern verstehen wir die lokalen Märkte und den Mittelstand. Egal ob Einzelhandel, E-Commerce, Dienstleistung oder B2B – wir sprechen die Sprache Ihrer Zielgruppe und übersetzen Ihre Geschäftsziele in konvertierende Werbevideos.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Für Unternehmen in Kaiserslautern, Mannheim, Saarland und Rheinland-Pfalz produzieren wir Ads, die sich an die lokale Kultur anpassen und gleichzeitig bundes- oder EU-weit skalierbar sind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 8. SOCIAL PROOF */}
       <section className="py-24 bg-brand-darker border-y border-white/5">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-16">
-            Was unsere Kunden sagen
+            Erfahrungen mit unseren Werbevideos und Video Ads
           </h2>
           <div className="max-w-4xl mx-auto bg-brand-bg border border-white/5 p-10 md:p-16 rounded-3xl relative">
             <div className="text-brand-accent mb-6 flex justify-center gap-1">
@@ -463,7 +521,7 @@ export default function SocialAds() {
         <div className="max-w-[800px] mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Häufig gestellte Fragen
+              Fragen zu Werbevideos und Video Ads
             </h2>
             <p className="text-gray-400">
               Alles, was Sie über die Produktion von Werbevideos und Social Ads wissen müssen.

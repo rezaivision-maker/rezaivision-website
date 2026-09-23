@@ -321,65 +321,6 @@ Auf der Website: 90 bis 180 Sekunden. Für Social Media (Instagram, LinkedIn): 1
 Gar nicht. Ein guter Regisseur führt durch authentische Gespräche, sodass niemand das Gefühl hat, "aufzutreten". Das Ergebnis ist echter als jedes einstudierte Statement.`
   },
   {
-    id: "4",
-    slug: "recruiting-video-kaiserslautern-sichtbarer-arbeitgeber",
-    title: "Recruiting im Südwesten: Wie Unternehmen durch Video sichtbar werden",
-    excerpt: "Betriebe in Kaiserslautern, Saarbrücken & Mannheim können mit Recruiting-Videos als Arbeitgeber endlich sichtbar werden – regional & glaubwürdig.",
-    category: "corporate",
-    date: "03. April 2026",
-    readTime: "4 min",
-    image: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1776513552/blog/Blog_Recruiting_Strategie_Kaiserslautern_Post4.jpg",
-    ctaLabel: "Recruiting-Check anfragen",
-    ctaLink: "/kontakt",
-    content: `# Recruiting in der Westpfalz & Saarland: Sichtbar werden als Arbeitgeber
-
-Viele Betriebe in der Region – von **Kaiserslautern bis Saarbrücken** – haben exzellente Bedingungen: faire Löhne, gute Ausstattung, ein echtes Miteinander im Team. Das Problem: Von außen sieht man das oft nicht.
-
-Eine schlichte Website mit Stock-Fotos und die Standard-Stellenanzeige auf StepStone – das reicht nicht mehr, um gute Leute auf sich aufmerksam zu machen. Besonders nicht bei Fachkräften, die nicht aktiv suchen, aber wechseln würden, wenn das Richtige kommt.
-
----
-
-## Warum gute Betriebe trotzdem unsichtbar bleiben
-
-Wer seinen Betrieb nie vor die Kamera bringt, bleibt digital unsichtbar. Das klingt simpel, aber es hat echte Konsequenzen: Erfahrene Fachkräfte googeln mögliche Arbeitgeber. Wenn sie keine echten Einblicke finden, weichen sie auf bekannte Großunternehmen aus – nicht weil es dort besser ist, sondern weil es dort einfacher zu recherchieren ist.
-
-Ein Recruiting-Video schließt diese Lücke. Es gibt Interessierten einen realen Blick in euren Alltag, bevor sie überhaupt fragen.
-
----
-
-## Drei Vorteile regionaler Betriebe – die oft ungenutzt bleiben
-
-### 1. Ihr seid nahbarer als jeder Konzern
-Ein kleines bis mittelgroßes Team kann in einem Video zeigen, wie nah Führungskraft und Mitarbeiter zusammenarbeiten. Das ist ein echter Vorteil gegenüber anonymen Großunternehmen – und viele Bewerber suchen genau das.
-
-### 2. Ihr könnt gezielt in eurer Region werben
-Ein Video auf Instagram oder LinkedIn lässt sich so einstellen, dass es nur Menschen im Umkreis von 30 km sieht. Kein Streuverlust nach Berlin oder München – nur potenzielle Bewerber aus der Region, die sowieso in der Pfalz wohnen oder zurückwollen.
-
-### 3. Ihr bleibt im Gedächtnis, auch wenn gerade kein Bedarf besteht
-Jemand sieht euer Video heute – und denkt in sechs Monaten daran, wenn die Situation im aktuellen Job nervt. Das ist keine Magie, das ist Wiederholung. Videos bleiben hängen.
-
-[Regionale Video-Strategie entwickeln](/kontakt)
-
----
-
-## Fazit
-
-Ihr müsst kein riesiges Marketingbudget haben, um als Arbeitgeber in der Region wahrgenommen zu werden. Ihr müsst einfach zeigen, wer ihr seid – ehrlich, direkt und in Bewegtbild.
-
----
-
-## FAQ
-
-### Warum funktioniert ein normaler Imagefilm nicht für Recruiting?
-Ein Imagefilm zeigt Produkte und Kunden-Benefits. Bewerber interessiert das kaum. Sie wollen sehen, wie das Team arbeitet, wie der Chef mit dem Team umgeht und ob die Ausstattung stimmt.
-
-### Wie erreicht mein Video Bewerber in der Region?
-Über Social Media Anzeigen (z.B. Instagram oder LinkedIn) kann man genau einstellen, wer das Video sieht – Region, Berufsfeld, Alter. Kein Streuverlust nach irgendwo.
-
-### Wann zahlt sich das aus?
-Oft schon mit der ersten Einstellung. Wenn man berechnet, was eine Stelle unbesetzt kostet (entgangener Umsatz, Mehrarbeit für das Team), ist ein gutes Video schnell amortisiert.`
-  },
-  {
     id: "5",
     slug: "social-media-videos-fuer-unternehmen",
     title: "Welche Social-Media-Videos Unternehmen heute wirklich brauchen",
@@ -1187,7 +1128,7 @@ Social Media belohnt Kontinuität. Wer einmal im Jahr postet, bleibt unsichtbar.
 
 ## Was ein Flatrate-Modell konkret bedeutet
 
-Die Idee: Ein Drehtag pro Monat bei euch im Betrieb – komprimiert auf wenige Stunden. Aus diesem Material entstehen die Videos für den gesamten nächsten Monat.
+Die Idee: Ein Drehtag pro Monat bei euch im Betrieb – komprimiert auf wenige Stunden. Aus diesem Material entstehen die Videos für den gesamten nächsten Monat. Mit einem [Social Media Retainer](/leistungen/social-media) läuft dieser Prozess zuverlässig und vorausschaubar.
 
 | Paket | Videos pro Monat | Fokus |
 | :--- | :--- | :--- |
@@ -1364,55 +1305,114 @@ Ja, und das ist einer der größten Vorteile. Bilder aus der Produktion, dem Tea
   {
     id: "21",
     slug: "social-media-content-kaiserslautern-agentur",
-    title: "Social Media Agentur vs. Inhouse: Wann sich Outsourcing lohnt",
-    excerpt: "Sollten Unternehmen Reels selbst produzieren oder eine Agentur beauftragen? Eine ehrliche Analyse für den B2B-Mittelstand in der Pfalz.",
+    title: "Social Media Agentur Kaiserslautern: Agentur vs. Inhouse – ROI Vergleich",
+    excerpt: "Social Media Agentur Kaiserslautern: Zeit, Kosten & Qualität im ehrlichen Vergleich. Inhouse vs. Outsourcing für den Mittelstand – mit ROI-Rechner.",
     category: "corporate",
     date: "18. April 2026",
-    readTime: "5 min",
+    readTime: "7 min",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
-    ctaLabel: "Content Strategie besprechen",
+    ctaLabel: "Kostenloses Erstgespräch",
     ctaLink: "/kontakt",
-    content: `# Reels selbst drehen oder auslagern? Eine ehrliche Einschätzung
+    content: `# Social Media Agentur Kaiserslautern oder Inhouse? Wann sich Outsourcing lohnt
 
-Viele Unternehmen stellen sich genau diese Frage. Und die ehrliche Antwort lautet: Es kommt darauf an, was ihr damit erreichen wollt.
+Die meisten Unternehmen in Kaiserslautern und der Pfalz scheitern bei Social Media nicht an Ideen, sondern an der Zeit. Dieser Artikel zeigt ehrlich, wann Sie Ihre Reels selbst produzieren sollten, wann eine [Social Media Agentur](/leistungen/social-media) die bessere Wahl ist und wie ein Mittelweg aussieht. Plus: Konkrete Kosten und ein ROI-Vergleich.
 
----
+## Was passiert, wenn man „einfach mal selbst anfängt"
 
-## Was passiert, wenn man "einfach mal selbst anfängt"
+Der Start ist fast immer gleich: Jemand im Team hat Lust auf Instagram oder LinkedIn, die ersten Videos entstehen mit dem Smartphone, die Motivation ist hoch. Nach sechs bis acht Wochen kommt das Tagesgeschäft dazwischen. Ein Auftrag drängt, eine Kollegin ist im Urlaub, der Post für Donnerstag wird auf nächste Woche geschoben.
 
-Im ersten Monat läuft es noch. Jemand aus dem Team dreht ein paar Clips, postet sie, freut sich über die ersten Kommentare. Dann kommt das Tagesgeschäft. Der Kanal wird stiller. Die Qualität wird schwankend. Irgendwann postet niemand mehr – oder nur noch "wenn gerade jemand dran denkt".
+Das Ergebnis kennen Sie wahrscheinlich aus Ihrem eigenen Feed: Kanäle mit drei starken Videos im Frühjahr und danach Funkstille. Für potenzielle Kunden und Bewerber wirkt das schlimmer als gar kein Kanal, weil es den Eindruck hinterlässt, dass im Unternehmen etwas liegen bleibt.
 
-Das ist nicht Faulheit. Das ist Realität. Social Media braucht Kontinuität. Und die lässt sich nur schwer nebenbei stemmen.
+Social Media funktioniert nur mit **Regelmäßigkeit**. Genau die ist in kleinen und mittleren Unternehmen am schwersten herzustellen.
 
-## Was eine Agentur besser macht
+## Was Inhouse wirklich kostet
 
-- **Konsistenz:** Jemand ist verantwortlich. Nicht "je nach Wetterlage".
-- **Qualität:** Kein verschwommenes Bild, kein Hall, kein wackeliges Selfie-Video als Firmenpräsentation.
-- **Planung:** Themen, Skripte, Zeitplan – das läuft, ohne dass die Führungskraft jede Woche dran denken muss.
+Selbst produzieren wirkt kostenlos, ist es aber nicht. Rechnen Sie für ein einziges Reel mit diesen Arbeitsschritten:
 
-| | Selbst machen | Mit Agentur |
-| :--- | :--- | :--- |
-| **Zeitaufwand intern** | Hoch und chaotisch | Gering und planbar |
-| **Qualität** | Schwankend | Gleichmäßig hoch |
-| **Kontinuität** | Oft nicht gegeben | Vertraglich gesichert |
+- Idee und Skript
+- Dreh inklusive Aufbau, Licht und Ton
+- Schnitt, Untertitel, Musik, Farbkorrektur
+- Posting, Beschreibung, Hashtags und Community-Management
+
+Bei acht Videos im Monat summiert sich das schnell auf mehrere Arbeitstage pro Monat, die einer Fachkraft im Kerngeschäft fehlen. Rechnung: 5–8 Tage à 200–400 € Stundensatz = **1.000–3.200 € pro Monat** nur Arbeitszeit. Dazu kommen Technik (Kamera, Mikrofone, Licht, Schnittsoftware, ca. 2.000–5.000 € Anschaffung) und die Lernkurve, bis die Videos wirklich professionell aussehen.
+
+**Fazit Inhouse:** Ab 1.200–3.500 € monatlich (versteckt in Arbeitszeit + Technik) — ohne Garantie auf Regelmäßigkeit.
+
+Inhouse lohnt sich deshalb vor allem dann, wenn Sie eine Person haben, die Social Media als **festen Teil ihrer Stelle** betreut und nicht „nebenbei".
+
+## Was eine Social Media Agentur besser macht
+
+Eine gute Agentur nimmt Ihnen nicht nur die Technik ab, sondern vor allem die Planung und die Disziplin.
+
+- **Konsistenz:** Es gibt einen festen Redaktionsplan und eine verantwortliche Person, die dafür sorgt, dass jede Woche Inhalte erscheinen. Keine Ausfälle, keine Unterbrechungen.
+- **Qualität:** Bild, Ton und Schnitt bleiben auf gleichem Niveau, egal wie stressig Ihr Tagesgeschäft gerade ist. Das baut Vertrauen auf.
+- **Strategie & ROI:** Formate werden nach Zielgruppe und Ziel ausgewählt (Recruiting, Vertrieb, Markenaufbau) und anhand konkreter Zahlen angepasst — nicht nach Bauchgefühl.
+- **Effizienz:** An einem Drehtag pro Monat entsteht Content für 4–6 Wochen. Ihr Team steht nur als Fachexperte vor der Kamera, keine technischen Hürden.
+- **Kosten transparent:** 1.490–3.490 € pro Monat, je nach Paket. Besser als versteckte Arbeitszeit.
+
+## Agentur oder Inhouse im Vergleich
+
+| Kriterium | Inhouse | Social Media Agentur |
+| --- | --- | --- |
+| Monatliche Gesamtkosten | 1.200–3.500 € (Arbeitszeit + Technik) | 1.490–3.490 € (transparent, im Paket) |
+| Zeitaufwand für Ihr Team | 40–60 Stunden/Monat | ~4 Stunden (1 Drehtag) |
+| Regelmäßigkeit | Oft unterbrochen (Urlaub, Projekte) | Vertraglich geplant, zuverlässig |
+| Bild- und Tonqualität | Schwankend (Lernkurve) | Gleichbleibend professionell |
+| Strategie & ROI-Tracking | Meist nebenbei | Fester Bestandteil, monatliche Reports |
+| Nähe zum Unternehmen | Sehr hoch (Ihr Team kennt sich) | Hoch, wenn die Agentur regional arbeitet |
+
+## Warum eine regionale Agentur aus Kaiserslautern Sinn ergibt
+
+Social-Media-Videos leben von echten Menschen und echten Orten. Eine Agentur vor Ort kennt die Region, kann kurzfristig zum Dreh vorbeikommen und spricht die Sprache Ihrer Kunden und Bewerber in der Pfalz.
+
+Rezai Vision sitzt in Kaiserslautern und produziert für Unternehmen im Umkreis von rund 100 Kilometern, unter anderem in Mannheim, Saarbrücken, Mainz und Frankfurt. So haben wir zum Beispiel für einen sozialen Träger in Mainz Videos mit Mitarbeitern und Geschäftsführung gedreht, die vor allem Bewerbern einen echten Einblick ins Unternehmen geben.
+
+Der Vorteil für Sie: kurze Wege, ein fester Ansprechpartner und keine anonyme Content-Fabrik.
+
+## Der Mittelweg: Agentur produziert, Ihr Team postet
+
+Viele unserer Kunden wählen ein hybrides Modell. Wir übernehmen Konzept, Dreh und Schnitt, Ihr Team veröffentlicht die Videos und beantwortet Kommentare. So bleiben Sie nah an Ihrer Community und sparen trotzdem den aufwendigsten Teil der Arbeit.
+
+Das funktioniert besonders gut, wenn intern schon jemand für Marketing zuständig ist, aber keine Zeit oder Ausrüstung für professionelle Videos hat.
 
 ## Wann lohnt sich was?
 
-**Selbst starten** macht Sinn, wenn ihr gerade anfangt, kein Budget für eine Agentur habt und erst testen wollt.
+**Inhouse ist sinnvoll, wenn …**
 
-**Eine Agentur beauftragen** macht Sinn, wenn ihr ernsthaft als Arbeitgeber oder Anbieter wahrgenommen werden wollt und ein unprofessioneller Auftritt euch schadet.
+- Sie Social Media erst einmal testen wollen und das Budget knapp ist.
+- eine Person im Team fest Zeit dafür eingeplant hat.
+- Ihre Zielgruppe eher lockere Handyvideos als hochwertige Produktion erwartet.
 
-[Agentur-Konzept anfragen](/kontakt)
+**Eine Social Media Agentur ist sinnvoll, wenn …**
 
----
+- Sie als Arbeitgeber oder Anbieter professionell wahrgenommen werden wollen.
+- Ihre bisherigen Kanäle immer wieder einschlafen.
+- Sie Fachkräfte über Social Media gewinnen möchten, siehe unsere [Recruiting-Videos](/leistungen/recruiting).
+- Sie planbare Kosten statt versteckter Arbeitszeit bevorzugen.
+
+Wenn Sie wissen möchten, wie sich ein festes Monatspaket rechnet, lesen Sie unseren Artikel zur [Social Media Video Flatrate](/blog/social-media-video-flatrate-pfalz-unternehmen) oder nutzen Sie direkt den [Preisrechner](/preisrechner).
 
 ## FAQ
 
-### Was brauchen wir intern vorzubereiten?
-Wenig. Die Agentur entwickelt Themen und Skripte – ihr steht als Fachexperte vor der Kamera.
+### Was kostet eine Social Media Agentur in Kaiserslautern?
 
-### Lohnt sich TikTok für B2B?
-Mehr als viele denken. LinkedIn geht stark in Richtung Video, und auch TikTok wird im Employer Branding und Azubi-Recruiting immer wichtiger.`
+Das hängt von der Anzahl der Videos und Plattformen ab. Unsere Social-Media-Pakete mit Video starten bei 1.490 € pro Monat. Alle Leistungen und Pakete finden Sie auf der Seite [Social Media Content Kaiserslautern](/leistungen/social-media).
+
+### Wie viel Vorbereitung braucht mein Team?
+
+Wenig. Wir entwickeln Themen und Skripte, Ihr Team steht als Fachexperte vor der Kamera. Wie Mitarbeiter vor der Kamera entspannt bleiben, zeigen wir in [diesem Artikel](/blog/mitarbeiter-vor-der-kamera-locker-machen).
+
+### Lohnt sich TikTok auch für B2B-Unternehmen?
+
+Ja, vor allem für Recruiting. Viele junge Fachkräfte informieren sich dort über Arbeitgeber. Für Entscheider im B2B spielt LinkedIn meist die größere Rolle, deshalb planen wir Formate oft für beide Plattformen.
+
+### Wann sieht man erste Ergebnisse?
+
+Erste Reichweite zeigt sich oft nach wenigen Wochen. Messbare Effekte auf Anfragen oder Bewerbungen brauchen in der Regel mehrere Monate kontinuierlicher Arbeit. Welche Zahlen dabei zählen, erklären wir im Artikel zu [3-Sekunden-Videoaufrufen](/blog/was-bedeutet-3-sekunden-videoaufrufe).
+
+### Kann ich die Videos auch selbst posten?
+
+Ja. Im hybriden Modell liefern wir fertige Videos inklusive Untertitel und Textvorschlag, und Ihr Team veröffentlicht sie.`
   },
   {
     id: "22",
@@ -1561,6 +1561,8 @@ Die wichtigste Phase – und die unsichtbarste. Hier werden die Fragen beantwort
 - **Was soll der Film erreichen?** Neukunden gewinnen, Bewerber anziehen oder Vertrauen bei Bestandskunden stärken? Alles auf einmal verwässert die Botschaft.
 - **Wer schaut diesen Film?** Ein 3-minütiges Video für Kunden ist etwas völlig anderes als ein 90-Sekünder für potenzielle Bewerber.
 - **Was macht euch wirklich besonders?** Nicht "wir sind innovativ" – das sagt jeder. Sondern die konkrete Geschichte, die nur ihr erzählen könnt.
+
+Genau diese Klarheit hilft bei der Produktion eines professionellen [Unternehmensfilms oder Imagefilms](/leistungen/unternehmensfilm). Mit den richtigen Fragen im Vorfeld entsteht nachher kein verwässertes Generalist-Video, sondern ein Film, der echte Wirkung hat.
 
 ## Phase 2: Drehen
 
