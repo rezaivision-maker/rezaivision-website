@@ -99,37 +99,74 @@ export default function SocialRetainer() {
         description="Social Media Agentur aus Kaiserslautern: regelmäßiger Video-Content für Instagram, TikTok & LinkedIn im monatlichen Retainer. Planung, Dreh, Schnitt."
         canonical="/leistungen/social-media"
         keywords="Social Media Content Kaiserslautern, Content Creation Mannheim, TikTok Agentur Saarland, Video Retainer"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Social Media Retainer & Content Produktion",
-          "image": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop",
-          "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Social Media Retainer & Content Produktion",
+            "description": "Monatliche Videoproduktion und Content-Betreuung für Instagram, TikTok und LinkedIn im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "1490.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.490 € pro Monat zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/social-media"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 1.490 € pro Monat zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/social-media"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Social Media Retainer",
+                "item": "https://www.rezaivision.de/leistungen/social-media"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">

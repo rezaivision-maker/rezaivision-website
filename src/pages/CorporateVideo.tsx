@@ -101,37 +101,74 @@ export default function CorporateVideo() {
         description="Imagefilm & Unternehmensfilm aus Kaiserslautern: strategische Filme, die Vertrauen aufbauen und Kunden überzeugen. Für den Mittelstand in RLP & Saarland."
         canonical="/leistungen/unternehmensfilm"
         keywords="Imagefilm Kaiserslautern, Unternehmensfilm Mannheim, Videoproduktion Rheinland-Pfalz, Firmenvideo, Brand Movie, B2B Video"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Imagefilm & Unternehmensfilm",
-          "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-          "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Imagefilm & Unternehmensfilm",
+            "description": "Professionelle Videoproduktion von Imagefilmen und Markenstories für den Mittelstand im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "3490.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 3.490 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "2490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 3.490 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Imagefilm & Unternehmensfilm",
+                "item": "https://www.rezaivision.de/leistungen/unternehmensfilm"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">

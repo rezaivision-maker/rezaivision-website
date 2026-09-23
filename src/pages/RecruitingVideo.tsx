@@ -97,37 +97,74 @@ export default function RecruitingVideo() {
         description="Recruiting Videos aus Kaiserslautern: authentische Arbeitgeberfilme, die passende Bewerber anziehen. Für Unternehmen in Pfalz, Mannheim & Saarland."
         canonical="/leistungen/recruiting"
         keywords="Recruiting Video Kaiserslautern, Mitarbeitergewinnung Mannheim, Employer Branding RLP, Recruiting Agentur"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Recruiting Video & Employer Branding",
-          "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-          "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Recruiting Video & Employer Branding",
+            "description": "Authentische Recruiting Videos und Employer Branding Filme zur Gewinnung qualifizierter Fachkräfte im Südwesten Deutschlands.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "3820.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 3.820 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/recruiting"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1890.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 3.820 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/recruiting"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Recruiting Video",
+                "item": "https://www.rezaivision.de/leistungen/recruiting"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">

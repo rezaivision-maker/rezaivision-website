@@ -92,37 +92,74 @@ export default function SocialAds() {
         description="Werbevideos und Social Media Ads aus Kaiserslautern, die messbar Leads bringen. Konzept, Dreh und Schnitt für Meta, TikTok, YouTube & LinkedIn."
         canonical="/leistungen/werbevideo"
         keywords="Social Media Ads Kaiserslautern, Werbevideo Mannheim, Performance Marketing Agentur Saarland, Video Marketing Rheinland-Pfalz"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": ["Product", "Service"],
-          "name": "Social Media Ads & Werbevideos",
-          "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
-          "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rezai Vision"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": ["Product", "Service"],
+            "name": "Social Media Ads & Werbevideos",
+            "description": "Performance-starke Werbevideos und Social Ads für messbare Ergebnisse auf Plattformen wie Instagram, TikTok und LinkedIn.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Rezai Vision"
+            },
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Rezai Vision",
+              "url": "https://www.rezaivision.de"
+            },
+            "areaServed": [
+              "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen",
+              "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt",
+              "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg",
+              "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "1799.00",
+              "priceCurrency": "EUR",
+              "description": "Ab 1.799 € zzgl. MwSt.",
+              "priceValidUntil": "2027-12-31",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.rezaivision.de/leistungen/werbevideo"
+            }
           },
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Rezai Vision",
-            "url": "https://www.rezaivision.de"
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           },
-          "areaServed": [
-            "Kaiserslautern", "Mannheim", "Saarbrücken", "Mainz", "Ludwigshafen", 
-            "Heidelberg", "Frankfurt am Main", "Wiesbaden", "Karlsruhe", "Darmstadt", 
-            "Worms", "Speyer", "Neustadt an der Weinstraße", "Trier", "Homburg", 
-            "Pirmasens", "Zweibrücken", "Landstuhl", "Kusel", "Saarlouis", "St. Ingbert"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "1490.00",
-            "priceCurrency": "EUR",
-            "description": "Ab 1.799 € zzgl. MwSt.",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.rezaivision.de/leistungen/werbevideo"
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.rezaivision.de"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://www.rezaivision.de/leistungen"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Werbevideos & Video Ads",
+                "item": "https://www.rezaivision.de/leistungen/werbevideo"
+              }
+            ]
           }
-        }}
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="pb-24">
