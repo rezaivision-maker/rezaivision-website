@@ -44,8 +44,9 @@ den GitHub-Actions-Secrets des Repos, nicht im Code.
 
 - Vercels Build-Server kann kein Headless-Chrome starten (fehlende System-Libraries
   wie `libnss3.so`). Darum scheitert Puppeteer-Prerendering auf Vercel.
-- Lösung „Weg A": Wir rendern **lokal** (der Mac kann Chrome), committen den
-  fertigen `dist/`-Ordner mit, und Vercel liefert ihn nur noch aus.
+- Lösung „Weg A": Der Build läuft **außerhalb von Vercel** – seit 2026-07-14 in
+  GitHub Actions (CI, Ubuntu mit Chrome-Libraries; nachts zusätzlich um 02:00 UTC).
+  Die CI committet den fertigen `dist/`-Ordner zurück, und Vercel liefert ihn nur aus.
 - Konfiguriert in `vercel.json` (`buildCommand` = nichts, `outputDirectory` = `dist`).
 - `dist/` ist deshalb bewusst **nicht** in `.gitignore` — es wird mitgecommittet.
 
@@ -59,7 +60,7 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 1. **Nicht** versuchen, Puppeteer/Chrome auf Vercel laufen zu lassen.
    Das funktioniert nicht (fehlende System-Libraries, `libnss3.so`). Also **kein**
    `@sparticuz/chromium`, **kein** `puppeteer-core`, **kein** Prerendering im
-   Vercel-Build. Wir rendern lokal (Weg A) — dabei bleibt es.
+   Vercel-Build. Gerendert wird in der CI (Weg A) — dabei bleibt es.
 2. **Nicht** `dist/` wieder in `.gitignore` oder `.vercelignore` aufnehmen.
    `dist/` muss committet werden, sonst hat Vercel nichts zum Ausliefern.
 3. **Nicht** den `buildCommand` / `outputDirectory` in `vercel.json` ändern.
@@ -79,8 +80,9 @@ Deployment zerstören. Niemals tun, außer der Nutzer fordert es ausdrücklich:
 9. **Nicht** die `<SEO>`-Komponente aus einer Seite entfernen.
 10. **Nicht** `/admin` oder `/portal` indexierbar machen (kein Prerender, kein Sitemap-Eintrag).
 11. **Nicht** Meta-Descriptions mit Fragen oder Floskeln beginnen — immer mit dem Keyword.
-12. **Nicht** echte API-Keys / Secrets in den Code schreiben. Die gehören in Vercel
-    Environment Variables. (Die Firebase-Config in `src/lib/firebase.ts` ist öffentlich
+12. **Nicht** echte API-Keys / Secrets in den Code schreiben. Die gehören in
+    GitHub-Actions-Secrets (Build) bzw. Vercel Environment Variables (`api/`-Functions).
+    (Die Firebase-Config in `src/lib/firebase.ts` ist öffentlich
     und in Ordnung — die ist absichtlich client-seitig.)
 13. **Nicht** Zahlen, Bewertungen oder Knappheit erfinden. Bewertungen kommen aus
     ECHTEN Testimonials (`src/data/homeData.ts`) + Live-Google (`src/data/reviews.ts`).
@@ -175,7 +177,7 @@ src/
   data/
     blogPosts.ts      Lokaler Fallback für Blog-Posts
 scripts/
-  prerender.js        Puppeteer-Prerendering (LOKAL), erzeugt dist/ + sitemap.xml
+  prerender.js        Puppeteer-Prerendering (CI, lokal nur zum Testen), erzeugt dist/ + sitemap.xml
 api/                  Vercel Serverless Functions (GA4, Meta Ads, Lead Scraper, ...)
 dist/                 FERTIG GEBAUTES HTML — wird committet & von Vercel ausgeliefert
 vercel.json           Header, Rewrites, buildCommand (skip), outputDirectory
@@ -202,15 +204,17 @@ vercel.json           Header, Rewrites, buildCommand (skip), outputDirectory
 - `src/data/googleReviews.json` — ehrlicher Fallback (`5.0` / Anzahl = sichtbare
   Testimonials). Wird beim Build überschrieben, wenn Live-Daten kommen.
 - `scripts/fetch-google-reviews.js` — holt Live-Schnitt + Anzahl von Google Places.
-  Aktivierung: `GOOGLE_PLACES_API_KEY` in `.env` (lokal, weil Build lokal läuft!).
+  Der Key `GOOGLE_PLACES_API_KEY` kommt in der CI aus den GitHub-Actions-Secrets.
+  Nur für einen lokalen Test-Build wird er zusätzlich in `.env` gebraucht (nicht committen).
   Die Place-ID ist im Script fest hinterlegt (`ChIJD7JhyphzlkcRd7x7mWqgUFg`).
 
 ---
 
 ## Search Console & Vercel (Zugriff für SEO-Analysen)
 
-- Echte GSC-Daten via Service-Account in `.env` (`GOOGLE_SERVICE_ACCOUNT_EMAIL` +
-  `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`). Scope `webmasters.readonly` (lesen) bzw.
+- Echte GSC-Daten via Service-Account (`GOOGLE_SERVICE_ACCOUNT_EMAIL` +
+  `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`): in der CI aus den GitHub-Actions-Secrets, für
+  lokale Analysen in `.env` (nicht committen). Scope `webmasters.readonly` (lesen) bzw.
   `webmasters` (Sitemap einreichen).
 - Property ist **`sc-domain:rezaivision.de`** — NICHT die URL-Variante
   `https://www.rezaivision.de/` (darauf hat der Service-Account keine Rechte).
