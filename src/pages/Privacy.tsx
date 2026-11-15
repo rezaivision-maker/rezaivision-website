@@ -60,6 +60,9 @@ export default function Privacy() {
               <h3 className="text-xl font-bold text-white mt-6 mb-3">Vimeo (Videos)</h3>
               <p>Unsere Videos werden über Vimeo (Vimeo.com, Inc., New York, USA) bereitgestellt. Der Vimeo-Player lädt erst, wenn Sie auf „Abspielen“ klicken. Erst dann werden Daten wie Ihre IP-Adresse an Vimeo übertragen. Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Vimeo ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
 
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">YouTube</h3>
+              <p>In einzelnen Blogartikeln und Landingpages können Videos von YouTube (Google Ireland Limited) eingebunden sein. Wie bei Vimeo lädt der Player erst nach Ihrem Klick; erst dann werden Daten wie Ihre IP-Adresse an Google übertragen, auch in die USA (EU-US Data Privacy Framework). Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG).</p>
+
               <h3 className="text-xl font-bold text-white mt-6 mb-3">Google Maps</h3>
               <p>Auf der Kontaktseite können Sie eine Karte von Google Maps (Google Ireland Limited) laden. Die Karte wird erst angezeigt, wenn Sie auf „Karte laden“ klicken. Erst dann werden Daten wie Ihre IP-Adresse an Google übertragen, auch in die USA. Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Alternativ können Sie den Link „In Google Maps öffnen“ nutzen.</p>
 
@@ -69,8 +72,8 @@ export default function Privacy() {
 
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">3. Kontaktaufnahme via Web3Forms</h2>
-              <p>Wenn Sie uns über unsere Formulare, sei es im Bereich B2B (Unternehmensevents) oder B2C (Hochzeiten/Privat), kontaktieren, verarbeiten wir Ihre Angaben über den Dienst <strong>Web3Forms</strong>.</p>
-              <p className="mt-4">Gespeichert werden: Vor- und Nachname, E-Mail-Adresse, Telefonnummer (falls angegeben) sowie Ihre Nachricht (Datum/Ort des Events).</p>
+              <p>Wenn Sie uns über das Kontaktformular schreiben, verarbeiten wir Ihre Angaben über den Dienst <strong>Web3Forms</strong>. Anfragen über den Preisrechner speichern wir in unserer Datenbank (Firebase, siehe oben) und erhalten sie per E-Mail-Benachrichtigung.</p>
+              <p className="mt-4">Verarbeitet werden die Angaben aus dem Formular: Name, Unternehmen (falls angegeben), E-Mail-Adresse, Telefonnummer (falls angegeben), Art des Projekts und Ihre Nachricht.</p>
               <p className="mt-4">Web3Forms sendet diese Daten verschlüsselt an unsere E-Mail-Postfächer. Die Daten dienen allein der Angebotserstellung und Kundenbetreuung. Rechtsgrundlage ist die Durchführung vorvertraglicher Maßnahmen nach Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p>
               <p className="mt-4">Mit Web3Forms existiert eine Vereinbarung zur Auftragsverarbeitung (AVV).</p>
             </section>

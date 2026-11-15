@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { ClickToLoadEmbed } from "@/components/ui/ClickToLoadEmbed";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { SEO } from "@/components/SEO";
@@ -248,15 +249,11 @@ export default function MusicVideos() {
           
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden aspect-video bg-black shadow-[0_20px_50px_rgba(0,0,0,0.5)] gold-border-glow">
-              <iframe 
+              <ClickToLoadEmbed
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://player.vimeo.com/video/1182991639?badge=0&autopause=0&player_id=0&app_id=58479" 
-                title="Music Video Showreel" 
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+                src="https://player.vimeo.com/video/1182991639?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+                title="Music Video Showreel"
+              />
             </div>
           </div>
         </div>

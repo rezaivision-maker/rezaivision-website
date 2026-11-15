@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { ClickToLoadEmbed } from "@/components/ui/ClickToLoadEmbed";
 import { motion, useScroll, useSpring } from "motion/react";
 import { SEO } from "@/components/SEO";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Facebook, Instagram, Share2, MessageCircle, Link2, Check } from "lucide-react";
@@ -601,11 +602,10 @@ export default function BlogPost() {
         {/* Video Layout */}
         {post.layout === 'video' && post.videoUrl && (
           <div className="mb-16 aspect-video rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl relative">
-            <iframe 
+            <ClickToLoadEmbed
               src={getEmbedUrl(post.videoUrl)}
               className="absolute inset-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
               title="Video Showcase"
             />
           </div>

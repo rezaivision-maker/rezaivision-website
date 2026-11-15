@@ -37,9 +37,10 @@ export function loadGoogleAnalytics(pagePath?: string) {
       window.dataLayer.push(arguments);
     };
     window.gtag("consent", "default", {
-      ad_storage: "granted",
-      ad_user_data: "granted",
-      ad_personalization: "granted",
+      // Nur Reichweitenmessung – keine Werbe-Signale (darauf bezieht sich die Einwilligung nicht).
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
       analytics_storage: "granted",
     });
     window.gtag("js", new Date());

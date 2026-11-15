@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ClickToLoadEmbed } from "@/components/ui/ClickToLoadEmbed";
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { db } from '../lib/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
@@ -137,8 +138,8 @@ export default function LandingPage() {
             className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-accent/20 group"
           >
             {embedUrl ? (
-              <iframe 
-                src={embedUrl} 
+              <ClickToLoadEmbed
+                src={embedUrl}
                 className="w-full h-full object-cover"
                 allow="autoplay; fullscreen; picture-in-picture"
                 title="Video"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ClickToLoadEmbed } from "@/components/ui/ClickToLoadEmbed";
 import { motion, AnimatePresence } from "motion/react";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -165,16 +166,12 @@ export function CasesSection() {
                     className="absolute inset-0"
                   >
                     {/* Only load the iframe for the currently visible slide */}
-                    <iframe 
+                    <ClickToLoadEmbed
                       key={currentAestheticInkSlide}
-                      src={aestheticInkSlides[currentAestheticInkSlide]} 
-                      frameBorder="0" 
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                      referrerPolicy="strict-origin-when-cross-origin" 
-                      className="w-full h-full" 
+                      src={aestheticInkSlides[currentAestheticInkSlide]}
+                      className="w-full h-full"
                       title={`Aesthetic Ink Slide ${currentAestheticInkSlide + 1}`}
-                      loading="lazy"
-                    ></iframe>
+                    />
                   </motion.div>
                 </AnimatePresence>
                 
@@ -270,7 +267,7 @@ export function CasesSection() {
                       onClick={() => setIsPlayingBehnke(true)}
                     >
                       <img
-                        src="https://i.vimeocdn.com/video/2143957678-edb503703d2aaf3cb4b95e40e7146271786761190cba628df3c3d92623337568-d_960?region=us"
+                        src="/images/ksb-video-vorschau.webp"
                         alt="KSB Rechtsanwälte Video Vorschau"
                         className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                         loading="lazy"

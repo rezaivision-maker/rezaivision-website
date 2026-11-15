@@ -55,6 +55,14 @@ export function CookieBanner() {
         ad_personalization: "denied",
         analytics_storage: "denied",
       });
+      // Google-Analytics-Cookies (_ga, _ga_*) entfernen.
+      document.cookie.split(";").map((c) => c.split("=")[0].trim()).filter((n) => n.startsWith("_ga")).forEach((n) => {
+        const host = window.location.hostname;
+        [host, "." + host, "." + host.replace(/^www\./, "")].forEach((d) => {
+          document.cookie = `${n}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${d}`;
+        });
+        document.cookie = `${n}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      });
       setTimeout(() => window.location.reload(), 350);
     }
   };
@@ -75,7 +83,7 @@ export function CookieBanner() {
         
         <div className="flex-1 relative z-10 w-full">
           <div className="flex justify-between items-center mb-2">
-            <h3 className="text-xl font-display font-bold">Ihre Privatsphäre ist uns wichtig! 🍪</h3>
+            <h3 className="text-xl font-display font-bold">Ihre Privatsphäre ist uns wichtig</h3>
             <button aria-label="Cookie Banner schließen" onClick={acceptEssential} className="md:hidden text-gray-400 hover:text-white transition-colors">
               <X size={20} />
             </button>
