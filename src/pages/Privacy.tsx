@@ -12,7 +12,7 @@ export default function Privacy() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">Datenschutzerklärung</h1>
-          <p className="text-gray-400 mb-12">Zuletzt aktualisiert: 2026</p>
+          <p className="text-gray-400 mb-12">Zuletzt aktualisiert: November 2026</p>
 
           <div className="space-y-10 text-gray-300 leading-relaxed">
             <p>
@@ -37,15 +37,34 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">2. Hosting, Content Delivery Networks (CDN) & Infrastruktur</h2>
               
-              <h3 className="text-xl font-bold text-white mt-6 mb-3">Vercel / Netlify / Externe Hoster</h3>
-              <p>Wir hosten unsere Website typischerweise über moderne Cloud-Strukturen, um schnelle Ladezeiten in Deutschland zu gewährleisten. Beim Besuch werden Ihre IP-Adresse und technische Request-Daten temporär in sogenannten Server-Logfiles gespeichert. Dies geschieht zur Fehleranalyse und Abwehr von Cyber-Angriffen.</p>
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Hosting bei Vercel</h3>
+              <p>Unsere Website wird von der Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, USA) gehostet und über ein Rechenzentrum in Frankfurt am Main ausgeliefert. Beim Besuch werden Ihre IP-Adresse und technische Request-Daten temporär in sogenannten Server-Logfiles gespeichert. Dies geschieht zur Fehleranalyse und Abwehr von Cyber-Angriffen. Vercel ist nach dem EU-US Data Privacy Framework zertifiziert; zusätzlich gelten die EU-Standardvertragsklauseln.</p>
               <p className="mt-2">Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb der Website (Art. 6 Abs. 1 lit. f DSGVO). Mit dem Hosting-Provider haben wir einen Vertrag zur Auftragsverarbeitung (AVV) geschlossen.</p>
 
               <h3 className="text-xl font-bold text-white mt-6 mb-3">Cloudinary (Bild & Video Hosting)</h3>
               <p>Um Bilder und Video-Dateien hochperformant und ressourcenschonend auszuliefern, nutzen wir das Content-Delivery-Network (CDN) Cloudinary. Dabei kann Ihre IP-Adresse an Server von Cloudinary übertragen werden. Cloudinary verwendet Mechanismen (wie die EU-Standardvertragsklauseln), um die Sicherheit der Daten gemäß der geltenden Datenschutzstandards sicherzustellen.</p>
 
-              <h3 className="text-xl font-bold text-white mt-6 mb-3">Fontshare / Inter (Lokale Fonts)</h3>
-              <p>Wir binden Google Fonts oder externe Schriftarten aus Datenschutzgründen prinzipiell lokal in unser System ein oder hosten diese so, dass Ihre IP-Adresse nicht unnötigerweise an Drittanbieter übertragen wird, wenn Sie unsere Webseite aufrufen.</p>
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Schriftarten (lokal)</h3>
+              <p>Die Schriftarten Inter und Montserrat liegen auf unserem eigenen Server und werden von dort geladen. Beim Aufruf unserer Website besteht dafür keine Verbindung zu Google oder anderen Schrift-Anbietern.</p>
+
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Bilder von Unsplash</h3>
+              <p>Auf einigen Unterseiten zeigen wir Bilder des Bilddienstes Unsplash (Unsplash Inc., Montreal, Kanada), die direkt von dessen Servern geladen werden. Dabei wird Ihre IP-Adresse an Unsplash übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einer ansprechenden Darstellung (Art. 6 Abs. 1 lit. f DSGVO). Für Kanada besteht ein Angemessenheitsbeschluss der EU-Kommission. Wir ersetzen diese Bilder schrittweise durch eigene Aufnahmen auf unserem Server.</p>
+
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Firebase (Google Cloud)</h3>
+              <p>Für Blog-Inhalte, den Preisrechner und den Kundenbereich nutzen wir die Datenbank Firebase/Firestore der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden dieser Inhalte wird Ihre IP-Adresse an Google übertragen; Eingaben im Preisrechner oder Kundenbereich werden dort gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO) bzw. bei Anfragen die Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Eine Übermittlung in die USA ist möglich; Google ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">2a. Eingebettete Inhalte (erst nach Klick)</h2>
+
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Vimeo (Videos)</h3>
+              <p>Unsere Videos werden über Vimeo (Vimeo.com, Inc., New York, USA) bereitgestellt. Der Vimeo-Player lädt erst, wenn Sie auf „Abspielen“ klicken. Erst dann werden Daten wie Ihre IP-Adresse an Vimeo übertragen. Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Vimeo ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Google Maps</h3>
+              <p>Auf der Kontaktseite können Sie eine Karte von Google Maps (Google Ireland Limited) laden. Die Karte wird erst angezeigt, wenn Sie auf „Karte laden“ klicken. Erst dann werden Daten wie Ihre IP-Adresse an Google übertragen, auch in die USA. Rechtsgrundlage ist Ihre Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Alternativ können Sie den Link „In Google Maps öffnen“ nutzen.</p>
+
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">WhatsApp</h3>
+              <p>Wir bieten Links zu WhatsApp (WhatsApp Ireland Limited) an. Beim bloßen Besuch unserer Website werden keine Daten an WhatsApp übertragen. Erst wenn Sie auf einen WhatsApp-Link klicken, öffnet sich WhatsApp und es gelten dessen Datenschutzbestimmungen.</p>
             </section>
 
             <section>
@@ -60,16 +79,13 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-white mb-4">4. Analysetools und Werbung</h2>
 
               <h3 className="text-xl font-bold text-white mt-6 mb-3">Zustimmungsmanagement / Cookie Consent</h3>
-              <p>Wir setzen zur Einholung und Dokumentation von Einwilligungen einen Cookie-Banner ein. Erst wenn Sie explizit auf "Alle akzeptieren" klicken, laden wir Marketing-Skripte oder Tracking-Technologien. Dies erfolgt nach Art. 6 Abs. 1 lit. a DSGVO. Sie können diese Einwilligung jederzeit widerrufen, indem Sie den LocalStorage Ihres Browsers löschen oder das Banner erneut aufrufen.</p>
+              <p>Wir setzen einen Cookie-Banner ein, um Ihre Einwilligung einzuholen. Ihre Wahl speichern wir im lokalen Speicher Ihres Browsers (Eintrag „cookie-consent“). Erst wenn Sie auf „Alle akzeptieren“ klicken, laden wir Google Analytics; vorher besteht keine Verbindung zu Google Analytics. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen: über den Link „Cookie-Einstellungen“ unten auf jeder Seite.</p>
 
-              <h3 className="text-xl font-bold text-white mt-6 mb-3">Google Analytics 4 & Google Ads</h3>
-              <p>Sofern Sie im Cookie-Banner zustimmen, nutzen wir Google Analytics (Google Ireland Limited). Das Tool misst Klicks, Aufenthaltszeiten, Konversionen und demografische Variablen in pseudonymer Form (Nutzung der IP-Anonymisierung). Die Datenspeicherung und Analyseverfahren stützen sich explizit auf Ihre Einwilligung (§ 25 Abs. 1 TDDDG sowie Art. 6 Abs. 1 lit. a DSGVO).</p>
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Google Analytics 4</h3>
+              <p>Sofern Sie im Cookie-Banner zustimmen, nutzen wir Google Analytics der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Das Tool misst in pseudonymer Form, wie unsere Website genutzt wird (z. B. aufgerufene Seiten, Verweildauer, Klicks), und setzt dafür Cookies. Eine Übermittlung in die USA ist möglich; Google ist nach dem EU-US Data Privacy Framework zertifiziert. Rechtsgrundlage ist Ihre Einwilligung (§ 25 Abs. 1 TDDDG, Art. 6 Abs. 1 lit. a DSGVO).</p>
 
-              <h3 className="text-xl font-bold text-white mt-6 mb-3">Meta Pixel (Facebook & Instagram)</h3>
-              <p>Bei expliziter Zustimmung nutzen wir das "Meta Pixel" der Meta Platforms Ireland Ltd. Dies ermöglicht es uns, Besuchern unserer Webseite passgenaue Werbung (Video Ads) auf Instagram und Facebook anzuzeigen und den Erfolg von Kampagnen zu messen. Auch hier gilt die aktive Zustimmung im Rahmen des Banners.</p>
-
-              <h3 className="text-xl font-bold text-white mt-6 mb-3">TikTok Pixel (ByteDance)</h3>
-              <p>Aufgrund unserer Social Advertising Services können wir das TikTok Pixel (TikTok Technology Limited) implementieren, um Konversionen unserer eigenen Recruiting- & Ads-Kampagnen zu messen. Es überträgt Daten an TikTok, um Zielgruppen (Lookalike Audiences) zu erstellen. Eine Datenübertragung in Drittstaaten (wie die USA oder asiatische Server von ByteDance) geschieht im gesetzlich geregelten Rahmen, sofern eine informierte Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) vorliegt.</p>
+              <h3 className="text-xl font-bold text-white mt-6 mb-3">Werbe-Pixel (Meta, TikTok)</h3>
+              <p>Werbe-Pixel von Meta (Facebook, Instagram) oder TikTok sind auf dieser Website derzeit nicht im Einsatz. Sollten wir sie künftig nutzen, geschieht das nur mit Ihrer Einwilligung im Cookie-Banner; diese Erklärung wird dann vorher ergänzt.</p>
             </section>
 
             <section>
