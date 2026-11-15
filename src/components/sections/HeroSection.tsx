@@ -75,7 +75,7 @@ export function HeroSection() {
 
               <div className="flex items-center gap-3 sm:gap-4">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-brand-bg bg-white flex items-center justify-center shrink-0">
-                  <img loading="lazy" src="https://www.google.com/favicon.ico" className="w-3.5 h-3.5 sm:w-4 sm:h-4" alt="Google" width="16" height="16" />
+                  <img loading="lazy" src="/images/google-g.svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4" alt="Google" width="16" height="16" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex text-brand-accent mb-0.5">
