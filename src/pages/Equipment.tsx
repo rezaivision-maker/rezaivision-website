@@ -58,7 +58,7 @@ export default function Equipment() {
     {
       title: "Cineastisch",
       desc: "Tiefe, Atmosphäre und Storytelling wie im Spielfilm. Ideal für Marken-Inszenierungen.",
-      image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop"
+      image: "/images/cineastisch-kamera.webp"
     },
     {
       title: "Commercial",

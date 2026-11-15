@@ -32,13 +32,13 @@ export function ServicesSection() {
             {
               title: "Unternehmensfilme",
               desc: "Hochwertige Imagefilme, die zeigen, wer Sie sind, wofür Sie stehen und was Ihr Unternehmen besonders macht.",
-              img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
+              img: "/images/unternehmensfilm-buero.webp",
               link: "/leistungen/unternehmensfilm"
             },
             {
               title: "Recruiting Videos",
               desc: "Gewinnen Sie die besten Talente durch authentische Employer-Branding-Filme und smarte Recruiting-Funnels.",
-              img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
+              img: "/images/recruiting-team.webp",
               link: "/leistungen/recruiting"
             },
             {
@@ -93,7 +93,7 @@ export function ServicesSection() {
             <Link to="/leistungen/webdesign" className="group relative block overflow-hidden rounded-2xl aspect-[16/5]">
               <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200&auto=format&fit=crop"
+                src="/images/webdesign-arbeitsplatz.webp"
                 alt="Webdesign & Homepageerstellung Kaiserslautern — Rezai Vision"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"

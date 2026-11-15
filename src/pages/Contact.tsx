@@ -9,6 +9,7 @@ export default function Contact() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showMap, setShowMap] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -265,6 +266,27 @@ export default function Contact() {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Hier finden Sie uns</h2>
             <p className="text-gray-400">Besuchen Sie uns in unserem Studio in Kaiserslautern.</p>
           </div>
+          {!showMap ? (
+            <div className="w-full h-[450px] rounded-3xl border border-white/5 bg-white/5 flex flex-col items-center justify-center gap-5 p-6 text-center">
+              <MapPin className="text-brand-accent" size={36} aria-hidden="true" />
+              <p className="text-white font-medium">Rezai Vision · Erfurter Str. 93 · 67663 Kaiserslautern</p>
+              <p className="text-sm text-gray-400 max-w-md">
+                Beim Laden der Karte werden Daten (u. a. Ihre IP-Adresse) an Google übertragen. Mehr dazu in unserer{" "}
+                <Link to="/datenschutz" className="text-brand-accent hover:underline">Datenschutzerklärung</Link>.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button type="button" variant="primary" onClick={() => setShowMap(true)}>Karte laden</Button>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Erfurter+Str.+93+67663+Kaiserslautern"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-brand-accent/50 text-brand-accent text-sm font-medium hover:bg-brand-accent/10 transition-colors"
+                >
+                  In Google Maps öffnen
+                </a>
+              </div>
+            </div>
+          ) : (
           <div className="w-full h-[450px] rounded-3xl overflow-hidden border border-white/5 grayscale invert opacity-80 hover:grayscale-0 hover:invert-0 hover:opacity-100 transition-all duration-700">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.3!2d7.7474!3d49.4213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47966996b5a5e2a1%3A0x422435029b0c810!2sErfurter%20Str.%2093%2C%2067663%20Kaiserslautern!5e0!3m2!1sde!2sde!4v1714600000000!5m2!1sde!2sde"
@@ -277,6 +299,7 @@ export default function Contact() {
               title="Rezai Vision Standort"
             ></iframe>
           </div>
+          )}
         </motion.div>
       </div>
     </div>
