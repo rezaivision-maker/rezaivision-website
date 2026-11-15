@@ -2,14 +2,21 @@ import { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CONSENT_KEY, loadGoogleAnalytics } from "../Analytics";
+
+/** Öffnet den Banner erneut (Widerruf/Änderung der Einwilligung, z. B. aus dem Footer). */
+export const OPEN_COOKIE_SETTINGS_EVENT = "open-cookie-settings";
+
+export function openCookieSettings() {
+  window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT));
+}
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
+    const show = () => {
       setIsVisible(true);
       // Trigger enter animation on next frame
       requestAnimationFrame(() => {
@@ -17,7 +24,10 @@ export function CookieBanner() {
           setIsAnimating(true);
         });
       });
-    }
+    };
+    if (!localStorage.getItem(CONSENT_KEY)) show();
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, show);
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, show);
   }, []);
 
   const dismiss = () => {
@@ -27,28 +37,26 @@ export function CookieBanner() {
   };
 
   const acceptAll = () => {
-    localStorage.setItem("cookie-consent", "all");
+    localStorage.setItem(CONSENT_KEY, "all");
     dismiss();
-    
-    // Consent Mode v2 Update Signal
-    if (window.gtag) {
-      window.gtag("consent", "update", {
-        ad_storage: "granted",
-        ad_user_data: "granted",
-        ad_personalization: "granted",
-        analytics_storage: "granted"
-      });
-    }
-
-    // Meta Pixel Update Signal (if initialized)
-    if (window.fbq) {
-      window.fbq('track', 'PageView');
-    }
+    // Google Analytics erst jetzt laden – vorher besteht keine Verbindung zu Google.
+    loadGoogleAnalytics();
   };
 
   const acceptEssential = () => {
-    localStorage.setItem("cookie-consent", "essential");
+    const hadConsent = localStorage.getItem(CONSENT_KEY) === "all";
+    localStorage.setItem(CONSENT_KEY, "essential");
     dismiss();
+    if (hadConsent) {
+      // Widerruf: Google-Signal auf „abgelehnt“ setzen und neu laden, damit das Skript entfernt ist.
+      window.gtag?.("consent", "update", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+      setTimeout(() => window.location.reload(), 350);
+    }
   };
 
   if (!isVisible) return null;
@@ -73,7 +81,7 @@ export function CookieBanner() {
             </button>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed mb-4">
-            Wir verwenden Cookies auf dieser Website, um das Erlebnis zu verbessern (Google, Meta, TikTok) und Analysedaten lokal auszuwerten. Weitere Informationen finden Sie in unserer{" "}
+            Mit Ihrer Einwilligung nutzen wir Google Analytics, um zu verstehen, wie unsere Seite genutzt wird. Ohne Zustimmung laden wir nichts davon. Sie können Ihre Wahl jederzeit unten auf der Seite unter „Cookie-Einstellungen“ ändern. Mehr in unserer{" "}
             <Link to="/datenschutz" className="text-brand-accent hover:underline">Datenschutzerklärung</Link>.
           </p>
         </div>

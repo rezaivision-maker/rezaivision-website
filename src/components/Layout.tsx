@@ -3,7 +3,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { Menu, X, Play, ArrowRight, Instagram, Linkedin, Facebook, Music, ChevronDown, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/Button";
-import { CookieBanner } from "./ui/CookieBanner";
+import { CookieBanner, openCookieSettings } from "./ui/CookieBanner";
 import { SEO } from "./SEO";
 import { NavDropdown } from "./NavDropdown";
 
@@ -440,6 +440,7 @@ export function Layout() {
                   <Link to="/impressum" className="hover:text-white transition-colors">Impressum</Link>
                   <Link to="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
                   <Link to="/agb" className="hover:text-white transition-colors">AGB</Link>
+                  <button type="button" onClick={openCookieSettings} className="hover:text-white transition-colors">Cookie-Einstellungen</button>
                 </div>
               </div>
             </div>
