@@ -51,7 +51,7 @@ export default function Privacy() {
               <p>Auf einigen Unterseiten zeigen wir Bilder des Bilddienstes Unsplash (Unsplash Inc., Montreal, Kanada), die direkt von dessen Servern geladen werden. Dabei wird Ihre IP-Adresse an Unsplash übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einer ansprechenden Darstellung (Art. 6 Abs. 1 lit. f DSGVO). Für Kanada besteht ein Angemessenheitsbeschluss der EU-Kommission. Wir ersetzen diese Bilder schrittweise durch eigene Aufnahmen auf unserem Server.</p>
 
               <h3 className="text-xl font-bold text-white mt-6 mb-3">Firebase (Google Cloud)</h3>
-              <p>Für Blog-Inhalte, den Preisrechner und den Kundenbereich nutzen wir die Datenbank Firebase/Firestore der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden dieser Inhalte wird Ihre IP-Adresse an Google übertragen; Eingaben im Preisrechner oder Kundenbereich werden dort gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO) bzw. bei Anfragen die Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Eine Übermittlung in die USA ist möglich; Google ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+              <p>Für Blog-Inhalte und den Kundenbereich nutzen wir die Datenbank Firebase/Firestore der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden dieser Inhalte wird Ihre IP-Adresse an Google übertragen; Eingaben im Kundenbereich werden dort gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO) bzw. bei Anfragen die Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Eine Übermittlung in die USA ist möglich; Google ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
             </section>
 
             <section>
@@ -72,7 +72,7 @@ export default function Privacy() {
 
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">3. Kontaktaufnahme via Web3Forms</h2>
-              <p>Wenn Sie uns über das Kontaktformular schreiben, verarbeiten wir Ihre Angaben über den Dienst <strong>Web3Forms</strong>. Anfragen über den Preisrechner speichern wir in unserer Datenbank (Firebase, siehe oben) und erhalten sie per E-Mail-Benachrichtigung.</p>
+              <p>Wenn Sie uns über das Kontaktformular schreiben, verarbeiten wir Ihre Angaben über den Dienst <strong>Web3Forms</strong>.</p>
               <p className="mt-4">Verarbeitet werden die Angaben aus dem Formular: Name, Unternehmen (falls angegeben), E-Mail-Adresse, Telefonnummer (falls angegeben), Art des Projekts und Ihre Nachricht.</p>
               <p className="mt-4">Web3Forms sendet diese Daten verschlüsselt an unsere E-Mail-Postfächer. Die Daten dienen allein der Angebotserstellung und Kundenbetreuung. Rechtsgrundlage ist die Durchführung vorvertraglicher Maßnahmen nach Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p>
               <p className="mt-4">Mit Web3Forms existiert eine Vereinbarung zur Auftragsverarbeitung (AVV).</p>
