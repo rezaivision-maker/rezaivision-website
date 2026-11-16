@@ -11,10 +11,10 @@ export function HeroSection() {
         <img
           fetchPriority="high"
           decoding="sync"
-          src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp"
-          srcSet="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_800/v1772568178/Hero_BG_bldaur.webp 800w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1200/v1772568178/Hero_BG_bldaur.webp 1200w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1772568178/Hero_BG_bldaur.webp 1920w"
+          src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1794852622/Rezai_Vision_Videoproduktion_Referenzen_Videowand.webp"
+          srcSet="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_800/v1794852622/Rezai_Vision_Videoproduktion_Referenzen_Videowand.webp 800w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1200/v1794852622/Rezai_Vision_Videoproduktion_Referenzen_Videowand.webp 1200w, https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto:eco,f_auto,w_1920/v1794852622/Rezai_Vision_Videoproduktion_Referenzen_Videowand.webp 1920w"
           sizes="100vw"
-          alt="Hero Background Video Produktion Kaiserslautern — Rezai Vision"
+          alt="Videowand mit Szenen aus Imagefilmen, Recruiting-Videos und Social-Media-Clips von Rezai Vision"
           className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
           width="1920"
@@ -64,7 +64,7 @@ export function HeroSection() {
                     fetchPriority="low"
                     key={i}
                     src={user.img}
-                    alt={`${user.name} Kundenstimme Videoproduktion Kaiserslautern`}
+                    alt=""
                     className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-brand-bg relative z-[1] object-cover"
                     referrerPolicy="no-referrer"
                     width="32"
@@ -96,7 +96,7 @@ export function HeroSection() {
               <img
                 fetchPriority="high"
                 src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1794851965/Parsha_Rezai_Vision_Videoproduktion_Kaiserslautern.webp"
-                alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
+                alt="Parsha Rezai an der Cinema-Kamera auf dem Stativ – Videograf und Gründer von Rezai Vision in Kaiserslautern"
                 className="w-full max-w-[700px] xl:max-w-[850px] 3xl:max-w-[1300px] h-auto object-contain drop-shadow-2xl scale-110 3xl:scale-125 origin-bottom-right"
                 style={{
                   maskImage: 'linear-gradient(to top, transparent 0%, black 15%)',

@@ -73,8 +73,8 @@ export function CasesSection() {
                       onClick={() => setIsPlayingLull(true)}
                     >
                       <img
-                        src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_900/v1775735612/lu%CC%88ll1_bekioh.webp"
-                        alt="Schlossgut Lüll Imagefilm Vorschaubild"
+                        src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_900/v1794852623/Schlossgut_Luell_Imagefilm_Interview_1.webp"
+                        alt="Vorschaubild zum Imagefilm für das Schlossgut Lüll: Interview am Tisch vor Weinregalen"
                         className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                         loading="lazy"
                       />
@@ -100,16 +100,16 @@ export function CasesSection() {
               <div className="flex flex-col gap-4 lg:gap-6">
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775735612/lu%CC%88ll1_bekioh.webp" 
-                    alt="Imagefilm Schlossgut Lüll Weingut Rheinhessen — Rezai Vision Videoproduktion" 
+                    loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1794852623/Schlossgut_Luell_Imagefilm_Interview_1.webp" 
+                    alt="Interview am Holztisch vor Weinregalen im Schlossgut Lüll – Imagefilm von Rezai Vision" 
                     className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775735607/Lu%CC%88ll_2_tjbakc.webp" 
-                    alt="Weingut Atmosphäre Schlossgut Lüll — Unternehmensfilm Kaiserslautern" 
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1794852625/Schlossgut_Luell_Imagefilm_Szene_2.webp" 
+                    alt="Mitarbeiterin hält beim Dreh ein Gerät in die Kamera, Saal mit Wappen – Imagefilm für das Schlossgut Lüll" 
                     className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                     referrerPolicy="no-referrer"
                     loading="lazy"
@@ -117,8 +117,8 @@ export function CasesSection() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
                   <img 
-                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1775735609/lu%CC%88ll3_uxkzzl.webp" 
-                    alt="Weinberg Landschaft Schlossgut Lüll — Imagefilm Produktion Pfalz" 
+                    src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_600/v1794852626/Schlossgut_Luell_Imagefilm_Interview_3.webp" 
+                    alt="Interview mit einer Mitarbeiterin im Schlossgut Lüll – Imagefilm von Rezai Vision" 
                     className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                     referrerPolicy="no-referrer"
                     loading="lazy"
@@ -219,16 +219,16 @@ export function CasesSection() {
               {/* Right: 4 Images Grid */}
               <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:gap-6">
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775733154/Aestethic_Ink_Kaiserslautern__ppagfi.webp" alt="Aesthetic Ink Tattoo Studio Kaiserslautern — Social Media Video Ads Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852641/Aesthetic_Ink_Augenbrauen_Behandlung_Reel_1.webp" alt="Vermessung der Augenbrauen vor der Behandlung bei Aesthetic Ink – Reel von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775734649/Aestethic_Ink_5_Kaiserslautern_e8isjk.webp" alt="Aesthetic Ink Reels Content Kaiserslautern — Beauty Marketing Videoproduktion" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852643/Aesthetic_Ink_Augenbrauen_Behandlung_Reel_2.webp" alt="Behandlerin bei Aesthetic Ink arbeitet an den Augenbrauen einer Kundin – Reel von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775734565/Ausethetik_INK_4_qnvksf.webp" alt="Aesthetic Ink Social Media Content Kaiserslautern — Werbefilm Beauty Branche" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852644/Aesthetic_Ink_Augenbrauen_Behandlung_Reel_3.webp" alt="Nahaufnahme der Augenbrauen-Vorzeichnung bei Aesthetic Ink – Reel von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775734141/AestethicInk_Kaiserslautern_2_h6yrms.webp" alt="Aesthetic Ink Werbevideo Kaiserslautern — Instagram Reels Tattoo Studio" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852645/Aesthetic_Ink_Augenbrauen_Behandlung_Reel_4.webp" alt="Augenbrauen-Behandlung in Nahaufnahme bei Aesthetic Ink in Kaiserslautern – Reel von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
               </div>
             </div>
@@ -290,10 +290,10 @@ export function CasesSection() {
                 </div>
                 <div className="grid grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775737722/Behnke1_ao07wt.webp" alt="KSB Rechtsanwälte Social Media Content Kaiserslautern — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852638/KSB_Rechtsanwaelte_Kanzleivideo_1.webp" alt="Zwei Anwälte von KSB Rechtsanwälte vor dem Kanzleilogo – Social-Media-Video von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775740583/KSB_KL_pttnwy.webp" alt="KSB Rechtsanwälte Kanzlei Video Kaiserslautern — Vertrauensaufbau durch Reels" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852640/KSB_Rechtsanwaelte_Kanzleivideo_2.webp" alt="Anwalt und Anwältin von KSB Rechtsanwälte in der Kanzlei in Kaiserslautern – Social-Media-Video" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
@@ -377,16 +377,16 @@ export function CasesSection() {
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775742144/Social_Care1_slwplk.jpg" alt="Social Care Arbeitsvermittlung Mainz — Social Media Recruiting Content" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852632/Social_Care_Recruiting_Video_Mainz_Titel.jpg" alt="Titelbild mit Social-Care-Logo – Recruiting-Videoreihe von Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810663/Marcel_Social_care_2.1.1_phx9yw.webp" alt="Social Care Talking Head Video Mainz — Instagram Reels Arbeitgeber" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852634/Social_Care_Recruiting_Video_Mainz_Interview_1.webp" alt="Mitarbeiter von Social Care im Interview – Recruiting-Video von Rezai Vision, Mainz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775810388/Adonay_welde_social_care_1.12.1_d3uhxu.webp" alt="Social Care Mitarbeiterstimmen Mainz — Authentisches Employer Branding" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852635/Social_Care_Recruiting_Video_Mainz_Interview_2.webp" alt="Mitarbeiterstimme im Recruiting-Video für Social Care in Mainz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775809428/Social_CAre_3.1.1_upw3fj.webp" alt="Social Care Bewerbervideo Mainz — 70 Prozent Bewerbungen über Instagram" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852637/Social_Care_Recruiting_Video_Mainz_Interview_3.webp" alt="Mitarbeiterin von Social Care im Interview – Recruiting-Video von Rezai Vision, Mainz" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                 </div>
               </div>
@@ -414,14 +414,14 @@ export function CasesSection() {
 
               <div className="grid grid-cols-[4fr_6fr] gap-4 mt-2">
                 <div className="relative rounded-3xl overflow-hidden aspect-[9/16] bg-brand-darker gold-border-glow">
-                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_500/v1775741110/pfaff1_2.3.1_hxcq6a.webp" alt="Pfaff Industrienähmaschinen Produktvideo Kaiserslautern Bensheim — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                  <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_500/v1794852628/Pfaff_Industrienaehmaschine_Produktvideo_1.webp" alt="Automatisierte Industrienähmaschine in Nahaufnahme – Produktvideo von Rezai Vision für Pfaff" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-4">
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775741311/pfaff_4_1.8.2_emhgzd.webp" alt="Pfaff Nähmaschine Detail Produktfilm Kaiserslautern — Industrievideo Messe" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852630/Pfaff_Industrienaehmaschine_Produktvideo_3.webp" alt="Roboter-Nähzelle von oben gefilmt – Industrievideo von Rezai Vision für Pfaff" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow">
-                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1775741116/pfaff2_1.9.1_aju6fd.webp" alt="Pfaff Produktpräsentation Video Bensheim — Social Media Content Industrie" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                    <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_400/v1794852629/Pfaff_Industrienaehmaschine_Produktvideo_2.webp" alt="Fertigungslinie mit Industrienähanlagen in der Halle – Produktvideo für Pfaff" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
                   </div>
                   <div className="relative rounded-3xl overflow-hidden bg-brand-darker gold-border-glow col-span-2">
                     <video
@@ -462,13 +462,13 @@ export function CasesSection() {
 
             <div className="grid grid-cols-3 gap-4 mt-2">
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034826/20260619-DSC00186_e5zrtv.jpg" alt="ASA Felgen Produktshooting GEWE Reifen &amp; Räder — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1794852647/ASA_Felgen_GEWE_Fahrzeugshooting_1.jpg" alt="Schwarzes Mercedes-Coupé mit ASA-Felgen vor einer Industriehalle – Fahrzeugshooting für GEWE Reifen &amp; Räder" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034826/20260619-DSC00335_qtuf4s.jpg" alt="ASA Felgen Detailaufnahme GEWE Content-Partnerschaft — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1794852648/ASA_Felgen_GEWE_Fahrzeugshooting_2.jpg" alt="Zwei schwarze Mercedes in Seitenansicht mit silbernen ASA-Felgen – Fahrzeugshooting für GEWE" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
               <div className="relative rounded-3xl overflow-hidden aspect-video bg-brand-darker gold-border-glow">
-                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1784034825/20260619-DSC00037_qzj2em.jpg" alt="ASA Felgen am Fahrzeug GEWE Reifen &amp; Räder Produktvideo — Rezai Vision" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
+                <img loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1794852650/ASA_Felgen_GEWE_Fahrzeugshooting_3.jpg" alt="Weißer Škoda-SUV mit ASA-Felgen – Fahrzeugshooting von Rezai Vision für GEWE Reifen &amp; Räder" className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" referrerPolicy="no-referrer" />
               </div>
             </div>
 

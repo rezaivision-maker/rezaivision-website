@@ -53,8 +53,8 @@ export default function About() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden sticky top-32"
           >
             <img
-              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp"
-              alt="Parsha Rezai - Gründer Rezai Vision"
+              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1794852620/Parsha_Rezai_Gruender_Rezai_Vision_Portrait.webp"
+              alt="Parsha Rezai, Filmemacher und Gründer von Rezai Vision in Kaiserslautern"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />

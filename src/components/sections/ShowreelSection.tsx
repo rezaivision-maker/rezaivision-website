@@ -22,8 +22,8 @@ export function ShowreelSection() {
               onClick={() => setIsPlayingShowreel(true)}
             >
               <img 
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1200/v1772568178/Hero_BG_bldaur.webp" 
-                alt="Showreel Vorschaubild" 
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1200/v1794852622/Rezai_Vision_Videoproduktion_Referenzen_Videowand.webp" 
+                alt="Showreel von Rezai Vision: Videowand mit Szenen aus Kundenprojekten" 
                 className="absolute inset-0 w-full h-full object-cover opacity-50 transition-opacity group-hover:opacity-70"
                 loading="lazy"
               />

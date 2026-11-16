@@ -59,7 +59,7 @@ export function TestimonialSection() {
                       <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 bg-gray-800">
                         <img
                           loading="lazy" src={testimonial.img}
-                          alt={testimonial.name}
+                          alt=""
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
                         />

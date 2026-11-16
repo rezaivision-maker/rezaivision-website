@@ -591,7 +591,7 @@ export default function BlogPost() {
                 <img 
                   loading="lazy" 
                   src={imgUrl} 
-                  alt={`Showcase ${idx + 1}`}
+                  alt={`Projektbeispiel ${idx + 1} zum Artikel „${post.title}“`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
@@ -626,8 +626,8 @@ export default function BlogPost() {
           
           <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border border-white/10 shrink-0 shadow-2xl">
             <img 
-              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
-              alt="Parsha Rezai" 
+              loading="lazy" src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1794852620/Parsha_Rezai_Gruender_Rezai_Vision_Portrait.webp" 
+              alt="Parsha Rezai, Autor und Gründer von Rezai Vision" 
               className="w-full h-full object-cover"
             />
           </div>

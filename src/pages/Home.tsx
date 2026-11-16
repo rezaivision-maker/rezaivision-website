@@ -87,7 +87,15 @@ export default function Home() {
             "founder": {
               "@type": "Person",
               "name": "Parsha Rezai",
-              "jobTitle": "Lead Videographer & Founder"
+              "jobTitle": "Lead Videographer & Founder",
+              "url": "https://www.rezaivision.de/ueber-uns",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1794852620/Parsha_Rezai_Gruender_Rezai_Vision_Portrait.webp",
+                "width": 921,
+                "height": 1152,
+                "caption": "Parsha Rezai – Filmemacher und Gründer von Rezai Vision, Videoproduktion in Kaiserslautern"
+              }
             },
             "aggregateRating": {
               "@type": "AggregateRating",

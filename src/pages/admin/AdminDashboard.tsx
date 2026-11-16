@@ -2509,7 +2509,7 @@ export default function AdminDashboard() {
                         <div className="p-4 bg-white/[0.01] border border-white/5 rounded-2xl flex gap-4 items-center">
                           <div className="w-12 h-12 rounded-xl overflow-hidden border border-white/10 shrink-0">
                             <img 
-                              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775656862/Parsha_Gru%CC%88nder_Rezai_Vision_Kaiserslautern_pubjom.webp" 
+                              src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1794852620/Parsha_Rezai_Gruender_Rezai_Vision_Portrait.webp" 
                               alt="Parsha Rezai" 
                               className="w-full h-full object-cover"
                             />

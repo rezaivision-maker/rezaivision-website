@@ -39,7 +39,7 @@ export default function Services() {
       icon: <Zap size={32} className="text-brand-accent" />,
       benefits: ["kontinuierliche Sichtbarkeit", "klare Positionierung", "professionelle Präsenz"],
       idealFor: ["Personal Brands", "Beratungsunternehmen", "innovative Start-ups"],
-      img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1775838944/Social_Media_Retaeiner_mcphad.webp"
+      img: "https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto/f_auto/v1794852651/Social_Media_Betreuung_Content_Planung_Rezai_Vision.webp"
     }
   ];
 
