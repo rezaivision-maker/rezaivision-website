@@ -17,7 +17,7 @@ interface SEOProps {
 
 const DEFAULT_TITLE = "Videoproduktion Kaiserslautern – Imagefilme, Reels & Video Ads | Rezai Vision";
 const DEFAULT_DESCRIPTION = "Videoproduktion Kaiserslautern – Rezai Vision erstellt professionelle Imagefilme, Recruiting Videos, Social Media Reels und Video Ads für Unternehmen im Südwesten.";
-const DEFAULT_IMAGE = "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp";
+const DEFAULT_IMAGE = "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1794851965/Parsha_Rezai_Vision_Videoproduktion_Kaiserslautern.webp";
 const SITE_URL = "https://www.rezaivision.de";
 
 export function SEO({

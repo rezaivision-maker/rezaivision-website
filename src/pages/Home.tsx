@@ -30,7 +30,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "ProfessionalService"],
             "name": "Rezai Vision",
-            "image": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp",
+            "image": "https://res.cloudinary.com/dzt4f9xdi/image/upload/v1794851965/Parsha_Rezai_Vision_Videoproduktion_Kaiserslautern.webp",
             "@id": "https://www.rezaivision.de",
             "url": "https://www.rezaivision.de",
             "telephone": "+4963162512000",

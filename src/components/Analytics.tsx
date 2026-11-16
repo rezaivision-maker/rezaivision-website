@@ -10,7 +10,7 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = "G-PKCY73WX1V";
+const GA_MEASUREMENT_ID = "G-4PW8QWJLCN";
 export const CONSENT_KEY = "cookie-consent";
 
 export function hasAnalyticsConsent(): boolean {

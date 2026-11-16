@@ -95,7 +95,7 @@ export function HeroSection() {
             <div className="w-full flex justify-end animate-float">
               <img
                 fetchPriority="high"
-                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1772569736/Parsha_Freisteller_Infusefilm_Kaiserslautern_Videoproduktion_oei9r3.webp"
+                src="https://res.cloudinary.com/dzt4f9xdi/image/upload/q_auto,f_auto,w_1000/v1794851965/Parsha_Rezai_Vision_Videoproduktion_Kaiserslautern.webp"
                 alt="Parsha Rezai Videograf Kaiserslautern — Gründer Rezai Vision"
                 className="w-full max-w-[700px] xl:max-w-[850px] 3xl:max-w-[1300px] h-auto object-contain drop-shadow-2xl scale-110 3xl:scale-125 origin-bottom-right"
                 style={{
